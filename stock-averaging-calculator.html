@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Stock Averaging Calculator — Free Average Buy Price Calculator | Dropout Traders</title>
+<meta name="description" content="Free stock averaging calculator. Work out your new average buy price, total quantity and total investment across multiple purchases in seconds — no signup needed.">
+<meta name="keywords" content="stock averaging calculator, average price calculator, average down calculator, share average calculator, cost averaging calculator, stock market average calculator">
+<link rel="canonical" href="https://dropouttraders.in/stock-averaging-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Averaging Calculator — Free Average Buy Price Calculator">
+<meta property="og:description" content="Work out your new average buy price, total quantity and total investment across multiple stock purchases, free and instant.">
+<meta property="og:url" content="https://dropouttraders.in/stock-averaging-calculator.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stock Averaging Calculator",
+  "url": "https://dropouttraders.in/stock-averaging-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "publisher": { "@type": "Organization", "name": "Dropout Traders" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dropouttraders.in/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://dropouttraders.in/index.html#calculators" },
+    { "@type": "ListItem", "position": 3, "name": "Stock Averaging Calculator", "item": "https://dropouttraders.in/stock-averaging-calculator.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for average share price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Average buy price equals total investment divided by total quantity. If you buy shares across several trades, multiply each trade's quantity by its price, add those amounts together, then divide by the total number of shares you hold." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is averaging down on a stock a good idea?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on why the price fell. Averaging down can lower your break-even point when the underlying business is still sound, but it can also increase losses if the stock is falling for a structural reason. Position sizing and a clear thesis matter more than the average price itself." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does averaging down reduce my loss?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It reduces your average cost per share, which lowers the price at which you break even. It does not reduce the amount of money already invested, and it increases your total exposure to the stock." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many times can I average a stock?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There is no fixed limit — you can add as many purchases as you like to this calculator. In practice, most traders cap how much of their capital goes into a single position, and average down a limited number of times based on a pre-defined risk plan." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between averaging and a SIP?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Averaging usually refers to ad-hoc purchases at different prices, often after a stock has moved. A SIP (systematic investment plan) is a fixed amount invested on a fixed schedule regardless of price, which is a form of dollar-cost averaging by design." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator include brokerage and taxes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, this calculator works on the raw quantity and price you enter. Use the Brokerage Calculator separately to estimate brokerage, STT, GST and other charges on each trade." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this calculator for any stock exchange?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The maths behind average price is the same everywhere — NSE, BSE, or any global exchange. Just enter quantity and price in your own currency." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#07070a; --bg-alt:#0c0c11; --bg-raise:#111116;
+  --panel:rgba(255,255,255,0.035); --panel-strong:rgba(255,255,255,0.06);
+  --panel-border:rgba(212,175,55,0.22); --panel-border-strong:rgba(212,175,55,0.45);
+  --gold:#d4af37; --gold-bright:#f3d576; --gold-deep:#8a6d1f;
+  --white:#f6f4ee; --muted:#a8a49b; --muted-dim:#6f6c66;
+  --green:#4a9a76; --red:#b1594a;
+  --radius:14px; --radius-lg:22px; --ease:cubic-bezier(.16,.84,.44,1); --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;margin:0;font-weight:600;letter-spacing:-0.01em;}
+p{margin:0;}
+::selection{background:var(--gold);color:#07070a;}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.eyebrow::before{content:'';width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.section-head{max-width:700px;margin:0 0 34px;}
+.section-head h1{font-size:clamp(30px,4.4vw,50px);line-height:1.1;color:var(--white);margin-top:14px;}
+.section-head .accent{color:var(--gold);font-style:italic;}
+.section-head p{margin-top:16px;color:var(--muted);font-size:15.5px;line-height:1.75;max-width:600px;}
+.glass{background:var(--panel);border:1px solid var(--panel-border);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:var(--radius);}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;border-radius:100px;border:1px solid transparent;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s ease,color .3s ease;white-space:nowrap;cursor:pointer;}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;box-shadow:0 8px 30px -6px rgba(212,175,55,0.55);}
+.btn-gold:hover{transform:translateY(-3px);}
+.btn-outline-gold{background:transparent;border-color:var(--panel-border-strong);color:var(--gold-bright);}
+.btn-outline-gold:hover{background:rgba(212,175,55,0.08);transform:translateY(-3px);}
+.btn-ghost{background:rgba(255,255,255,0.02);border-color:rgba(246,244,238,0.25);color:var(--white);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);}
+
+/* NAV */
+#navbar{position:sticky;top:0;left:0;right:0;z-index:500;padding:16px 0;background:rgba(7,7,10,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--panel-border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;position:relative;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-mark{width:34px;height:34px;border-radius:50%;border:1px solid var(--panel-border-strong);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold-bright);background:radial-gradient(circle at 30% 30%,rgba(212,175,55,0.18),transparent 70%);}
+.logo-text{font-family:'Playfair Display',serif;font-size:15.5px;letter-spacing:0.06em;}
+.logo-text b{color:var(--gold);font-weight:700;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{font-size:13px;letter-spacing:0.03em;color:var(--muted);transition:color .3s ease;}
+.nav-links a:hover,.nav-links a.current{color:var(--gold-bright);}
+.mnav{display:none;}
+.mnav summary{list-style:none;cursor:pointer;color:var(--white);font-size:13px;border:1px solid var(--panel-border-strong);border-radius:100px;padding:9px 18px;}
+.mnav summary::-webkit-details-marker{display:none;}
+.mnav-panel{display:flex;flex-direction:column;gap:2px;position:absolute;right:20px;top:60px;background:var(--bg-raise);border:1px solid var(--panel-border-strong);border-radius:var(--radius);padding:12px;z-index:600;min-width:160px;}
+.mnav-panel a{padding:10px 14px;font-size:14px;color:var(--muted);border-radius:8px;}
+.mnav-panel a:hover{background:var(--panel);color:var(--white);}
+@media (max-width:760px){ .nav-links{display:none;} .mnav{display:block;} }
+
+section{padding:64px 0;}
+.hero-cal{padding:56px 0 10px;}
+.breadcrumb{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted-dim);margin-bottom:22px;text-transform:uppercase;}
+.breadcrumb a:hover{color:var(--gold-bright);}
+
+/* CALCULATOR TOOL */
+.calc-tool{padding:36px;margin-top:6px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:11.5px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted-dim);margin-bottom:8px;}
+.field input,.field select{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--panel-border);border-radius:9px;padding:13px 15px;color:var(--white);font-family:'Inter',sans-serif;font-size:14.5px;}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);background:rgba(212,175,55,0.05);}
+.field .hint{font-size:11.5px;color:var(--muted-dim);margin-top:6px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+.calc-actions{display:flex;gap:14px;margin-top:6px;flex-wrap:wrap;}
+.result-box{margin-top:28px;padding:26px;border-radius:var(--radius);background:rgba(212,175,55,0.05);border:1px solid var(--panel-border);display:none;}
+.result-box.show{display:block;}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;}
+.result-item .lbl{font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted-dim);}
+.result-item .val{font-family:'Space Mono',monospace;font-size:21px;color:var(--gold-bright);margin-top:6px;word-break:break-word;}
+.result-item .val.neg{color:var(--red);}
+.result-item .val.pos{color:var(--green);}
+.result-note{margin-top:18px;font-size:12px;color:var(--muted-dim);line-height:1.65;}
+.leg-row{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end;margin-bottom:14px;}
+.leg-remove{background:transparent;border:1px solid var(--panel-border-strong);color:var(--muted);width:46px;height:46px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.leg-remove:hover{border-color:var(--red);color:var(--red);}
+.result-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px;}
+.result-table th,.result-table td{padding:9px 6px;border-bottom:1px solid var(--panel-border);text-align:left;color:var(--muted);}
+.result-table th{color:var(--gold);font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;}
+.result-table td.num{font-family:'Space Mono',monospace;color:var(--white);}
+.err-msg{margin-top:14px;font-size:13px;color:var(--red);display:none;}
+.err-msg.show{display:block;}
+
+/* ARTICLE */
+.article{max-width:740px;margin:0 auto;}
+.article h2{font-size:clamp(23px,3vw,30px);margin-top:46px;margin-bottom:14px;color:var(--white);}
+.article h2:first-child{margin-top:0;}
+.article h3{font-size:18px;margin-top:26px;margin-bottom:10px;color:var(--gold-bright);}
+.article p{font-size:15.5px;line-height:1.85;color:var(--muted);margin-bottom:16px;}
+.article ul,.article ol{margin:0 0 16px;padding-left:22px;color:var(--muted);font-size:15.5px;line-height:1.85;}
+.article li{margin-bottom:8px;}
+.article strong{color:var(--white);}
+.article table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px;}
+.article th,.article td{padding:10px 12px;border-bottom:1px solid var(--panel-border);text-align:left;color:var(--muted);}
+.article th{color:var(--gold);font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--panel-border);padding:18px 0;}
+.faq-item summary{cursor:pointer;font-size:15.5px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:500;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--gold);flex-shrink:0;}
+.faq-item[open] summary::after{content:'\2013';}
+.faq-item p{margin-top:14px;font-size:14.5px;color:var(--muted);line-height:1.8;}
+
+/* CTA BANNER */
+.cta-banner{padding:44px;text-align:center;margin:54px 0;}
+.cta-banner h3{font-size:23px;margin-bottom:10px;}
+.cta-banner p{color:var(--muted);margin-bottom:22px;font-size:14.5px;}
+.cta-banner .calc-actions{justify-content:center;}
+
+/* OTHER CALCULATORS */
+.other-calcs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;}
+.other-calcs a{padding:20px;font-size:13.5px;color:var(--muted);transition:all .3s ease;}
+.other-calcs a:hover{color:var(--gold-bright);border-color:var(--panel-border-strong);transform:translateY(-3px);}
+.other-calcs a b{display:block;color:var(--white);font-size:14.5px;margin-bottom:4px;font-family:'Playfair Display',serif;}
+.other-calcs a:hover b{color:var(--gold-bright);}
+
+/* FOOTER */
+footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+.footer-col h5{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.footer-col a,.footer-col p{display:block;font-size:13.5px;color:var(--muted-dim);margin-bottom:10px;}
+.footer-col a:hover{color:var(--gold-bright);}
+.footer-brand p{margin-top:14px;font-size:13px;color:var(--muted-dim);line-height:1.7;max-width:320px;}
+.disclaimer-box{margin-top:26px;padding:20px;border-radius:var(--radius);background:rgba(255,255,255,0.02);border:1px solid var(--panel-border);}
+.disclaimer-box p{font-size:11.5px;color:var(--muted-dim);line-height:1.7;}
+.footer-bottom{margin-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:20px;border-top:1px solid var(--panel-border);}
+.footer-bottom p{font-size:12px;color:var(--muted-dim);}
+
+/* FAB */
+.fab-wa{position:fixed;bottom:26px;right:26px;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#07270f;z-index:400;box-shadow:0 8px 24px rgba(0,0,0,0.45);}
+
+@media (max-width:900px){
+  .form-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;row-gap:30px;}
+  .other-calcs{grid-template-columns:1fr;}
+  .leg-row{grid-template-columns:1fr 1fr;}
+  .leg-row .leg-remove{grid-column:span 2;width:100%;}
+}
+@media (max-width:600px){
+  .container{padding:0 20px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .calc-tool{padding:24px 18px;}
+  section{padding:48px 0;}
+}
+
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html#home" class="logo">
+      <span class="logo-mark">DT</span>
+      <span class="logo-text">DROPOUT <b>TRADERS</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#courses">Courses</a>
+      <a href="index.html#calculators">Calculators</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <details class="mnav">
+      <summary>Menu</summary>
+      <div class="mnav-panel">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#calculators">Calculators</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<section class="hero-cal">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html#home">Home</a> / <a href="index.html#calculators">Calculators</a> / Stock Averaging Calculator</div>
+    <div class="section-head">
+      <div class="eyebrow">Free Tool</div>
+      <h1>Stock Averaging <span class="accent">Calculator</span></h1>
+      <p>Buying more shares to bring down your average cost? Enter each purchase below and instantly get your new average buy price, total quantity held and total investment — across as many buys as you need.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="calc-tool glass">
+      <div id="legs">
+        <div class="leg-row">
+          <div class="field"><label>Quantity (Buy 1)</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
+          <div class="field"><label>Price per Share (Buy 1)</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 240.50"></div>
+          <button type="button" class="leg-remove" aria-label="Remove this buy" style="visibility:hidden;">&times;</button>
+        </div>
+        <div class="leg-row">
+          <div class="field"><label>Quantity (Buy 2)</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
+          <div class="field"><label>Price per Share (Buy 2)</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 198.75"></div>
+          <button type="button" class="leg-remove" aria-label="Remove this buy">&times;</button>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="btn btn-outline-gold" id="add-leg">+ Add Another Buy</button>
+      </div>
+      <div class="field" style="margin-top:24px;">
+        <label>Current Market Price (optional)</label>
+        <input type="number" id="cmp" min="0" step="0.01" placeholder="e.g. 210.00">
+        <div class="hint">Add this to see your unrealised profit or loss at the current price.</div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="btn btn-gold" id="calc-btn">Calculate Average</button>
+        <button type="button" class="btn btn-ghost" id="reset-btn">Reset</button>
+      </div>
+      <div class="err-msg" id="err-msg">Please enter a valid quantity and price for at least one buy.</div>
+      <div class="result-box" id="result-box">
+        <div class="result-grid">
+          <div class="result-item"><div class="lbl">Total Quantity</div><div class="val" id="r-qty">—</div></div>
+          <div class="result-item"><div class="lbl">Average Buy Price</div><div class="val" id="r-avg">—</div></div>
+          <div class="result-item"><div class="lbl">Total Investment</div><div class="val" id="r-inv">—</div></div>
+          <div class="result-item" id="r-pl-wrap" style="display:none;"><div class="lbl">Unrealised P&amp;L</div><div class="val" id="r-pl">—</div></div>
+        </div>
+        <p class="result-note" id="r-note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="cta-banner glass">
+      <h3>Want a structured way to trade, not just average down?</h3>
+      <p>Our Stock Market and Risk Management courses cover position sizing, entries and exits in detail.</p>
+      <div class="calc-actions">
+        <a href="index.html#courses" class="btn btn-gold">Explore Courses</a>
+        <a href="index.html#contact" class="btn btn-outline-gold">Book Free Demo</a>
+      </div>
+    </div>
+
+    <div class="article">
+      <h2>What Is Stock Averaging?</h2>
+      <p>Stock averaging — also called <strong>averaging down</strong> or <strong>averaging up</strong> — is the practice of buying more shares of a stock you already hold, at a different price, so that your overall average cost per share moves closer to the new price. When you buy more shares at a <em>lower</em> price than your existing holding, your average cost falls. When you buy more at a <em>higher</em> price, your average cost rises.</p>
+      <p>This is one of the most common questions traders and investors search for, because the maths behind it is simple but easy to get wrong by hand once you have more than two purchases. That's exactly what this stock averaging calculator solves — enter every buy, and it does the arithmetic instantly.</p>
+
+      <h2>How the Average Buy Price Formula Works</h2>
+      <p>The formula behind every average price calculation is the same, no matter how many trades you make:</p>
+      <p style="text-align:center; font-family:'Space Mono',monospace; color:var(--gold-bright); font-size:15px;">Average Price = Total Investment ÷ Total Quantity</p>
+      <p>Where <strong>Total Investment</strong> is the sum of (quantity × price) for every purchase, and <strong>Total Quantity</strong> is the sum of all the shares you've bought. This is a weighted average — a large purchase at a low price pulls the average down more than a small purchase at the same price.</p>
+
+      <h3>Worked Example</h3>
+      <table>
+        <tr><th>Buy</th><th>Quantity</th><th>Price</th><th>Amount</th></tr>
+        <tr><td>Buy 1</td><td>50</td><td>240.50</td><td>12,025.00</td></tr>
+        <tr><td>Buy 2</td><td>50</td><td>198.75</td><td>9,937.50</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td>—</td><td><strong>21,962.50</strong></td></tr>
+      </table>
+      <p>Average price = 21,962.50 ÷ 100 = <strong>219.63</strong> per share. The break-even price has moved from 240.50 down to 219.63 — a fall in the stock price of just 8.6% from the first buy is enough for this position to break even, instead of needing the price to recover the full drop.</p>
+
+      <h2>Averaging Down vs Averaging Up</h2>
+      <p><strong>Averaging down</strong> means adding to a position after the price has fallen. It lowers your break-even point, but it also means more of your capital is tied up in a position that has moved against you.</p>
+      <p><strong>Averaging up</strong> means adding to a position after the price has risen — common among trend-followers who want more exposure to a winning trade, accepting a higher average cost in exchange for confirmation that the trade is working.</p>
+
+      <h2>Is Averaging Down a Good Strategy?</h2>
+      <p>There's no single right answer — it depends on <em>why</em> the price moved and how the position fits your overall plan:</p>
+      <ul>
+        <li><strong>It can make sense when:</strong> the underlying business or setup hasn't changed, the fall looks like normal volatility rather than a change in fundamentals, and the additional purchase still fits within your planned position size for that stock.</li>
+        <li><strong>It can backfire when:</strong> you're adding to a falling stock purely because it's now "cheaper", without a fresh reason to believe it will recover — a pattern often called catching a falling knife. Averaging down without a plan can turn a small, manageable loss into a large one.</li>
+      </ul>
+      <p>A useful habit is to decide your maximum position size and number of averaging steps <em>before</em> you enter the first trade, rather than deciding in the moment when emotions are highest.</p>
+
+      <h2>Tips for Using Average Cost Effectively</h2>
+      <ol>
+        <li>Track your average price after every trade, not just at tax time — it's the number that tells you your real break-even.</li>
+        <li>Set a maximum allocation per stock so averaging down can't turn into an oversized, undiversified position.</li>
+        <li>Separate the decision to average down from the decision to hold — sometimes the right move is to exit, not to add.</li>
+        <li>Remember this calculator doesn't include brokerage, STT or other charges — use the <a href="brokerage-calculator.html">Brokerage Calculator</a> alongside it for the full picture.</li>
+      </ol>
+    </div>
+
+    <div class="article" style="margin-top:50px;">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary>What is the formula for average share price?</summary>
+        <p>Average buy price equals total investment divided by total quantity. Multiply each trade's quantity by its price, add those amounts together, then divide by the total number of shares you hold.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is averaging down on a stock a good idea?</summary>
+        <p>It depends on why the price fell. Averaging down can lower your break-even point when the underlying business is still sound, but it can also increase losses if the stock is falling for a structural reason. Position sizing and a clear thesis matter more than the average price itself.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does averaging down reduce my loss?</summary>
+        <p>It reduces your average cost per share, which lowers the price at which you break even. It does not reduce the amount of money already invested, and it increases your total exposure to the stock.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How many times can I average a stock?</summary>
+        <p>There's no fixed limit — add as many purchases as you like to this calculator. In practice, most traders cap how much capital goes into a single position and average down a limited number of times based on a pre-defined risk plan.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between averaging and a SIP?</summary>
+        <p>Averaging usually refers to ad-hoc purchases at different prices, often reacting to how a stock has moved. A SIP is a fixed amount invested on a fixed schedule regardless of price — a form of dollar-cost averaging by design. Try our <a href="sip-calculator.html">SIP Calculator</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does this calculator include brokerage and taxes?</summary>
+        <p>No — it works on the raw quantity and price you enter. Use the <a href="brokerage-calculator.html">Brokerage Calculator</a> separately to estimate brokerage, STT, GST and other charges on each trade.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use this calculator for any stock exchange?</summary>
+        <p>Yes. The maths behind average price is identical everywhere — NSE, BSE, or any global exchange. Just enter the quantity and price in your own currency.</p>
+      </details>
+    </div>
+
+    <div class="article" style="margin-top:50px;">
+      <h2>Other Free Calculators</h2>
+      <div class="other-calcs">
+        <a href="risk-reward-calculator.html" class="glass"><b>Risk Reward Calculator</b>Check your risk:reward ratio before entering a trade.</a>
+        <a href="sip-calculator.html" class="glass"><b>SIP Calculator</b>Project the future value of your monthly SIP.</a>
+        <a href="brokerage-calculator.html" class="glass"><b>Brokerage Calculator</b>Estimate charges on Indian stock market trades.</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+"use strict";
+var legsWrap = document.getElementById('legs');
+var addBtn = document.getElementById('add-leg');
+var calcBtn = document.getElementById('calc-btn');
+var resetBtn = document.getElementById('reset-btn');
+var resultBox = document.getElementById('result-box');
+var errMsg = document.getElementById('err-msg');
+
+function bindRemove(btn){
+  btn.addEventListener('click', function(){
+    if(legsWrap.children.length > 1){ btn.closest('.leg-row').remove(); }
+  });
+}
+Array.prototype.forEach.call(legsWrap.querySelectorAll('.leg-remove'), bindRemove);
+
+function makeRow(n){
+  var row = document.createElement('div');
+  row.className = 'leg-row';
+  row.innerHTML = '<div class="field"><label>Quantity (Buy '+n+')</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>'+
+    '<div class="field"><label>Price per Share (Buy '+n+')</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 200"></div>'+
+    '<button type="button" class="leg-remove" aria-label="Remove this buy">&times;</button>';
+  bindRemove(row.querySelector('.leg-remove'));
+  return row;
+}
+addBtn.addEventListener('click', function(){
+  legsWrap.appendChild(makeRow(legsWrap.children.length + 1));
+});
+
+function fmtNum(n){
+  return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.addEventListener('click', function(){
+  var rows = legsWrap.querySelectorAll('.leg-row');
+  var totalQty = 0, totalInv = 0, valid = false;
+  Array.prototype.forEach.call(rows, function(row){
+    var q = parseFloat(row.querySelector('.leg-qty').value);
+    var p = parseFloat(row.querySelector('.leg-price').value);
+    if(!isNaN(q) && !isNaN(p) && q > 0 && p > 0){ totalQty += q; totalInv += q*p; valid = true; }
+  });
+  if(!valid || totalQty <= 0){
+    errMsg.classList.add('show');
+    resultBox.classList.remove('show');
+    return;
+  }
+  errMsg.classList.remove('show');
+  var avg = totalInv / totalQty;
+  document.getElementById('r-qty').textContent = totalQty.toLocaleString('en-US');
+  document.getElementById('r-avg').textContent = fmtNum(avg);
+  document.getElementById('r-inv').textContent = fmtNum(totalInv);
+
+  var cmp = parseFloat(document.getElementById('cmp').value);
+  var plWrap = document.getElementById('r-pl-wrap');
+  var note = document.getElementById('r-note');
+  if(!isNaN(cmp) && cmp > 0){
+    var curVal = totalQty * cmp;
+    var pl = curVal - totalInv;
+    var plPct = (pl/totalInv)*100;
+    var plEl = document.getElementById('r-pl');
+    plEl.textContent = (pl>=0?'+':'') + fmtNum(pl) + ' (' + (pl>=0?'+':'') + plPct.toFixed(2) + '%)';
+    plEl.className = 'val ' + (pl>=0?'pos':'neg');
+    plWrap.style.display = 'block';
+    note.textContent = 'At a current price of ' + fmtNum(cmp) + ', this holding is worth ' + fmtNum(curVal) + '.';
+  } else {
+    plWrap.style.display = 'none';
+    note.textContent = '';
+  }
+  resultBox.classList.add('show');
+});
+
+resetBtn.addEventListener('click', function(){
+  Array.prototype.forEach.call(legsWrap.querySelectorAll('input'), function(inp){ inp.value=''; });
+  document.getElementById('cmp').value = '';
+  resultBox.classList.remove('show');
+  errMsg.classList.remove('show');
+});
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">DT</span><span class="logo-text">DROPOUT <b>TRADERS</b></span></div>
+        <p>Structured financial education in Stocks, Forex, Gold and Crypto by Dinankar Dev Parmar &mdash; practical analysis, disciplined risk management.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Calculators</h5>
+        <a href="stock-averaging-calculator.html">Stock Averaging Calculator</a>
+        <a href="risk-reward-calculator.html">Risk Reward Calculator</a>
+        <a href="sip-calculator.html">SIP Calculator</a>
+        <a href="brokerage-calculator.html">Brokerage Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Dropout Traders</h5>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <p>dinankar@dropouttraders.in</p>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Trading and investing in Stocks, Forex, Gold and Cryptocurrency carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. This calculator and article are for educational purposes only and do not constitute investment or financial advice. Please consult a licensed financial advisor before making trading or investment decisions.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Dropout Traders. All rights reserved.</p>
+      <p>Rates and charges shown are indicative and may change &mdash; verify with official sources before relying on them.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/917747901709" target="_blank" class="fab-wa" aria-label="Chat on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.15-.19.29-.75.93-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.55-.02s-.51.07-.78.36c-.26.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.19 2.06 3.14 4.99 4.4.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/></svg>
+</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis | Dropout Traders</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter',sans-serif;
+        }
+
+        body{
+            background:#0b0b0b;
+            color:#fff;
+        }
+
+        header{
+            background:#111;
+            padding:20px;
+            text-align:center;
+            border-bottom:1px solid #d4af37;
+        }
+
+        header h1{
+            color:#d4af37;
+            font-size:30px;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:40px auto;
+        }
+
+        .search-box{
+            display:flex;
+            gap:10px;
+            margin-bottom:30px;
+        }
+
+        .search-box input{
+            flex:1;
+            padding:15px;
+            border-radius:10px;
+            border:none;
+            font-size:16px;
+        }
+
+        .search-box button{
+            padding:15px 25px;
+            border:none;
+            background:#d4af37;
+            color:#000;
+            border-radius:10px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .score-card{
+            background:#151515;
+            border:1px solid #d4af37;
+            border-radius:15px;
+            padding:25px;
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        .score-card h2{
+            color:#d4af37;
+            margin-bottom:15px;
+        }
+
+        .score{
+            font-size:60px;
+            font-weight:bold;
+            color:#00ff66;
+        }
+
+        .signal{
+            margin-top:10px;
+            font-size:24px;
+            color:#00ff66;
+            font-weight:bold;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#151515;
+            padding:20px;
+            border-radius:15px;
+            border:1px solid #333;
+        }
+
+        .card h3{
+            color:#d4af37;
+            margin-bottom:10px;
+        }
+
+        footer{
+            margin-top:60px;
+            padding:20px;
+            text-align:center;
+            border-top:1px solid #333;
+            color:#999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Fundamental Analysis</h1>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" placeholder="Search NSE Stock...">
+        <button>Search</button>
+    </div>
+
+    <div class="score-card">
+        <h2>AI Overall Score</h2>
+        <div class="score">87</div>
+        <div class="signal">🟢 BUY</div>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Financial Health</h3>
+            <p>92 /100</p>
+        </div>
+
+        <div class="card">
+            <h3>Growth</h3>
+            <p>88 /100</p>
+        </div>
+
+        <div class="card">
+            <h3>Valuation</h3>
+            <p>72 /100</p>
+        </div>
+
+        <div class="card">
+            <h3>Risk</h3>
+            <p>30 /100</p>
+        </div>
+
+        <div class="card">
+            <h3>Profitability</h3>
+            <p>90 /100</p>
+        </div>
+
+        <div class="card">
+            <h3>Cash Flow</h3>
+            <p>84 /100</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Dropout Traders | AI Fundamental Analysis
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries",
+    "sector": "Energy"
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services",
+    "sector": "Information Technology"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank",
+    "sector": "Banking"
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys",
+    "sector": "Information Technology"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank",
+    "sector": "Banking"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Ltd.",
+    "sector": "FMCG"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "sector": "Banking"
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro",
+    "sector": "Engineering"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel",
+    "sector": "Telecom"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints",
+    "sector": "Paints"
+  }
+]

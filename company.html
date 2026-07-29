@@ -69,8 +69,9 @@
   <a class="back" href="fundamental-analysis.html">← Back to Fundamental Analysis</a>
 
   <div class="card">
-    <h1>Reliance Industries Ltd.</h1>
-    <p>NSE: RELIANCE</p>
+    <h1 id="companyName">Loading...</h1>
+<p id="companySymbol">Loading...</p>
+    
   </div>
 
   <div class="card">
@@ -142,6 +143,23 @@
   </div>
 
 </div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const stock = params.get('stock');
 
+fetch('companies.json')
+  .then(response => response.json())
+  .then(companies => {
+    const company = companies.find(c => c.symbol === stock);
+
+    if (company) {
+      document.getElementById('companyName').textContent = company.name;
+      document.getElementById('companySymbol').textContent = 'NSE: ' + company.symbol;
+    } else {
+      document.getElementById('companyName').textContent = 'Company not found';
+      document.getElementById('companySymbol').textContent = '';
+    }
+  });
+</script>
 </body>
 </html>

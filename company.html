@@ -5,61 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Company Analysis | Dropout Traders</title>
   <style>
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:#0b1220;
-      color:white;
-    }
-    .container{
-      max-width:900px;
-      margin:auto;
-      padding:20px;
-    }
-    .card{
-      background:#111827;
-      border:1px solid #1f2937;
-      border-radius:16px;
-      padding:20px;
-      margin-bottom:20px;
-    }
-    h1{
-      color:#f59e0b;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-    .metric{
-      background:#182235;
-      padding:15px;
-      border-radius:12px;
-    }
-    .metric h3{
-      margin:0 0 8px;
-      color:#94a3b8;
-      font-size:14px;
-    }
-    .metric p{
-      margin:0;
-      font-size:22px;
-      font-weight:bold;
-    }
-    .score{
-      font-size:36px;
-      color:#10b981;
-      font-weight:bold;
-    }
-    ul{
-      line-height:1.8;
-    }
-    .back{
-      display:inline-block;
-      margin-bottom:20px;
-      color:#f59e0b;
-      text-decoration:none;
-    }
+    body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:white;}
+    .container{max-width:900px;margin:auto;padding:20px;}
+    .card{background:#111827;border:1px solid #1f2937;border-radius:16px;padding:20px;margin-bottom:20px;}
+    h1{color:#f59e0b;}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;}
+    .metric{background:#182235;padding:15px;border-radius:12px;}
+    .metric h3{margin:0 0 8px;color:#94a3b8;font-size:14px;}
+    .metric p{margin:0;font-size:22px;font-weight:bold;}
+    .score{font-size:36px;color:#10b981;font-weight:bold;}
+    ul{line-height:1.8;}
+    .back{display:inline-block;margin-bottom:20px;color:#f59e0b;text-decoration:none;}
+    @media(max-width:768px){.grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -70,14 +27,13 @@
 
   <div class="card">
     <h1 id="companyName">Loading...</h1>
-<p id="companySymbol">Loading...</p>
-    
+    <p id="companySymbol">Loading...</p>
   </div>
 
   <div class="card">
     <h2>Dropout Score</h2>
-    <div class="score">87 / 100</div>
-    <p>Strong fundamentally with consistent growth and healthy cash flow.</p>
+    <div class="score" id="dropoutScore">--</div>
+    <p>Fundamental strength score based on profitability, growth, debt, and valuation.</p>
   </div>
 
   <div class="card">
@@ -86,63 +42,43 @@
     <div class="grid">
       <div class="metric">
         <h3>P/E Ratio</h3>
-        <p>24.8</p>
+        <p id="pe">--</p>
       </div>
 
       <div class="metric">
         <h3>ROE</h3>
-        <p>15.6%</p>
+        <p id="roe">--</p>
       </div>
 
       <div class="metric">
         <h3>ROCE</h3>
-        <p>14.8%</p>
+        <p id="roce">--</p>
       </div>
 
       <div class="metric">
         <h3>Debt / Equity</h3>
-        <p>0.32</p>
+        <p id="debt">--</p>
       </div>
 
       <div class="metric">
         <h3>Sales Growth</h3>
-        <p>12.5%</p>
+        <p id="salesGrowth">--</p>
       </div>
 
       <div class="metric">
         <h3>Profit Growth</h3>
-        <p>14.2%</p>
+        <p id="profitGrowth">--</p>
       </div>
     </div>
   </div>
 
   <div class="card">
     <h2>Dropout Traders Analysis</h2>
-
-    <ul>
-      <li><b>Fundamentally Strong:</b> Yes</li>
-      <li><b>Debt Trend:</b> Stable</li>
-      <li><b>Profit Growth:</b> Consistent</li>
-      <li><b>Valuation:</b> Slightly Expensive</li>
-      <li><b>Cash Flow:</b> Healthy</li>
-    </ul>
-
-    <h3>Key Risks</h3>
-    <ul>
-      <li>Capital-intensive expansion</li>
-      <li>Energy price volatility</li>
-      <li>Retail margin pressure</li>
-    </ul>
-
-    <h3>Dropout Verdict</h3>
-    <p>
-      Reliance Industries appears fundamentally strong for long-term investors,
-      with healthy profitability, cash flow generation, and manageable debt.
-      Valuation is above historical averages, so investors should monitor future earnings growth.
-    </p>
+    <p id="analysis">Loading analysis...</p>
   </div>
 
 </div>
+
 <script>
 const params = new URLSearchParams(window.location.search);
 const stock = params.get('stock');
@@ -152,14 +88,25 @@ fetch('companies.json')
   .then(companies => {
     const company = companies.find(c => c.symbol === stock);
 
-    if (company) {
-      document.getElementById('companyName').textContent = company.name;
-      document.getElementById('companySymbol').textContent = 'NSE: ' + company.symbol;
-    } else {
+    if (!company) {
       document.getElementById('companyName').textContent = 'Company not found';
       document.getElementById('companySymbol').textContent = '';
+      return;
     }
+
+    document.getElementById('companyName').textContent = company.name;
+    document.getElementById('companySymbol').textContent = 'NSE: ' + company.symbol;
+
+    document.getElementById('pe').textContent = company.pe;
+    document.getElementById('roe').textContent = company.roe + '%';
+    document.getElementById('roce').textContent = company.roce + '%';
+    document.getElementById('debt').textContent = company.debt;
+    document.getElementById('salesGrowth').textContent = company.salesGrowth + '%';
+    document.getElementById('profitGrowth').textContent = company.profitGrowth + '%';
+    document.getElementById('dropoutScore').textContent = company.dropoutScore + ' / 100';
+    document.getElementById('analysis').textContent = company.analysis;
   });
 </script>
+
 </body>
 </html>

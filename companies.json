@@ -1,8 +1,18 @@
 [
   {
-    "symbol": "RELIANCE",
-    "name": "Reliance Industries",
-    "sector": "Energy"
+    {
+  "symbol": "RELIANCE",
+  "name": "Reliance Industries",
+  "sector": "Energy",
+  "pe": 24.8,
+  "roe": 15.6,
+  "roce": 14.8,
+  "debt": 0.32,
+  "salesGrowth": 12.5,
+  "profitGrowth": 14.2,
+  "dropoutScore": 87,
+  "analysis": "Reliance is fundamentally strong with healthy cash flow and stable debt levels."
+}
   },
   {
     "symbol": "TCS",

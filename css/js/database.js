@@ -4,15 +4,21 @@
 // ==========================================
 
 import TCS from "./companies/tcs.js";
+import RELIANCE from "./companies/reliance.js";
 
 const DATABASE = {
 
     TCS,
 
+    RELIANCE,
+
+    "RELIANCE INDUSTRIES": RELIANCE,
+
+    RELIANCEINDUSTRIES: RELIANCE,
+
     "TATA CONSULTANCY SERVICES": TCS,
 
     TATACONSULTANCYSERVICES: TCS
-
 };
 
 

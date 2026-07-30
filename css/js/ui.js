@@ -216,12 +216,18 @@ function row(title,data){
 
 function format(value){
 
-    if(value===null || value===undefined) return "-";
+    if(value===null || value===undefined){
+        return "-";
+    }
 
-    if(typeof value==="number")
-        return value.toLocaleString("en-IN");
+    if(typeof value==="number"){
+        return value.toLocaleString("en-IN",{
+            maximumFractionDigits:2
+        });
+    }
 
     return value;
+
 }
 
 function safe(v){

@@ -21,19 +21,28 @@
 </header>
 
 <section class="search-section">
-    <div class="container">
 
-        <input
-            type="text"
-            id="stockInput"
-            placeholder="Search NSE Stock (Example: RELIANCE)"
-        >
+    <div class="container search-container">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="stockInput"
+                placeholder="Search NSE Stock (Example: TCS, RELIANCE)"
+                autocomplete="off"
+            >
+
+            <div id="autocompleteList" class="autocomplete-list"></div>
+
+        </div>
 
         <button id="searchBtn">
             Analyze Stock
         </button>
 
     </div>
+
 </section>
 
 <section class="score-section">

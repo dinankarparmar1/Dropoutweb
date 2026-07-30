@@ -1,6 +1,6 @@
 // ==========================================
-// Dropout API Engine v7.0
-// Vercel Automatic API + Safe Fallback
+// Dropout API Engine v8.0
+// Automatic API + Debug Safe Mode
 // ==========================================
 
 import { getCompany } from "./database.js";
@@ -15,7 +15,9 @@ export async function searchCompany(symbol){
 
 
     if(!symbol){
+
         return null;
+
     }
 
 
@@ -26,7 +28,7 @@ export async function searchCompany(symbol){
 
 
 
-    try {
+    try{
 
 
         const liveData =
@@ -37,10 +39,17 @@ export async function searchCompany(symbol){
         if(liveData){
 
 
-            return normalizeCompany(liveData);
+            console.log(
+                "LIVE DATA RECEIVED:",
+                liveData
+            );
+
+
+            return liveData;
 
 
         }
+
 
 
     }
@@ -68,13 +77,14 @@ export async function searchCompany(symbol){
 
     if(localCompany){
 
-        return localCompany;
+        return normalizeCompany(localCompany);
 
     }
 
 
 
     return null;
+
 
 }
 
@@ -102,12 +112,15 @@ async function fetchLiveStock(symbol){
 
         if(!response.ok){
 
+
             console.log(
-                "API response failed",
+                "API failed:",
                 response.status
             );
 
+
             return null;
+
 
         }
 
@@ -120,7 +133,9 @@ async function fetchLiveStock(symbol){
 
         if(!data || data.error){
 
+
             return null;
+
 
         }
 
@@ -164,8 +179,6 @@ async function fetchLiveStock(symbol){
 
 
 
-            // Fundamentals
-
             revenue:
                 Number(data.revenue || 0),
 
@@ -201,6 +214,16 @@ async function fetchLiveStock(symbol){
 
 
 
+            currentAssets:
+                Number(data.currentAssets || 0),
+
+
+
+            currentLiabilities:
+                Number(data.currentLiabilities || 0),
+
+
+
             operatingCashFlow:
                 Number(data.operatingCashFlow || 0),
 
@@ -222,7 +245,12 @@ async function fetchLiveStock(symbol){
 
 
             enterpriseValue:
-                Number(data.enterpriseValue || 0)
+                Number(data.enterpriseValue || 0),
+
+
+
+            marketCap:
+                Number(data.marketCap || 0)
 
         };
 
@@ -232,12 +260,13 @@ async function fetchLiveStock(symbol){
 
 
         console.log(
-            "Automatic API unavailable",
+            "Automatic API error:",
             error
         );
 
 
         return null;
+
 
     }
 

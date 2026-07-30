@@ -21,7 +21,7 @@ function renderCompany(company) {
     card.innerHTML = `
         <div class="company-grid">
 
-            ${item("Company", company.companyName)}
+            ${item("Company", company.companyName || company.name)}
             ${item("Symbol", company.symbol)}
             ${item("Sector", company.sector)}
             ${item("Industry", company.industry)}

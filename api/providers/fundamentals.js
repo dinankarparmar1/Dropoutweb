@@ -1,15 +1,17 @@
 // ==========================================
-// Dropout Fundamentals Provider v3.0
-// Yahoo Chart + Safe Fundamentals
+// Dropout Fundamentals Provider v4.0
+// Automatic Financial Data Layer
 // ==========================================
 
+
 export async function getFundamentals(symbol){
+
 
     try{
 
 
         const url =
-        `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}.NS?modules=defaultKeyStatistics,summaryDetail,financialData`;
+        `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}.NS?modules=financialData,defaultKeyStatistics,summaryDetail`;
 
 
         const response =
@@ -20,9 +22,7 @@ export async function getFundamentals(symbol){
         if(!response.ok){
 
             return {
-
                 beta:1
-
             };
 
         }
@@ -42,9 +42,7 @@ export async function getFundamentals(symbol){
         if(!result){
 
             return {
-
                 beta:1
-
             };
 
         }
@@ -69,6 +67,8 @@ export async function getFundamentals(symbol){
         return {
 
 
+            // Profitability
+
             revenue:
                 financial.totalRevenue?.raw || 0,
 
@@ -86,6 +86,8 @@ export async function getFundamentals(symbol){
 
 
 
+            // Balance Sheet
+
             totalDebt:
                 financial.totalDebt?.raw || 0,
 
@@ -99,6 +101,17 @@ export async function getFundamentals(symbol){
 
 
 
+            currentAssets:
+                financial.totalCurrentAssets?.raw || 0,
+
+
+            currentLiabilities:
+                financial.totalCurrentLiabilities?.raw || 0,
+
+
+
+            // Cash Flow
+
             operatingCashFlow:
                 financial.operatingCashflow?.raw || 0,
 
@@ -107,6 +120,8 @@ export async function getFundamentals(symbol){
                 financial.capitalExpenditures?.raw || 0,
 
 
+
+            // Valuation
 
             eps:
                 stats.trailingEps?.raw || 0,
@@ -120,12 +135,22 @@ export async function getFundamentals(symbol){
                 stats.enterpriseValue?.raw || 0,
 
 
-            beta:
-                stats.beta?.raw || 1,
 
+            // Market
 
             marketCap:
-                detail.marketCap?.raw || 0
+                detail.marketCap?.raw || 0,
+
+
+            dividendYield:
+                detail.dividendYield?.raw || 0,
+
+
+
+            // Risk
+
+            beta:
+                stats.beta?.raw || 1
 
 
         };
@@ -136,7 +161,7 @@ export async function getFundamentals(symbol){
 
 
         console.log(
-            "Fundamentals API failed",
+            "Fundamentals error:",
             error
         );
 

@@ -254,3 +254,39 @@ td{
 }
 
 }
+/* ============================= */
+/* Company Overview */
+/* ============================= */
+
+.company-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.company-grid div{
+    background:#1d1d1d;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:18px;
+    transition:.25s;
+}
+
+.company-grid div:hover{
+    border-color:gold;
+    transform:translateY(-3px);
+}
+
+.company-grid strong{
+    display:block;
+    color:gold;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.company-grid span{
+    display:block;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+}

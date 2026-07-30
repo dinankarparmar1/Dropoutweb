@@ -1,17 +1,14 @@
 // ==========================================
-// Dropout Fundamentals Provider v4.0
-// Automatic Financial Data Layer
+// Dropout Fundamentals Provider v5.0
+// Reliable Yahoo Quote Layer
 // ==========================================
-
 
 export async function getFundamentals(symbol){
 
-
     try{
 
-
         const url =
-        `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}.NS?modules=financialData,defaultKeyStatistics,summaryDetail`;
+        `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbol}.NS`;
 
 
         const response =
@@ -34,12 +31,12 @@ export async function getFundamentals(symbol){
 
 
 
-        const result =
-        json.quoteSummary?.result?.[0];
+        const quote =
+        json.quoteResponse?.result?.[0];
 
 
 
-        if(!result){
+        if(!quote){
 
             return {
                 beta:1
@@ -49,108 +46,44 @@ export async function getFundamentals(symbol){
 
 
 
-        const financial =
-        result.financialData || {};
-
-
-
-        const stats =
-        result.defaultKeyStatistics || {};
-
-
-
-        const detail =
-        result.summaryDetail || {};
-
-
-
         return {
 
 
-            // Profitability
+            // Market
 
-            revenue:
-                financial.totalRevenue?.raw || 0,
-
-
-            netIncome:
-                financial.netIncomeToCommon?.raw || 0,
+            marketCap:
+                quote.marketCap || 0,
 
 
-            operatingIncome:
-                financial.operatingIncome?.raw || 0,
-
-
-            ebitda:
-                financial.ebitda?.raw || 0,
-
-
-
-            // Balance Sheet
-
-            totalDebt:
-                financial.totalDebt?.raw || 0,
-
-
-            totalAssets:
-                financial.totalAssets?.raw || 0,
-
-
-            shareholdersEquity:
-                financial.totalStockholderEquity?.raw || 0,
-
-
-
-            currentAssets:
-                financial.totalCurrentAssets?.raw || 0,
-
-
-            currentLiabilities:
-                financial.totalCurrentLiabilities?.raw || 0,
-
-
-
-            // Cash Flow
-
-            operatingCashFlow:
-                financial.operatingCashflow?.raw || 0,
-
-
-            capex:
-                financial.capitalExpenditures?.raw || 0,
+            beta:
+                quote.beta || 1,
 
 
 
             // Valuation
 
             eps:
-                stats.trailingEps?.raw || 0,
-
-
-            bookValuePerShare:
-                stats.bookValue?.raw || 0,
+                quote.epsTrailingTwelveMonths || 0,
 
 
             enterpriseValue:
-                stats.enterpriseValue?.raw || 0,
+                quote.enterpriseValue || 0,
 
 
 
-            // Market
+            // Price metrics
 
-            marketCap:
-                detail.marketCap?.raw || 0,
-
-
-            dividendYield:
-                detail.dividendYield?.raw || 0,
+            previousClose:
+                quote.previousClose || 0,
 
 
+            fiftyTwoWeekHigh:
+                quote.fiftyTwoWeekHigh || 0,
 
-            // Risk
 
-            beta:
-                stats.beta?.raw || 1
+            fiftyTwoWeekLow:
+                quote.fiftyTwoWeekLow || 0
+
 
 
         };
@@ -161,7 +94,7 @@ export async function getFundamentals(symbol){
 
 
         console.log(
-            "Fundamentals error:",
+            "Fundamentals provider error:",
             error
         );
 
@@ -171,6 +104,7 @@ export async function getFundamentals(symbol){
             beta:1
 
         };
+
 
     }
 

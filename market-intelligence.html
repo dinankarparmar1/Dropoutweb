@@ -99,6 +99,18 @@ section{padding:64px 0;}
 .result-item .val{font-family:'Space Mono',monospace;font-size:22px;color:var(--gold-bright);margin-top:8px;}
 .result-item .sub{margin-top:6px;font-size:12px;color:var(--muted-dim);}
 
+/* LIVE MARKETS GRID */
+.markets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.market-card{padding:6px;}
+.market-card .mc-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 4px;}
+.market-card .mc-head span{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.08em;color:var(--gold-bright);}
+.market-card .mc-head .live-dot{display:inline-flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.1em;color:var(--green);text-transform:uppercase;}
+.market-card .mc-head .live-dot::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:livepulse 1.6s ease-in-out infinite;}
+@keyframes livepulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+.market-card .tv-wrap{height:210px;border-radius:10px;overflow:hidden;}
+@media (max-width:900px){ .markets-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .markets-grid{grid-template-columns:1fr;} }
+
 /* BADGE */
 .badge{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:100px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;border:1px solid var(--panel-border-strong);color:var(--muted);}
 .badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--muted-dim);}
@@ -171,17 +183,21 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <span class="logo-text">DROPOUT <b>TRADERS</b></span>
     </a>
     <div class="nav-links">
-      <a href="fundamental-analysis.html">Fundamental Analysis</a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="market-intelligence.html" class="current">Market Intelligence</a>
       <a href="index.html#calculators">Calculators</a>
-      <a href="index.html#markets" class="current">Markets</a>
       <a href="index.html#contact">Contact</a>
     </div>
     <details class="mnav">
       <summary>Menu</summary>
       <div class="mnav-panel">
-        <a href="fundamental-analysis.html">Fundamental Analysis</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#markets">Markets</a>
+        <a href="market-intelligence.html" class="current">Market Intelligence</a>
         <a href="index.html#calculators">Calculators</a>
-        <a href="index.html#markets" class="current">Markets</a>
         <a href="index.html#contact">Contact</a>
       </div>
     </details>
@@ -196,6 +212,45 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <h1>Beneath the <span class="accent">index</span></h1>
       <p>The Nifty or Sensex number is one line. Sector strength, heatmaps, breadth and institutional flows are what actually moved it — this is where we track them.</p>
     </div>
+  </div>
+</section>
+
+<!-- ============ LIVE MARKETS ============ -->
+<section id="live-markets">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Real-Time Data</div>
+      <h2>Indian markets, <span class="accent">forex, crypto &amp; gold</span> — live</h2>
+      <p>Live quotes streamed directly from TradingView: Nifty and Bank Nifty for the Indian market, gold, Bitcoin and Ethereum, and the key forex pairs — all updating in real time.</p>
+    </div>
+    <div class="glass tv-card" style="margin-bottom:22px;">
+      <div class="tv-wrap">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+          {
+            "symbols": [
+              {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
+              {"proName": "NSE:BANKNIFTY", "title": "BANK NIFTY"},
+              {"proName": "OANDA:XAUUSD", "title": "GOLD"},
+              {"proName": "BITSTAMP:BTCUSD", "title": "BITCOIN"},
+              {"proName": "BITSTAMP:ETHUSD", "title": "ETHEREUM"},
+              {"proName": "FX:USDINR", "title": "USD/INR"},
+              {"proName": "OANDA:EURUSD", "title": "EUR/USD"},
+              {"proName": "OANDA:GBPUSD", "title": "GBP/USD"}
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="markets-grid" id="mi-markets-grid"></div>
+    <p class="tv-note" style="margin-top:20px;">Indian index prices may be delayed slightly outside NSE data-feed hours; gold, crypto and forex pairs stream live around the clock.</p>
   </div>
 </section>
 
@@ -443,9 +498,10 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       </div>
       <div class="footer-col">
         <h5>Explore</h5>
-        <a href="fundamental-analysis.html">Fundamental Analysis</a>
-        <a href="index.html#calculators">Calculators</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
         <a href="index.html#markets">Markets</a>
+        <a href="index.html#calculators">Calculators</a>
       </div>
       <div class="footer-col">
         <h5>Dropout Traders</h5>
@@ -469,6 +525,37 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+var MI_MARKETS = [
+  {sym:'NSE:NIFTY', name:'NIFTY 50', delayed:true},
+  {sym:'NSE:BANKNIFTY', name:'BANK NIFTY', delayed:true},
+  {sym:'OANDA:XAUUSD', name:'GOLD (XAU/USD)'},
+  {sym:'BITSTAMP:BTCUSD', name:'BITCOIN'},
+  {sym:'BITSTAMP:ETHUSD', name:'ETHEREUM'},
+  {sym:'FX:USDINR', name:'USD/INR'}
+];
+var miMarketsGrid = document.getElementById('mi-markets-grid');
+if(miMarketsGrid){
+  miMarketsGrid.innerHTML = MI_MARKETS.map(function(m, idx){
+    return '<div class="glass market-card"><div class="mc-head"><span>'+m.name+'</span>'+
+      (m.delayed ? '<span class="live-dot" style="color:var(--muted-dim);"><span style="width:6px;height:6px;"></span>Chart</span>' : '<span class="live-dot">Live</span>')+
+    '</div>'+
+    '<div class="tv-wrap" id="mi-tv-mini-'+idx+'"></div></div>';
+  }).join('');
+  MI_MARKETS.forEach(function(m, idx){
+    var container = document.getElementById('mi-tv-mini-'+idx);
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+    script.async = true;
+    script.innerHTML = JSON.stringify({
+      symbol: m.sym, width:'100%', height:'100%', locale:'en',
+      dateRange:'1M', colorTheme:'dark', isTransparent:true, autosize:true,
+      largeChartUrl:''
+    });
+    container.appendChild(script);
+  });
+}
 </script>
 
 </body>

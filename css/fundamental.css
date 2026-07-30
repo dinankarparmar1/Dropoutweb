@@ -1,343 +1,197 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+/* ===================================== */
+/* Search Box + Autocomplete */
+/* ===================================== */
 
-:root{
-    --bg:#0b0b0b;
-    --card:#171717;
-    --card2:#1f1f1f;
-    --border:#2d2d2d;
-    --gold:#FFD700;
-    --green:#00ff7f;
-    --red:#ff4d4f;
-    --text:#ffffff;
-    --muted:#a9a9a9;
-}
-
-body{
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-}
-
-.container{
-    width:92%;
-    max-width:1400px;
-    margin:auto;
-}
-
-/* ================= HEADER ================= */
-
-.header{
-    padding:45px 0;
-    text-align:center;
-    border-bottom:1px solid rgba(255,215,0,.2);
-}
-
-.header h1{
-    font-size:42px;
-    color:var(--gold);
-    margin-bottom:10px;
-}
-
-.header p{
-    color:var(--muted);
-}
-
-/* ================= SEARCH ================= */
-
-.search-section{
-    padding:35px 0;
-}
-
-.search-section .container{
+.search-container{
     display:flex;
     gap:15px;
-    flex-wrap:wrap;
+    align-items:flex-start;
 }
 
-.search-section input{
+.search-box{
+    position:relative;
     flex:1;
-    min-width:250px;
-    padding:16px;
-    background:#181818;
+}
+
+.autocomplete-list{
+
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+
+    background:#1a1a1a;
     border:1px solid var(--border);
-    color:white;
+
     border-radius:12px;
-    font-size:17px;
-    outline:none;
+
+    margin-top:8px;
+
+    overflow:hidden;
+
+    display:none;
+
+    z-index:999;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
 }
 
-.search-section input:focus{
-    border-color:var(--gold);
-}
+.autocomplete-item{
 
-.search-section button{
-    padding:16px 30px;
-    border:none;
-    border-radius:12px;
-    background:var(--gold);
-    color:black;
-    font-weight:bold;
+    padding:15px 18px;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:.2s;
+
+    border-bottom:1px solid #2b2b2b;
+
 }
 
-.search-section button:hover{
-    transform:translateY(-2px);
+.autocomplete-item:last-child{
+
+    border-bottom:none;
+
 }
 
-/* ================= SCORE ================= */
+.autocomplete-item:hover{
 
-.score-section{
-    margin-bottom:40px;
+    background:#262626;
+
 }
 
-.score-card{
-    background:linear-gradient(145deg,#1a1a1a,#111);
-    border:1px solid rgba(255,215,0,.25);
-    border-radius:20px;
-    padding:40px;
-    text-align:center;
-}
+.autocomplete-symbol{
 
-.score-card h2{
     color:var(--gold);
-    letter-spacing:2px;
-}
 
-#score{
-    font-size:82px;
     font-weight:700;
-    color:var(--green);
-    margin:20px 0;
+
+    font-size:16px;
+
 }
 
-#signal{
-    font-size:28px;
-    font-weight:bold;
+.autocomplete-name{
+
+    color:#bdbdbd;
+
+    font-size:13px;
+
+    margin-top:3px;
+
 }
 
-/* ================= METRICS ================= */
+/* ===================================== */
+/* Financial Tables */
+/* ===================================== */
 
-.metrics{
-    margin:50px 0;
-}
+.financial-table,
+.ratio-table{
 
-.metrics .container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
-}
-
-.metric-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:28px;
-    transition:.25s;
-}
-
-.metric-card:hover{
-    transform:translateY(-5px);
-    border-color:var(--gold);
-}
-
-.metric-card h3{
-    color:var(--gold);
-    margin-bottom:15px;
-    font-size:18px;
-}
-
-.metric-card p{
-    font-size:34px;
-    font-weight:bold;
-    color:white;
-}
-
-/* ================= DASHBOARD ================= */
-
-.dashboard-section{
-    margin:40px 0;
-}
-
-.dashboard-section h2{
-    color:var(--gold);
-    margin-bottom:20px;
-    font-size:28px;
-}
-
-#companyCard,
-#financialData,
-#ratioContainer,
-#peerContainer,
-#redFlagContainer,
-#thesisContainer{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:30px;
-    min-height:180px;
-    color:var(--muted);
-}
-
-/* ================= TABLE ================= */
-
-table{
     width:100%;
     border-collapse:collapse;
+
 }
 
-th{
-    background:#202020;
-    color:var(--gold);
-}
+.financial-table th,
+.financial-table td,
+.ratio-table th,
+.ratio-table td{
 
-th,
-td{
     padding:14px;
-    border:1px solid #2f2f2f;
-    text-align:center;
+
+    border:1px solid #303030;
+
 }
 
-/* ================= STATUS COLORS ================= */
+.financial-table th,
+.ratio-table th{
 
-.buy{
-    color:#00ff7f;
-}
+    background:#232323;
 
-.hold{
-    color:#ffc107;
-}
-
-.sell{
-    color:#ff5252;
-}
-
-/* ================= LOADING ================= */
-
-.loading{
-    text-align:center;
     color:var(--gold);
-    padding:40px;
+
 }
 
-/* ================= MOBILE ================= */
+.financial-table tr:hover,
+.ratio-table tr:hover{
+
+    background:#202020;
+
+}
+
+/* ===================================== */
+/* AI Summary */
+/* ===================================== */
+
+.thesis-card{
+
+    text-align:center;
+
+}
+
+.thesis-card h1{
+
+    font-size:70px;
+
+    margin:20px 0;
+
+}
+
+.thesis-card h2{
+
+    margin-bottom:15px;
+
+}
+
+.thesis-card p{
+
+    color:#bdbdbd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===================================== */
+/* Mobile */
+/* ===================================== */
 
 @media(max-width:768px){
 
-.header h1{
-    font-size:30px;
-}
+.search-container{
 
-#score{
-    font-size:58px;
-}
-
-.metric-card p{
-    font-size:28px;
-}
-
-.search-section .container{
     flex-direction:column;
+
 }
 
-.search-section button{
+.search-box{
+
     width:100%;
-}
-
-.dashboard-section h2{
-    font-size:22px;
-}
 
 }
-/* ============================= */
-/* Company Overview */
-/* ============================= */
+
+.search-container button{
+
+    width:100%;
+
+}
+
+.chart-grid{
+
+    grid-template-columns:1fr;
+
+}
 
 .company-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
 
-.company-grid div{
-    background:#1d1d1d;
-    border:1px solid #333;
-    border-radius:12px;
-    padding:18px;
-    transition:.25s;
-}
-
-.company-grid div:hover{
-    border-color:gold;
-    transform:translateY(-3px);
-}
-
-.company-grid strong{
-    display:block;
-    color:gold;
-    font-size:14px;
-    margin-bottom:8px;
-}
-
-.company-grid span{
-    display:block;
-    font-size:18px;
-    font-weight:600;
-    color:#fff;
-}
-/* ===================================== */
-/* Financial Charts */
-/* ===================================== */
-
-.chart-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-    gap:24px;
-    margin-top:25px;
-}
-
-.chart-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:20px;
-    transition:.3s;
-}
-
-.chart-card:hover{
-    border-color:var(--gold);
-    transform:translateY(-3px);
-}
-
-.chart-card h3{
-    color:var(--gold);
-    margin-bottom:18px;
-    font-size:18px;
-    text-align:center;
-}
-
-.chart-card canvas{
-    width:100% !important;
-    height:320px !important;
-}
-
-/* ============================= */
-/* Responsive Charts */
-/* ============================= */
-
-@media(max-width:768px){
-
-.chart-grid{
     grid-template-columns:1fr;
-}
 
-.chart-card canvas{
-    height:260px !important;
 }
 
 }

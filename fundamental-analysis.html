@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -131,6 +132,44 @@ No data loaded.
 
 </section>
 
+<!-- ========================= -->
+<!-- Financial Charts -->
+<!-- ========================= -->
+
+<section id="financialCharts" class="dashboard-section">
+
+<div class="container">
+
+<h2>Financial Charts</h2>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+<h3>Revenue Trend</h3>
+<canvas id="revenueChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Net Profit Trend</h3>
+<canvas id="profitChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>EPS Trend</h3>
+<canvas id="epsChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Free Cash Flow Trend</h3>
+<canvas id="fcfChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section id="ratioAnalysis" class="dashboard-section">
 
 <div class="container">
@@ -187,7 +226,10 @@ Waiting for analysis...
 
 </section>
 
-<script type="module" src="css/js/fundamental.js"></script>
+<!-- Chart.js should load BEFORE your module -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="module" src="css/js/fundamental.js"></script>
+
 </body>
 </html>

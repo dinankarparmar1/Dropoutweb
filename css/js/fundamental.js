@@ -1,23 +1,21 @@
 document.getElementById("searchBtn").addEventListener("click", function () {
 
-const score = Math.floor(Math.random() * 30) + 70;
+    const symbol = document.getElementById("stockSearch").value.trim().toUpperCase();
 
-document.getElementById("score").innerHTML = score;
+    const stock = stocks[symbol];
 
-let signal = "HOLD";
+    if (!stock) {
+        alert("Stock not found!");
+        return;
+    }
 
-if (score >= 85) signal = "🟢 STRONG BUY";
-else if (score >= 75) signal = "🟢 BUY";
-else if (score >= 65) signal = "🟡 HOLD";
-else signal = "🔴 SELL";
+    document.getElementById("score").innerHTML = stock.score;
+    document.getElementById("signal").innerHTML = stock.signal;
 
-document.getElementById("signal").innerHTML = signal;
-
-document.getElementById("health").innerHTML = Math.floor(Math.random()*20)+80;
-document.getElementById("growth").innerHTML = Math.floor(Math.random()*20)+75;
-document.getElementById("valuation").innerHTML = Math.floor(Math.random()*20)+65;
-document.getElementById("risk").innerHTML = Math.floor(Math.random()*30)+20;
-document.getElementById("profitability").innerHTML = Math.floor(Math.random()*20)+80;
-document.getElementById("cashflow").innerHTML = Math.floor(Math.random()*20)+75;
-
+    document.getElementById("health").innerHTML = stock.health;
+    document.getElementById("growth").innerHTML = stock.growth;
+    document.getElementById("valuation").innerHTML = stock.valuation;
+    document.getElementById("risk").innerHTML = stock.risk;
+    document.getElementById("profitability").innerHTML = stock.profitability;
+    document.getElementById("cashflow").innerHTML = stock.cashflow;
 });

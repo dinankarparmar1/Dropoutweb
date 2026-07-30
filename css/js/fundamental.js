@@ -1,23 +1,69 @@
-document.getElementById("searchBtn").addEventListener("click", function () {
+import { overallScore } from "./scoring.js";
 
-const score = Math.floor(Math.random() * 30) + 70;
+const searchBtn = document.getElementById("searchBtn");
 
-document.getElementById("score").innerHTML = score;
+searchBtn.addEventListener("click", () => {
 
-let signal = "HOLD";
+    const company = document.getElementById("stockInput").value.trim();
 
-if (score >= 85) signal = "🟢 STRONG BUY";
-else if (score >= 75) signal = "🟢 BUY";
-else if (score >= 65) signal = "🟡 HOLD";
-else signal = "🔴 SELL";
+    if (!company) {
+        alert("Please enter a stock name.");
+        return;
+    }
 
-document.getElementById("signal").innerHTML = signal;
+    /*
+      Temporary sample data.
+      Later this will come from the API.
+    */
+    const data = {
+        currentRatio: 2.1,
+        debtToEquity: 0.35,
 
-document.getElementById("health").innerHTML = Math.floor(Math.random()*20)+80;
-document.getElementById("growth").innerHTML = Math.floor(Math.random()*20)+75;
-document.getElementById("valuation").innerHTML = Math.floor(Math.random()*20)+65;
-document.getElementById("risk").innerHTML = Math.floor(Math.random()*30)+20;
-document.getElementById("profitability").innerHTML = Math.floor(Math.random()*20)+80;
-document.getElementById("cashflow").innerHTML = Math.floor(Math.random()*20)+75;
+        revenueGrowth: 18,
+        profitGrowth: 22,
+
+        roe: 24,
+        roce: 26,
+        netMargin: 18,
+
+        pe: 22,
+        industryPE: 28,
+
+        freeCashFlow: 1850,
+
+        promoterHolding: 61,
+        fiiHolding: 18,
+
+        beta: 0.9
+    };
+
+    const result = overallScore(data);
+
+    document.getElementById("score").textContent = result.finalScore;
+    document.getElementById("signal").textContent = result.rating;
+
+    document.getElementById("health").textContent =
+        result.breakdown.financialHealth;
+
+    document.getElementById("growth").textContent =
+        result.breakdown.growth;
+
+    document.getElementById("valuation").textContent =
+        result.breakdown.valuation;
+
+    document.getElementById("profitability").textContent =
+        result.breakdown.profitability;
+
+    document.getElementById("cashflow").textContent =
+        result.breakdown.cashFlow;
+
+    document.getElementById("debt").textContent =
+        result.breakdown.debt;
+
+    document.getElementById("shareholding").textContent =
+        result.breakdown.shareholding;
+
+    document.getElementById("risk").textContent =
+        result.breakdown.risk;
 
 });

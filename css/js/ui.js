@@ -1,185 +1,225 @@
 // =====================================
-// UI Rendering Engine
+// UI Rendering Engine v3.0
 // =====================================
 
 export function renderDashboard(company, ratios, score) {
-
     renderCompany(company);
     renderFinancials(company);
     renderRatios(ratios);
     renderInvestmentThesis(score);
-
 }
 
 // =====================================
 // Company Overview
 // =====================================
 
-function renderCompany(company){
+function renderCompany(company) {
 
     const card = document.getElementById("companyCard");
-
-    if(!card) return;
+    if (!card) return;
 
     card.innerHTML = `
         <div class="company-grid">
 
-            <div><strong>Company</strong><span>${company.companyName}</span></div>
-            <div><strong>Symbol</strong><span>${company.symbol}</span></div>
-            <div><strong>Sector</strong><span>${company.sector}</span></div>
-            <div><strong>Industry</strong><span>${company.industry}</span></div>
-            <div><strong>Market Cap</strong><span>${company.marketCap}</span></div>
-            <div><strong>Current Price</strong><span>₹${company.currentPrice}</span></div>
-            <div><strong>52W High</strong><span>₹${company.high52Week}</span></div>
-            <div><strong>52W Low</strong><span>₹${company.low52Week}</span></div>
-            <div><strong>Book Value</strong><span>₹${company.bookValuePerShare}</span></div>
-            <div><strong>Dividend Yield</strong><span>${ratiosSafe(company.dividendYield)}%</span></div>
-            <div><strong>Face Value</strong><span>₹${company.faceValue}</span></div>
-            <div><strong>Promoter Holding</strong><span>${company.promoterHolding}%</span></div>
-            <div><strong>FII Holding</strong><span>${company.fiiHolding}%</span></div>
-            <div><strong>DII Holding</strong><span>${company.diiHolding}%</span></div>
-            <div><strong>Beta</strong><span>${company.beta}</span></div>
+            ${item("Company", company.companyName)}
+            ${item("Symbol", company.symbol)}
+            ${item("Sector", company.sector)}
+            ${item("Industry", company.industry)}
+
+            ${item("Market Cap", company.marketCap)}
+            ${item("Current Price", "₹" + format(company.currentPrice))}
+            ${item("52W High", "₹" + format(company.high52Week))}
+            ${item("52W Low", "₹" + format(company.low52Week))}
+
+            ${item("Book Value", "₹" + format(company.bookValuePerShare))}
+            ${item("Face Value", "₹" + format(company.faceValue))}
+            ${item("Dividend Yield", safe(company.dividendYield) + "%")}
+
+            ${item("Promoter Holding", safe(company.promoterHolding) + "%")}
+            ${item("FII Holding", safe(company.fiiHolding) + "%")}
+            ${item("DII Holding", safe(company.diiHolding) + "%")}
+            ${item("Beta", safe(company.beta))}
 
         </div>
     `;
-
 }
 
 // =====================================
 // Financial Statements
 // =====================================
 
-function renderFinancials(company){
+function renderFinancials(company) {
 
-    const financial = document.getElementById("financialData");
-
-    if(!financial) return;
+    const table = document.getElementById("financialData");
+    if (!table) return;
 
     const h = company.history;
 
-    financial.innerHTML = `
-        <table>
+    table.innerHTML = `
+        <table class="financial-table">
 
-            <tr>
-                <th>Metric</th>
-                ${h.years.map(y=>`<th>${y}</th>`).join("")}
-            </tr>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    ${h.years.map(y => `<th>${y}</th>`).join("")}
+                </tr>
+            </thead>
 
-            <tr>
-                <td>Revenue</td>
-                ${h.revenue.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-            </tr>
+            <tbody>
 
-            <tr>
-                <td>Net Profit</td>
-                ${h.netProfit.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-            </tr>
+                ${row("Revenue", h.revenue)}
+                ${row("Net Profit", h.netProfit)}
+                ${row("EPS", h.eps)}
+                ${row("Operating Cash Flow", h.operatingCashFlow)}
+                ${row("Free Cash Flow", h.freeCashFlow)}
 
-            <tr>
-                <td>EPS</td>
-                ${h.eps.map(v=>`<td>${v}</td>`).join("")}
-            </tr>
-
-            <tr>
-                <td>Operating Cash Flow</td>
-                ${h.operatingCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-            </tr>
-
-            <tr>
-                <td>Free Cash Flow</td>
-                ${h.freeCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-            </tr>
+            </tbody>
 
         </table>
     `;
-
 }
 
 // =====================================
-// Advanced Ratio Analysis
+// Ratio Table
 // =====================================
 
-function renderRatios(ratios){
+function renderRatios(r) {
 
     const box = document.getElementById("ratioContainer");
+    if (!box) return;
 
-    if(!box) return;
+    const ratios = [
+
+        ["ROE", r.roe + "%"],
+        ["ROCE", r.roce + "%"],
+        ["ROA", r.roa + "%"],
+
+        ["Net Margin", r.netMargin + "%"],
+        ["Operating Margin", r.operatingMargin + "%"],
+        ["EBITDA Margin", r.ebitdaMargin + "%"],
+
+        ["Revenue Growth", r.revenueGrowth + "%"],
+        ["Profit Growth", r.profitGrowth + "%"],
+        ["EPS Growth", r.epsGrowth + "%"],
+
+        ["Current Ratio", r.currentRatio],
+        ["Quick Ratio", r.quickRatio],
+
+        ["Debt / Equity", r.debtToEquity],
+        ["Debt / Assets", r.debtToAssets],
+        ["Interest Coverage", r.interestCoverage],
+
+        ["Asset Turnover", r.assetTurnover],
+
+        ["Free Cash Flow", "₹" + format(r.freeCashFlow)],
+        ["Cash Flow Margin", r.cashFlowMargin + "%"],
+
+        ["P/E", r.pe],
+        ["P/B", r.pb],
+        ["PEG", r.peg],
+        ["EV / EBITDA", r.evEbitda],
+
+        ["Dividend Yield", r.dividendYield + "%"],
+
+        ["Promoter Holding", r.promoterHolding + "%"],
+        ["FII Holding", r.fiiHolding + "%"],
+        ["DII Holding", r.diiHolding + "%"],
+
+        ["Beta", r.beta]
+
+    ];
 
     box.innerHTML = `
-        <table>
+        <table class="ratio-table">
 
             <tr>
                 <th>Ratio</th>
                 <th>Value</th>
             </tr>
 
-            <tr><td>ROE</td><td>${ratios.roe}%</td></tr>
-            <tr><td>ROCE</td><td>${ratios.roce}%</td></tr>
-            <tr><td>ROA</td><td>${ratios.roa}%</td></tr>
-            <tr><td>Net Margin</td><td>${ratios.netMargin}%</td></tr>
-            <tr><td>Operating Margin</td><td>${ratios.operatingMargin}%</td></tr>
-            <tr><td>EBITDA Margin</td><td>${ratios.ebitdaMargin}%</td></tr>
-
-            <tr><td>Revenue Growth</td><td>${ratios.revenueGrowth}%</td></tr>
-            <tr><td>Profit Growth</td><td>${ratios.profitGrowth}%</td></tr>
-            <tr><td>EPS Growth</td><td>${ratios.epsGrowth}%</td></tr>
-
-            <tr><td>Current Ratio</td><td>${ratios.currentRatio}</td></tr>
-            <tr><td>Quick Ratio</td><td>${ratios.quickRatio}</td></tr>
-
-            <tr><td>Debt / Equity</td><td>${ratios.debtToEquity}</td></tr>
-            <tr><td>Debt / Assets</td><td>${ratios.debtToAssets}</td></tr>
-            <tr><td>Interest Coverage</td><td>${ratios.interestCoverage}</td></tr>
-
-            <tr><td>Asset Turnover</td><td>${ratios.assetTurnover}</td></tr>
-
-            <tr><td>Free Cash Flow</td><td>₹${ratios.freeCashFlow.toLocaleString()}</td></tr>
-            <tr><td>Cash Flow Margin</td><td>${ratios.cashFlowMargin}%</td></tr>
-
-            <tr><td>P/E</td><td>${ratios.pe}</td></tr>
-            <tr><td>P/B</td><td>${ratios.pb}</td></tr>
-            <tr><td>PEG</td><td>${ratios.peg}</td></tr>
-            <tr><td>EV / EBITDA</td><td>${ratios.evEbitda}</td></tr>
-
-            <tr><td>Dividend Yield</td><td>${ratios.dividendYield}%</td></tr>
-
-            <tr><td>Promoter Holding</td><td>${ratios.promoterHolding}%</td></tr>
-            <tr><td>FII Holding</td><td>${ratios.fiiHolding}%</td></tr>
-            <tr><td>DII Holding</td><td>${ratios.diiHolding}%</td></tr>
-
-            <tr><td>Beta</td><td>${ratios.beta}</td></tr>
+            ${ratios.map(i=>`
+                <tr>
+                    <td>${i[0]}</td>
+                    <td>${i[1]}</td>
+                </tr>
+            `).join("")}
 
         </table>
     `;
-
 }
 
 // =====================================
-// Investment Thesis
+// AI Summary
 // =====================================
 
-function renderInvestmentThesis(score){
+function renderInvestmentThesis(score) {
 
-    const thesis = document.getElementById("thesisContainer");
+    const box = document.getElementById("thesisContainer");
+    if (!box) return;
 
-    if(!thesis) return;
+    let color = "#22c55e";
 
-    thesis.innerHTML = `
-        <h3>AI Investment Summary</h3>
+    if(score.finalScore < 60) color="#f59e0b";
+    if(score.finalScore < 40) color="#ef4444";
 
-        <p><strong>Overall Score:</strong> ${score.finalScore}</p>
+    box.innerHTML = `
+        <div class="thesis-card">
 
-        <p><strong>Rating:</strong> ${score.rating}</p>
+            <h3>AI Investment Summary</h3>
 
-        <p>
-            This rating is generated using profitability,
-            growth, valuation, liquidity, leverage,
-            cash flow and ownership metrics.
-        </p>
+            <h1 style="color:${color}">
+                ${score.finalScore}/100
+            </h1>
+
+            <h2>${score.rating}</h2>
+
+            <p>
+                Generated using profitability,
+                valuation,
+                growth,
+                leverage,
+                liquidity,
+                cash flow
+                and ownership quality.
+            </p>
+
+        </div>
     `;
-
 }
 
-function ratiosSafe(value){
-    return value ?? 0;
+// =====================================
+// Helpers
+// =====================================
+
+function item(title,value){
+    return `
+        <div>
+            <strong>${title}</strong>
+            <span>${value ?? "-"}</span>
+        </div>
+    `;
+}
+
+function row(title,data){
+
+    return `
+        <tr>
+            <td>${title}</td>
+            ${data.map(v=>`<td>${format(v)}</td>`).join("")}
+        </tr>
+    `;
+}
+
+function format(value){
+
+    if(value===null || value===undefined) return "-";
+
+    if(typeof value==="number")
+        return value.toLocaleString("en-IN");
+
+    return value;
+}
+
+function safe(v){
+    return v ?? 0;
 }

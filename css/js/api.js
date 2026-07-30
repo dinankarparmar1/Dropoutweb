@@ -1,21 +1,27 @@
 // ==========================================
-// Dropout API Engine v4.0
-// Hybrid: Live API + Local Fallback
+// Dropout API Engine v5.0
+// Automatic API + Local Fallback
 // ==========================================
 
 import { getCompany } from "./database.js";
 import { normalizeCompany } from "./normalizer.js";
 
 
+// ==========================================
 // Main Search Function
+// ==========================================
 
 export async function searchCompany(symbol){
 
-    const query = symbol.trim().toUpperCase();
+    const query = symbol
+        .trim()
+        .toUpperCase();
+
 
     try{
 
         const liveData = await fetchLiveStock(query);
+
 
         if(liveData){
 
@@ -27,13 +33,15 @@ export async function searchCompany(symbol){
     catch(error){
 
         console.log(
-            "Live API unavailable, using local data"
+            "Live API failed, using local database"
         );
 
     }
 
 
-    // fallback
+    // ==========================
+    // Local Backup
+    // ==========================
 
     const localCompany = getCompany(query);
 
@@ -51,18 +59,17 @@ export async function searchCompany(symbol){
 
 
 // ==========================================
-// Live API Placeholder
+// Automatic Stock API
 // ==========================================
 
 async function fetchLiveStock(symbol){
 
     try {
 
-        const url =
-        `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}.NS`;
 
-
-        const response = await fetch(url);
+        const response = await fetch(
+            `/api/stock?symbol=${symbol}`
+        );
 
 
         if(!response.ok){
@@ -72,51 +79,44 @@ async function fetchLiveStock(symbol){
         }
 
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
 
-        const result =
-            data.chart.result?.[0];
 
-
-        if(!result){
+        if(data.error){
 
             return null;
 
         }
 
 
-        const price =
-            result.meta.regularMarketPrice;
-
 
         return {
 
-            symbol:symbol,
+            symbol:data.symbol,
 
             companyName:
-                result.meta.shortName ||
-                symbol,
+                data.companyName || symbol,
 
 
             currentPrice:
-                price,
+                Number(data.currentPrice || 0),
 
 
             marketPrice:
-                price,
+                Number(data.currentPrice || 0),
 
 
             high52Week:
-                result.meta.fiftyTwoWeekHigh || 0,
+                Number(data.high52Week || 0),
 
 
             low52Week:
-                result.meta.fiftyTwoWeekLow || 0,
+                Number(data.low52Week || 0),
 
 
             beta:1
-
 
         };
 
@@ -124,10 +124,12 @@ async function fetchLiveStock(symbol){
     }
     catch(error){
 
+
         console.log(
-            "Live price fetch failed",
+            "Automatic stock API unavailable",
             error
         );
+
 
         return null;
 
@@ -144,6 +146,7 @@ export async function getCompanies(){
 
     const database =
         await import("./database.js");
+
 
     return database.getAllCompanies();
 

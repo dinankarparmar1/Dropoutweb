@@ -1,99 +1,104 @@
 // ======================================
-// Chart Engine
+// Chart Engine v3.0
 // ======================================
 
-let revenueChart;
-let profitChart;
-let epsChart;
-let fcfChart;
+let charts = {};
 
-function destroy(chart){
-    if(chart){
-        chart.destroy();
-    }
+function destroyCharts() {
+
+    Object.values(charts).forEach(chart => {
+        if (chart) chart.destroy();
+    });
+
+    charts = {};
 }
 
-export function renderCharts(company){
+function createChart(id, type, label, labels, data) {
+
+    const canvas = document.getElementById(id);
+
+    if (!canvas) return null;
+
+    return new Chart(canvas, {
+        type,
+
+        data: {
+            labels,
+
+            datasets: [{
+                label,
+                data,
+                borderWidth: 2,
+                fill: false,
+                tension: 0.35
+            }]
+        },
+
+        options: {
+
+            responsive: true,
+            maintainAspectRatio: false,
+
+            interaction: {
+                mode: "index",
+                intersect: false
+            },
+
+            plugins: {
+                legend: {
+                    display: true
+                }
+            },
+
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+
+    });
+
+}
+
+export function renderCharts(company) {
+
+    if (!company || !company.history) return;
 
     const h = company.history;
 
-    destroy(revenueChart);
-    destroy(profitChart);
-    destroy(epsChart);
-    destroy(fcfChart);
+    destroyCharts();
 
-    revenueChart = new Chart(
-        document.getElementById("revenueChart"),
-        {
-            type: "line",
-            data: {
-                labels: h.years,
-                datasets: [{
-                    label: "Revenue",
-                    data: h.revenue,
-                    tension: 0.35
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        }
+    charts.revenue = createChart(
+        "revenueChart",
+        "line",
+        "Revenue",
+        h.years,
+        h.revenue
     );
 
-    profitChart = new Chart(
-        document.getElementById("profitChart"),
-        {
-            type: "bar",
-            data: {
-                labels: h.years,
-                datasets: [{
-                    label: "Net Profit",
-                    data: h.netProfit
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        }
+    charts.profit = createChart(
+        "profitChart",
+        "bar",
+        "Net Profit",
+        h.years,
+        h.netProfit
     );
 
-    epsChart = new Chart(
-        document.getElementById("epsChart"),
-        {
-            type: "line",
-            data: {
-                labels: h.years,
-                datasets: [{
-                    label: "EPS",
-                    data: h.eps,
-                    tension: 0.35
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        }
+    charts.eps = createChart(
+        "epsChart",
+        "line",
+        "EPS",
+        h.years,
+        h.eps
     );
 
-    fcfChart = new Chart(
-        document.getElementById("fcfChart"),
-        {
-            type: "bar",
-            data: {
-                labels: h.years,
-                datasets: [{
-                    label: "Free Cash Flow",
-                    data: h.freeCashFlow
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        }
+    charts.fcf = createChart(
+        "fcfChart",
+        "bar",
+        "Free Cash Flow",
+        h.years,
+        h.freeCashFlow
     );
 
 }

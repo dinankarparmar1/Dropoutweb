@@ -1,69 +1,82 @@
+import { searchCompany } from "./api.js";
+import { calculateRatios } from "./ratios.js";
 import { overallScore } from "./scoring.js";
 
 const searchBtn = document.getElementById("searchBtn");
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
 
-    const company = document.getElementById("stockInput").value.trim();
+    const input = document.getElementById("stockInput");
+    const symbol = input.value.trim();
 
-    if (!company) {
-        alert("Please enter a stock name.");
+    if (!symbol) {
+        alert("Please enter a stock symbol.");
         return;
     }
 
-    /*
-      Temporary sample data.
-      Later this will come from the API.
-    */
-    const data = {
-        currentRatio: 2.1,
-        debtToEquity: 0.35,
+    try {
 
-        revenueGrowth: 18,
-        profitGrowth: 22,
+        const company = await searchCompany(symbol);
 
-        roe: 24,
-        roce: 26,
-        netMargin: 18,
+        const ratios = calculateRatios(company);
 
-        pe: 22,
-        industryPE: 28,
+        const score = overallScore({
+            currentRatio: ratios.currentRatio,
+            debtToEquity: ratios.debtToEquity,
 
-        freeCashFlow: 1850,
+            revenueGrowth: ratios.revenueGrowth,
+            profitGrowth: ratios.profitGrowth,
 
-        promoterHolding: 61,
-        fiiHolding: 18,
+            roe: ratios.roe,
+            roce: ratios.roce,
+            netMargin: ratios.netMargin,
 
-        beta: 0.9
-    };
+            pe: ratios.pe,
+            industryPE: 28,
 
-    const result = overallScore(data);
+            freeCashFlow: ratios.freeCashFlow,
 
-    document.getElementById("score").textContent = result.finalScore;
-    document.getElementById("signal").textContent = result.rating;
+            promoterHolding: company.promoterHolding,
+            fiiHolding: company.fiiHolding,
 
-    document.getElementById("health").textContent =
-        result.breakdown.financialHealth;
+            beta: company.beta
+        });
 
-    document.getElementById("growth").textContent =
-        result.breakdown.growth;
+        document.getElementById("score").textContent = score.finalScore;
+        document.getElementById("signal").textContent = score.rating;
 
-    document.getElementById("valuation").textContent =
-        result.breakdown.valuation;
+        document.getElementById("health").textContent =
+            score.breakdown.financialHealth;
 
-    document.getElementById("profitability").textContent =
-        result.breakdown.profitability;
+        document.getElementById("growth").textContent =
+            score.breakdown.growth;
 
-    document.getElementById("cashflow").textContent =
-        result.breakdown.cashFlow;
+        document.getElementById("valuation").textContent =
+            score.breakdown.valuation;
 
-    document.getElementById("debt").textContent =
-        result.breakdown.debt;
+        document.getElementById("profitability").textContent =
+            score.breakdown.profitability;
 
-    document.getElementById("shareholding").textContent =
-        result.breakdown.shareholding;
+        document.getElementById("cashflow").textContent =
+            score.breakdown.cashFlow;
 
-    document.getElementById("risk").textContent =
-        result.breakdown.risk;
+        document.getElementById("debt").textContent =
+            score.breakdown.debt;
+
+        document.getElementById("shareholding").textContent =
+            score.breakdown.shareholding;
+
+        document.getElementById("risk").textContent =
+            score.breakdown.risk;
+
+        console.log("Company:", company);
+        console.log("Ratios:", ratios);
+        console.log("Score:", score);
+
+    } catch (error) {
+
+        alert(error);
+
+    }
 
 });

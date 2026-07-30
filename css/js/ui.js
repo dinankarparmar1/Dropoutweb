@@ -24,80 +24,21 @@ function renderCompany(company){
     card.innerHTML = `
         <div class="company-grid">
 
-            <div>
-                <strong>Company</strong>
-                <span>${company.companyName}</span>
-            </div>
-
-            <div>
-                <strong>Symbol</strong>
-                <span>${company.symbol}</span>
-            </div>
-
-            <div>
-                <strong>Sector</strong>
-                <span>${company.sector}</span>
-            </div>
-
-            <div>
-                <strong>Industry</strong>
-                <span>${company.industry}</span>
-            </div>
-
-            <div>
-                <strong>Market Cap</strong>
-                <span>${company.marketCap}</span>
-            </div>
-
-            <div>
-                <strong>Current Price</strong>
-                <span>₹${company.currentPrice}</span>
-            </div>
-
-            <div>
-                <strong>52 Week High</strong>
-                <span>₹${company.high52Week}</span>
-            </div>
-
-            <div>
-                <strong>52 Week Low</strong>
-                <span>₹${company.low52Week}</span>
-            </div>
-
-            <div>
-                <strong>Book Value</strong>
-                <span>₹${company.bookValuePerShare}</span>
-            </div>
-
-            <div>
-                <strong>Dividend Yield</strong>
-                <span>${company.dividendYield}%</span>
-            </div>
-
-            <div>
-                <strong>Face Value</strong>
-                <span>₹${company.faceValue}</span>
-            </div>
-
-            <div>
-                <strong>Promoter Holding</strong>
-                <span>${company.promoterHolding}%</span>
-            </div>
-
-            <div>
-                <strong>FII Holding</strong>
-                <span>${company.fiiHolding}%</span>
-            </div>
-
-            <div>
-                <strong>DII Holding</strong>
-                <span>${company.diiHolding}%</span>
-            </div>
-
-            <div>
-                <strong>Beta</strong>
-                <span>${company.beta}</span>
-            </div>
+            <div><strong>Company</strong><span>${company.companyName}</span></div>
+            <div><strong>Symbol</strong><span>${company.symbol}</span></div>
+            <div><strong>Sector</strong><span>${company.sector}</span></div>
+            <div><strong>Industry</strong><span>${company.industry}</span></div>
+            <div><strong>Market Cap</strong><span>${company.marketCap}</span></div>
+            <div><strong>Current Price</strong><span>₹${company.currentPrice}</span></div>
+            <div><strong>52W High</strong><span>₹${company.high52Week}</span></div>
+            <div><strong>52W Low</strong><span>₹${company.low52Week}</span></div>
+            <div><strong>Book Value</strong><span>₹${company.bookValuePerShare}</span></div>
+            <div><strong>Dividend Yield</strong><span>${company.dividendYield}%</span></div>
+            <div><strong>Face Value</strong><span>₹${company.faceValue}</span></div>
+            <div><strong>Promoter Holding</strong><span>${company.promoterHolding}%</span></div>
+            <div><strong>FII Holding</strong><span>${company.fiiHolding}%</span></div>
+            <div><strong>DII Holding</strong><span>${company.diiHolding}%</span></div>
+            <div><strong>Beta</strong><span>${company.beta}</span></div>
 
         </div>
     `;
@@ -105,7 +46,7 @@ function renderCompany(company){
 }
 
 // =====================================
-// Financial Statements
+// 5-Year Financial Statements
 // =====================================
 
 function renderFinancials(company){
@@ -114,32 +55,51 @@ function renderFinancials(company){
 
     if(!financial) return;
 
+    const h = company.history;
+
     financial.innerHTML = `
         <table>
 
             <tr>
                 <th>Metric</th>
-                <th>Value</th>
+
+                ${h.years.map(year=>`<th>${year}</th>`).join("")}
+
             </tr>
 
             <tr>
                 <td>Revenue</td>
-                <td>₹${company.revenue.toLocaleString()}</td>
+
+                ${h.revenue.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
+
             </tr>
 
             <tr>
-                <td>Net Income</td>
-                <td>₹${company.netIncome.toLocaleString()}</td>
+                <td>Net Profit</td>
+
+                ${h.netProfit.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
+
+            </tr>
+
+            <tr>
+                <td>EPS</td>
+
+                ${h.eps.map(v=>`<td>${v}</td>`).join("")}
+
             </tr>
 
             <tr>
                 <td>Operating Cash Flow</td>
-                <td>₹${company.operatingCashFlow.toLocaleString()}</td>
+
+                ${h.operatingCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
+
             </tr>
 
             <tr>
-                <td>Total Debt</td>
-                <td>₹${company.totalDebt.toLocaleString()}</td>
+                <td>Free Cash Flow</td>
+
+                ${h.freeCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
+
             </tr>
 
         </table>
@@ -192,18 +152,13 @@ function renderInvestmentThesis(score){
     thesis.innerHTML = `
         <h3>Investment Summary</h3>
 
-        <br>
-
         <p><strong>Overall Score:</strong> ${score.finalScore}</p>
 
         <p><strong>Rating:</strong> ${score.rating}</p>
 
-        <br>
-
         <p>
-        This rating is generated using Financial Health,
-        Growth, Profitability, Valuation,
-        Cash Flow, Debt, Shareholding and Risk analysis.
+        The AI score combines Financial Health, Growth, Profitability,
+        Valuation, Cash Flow, Debt, Shareholding and Risk into one rating.
         </p>
     `;
 

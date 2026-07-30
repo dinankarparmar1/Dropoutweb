@@ -159,8 +159,8 @@ function renderInvestmentThesis(score) {
 
     let color = "#22c55e";
 
-    if(score.finalScore < 60) color="#f59e0b";
-    if(score.finalScore < 40) color="#ef4444";
+    if (score.finalScore < 60) color = "#f59e0b";
+    if (score.finalScore < 40) color = "#ef4444";
 
     box.innerHTML = `
         <div class="thesis-card">
@@ -174,13 +174,17 @@ function renderInvestmentThesis(score) {
             <h2>${score.rating}</h2>
 
             <p>
-                Generated using profitability,
-                valuation,
-                growth,
-                leverage,
-                liquidity,
-                cash flow
-                and ownership quality.
+                This AI score is calculated using
+                profitability, valuation, growth,
+                debt, cash flow, liquidity,
+                ownership quality and risk metrics.
+
+                <br><br>
+
+                It is intended to support your research
+                and should not be treated as financial
+                or investment advice.
+
             </p>
 
         </div>

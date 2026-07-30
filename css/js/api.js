@@ -1,36 +1,90 @@
 // ==========================================
-// API Layer
-// Version 3.0
+// Dropout API Engine v4.0
+// Hybrid: Live API + Local Fallback
 // ==========================================
 
-import { getCompany, getAllCompanies } from "./database.js";
+import { getCompany } from "./database.js";
+import { normalizeCompany } from "./normalizer.js";
 
-/**
- * Search company by name or symbol
- */
-export async function searchCompany(query) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(getCompany(query));
-        }, 150);
-    });
+
+// Main Search Function
+
+export async function searchCompany(symbol){
+
+    const query = symbol.trim().toUpperCase();
+
+    try{
+
+        const liveData = await fetchLiveStock(query);
+
+        if(liveData){
+
+            return normalizeCompany(liveData);
+
+        }
+
+    }
+    catch(error){
+
+        console.log(
+            "Live API unavailable, using local data"
+        );
+
+    }
+
+
+    // fallback
+
+    const localCompany = getCompany(query);
+
+
+    if(localCompany){
+
+        return localCompany;
+
+    }
+
+
+    return null;
+
 }
 
-/**
- * Get company list for autocomplete
- */
-export async function getCompanies() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(getAllCompanies());
-        }, 100);
-    });
+
+// ==========================================
+// Live API Placeholder
+// ==========================================
+
+async function fetchLiveStock(symbol){
+
+    /*
+    
+    Future API connection:
+
+    Example:
+
+    const response = await fetch(
+       "YOUR_API_URL"
+    );
+
+    return await response.json();
+
+
+    */
+
+    return null;
+
 }
 
-/**
- * Future Live API Hook
- */
-export async function fetchLiveCompany(query) {
-    // Future NSE / Screener API integration
-    return searchCompany(query);
+
+// ==========================================
+// Company List
+// ==========================================
+
+export async function getCompanies(){
+
+    const database =
+        await import("./database.js");
+
+    return database.getAllCompanies();
+
 }

@@ -33,7 +33,7 @@ function renderCompany(company){
             <div><strong>52W High</strong><span>₹${company.high52Week}</span></div>
             <div><strong>52W Low</strong><span>₹${company.low52Week}</span></div>
             <div><strong>Book Value</strong><span>₹${company.bookValuePerShare}</span></div>
-            <div><strong>Dividend Yield</strong><span>${company.dividendYield}%</span></div>
+            <div><strong>Dividend Yield</strong><span>${ratiosSafe(company.dividendYield)}%</span></div>
             <div><strong>Face Value</strong><span>₹${company.faceValue}</span></div>
             <div><strong>Promoter Holding</strong><span>${company.promoterHolding}%</span></div>
             <div><strong>FII Holding</strong><span>${company.fiiHolding}%</span></div>
@@ -46,7 +46,7 @@ function renderCompany(company){
 }
 
 // =====================================
-// 5-Year Financial Statements
+// Financial Statements
 // =====================================
 
 function renderFinancials(company){
@@ -62,44 +62,32 @@ function renderFinancials(company){
 
             <tr>
                 <th>Metric</th>
-
-                ${h.years.map(year=>`<th>${year}</th>`).join("")}
-
+                ${h.years.map(y=>`<th>${y}</th>`).join("")}
             </tr>
 
             <tr>
                 <td>Revenue</td>
-
                 ${h.revenue.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-
             </tr>
 
             <tr>
                 <td>Net Profit</td>
-
                 ${h.netProfit.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-
             </tr>
 
             <tr>
                 <td>EPS</td>
-
                 ${h.eps.map(v=>`<td>${v}</td>`).join("")}
-
             </tr>
 
             <tr>
                 <td>Operating Cash Flow</td>
-
                 ${h.operatingCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-
             </tr>
 
             <tr>
                 <td>Free Cash Flow</td>
-
                 ${h.freeCashFlow.map(v=>`<td>₹${v.toLocaleString()}</td>`).join("")}
-
             </tr>
 
         </table>
@@ -108,16 +96,16 @@ function renderFinancials(company){
 }
 
 // =====================================
-// Ratio Analysis
+// Advanced Ratio Analysis
 // =====================================
 
 function renderRatios(ratios){
 
-    const ratioBox = document.getElementById("ratioContainer");
+    const box = document.getElementById("ratioContainer");
 
-    if(!ratioBox) return;
+    if(!box) return;
 
-    ratioBox.innerHTML = `
+    box.innerHTML = `
         <table>
 
             <tr>
@@ -127,12 +115,39 @@ function renderRatios(ratios){
 
             <tr><td>ROE</td><td>${ratios.roe}%</td></tr>
             <tr><td>ROCE</td><td>${ratios.roce}%</td></tr>
-            <tr><td>P/E</td><td>${ratios.pe}</td></tr>
-            <tr><td>P/B</td><td>${ratios.pb}</td></tr>
-            <tr><td>Current Ratio</td><td>${ratios.currentRatio}</td></tr>
-            <tr><td>Debt / Equity</td><td>${ratios.debtToEquity}</td></tr>
+            <tr><td>ROA</td><td>${ratios.roa}%</td></tr>
+            <tr><td>Net Margin</td><td>${ratios.netMargin}%</td></tr>
+            <tr><td>Operating Margin</td><td>${ratios.operatingMargin}%</td></tr>
+            <tr><td>EBITDA Margin</td><td>${ratios.ebitdaMargin}%</td></tr>
+
             <tr><td>Revenue Growth</td><td>${ratios.revenueGrowth}%</td></tr>
             <tr><td>Profit Growth</td><td>${ratios.profitGrowth}%</td></tr>
+            <tr><td>EPS Growth</td><td>${ratios.epsGrowth}%</td></tr>
+
+            <tr><td>Current Ratio</td><td>${ratios.currentRatio}</td></tr>
+            <tr><td>Quick Ratio</td><td>${ratios.quickRatio}</td></tr>
+
+            <tr><td>Debt / Equity</td><td>${ratios.debtToEquity}</td></tr>
+            <tr><td>Debt / Assets</td><td>${ratios.debtToAssets}</td></tr>
+            <tr><td>Interest Coverage</td><td>${ratios.interestCoverage}</td></tr>
+
+            <tr><td>Asset Turnover</td><td>${ratios.assetTurnover}</td></tr>
+
+            <tr><td>Free Cash Flow</td><td>₹${ratios.freeCashFlow.toLocaleString()}</td></tr>
+            <tr><td>Cash Flow Margin</td><td>${ratios.cashFlowMargin}%</td></tr>
+
+            <tr><td>P/E</td><td>${ratios.pe}</td></tr>
+            <tr><td>P/B</td><td>${ratios.pb}</td></tr>
+            <tr><td>PEG</td><td>${ratios.peg}</td></tr>
+            <tr><td>EV / EBITDA</td><td>${ratios.evEbitda}</td></tr>
+
+            <tr><td>Dividend Yield</td><td>${ratios.dividendYield}%</td></tr>
+
+            <tr><td>Promoter Holding</td><td>${ratios.promoterHolding}%</td></tr>
+            <tr><td>FII Holding</td><td>${ratios.fiiHolding}%</td></tr>
+            <tr><td>DII Holding</td><td>${ratios.diiHolding}%</td></tr>
+
+            <tr><td>Beta</td><td>${ratios.beta}</td></tr>
 
         </table>
     `;
@@ -140,7 +155,7 @@ function renderRatios(ratios){
 }
 
 // =====================================
-// AI Investment Thesis
+// Investment Thesis
 // =====================================
 
 function renderInvestmentThesis(score){
@@ -150,16 +165,21 @@ function renderInvestmentThesis(score){
     if(!thesis) return;
 
     thesis.innerHTML = `
-        <h3>Investment Summary</h3>
+        <h3>AI Investment Summary</h3>
 
         <p><strong>Overall Score:</strong> ${score.finalScore}</p>
 
         <p><strong>Rating:</strong> ${score.rating}</p>
 
         <p>
-        The AI score combines Financial Health, Growth, Profitability,
-        Valuation, Cash Flow, Debt, Shareholding and Risk into one rating.
+            This rating is generated using profitability,
+            growth, valuation, liquidity, leverage,
+            cash flow and ownership metrics.
         </p>
     `;
 
+}
+
+function ratiosSafe(value){
+    return value ?? 0;
 }

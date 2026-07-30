@@ -1,6 +1,6 @@
 // ==========================================
-// Dropout API Engine v6.0
-// Vercel Automatic API + Local Fallback
+// Dropout API Engine v7.0
+// Vercel Automatic API + Safe Fallback
 // ==========================================
 
 import { getCompany } from "./database.js";
@@ -13,28 +13,45 @@ import { normalizeCompany } from "./normalizer.js";
 
 export async function searchCompany(symbol){
 
-    const query = symbol
+
+    if(!symbol){
+        return null;
+    }
+
+
+    const query =
+        symbol
         .trim()
         .toUpperCase();
 
 
-    try{
 
-        const liveData = await fetchLiveStock(query);
+    try {
+
+
+        const liveData =
+            await fetchLiveStock(query);
+
 
 
         if(liveData){
 
+
             return normalizeCompany(liveData);
 
+
         }
+
 
     }
     catch(error){
 
+
         console.log(
-            "Live API failed, using local database"
+            "Live API failed:",
+            error
         );
+
 
     }
 
@@ -44,7 +61,9 @@ export async function searchCompany(symbol){
     // Local Backup
     // ==========================
 
-    const localCompany = getCompany(query);
+    const localCompany =
+        getCompany(query);
+
 
 
     if(localCompany){
@@ -52,6 +71,7 @@ export async function searchCompany(symbol){
         return localCompany;
 
     }
+
 
 
     return null;
@@ -66,19 +86,31 @@ export async function searchCompany(symbol){
 
 async function fetchLiveStock(symbol){
 
-    try {
+
+    try{
 
 
-        const response = await fetch(
-            `https://dropoutweb-gjp0s69qo-dinankarparmar1s-projects.vercel.app/api/stock?symbol=${symbol}`
-        );
+        const url =
+        `https://dropoutweb-gjp0s69qo-dinankarparmar1s-projects.vercel.app/api/stock?symbol=${symbol}`;
+
+
+
+        const response =
+        await fetch(url);
+
 
 
         if(!response.ok){
 
+            console.log(
+                "API response failed",
+                response.status
+            );
+
             return null;
 
         }
+
 
 
         const data =
@@ -86,7 +118,7 @@ async function fetchLiveStock(symbol){
 
 
 
-        if(data.error){
+        if(!data || data.error){
 
             return null;
 
@@ -96,27 +128,35 @@ async function fetchLiveStock(symbol){
 
         return {
 
-            symbol:data.symbol,
+
+            symbol:
+                data.symbol || symbol,
+
 
 
             companyName:
                 data.companyName || symbol,
 
 
+
             currentPrice:
                 Number(data.currentPrice || 0),
+
 
 
             marketPrice:
                 Number(data.currentPrice || 0),
 
 
+
             high52Week:
                 Number(data.high52Week || 0),
 
 
+
             low52Week:
                 Number(data.low52Week || 0),
+
 
 
             beta:
@@ -124,38 +164,65 @@ async function fetchLiveStock(symbol){
 
 
 
-            // Future fundamentals
+            // Fundamentals
 
             revenue:
-                data.revenue || 0,
+                Number(data.revenue || 0),
+
 
 
             netIncome:
-                data.netIncome || 0,
+                Number(data.netIncome || 0),
+
+
+
+            operatingIncome:
+                Number(data.operatingIncome || 0),
+
+
+
+            ebitda:
+                Number(data.ebitda || 0),
+
 
 
             totalDebt:
-                data.totalDebt || 0,
+                Number(data.totalDebt || 0),
+
 
 
             totalAssets:
-                data.totalAssets || 0,
+                Number(data.totalAssets || 0),
+
 
 
             shareholdersEquity:
-                data.shareholdersEquity || 0,
+                Number(data.shareholdersEquity || 0),
+
 
 
             operatingCashFlow:
-                data.operatingCashFlow || 0,
+                Number(data.operatingCashFlow || 0),
+
 
 
             capex:
-                data.capex || 0,
+                Number(data.capex || 0),
+
 
 
             eps:
-                data.eps || 0
+                Number(data.eps || 0),
+
+
+
+            bookValuePerShare:
+                Number(data.bookValuePerShare || 0),
+
+
+
+            enterpriseValue:
+                Number(data.enterpriseValue || 0)
 
         };
 
@@ -165,7 +232,7 @@ async function fetchLiveStock(symbol){
 
 
         console.log(
-            "Automatic Vercel API unavailable",
+            "Automatic API unavailable",
             error
         );
 
@@ -173,6 +240,7 @@ async function fetchLiveStock(symbol){
         return null;
 
     }
+
 
 }
 
@@ -184,10 +252,13 @@ async function fetchLiveStock(symbol){
 
 export async function getCompanies(){
 
+
     const database =
         await import("./database.js");
 
 
+
     return database.getAllCompanies();
+
 
 }

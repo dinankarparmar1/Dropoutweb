@@ -56,22 +56,82 @@ export async function searchCompany(symbol){
 
 async function fetchLiveStock(symbol){
 
-    /*
-    
-    Future API connection:
+    try {
 
-    Example:
-
-    const response = await fetch(
-       "YOUR_API_URL"
-    );
-
-    return await response.json();
+        const url =
+        `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}.NS`;
 
 
-    */
+        const response = await fetch(url);
 
-    return null;
+
+        if(!response.ok){
+
+            return null;
+
+        }
+
+
+        const data = await response.json();
+
+
+        const result =
+            data.chart.result?.[0];
+
+
+        if(!result){
+
+            return null;
+
+        }
+
+
+        const price =
+            result.meta.regularMarketPrice;
+
+
+        return {
+
+            symbol:symbol,
+
+            companyName:
+                result.meta.shortName ||
+                symbol,
+
+
+            currentPrice:
+                price,
+
+
+            marketPrice:
+                price,
+
+
+            high52Week:
+                result.meta.fiftyTwoWeekHigh || 0,
+
+
+            low52Week:
+                result.meta.fiftyTwoWeekLow || 0,
+
+
+            beta:1
+
+
+        };
+
+
+    }
+    catch(error){
+
+        console.log(
+            "Live price fetch failed",
+            error
+        );
+
+        return null;
+
+    }
 
 }
 

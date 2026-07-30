@@ -1,7 +1,7 @@
 // ==========================================
 // Dropout Stock Data Normalizer
-// Version 1.0
-// Converts API response into our engine format
+// Version 2.0
+// Converts API response into engine format
 // ==========================================
 
 export function normalizeCompany(raw) {
@@ -10,7 +10,9 @@ export function normalizeCompany(raw) {
         return null;
     }
 
+
     return {
+
 
         // =====================
         // Basic Information
@@ -21,27 +23,32 @@ export function normalizeCompany(raw) {
             raw.name ||
             "Unknown Company",
 
+
         name:
             raw.name ||
             raw.companyName ||
             "Unknown Company",
+
 
         symbol:
             raw.symbol ||
             raw.ticker ||
             "",
 
+
         sector:
             raw.sector ||
             "Unknown",
+
 
         industry:
             raw.industry ||
             "Unknown",
 
+
         marketCap:
-            raw.marketCap ||
-            0,
+            Number(raw.marketCap || 0),
+
 
 
         // =====================
@@ -51,6 +58,7 @@ export function normalizeCompany(raw) {
         currentPrice:
             Number(raw.currentPrice || raw.price || 0),
 
+
         marketPrice:
             Number(raw.marketPrice || raw.price || 0),
 
@@ -58,8 +66,11 @@ export function normalizeCompany(raw) {
         high52Week:
             Number(raw.high52Week || 0),
 
+
         low52Week:
             Number(raw.low52Week || 0),
+
+
 
 
         // =====================
@@ -69,14 +80,19 @@ export function normalizeCompany(raw) {
         promoterHolding:
             Number(raw.promoterHolding || 0),
 
+
         fiiHolding:
             Number(raw.fiiHolding || 0),
+
 
         diiHolding:
             Number(raw.diiHolding || 0),
 
+
         beta:
             Number(raw.beta || 1),
+
+
 
 
         // =====================
@@ -86,12 +102,14 @@ export function normalizeCompany(raw) {
         revenue:
             Number(raw.revenue || 0),
 
+
         previousRevenue:
             Number(raw.previousRevenue || 0),
 
 
         netIncome:
             Number(raw.netIncome || 0),
+
 
         previousNetIncome:
             Number(raw.previousNetIncome || 0),
@@ -112,9 +130,13 @@ export function normalizeCompany(raw) {
         freeCashFlow:
             Number(
                 raw.freeCashFlow ||
-                ((raw.operatingCashFlow || 0) -
-                (raw.capex || 0))
+                (
+                    (raw.operatingCashFlow || 0) -
+                    (raw.capex || 0)
+                )
             ),
+
+
 
 
         // =====================
@@ -124,8 +146,10 @@ export function normalizeCompany(raw) {
         totalAssets:
             Number(raw.totalAssets || 0),
 
+
         currentAssets:
             Number(raw.currentAssets || 0),
+
 
         currentLiabilities:
             Number(raw.currentLiabilities || 0),
@@ -143,6 +167,8 @@ export function normalizeCompany(raw) {
             Number(raw.inventory || 0),
 
 
+
+
         // =====================
         // Profit Metrics
         // =====================
@@ -150,11 +176,15 @@ export function normalizeCompany(raw) {
         ebit:
             Number(raw.ebit || 0),
 
+
         ebitda:
             Number(raw.ebitda || 0),
 
+
         interestExpense:
             Number(raw.interestExpense || 0),
+
+
 
 
         // =====================
@@ -163,6 +193,7 @@ export function normalizeCompany(raw) {
 
         eps:
             Number(raw.eps || 0),
+
 
         previousEPS:
             Number(raw.previousEPS || 0),
@@ -184,8 +215,10 @@ export function normalizeCompany(raw) {
             Number(raw.dividendYield || 0),
 
 
+
+
         // =====================
-        // History
+        // History (API Safe)
         // =====================
 
         history:
@@ -193,14 +226,37 @@ export function normalizeCompany(raw) {
             raw.history ||
             {
 
-                years:[],
-                revenue:[],
-                netProfit:[],
-                eps:[],
-                operatingCashFlow:[],
-                freeCashFlow:[]
+                years:[
+                    "Current"
+                ],
+
+
+                revenue:[
+                    Number(raw.revenue || 0)
+                ],
+
+
+                netProfit:[
+                    Number(raw.netIncome || 0)
+                ],
+
+
+                eps:[
+                    Number(raw.eps || 0)
+                ],
+
+
+                operatingCashFlow:[
+                    Number(raw.operatingCashFlow || 0)
+                ],
+
+
+                freeCashFlow:[
+                    Number(raw.freeCashFlow || 0)
+                ]
 
             }
+
 
     };
 

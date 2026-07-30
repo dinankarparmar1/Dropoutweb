@@ -1,6 +1,6 @@
 // ==========================================
 // Dropout Automatic Stock API
-// Serverless Function v2
+// Serverless Function v3
 // ==========================================
 
 import { getFundamentals } from "./providers/fundamentals.js";
@@ -8,16 +8,24 @@ import { getFundamentals } from "./providers/fundamentals.js";
 
 export default async function handler(req, res) {
 
-    const symbol = req.query.symbol;
+
+    const rawSymbol = req.query.symbol;
 
 
-    if(!symbol){
+    if(!rawSymbol){
 
         return res.status(400).json({
             error:"Stock symbol required"
         });
 
     }
+
+
+    const symbol =
+        rawSymbol
+        .toUpperCase()
+        .trim();
+
 
 
     try {
@@ -27,14 +35,30 @@ export default async function handler(req, res) {
         `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}.NS`;
 
 
-        const response = await fetch(url);
+
+        const response =
+        await fetch(url);
 
 
-        const data = await response.json();
+
+        if(!response.ok){
+
+            return res.status(404).json({
+                error:"Stock data unavailable"
+            });
+
+        }
+
+
+
+        const data =
+        await response.json();
+
 
 
         const result =
-        data.chart.result?.[0];
+        data.chart?.result?.[0];
+
 
 
         if(!result){
@@ -46,54 +70,65 @@ export default async function handler(req, res) {
         }
 
 
+
         const meta =
         result.meta;
 
 
-        // Future financial data layer
 
         const fundamentals =
-            await getFundamentals(symbol);
+        await getFundamentals(symbol);
 
 
 
         res.status(200).json({
 
-            symbol:
-            symbol.toUpperCase(),
+
+            symbol,
 
 
             companyName:
-            meta.shortName || symbol,
+            meta.shortName ||
+            meta.longName ||
+            symbol,
+
 
 
             currentPrice:
             meta.regularMarketPrice || 0,
 
 
+
             high52Week:
             meta.fiftyTwoWeekHigh || 0,
+
 
 
             low52Week:
             meta.fiftyTwoWeekLow || 0,
 
 
-            beta:1,
+
+            beta:
+            fundamentals?.beta || 1,
 
 
-            // Adds future financial data
 
             ...(fundamentals || {})
 
+
         });
+
 
 
     }
     catch(error){
 
 
-        console.log(error);
+        console.log(
+            "Stock API Error:",
+            error
+        );
 
 
         res.status(500).json({
@@ -104,5 +139,6 @@ export default async function handler(req, res) {
 
 
     }
+
 
 }

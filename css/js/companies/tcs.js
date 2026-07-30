@@ -5,6 +5,8 @@
 const TCS = {
 
     companyName: "Tata Consultancy Services",
+    name: "Tata Consultancy Services",
+
     symbol: "TCS",
 
     sector: "Information Technology",
@@ -38,9 +40,13 @@ const TCS = {
     operatingIncome: 62000,
 
     operatingCashFlow: 52000,
+
     capex: 5500,
 
+    freeCashFlow: 46500,
+
     totalAssets: 360000,
+
     currentAssets: 125000,
     currentLiabilities: 62000,
 
@@ -61,6 +67,12 @@ const TCS = {
     bookValuePerShare: 540,
 
     enterpriseValue: 1550000,
+
+    sharesOutstanding: 3620,
+
+    cashAndEquivalents: 48000,
+
+    totalLiabilities: 165000,
 
     history: {
 

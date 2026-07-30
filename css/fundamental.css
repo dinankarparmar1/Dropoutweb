@@ -105,3 +105,29 @@ margin-bottom:10px;
 font-size:26px;
 font-weight:bold;
 }
+.company-card{
+    background:#1b1b1b;
+    border:2px solid #FFD700;
+    border-radius:20px;
+    padding:25px;
+    margin:30px 0;
+    color:#fff;
+    box-shadow:0 0 15px rgba(255,215,0,0.2);
+}
+
+.company-card h2{
+    color:#FFD700;
+    font-size:32px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.company-card p{
+    font-size:20px;
+    margin:12px 0;
+    line-height:1.6;
+}
+
+.company-card strong{
+    color:#FFD700;
+}

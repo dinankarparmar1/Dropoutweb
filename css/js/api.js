@@ -1,6 +1,6 @@
 // ==========================================
-// Dropout API Engine v8.0
-// Automatic API + Debug Safe Mode
+// Dropout API Engine v9.0
+// Automatic API + Safe Fallback Test
 // ==========================================
 
 import { getCompany } from "./database.js";
@@ -51,7 +51,6 @@ export async function searchCompany(symbol){
         }
 
 
-
     }
     catch(error){
 
@@ -83,7 +82,73 @@ export async function searchCompany(symbol){
 
 
 
-    return null;
+    // ==========================
+    // Emergency Auto Stock Object
+    // ==========================
+
+    return {
+
+        symbol: query,
+
+        companyName: query,
+
+        currentPrice: 0,
+
+        marketPrice: 0,
+
+        high52Week: 0,
+
+        low52Week: 0,
+
+        beta: 1,
+
+        revenue: 0,
+
+        netIncome: 0,
+
+        operatingIncome: 0,
+
+        ebitda: 0,
+
+        totalDebt: 0,
+
+        totalAssets: 0,
+
+        shareholdersEquity: 0,
+
+        currentAssets: 0,
+
+        currentLiabilities: 0,
+
+        operatingCashFlow: 0,
+
+        capex: 0,
+
+        eps: 0,
+
+        bookValuePerShare: 0,
+
+        enterpriseValue: 0,
+
+        marketCap: 0,
+
+        history: {
+
+            years: [],
+
+            revenue: [],
+
+            netProfit: [],
+
+            eps: [],
+
+            operatingCashFlow: [],
+
+            freeCashFlow: []
+
+        }
+
+    };
 
 
 }
@@ -112,15 +177,7 @@ async function fetchLiveStock(symbol){
 
         if(!response.ok){
 
-
-            console.log(
-                "API failed:",
-                response.status
-            );
-
-
             return null;
-
 
         }
 
@@ -133,9 +190,7 @@ async function fetchLiveStock(symbol){
 
         if(!data || data.error){
 
-
             return null;
-
 
         }
 
@@ -148,105 +203,84 @@ async function fetchLiveStock(symbol){
                 data.symbol || symbol,
 
 
-
             companyName:
                 data.companyName || symbol,
-
 
 
             currentPrice:
                 Number(data.currentPrice || 0),
 
 
-
             marketPrice:
                 Number(data.currentPrice || 0),
-
 
 
             high52Week:
                 Number(data.high52Week || 0),
 
 
-
             low52Week:
                 Number(data.low52Week || 0),
-
 
 
             beta:
                 Number(data.beta || 1),
 
 
-
             revenue:
                 Number(data.revenue || 0),
-
 
 
             netIncome:
                 Number(data.netIncome || 0),
 
 
-
             operatingIncome:
                 Number(data.operatingIncome || 0),
-
 
 
             ebitda:
                 Number(data.ebitda || 0),
 
 
-
             totalDebt:
                 Number(data.totalDebt || 0),
-
 
 
             totalAssets:
                 Number(data.totalAssets || 0),
 
 
-
             shareholdersEquity:
                 Number(data.shareholdersEquity || 0),
-
 
 
             currentAssets:
                 Number(data.currentAssets || 0),
 
 
-
             currentLiabilities:
                 Number(data.currentLiabilities || 0),
-
 
 
             operatingCashFlow:
                 Number(data.operatingCashFlow || 0),
 
 
-
             capex:
                 Number(data.capex || 0),
-
 
 
             eps:
                 Number(data.eps || 0),
 
 
-
             bookValuePerShare:
                 Number(data.bookValuePerShare || 0),
 
 
-
             enterpriseValue:
                 Number(data.enterpriseValue || 0),
-
 
 
             marketCap:
@@ -270,7 +304,6 @@ async function fetchLiveStock(symbol){
 
     }
 
-
 }
 
 
@@ -281,13 +314,10 @@ async function fetchLiveStock(symbol){
 
 export async function getCompanies(){
 
-
     const database =
         await import("./database.js");
 
 
-
     return database.getAllCompanies();
-
 
 }

@@ -36,7 +36,7 @@ export function calculateFinancialHealth(data) {
         scoreRange(data.currentRatio, 2, 1.5, 1),
         reverseScore(data.debtToEquity, 0.5, 1, 2),
         scoreRange(data.interestCoverage, 8, 4, 2),
-        data.operatingCashFlow > 0 ? 100 : 20
+        data.freeCashFlow > 0 ? 100 : 20
     ];
 
     return Math.round(metrics.reduce((a,b)=>a+b,0)/metrics.length);

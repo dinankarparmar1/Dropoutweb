@@ -1,47 +1,64 @@
 // ==========================================
-// Dropout Fundamentals Provider v2.0
+// Dropout Fundamentals Provider v3.0
+// Yahoo Chart + Safe Fundamentals
 // ==========================================
 
 export async function getFundamentals(symbol){
 
     try{
 
-        // Yahoo fundamentals endpoint
+
         const url =
-        `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}.NS?modules=financialData,defaultKeyStatistics,summaryDetail`;
+        `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}.NS?modules=defaultKeyStatistics,summaryDetail,financialData`;
 
 
-        const response = await fetch(url);
+        const response =
+        await fetch(url);
+
 
 
         if(!response.ok){
 
-            return null;
+            return {
+
+                beta:1
+
+            };
 
         }
+
 
 
         const json =
         await response.json();
 
 
+
         const result =
         json.quoteSummary?.result?.[0];
 
 
+
         if(!result){
 
-            return null;
+            return {
+
+                beta:1
+
+            };
 
         }
+
 
 
         const financial =
         result.financialData || {};
 
 
+
         const stats =
         result.defaultKeyStatistics || {};
+
 
 
         const detail =
@@ -51,10 +68,6 @@ export async function getFundamentals(symbol){
 
         return {
 
-
-            // =====================
-            // Profit Data
-            // =====================
 
             revenue:
                 financial.totalRevenue?.raw || 0,
@@ -73,10 +86,6 @@ export async function getFundamentals(symbol){
 
 
 
-            // =====================
-            // Balance Sheet
-            // =====================
-
             totalDebt:
                 financial.totalDebt?.raw || 0,
 
@@ -90,10 +99,6 @@ export async function getFundamentals(symbol){
 
 
 
-            // =====================
-            // Cash Flow
-            // =====================
-
             operatingCashFlow:
                 financial.operatingCashflow?.raw || 0,
 
@@ -103,26 +108,17 @@ export async function getFundamentals(symbol){
 
 
 
-            // =====================
-            // Valuation
-            // =====================
-
             eps:
                 stats.trailingEps?.raw || 0,
-
-
-            enterpriseValue:
-                stats.enterpriseValue?.raw || 0,
 
 
             bookValuePerShare:
                 stats.bookValue?.raw || 0,
 
 
+            enterpriseValue:
+                stats.enterpriseValue?.raw || 0,
 
-            // =====================
-            // Risk
-            // =====================
 
             beta:
                 stats.beta?.raw || 1,
@@ -131,18 +127,25 @@ export async function getFundamentals(symbol){
             marketCap:
                 detail.marketCap?.raw || 0
 
+
         };
 
 
     }
     catch(error){
 
+
         console.log(
-            "Fundamentals fetch failed:",
+            "Fundamentals API failed",
             error
         );
 
-        return null;
+
+        return {
+
+            beta:1
+
+        };
 
     }
 

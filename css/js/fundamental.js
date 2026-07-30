@@ -2,12 +2,24 @@ import { searchCompany } from "./api.js";
 import { calculateRatios } from "./ratios.js";
 import { overallScore } from "./scoring.js";
 import { renderDashboard } from "./ui.js";
+import { renderCharts } from "./charts.js";
 
 const searchBtn = document.getElementById("searchBtn");
+const stockInput = document.getElementById("stockInput");
 
-searchBtn.addEventListener("click", async () => {
+// Search by button
+searchBtn.addEventListener("click", analyzeStock);
 
-    const symbol = document.getElementById("stockInput").value.trim();
+// Search by Enter key
+stockInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        analyzeStock();
+    }
+});
+
+async function analyzeStock() {
+
+    const symbol = stockInput.value.trim();
 
     if (!symbol) {
         alert("Please enter a stock symbol.");
@@ -36,7 +48,10 @@ searchBtn.addEventListener("click", async () => {
             beta: company.beta
         });
 
-        // Update Score Cards
+        // =====================
+        // Score Cards
+        // =====================
+
         document.getElementById("score").textContent = score.finalScore;
         document.getElementById("signal").textContent = score.rating;
 
@@ -49,11 +64,23 @@ searchBtn.addEventListener("click", async () => {
         document.getElementById("shareholding").textContent = score.breakdown.shareholding;
         document.getElementById("risk").textContent = score.breakdown.risk;
 
-        // Render Dashboard
+        // =====================
+        // Dashboard
+        // =====================
+
         renderDashboard(company, ratios, score);
 
+        // =====================
+        // Charts
+        // =====================
+
+        renderCharts(company);
+
     } catch (error) {
+
+        console.error(error);
         alert(error);
+
     }
 
-});
+}

@@ -1,11 +1,15 @@
 // ==========================================
 // Dropout Automatic Stock API
-// Serverless Function
+// Serverless Function v2
 // ==========================================
+
+import { getFundamentals } from "./providers/fundamentals.js";
+
 
 export default async function handler(req, res) {
 
     const symbol = req.query.symbol;
+
 
     if(!symbol){
 
@@ -15,47 +19,89 @@ export default async function handler(req, res) {
 
     }
 
+
     try {
+
 
         const url =
         `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}.NS`;
 
+
         const response = await fetch(url);
+
 
         const data = await response.json();
 
+
         const result =
-        data.chart.result[0];
+        data.chart.result?.[0];
+
+
+        if(!result){
+
+            return res.status(404).json({
+                error:"Stock not found"
+            });
+
+        }
+
 
         const meta =
         result.meta;
 
+
+        // Future financial data layer
+
+        const fundamentals =
+            await getFundamentals(symbol);
+
+
+
         res.status(200).json({
 
-            symbol:symbol.toUpperCase(),
+            symbol:
+            symbol.toUpperCase(),
+
 
             companyName:
             meta.shortName || symbol,
 
+
             currentPrice:
-            meta.regularMarketPrice,
+            meta.regularMarketPrice || 0,
+
 
             high52Week:
-            meta.fiftyTwoWeekHigh,
+            meta.fiftyTwoWeekHigh || 0,
+
 
             low52Week:
-            meta.fiftyTwoWeekLow
+            meta.fiftyTwoWeekLow || 0,
+
+
+            beta:1,
+
+
+            // Adds future financial data
+
+            ...(fundamentals || {})
 
         });
 
+
     }
     catch(error){
+
+
+        console.log(error);
+
 
         res.status(500).json({
 
             error:"Unable to fetch stock data"
 
         });
+
 
     }
 

@@ -1,13 +1,44 @@
 // ==========================================
 // API Layer
-// Version 1 (Mock Data)
+// Version 2 (Mock Data)
 // ==========================================
 
 const companies = {
 
     TCS: {
+
+        // =====================
+        // Basic Information
+        // =====================
+
         companyName: "Tata Consultancy Services",
         symbol: "TCS",
+
+        sector: "Information Technology",
+        industry: "IT Services & Consulting",
+
+        marketCap: "₹15.3 Lakh Cr",
+
+        currentPrice: 4200,
+        marketPrice: 4200,
+
+        high52Week: 4592,
+        low52Week: 3311,
+
+        faceValue: 1,
+
+        dividendPerShare: 75,
+        dividendYield: 1.80,
+
+        promoterHolding: 72.3,
+        fiiHolding: 14.8,
+        diiHolding: 9.5,
+
+        beta: 0.82,
+
+        // =====================
+        // Latest Financials
+        // =====================
 
         revenue: 245000,
         previousRevenue: 221000,
@@ -17,11 +48,14 @@ const companies = {
 
         operatingIncome: 62000,
 
-        shareholdersEquity: 195000,
+        operatingCashFlow: 52000,
+        capex: 5500,
 
         totalAssets: 360000,
         currentAssets: 125000,
         currentLiabilities: 62000,
+
+        shareholdersEquity: 195000,
 
         totalDebt: 8500,
 
@@ -32,23 +66,69 @@ const companies = {
 
         interestExpense: 900,
 
-        operatingCashFlow: 52000,
-        capex: 5500,
-
         eps: 129,
         previousEPS: 116,
 
-        marketPrice: 4200,
         bookValuePerShare: 540,
-
-        dividendPerShare: 75,
 
         enterpriseValue: 1550000,
 
-        promoterHolding: 72.3,
-        fiiHolding: 14.8,
+        // =====================
+        // 5-Year Financial History
+        // =====================
 
-        beta: 0.82
+        history: {
+
+            years: [
+                "2021",
+                "2022",
+                "2023",
+                "2024",
+                "2025"
+            ],
+
+            revenue: [
+                167000,
+                192000,
+                210000,
+                221000,
+                245000
+            ],
+
+            netProfit: [
+                32000,
+                36500,
+                40200,
+                42000,
+                47000
+            ],
+
+            eps: [
+                89,
+                101,
+                110,
+                116,
+                129
+            ],
+
+            operatingCashFlow: [
+                36000,
+                41000,
+                45500,
+                48000,
+                52000
+            ],
+
+            freeCashFlow: [
+                31000,
+                35500,
+                39200,
+                42000,
+                46500
+            ]
+
+        }
+
     }
 
 };
@@ -59,7 +139,7 @@ export async function searchCompany(symbol){
 
     const key = symbol.trim().toUpperCase();
 
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject)=>{
 
         setTimeout(()=>{
 

@@ -79,7 +79,7 @@ export function calculateCashFlow(data){
 
     const metrics = [
         data.freeCashFlow > 0 ? 100 : 20,
-        data.operatingCashFlow > 0 ? 100 : 20
+        data.freeCashFlow > 0 ? 100 : 20
     ];
 
     return Math.round(metrics.reduce((a,b)=>a+b,0)/metrics.length);
@@ -162,12 +162,11 @@ export function overallScore(data){
     const finalScore = Math.round(total / 100);
 
     let rating = "SELL";
-
-    if(finalScore >= 90) rating = "STRONG BUY";
-    else if(finalScore >= 75) rating = "BUY";
-    else if(finalScore >= 60) rating = "HOLD";
-    else if(finalScore >= 40) rating = "WEAK";
-    else rating = "SELL";
+ if(finalScore >= 90) rating = "STRONG BUY";
+else if(finalScore >= 75) rating = "BUY";
+else if(finalScore >= 60) rating = "HOLD";
+else if(finalScore >= 40) rating = "HIGH RISK";
+else rating = "SELL";
 
     return {
         finalScore,

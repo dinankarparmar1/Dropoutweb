@@ -1,107 +1,256 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+:root{
+    --bg:#0b0b0b;
+    --card:#171717;
+    --card2:#1f1f1f;
+    --border:#2d2d2d;
+    --gold:#FFD700;
+    --green:#00ff7f;
+    --red:#ff4d4f;
+    --text:#ffffff;
+    --muted:#a9a9a9;
 }
 
 body{
-background:#0b0b0b;
-color:#fff;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
 }
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+    width:92%;
+    max-width:1400px;
+    margin:auto;
 }
 
+/* ================= HEADER ================= */
+
 .header{
-padding:40px 0;
-text-align:center;
-border-bottom:1px solid gold;
+    padding:45px 0;
+    text-align:center;
+    border-bottom:1px solid rgba(255,215,0,.2);
 }
 
 .header h1{
-font-size:38px;
-color:gold;
+    font-size:42px;
+    color:var(--gold);
+    margin-bottom:10px;
 }
 
 .header p{
-color:#bbb;
-margin-top:10px;
+    color:var(--muted);
 }
 
+/* ================= SEARCH ================= */
+
 .search-section{
-padding:30px 0;
+    padding:35px 0;
+}
+
+.search-section .container{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .search-section input{
-width:100%;
-padding:15px;
-border-radius:10px;
-border:none;
-font-size:18px;
-margin-bottom:15px;
+    flex:1;
+    min-width:250px;
+    padding:16px;
+    background:#181818;
+    border:1px solid var(--border);
+    color:white;
+    border-radius:12px;
+    font-size:17px;
+    outline:none;
+}
+
+.search-section input:focus{
+    border-color:var(--gold);
 }
 
 .search-section button{
-width:100%;
-padding:15px;
-background:gold;
-color:#000;
-font-size:18px;
-font-weight:bold;
-border:none;
-border-radius:10px;
-cursor:pointer;
+    padding:16px 30px;
+    border:none;
+    border-radius:12px;
+    background:var(--gold);
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-section button:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= SCORE ================= */
+
+.score-section{
+    margin-bottom:40px;
 }
 
 .score-card{
-margin-top:30px;
-background:#171717;
-padding:30px;
-border-radius:15px;
-text-align:center;
-border:1px solid gold;
+    background:linear-gradient(145deg,#1a1a1a,#111);
+    border:1px solid rgba(255,215,0,.25);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.score-card h2{
+    color:var(--gold);
+    letter-spacing:2px;
 }
 
 #score{
-font-size:70px;
-font-weight:bold;
-color:#00ff7f;
-margin:20px 0;
+    font-size:82px;
+    font-weight:700;
+    color:var(--green);
+    margin:20px 0;
 }
 
 #signal{
-font-size:26px;
-font-weight:bold;
+    font-size:28px;
+    font-weight:bold;
 }
 
+/* ================= METRICS ================= */
+
 .metrics{
-margin:40px 0;
+    margin:50px 0;
 }
 
 .metrics .container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
 }
 
 .metric-card{
-background:#1a1a1a;
-padding:20px;
-border-radius:15px;
-text-align:center;
-border:1px solid #333;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    transition:.25s;
+}
+
+.metric-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
 }
 
 .metric-card h3{
-color:gold;
-margin-bottom:10px;
+    color:var(--gold);
+    margin-bottom:15px;
+    font-size:18px;
 }
 
 .metric-card p{
-font-size:26px;
-font-weight:bold;
+    font-size:34px;
+    font-weight:bold;
+    color:white;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-section{
+    margin:40px 0;
+}
+
+.dashboard-section h2{
+    color:var(--gold);
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+#companyCard,
+#financialData,
+#ratioContainer,
+#peerContainer,
+#redFlagContainer,
+#thesisContainer{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+    min-height:180px;
+    color:var(--muted);
+}
+
+/* ================= TABLE ================= */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#202020;
+    color:var(--gold);
+}
+
+th,
+td{
+    padding:14px;
+    border:1px solid #2f2f2f;
+    text-align:center;
+}
+
+/* ================= STATUS COLORS ================= */
+
+.buy{
+    color:#00ff7f;
+}
+
+.hold{
+    color:#ffc107;
+}
+
+.sell{
+    color:#ff5252;
+}
+
+/* ================= LOADING ================= */
+
+.loading{
+    text-align:center;
+    color:var(--gold);
+    padding:40px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.header h1{
+    font-size:30px;
+}
+
+#score{
+    font-size:58px;
+}
+
+.metric-card p{
+    font-size:28px;
+}
+
+.search-section .container{
+    flex-direction:column;
+}
+
+.search-section button{
+    width:100%;
+}
+
+.dashboard-section h2{
+    font-size:22px;
+}
+
 }

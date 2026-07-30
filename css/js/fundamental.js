@@ -1,4 +1,4 @@
-import { searchCompany } from "./api.js";
+import { searchCompany, getCompanies } from "./api.js";
 import { calculateRatios } from "./ratios.js";
 import { overallScore } from "./scoring.js";
 import { renderDashboard } from "./ui.js";
@@ -7,15 +7,35 @@ import { renderCharts } from "./charts.js";
 const searchBtn = document.getElementById("searchBtn");
 const stockInput = document.getElementById("stockInput");
 
-// Search by button
+let companies = [];
+
+// ==========================
+// Initialize
+// ==========================
+
+(async function init() {
+    try {
+        companies = await getCompanies();
+    } catch (err) {
+        console.error(err);
+    }
+})();
+
+// ==========================
+// Events
+// ==========================
+
 searchBtn.addEventListener("click", analyzeStock);
 
-// Search by Enter key
-stockInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+stockInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
         analyzeStock();
     }
 });
+
+// ==========================
+// Main Analysis
+// ==========================
 
 async function analyzeStock() {
 
@@ -29,6 +49,11 @@ async function analyzeStock() {
     try {
 
         const company = await searchCompany(symbol);
+
+        if (!company) {
+            alert("Company not found.");
+            return;
+        }
 
         const ratios = calculateRatios(company);
 
@@ -48,10 +73,6 @@ async function analyzeStock() {
             beta: company.beta
         });
 
-        // =====================
-        // Score Cards
-        // =====================
-
         document.getElementById("score").textContent = score.finalScore;
         document.getElementById("signal").textContent = score.rating;
 
@@ -64,23 +85,20 @@ async function analyzeStock() {
         document.getElementById("shareholding").textContent = score.breakdown.shareholding;
         document.getElementById("risk").textContent = score.breakdown.risk;
 
-        // =====================
-        // Dashboard
-        // =====================
-
         renderDashboard(company, ratios, score);
-
-        // =====================
-        // Charts
-        // =====================
-
         renderCharts(company);
 
-    } catch (error) {
-
-        console.error(error);
-        alert(error);
-
+    } catch (err) {
+        console.error(err);
+        alert("Unable to analyze this company.");
     }
 
+}
+
+// ==========================
+// Autocomplete (for next UI)
+// ==========================
+
+export function getCompanyList() {
+    return companies;
 }

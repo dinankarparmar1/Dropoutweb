@@ -12,6 +12,8 @@ export function renderDashboard(company, ratios, score) {
 }
 
 // =====================================
+// Company Overview
+// =====================================
 
 function renderCompany(company){
 
@@ -20,22 +22,90 @@ function renderCompany(company){
     if(!card) return;
 
     card.innerHTML = `
-        <h3>${company.companyName}</h3>
-        <br>
+        <div class="company-grid">
 
-        <p><strong>Symbol:</strong> ${company.symbol}</p>
+            <div>
+                <strong>Company</strong>
+                <span>${company.companyName}</span>
+            </div>
 
-        <p><strong>Market Price:</strong> ₹${company.marketPrice}</p>
+            <div>
+                <strong>Symbol</strong>
+                <span>${company.symbol}</span>
+            </div>
 
-        <p><strong>Promoter Holding:</strong> ${company.promoterHolding}%</p>
+            <div>
+                <strong>Sector</strong>
+                <span>${company.sector}</span>
+            </div>
 
-        <p><strong>FII Holding:</strong> ${company.fiiHolding}%</p>
+            <div>
+                <strong>Industry</strong>
+                <span>${company.industry}</span>
+            </div>
 
-        <p><strong>Beta:</strong> ${company.beta}</p>
+            <div>
+                <strong>Market Cap</strong>
+                <span>${company.marketCap}</span>
+            </div>
+
+            <div>
+                <strong>Current Price</strong>
+                <span>₹${company.currentPrice}</span>
+            </div>
+
+            <div>
+                <strong>52 Week High</strong>
+                <span>₹${company.high52Week}</span>
+            </div>
+
+            <div>
+                <strong>52 Week Low</strong>
+                <span>₹${company.low52Week}</span>
+            </div>
+
+            <div>
+                <strong>Book Value</strong>
+                <span>₹${company.bookValuePerShare}</span>
+            </div>
+
+            <div>
+                <strong>Dividend Yield</strong>
+                <span>${company.dividendYield}%</span>
+            </div>
+
+            <div>
+                <strong>Face Value</strong>
+                <span>₹${company.faceValue}</span>
+            </div>
+
+            <div>
+                <strong>Promoter Holding</strong>
+                <span>${company.promoterHolding}%</span>
+            </div>
+
+            <div>
+                <strong>FII Holding</strong>
+                <span>${company.fiiHolding}%</span>
+            </div>
+
+            <div>
+                <strong>DII Holding</strong>
+                <span>${company.diiHolding}%</span>
+            </div>
+
+            <div>
+                <strong>Beta</strong>
+                <span>${company.beta}</span>
+            </div>
+
+        </div>
     `;
 
 }
 
+// =====================================
+// Financial Statements
 // =====================================
 
 function renderFinancials(company){
@@ -78,6 +148,8 @@ function renderFinancials(company){
 }
 
 // =====================================
+// Ratio Analysis
+// =====================================
 
 function renderRatios(ratios){
 
@@ -94,19 +166,12 @@ function renderRatios(ratios){
             </tr>
 
             <tr><td>ROE</td><td>${ratios.roe}%</td></tr>
-
             <tr><td>ROCE</td><td>${ratios.roce}%</td></tr>
-
             <tr><td>P/E</td><td>${ratios.pe}</td></tr>
-
             <tr><td>P/B</td><td>${ratios.pb}</td></tr>
-
             <tr><td>Current Ratio</td><td>${ratios.currentRatio}</td></tr>
-
-            <tr><td>Debt/Equity</td><td>${ratios.debtToEquity}</td></tr>
-
+            <tr><td>Debt / Equity</td><td>${ratios.debtToEquity}</td></tr>
             <tr><td>Revenue Growth</td><td>${ratios.revenueGrowth}%</td></tr>
-
             <tr><td>Profit Growth</td><td>${ratios.profitGrowth}%</td></tr>
 
         </table>
@@ -114,6 +179,8 @@ function renderRatios(ratios){
 
 }
 
+// =====================================
+// AI Investment Thesis
 // =====================================
 
 function renderInvestmentThesis(score){
@@ -127,22 +194,16 @@ function renderInvestmentThesis(score){
 
         <br>
 
-        <p>
-            Overall Score:
-            <strong>${score.finalScore}</strong>
-        </p>
+        <p><strong>Overall Score:</strong> ${score.finalScore}</p>
 
-        <p>
-            Rating:
-            <strong>${score.rating}</strong>
-        </p>
+        <p><strong>Rating:</strong> ${score.rating}</p>
 
         <br>
 
         <p>
-            This rating is generated using the company's financial health,
-            growth, profitability, valuation, cash flow, debt, shareholding,
-            and risk profile.
+        This rating is generated using Financial Health,
+        Growth, Profitability, Valuation,
+        Cash Flow, Debt, Shareholding and Risk analysis.
         </p>
     `;
 

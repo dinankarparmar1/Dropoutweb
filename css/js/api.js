@@ -1,6 +1,6 @@
 // ==========================================
-// Dropout API Engine v5.0
-// Automatic API + Local Fallback
+// Dropout API Engine v6.0
+// Vercel Automatic API + Local Fallback
 // ==========================================
 
 import { getCompany } from "./database.js";
@@ -39,6 +39,7 @@ export async function searchCompany(symbol){
     }
 
 
+
     // ==========================
     // Local Backup
     // ==========================
@@ -58,8 +59,9 @@ export async function searchCompany(symbol){
 }
 
 
+
 // ==========================================
-// Automatic Stock API
+// Vercel Automatic Stock API
 // ==========================================
 
 async function fetchLiveStock(symbol){
@@ -68,7 +70,7 @@ async function fetchLiveStock(symbol){
 
 
         const response = await fetch(
-            `/api/stock?symbol=${symbol}`
+            `https://dropoutweb-gjp0s69qo-dinankarparmar1s-projects.vercel.app/api/stock?symbol=${symbol}`
         );
 
 
@@ -96,6 +98,7 @@ async function fetchLiveStock(symbol){
 
             symbol:data.symbol,
 
+
             companyName:
                 data.companyName || symbol,
 
@@ -116,7 +119,43 @@ async function fetchLiveStock(symbol){
                 Number(data.low52Week || 0),
 
 
-            beta:1
+            beta:
+                Number(data.beta || 1),
+
+
+
+            // Future fundamentals
+
+            revenue:
+                data.revenue || 0,
+
+
+            netIncome:
+                data.netIncome || 0,
+
+
+            totalDebt:
+                data.totalDebt || 0,
+
+
+            totalAssets:
+                data.totalAssets || 0,
+
+
+            shareholdersEquity:
+                data.shareholdersEquity || 0,
+
+
+            operatingCashFlow:
+                data.operatingCashFlow || 0,
+
+
+            capex:
+                data.capex || 0,
+
+
+            eps:
+                data.eps || 0
 
         };
 
@@ -126,7 +165,7 @@ async function fetchLiveStock(symbol){
 
 
         console.log(
-            "Automatic stock API unavailable",
+            "Automatic Vercel API unavailable",
             error
         );
 
@@ -136,6 +175,7 @@ async function fetchLiveStock(symbol){
     }
 
 }
+
 
 
 // ==========================================

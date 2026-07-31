@@ -402,20 +402,20 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <p>Foreign (FII) and domestic (DII) institutions move enough capital to shift the market on their own. Their net daily buying or selling, published after market close, is one of the most closely watched numbers in Indian markets.</p>
     </div>
     <div class="glass data-card">
-      <span class="badge badge-pending">Sample layout &middot; live feed not connected</span>
+      <span class="badge badge-pending" id="fii-dii-badge">Sample layout &middot; live feed not connected</span>
       <div class="table-scroll">
         <table class="result-table">
           <thead>
             <tr><th>Date</th><th>FII Net (&#8377; Cr)</th><th>DII Net (&#8377; Cr)</th><th>Combined</th></tr>
           </thead>
-          <tbody>
+          <tbody id="fii-dii-tbody">
             <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="tv-note">This table is built and ready — connect an NSE/BSE or depository data feed to populate it with real daily FII/DII figures. Until then, check the live numbers directly at the sources below.</p>
+      <p class="tv-note" id="fii-dii-note">This table is built and ready — connect an NSE/BSE or depository data feed to populate it with real daily FII/DII figures. Until then, check the live numbers directly at the sources below.</p>
       <div class="source-links">
         <a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE India →</a>
         <a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE India →</a>
@@ -433,20 +433,20 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <p>Under SEBI's Prohibition of Insider Trading (PIT) rules, promoters, directors and designated employees must disclose their own trades in company stock. These filings don't predict price moves, but sustained buying or selling by the people who know a company best is worth watching.</p>
     </div>
     <div class="glass data-card">
-      <span class="badge badge-pending">Sample layout &middot; live feed not connected</span>
+      <span class="badge badge-pending" id="insider-badge">Sample layout &middot; live feed not connected</span>
       <div class="table-scroll">
         <table class="result-table">
           <thead>
             <tr><th>Date</th><th>Company</th><th>Person Category</th><th>Transaction</th><th>Quantity</th></tr>
           </thead>
-          <tbody>
+          <tbody id="insider-tbody">
             <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="tv-note">This table is built and ready — connect a live NSE/BSE corporate-filings feed to populate it with real PIT disclosures. Until then, check the official filings directly at the sources below.</p>
+      <p class="tv-note" id="insider-note">This table is built and ready — connect a live NSE/BSE corporate-filings feed to populate it with real PIT disclosures. Until then, check the official filings directly at the sources below.</p>
       <div class="source-links">
         <a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE India →</a>
         <a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE India →</a>
@@ -556,6 +556,60 @@ if(miMarketsGrid){
     container.appendChild(script);
   });
 }
+
+/* ---------------------------------------------------------------
+   LIVE FII/DII + INSIDER TRADING DATA
+   Reads the JSON files written by scripts/fetch_market_data.py
+   (run daily by .github/workflows/market-data.yml). Falls back to
+   the placeholder "sample layout" state if the files don't exist
+   yet or the fetch fails, so the page never shows broken output.
+--------------------------------------------------------------- */
+function formatDate(iso){
+  try{ return new Date(iso).toLocaleString('en-IN', {dateStyle:'medium', timeStyle:'short'}); }
+  catch(e){ return iso; }
+}
+
+fetch('data/fii-dii.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
+.then(function(payload){
+  var rows = payload.rows || [];
+  if(!rows.length) return;
+  var tbody = document.getElementById('fii-dii-tbody');
+  var byDate = {};
+  rows.forEach(function(row){
+    var d = row.date || '—';
+    if(!byDate[d]) byDate[d] = {};
+    var cat = (row.category || '').toUpperCase();
+    if(cat.indexOf('FII') !== -1 || cat.indexOf('FPI') !== -1) byDate[d].fii = row.netValue;
+    else if(cat.indexOf('DII') !== -1) byDate[d].dii = row.netValue;
+  });
+  tbody.innerHTML = Object.keys(byDate).slice(0,10).map(function(d){
+    var fii = byDate[d].fii, dii = byDate[d].dii;
+    var combined = (fii !== undefined && dii !== undefined) ? (parseFloat(fii)+parseFloat(dii)).toFixed(2) : '—';
+    return '<tr><td>'+d+'</td><td>'+(fii !== undefined ? fii : '—')+'</td><td>'+(dii !== undefined ? dii : '—')+'</td><td>'+combined+'</td></tr>';
+  }).join('');
+  var badge = document.getElementById('fii-dii-badge');
+  badge.textContent = 'Live · updated ' + formatDate(payload.updated);
+  badge.className = 'badge badge-live';
+  var note = document.getElementById('fii-dii-note');
+  if(note) note.textContent = 'Sourced automatically from NSE\u2019s public FII/DII report, refreshed daily after market close.';
+})
+.catch(function(){ /* data/fii-dii.json not published yet — placeholder stays as-is */ });
+
+fetch('data/insider-trading.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
+.then(function(payload){
+  var rows = payload.rows || [];
+  if(!rows.length) return;
+  var tbody = document.getElementById('insider-tbody');
+  tbody.innerHTML = rows.slice(0,15).map(function(row){
+    return '<tr><td>'+(row.date||'—')+'</td><td>'+(row.company||'—')+'</td><td>'+(row.personCategory||'—')+'</td><td>'+(row.transactionType||'—')+'</td><td>'+(row.quantity||'—')+'</td></tr>';
+  }).join('');
+  var badge = document.getElementById('insider-badge');
+  badge.textContent = 'Live · updated ' + formatDate(payload.updated);
+  badge.className = 'badge badge-live';
+  var note = document.getElementById('insider-note');
+  if(note) note.textContent = 'Sourced automatically from NSE\u2019s public PIT disclosure filings, refreshed daily.';
+})
+.catch(function(){ /* data/insider-trading.json not published yet — placeholder stays as-is */ });
 </script>
 
 </body>

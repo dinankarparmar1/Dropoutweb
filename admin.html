@@ -533,3 +533,106 @@ Stock Name
 <p id="previewTitle">
 Analysis title will appear here...
 </p>
+<p id="previewDesc">
+Your published analysis preview will appear here.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module">
+
+import "./firebase.js";
+import "./js/auth.js";
+import "./js/publish.js";
+
+const stock=document.getElementById("stock");
+const title=document.getElementById("title");
+const signal=document.getElementById("signal");
+const description=document.getElementById("description");
+const image=document.getElementById("image");
+
+const preview=document.getElementById("preview");
+
+stock.oninput=()=>{
+
+document.getElementById("previewStock").innerHTML=
+
+stock.value||"Stock Name";
+
+};
+
+title.oninput=()=>{
+
+document.getElementById("previewTitle").innerHTML=
+
+title.value||"Analysis title will appear here...";
+
+};
+
+description.oninput=()=>{
+
+document.getElementById("previewDesc").innerHTML=
+
+description.value||
+
+"Your published analysis preview will appear here.";
+
+};
+
+signal.onchange=()=>{
+
+const badge=document.getElementById("previewSignal");
+
+badge.innerHTML=signal.value;
+
+if(signal.value==="BUY"){
+
+badge.style.background="#4a9a76";
+
+badge.style.color="#fff";
+
+}
+
+if(signal.value==="SELL"){
+
+badge.style.background="#b1594a";
+
+badge.style.color="#fff";
+
+}
+
+if(signal.value==="HOLD"){
+
+badge.style.background="#d4af37";
+
+badge.style.color="#111";
+
+}
+
+};
+
+image.onchange=e=>{
+
+const file=e.target.files[0];
+
+if(file){
+
+preview.src=URL.createObjectURL(file);
+
+preview.style.display="block";
+
+}
+
+};
+
+signal.dispatchEvent(new Event("change"));
+
+</script>
+
+</body>
+
+</html>

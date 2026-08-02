@@ -318,11 +318,12 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
     <div class="section-head">
       <div class="eyebrow">Heatmaps</div>
       <h2>The market, at a glance</h2>
-      <p>A heatmap turns hundreds of price moves into one picture: block size shows market weight, color shows the day's change. Green is up, red is down — hover any block for the exact number. Tap a tab to switch between the Nifty 50 and the full sector-by-sector market.</p>
+      <p>A heatmap turns hundreds of price moves into one picture: block size shows market weight, color shows the day's change. Green is up, red is down — hover any block for the exact number. Tap a tab to switch between the Nifty 50, Bank Nifty, and the full sector-by-sector market.</p>
     </div>
     <div class="glass tv-card heatmap-card">
       <div class="heatmap-tabs" role="tablist">
         <button class="heatmap-tab active" id="heatmap-tab-nifty" role="tab" aria-selected="true" aria-controls="heatmap-panel-nifty">NIFTY 50</button>
+        <button class="heatmap-tab" id="heatmap-tab-bank" role="tab" aria-selected="false" aria-controls="heatmap-panel-bank">BANK NIFTY</button>
         <button class="heatmap-tab" id="heatmap-tab-sector" role="tab" aria-selected="false" aria-controls="heatmap-panel-sector">Sector Heat Map</button>
       </div>
       <div class="tv-wrap heatmap-wrap" id="heatmap-panel-nifty" role="tabpanel">
@@ -349,8 +350,9 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
           </script>
         </div>
       </div>
+      <div class="tv-wrap heatmap-wrap" id="heatmap-panel-bank" role="tabpanel" style="display:none;"></div>
       <div class="tv-wrap heatmap-wrap" id="heatmap-panel-sector" role="tabpanel" style="display:none;"></div>
-      <p class="tv-note">Heatmap by TradingView, live. Block size = market weight, color = day's change. The Sector Heat Map covers the full Indian market — Banking, IT, Auto, Pharma, FMCG, Metals, Energy, Realty, Telecom, Media, Chemicals, Capital Goods, Infrastructure, Consumer Durables, Healthcare, Power and every other listed sector — grouped automatically from live exchange data.</p>
+      <p class="tv-note">Heatmap by TradingView, live. Block size = market weight, color = day's change. Bank Nifty covers the index's banking constituents on their own. The Sector Heat Map covers the full Indian market — Banking, IT, Auto, Pharma, FMCG, Metals, Energy, Realty, Telecom, Media, Chemicals, Capital Goods, Infrastructure, Consumer Durables, Healthcare, Power and every other listed sector — grouped automatically from live exchange data.</p>
     </div>
   </div>
 </section>
@@ -362,23 +364,28 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="eyebrow">Market Breadth</div>
       <h2>Is strength broad, or a handful of stocks?</h2>
       <p>An index can rise even while more stocks are falling than rising — that's the difference between a healthy move and a fragile one. Breadth measures participation: advances vs declines, new highs vs new lows, and how many stocks trade above their long-term average.</p>
+      <span class="badge badge-pending" id="breadth-badge">Sample layout &middot; live feed not connected</span>
     </div>
     <div class="result-grid">
       <div class="glass result-item">
         <div class="lbl">Advances vs Declines</div>
-        <div class="val">—</div>
-        <div class="sub">Live feed required</div>
+        <div class="val" id="breadth-adv-decl">—</div>
+        <div class="sub" id="breadth-adv-decl-sub">Live feed required</div>
       </div>
       <div class="glass result-item">
         <div class="lbl">New 52-Week Highs vs Lows</div>
         <div class="val">—</div>
-        <div class="sub">Live feed required</div>
+        <div class="sub">Not yet connected on this page</div>
       </div>
       <div class="glass result-item">
         <div class="lbl">% of Nifty 500 Above 200-DMA</div>
         <div class="val">—</div>
-        <div class="sub">Live feed required</div>
+        <div class="sub">Not yet connected on this page</div>
       </div>
+    </div>
+    <div class="source-links" style="margin-top:4px;">
+      <a href="https://www.nseindia.com/market-data/advance" target="_blank" rel="noopener">NSE Advances/Declines →</a>
+      <a href="https://www.nseindia.com/market-data/52-week-high-equity-market" target="_blank" rel="noopener">NSE 52-Week High/Low →</a>
     </div>
     <div class="glass tv-card" style="margin-top:20px;">
       <div class="tv-wrap">
@@ -399,7 +406,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
           </script>
         </div>
       </div>
-      <p class="tv-note">This gauge reads technical signal strength on a broad market benchmark — a useful pulse check, but not the same as true advance/decline breadth across all stocks, which needs a live exchange data feed (see the stat cards above).</p>
+      <p class="tv-note">This gauge reads technical signal strength on a broad market benchmark — a useful pulse check, but not a substitute for the Advances vs Declines count above, which reflects actual constituent-level breadth.</p>
     </div>
   </div>
 </section>
@@ -469,8 +476,8 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 
 <div class="container">
   <div class="glass cta-banner">
-    <h3>Want live institutional &amp; insider data here?</h3>
-    <p>The layout above is ready to go — it just needs a data feed connected. Message us and we'll help wire it up.</p>
+    <h3>Want the full market-breadth picture here?</h3>
+    <p>52-week highs/lows and % above 200-DMA aren't wired up yet — they need a heavier historical-data pipeline than the rest of this page. Message us if you'd like that built out next.</p>
     <div class="actions">
       <a href="https://wa.me/917747901709" target="_blank" class="btn btn-gold">Chat on WhatsApp</a>
       <a href="index.html#contact" class="btn btn-outline-gold">Contact Us</a>
@@ -487,7 +494,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
     </div>
     <details class="faq-item">
       <summary>Is this data live?</summary>
-      <p>Index prices, sector leaders and the heatmap update from TradingView's live feed. Institutional activity and insider trading are shown as sample layouts until a live data feed is connected — see the source links in each section for the real, current numbers.</p>
+      <p>Index prices, sector leaders and the heatmaps (Nifty 50, Bank Nifty, and the sector-by-sector map) update live from TradingView. Institutional activity, insider trading, and the Advances vs Declines breadth stat are pulled automatically from NSE's public reports once a day after market close. New 52-Week Highs vs Lows and % above 200-DMA aren't wired up yet — those two cards say so directly rather than showing a placeholder number.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I check FII/DII and insider trading data myself right now?</summary>
@@ -521,7 +528,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       </div>
     </div>
     <div class="disclaimer-box">
-      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Index, sector and heatmap data is provided by TradingView and may be delayed. Institutional Activity and Insider Trading sections are sample layouts pending a live data connection and do not reflect real transactions. Nothing on this page is investment advice — trading and investing carry a high level of risk and may not be suitable for all investors. Please consult a licensed financial advisor before making trading or investment decisions.</p>
+      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Index, sector and heatmap data is provided by TradingView and may be delayed. Institutional Activity, Insider Trading, and the Advances/Declines breadth figures are pulled automatically from NSE's public reports once daily and may lag the live market by up to a day. Two market-breadth stats (52-week highs/lows and % above 200-DMA) are not yet connected and are labeled as such rather than showing a placeholder number. Nothing on this page is investment advice — trading and investing carry a high level of risk and may not be suitable for all investors. Please consult a licensed financial advisor before making trading or investment decisions.</p>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Dropout Traders. All rights reserved.</p>
@@ -538,30 +545,38 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------------------------------------------------------------
-   HEATMAP TABS — NIFTY 50 (loaded up front) / Sector (lazy-loaded
-   on first click, so we don't ship two TradingView iframes on
-   initial page load).
+   HEATMAP TABS — NIFTY 50 (loaded up front) / Bank Nifty / Sector
+   (both lazy-loaded on first click, so we don't ship three
+   TradingView iframes on initial page load).
 --------------------------------------------------------------- */
 (function(){
-  var tabNifty = document.getElementById('heatmap-tab-nifty');
-  var tabSector = document.getElementById('heatmap-tab-sector');
-  var panelNifty = document.getElementById('heatmap-panel-nifty');
-  var panelSector = document.getElementById('heatmap-panel-sector');
-  var sectorLoaded = false;
+  var TABS = {
+    nifty:  { tab: 'heatmap-tab-nifty',  panel: 'heatmap-panel-nifty',  loaded: true },
+    bank:   { tab: 'heatmap-tab-bank',   panel: 'heatmap-panel-bank',   loaded: false },
+    sector: { tab: 'heatmap-tab-sector', panel: 'heatmap-panel-sector', loaded: false }
+  };
 
-  function loadSectorHeatmap(){
-    if(sectorLoaded) return;
-    sectorLoaded = true;
-    var wrap = document.createElement('div');
-    wrap.className = 'tradingview-widget-container';
-    var inner = document.createElement('div');
-    inner.className = 'tradingview-widget-container__widget';
-    wrap.appendChild(inner);
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js';
-    script.async = true;
-    script.innerHTML = JSON.stringify({
+  // Per-tab TradingView Stock Heatmap widget config. "Nifty 50" ships
+  // inline in the HTML (see above); these two are injected on first click.
+  var WIDGET_CONFIG = {
+    bank: {
+      exchanges: [],
+      dataSource: 'BANKNIFTY',
+      grouping: 'no_group',
+      blockSize: 'market_cap_basic',
+      blockColor: 'change',
+      locale: 'en',
+      symbolUrl: '',
+      colorTheme: 'dark',
+      hasTopBar: true,
+      isDataSetEnabled: false,
+      isZoomEnabled: true,
+      hasSymbolTooltip: true,
+      isMonoSize: false,
+      width: '100%',
+      height: '100%'
+    },
+    sector: {
       exchanges: [],
       dataSource: 'India',
       grouping: 'sector',
@@ -577,26 +592,50 @@ document.getElementById('year').textContent = new Date().getFullYear();
       isMonoSize: false,
       width: '100%',
       height: '100%'
-    });
+    }
+  };
+
+  Object.keys(TABS).forEach(function(key){
+    TABS[key].tabEl = document.getElementById(TABS[key].tab);
+    TABS[key].panelEl = document.getElementById(TABS[key].panel);
+  });
+
+  function loadWidget(key){
+    var entry = TABS[key];
+    if(!entry || entry.loaded) return;
+    entry.loaded = true;
+    var wrap = document.createElement('div');
+    wrap.className = 'tradingview-widget-container';
+    var inner = document.createElement('div');
+    inner.className = 'tradingview-widget-container__widget';
+    wrap.appendChild(inner);
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js';
+    script.async = true;
+    script.innerHTML = JSON.stringify(WIDGET_CONFIG[key]);
     wrap.appendChild(script);
-    panelSector.appendChild(wrap);
+    entry.panelEl.appendChild(wrap);
   }
 
-  function activate(tab){
-    var showSector = tab === 'sector';
-    tabNifty.classList.toggle('active', !showSector);
-    tabSector.classList.toggle('active', showSector);
-    tabNifty.setAttribute('aria-selected', String(!showSector));
-    tabSector.setAttribute('aria-selected', String(showSector));
-    panelNifty.style.display = showSector ? 'none' : 'block';
-    panelSector.style.display = showSector ? 'block' : 'none';
-    if(showSector) loadSectorHeatmap();
+  function activate(activeKey){
+    Object.keys(TABS).forEach(function(key){
+      var entry = TABS[key];
+      if(!entry.tabEl || !entry.panelEl) return;
+      var isActive = key === activeKey;
+      entry.tabEl.classList.toggle('active', isActive);
+      entry.tabEl.setAttribute('aria-selected', String(isActive));
+      entry.panelEl.style.display = isActive ? 'block' : 'none';
+    });
+    loadWidget(activeKey);
   }
 
-  if(tabNifty && tabSector){
-    tabNifty.addEventListener('click', function(){ activate('nifty'); });
-    tabSector.addEventListener('click', function(){ activate('sector'); });
-  }
+  Object.keys(TABS).forEach(function(key){
+    var entry = TABS[key];
+    if(entry.tabEl){
+      entry.tabEl.addEventListener('click', function(){ activate(key); });
+    }
+  });
 })();
 
 var MI_MARKETS = [
@@ -688,6 +727,24 @@ fetch('data/insider-trading.json').then(function(r){ if(!r.ok) throw new Error('
   if(note) note.textContent = 'Sourced automatically from NSE\u2019s public PIT disclosure filings, refreshed daily.';
 })
 .catch(function(){ /* data/insider-trading.json not published yet — placeholder stays as-is */ });
+
+fetch('data/market-breadth.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
+.then(function(payload){
+  if(payload.advances === undefined || payload.advances === null) return;
+  var val = document.getElementById('breadth-adv-decl');
+  var sub = document.getElementById('breadth-adv-decl-sub');
+  var badge = document.getElementById('breadth-badge');
+  if(val) val.textContent = payload.advances + ' / ' + payload.declines;
+  if(sub){
+    var extra = (payload.unchanged !== undefined && payload.unchanged !== null) ? (' · ' + payload.unchanged + ' unchanged') : '';
+    sub.textContent = (payload.index || 'Market') + extra;
+  }
+  if(badge){
+    badge.textContent = 'Live · updated ' + formatDate(payload.updated);
+    badge.className = 'badge badge-live';
+  }
+})
+.catch(function(){ /* data/market-breadth.json not published yet — placeholder stays as-is */ });
 </script>
 
 </body>

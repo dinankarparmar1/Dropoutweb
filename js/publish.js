@@ -3,6 +3,9 @@ import { db, storage } from "../firebase.js";
 import {
 collection,
 addDoc,
+doc,
+getDoc,
+updateDoc,
 serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
@@ -12,81 +15,85 @@ uploadBytes,
 getDownloadURL
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-storage.js";
 
-const image=document.getElementById("image");
-const preview=document.getElementById("preview");
+const params = new URLSearchParams(location.search);
+const editId = params.get("id");
 
-image.addEventListener("change",()=>{
+const stock = document.getElementById("stock");
+const title = document.getElementById("title");
+const signal = document.getElementById("signal");
+const entry = document.getElementById("entry");
+const target = document.getElementById("target");
+const stoploss = document.getElementById("stoploss");
+const description = document.getElementById("description");
+const image = document.getElementById("image");
 
-const file=image.files[0];
+if (editId) {
 
-if(file){
+const snap = await getDoc(doc(db, "analysis", editId));
 
-preview.src=URL.createObjectURL(file);
+if (snap.exists()) {
 
-preview.style.display="block";
+const d = snap.data();
+
+stock.value = d.stock || "";
+title.value = d.title || "";
+signal.value = d.signal || "BUY";
+entry.value = d.entry || "";
+target.value = d.target || "";
+stoploss.value = d.stoploss || "";
+description.value = d.description || "";
 
 }
 
-});
+}
 
-document.querySelector(".publish").onclick=async()=>{
+document.querySelector(".publish").onclick = async () => {
 
-const file=image.files[0];
+let imageURL = "";
 
-if(!file){
+if (image.files.length) {
 
-alert("Select Image");
+const file = image.files[0];
 
-return;
+const storageRef = ref(storage, "analysis/" + Date.now() + "_" + file.name);
+
+await uploadBytes(storageRef, file);
+
+imageURL = await getDownloadURL(storageRef);
 
 }
 
-const stock=document.getElementById("stock").value;
+const data = {
 
-const title=document.getElementById("title").value;
+stock: stock.value,
+title: title.value,
+signal: signal.value,
+entry: entry.value,
+target: target.value,
+stoploss: stoploss.value,
+description: description.value,
+image: imageURL,
+updatedAt: serverTimestamp()
 
-const signal=document.getElementById("signal").value;
+};
 
-const entry=document.getElementById("entry").value;
+if (editId) {
 
-const target=document.getElementById("target").value;
+await updateDoc(doc(db, "analysis", editId), data);
 
-const stoploss=document.getElementById("stoploss").value;
+alert("Analysis Updated");
 
-const description=document.getElementById("description").value;
+} else {
 
-const fileName=Date.now()+"_"+file.name;
+data.createdAt = serverTimestamp();
+data.views = 0;
 
-const storageRef=ref(storage,"analysis/"+fileName);
+await addDoc(collection(db, "analysis"), data);
 
-await uploadBytes(storageRef,file);
+alert("Analysis Published");
 
-const imageUrl=await getDownloadURL(storageRef);
+}
 
-await addDoc(collection(db,"dailyAnalysis"),{
-
-stock,
-
-title,
-
-signal,
-
-entry,
-
-target,
-
-stoploss,
-
-description,
-
-image:imageUrl,
-
-createdAt:serverTimestamp()
-
-});
-
-alert("Analysis Published Successfully");
-
-location.reload();
+location.href = "dashboard.html";
 
 };

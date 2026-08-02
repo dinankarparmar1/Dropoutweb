@@ -1,4 +1,4 @@
-import { db } from "../firebase.js";
+import { db } from "./firebase.js";
 
 import {
 collection,
@@ -7,56 +7,64 @@ orderBy,
 getDocs
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
-const container = document.getElementById("daily-analysis-container");
+const container = document.getElementById("analysisContainer");
 
 async function loadAnalysis() {
 
-    container.innerHTML = "";
+const q = query(
+collection(db, "analysis"),
+orderBy("createdAt", "desc")
+);
 
-    const q = query(
-        collection(db, "dailyAnalysis"),
-        orderBy("createdAt", "desc")
-    );
+const snapshot = await getDocs(q);
 
-    const snapshot = await getDocs(q);
+container.innerHTML = "";
 
-    snapshot.forEach(doc => {
+snapshot.forEach((docItem) => {
 
-        const data = doc.data();
+const d = docItem.data();
 
-        container.innerHTML += `
-        <div class="analysis-card">
+container.innerHTML += `
 
-            <img src="${data.image}" alt="${data.stock}">
+<div class="analysis-card">
 
-            <div class="content">
+<img src="${d.image}" alt="${d.stock}">
 
-                <span class="signal ${data.signal.toLowerCase()}">
-                    ${data.signal}
-                </span>
+<div class="content">
 
-                <h3>${data.stock}</h3>
+<div class="signal ${d.signal.toLowerCase()}">
 
-                <p>${data.title}</p>
+${d.signal}
 
-                <div class="targets">
+</div>
 
-                    <span>🎯 ${data.target}</span>
+<h3>${d.stock}</h3>
 
-                    <span>🛑 ${data.stoploss}</span>
+<h4>${d.title}</h4>
 
-                </div>
+<p>${d.description.substring(0,120)}...</p>
 
-                <a href="analysis.html?id=${doc.id}">
-                    Read Full Analysis →
-                </a>
+<div class="prices">
 
-            </div>
+<span>Entry: ₹${d.entry}</span>
 
-        </div>
-        `;
+<span>Target: ₹${d.target}</span>
 
-    });
+</div>
+
+<a href="analysis.html?id=${docItem.id}" class="read-btn">
+
+Read Analysis →
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
 
 }
 

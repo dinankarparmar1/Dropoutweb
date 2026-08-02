@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dropout Traders Admin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(5,12,25,.96),rgba(5,12,25,.96)),
+url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=2000&q=80");
+
+background-size:cover;
+background-attachment:fixed;
+color:white;
+min-height:100vh;
+
+}
+
+.header{
+
+padding:30px;
+text-align:center;
+
+}
+
+.logo{
+
+font-size:34px;
+font-weight:700;
+color:#00ff88;
+
+}
+
+.sub{
+
+color:#94a3b8;
+margin-top:8px;
+
+}
+
+.container{
+
+max-width:900px;
+margin:auto;
+padding:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:25px;
+
+padding:35px;
+
+box-shadow:0 0 40px rgba(0,255,136,.15);
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+.input{
+
+margin-top:18px;
+
+}
+
+label{
+
+display:block;
+
+margin-bottom:8px;
+
+color:#cbd5e1;
+
+font-size:15px;
+
+}
+
+input,textarea,select{
+
+width:100%;
+
+padding:16px;
+
+background:#0f172a;
+
+border:1px solid #334155;
+
+border-radius:15px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+border-color:#00ff88;
+
+box-shadow:0 0 15px rgba(0,255,136,.3);
+
+}
+
+textarea{
+
+resize:none;
+
+height:180px;
+
+}
+
+.publish{
+
+margin-top:30px;
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:700;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#00ff88,#00b894);
+
+color:#00130a;
+
+transition:.3s;
+
+}
+
+.publish:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 30px rgba(0,255,136,.35);
+
+}
+
+.preview{
+
+margin-top:25px;
+
+border:2px dashed #00ff88;
+
+border-radius:20px;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.preview img{
+
+max-width:100%;
+
+border-radius:15px;
+
+display:none;
+
+}
+
+@media(max-width:768px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+📈 DROPOUT TRADERS ADMIN
+</div>
+
+<div class="sub">
+Institutional Research Publishing Platform
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="grid">
+
+<div class="input">
+<label>Stock Name</label>
+<input id="stock" type="text">
+</div>
+
+<div class="input">
+<label>Analysis Title</label>
+<input id="title" type="text">
+</div>
+
+<div class="input">
+<label>Signal</label>
+<select id="signal">
+<option>BUY</option>
+<option>SELL</option>
+<option>HOLD</option>
+</select>
+</div>
+
+<div class="input">
+<label>Entry Price</label>
+<input id="entry" type="text">
+</div>
+
+<div class="input">
+<label>Target</label>
+<input id="target" type="text">
+</div>
+
+<div class="input">
+<label>Stop Loss</label>
+<input id="stoploss" type="text">
+</div>
+
+</div>
+
+<div class="input">
+
+<label>Description</label>
+
+<textarea id="description"></textarea>
+
+</div>
+
+<div class="input">
+
+<label>Upload Analysis Image</label>
+
+<input id="image" type="file" accept="image/*">
+
+</div>
+
+<div class="preview">
+
+<h3>Image Preview</h3>
+
+<img id="preview">
+
+</div>
+
+<button class="publish">
+
+🚀 Publish Analysis
+
+</button>
+
+</div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="js/publish.js"></script>
+
+</body>
+</html>

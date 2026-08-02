@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Fetch FII/DII and insider trading data
+      - name: Fetch FII/DII, insider trading, and market breadth data
         run: python3 scripts/fetch_market_data.py --debug
 
       - name: Commit updated data (if anything changed)

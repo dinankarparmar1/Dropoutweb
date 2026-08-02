@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#07111f;
+}
+
+.card{
+
+width:420px;
+
+padding:40px;
+
+background:#111d32;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 0 35px rgba(0,255,136,.15);
+
+}
+
+h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#00ff88;
+
+}
+
+input{
+
+width:100%;
+
+padding:16px;
+
+margin-bottom:18px;
+
+background:#1d2d4b;
+
+border:none;
+
+border-radius:12px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:#00ff88;
+
+color:#07111f;
+
+}
+
+button:hover{
+
+transform:scale(1.02);
+
+}
+
+#error{
+
+margin-top:15px;
+
+color:#ff5b5b;
+
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Dropout Admin</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Admin Email">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button id="login">
+
+Login
+
+</button>
+
+<div id="error"></div>
+
+</div>
+
+<script type="module">
+
+import {auth} from "./firebase.js";
+
+import{
+
+signInWithEmailAndPassword
+
+}from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+
+document.getElementById("login").onclick=async()=>{
+
+const email=document.getElementById("email").value;
+
+const password=document.getElementById("password").value;
+
+try{
+
+await signInWithEmailAndPassword(auth,email,password);
+
+location.href="admin.html";
+
+}catch(e){
+
+document.getElementById("error").innerHTML=e.message;
+
+}
+
+};
+
+</script>
+
+</body>
+</html>

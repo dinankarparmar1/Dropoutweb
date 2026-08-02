@@ -1,77 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Dropout Traders Admin</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+
+--bg:#07070a;
+--bg-alt:#0c0c11;
+--bg-raise:#111116;
+
+--panel:rgba(255,255,255,.035);
+--panel-strong:rgba(255,255,255,.06);
+
+--panel-border:rgba(212,175,55,.22);
+
+--gold:#d4af37;
+--gold-light:#f3d576;
+
+--text:#f6f4ee;
+--muted:#a8a49b;
+
+--green:#4a9a76;
+--red:#b1594a;
+
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
 }
 
 body{
 
 background:
-linear-gradient(rgba(5,12,25,.96),rgba(5,12,25,.96)),
-url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=2000&q=80");
+radial-gradient(circle at top,#18140d 0%,#07070a 60%);
 
-background-size:cover;
-background-attachment:fixed;
-color:white;
+color:var(--text);
+
 min-height:100vh;
 
 }
 
 .header{
 
-padding:30px;
-text-align:center;
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 40px;
+
+background:rgba(7,7,10,.92);
+
+backdrop-filter:blur(20px);
+
+border-bottom:1px solid var(--panel-border);
 
 }
 
-.logo{
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.brand h1{
+
+font-size:30px;
+
+color:var(--gold);
+
+}
+
+.brand p{
+
+color:var(--muted);
+
+font-size:14px;
+
+margin-top:4px;
+
+}
+
+.logout{
+
+padding:13px 22px;
+
+background:#9b2c2c;
+
+border:none;
+
+border-radius:14px;
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.logout:hover{
+
+transform:translateY(-2px);
+
+}
+
+.wrapper{
+
+width:min(1450px,94%);
+
+margin:40px auto;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+margin-bottom:30px;
+
+}
+
+.stat{
+
+background:var(--panel);
+
+border:1px solid var(--panel-border);
+
+backdrop-filter:blur(18px);
+
+border-radius:22px;
+
+padding:26px;
+
+}
+
+.stat h4{
+
+color:var(--muted);
+
+font-size:14px;
+
+}
+
+.stat h2{
+
+margin-top:10px;
 
 font-size:34px;
-font-weight:700;
-color:#00ff88;
+
+color:var(--gold);
 
 }
 
-.sub{
+.main{
 
-color:#94a3b8;
-margin-top:8px;
+display:grid;
 
-}
+grid-template-columns:2fr 1fr;
 
-.container{
-
-max-width:900px;
-margin:auto;
-padding:30px;
+gap:28px;
 
 }
 
 .card{
 
-background:rgba(255,255,255,.05);
+background:var(--panel);
 
-backdrop-filter:blur(20px);
+border:1px solid var(--panel-border);
 
-border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
 
-border-radius:25px;
+padding:28px;
 
-padding:35px;
+backdrop-filter:blur(18px);
 
-box-shadow:0 0 40px rgba(0,255,136,.15);
+}
+
+.card-title{
+
+font-size:24px;
+
+margin-bottom:25px;
+
+color:var(--gold);
 
 }
 
@@ -81,13 +221,13 @@ display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:20px;
+gap:18px;
 
 }
 
-.input{
+.field{
 
-margin-top:18px;
+margin-bottom:18px;
 
 }
 
@@ -97,23 +237,25 @@ display:block;
 
 margin-bottom:8px;
 
-color:#cbd5e1;
+font-size:14px;
 
-font-size:15px;
+color:var(--muted);
 
 }
 
-input,textarea,select{
+input,
+select,
+textarea{
 
 width:100%;
 
-padding:16px;
+padding:15px;
 
-background:#0f172a;
+border-radius:16px;
 
-border:1px solid #334155;
+background:#111116;
 
-border-radius:15px;
+border:1px solid rgba(212,175,55,.15);
 
 color:white;
 
@@ -121,71 +263,63 @@ font-size:15px;
 
 outline:none;
 
-transition:.3s;
+transition:.25s;
 
 }
 
 input:focus,
-textarea:focus,
-select:focus{
+select:focus,
+textarea:focus{
 
-border-color:#00ff88;
+border-color:var(--gold);
 
-box-shadow:0 0 15px rgba(0,255,136,.3);
+box-shadow:0 0 18px rgba(212,175,55,.15);
 
 }
 
 textarea{
 
-resize:none;
-
 height:180px;
+
+resize:none;
 
 }
 
 .publish{
 
-margin-top:30px;
+margin-top:25px;
 
 width:100%;
 
 padding:18px;
 
-font-size:18px;
+border:none;
+
+border-radius:16px;
+
+font-size:17px;
 
 font-weight:700;
 
-border:none;
-
-border-radius:15px;
-
 cursor:pointer;
 
-background:linear-gradient(90deg,#00ff88,#00b894);
+background:linear-gradient(135deg,var(--gold),var(--gold-light));
 
-color:#00130a;
+color:#111;
 
-transition:.3s;
+transition:.25s;
 
 }
 
 .publish:hover{
 
-transform:translateY(-3px);
+transform:translateY(-2px);
 
-box-shadow:0 15px 30px rgba(0,255,136,.35);
+box-shadow:0 0 28px rgba(212,175,55,.25);
 
 }
 
 .preview{
-
-margin-top:25px;
-
-border:2px dashed #00ff88;
-
-border-radius:20px;
-
-padding:20px;
 
 text-align:center;
 
@@ -193,19 +327,76 @@ text-align:center;
 
 .preview img{
 
-max-width:100%;
-
-border-radius:15px;
+width:100%;
 
 display:none;
 
+border-radius:18px;
+
+margin-bottom:20px;
+
 }
 
-@media(max-width:768px){
+.badge{
 
+display:inline-block;
+
+padding:8px 20px;
+
+border-radius:999px;
+
+background:var(--green);
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+.preview h2{
+
+margin-bottom:10px;
+
+color:var(--gold);
+
+}
+
+.preview p{
+
+color:var(--muted);
+
+line-height:1.7;
+
+}
+
+@media(max-width:1000px){
+
+.stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.main{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats,
 .grid{
 
 grid-template-columns:1fr;
+
+}
+
+.header{
+
+padding:18px;
 
 }
 
@@ -217,96 +408,128 @@ grid-template-columns:1fr;
 
 <body>
 
-<div class="header">
+<header class="header">
 
-<div class="logo">
-📈 DROPOUT TRADERS ADMIN
+<div class="brand">
+
+<div>
+
+<h1>Dropout Traders Admin</h1>
+
+<p>Institutional Research Publishing Platform</p>
+
 </div>
 
-<div class="sub">
-Institutional Research Publishing Platform
+</div>
+
+<button id="logout" class="logout">
+Logout
+</button>
+
+</header>
+
+<div class="wrapper">
+
+<div class="stats">
+
+<div class="stat">
+<h4>Total Posts</h4>
+<h2 id="totalPosts">0</h2>
+</div>
+
+<div class="stat">
+<h4>Total Views</h4>
+<h2>0</h2>
+</div>
+
+<div class="stat">
+<h4>Buy Calls</h4>
+<h2>0</h2>
+</div>
+
+<div class="stat">
+<h4>Success Rate</h4>
+<h2>0%</h2>
 </div>
 
 </div>
 
-<div class="container">
+<div class="main">
 
 <div class="card">
 
+<h2 class="card-title">Publish Daily Analysis</h2>
+
 <div class="grid">
 
-<div class="input">
+<div class="field">
 <label>Stock Name</label>
-<input id="stock" type="text">
+<input id="stock">
 </div>
 
-<div class="input">
+<div class="field">
 <label>Analysis Title</label>
-<input id="title" type="text">
+<input id="title">
 </div>
 
-<div class="input">
+<div class="field">
 <label>Signal</label>
+
 <select id="signal">
 <option>BUY</option>
 <option>SELL</option>
 <option>HOLD</option>
 </select>
+
 </div>
 
-<div class="input">
+<div class="field">
 <label>Entry Price</label>
-<input id="entry" type="text">
+<input id="entry">
 </div>
 
-<div class="input">
+<div class="field">
 <label>Target</label>
-<input id="target" type="text">
+<input id="target">
 </div>
 
-<div class="input">
+<div class="field">
 <label>Stop Loss</label>
-<input id="stoploss" type="text">
+<input id="stoploss">
 </div>
 
 </div>
 
-<div class="input">
-
+<div class="field">
 <label>Description</label>
-
 <textarea id="description"></textarea>
-
 </div>
 
-<div class="input">
-
+<div class="field">
 <label>Upload Analysis Image</label>
-
 <input id="image" type="file" accept="image/*">
-
-</div>
-
-<div class="preview">
-
-<h3>Image Preview</h3>
-
-<img id="preview">
-
 </div>
 
 <button class="publish">
-
 🚀 Publish Analysis
-
 </button>
 
 </div>
 
+<div class="card preview">
+
+<h2 class="card-title">Live Preview</h2>
+
+<div class="badge" id="previewSignal">
+BUY
 </div>
 
-<script type="module" src="firebase.js"></script>
-<script type="module" src="js/publish.js"></script>
+<img id="preview">
 
-</body>
-</html>
+<h2 id="previewStock">
+Stock Name
+</h2>
+
+<p id="previewTitle">
+Analysis title will appear here...
+</p>

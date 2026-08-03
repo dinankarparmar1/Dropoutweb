@@ -103,9 +103,16 @@ section{padding:64px 0;}
 .heatmap-tab{padding:11px 22px;border-radius:100px;border:1px solid var(--panel-border-strong);background:transparent;color:var(--muted);font-size:13.5px;font-weight:600;letter-spacing:0.02em;transition:all .3s ease;}
 .heatmap-tab:hover{color:var(--gold-bright);border-color:var(--gold);}
 .heatmap-tab.active{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;border-color:transparent;}
-.heatmap-wrap{height:min(78vh,720px);}
+.heatmap-wrap{height:min(78vh,720px);overflow-y:auto;padding:14px;}
 @media (max-width:760px){ .heatmap-wrap{height:560px;} }
 @media (max-width:480px){ .heatmap-wrap{height:460px;} }
+.heatmap-empty{color:var(--muted-dim);font-size:13.5px;text-align:center;padding:60px 20px;}
+.heatmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:5px;}
+.heatmap-tile{border-radius:6px;padding:10px 8px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;min-height:64px;text-align:center;}
+.heatmap-tile .sym{font-weight:700;font-size:12.5px;letter-spacing:0.01em;color:#0b0b0c;}
+.heatmap-tile .chg{font-size:11.5px;font-weight:600;color:#0b0b0c;opacity:0.85;}
+.heatmap-sector-group{margin-bottom:22px;}
+.heatmap-sector-group h4{font-size:13px;color:var(--gold);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px;font-family:'Space Mono',monospace;font-weight:600;}
 
 /* STAT CARDS (breadth) */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
@@ -294,12 +301,12 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
               {
                 "title": "Sector Leaders",
                 "symbols": [
-                  { "s": "BSE:RELIANCE", "d": "Reliance — Energy" },
-                  { "s": "BSE:TCS", "d": "TCS — IT" },
-                  { "s": "BSE:HDFCBANK", "d": "HDFC Bank — Financials" },
-                  { "s": "BSE:ITC", "d": "ITC — FMCG" },
-                  { "s": "BSE:SUNPHARMA", "d": "Sun Pharma — Healthcare" },
-                  { "s": "BSE:TATAMOTORS", "d": "Tata Motors — Auto" }
+                  { "s": "NSE:RELIANCE", "d": "Reliance — Energy" },
+                  { "s": "NSE:TCS", "d": "TCS — IT" },
+                  { "s": "NSE:HDFCBANK", "d": "HDFC Bank — Financials" },
+                  { "s": "NSE:ITC", "d": "ITC — FMCG" },
+                  { "s": "NSE:SUNPHARMA", "d": "Sun Pharma — Healthcare" },
+                  { "s": "NSE:TATAMOTORS", "d": "Tata Motors — Auto" }
                 ]
               }
             ]
@@ -318,7 +325,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
     <div class="section-head">
       <div class="eyebrow">Heatmaps</div>
       <h2>The market, at a glance</h2>
-      <p>A heatmap turns hundreds of price moves into one picture: block size shows market weight, color shows the day's change. Green is up, red is down — hover any block for the exact number. Tap a tab to switch between Indian market leaders, Bank Nifty, and the full sector-by-sector Indian market.</p>
+      <p>A heatmap turns hundreds of price moves into one picture: each tile is one stock, color shows the day's change. Green is up, red is down. Tap a tab to switch between Nifty 50, Bank Nifty, and the full sector-by-sector Indian market.</p>
     </div>
     <div class="glass tv-card heatmap-card">
       <div class="heatmap-tabs" role="tablist">
@@ -327,32 +334,15 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
         <button class="heatmap-tab" id="heatmap-tab-sector" role="tab" aria-selected="false" aria-controls="heatmap-panel-sector">Sector Heat Map</button>
       </div>
       <div class="tv-wrap heatmap-wrap" id="heatmap-panel-nifty" role="tabpanel">
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-          {
-            "exchanges": ["BSE"],
-            "dataSource": "",
-            "grouping": "no_group",
-            "blockSize": "market_cap_basic",
-            "blockColor": "change",
-            "locale": "en",
-            "symbolUrl": "",
-            "colorTheme": "dark",
-            "hasTopBar": true,
-            "isDataSetEnabled": false,
-            "isZoomEnabled": true,
-            "hasSymbolTooltip": true,
-            "isMonoSize": false,
-            "width": "100%",
-            "height": "100%"
-          }
-          </script>
-        </div>
+        <p class="heatmap-empty">Loading Nifty 50 data…</p>
       </div>
-      <div class="tv-wrap heatmap-wrap" id="heatmap-panel-bank" role="tabpanel" style="display:none;"></div>
-      <div class="tv-wrap heatmap-wrap" id="heatmap-panel-sector" role="tabpanel" style="display:none;"></div>
-      <p class="tv-note">Data by TradingView, sourced via the BSE (the licensed India data feed for TradingView's embeddable widgets — BSE and NSE share the same tickers for these large-caps, e.g. HDFCBANK, RELIANCE). NIFTY 50 shows major Indian companies sized by market weight and colored by the day's change. Bank Nifty lists the actual Nifty Bank Index constituent banks with live quotes and % change. The Sector Heat Map groups the full Indian market by sector — Banking, IT, Auto, Pharma, FMCG, Metals, Energy, Realty, Telecom, Media, Chemicals, Capital Goods, Infrastructure, Consumer Durables, Healthcare, Power and every other listed sector.</p>
+      <div class="tv-wrap heatmap-wrap" id="heatmap-panel-bank" role="tabpanel" style="display:none;">
+        <p class="heatmap-empty">Loading Bank Nifty data…</p>
+      </div>
+      <div class="tv-wrap heatmap-wrap" id="heatmap-panel-sector" role="tabpanel" style="display:none;">
+        <p class="heatmap-empty">Loading sector data…</p>
+      </div>
+      <p class="tv-note" id="heatmap-note">This table is built and ready — it reads <code>data/heatmap.json</code>, which a scheduled script populates directly from NSE's own index-constituent data (the same source this site already uses for FII/DII and market breadth). Once that job runs, Nifty 50, Bank Nifty and every sector shown here will be genuine, correctly-scoped Indian data — no third-party widget in between.</p>
     </div>
   </div>
 </section>
@@ -551,92 +541,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 --------------------------------------------------------------- */
 (function(){
   var TABS = {
-    nifty:  { tab: 'heatmap-tab-nifty',  panel: 'heatmap-panel-nifty',  loaded: true },
-    bank:   { tab: 'heatmap-tab-bank',   panel: 'heatmap-panel-bank',   loaded: false },
-    sector: { tab: 'heatmap-tab-sector', panel: 'heatmap-panel-sector', loaded: false }
+    nifty:  { tab: 'heatmap-tab-nifty',  panel: 'heatmap-panel-nifty' },
+    bank:   { tab: 'heatmap-tab-bank',   panel: 'heatmap-panel-bank' },
+    sector: { tab: 'heatmap-tab-sector', panel: 'heatmap-panel-sector' }
   };
-
-  // NOTE ON DATA SOURCE: TradingView's public embeddable widgets are only
-  // licensed for EOD/real-time data on a specific set of exchanges — for
-  // India that's BSE (see tradingview.com/widget-docs/markets/asia-pacific).
-  // NSE is NOT among them, so any "NSE:"-prefixed symbol or an NSE-scoped
-  // dataSource (we tried "NIFTY50"/"BANKNIFTY", then "India" — both came up
-  // empty) returns nothing. Filtering by "exchanges": ["BSE"] and using
-  // "BSE:"-prefixed symbols is what actually resolves to real data; BSE
-  // uses the same tickers as NSE for these large-caps (e.g. BSE:HDFCBANK).
-  var WIDGET_CONFIG = {
-    sector: {
-      exchanges: ['BSE'],
-      dataSource: '',
-      grouping: 'sector',
-      blockSize: 'market_cap_basic',
-      blockColor: 'change',
-      locale: 'en',
-      symbolUrl: '',
-      colorTheme: 'dark',
-      hasTopBar: true,
-      isDataSetEnabled: false,
-      isZoomEnabled: true,
-      hasSymbolTooltip: true,
-      isMonoSize: false,
-      width: '100%',
-      height: '100%'
-    }
-  };
-
-  // Nifty Bank Index constituents (NSE Indices factsheet, semi-annually
-  // rebalanced — update this list if NSE changes the index composition).
-  var BANK_NIFTY_SYMBOLS = [
-    'BSE:HDFCBANK','BSE:ICICIBANK','BSE:SBIN','BSE:AXISBANK','BSE:KOTAKBANK',
-    'BSE:FEDERALBNK','BSE:INDUSINDBK','BSE:AUBANK','BSE:IDFCFIRSTB',
-    'BSE:BANKBARODA','BSE:PNB','BSE:CANBK','BSE:YESBANK'
-  ];
-
   Object.keys(TABS).forEach(function(key){
     TABS[key].tabEl = document.getElementById(TABS[key].tab);
     TABS[key].panelEl = document.getElementById(TABS[key].panel);
   });
-
-  function loadWidget(key){
-    var entry = TABS[key];
-    if(!entry || entry.loaded) return;
-    entry.loaded = true;
-    var wrap = document.createElement('div');
-    wrap.className = 'tradingview-widget-container';
-    var inner = document.createElement('div');
-    inner.className = 'tradingview-widget-container__widget';
-    wrap.appendChild(inner);
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-
-    if(key === 'bank'){
-      // Market Data (quotes) widget, scoped to the real Nifty Bank Index
-      // constituents — see BANK_NIFTY_SYMBOLS above.
-      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js';
-      script.innerHTML = JSON.stringify({
-        title: 'Nifty Bank Index Constituents',
-        width: '100%',
-        height: '100%',
-        locale: 'en',
-        showSymbolLogo: true,
-        colorTheme: 'dark',
-        isTransparent: false,
-        backgroundColor: 'rgba(0,0,0,0)',
-        symbolsGroups: [{
-          name: 'Nifty Bank',
-          originalName: 'Nifty Bank',
-          symbols: BANK_NIFTY_SYMBOLS.map(function(s){ return { name: s }; })
-        }]
-      });
-    } else {
-      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js';
-      script.innerHTML = JSON.stringify(WIDGET_CONFIG[key]);
-    }
-
-    wrap.appendChild(script);
-    entry.panelEl.appendChild(wrap);
-  }
 
   function activate(activeKey){
     Object.keys(TABS).forEach(function(key){
@@ -647,15 +559,62 @@ document.getElementById('year').textContent = new Date().getFullYear();
       entry.tabEl.setAttribute('aria-selected', String(isActive));
       entry.panelEl.style.display = isActive ? 'block' : 'none';
     });
-    loadWidget(activeKey);
   }
-
   Object.keys(TABS).forEach(function(key){
     var entry = TABS[key];
-    if(entry.tabEl){
-      entry.tabEl.addEventListener('click', function(){ activate(key); });
-    }
+    if(entry.tabEl) entry.tabEl.addEventListener('click', function(){ activate(key); });
   });
+
+  // Green/red scale matching the legend previously shown by the TradingView
+  // widget: stronger color the further from 0%.
+  function tileColor(pChange){
+    var p = parseFloat(pChange);
+    if(isNaN(p)) return '#3a3a3d';
+    var clamped = Math.max(-3, Math.min(3, p));
+    var t = Math.abs(clamped) / 3; // 0..1
+    if(clamped >= 0){
+      // gray -> green
+      var g = Math.round(90 + t*120);
+      return 'rgb('+Math.round(90-t*60)+','+g+','+Math.round(90-t*60)+')';
+    } else {
+      var r = Math.round(90 + t*140);
+      return 'rgb('+r+','+Math.round(90-t*60)+','+Math.round(90-t*60)+')';
+    }
+  }
+
+  function renderTiles(stocks){
+    if(!stocks || !stocks.length) return '<p class="heatmap-empty">No data yet — check back after the next scheduled update.</p>';
+    return '<div class="heatmap-grid">' + stocks.map(function(s){
+      var p = parseFloat(s.pChange);
+      var sign = isNaN(p) ? '' : (p > 0 ? '+' : '');
+      return '<div class="heatmap-tile" style="background:'+tileColor(s.pChange)+'" title="'+s.symbol+' '+(isNaN(p)?'':sign+p.toFixed(2)+'%')+'">'+
+        '<span class="sym">'+s.symbol+'</span>'+
+        '<span class="chg">'+(isNaN(p) ? '—' : sign+p.toFixed(2)+'%')+'</span>'+
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderSectors(sectors){
+    if(!sectors || !sectors.length) return '<p class="heatmap-empty">No data yet — check back after the next scheduled update.</p>';
+    return sectors.map(function(sec){
+      return '<div class="heatmap-sector-group"><h4>'+sec.name+'</h4>'+renderTiles(sec.stocks)+'</div>';
+    }).join('');
+  }
+
+  fetch('data/heatmap.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
+  .then(function(payload){
+    if(TABS.nifty.panelEl)  TABS.nifty.panelEl.innerHTML  = renderTiles(payload.nifty50);
+    if(TABS.bank.panelEl)   TABS.bank.panelEl.innerHTML   = renderTiles(payload.bankNifty);
+    if(TABS.sector.panelEl) TABS.sector.panelEl.innerHTML = renderSectors(payload.sectors);
+    var note = document.getElementById('heatmap-note');
+    if(note && payload.updated){
+      try{
+        var d = new Date(payload.updated).toLocaleString('en-IN', {dateStyle:'medium', timeStyle:'short'});
+        note.textContent = 'Sourced automatically from NSE\u2019s own index-constituent data, refreshed daily after market close. Last updated ' + d + '.';
+      }catch(e){}
+    }
+  })
+  .catch(function(){ /* data/heatmap.json not populated yet — loading placeholders stay as-is */ });
 })();
 
 var MI_MARKETS = [

@@ -91,8 +91,8 @@ def get_session() -> requests.Session:
     return s
 
 
-def fetch_json(session: requests.Session, path: str):
-    r = session.get(f"{BASE}{path}", timeout=15)
+def fetch_json(session: requests.Session, path: str, extra_headers: dict = None):
+    r = session.get(f"{BASE}{path}", timeout=15, headers=extra_headers or {})
     r.raise_for_status()
     return r.json()
 
@@ -348,10 +348,26 @@ SECTOR_INDICES = [
 def fetch_index_constituents(session: requests.Session, index_name: str, debug: bool = False):
     """One call to /api/equity-stockIndices returns every constituent of the
     named NSE index with its live price and % change. Used for NIFTY 50,
-    NIFTY BANK, and each sector index in SECTOR_INDICES."""
+    NIFTY BANK, and each sector index in SECTOR_INDICES.
+
+    This endpoint 404s even on an otherwise-warmed session unless the
+    Referer header points at the actual index page for that index (the
+    other endpoints this script uses don't need this -- this one does).
+    So each call visits that index's live-equity-market page first to set
+    a matching Referer/cookies, the same way a real browser would before
+    the page's own JS fetches this same API.
+    """
     from urllib.parse import quote
+    referer_page = f"{BASE}/market-data/live-equity-market?index={quote(index_name)}"
+    try:
+        session.get(referer_page, timeout=15, headers={"Referer": f"{BASE}/market-data/live-equity-market"})
+        time.sleep(0.5)
+    except Exception as e:
+        if debug:
+            print(f"Referer warm-up failed for {index_name} (continuing anyway): {e}")
+
     path = f"/api/equity-stockIndices?index={quote(index_name)}"
-    raw = fetch_json(session, path)
+    raw = fetch_json(session, path, extra_headers={"Referer": referer_page})
     rows = raw.get("data", []) if isinstance(raw, dict) else (raw or [])
     if debug:
         print(f"RAW {path} sample:", json.dumps(rows[:2], indent=2))
@@ -376,8 +392,22 @@ def fetch_index_constituents(session: requests.Session, index_name: str, debug: 
 
 
 def build_heatmap(session: requests.Session, debug: bool):
-    nifty50 = fetch_index_constituents(session, "NIFTY 50", debug)
-    bank_nifty = fetch_index_constituents(session, "NIFTY BANK", debug)
+    # Each index fetched independently and wrapped in its own try/except --
+    # previously a failure on NIFTY 50 alone (fetched first, unguarded)
+    # silently aborted Bank Nifty and every sector fetch too, since they
+    # never even ran. Now one bad index can't take the rest down with it.
+    nifty50, bank_nifty = [], []
+    try:
+        nifty50 = fetch_index_constituents(session, "NIFTY 50", debug)
+        time.sleep(0.5)
+    except Exception as e:
+        print(f"Nifty 50 fetch failed: {e}", file=sys.stderr)
+
+    try:
+        bank_nifty = fetch_index_constituents(session, "NIFTY BANK", debug)
+        time.sleep(0.5)
+    except Exception as e:
+        print(f"Bank Nifty fetch failed: {e}", file=sys.stderr)
 
     sectors = []
     for label, index_name in SECTOR_INDICES:

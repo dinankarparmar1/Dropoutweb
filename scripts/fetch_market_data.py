@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Fetches FII/DII trading activity, insider-trading (SEBI PIT) disclosures, and
-market-breadth (advances/declines, 52-week highs/lows, % above 200-DMA) and
-writes clean JSON files that market-intelligence.html reads client-side:
+Fetches FII/DII trading activity, insider-trading (SEBI PIT) disclosures,
+market-breadth (advances/declines), and Nifty 50 / Bank Nifty / sector
+heatmap data from NSE India's own public reports and writes clean JSON
+files that market-intelligence.html reads client-side:
   data/fii-dii.json
   data/insider-trading.json
   data/market-breadth.json
+  data/heatmap.json
 
 Run manually:
     python3 scripts/fetch_market_data.py --debug
@@ -47,24 +49,9 @@ As a second line of defence, we also try two JSON API path variants
 NSE has used for this report historically. If RSS ever goes away, remove
 the "raise" at the end of build_insider_trading and let the JSON variants
 carry it alone.
-
-=== 52-week highs/lows and % above 200-DMA ===
-Getting these "properly" would mean maintaining our own ~252-trading-day
-price history cache for all ~500 Nifty 500 stocks (backfilling months of
-daily bhavcopy files, then updating it incrementally forever). Instead we
-lean on TradingView's public screener/scanner endpoint, which already
-computes SMA200 and the rolling 52-week high/low server-side per symbol --
-the same endpoint TradingView's own website screener uses, no auth needed
-(see https://github.com/AnalyzerREST/python-tradingview-ta for a working
-reference implementation of this exact call). We batch the Nifty 500
-constituent list (from NSE's own published CSV) through it and compute
-the breadth stats from the results. This avoids us ever needing to store
-or reconstruct historical prices ourselves.
 """
 
 import argparse
-import csv
-import io
 import json
 import re
 import sys
@@ -161,120 +148,58 @@ def _first_keyword(text: str, keywords):
     return ""
 
 
-def _strip_ns(tag: str) -> str:
-    """'{http://some/namespace}item' -> 'item'. NSE's feed may or may not
-    declare a default xmlns; ElementTree's .find('item') silently matches
-    nothing if the document declares one, which is the most likely reason
-    this returned 0 rows in production. Stripping namespaces up front makes
-    tag lookups work either way."""
-    return tag.rsplit("}", 1)[-1] if "}" in tag else tag
-
-
-# Fallback used only if proper XML parsing finds zero items despite a
-# non-trivial response body -- pulls <title>/<description>/<pubDate> pairs
-# directly out of the raw text with regex, ignoring namespaces, encoding
-# quirks, or malformed XML entirely. Cruder, but nothing to mis-parse.
-ITEM_BLOCK_RE = re.compile(r"<item\b.*?</item>", re.IGNORECASE | re.DOTALL)
-TAG_RE = re.compile(r"<title>(.*?)</title>|<description>(.*?)</description>|<pubDate>(.*?)</pubDate>", re.IGNORECASE | re.DOTALL)
-CDATA_RE = re.compile(r"<!\[CDATA\[(.*?)\]\]>", re.DOTALL)
-
-
-def _clean_text(raw: str) -> str:
-    m = CDATA_RE.search(raw)
-    text = m.group(1) if m else raw
-    return re.sub(r"<[^>]+>", "", text).strip()
-
-
-def parse_insider_rss_regex(xml_text: str, debug: bool = False):
-    """Brute-force fallback: regex out title/description/pubDate per <item>
-    block without going through an XML parser at all."""
-    rows = []
-    blocks = ITEM_BLOCK_RE.findall(xml_text)
-    if debug:
-        print(f"Regex fallback <item> blocks found: {len(blocks)}")
-    for block in blocks:
-        title = desc = pub = ""
-        tm = re.search(r"<title>(.*?)</title>", block, re.IGNORECASE | re.DOTALL)
-        dm = re.search(r"<description>(.*?)</description>", block, re.IGNORECASE | re.DOTALL)
-        pm = re.search(r"<pubDate>(.*?)</pubDate>", block, re.IGNORECASE | re.DOTALL)
-        if tm: title = _clean_text(tm.group(1))
-        if dm: desc = _clean_text(dm.group(1))
-        if pm: pub = _clean_text(pm.group(1))
-        row = _row_from_title_desc(title, desc, pub)
-        if row:
-            rows.append(row)
-    return rows
-
-
-def _row_from_title_desc(title: str, desc: str, pub: str):
-    combined = f"{title} {desc}".strip()
-    if not combined:
-        return None
-
-    company = ""
-    for sep in (" - ", " – ", "-"):
-        if sep in title:
-            company = title.split(sep)[0].strip()
-            break
-    if not company:
-        company = title[:60].strip() or "—"
-
-    qty = ""
-    m = QTY_RE.search(combined)
-    if m:
-        qty = m.group(1) or m.group(2) or ""
-
-    category = _first_keyword(combined, PERSON_CATEGORY_KEYWORDS) or "—"
-    mode = _first_keyword(combined, TRANSACTION_KEYWORDS)
-    transaction_display = mode if mode else (desc or title)[:90]
-
-    return {
-        "date": pub or "—",
-        "company": company,
-        "personCategory": category,
-        "transactionType": transaction_display or "—",
-        "quantity": qty or "—",
-    }
-
-
 def parse_insider_rss(xml_text: str, debug: bool = False):
     """Best-effort parse of NSE's InsiderTrading.xml RSS feed into rows.
 
     RSS items are prose, not a clean schema, so every field below is a
     heuristic extraction with a safe fallback to the raw text -- a row is
     never dropped just because we couldn't categorise it perfectly.
-
-    Tries a real XML parse first (handles CDATA/entities correctly); if
-    that yields nothing -- most likely because the feed declares a default
-    xmlns and ElementTree's unqualified .find() then matches nothing -- it
-    falls back to a namespace-blind regex pass over the raw text.
     """
-    if debug:
-        print(f"RSS response length: {len(xml_text)} chars; first 300: {xml_text[:300]!r}")
-
     rows = []
     try:
         root = ET.fromstring(xml_text)
-        items = [el for el in root.iter() if _strip_ns(el.tag) == "item"]
-        if debug:
-            print(f"RSS <item> count (namespace-agnostic): {len(items)}")
-
-        for item in items:
-            children = {_strip_ns(c.tag): (c.text or "") for c in item}
-            title = children.get("title", "").strip()
-            desc = children.get("description", "").strip()
-            pub = children.get("pubDate", "").strip()
-            row = _row_from_title_desc(title, desc, pub)
-            if row:
-                rows.append(row)
     except ET.ParseError as e:
         if debug:
-            print(f"RSS XML parse error: {e}")
+            print(f"RSS parse error: {e}")
+        return rows
 
-    if not rows and xml_text.strip():
-        if debug:
-            print("XML parse produced 0 rows; trying regex fallback")
-        rows = parse_insider_rss_regex(xml_text, debug)
+    items = root.findall(".//item")
+    if debug:
+        print(f"RSS <item> count: {len(items)}")
+
+    for item in items:
+        title = (item.findtext("title") or "").strip()
+        desc = (item.findtext("description") or "").strip()
+        pub = (item.findtext("pubDate") or "").strip()
+        combined = f"{title} {desc}".strip()
+        if not combined:
+            continue
+
+        # Company name is usually the leading segment before a " - " or "-".
+        company = ""
+        for sep in (" - ", " – ", "-"):
+            if sep in title:
+                company = title.split(sep)[0].strip()
+                break
+        if not company:
+            company = title[:60].strip() or "—"
+
+        qty = ""
+        m = QTY_RE.search(combined)
+        if m:
+            qty = m.group(1) or m.group(2) or ""
+
+        category = _first_keyword(combined, PERSON_CATEGORY_KEYWORDS) or "—"
+        mode = _first_keyword(combined, TRANSACTION_KEYWORDS)
+        transaction_display = mode if mode else (desc or title)[:90]
+
+        rows.append({
+            "date": pub or "—",
+            "company": company,
+            "personCategory": category,
+            "transactionType": transaction_display or "—",
+            "quantity": qty or "—",
+        })
 
     if debug and rows:
         print("Sample parsed RSS row:", json.dumps(rows[0], indent=2))
@@ -286,18 +211,10 @@ def build_insider_trading(session: requests.Session, debug: bool):
     # This is the feed linked as "Click here for RSS" on NSE's insider
     # trading page. It's a static file on the archives subdomain, so it
     # generally doesn't need the /api/* session dance -- but we already
-    # have a warmed-up session at this point, so use it anyway. We
-    # override Accept here since the session's default header asks for
-    # JSON, and some servers content-negotiate strictly.
+    # have a warmed-up session at this point, so use it anyway.
     try:
-        r = session.get(
-            f"{ARCHIVES}/content/RSS/InsiderTrading.xml",
-            timeout=15,
-            headers={"Accept": "application/rss+xml, application/xml, text/xml, */*"},
-        )
+        r = session.get(f"{ARCHIVES}/content/RSS/InsiderTrading.xml", timeout=15)
         r.raise_for_status()
-        if debug:
-            print(f"RSS HTTP status: {r.status_code}, content-type: {r.headers.get('content-type')}")
         rows = parse_insider_rss(r.text, debug)
         if rows:
             return {
@@ -311,7 +228,7 @@ def build_insider_trading(session: requests.Session, debug: bool):
         print(f"Insider trading RSS fetch failed: {e}", file=sys.stderr)
 
     # --- Strategy 2: JSON API path variants ---
-    # NSE renames/reshapes this endpoint periodically. If all of these
+    # NSE renames/reshapes this endpoint periodically. If both of these
     # fail, open the insider trading page in a browser, DevTools > Network
     # > XHR, click "Download (.csv)", copy the exact request URL, and add
     # it to this list.
@@ -320,7 +237,6 @@ def build_insider_trading(session: requests.Session, debug: bool):
     candidate_paths = [
         f"/api/corporate-filings-pit?index=equities&from_date={from_date}&to_date={today}",
         f"/api/corporate-filings-insider-trading?index=equities&from_date={from_date}&to_date={today}",
-        f"/api/corporate-filings-pit?symbol=&from_date={from_date}&to_date={today}",
     ]
 
     last_error = None
@@ -401,121 +317,90 @@ def build_market_breadth(session: requests.Session, debug: bool):
 
 
 # ---------------------------------------------------------------------------
-# TECHNICAL BREADTH (52-week highs/lows, % above 200-DMA)
+# HEATMAP DATA (Nifty 50 / Bank Nifty / sector indices)
 # ---------------------------------------------------------------------------
+# Why this replaces the TradingView Stock Heatmap widget: that widget's
+# "dataSource"/"exchanges" options (tried "NIFTY50", "BANKNIFTY", "India",
+# and exchange filters for both NSE and BSE) never returned real data for
+# India in the free public embed -- either a silent fallback to unrelated
+# US mega-caps or an empty "No data match your criteria" state. NSE's own
+# /api/equity-stockIndices endpoint is the same one this script already
+# uses successfully for FII/DII and market breadth, so it uses the same
+# proven session-warming approach instead of depending on a third-party
+# widget's undocumented, apparently-unlicensed-for-India behaviour.
+SECTOR_INDICES = [
+    ("Banking", "NIFTY BANK"),
+    ("IT", "NIFTY IT"),
+    ("Auto", "NIFTY AUTO"),
+    ("Pharma", "NIFTY PHARMA"),
+    ("FMCG", "NIFTY FMCG"),
+    ("Metals", "NIFTY METAL"),
+    ("Energy", "NIFTY ENERGY"),
+    ("Realty", "NIFTY REALTY"),
+    ("Media", "NIFTY MEDIA"),
+    ("Financial Services", "NIFTY FIN SERVICE"),
+    ("Healthcare", "NIFTY HEALTHCARE INDEX"),
+    ("Consumer Durables", "NIFTY CONSUMER DURABLES"),
+    ("PSU Banks", "NIFTY PSU BANK"),
+]
 
-TV_SCAN_URL = "https://scanner.tradingview.com/india/scan"
-TV_COLUMNS = ["close", "SMA200", "price_52_week_high", "price_52_week_low"]
-TV_BATCH_SIZE = 150
 
-
-def fetch_nifty500_symbols(session: requests.Session, debug: bool):
-    """NSE publishes each index's constituent list as a plain CSV -- this is
-    the same file format/URL pattern used for every Nifty index (e.g.
-    ind_nifty50list.csv for Nifty 50), just swapping in "500"."""
-    r = session.get(f"{ARCHIVES}/content/indices/ind_nifty500list.csv", timeout=20)
-    r.raise_for_status()
-    reader = csv.DictReader(io.StringIO(r.text))
-    symbols = []
-    for row in reader:
-        # Be defensive about header casing/whitespace ("Symbol" vs " Symbol").
-        sym = None
-        for key, val in row.items():
-            if key and key.strip().lower() == "symbol":
-                sym = (val or "").strip()
-                break
-        if sym:
-            symbols.append(sym)
+def fetch_index_constituents(session: requests.Session, index_name: str, debug: bool = False):
+    """One call to /api/equity-stockIndices returns every constituent of the
+    named NSE index with its live price and % change. Used for NIFTY 50,
+    NIFTY BANK, and each sector index in SECTOR_INDICES."""
+    from urllib.parse import quote
+    path = f"/api/equity-stockIndices?index={quote(index_name)}"
+    raw = fetch_json(session, path)
+    rows = raw.get("data", []) if isinstance(raw, dict) else (raw or [])
     if debug:
-        print(f"Nifty 500 constituent count: {len(symbols)}")
-    return symbols
+        print(f"RAW {path} sample:", json.dumps(rows[:2], indent=2))
+
+    out = []
+    for entry in rows:
+        symbol = entry.get("symbol")
+        # The index summary row itself (symbol == the index name) isn't a
+        # constituent stock -- skip it.
+        if not symbol or symbol.strip().upper() == index_name.strip().upper():
+            continue
+        out.append({
+            "symbol": symbol,
+            "price": entry.get("lastPrice"),
+            "pChange": entry.get("pChange"),
+            # ffmc = free-float market cap, when NSE includes it; used as a
+            # rough weight for box sizing. Falls back to equal sizing
+            # client-side if missing.
+            "weight": entry.get("ffmc"),
+        })
+    return out
 
 
-def fetch_tv_scanner_batch(tickers: list, debug: bool):
-    payload = {
-        "symbols": {"tickers": tickers, "query": {"types": []}},
-        "columns": TV_COLUMNS,
-    }
-    headers = {
-        "User-Agent": HEADERS["User-Agent"],
-        "Content-Type": "application/json",
-    }
-    r = requests.post(TV_SCAN_URL, json=payload, headers=headers, timeout=20)
-    r.raise_for_status()
-    data = r.json().get("data", [])
-    if debug:
-        print(f"TV scanner batch of {len(tickers)} tickers -> {len(data)} rows")
-    return data
+def build_heatmap(session: requests.Session, debug: bool):
+    nifty50 = fetch_index_constituents(session, "NIFTY 50", debug)
+    bank_nifty = fetch_index_constituents(session, "NIFTY BANK", debug)
 
-
-def build_technical_breadth(session: requests.Session, debug: bool):
-    """New 52-week highs/lows and % of Nifty 500 above its 200-day moving
-    average, computed from TradingView's scanner rather than a
-    self-maintained price history (see module docstring for why)."""
-    symbols = fetch_nifty500_symbols(session, debug)
-    if not symbols:
-        raise RuntimeError("Nifty 500 constituent list was empty")
-
-    all_rows = []
-    last_error = None
-    for i in range(0, len(symbols), TV_BATCH_SIZE):
-        batch = symbols[i:i + TV_BATCH_SIZE]
-        tickers = [f"NSE:{s}" for s in batch]
+    sectors = []
+    for label, index_name in SECTOR_INDICES:
         try:
-            all_rows.extend(fetch_tv_scanner_batch(tickers, debug))
+            stocks = fetch_index_constituents(session, index_name, debug)
+            if stocks:
+                sectors.append({"name": label, "stocks": stocks})
+            time.sleep(0.5)  # be polite between the extra sector calls
         except Exception as e:
-            last_error = e
-            print(f"TV scanner batch starting at {i} failed: {e}", file=sys.stderr)
-        time.sleep(1)  # be polite between batches
+            print(f"Sector fetch failed for {index_name}: {e}", file=sys.stderr)
 
-    if not all_rows:
-        raise RuntimeError(f"TradingView scanner returned no data for any batch. Last error: {last_error}")
-
-    total = 0
-    above_dma = 0
-    new_highs = 0
-    new_lows = 0
-    for entry in all_rows:
-        d = entry.get("d") or []
-        if len(d) < 4:
-            continue
-        close, sma200, hi52, lo52 = d[0], d[1], d[2], d[3]
-        if close is None:
-            continue
-        total += 1
-        if sma200 is not None and close > sma200:
-            above_dma += 1
-        # price_52_week_high/low already include today's session, so a
-        # close essentially equal to it means today set (or matched) the
-        # 52-week extreme -- a small epsilon absorbs float rounding only.
-        if hi52 is not None and close >= hi52 - 0.01:
-            new_highs += 1
-        if lo52 is not None and close <= lo52 + 0.01:
-            new_lows += 1
-
-    if total == 0:
-        raise RuntimeError("No valid entries with a close price in TradingView scanner response")
+    if not nifty50 and not bank_nifty and not sectors:
+        raise RuntimeError("Heatmap fetch returned nothing for Nifty 50, Bank Nifty, or any sector")
 
     return {
-        "scanned": total,
-        "newHighs": new_highs,
-        "newLows": new_lows,
-        "aboveDma200": above_dma,
-        "pctAboveDma200": round(100 * above_dma / total, 1),
+        "updated": datetime.utcnow().isoformat() + "Z",
+        "nifty50": nifty50,
+        "bankNifty": bank_nifty,
+        "sectors": sectors,
     }
 
 
-def read_existing_json(name: str):
-    path = DATA_DIR / name
-    if path.exists():
-        try:
-            return json.loads(path.read_text())
-        except Exception:
-            return {}
-    return {}
 
-
-def write_json(name: str, payload: dict):
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / name
     path.write_text(json.dumps(payload, indent=2))
@@ -533,6 +418,12 @@ def main():
     total = 4
 
     try:
+        write_json("heatmap.json", build_heatmap(session, args.debug))
+    except Exception as e:
+        failures += 1
+        print(f"Heatmap fetch failed, leaving last good file in place: {e}", file=sys.stderr)
+
+    try:
         write_json("fii-dii.json", build_fii_dii(session, args.debug))
     except Exception as e:
         failures += 1
@@ -544,32 +435,11 @@ def main():
         failures += 1
         print(f"Insider trading fetch failed, leaving last good file in place: {e}", file=sys.stderr)
 
-    # Market breadth has two independent sources feeding one file. Start
-    # from whatever's already on disk and only overwrite the keys that
-    # succeeded this run, so a failure in one half doesn't blank out a
-    # working other half.
-    breadth_payload = read_existing_json("market-breadth.json")
-    breadth_touched = False
-
     try:
-        breadth_payload.update(build_market_breadth(session, args.debug))
-        breadth_touched = True
+        write_json("market-breadth.json", build_market_breadth(session, args.debug))
     except Exception as e:
         failures += 1
-        print(f"Market breadth (advances/declines) fetch failed: {e}", file=sys.stderr)
-
-    try:
-        breadth_payload.update(build_technical_breadth(session, args.debug))
-        breadth_touched = True
-    except Exception as e:
-        failures += 1
-        print(f"Market breadth (52wk high/low, 200-DMA) fetch failed: {e}", file=sys.stderr)
-
-    if breadth_touched:
-        breadth_payload["updated"] = datetime.utcnow().isoformat() + "Z"
-        write_json("market-breadth.json", breadth_payload)
-    else:
-        print("Market breadth fetch failed entirely, leaving last good file in place", file=sys.stderr)
+        print(f"Market breadth fetch failed, leaving last good file in place: {e}", file=sys.stderr)
 
     # Don't fail the whole Action unless every feed broke -- the site should
     # still show whichever ones succeeded.

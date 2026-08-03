@@ -1,4 +1,20 @@
 {
-  "updated": null,
-  "rows": []
+  "updated": "2026-08-03T09:27:46.075128Z",
+  "rows": [
+    {
+      "date": "03-Aug-2026 12:16:08",
+      "company": "STL NETWORKS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STLNETWORK|STL NETWORKS LIMITED|Original|Regulation 7 (2)|IT_25888_WebXMLFile_20260803_121",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Aug-2026 12:10:31",
+      "company": "STL NETWORKS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STLNETWORK|STL NETWORKS LIMITED|Original|Regulation 7 (2)|IT_25888_WebXMLFile_20260803_121",
+      "quantity": "\u2014"
+    }
+  ],
+  "source": "rss"
 }

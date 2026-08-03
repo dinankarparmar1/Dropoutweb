@@ -374,13 +374,13 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       </div>
       <div class="glass result-item">
         <div class="lbl">New 52-Week Highs vs Lows</div>
-        <div class="val">—</div>
-        <div class="sub">Not yet connected on this page</div>
+        <div class="val" id="breadth-52wk">—</div>
+        <div class="sub" id="breadth-52wk-sub">Live feed required</div>
       </div>
       <div class="glass result-item">
         <div class="lbl">% of Nifty 500 Above 200-DMA</div>
-        <div class="val">—</div>
-        <div class="sub">Not yet connected on this page</div>
+        <div class="val" id="breadth-dma">—</div>
+        <div class="sub" id="breadth-dma-sub">Live feed required</div>
       </div>
     </div>
     <div class="source-links" style="margin-top:4px;">
@@ -476,8 +476,8 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 
 <div class="container">
   <div class="glass cta-banner">
-    <h3>Want the full market-breadth picture here?</h3>
-    <p>52-week highs/lows and % above 200-DMA aren't wired up yet — they need a heavier historical-data pipeline than the rest of this page. Message us if you'd like that built out next.</p>
+    <h3>Spot something off, or want a feature added?</h3>
+    <p>Every data point on this page is pulled automatically from NSE and TradingView, refreshed daily. If a number looks wrong or you'd like to see something else tracked here, let us know.</p>
     <div class="actions">
       <a href="https://wa.me/917747901709" target="_blank" class="btn btn-gold">Chat on WhatsApp</a>
       <a href="index.html#contact" class="btn btn-outline-gold">Contact Us</a>
@@ -494,7 +494,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
     </div>
     <details class="faq-item">
       <summary>Is this data live?</summary>
-      <p>Index prices, sector leaders and the heatmaps (Nifty 50, Bank Nifty, and the sector-by-sector map) update live from TradingView. Institutional activity, insider trading, and the Advances vs Declines breadth stat are pulled automatically from NSE's public reports once a day after market close. New 52-Week Highs vs Lows and % above 200-DMA aren't wired up yet — those two cards say so directly rather than showing a placeholder number.</p>
+      <p>Index prices, sector leaders and the heatmaps (Nifty 50, Bank Nifty, and the sector-by-sector map) update live from TradingView. Institutional activity, insider trading, and all three market-breadth stats (Advances vs Declines, New 52-Week Highs vs Lows, % of Nifty 500 above 200-DMA) are pulled automatically once a day after market close, from NSE's public reports and TradingView's screener.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I check FII/DII and insider trading data myself right now?</summary>
@@ -528,7 +528,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       </div>
     </div>
     <div class="disclaimer-box">
-      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Index, sector and heatmap data is provided by TradingView and may be delayed. Institutional Activity, Insider Trading, and the Advances/Declines breadth figures are pulled automatically from NSE's public reports once daily and may lag the live market by up to a day. Two market-breadth stats (52-week highs/lows and % above 200-DMA) are not yet connected and are labeled as such rather than showing a placeholder number. Nothing on this page is investment advice — trading and investing carry a high level of risk and may not be suitable for all investors. Please consult a licensed financial advisor before making trading or investment decisions.</p>
+      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Index, sector and heatmap data is provided by TradingView and may be delayed. Institutional Activity, Insider Trading, and all Market Breadth figures are pulled automatically from NSE's public reports and TradingView's screener once daily and may lag the live market by up to a day. Nothing on this page is investment advice — trading and investing carry a high level of risk and may not be suitable for all investors. Please consult a licensed financial advisor before making trading or investment decisions.</p>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Dropout Traders. All rights reserved.</p>
@@ -730,16 +730,37 @@ fetch('data/insider-trading.json').then(function(r){ if(!r.ok) throw new Error('
 
 fetch('data/market-breadth.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
 .then(function(payload){
-  if(payload.advances === undefined || payload.advances === null) return;
-  var val = document.getElementById('breadth-adv-decl');
-  var sub = document.getElementById('breadth-adv-decl-sub');
   var badge = document.getElementById('breadth-badge');
-  if(val) val.textContent = payload.advances + ' / ' + payload.declines;
-  if(sub){
-    var extra = (payload.unchanged !== undefined && payload.unchanged !== null) ? (' · ' + payload.unchanged + ' unchanged') : '';
-    sub.textContent = (payload.index || 'Market') + extra;
+  var sawAnyData = false;
+
+  if(payload.advances !== undefined && payload.advances !== null){
+    sawAnyData = true;
+    var advVal = document.getElementById('breadth-adv-decl');
+    var advSub = document.getElementById('breadth-adv-decl-sub');
+    if(advVal) advVal.textContent = payload.advances + ' / ' + payload.declines;
+    if(advSub){
+      var extra = (payload.unchanged !== undefined && payload.unchanged !== null) ? (' · ' + payload.unchanged + ' unchanged') : '';
+      advSub.textContent = (payload.index || 'Market') + extra;
+    }
   }
-  if(badge){
+
+  if(payload.newHighs !== undefined && payload.newHighs !== null){
+    sawAnyData = true;
+    var wkVal = document.getElementById('breadth-52wk');
+    var wkSub = document.getElementById('breadth-52wk-sub');
+    if(wkVal) wkVal.textContent = payload.newHighs + ' / ' + payload.newLows;
+    if(wkSub) wkSub.textContent = 'Of ' + (payload.scanned || 'Nifty 500') + ' Nifty 500 stocks scanned';
+  }
+
+  if(payload.pctAboveDma200 !== undefined && payload.pctAboveDma200 !== null){
+    sawAnyData = true;
+    var dmaVal = document.getElementById('breadth-dma');
+    var dmaSub = document.getElementById('breadth-dma-sub');
+    if(dmaVal) dmaVal.textContent = payload.pctAboveDma200 + '%';
+    if(dmaSub) dmaSub.textContent = (payload.aboveDma200 || '—') + ' of ' + (payload.scanned || '—') + ' stocks';
+  }
+
+  if(sawAnyData && badge){
     badge.textContent = 'Live · updated ' + formatDate(payload.updated);
     badge.className = 'badge badge-live';
   }

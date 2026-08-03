@@ -400,7 +400,7 @@ def build_heatmap(session: requests.Session, debug: bool):
     }
 
 
-
+def write_json(name: str, payload: dict):
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / name
     path.write_text(json.dumps(payload, indent=2))

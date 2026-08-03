@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Publish Analysis — Dropout Traders</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZHRiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzBjMTEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDcwNzBhIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJkdHR4dCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmM2Q1NzYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGE2ZDFmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJkdGdsb3ciIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjU1JSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzhhNmQxZiIgc3RvcC1vcGFjaXR5PSIwLjM1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzhhNmQxZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSIxLjUiIHk9IjEuNSIgd2lkdGg9Ijk3IiBoZWlnaHQ9Ijk3IiByeD0iMjEiIGZpbGw9InVybCgjZHRiZykiLz4KICA8cmVjdCB4PSIxLjUiIHk9IjEuNSIgd2lkdGg9Ijk3IiBoZWlnaHQ9Ijk3IiByeD0iMjEiIGZpbGw9InVybCgjZHRnbG93KSIvPgogIDxyZWN0IHg9IjMuNSIgeT0iMy41IiB3aWR0aD0iOTMiIGhlaWdodD0iOTMiIHJ4PSIxOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE2ZDFmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjU1Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSwgJ1RpbWVzIE5ldyBSb21hbicsICdQbGF5ZmFpciBEaXNwbGF5Jywgc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iNDYiIGZpbGw9InVybCgjZHR0eHQpIj5EVDwvdGV4dD4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070a;--bg-alt:#0c0c11;--bg-raise:#111116;--panel:rgba(255,255,255,0.035);--panel-border:rgba(212,175,55,0.22);--panel-border-strong:rgba(212,175,55,0.45);--gold:#d4af37;--gold-bright:#f3d576;--gold-deep:#8a6d1f;--white:#f6f4ee;--muted:#a8a49b;--muted-dim:#6f6c66;--green:#4a9a76;--red:#b1594a;--radius:14px;--radius-lg:22px;--ease:cubic-bezier(.16,.84,.44,1);--maxw:640px;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+.admin-wrap{max-width:var(--maxw);margin:0 auto;padding:40px 20px 90px;}
+.admin-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.05em;}
+.logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;}
+.admin-tag{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.glass{background:var(--panel);border:1px solid var(--panel-border);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:var(--radius-lg);}
+.admin-card{padding:30px;margin-bottom:20px;}
+.admin-card h2{font-family:'Playfair Display',serif;font-size:24px;margin:0 0 12px;}
+.admin-card p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 18px;}
+.admin-card ol{color:var(--muted);font-size:14px;line-height:1.9;padding-left:20px;margin:0 0 20px;}
+.admin-card code{background:var(--bg-raise);padding:2px 6px;border-radius:5px;font-family:'Space Mono',monospace;font-size:12.5px;color:var(--gold-bright);}
+.admin-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:16px;}
+input[type=text],input[type=password]{width:100%;margin-top:8px;padding:13px 14px;background:var(--bg-raise);border:1px solid var(--panel-border);border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:14.5px;}
+input:focus{outline:none;border-color:var(--gold);}
+input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
+.admin-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.call-select{display:flex;gap:10px;margin-top:8px;}
+.call-opt{flex:1;padding:12px;border-radius:10px;border:1px solid var(--panel-border);background:var(--bg-raise);color:var(--muted);font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .25s var(--ease);}
+.call-opt.active.call-buy{background:rgba(74,154,118,.18);border-color:var(--green);color:var(--green);}
+.call-opt.active.call-sell{background:rgba(177,89,74,.18);border-color:var(--red);color:var(--red);}
+.call-opt.active.call-hold{background:rgba(212,175,55,.18);border-color:var(--gold);color:var(--gold-bright);}
+.btn{width:100%;padding:15px;border-radius:100px;border:none;font-family:'Inter',sans-serif;font-weight:600;font-size:14.5px;cursor:pointer;transition:all .3s var(--ease);}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;}
+.btn-gold:hover{transform:translateY(-2px);}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+.admin-link-btn{background:none;border:none;color:var(--muted);font-size:12.5px;text-decoration:underline;cursor:pointer;font-family:'Inter',sans-serif;}
+.admin-error{color:var(--red);font-size:13px;margin-top:14px;}
+.admin-log{margin-top:20px;font-family:'Space Mono',monospace;font-size:12.5px;color:var(--muted);line-height:2;}
+.admin-log .done{color:var(--green);}
+.admin-log .fail{color:var(--red);}
+.admin-success{margin-top:20px;padding:16px;border-radius:10px;background:rgba(74,154,118,.12);border:1px solid rgba(74,154,118,.35);color:var(--green);font-size:14px;line-height:1.6;}
+.admin-success a{color:var(--gold-bright);}
+#image-preview img{margin-top:10px;max-width:100%;border-radius:10px;display:block;}
+</style>
+</head>
+<body>
+
+<div class="admin-wrap">
+  <header class="admin-header">
+    <div class="logo"><span class="logo-mark">DT</span><span>DROPOUT <b>TRADERS</b></span></div>
+    <div class="admin-tag">Publish Analysis</div>
+  </header>
+
+  <section id="connect-step" class="admin-card glass">
+    <h2>Connect to GitHub</h2>
+    <p>Publishing writes straight to the <code>Dropoutweb</code> repo, so this page needs a token with permission to do that. You only do this once — it stays saved in this browser.</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:var(--gold-bright);">GitHub &rarr; Fine-grained tokens</a></li>
+      <li>Set <b>Repository access</b> to only <code>dinankarparmar1/Dropoutweb</code></li>
+      <li>Under <b>Permissions &rarr; Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b></li>
+      <li>Generate it and paste the token below</li>
+    </ol>
+    <label>GitHub token
+      <input type="password" id="token-input" placeholder="github_pat_..." autocomplete="off">
+    </label>
+    <button id="connect-btn" class="btn btn-gold">Connect</button>
+    <div id="connect-error" class="admin-error"></div>
+  </section>
+
+  <section id="publish-step" class="admin-card glass" style="display:none;">
+    <div class="admin-card-head">
+      <h2>New Analysis</h2>
+      <button id="disconnect-btn" class="admin-link-btn" type="button">Use a different token</button>
+    </div>
+
+    <label>Analysis image
+      <input type="file" id="f-image" accept="image/*">
+      <div id="image-preview"></div>
+    </label>
+
+    <label>Stock name
+      <input type="text" id="f-stock" placeholder="e.g. Reliance Industries">
+    </label>
+
+    <label>Title
+      <input type="text" id="f-title" placeholder="e.g. Breakout above key resistance">
+    </label>
+
+    <label>Call
+      <div class="call-select">
+        <button type="button" class="call-opt call-buy" data-call="BUY">Buy</button>
+        <button type="button" class="call-opt call-sell" data-call="SELL">Sell</button>
+        <button type="button" class="call-opt call-hold" data-call="HOLD">Hold</button>
+      </div>
+    </label>
+
+    <div class="admin-row">
+      <label>Target<input type="text" id="f-target" placeholder="e.g. 3150"></label>
+      <label>Stop loss<input type="text" id="f-stoploss" placeholder="e.g. 2890"></label>
+    </div>
+
+    <button id="publish-btn" class="btn btn-gold" disabled>Publish</button>
+
+    <div id="publish-log" class="admin-log"></div>
+    <div id="publish-success" class="admin-success" style="display:none;"></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var OWNER = 'dinankarparmar1';
+  var REPO = 'Dropoutweb';
+  var API = 'https://api.github.com/repos/' + OWNER + '/' + REPO;
+  var SITE = 'https://dropouttraders.in';
+  var branch = 'main';
+  var token = localStorage.getItem('dt_admin_token') || '';
+
+  var connectStep = document.getElementById('connect-step');
+  var publishStep = document.getElementById('publish-step');
+  var tokenInput = document.getElementById('token-input');
+  var connectBtn = document.getElementById('connect-btn');
+  var connectError = document.getElementById('connect-error');
+  var disconnectBtn = document.getElementById('disconnect-btn');
+
+  function ghHeaders(){
+    return { 'Authorization':'Bearer '+token, 'Accept':'application/vnd.github+json' };
+  }
+
+  function verifyAndEnter(){
+    connectError.textContent = '';
+    connectBtn.disabled = true;
+    connectBtn.textContent = 'Connecting…';
+    fetch(API, { headers: ghHeaders() }).then(function(r){
+      if(!r.ok){ throw new Error(r.status === 401 ? 'That token was rejected — check it was copied in full.' : 'Could not reach the repo (status '+r.status+').'); }
+      return r.json();
+    }).then(function(repo){
+      branch = repo.default_branch || 'main';
+      localStorage.setItem('dt_admin_token', token);
+      connectStep.style.display = 'none';
+      publishStep.style.display = 'block';
+    }).catch(function(err){
+      connectError.textContent = err.message;
+    }).then(function(){
+      connectBtn.disabled = false;
+      connectBtn.textContent = 'Connect';
+    });
+  }
+
+  connectBtn.addEventListener('click', function(){
+    token = tokenInput.value.trim();
+    if(!token){ connectError.textContent = 'Paste your token first.'; return; }
+    verifyAndEnter();
+  });
+
+  disconnectBtn.addEventListener('click', function(){
+    localStorage.removeItem('dt_admin_token');
+    token = '';
+    publishStep.style.display = 'none';
+    connectStep.style.display = 'block';
+    tokenInput.value = '';
+  });
+
+  if(token){ verifyAndEnter(); }
+
+  /* ---------- Publish form ---------- */
+  var fImage = document.getElementById('f-image');
+  var fStock = document.getElementById('f-stock');
+  var fTitle = document.getElementById('f-title');
+  var fTarget = document.getElementById('f-target');
+  var fStopLoss = document.getElementById('f-stoploss');
+  var callOpts = document.querySelectorAll('.call-opt');
+  var publishBtn = document.getElementById('publish-btn');
+  var publishLog = document.getElementById('publish-log');
+  var publishSuccess = document.getElementById('publish-success');
+  var imagePreview = document.getElementById('image-preview');
+  var selectedCall = '';
+  var compressedImageDataUrl = '';
+
+  callOpts.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      callOpts.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      selectedCall = btn.getAttribute('data-call');
+      checkReady();
+    });
+  });
+
+  function checkReady(){
+    publishBtn.disabled = !(fStock.value.trim() && fTitle.value.trim() && selectedCall && fTarget.value.trim() && fStopLoss.value.trim() && compressedImageDataUrl);
+  }
+  [fStock, fTitle, fTarget, fStopLoss].forEach(function(el){ el.addEventListener('input', checkReady); });
+
+  fImage.addEventListener('change', function(){
+    var file = fImage.files[0];
+    if(!file) return;
+    var reader = new FileReader();
+    reader.onload = function(e){
+      var img = new Image();
+      img.onload = function(){
+        var maxW = 1600;
+        var scale = Math.min(1, maxW / img.width);
+        var canvas = document.createElement('canvas');
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        compressedImageDataUrl = canvas.toDataURL('image/jpeg', 0.85);
+        imagePreview.innerHTML = '<img src="'+compressedImageDataUrl+'" alt="Preview">';
+        checkReady();
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  function slugify(s){
+    return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  }
+
+  function b64(str){
+    return btoa(unescape(encodeURIComponent(str)));
+  }
+
+  function logLine(text, cls){
+    var line = document.createElement('div');
+    if(cls) line.className = cls;
+    line.textContent = text;
+    publishLog.appendChild(line);
+  }
+
+  function putFile(path, base64Content, message, sha){
+    var body = { message: message, content: base64Content, branch: branch };
+    if(sha) body.sha = sha;
+    var headers = ghHeaders();
+    headers['Content-Type'] = 'application/json';
+    return fetch(API + '/contents/' + path, { method: 'PUT', headers: headers, body: JSON.stringify(body) })
+      .then(function(r){
+        if(!r.ok){ return r.json().then(function(e){ throw new Error(e.message || ('GitHub API error '+r.status)); }); }
+        return r.json();
+      });
+  }
+
+  function buildAnalysisPage(data){
+    var callColor = data.call === 'BUY' ? '#4a9a76' : data.call === 'SELL' ? '#b1594a' : '#d4af37';
+    var desc = data.stockName + ' — ' + data.call + ' call. Target ' + data.target + ', stop loss ' + data.stopLoss + '. ' + data.title;
+    var imgUrl = SITE + '/assets/analysis/' + data.slug + '.jpg';
+    var pageUrl = SITE + '/analysis/' + data.slug + '.html';
+    var shareText = encodeURIComponent(data.stockName + ' — ' + data.title + ' (' + data.call + ')');
+    var html = '';
+    html += '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">\n';
+    html += '<title>' + data.stockName + ' — ' + data.title + ' | Dropout Traders</title>\n';
+    html += '<meta name="description" content="' + desc + '">\n<meta name="robots" content="index, follow">\n';
+    html += '<link rel="canonical" href="' + pageUrl + '">\n';
+    html += '<meta property="og:type" content="article">\n<meta property="og:site_name" content="Dropout Traders">\n';
+    html += '<meta property="og:title" content="' + data.stockName + ' — ' + data.title + '">\n';
+    html += '<meta property="og:description" content="' + desc + '">\n';
+    html += '<meta property="og:url" content="' + pageUrl + '">\n<meta property="og:image" content="' + imgUrl + '">\n';
+    html += '<meta name="twitter:card" content="summary_large_image">\n';
+    html += '<meta name="twitter:title" content="' + data.stockName + ' — ' + data.title + '">\n<meta name="twitter:image" content="' + imgUrl + '">\n';
+    html += '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n';
+    html += '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">\n';
+    html += '<style>\n:root{--bg:#07070a;--panel:rgba(255,255,255,0.035);--panel-border:rgba(212,175,55,0.22);--panel-border-strong:rgba(212,175,55,0.45);--gold-bright:#f3d576;--white:#f6f4ee;--muted:#a8a49b;--muted-dim:#6f6c66;--radius:14px;--radius-lg:22px;--maxw:760px;}\n';
+    html += '*{box-sizing:border-box;}body{margin:0;background:var(--bg);color:var(--white);font-family:\'Inter\',sans-serif;-webkit-font-smoothing:antialiased;}\n';
+    html += '.wrap{max-width:var(--maxw);margin:0 auto;padding:50px 24px 90px;}\n';
+    html += '.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-family:\'Space Mono\',monospace;font-size:12.5px;letter-spacing:.04em;margin-bottom:28px;}\n.back:hover{color:var(--gold-bright);}\n';
+    html += '.badge{display:inline-block;font-family:\'Space Mono\',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;font-weight:700;color:' + callColor + ';background:' + callColor + '26;border:1px solid ' + callColor + '59;margin-bottom:18px;}\n';
+    html += 'h1{font-family:\'Playfair Display\',serif;font-size:clamp(28px,4.4vw,42px);line-height:1.15;margin:0 0 8px;}\n';
+    html += '.stock{font-family:\'Space Mono\',monospace;font-size:13px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-bottom:22px;}\n';
+    html += '.hero-img{width:100%;border-radius:var(--radius-lg);border:1px solid var(--panel-border);margin:26px 0;display:block;}\n';
+    html += '.levels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0;}\n.level{background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);padding:18px 20px;}\n';
+    html += '.level .l{font-family:\'Space Mono\',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}\n.level .v{font-family:\'Playfair Display\',serif;font-size:24px;margin-top:6px;}\n';
+    html += '.meta{color:var(--muted-dim);font-family:\'Space Mono\',monospace;font-size:12.5px;margin:20px 0 30px;}\n';
+    html += '.share{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px;}\n.share a,.share button{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:100px;border:1px solid var(--panel-border-strong);background:transparent;color:var(--gold-bright);font-family:\'Inter\',sans-serif;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;}\n.share a:hover,.share button:hover{background:rgba(212,175,55,.08);}\n';
+    html += '.disclaimer{margin-top:50px;padding:18px 20px;border-radius:var(--radius);background:var(--panel);border:1px solid var(--panel-border);color:var(--muted);font-size:12.5px;line-height:1.7;}\n</style>\n</head>\n<body>\n';
+    html += '<div class="wrap">\n<a href="../index.html#market-analysis" class="back">&larr; Dropout Traders</a>\n';
+    html += '<span class="badge">' + data.call + '</span>\n<h1>' + data.title + '</h1>\n<div class="stock">' + data.stockName + '</div>\n';
+    html += '<img class="hero-img" src="../assets/analysis/' + data.slug + '.jpg" alt="' + data.stockName + ' chart analysis" loading="lazy">\n';
+    html += '<div class="levels"><div class="level"><div class="l">Target</div><div class="v">' + data.target + '</div></div><div class="level"><div class="l">Stop Loss</div><div class="v">' + data.stopLoss + '</div></div></div>\n';
+    html += '<div class="meta">Published ' + data.dateDisplay + '</div>\n';
+    html += '<div class="share">\n<a href="https://wa.me/?text=' + shareText + '%20' + encodeURIComponent(pageUrl) + '" target="_blank" rel="noopener">WhatsApp</a>\n';
+    html += '<a href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + encodeURIComponent(pageUrl) + '" target="_blank" rel="noopener">X / Twitter</a>\n';
+    html += '<a href="https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + shareText + '" target="_blank" rel="noopener">Telegram</a>\n';
+    html += '<button onclick="navigator.clipboard.writeText(\'' + pageUrl + '\');this.textContent=\'Link copied\';">Copy link</button>\n</div>\n';
+    html += '<div class="disclaimer"><b style="color:var(--muted);">Risk Disclaimer:</b> This is educational market analysis, not investment advice. Trading and investing carry a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. Please consult a licensed financial advisor before making trading decisions.</div>\n';
+    html += '</div>\n</body>\n</html>';
+    return html;
+  }
+
+  publishBtn.addEventListener('click', function(){
+    publishBtn.disabled = true;
+    publishLog.innerHTML = '';
+    publishSuccess.style.display = 'none';
+
+    var stockName = fStock.value.trim();
+    var title = fTitle.value.trim();
+    var target = fTarget.value.trim();
+    var stopLoss = fStopLoss.value.trim();
+    var now = new Date();
+    var dateDisplay = now.toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'});
+
+    logLine('Checking the homepage feed…');
+    fetch(API + '/contents/data/market-analysis.json?ref=' + branch, { headers: ghHeaders() })
+    .then(function(r){ return r.ok ? r.json() : { content: b64(JSON.stringify({updated:null,rows:[]})), sha: null }; })
+    .then(function(jsonFile){
+      var current = JSON.parse(decodeURIComponent(escape(atob(jsonFile.content.replace(/\n/g,'')))));
+      var rows = current.rows || [];
+      var baseSlug = slugify(stockName + '-' + now.toISOString().slice(0,10));
+      var slug = baseSlug;
+      var n = 2;
+      while(rows.some(function(r){ return r.slug === slug; })){ slug = baseSlug + '-' + n; n++; }
+
+      var data = { slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, dateDisplay: dateDisplay };
+      var imageBase64 = compressedImageDataUrl.split(',')[1];
+
+      logLine('Uploading image…');
+      return putFile('assets/analysis/' + slug + '.jpg', imageBase64, 'Add analysis image: ' + slug)
+      .then(function(){
+        logLine('Image uploaded', 'done');
+        logLine('Creating the analysis page…');
+        return putFile('analysis/' + slug + '.html', b64(buildAnalysisPage(data)), 'Publish analysis page: ' + slug);
+      })
+      .then(function(){
+        logLine('Page created', 'done');
+        logLine('Updating the homepage feed…');
+        rows.unshift({ slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, image: 'assets/analysis/'+slug+'.jpg', date: now.toISOString() });
+        var updated = { updated: now.toISOString(), rows: rows };
+        return putFile('data/market-analysis.json', b64(JSON.stringify(updated, null, 2)), 'Publish analysis: ' + stockName, jsonFile.sha);
+      })
+      .then(function(){
+        logLine('Homepage feed updated', 'done');
+        publishSuccess.style.display = 'block';
+        publishSuccess.innerHTML = 'Published. GitHub Pages takes about a minute to go live, then it is at <a href="' + SITE + '/analysis/' + slug + '.html" target="_blank" rel="noopener">dropouttraders.in/analysis/' + slug + '.html</a>';
+        [fStock, fTitle, fTarget, fStopLoss].forEach(function(el){ el.value = ''; });
+        callOpts.forEach(function(b){ b.classList.remove('active'); });
+        selectedCall = '';
+        compressedImageDataUrl = '';
+        imagePreview.innerHTML = '';
+        fImage.value = '';
+        checkReady();
+      });
+    })
+    .catch(function(err){
+      logLine('Failed: ' + err.message, 'fail');
+    })
+    .then(function(){
+      publishBtn.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,15 @@
 {
-  "updated": null,
-  "rows": []
+  "updated": "2026-08-03T12:02:00.965Z",
+  "rows": [
+    {
+      "slug": "pc-jeweller-2026-08-03",
+      "stockName": "Pc Jeweller",
+      "title": "Breakout above 9.70 Swing",
+      "call": "BUY",
+      "target": "14",
+      "stopLoss": "8",
+      "image": "assets/analysis/pc-jeweller-2026-08-03.jpg",
+      "date": "2026-08-03T12:02:00.965Z"
+    }
+  ]
 }

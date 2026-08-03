@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-02T17:38:21.380421Z",
+  "updated": "2026-08-03T02:49:39.458772Z",
   "index": "NIFTY 500",
   "advances": "295",
   "declines": "203",
-  "unchanged": "2"
+  "unchanged": "2",
+  "scanned": 498,
+  "newHighs": 0,
+  "newLows": 0,
+  "aboveDma200": 272,
+  "pctAboveDma200": 54.6
 }

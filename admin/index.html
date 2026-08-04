@@ -138,18 +138,33 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
 
     <section id="tab-watchlist" class="admin-card glass tab-panel" style="display:none;">
       <h2>Watchlist</h2>
-      <label>Stock name
-        <input type="text" id="wl-stock" placeholder="e.g. Tata Motors">
-      </label>
-      <label>Category
-        <div class="call-select">
-          <button type="button" class="call-opt wl-cat" data-cat="SWING">Swing</button>
-          <button type="button" class="call-opt wl-cat" data-cat="LONGTERM">Long-Term</button>
+
+      <div id="wl-signin">
+        <p>Sign in with the email and password you created in Firebase.</p>
+        <label>Email<input type="text" id="wl-email" placeholder="you@example.com"></label>
+        <label>Password<input type="password" id="wl-password" placeholder="Password"></label>
+        <button id="wl-signin-btn" class="btn btn-gold" type="button">Sign In</button>
+        <div id="wl-signin-error" class="admin-error"></div>
+      </div>
+
+      <div id="wl-app" style="display:none;">
+        <div class="admin-card-head">
+          <div></div>
+          <button id="wl-signout-btn" class="admin-link-btn" type="button" style="margin-top:0;">Sign out</button>
         </div>
-      </label>
-      <button id="wl-add-btn" class="btn btn-gold" disabled>Add to watchlist</button>
-      <div id="wl-log" class="admin-log"></div>
-      <div id="wl-manage-list" class="manage-list" style="margin-top:24px;"><p class="wl-empty">Loading&hellip;</p></div>
+        <label>Stock name
+          <input type="text" id="wl-stock" placeholder="e.g. Tata Motors">
+        </label>
+        <label>Category
+          <div class="call-select">
+            <button type="button" class="call-opt wl-cat" data-cat="SWING">Swing</button>
+            <button type="button" class="call-opt wl-cat" data-cat="LONGTERM">Long-Term</button>
+          </div>
+        </label>
+        <button id="wl-add-btn" class="btn btn-gold" disabled>Add to watchlist</button>
+        <div id="wl-log" class="admin-log"></div>
+        <div id="wl-manage-list" class="manage-list" style="margin-top:24px;"><p class="wl-empty">Loading&hellip;</p></div>
+      </div>
     </section>
   </div>
 </div>
@@ -510,16 +525,7 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
   }
 
   function addToWatchlist(stockName, category){
-    return getJsonFile('data/watchlist.json').then(function(res){
-      var rows = res.data.rows || [];
-      if(rows.some(function(r){ return r.stockName.toLowerCase() === stockName.toLowerCase() && r.category === category; })){
-        return { alreadyThere: true };
-      }
-      var id = Date.now().toString(36) + Math.random().toString(36).slice(2,6);
-      rows.unshift({ id: id, stockName: stockName, category: category });
-      var updated = { updated: new Date().toISOString(), rows: rows };
-      return putFile('data/watchlist.json', b64(JSON.stringify(updated, null, 2)), 'Add to watchlist: ' + stockName, res.sha).then(function(){ return { alreadyThere: false }; });
-    });
+    return window.fb.addWatchlistItem(stockName, category);
   }
 
   /* ---------- Manage tab ---------- */
@@ -535,6 +541,7 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
       }).join('');
       list.querySelectorAll('[data-wl]').forEach(function(b){
         b.addEventListener('click', function(){
+          if(!window.fbUser){ alert('Sign in on the Watchlist tab first.'); return; }
           var row = rows[+b.getAttribute('data-wl')];
           var cat = b.getAttribute('data-cat');
           b.disabled = true;
@@ -569,11 +576,44 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
     }).catch(function(err){ alert('Delete failed: ' + err.message); });
   }
 
-  /* ---------- Watchlist tab ---------- */
+  /* ---------- Watchlist tab (Firebase auth + Firestore) ---------- */
   var wlStock = document.getElementById('wl-stock');
   var wlAddBtn = document.getElementById('wl-add-btn');
   var wlLog = document.getElementById('wl-log');
   var wlCategory = '';
+  var wlSignin = document.getElementById('wl-signin');
+  var wlApp = document.getElementById('wl-app');
+  var wlEmail = document.getElementById('wl-email');
+  var wlPassword = document.getElementById('wl-password');
+  var wlSigninBtn = document.getElementById('wl-signin-btn');
+  var wlSigninError = document.getElementById('wl-signin-error');
+  var wlSignoutBtn = document.getElementById('wl-signout-btn');
+
+  document.addEventListener('fb-auth-changed', function(e){
+    window.fbUser = e.detail;
+    if(e.detail){
+      wlSignin.style.display = 'none';
+      wlApp.style.display = 'block';
+      loadWatchlist();
+    } else {
+      wlSignin.style.display = 'block';
+      wlApp.style.display = 'none';
+    }
+  });
+
+  wlSigninBtn.addEventListener('click', function(){
+    wlSigninError.textContent = '';
+    wlSigninBtn.disabled = true;
+    wlSigninBtn.textContent = 'Signing in…';
+    window.fb.signIn(wlEmail.value.trim(), wlPassword.value).catch(function(err){
+      wlSigninError.textContent = 'Could not sign in — check the email and password.';
+    }).then(function(){
+      wlSigninBtn.disabled = false;
+      wlSigninBtn.textContent = 'Sign In';
+    });
+  });
+
+  wlSignoutBtn.addEventListener('click', function(){ window.fb.signOut(); });
 
   document.querySelectorAll('.wl-cat').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -588,8 +628,8 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
   function loadWatchlist(){
     var list = document.getElementById('wl-manage-list');
     list.innerHTML = '<p class="wl-empty">Loading&hellip;</p>';
-    getJsonFile('data/watchlist.json').then(function(res){
-      renderWlList(res.data.rows || []);
+    window.fb.loadWatchlist().then(function(rows){
+      renderWlList(rows);
     }).catch(function(err){ list.innerHTML = '<p class="wl-empty">Could not load: ' + err.message + '</p>'; });
   }
 
@@ -619,13 +659,61 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
 
   function removeWatchlistItem(id){
     if(!confirm('Remove this from the watchlist?')) return;
-    getJsonFile('data/watchlist.json').then(function(res){
-      var rows = (res.data.rows || []).filter(function(r){ return r.id !== id; });
-      var updated = { updated: new Date().toISOString(), rows: rows };
-      return putFile('data/watchlist.json', b64(JSON.stringify(updated, null, 2)), 'Remove from watchlist: ' + id, res.sha);
-    }).then(function(){ loadWatchlist(); }).catch(function(err){ alert('Failed: ' + err.message); });
+    window.fb.removeWatchlistItem(id).then(function(){ loadWatchlist(); }).catch(function(err){ alert('Failed: ' + err.message); });
   }
 })();
+</script>
+
+<script type="module">
+/* ---------------------------------------------------------------
+   FIREBASE BRIDGE — exposes auth + Firestore helpers on window.fb
+   so the classic script above (no bundler, matches the rest of
+   the site) can call them without becoming a module itself.
+--------------------------------------------------------------- */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDwPUSWui-PyZJ8uhzZjbb5ap8_nKYP564",
+  authDomain: "dropout-traders.firebaseapp.com",
+  projectId: "dropout-traders",
+  storageBucket: "dropout-traders.firebasestorage.app",
+  messagingSenderId: "980071485559",
+  appId: "1:980071485559:web:1eaf5d2744ce886b96b672"
+};
+var fbApp = initializeApp(firebaseConfig);
+var db = getFirestore(fbApp);
+var auth = getAuth(fbApp);
+
+window.fb = {
+  signIn: function(email, password){ return signInWithEmailAndPassword(auth, email, password); },
+  signOut: function(){ return signOut(auth); },
+  loadWatchlist: function(){
+    return getDocs(collection(db, 'watchlist')).then(function(snap){
+      var rows = [];
+      snap.forEach(function(d){ rows.push(Object.assign({ id: d.id }, d.data())); });
+      return rows;
+    });
+  },
+  addWatchlistItem: function(stockName, category){
+    return getDocs(collection(db, 'watchlist')).then(function(snap){
+      var exists = false;
+      snap.forEach(function(d){
+        var v = d.data();
+        if(v.stockName.toLowerCase() === stockName.toLowerCase() && v.category === category) exists = true;
+      });
+      if(exists) return { alreadyThere: true };
+      return addDoc(collection(db, 'watchlist'), { stockName: stockName, category: category, createdAt: new Date().toISOString() })
+        .then(function(){ return { alreadyThere: false }; });
+    });
+  },
+  removeWatchlistItem: function(id){ return deleteDoc(doc(db, 'watchlist', id)); }
+};
+
+onAuthStateChanged(auth, function(user){
+  document.dispatchEvent(new CustomEvent('fb-auth-changed', { detail: user }));
+});
 </script>
 </body>
 </html>

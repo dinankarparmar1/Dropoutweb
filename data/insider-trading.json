@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-04T12:28:31.939679Z",
+  "updated": "2026-08-04T17:03:50.580418Z",
   "rows": [
+    {
+      "date": "04-Aug-2026 21:13:48",
+      "company": "THE KARUR VYSYA BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KARURVYSYA|THE KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
     {
       "date": "04-Aug-2026 17:52:08",
       "company": "360 ONE WAM LIMITED",

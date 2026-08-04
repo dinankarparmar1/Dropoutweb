@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T12:28:31.071666Z",
+  "updated": "2026-08-04T17:03:49.335087Z",
   "nifty50": [
     {
       "symbol": "RELIANCE",
@@ -99,7 +99,7 @@
     {
       "symbol": "TITAN",
       "price": 4935.0,
-      "pChange": 1.23
+      "pChange": -1.3
     },
     {
       "symbol": "ULTRACEMCO",
@@ -189,7 +189,7 @@
     {
       "symbol": "DIVISLAB",
       "price": 8378.0,
-      "pChange": 4.0
+      "pChange": -2.41
     },
     {
       "symbol": "BRITANNIA",
@@ -219,7 +219,7 @@
     {
       "symbol": "SBILIFE",
       "price": 1899.0,
-      "pChange": 0.9
+      "pChange": -0.84
     },
     {
       "symbol": "SHRIRAMFIN",
@@ -286,7 +286,7 @@
     {
       "symbol": "AUBANK",
       "price": 1059.0,
-      "pChange": 1.12
+      "pChange": -0.09
     },
     {
       "symbol": "IDFCFIRSTB",
@@ -431,7 +431,7 @@
         {
           "symbol": "DIVISLAB",
           "price": 8378.0,
-          "pChange": 4.0
+          "pChange": -2.41
         },
         {
           "symbol": "APOLLOHOSP",
@@ -566,7 +566,7 @@
         {
           "symbol": "OBEROIRLTY",
           "price": 1778.8,
-          "pChange": -2.68
+          "pChange": -4.42
         },
         {
           "symbol": "PRESTIGE",
@@ -581,7 +581,7 @@
         {
           "symbol": "LODHA",
           "price": 1229.8,
-          "pChange": -1.14
+          "pChange": -0.81
         }
       ]
     },
@@ -626,7 +626,7 @@
         {
           "symbol": "SBILIFE",
           "price": 1899.0,
-          "pChange": 0.9
+          "pChange": -0.84
         },
         {
           "symbol": "HDFCLIFE",
@@ -666,12 +666,12 @@
         {
           "symbol": "LALPATHLAB",
           "price": 1889.4,
-          "pChange": -0.83
+          "pChange": -0.58
         },
         {
           "symbol": "METROPOLIS",
           "price": 584.5,
-          "pChange": 0.35
+          "pChange": -2.0
         }
       ]
     },
@@ -681,7 +681,7 @@
         {
           "symbol": "TITAN",
           "price": 4935.0,
-          "pChange": 1.23
+          "pChange": -1.3
         },
         {
           "symbol": "ASIANPAINT",

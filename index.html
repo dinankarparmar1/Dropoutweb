@@ -861,27 +861,43 @@ fetch('data/market-analysis.json').then(function(r){ if(!r.ok) throw new Error('
 })
 .catch(function(){ /* data/market-analysis.json not published yet — placeholder stays as-is */ });
 
+})();
+</script>
+
+<script type="module">
 /* ---------------------------------------------------------------
-   WATCHLIST — reads data/watchlist.json, splits rows into the
-   Swing and Long-Term columns. Same graceful-fallback pattern.
+   WATCHLIST — reads from Firestore ('watchlist' collection) and
+   splits into the Swing and Long-Term columns.
 --------------------------------------------------------------- */
-fetch('data/watchlist.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
-.then(function(payload){
-  var rows = payload.rows || [];
-  if(!rows.length) return;
-  var swing = rows.filter(function(r){ return r.category === 'SWING'; });
-  var longterm = rows.filter(function(r){ return r.category === 'LONGTERM'; });
-  function renderCol(id, items){
-    var el = document.getElementById(id);
-    if(!items.length) return;
-    el.innerHTML = items.map(function(r){ return '<div class="wl-item">'+r.stockName+'</div>'; }).join('');
-  }
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDwPUSWui-PyZJ8uhzZjbb5ap8_nKYP564",
+  authDomain: "dropout-traders.firebaseapp.com",
+  projectId: "dropout-traders",
+  storageBucket: "dropout-traders.firebasestorage.app",
+  messagingSenderId: "980071485559",
+  appId: "1:980071485559:web:1eaf5d2744ce886b96b672"
+};
+var fbApp = initializeApp(firebaseConfig);
+var db = getFirestore(fbApp);
+
+function renderCol(id, items){
+  if(!items.length) return;
+  document.getElementById(id).innerHTML = items.map(function(r){ return '<div class="wl-item">'+r.stockName+'</div>'; }).join('');
+}
+
+getDocs(collection(db, 'watchlist')).then(function(snap){
+  var swing = [], longterm = [];
+  snap.forEach(function(d){
+    var data = d.data();
+    if(data.category === 'SWING') swing.push(data);
+    else if(data.category === 'LONGTERM') longterm.push(data);
+  });
   renderCol('wl-swing', swing);
   renderCol('wl-longterm', longterm);
-})
-.catch(function(){ /* data/watchlist.json not published yet — placeholder stays as-is */ });
-
-})();
+}).catch(function(){ /* watchlist not set up yet — placeholders stay as-is */ });
 </script>
 
 </body>

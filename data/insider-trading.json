@@ -1,18 +1,11 @@
 {
-  "updated": "2026-08-03T09:38:16.879457Z",
+  "updated": "2026-08-04T09:47:28.818331Z",
   "rows": [
     {
-      "date": "03-Aug-2026 12:16:08",
-      "company": "STL NETWORKS LIMITED",
+      "date": "04-Aug-2026 13:04:24",
+      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STLNETWORK|STL NETWORKS LIMITED|Original|Regulation 7 (2)|IT_25888_WebXMLFile_20260803_121",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Aug-2026 12:10:31",
-      "company": "STL NETWORKS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "STLNETWORK|STL NETWORKS LIMITED|Original|Regulation 7 (2)|IT_25888_WebXMLFile_20260803_121",
+      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
       "quantity": "\u2014"
     }
   ],

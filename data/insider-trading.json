@@ -1,6 +1,48 @@
 {
-  "updated": "2026-08-04T09:47:28.818331Z",
+  "updated": "2026-08-04T12:28:31.939679Z",
   "rows": [
+    {
+      "date": "04-Aug-2026 17:52:08",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260804_17520842",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Aug-2026 17:15:45",
+      "company": "HEG LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260804_171545170.xml|IT_120",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Aug-2026 17:09:38",
+      "company": "HEG LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260804_170938925.xml|IT_120",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Aug-2026 16:11:24",
+      "company": "Agarwal Float Glass India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AGARWALFT|Agarwal Float Glass India Limited|Original|Regulation 7 (2)|IT_21454_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Aug-2026 15:57:38",
+      "company": "Cineline India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CINELINE|Cineline India Limited|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20260804_1557",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Aug-2026 15:50:41",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260804_155",
+      "quantity": "\u2014"
+    },
     {
       "date": "04-Aug-2026 13:04:24",
       "company": "VISHNU PRAKASH R PUNGLIA LIMITED",

@@ -39,7 +39,7 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
 .btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;}
 .btn-gold:hover{transform:translateY(-2px);}
 .btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
-.admin-link-btn{background:none;border:none;color:var(--muted);font-size:12.5px;text-decoration:underline;cursor:pointer;font-family:'Inter',sans-serif;}
+.admin-link-btn{background:none;border:none;color:var(--muted);font-size:12.5px;text-decoration:underline;cursor:pointer;font-family:'Inter',sans-serif;margin-top:12px;}
 .admin-error{color:var(--red);font-size:13px;margin-top:14px;}
 .admin-log{margin-top:20px;font-family:'Space Mono',monospace;font-size:12.5px;color:var(--muted);line-height:2;}
 .admin-log .done{color:var(--green);}
@@ -47,6 +47,18 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
 .admin-success{margin-top:20px;padding:16px;border-radius:10px;background:rgba(74,154,118,.12);border:1px solid rgba(74,154,118,.35);color:var(--green);font-size:14px;line-height:1.6;}
 .admin-success a{color:var(--gold-bright);}
 #image-preview img{margin-top:10px;max-width:100%;border-radius:10px;display:block;}
+.admin-tabs{display:flex;gap:8px;margin-bottom:18px;}
+.tab-btn{flex:1;padding:11px;border-radius:10px;border:1px solid var(--panel-border);background:var(--bg-raise);color:var(--muted);font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.tab-btn.active{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;border-color:transparent;}
+.manage-list{display:flex;flex-direction:column;gap:10px;}
+.manage-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;background:var(--bg-raise);border:1px solid var(--panel-border);border-radius:10px;}
+.manage-row-info{font-size:13.5px;}
+.manage-row-info b{color:var(--white);}
+.manage-row-info span{color:var(--muted);font-size:12px;display:block;margin-top:2px;}
+.manage-row-actions{display:flex;gap:8px;flex-shrink:0;}
+.mini-btn{padding:7px 12px;border-radius:8px;border:1px solid var(--panel-border);background:transparent;color:var(--gold-bright);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;}
+.mini-btn-danger{color:var(--red);border-color:rgba(177,89,74,.4);}
+.wl-empty{color:var(--muted-dim);font-size:13px;}
 </style>
 </head>
 <body>
@@ -73,43 +85,73 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
     <div id="connect-error" class="admin-error"></div>
   </section>
 
-  <section id="publish-step" class="admin-card glass" style="display:none;">
-    <div class="admin-card-head">
-      <h2>New Analysis</h2>
-      <button id="disconnect-btn" class="admin-link-btn" type="button">Use a different token</button>
+  <div id="app" style="display:none;">
+    <div class="admin-tabs">
+      <button class="tab-btn active" data-tab="publish" type="button">Publish</button>
+      <button class="tab-btn" data-tab="manage" type="button">Manage</button>
+      <button class="tab-btn" data-tab="watchlist" type="button">Watchlist</button>
     </div>
 
-    <label>Analysis image
-      <input type="file" id="f-image" accept="image/*">
-      <div id="image-preview"></div>
-    </label>
-
-    <label>Stock name
-      <input type="text" id="f-stock" placeholder="e.g. Reliance Industries">
-    </label>
-
-    <label>Title
-      <input type="text" id="f-title" placeholder="e.g. Breakout above key resistance">
-    </label>
-
-    <label>Call
-      <div class="call-select">
-        <button type="button" class="call-opt call-buy" data-call="BUY">Buy</button>
-        <button type="button" class="call-opt call-sell" data-call="SELL">Sell</button>
-        <button type="button" class="call-opt call-hold" data-call="HOLD">Hold</button>
+    <section id="tab-publish" class="admin-card glass tab-panel">
+      <div class="admin-card-head">
+        <h2 id="publish-heading">New Analysis</h2>
+        <button id="disconnect-btn" class="admin-link-btn" type="button" style="margin-top:0;">Use a different token</button>
       </div>
-    </label>
 
-    <div class="admin-row">
-      <label>Target<input type="text" id="f-target" placeholder="e.g. 3150"></label>
-      <label>Stop loss<input type="text" id="f-stoploss" placeholder="e.g. 2890"></label>
-    </div>
+      <label>Analysis image <span id="image-hint" style="color:var(--muted-dim);"></span>
+        <input type="file" id="f-image" accept="image/*">
+        <div id="image-preview"></div>
+      </label>
 
-    <button id="publish-btn" class="btn btn-gold" disabled>Publish</button>
+      <label>Stock name
+        <input type="text" id="f-stock" placeholder="e.g. Reliance Industries">
+      </label>
 
-    <div id="publish-log" class="admin-log"></div>
-    <div id="publish-success" class="admin-success" style="display:none;"></div>
-  </section>
+      <label>Title
+        <input type="text" id="f-title" placeholder="e.g. Breakout above key resistance">
+      </label>
+
+      <label>Call
+        <div class="call-select">
+          <button type="button" class="call-opt call-buy" data-call="BUY">Buy</button>
+          <button type="button" class="call-opt call-sell" data-call="SELL">Sell</button>
+          <button type="button" class="call-opt call-hold" data-call="HOLD">Hold</button>
+        </div>
+      </label>
+
+      <div class="admin-row">
+        <label>Target<input type="text" id="f-target" placeholder="e.g. 3150"></label>
+        <label>Stop loss<input type="text" id="f-stoploss" placeholder="e.g. 2890"></label>
+      </div>
+
+      <button id="publish-btn" class="btn btn-gold" disabled>Publish</button>
+      <button id="cancel-edit-btn" class="admin-link-btn" type="button" style="display:none;">Cancel edit</button>
+
+      <div id="publish-log" class="admin-log"></div>
+      <div id="publish-success" class="admin-success" style="display:none;"></div>
+    </section>
+
+    <section id="tab-manage" class="admin-card glass tab-panel" style="display:none;">
+      <h2>Manage Analyses</h2>
+      <div id="manage-list" class="manage-list"><p class="wl-empty">Loading&hellip;</p></div>
+    </section>
+
+    <section id="tab-watchlist" class="admin-card glass tab-panel" style="display:none;">
+      <h2>Watchlist</h2>
+      <label>Stock name
+        <input type="text" id="wl-stock" placeholder="e.g. Tata Motors">
+      </label>
+      <label>Category
+        <div class="call-select">
+          <button type="button" class="call-opt wl-cat" data-cat="SWING">Swing</button>
+          <button type="button" class="call-opt wl-cat" data-cat="LONGTERM">Long-Term</button>
+        </div>
+      </label>
+      <button id="wl-add-btn" class="btn btn-gold" disabled>Add to watchlist</button>
+      <div id="wl-log" class="admin-log"></div>
+      <div id="wl-manage-list" class="manage-list" style="margin-top:24px;"><p class="wl-empty">Loading&hellip;</p></div>
+    </section>
+  </div>
 </div>
 
 <script>
@@ -122,7 +164,7 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
   var token = localStorage.getItem('dt_admin_token') || '';
 
   var connectStep = document.getElementById('connect-step');
-  var publishStep = document.getElementById('publish-step');
+  var app = document.getElementById('app');
   var tokenInput = document.getElementById('token-input');
   var connectBtn = document.getElementById('connect-btn');
   var connectError = document.getElementById('connect-error');
@@ -130,6 +172,40 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
 
   function ghHeaders(){
     return { 'Authorization':'Bearer '+token, 'Accept':'application/vnd.github+json' };
+  }
+
+  function b64(str){ return btoa(unescape(encodeURIComponent(str))); }
+
+  function getJsonFile(path){
+    return fetch(API + '/contents/' + path + '?ref=' + branch, { headers: ghHeaders() })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(file){
+        if(!file) return { data: { updated: null, rows: [] }, sha: null };
+        var decoded = decodeURIComponent(escape(atob(file.content.replace(/\n/g,''))));
+        return { data: JSON.parse(decoded), sha: file.sha };
+      });
+  }
+
+  function putFile(path, base64Content, message, sha){
+    var body = { message: message, content: base64Content, branch: branch };
+    if(sha) body.sha = sha;
+    var headers = ghHeaders();
+    headers['Content-Type'] = 'application/json';
+    return fetch(API + '/contents/' + path, { method: 'PUT', headers: headers, body: JSON.stringify(body) })
+      .then(function(r){
+        if(!r.ok){ return r.json().then(function(e){ throw new Error(e.message || ('GitHub API error '+r.status)); }); }
+        return r.json();
+      });
+  }
+
+  function deleteFile(path, sha, message){
+    var headers = ghHeaders();
+    headers['Content-Type'] = 'application/json';
+    return fetch(API + '/contents/' + path, { method: 'DELETE', headers: headers, body: JSON.stringify({ message: message, sha: sha, branch: branch }) })
+      .then(function(r){
+        if(!r.ok){ return r.json().then(function(e){ throw new Error(e.message || ('GitHub API error '+r.status)); }); }
+        return r.json();
+      });
   }
 
   function verifyAndEnter(){
@@ -143,7 +219,7 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
       branch = repo.default_branch || 'main';
       localStorage.setItem('dt_admin_token', token);
       connectStep.style.display = 'none';
-      publishStep.style.display = 'block';
+      app.style.display = 'block';
     }).catch(function(err){
       connectError.textContent = err.message;
     }).then(function(){
@@ -161,26 +237,44 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
   disconnectBtn.addEventListener('click', function(){
     localStorage.removeItem('dt_admin_token');
     token = '';
-    publishStep.style.display = 'none';
+    app.style.display = 'none';
     connectStep.style.display = 'block';
     tokenInput.value = '';
   });
 
   if(token){ verifyAndEnter(); }
 
-  /* ---------- Publish form ---------- */
+  /* ---------- Tabs ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.style.display = 'none'; });
+      btn.classList.add('active');
+      var tab = btn.getAttribute('data-tab');
+      document.getElementById('tab-'+tab).style.display = 'block';
+      if(tab === 'manage') loadManageList();
+      if(tab === 'watchlist') loadWatchlist();
+    });
+  });
+
+  /* ---------- Publish / Edit form ---------- */
   var fImage = document.getElementById('f-image');
   var fStock = document.getElementById('f-stock');
   var fTitle = document.getElementById('f-title');
   var fTarget = document.getElementById('f-target');
   var fStopLoss = document.getElementById('f-stoploss');
-  var callOpts = document.querySelectorAll('.call-opt');
+  var callOpts = document.querySelectorAll('#tab-publish .call-opt');
   var publishBtn = document.getElementById('publish-btn');
+  var cancelEditBtn = document.getElementById('cancel-edit-btn');
+  var publishHeading = document.getElementById('publish-heading');
   var publishLog = document.getElementById('publish-log');
   var publishSuccess = document.getElementById('publish-success');
   var imagePreview = document.getElementById('image-preview');
+  var imageHint = document.getElementById('image-hint');
   var selectedCall = '';
   var compressedImageDataUrl = '';
+  var editingSlug = null;
+  var editingExisting = null;
 
   callOpts.forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -192,7 +286,8 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
   });
 
   function checkReady(){
-    publishBtn.disabled = !(fStock.value.trim() && fTitle.value.trim() && selectedCall && fTarget.value.trim() && fStopLoss.value.trim() && compressedImageDataUrl);
+    var imageOk = !!compressedImageDataUrl || !!editingSlug;
+    publishBtn.disabled = !(fStock.value.trim() && fTitle.value.trim() && selectedCall && fTarget.value.trim() && fStopLoss.value.trim() && imageOk);
   }
   [fStock, fTitle, fTarget, fStopLoss].forEach(function(el){ el.addEventListener('input', checkReady); });
 
@@ -219,31 +314,13 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
     reader.readAsDataURL(file);
   });
 
-  function slugify(s){
-    return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-  }
+  function slugify(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
 
-  function b64(str){
-    return btoa(unescape(encodeURIComponent(str)));
-  }
-
-  function logLine(text, cls){
+  function logLine(el, text, cls){
     var line = document.createElement('div');
     if(cls) line.className = cls;
     line.textContent = text;
-    publishLog.appendChild(line);
-  }
-
-  function putFile(path, base64Content, message, sha){
-    var body = { message: message, content: base64Content, branch: branch };
-    if(sha) body.sha = sha;
-    var headers = ghHeaders();
-    headers['Content-Type'] = 'application/json';
-    return fetch(API + '/contents/' + path, { method: 'PUT', headers: headers, body: JSON.stringify(body) })
-      .then(function(r){
-        if(!r.ok){ return r.json().then(function(e){ throw new Error(e.message || ('GitHub API error '+r.status)); }); }
-        return r.json();
-      });
+    el.appendChild(line);
   }
 
   function buildAnalysisPage(data){
@@ -292,7 +369,47 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
     return html;
   }
 
+  function exitEditMode(){
+    editingSlug = null;
+    editingExisting = null;
+    publishHeading.textContent = 'New Analysis';
+    cancelEditBtn.style.display = 'none';
+    publishBtn.textContent = 'Publish';
+    imageHint.textContent = '';
+    [fStock, fTitle, fTarget, fStopLoss].forEach(function(el){ el.value = ''; });
+    callOpts.forEach(function(b){ b.classList.remove('active'); });
+    selectedCall = '';
+    compressedImageDataUrl = '';
+    imagePreview.innerHTML = '';
+    fImage.value = '';
+    checkReady();
+  }
+  cancelEditBtn.addEventListener('click', exitEditMode);
+
+  function startEdit(row){
+    editingSlug = row.slug;
+    editingExisting = row;
+    fStock.value = row.stockName;
+    fTitle.value = row.title;
+    fTarget.value = row.target;
+    fStopLoss.value = row.stopLoss;
+    callOpts.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-call') === row.call); });
+    selectedCall = row.call;
+    compressedImageDataUrl = '';
+    imagePreview.innerHTML = '<img src="../' + row.image + '" alt="Current image">';
+    imageHint.textContent = '(leave blank to keep the current image)';
+    publishHeading.textContent = 'Edit Analysis';
+    cancelEditBtn.style.display = 'block';
+    publishBtn.textContent = 'Update';
+    document.querySelector('[data-tab="publish"]').click();
+    checkReady();
+  }
+
   publishBtn.addEventListener('click', function(){
+    if(editingSlug){ runUpdate(); } else { runPublish(); }
+  });
+
+  function runPublish(){
     publishBtn.disabled = true;
     publishLog.innerHTML = '';
     publishSuccess.style.display = 'none';
@@ -304,12 +421,9 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
     var now = new Date();
     var dateDisplay = now.toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'});
 
-    logLine('Checking the homepage feed…');
-    fetch(API + '/contents/data/market-analysis.json?ref=' + branch, { headers: ghHeaders() })
-    .then(function(r){ return r.ok ? r.json() : { content: b64(JSON.stringify({updated:null,rows:[]})), sha: null }; })
-    .then(function(jsonFile){
-      var current = JSON.parse(decodeURIComponent(escape(atob(jsonFile.content.replace(/\n/g,'')))));
-      var rows = current.rows || [];
+    logLine(publishLog, 'Checking the homepage feed…');
+    getJsonFile('data/market-analysis.json').then(function(res){
+      var rows = res.data.rows || [];
       var baseSlug = slugify(stockName + '-' + now.toISOString().slice(0,10));
       var slug = baseSlug;
       var n = 2;
@@ -318,40 +432,199 @@ input[type=file]{width:100%;margin-top:8px;font-size:13px;color:var(--muted);}
       var data = { slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, dateDisplay: dateDisplay };
       var imageBase64 = compressedImageDataUrl.split(',')[1];
 
-      logLine('Uploading image…');
+      logLine(publishLog, 'Uploading image…');
       return putFile('assets/analysis/' + slug + '.jpg', imageBase64, 'Add analysis image: ' + slug)
       .then(function(){
-        logLine('Image uploaded', 'done');
-        logLine('Creating the analysis page…');
+        logLine(publishLog, 'Image uploaded', 'done');
+        logLine(publishLog, 'Creating the analysis page…');
         return putFile('analysis/' + slug + '.html', b64(buildAnalysisPage(data)), 'Publish analysis page: ' + slug);
       })
       .then(function(){
-        logLine('Page created', 'done');
-        logLine('Updating the homepage feed…');
+        logLine(publishLog, 'Page created', 'done');
+        logLine(publishLog, 'Updating the homepage feed…');
         rows.unshift({ slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, image: 'assets/analysis/'+slug+'.jpg', date: now.toISOString() });
         var updated = { updated: now.toISOString(), rows: rows };
-        return putFile('data/market-analysis.json', b64(JSON.stringify(updated, null, 2)), 'Publish analysis: ' + stockName, jsonFile.sha);
+        return putFile('data/market-analysis.json', b64(JSON.stringify(updated, null, 2)), 'Publish analysis: ' + stockName, res.sha);
       })
       .then(function(){
-        logLine('Homepage feed updated', 'done');
+        logLine(publishLog, 'Homepage feed updated', 'done');
         publishSuccess.style.display = 'block';
-        publishSuccess.innerHTML = 'Published. GitHub Pages takes about a minute to go live, then it is at <a href="' + SITE + '/analysis/' + slug + '.html" target="_blank" rel="noopener">dropouttraders.in/analysis/' + slug + '.html</a>';
-        [fStock, fTitle, fTarget, fStopLoss].forEach(function(el){ el.value = ''; });
-        callOpts.forEach(function(b){ b.classList.remove('active'); });
-        selectedCall = '';
-        compressedImageDataUrl = '';
-        imagePreview.innerHTML = '';
-        fImage.value = '';
-        checkReady();
+        publishSuccess.innerHTML = 'Published. Live in about a minute at <a href="' + SITE + '/analysis/' + slug + '.html" target="_blank" rel="noopener">dropouttraders.in/analysis/' + slug + '.html</a>';
+        exitEditMode();
       });
     })
-    .catch(function(err){
-      logLine('Failed: ' + err.message, 'fail');
+    .catch(function(err){ logLine(publishLog, 'Failed: ' + err.message, 'fail'); })
+    .then(function(){ publishBtn.disabled = false; });
+  }
+
+  function runUpdate(){
+    publishBtn.disabled = true;
+    publishLog.innerHTML = '';
+    publishSuccess.style.display = 'none';
+
+    var stockName = fStock.value.trim();
+    var title = fTitle.value.trim();
+    var target = fTarget.value.trim();
+    var stopLoss = fStopLoss.value.trim();
+    var slug = editingSlug;
+    var existing = editingExisting;
+    var imagePath = 'assets/analysis/' + slug + '.jpg';
+    var imageChanged = !!compressedImageDataUrl;
+
+    logLine(publishLog, 'Loading current data…');
+    getJsonFile('data/market-analysis.json').then(function(res){
+      var rows = res.data.rows || [];
+      var idx = rows.findIndex(function(r){ return r.slug === slug; });
+      if(idx === -1) throw new Error('Could not find that entry anymore — try refreshing Manage.');
+
+      var imageStep = Promise.resolve();
+      if(imageChanged){
+        logLine(publishLog, 'Replacing image…');
+        imageStep = fetch(API + '/contents/' + imagePath + '?ref=' + branch, { headers: ghHeaders() })
+          .then(function(r){ return r.ok ? r.json() : null; })
+          .then(function(f){ return putFile(imagePath, compressedImageDataUrl.split(',')[1], 'Update analysis image: ' + slug, f ? f.sha : undefined); });
+      }
+
+      return imageStep.then(function(){
+        var data = { slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, dateDisplay: existing.date ? new Date(existing.date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '' };
+        logLine(publishLog, 'Updating the analysis page…');
+        return fetch(API + '/contents/analysis/' + slug + '.html?ref=' + branch, { headers: ghHeaders() })
+          .then(function(r){ return r.ok ? r.json() : null; })
+          .then(function(pf){ return putFile('analysis/' + slug + '.html', b64(buildAnalysisPage(data)), 'Update analysis page: ' + slug, pf ? pf.sha : undefined); });
+      }).then(function(){
+        logLine(publishLog, 'Page updated', 'done');
+        rows[idx] = { slug: slug, stockName: stockName, title: title, call: selectedCall, target: target, stopLoss: stopLoss, image: imagePath, date: existing.date };
+        var updated = { updated: new Date().toISOString(), rows: rows };
+        logLine(publishLog, 'Updating the homepage feed…');
+        return putFile('data/market-analysis.json', b64(JSON.stringify(updated, null, 2)), 'Update analysis: ' + stockName, res.sha);
+      });
     })
     .then(function(){
-      publishBtn.disabled = false;
+      logLine(publishLog, 'Homepage feed updated', 'done');
+      publishSuccess.style.display = 'block';
+      publishSuccess.innerHTML = 'Updated. Live in about a minute at <a href="' + SITE + '/analysis/' + slug + '.html" target="_blank" rel="noopener">dropouttraders.in/analysis/' + slug + '.html</a>';
+      exitEditMode();
+    })
+    .catch(function(err){ logLine(publishLog, 'Failed: ' + err.message, 'fail'); })
+    .then(function(){ publishBtn.disabled = false; });
+  }
+
+  function addToWatchlist(stockName, category){
+    return getJsonFile('data/watchlist.json').then(function(res){
+      var rows = res.data.rows || [];
+      if(rows.some(function(r){ return r.stockName.toLowerCase() === stockName.toLowerCase() && r.category === category; })){
+        return { alreadyThere: true };
+      }
+      var id = Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+      rows.unshift({ id: id, stockName: stockName, category: category });
+      var updated = { updated: new Date().toISOString(), rows: rows };
+      return putFile('data/watchlist.json', b64(JSON.stringify(updated, null, 2)), 'Add to watchlist: ' + stockName, res.sha).then(function(){ return { alreadyThere: false }; });
+    });
+  }
+
+  /* ---------- Manage tab ---------- */
+  function loadManageList(){
+    var list = document.getElementById('manage-list');
+    list.innerHTML = '<p class="wl-empty">Loading&hellip;</p>';
+    getJsonFile('data/market-analysis.json').then(function(res){
+      var rows = res.data.rows || [];
+      if(!rows.length){ list.innerHTML = '<p class="wl-empty">Nothing published yet.</p>'; return; }
+      list.innerHTML = rows.map(function(row, i){
+        return '<div class="manage-row"><div class="manage-row-info"><b>' + row.stockName + '</b> — ' + row.title + '<span>' + row.call + ' &middot; Target ' + row.target + ' &middot; SL ' + row.stopLoss + '</span></div>'
+          + '<div class="manage-row-actions"><button class="mini-btn" data-wl="' + i + '" data-cat="SWING" type="button">+ Swing</button><button class="mini-btn" data-wl="' + i + '" data-cat="LONGTERM" type="button">+ Long</button><button class="mini-btn" data-edit="' + i + '" type="button">Edit</button><button class="mini-btn mini-btn-danger" data-del="' + i + '" type="button">Delete</button></div></div>';
+      }).join('');
+      list.querySelectorAll('[data-wl]').forEach(function(b){
+        b.addEventListener('click', function(){
+          var row = rows[+b.getAttribute('data-wl')];
+          var cat = b.getAttribute('data-cat');
+          b.disabled = true;
+          addToWatchlist(row.stockName, cat).then(function(result){
+            b.textContent = result.alreadyThere ? 'Already there' : 'Added';
+          }).catch(function(err){ b.textContent = 'Failed'; alert(err.message); });
+        });
+      });
+      list.querySelectorAll('[data-edit]').forEach(function(b){ b.addEventListener('click', function(){ startEdit(rows[+b.getAttribute('data-edit')]); }); });
+      list.querySelectorAll('[data-del]').forEach(function(b){ b.addEventListener('click', function(){ deleteAnalysis(rows[+b.getAttribute('data-del')], res.sha); }); });
+    }).catch(function(err){ list.innerHTML = '<p class="wl-empty">Could not load: ' + err.message + '</p>'; });
+  }
+
+  function deleteAnalysis(row, jsonSha){
+    if(!confirm('Delete "' + row.stockName + ' — ' + row.title + '"? This removes its page and image too.')) return;
+    Promise.all([
+      fetch(API + '/contents/analysis/' + row.slug + '.html?ref=' + branch, { headers: ghHeaders() }).then(function(r){ return r.ok ? r.json() : null; }),
+      fetch(API + '/contents/' + row.image + '?ref=' + branch, { headers: ghHeaders() }).then(function(r){ return r.ok ? r.json() : null; })
+    ]).then(function(files){
+      var tasks = [];
+      if(files[0]) tasks.push(deleteFile('analysis/' + row.slug + '.html', files[0].sha, 'Delete analysis page: ' + row.slug));
+      if(files[1]) tasks.push(deleteFile(row.image, files[1].sha, 'Delete analysis image: ' + row.slug));
+      return Promise.all(tasks);
+    }).then(function(){
+      return getJsonFile('data/market-analysis.json');
+    }).then(function(res){
+      var updatedRows = (res.data.rows || []).filter(function(r){ return r.slug !== row.slug; });
+      var updated = { updated: new Date().toISOString(), rows: updatedRows };
+      return putFile('data/market-analysis.json', b64(JSON.stringify(updated, null, 2)), 'Remove analysis: ' + row.slug, res.sha);
+    }).then(function(){
+      loadManageList();
+    }).catch(function(err){ alert('Delete failed: ' + err.message); });
+  }
+
+  /* ---------- Watchlist tab ---------- */
+  var wlStock = document.getElementById('wl-stock');
+  var wlAddBtn = document.getElementById('wl-add-btn');
+  var wlLog = document.getElementById('wl-log');
+  var wlCategory = '';
+
+  document.querySelectorAll('.wl-cat').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.wl-cat').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      wlCategory = btn.getAttribute('data-cat');
+      wlAddBtn.disabled = !(wlStock.value.trim() && wlCategory);
     });
   });
+  wlStock.addEventListener('input', function(){ wlAddBtn.disabled = !(wlStock.value.trim() && wlCategory); });
+
+  function loadWatchlist(){
+    var list = document.getElementById('wl-manage-list');
+    list.innerHTML = '<p class="wl-empty">Loading&hellip;</p>';
+    getJsonFile('data/watchlist.json').then(function(res){
+      renderWlList(res.data.rows || []);
+    }).catch(function(err){ list.innerHTML = '<p class="wl-empty">Could not load: ' + err.message + '</p>'; });
+  }
+
+  function renderWlList(rows){
+    var list = document.getElementById('wl-manage-list');
+    if(!rows.length){ list.innerHTML = '<p class="wl-empty">Nothing on the watchlist yet.</p>'; return; }
+    list.innerHTML = rows.map(function(row){
+      return '<div class="manage-row"><div class="manage-row-info"><b>' + row.stockName + '</b><span>' + (row.category === 'SWING' ? 'Swing' : 'Long-Term') + '</span></div>'
+        + '<div class="manage-row-actions"><button class="mini-btn mini-btn-danger" data-wl-del="' + row.id + '" type="button">Remove</button></div></div>';
+    }).join('');
+    list.querySelectorAll('[data-wl-del]').forEach(function(b){ b.addEventListener('click', function(){ removeWatchlistItem(b.getAttribute('data-wl-del')); }); });
+  }
+
+  wlAddBtn.addEventListener('click', function(){
+    wlAddBtn.disabled = true;
+    wlLog.textContent = '';
+    var stockName = wlStock.value.trim();
+    addToWatchlist(stockName, wlCategory).then(function(result){
+      wlLog.textContent = result.alreadyThere ? 'Already on that list.' : 'Added.';
+      wlStock.value = '';
+      document.querySelectorAll('.wl-cat').forEach(function(b){ b.classList.remove('active'); });
+      wlCategory = '';
+      loadWatchlist();
+    }).catch(function(err){ wlLog.textContent = 'Failed: ' + err.message; })
+    .then(function(){ wlAddBtn.disabled = false; });
+  });
+
+  function removeWatchlistItem(id){
+    if(!confirm('Remove this from the watchlist?')) return;
+    getJsonFile('data/watchlist.json').then(function(res){
+      var rows = (res.data.rows || []).filter(function(r){ return r.id !== id; });
+      var updated = { updated: new Date().toISOString(), rows: rows };
+      return putFile('data/watchlist.json', b64(JSON.stringify(updated, null, 2)), 'Remove from watchlist: ' + id, res.sha);
+    }).then(function(){ loadWatchlist(); }).catch(function(err){ alert('Failed: ' + err.message); });
+  }
 })();
 </script>
 </body>

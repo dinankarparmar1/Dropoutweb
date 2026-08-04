@@ -1,4 +1,15 @@
 {
-  "updated": null,
-  "rows": []
+  "updated": "2026-08-04T09:34:35.127Z",
+  "rows": [
+    {
+      "slug": "p-c-jeweller-2026-08-04",
+      "stockName": "P.C Jeweller",
+      "title": "Breakout above 9.70",
+      "call": "BUY",
+      "target": "13 ,15",
+      "stopLoss": "8",
+      "image": "assets/analysis/p-c-jeweller-2026-08-04.jpg",
+      "date": "2026-08-04T09:34:35.127Z"
+    }
+  ]
 }

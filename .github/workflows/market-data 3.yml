@@ -1,0 +1,48 @@
+name: Update market data
+
+on:
+  schedule:
+    # NSE trading hours are 09:15-15:30 IST = 03:45-10:00 UTC. GitHub's
+    # scheduler is best-effort and can run a few minutes late under load,
+    # so "every 15 min" here means "at least every 15 min", not to-the-
+    # second -- that's a GitHub Actions platform limitation, not something
+    # a workflow can force tighter.
+    - cron: '45 3 * * 1-5'      # 09:15 IST -- market open
+    - cron: '*/15 4-9 * * 1-5'  # 09:30 IST through 15:15 IST, every 15 min
+    - cron: '0 10 * * 1-5'      # 15:30 IST -- market close
+    # 13:00 UTC = 18:30 IST -- after NSE close and after FII/DII + insider
+    # filings are usually published for the day (those two don't need the
+    # 15-min cadence, only the heatmap does, but re-running everything is
+    # simpler than splitting into two workflows).
+    - cron: '0 13 * * 1-5'
+  workflow_dispatch: {}   # lets you run it on demand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch FII/DII, insider trading, market breadth, and heatmap data
+        run: python3 scripts/fetch_market_data.py --debug
+
+      - name: Commit updated data (if anything changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --quiet --cached || git commit -m "Update market data $(date -u +'%Y-%m-%d')"
+          git push
+

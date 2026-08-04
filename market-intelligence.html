@@ -249,6 +249,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
           {
             "symbols": [
@@ -286,6 +287,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container" style="height:430px;">
           <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
           {
             "colorTheme": "dark",
@@ -381,6 +383,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container" style="height:400px;">
           <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
           {
             "interval": "1D",
@@ -629,7 +632,10 @@ if(miMarketsGrid){
     return '<div class="glass market-card"><div class="mc-head"><span>'+m.name+'</span>'+
       (m.delayed ? '<span class="live-dot" style="color:var(--muted-dim);"><span style="width:6px;height:6px;"></span>Chart</span>' : '<span class="live-dot">Live</span>')+
     '</div>'+
-    '<div class="tv-wrap" id="mi-tv-mini-'+idx+'"></div></div>';
+    '<div class="tv-wrap"><div class="tradingview-widget-container" id="mi-tv-mini-'+idx+'" style="height:100%;">'+
+      '<div class="tradingview-widget-container__widget"></div>'+
+      '<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>'+
+    '</div></div></div>';
   }).join('');
   MI_MARKETS.forEach(function(m, idx){
     var container = document.getElementById('mi-tv-mini-'+idx);

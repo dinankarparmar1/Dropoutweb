@@ -85,6 +85,14 @@
 .call-hold{background:rgba(212,175,55,.15);color:var(--gold-bright);border:1px solid rgba(212,175,55,.35);}
 .analysis-empty{grid-column:1/-1;text-align:center;padding:50px 30px;color:var(--muted);border-radius:var(--radius);}
 @media (max-width:640px){.analysis-grid{grid-template-columns:1fr;}}
+.watchlist-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.watchlist-col{padding:26px 26px 30px;}
+.wl-col-head{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--panel-border);}
+.wl-list{display:flex;flex-direction:column;gap:2px;}
+.wl-item{padding:11px 4px;font-family:'Inter',sans-serif;font-size:14.5px;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.04);}
+.wl-item:last-child{border-bottom:none;}
+.wl-empty{color:var(--muted-dim);font-size:13.5px;}
+@media (max-width:720px){.watchlist-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -137,6 +145,7 @@
       <a href="courses.html">Courses</a>
       <a href="market-intelligence.html">Market Intelligence</a>
       <a href="#market-analysis">Market Analysis</a>
+      <a href="#watchlist">Watchlist</a>
       <a href="#calculators">Calculators</a>
       <a href="#contact">Contact Us</a>
     </div>
@@ -153,6 +162,7 @@
   <a href="courses.html">Courses</a>
   <a href="market-intelligence.html">Market Intelligence</a>
   <a href="#market-analysis">Market Analysis</a>
+  <a href="#watchlist">Watchlist</a>
   <a href="#calculators">Calculators</a>
   <a href="#contact">Contact Us</a>
 </div>
@@ -326,6 +336,30 @@
     <div class="analysis-grid" id="analysis-grid">
       <div class="analysis-empty glass">
         <p>New analysis is published here regularly — check back soon.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+      <a href="analysis/" class="btn btn-outline-gold" style="display:inline-block;width:auto;padding:13px 30px;">View All Analysis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WATCHLIST ============ -->
+<section id="watchlist">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">On The Radar</div>
+      <h2>Stock <span class="accent">Watchlist</span></h2>
+      <p>Names currently being tracked, split by trade horizon.</p>
+    </div>
+    <div class="watchlist-grid">
+      <div class="watchlist-col glass">
+        <div class="wl-col-head">Swing</div>
+        <div class="wl-list" id="wl-swing"><p class="wl-empty">Nothing on the swing list yet.</p></div>
+      </div>
+      <div class="watchlist-col glass">
+        <div class="wl-col-head">Long-Term</div>
+        <div class="wl-list" id="wl-longterm"><p class="wl-empty">Nothing on the long-term list yet.</p></div>
       </div>
     </div>
   </div>
@@ -826,6 +860,26 @@ fetch('data/market-analysis.json').then(function(r){ if(!r.ok) throw new Error('
   }).join('');
 })
 .catch(function(){ /* data/market-analysis.json not published yet — placeholder stays as-is */ });
+
+/* ---------------------------------------------------------------
+   WATCHLIST — reads data/watchlist.json, splits rows into the
+   Swing and Long-Term columns. Same graceful-fallback pattern.
+--------------------------------------------------------------- */
+fetch('data/watchlist.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
+.then(function(payload){
+  var rows = payload.rows || [];
+  if(!rows.length) return;
+  var swing = rows.filter(function(r){ return r.category === 'SWING'; });
+  var longterm = rows.filter(function(r){ return r.category === 'LONGTERM'; });
+  function renderCol(id, items){
+    var el = document.getElementById(id);
+    if(!items.length) return;
+    el.innerHTML = items.map(function(r){ return '<div class="wl-item">'+r.stockName+'</div>'; }).join('');
+  }
+  renderCol('wl-swing', swing);
+  renderCol('wl-longterm', longterm);
+})
+.catch(function(){ /* data/watchlist.json not published yet — placeholder stays as-is */ });
 
 })();
 </script>

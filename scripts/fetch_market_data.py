@@ -319,105 +319,108 @@ def build_market_breadth(session: requests.Session, debug: bool):
 # ---------------------------------------------------------------------------
 # HEATMAP DATA (Nifty 50 / Bank Nifty / sector indices)
 # ---------------------------------------------------------------------------
-# Why this replaces the TradingView Stock Heatmap widget: that widget's
-# "dataSource"/"exchanges" options (tried "NIFTY50", "BANKNIFTY", "India",
-# and exchange filters for both NSE and BSE) never returned real data for
-# India in the free public embed -- either a silent fallback to unrelated
-# US mega-caps or an empty "No data match your criteria" state. NSE's own
-# /api/equity-stockIndices endpoint is the same one this script already
-# uses successfully for FII/DII and market breadth, so it uses the same
-# proven session-warming approach instead of depending on a third-party
-# widget's undocumented, apparently-unlicensed-for-India behaviour.
-SECTOR_INDICES = [
-    ("Banking", "NIFTY BANK"),
-    ("IT", "NIFTY IT"),
-    ("Auto", "NIFTY AUTO"),
-    ("Pharma", "NIFTY PHARMA"),
-    ("FMCG", "NIFTY FMCG"),
-    ("Metals", "NIFTY METAL"),
-    ("Energy", "NIFTY ENERGY"),
-    ("Realty", "NIFTY REALTY"),
-    ("Media", "NIFTY MEDIA"),
-    ("Financial Services", "NIFTY FIN SERVICE"),
-    ("Healthcare", "NIFTY HEALTHCARE INDEX"),
-    ("Consumer Durables", "NIFTY CONSUMER DURABLES"),
-    ("PSU Banks", "NIFTY PSU BANK"),
+# Why this doesn't use NSE: NSE's /api/equity-stockIndices endpoint (the one
+# that would auto-list every constituent of an index) 404s consistently --
+# confirmed not just from this script but from a browser tapping the exact
+# same URL directly, so it isn't an anti-bot/IP thing, that specific
+# endpoint is just dead or gated right now. Rather than depend on NSE for
+# this one piece, we use our own known-correct constituent lists below and
+# pull each stock's price/change from Yahoo Finance's quote endpoint
+# instead (a different provider entirely, ".NS" suffix for NSE tickers).
+# If NSE's endpoint comes back later this can be pointed back at it, but
+# there's no reason to depend on a single vendor here.
+#
+# These lists are current as of the 2026 semi-annual index reviews but WILL
+# drift over time as NSE rebalances -- if a tile silently stops appearing
+# for a stock that's left an index, or a new addition is missing, that's
+# why. Update the lists below, no other code changes needed.
+
+NIFTY50_SYMBOLS = [
+    "RELIANCE","HDFCBANK","BHARTIARTL","SBIN","ICICIBANK","TCS","INFY",
+    "BAJFINANCE","HINDUNILVR","LT","SUNPHARMA","MARUTI","M&M","HCLTECH",
+    "AXISBANK","ITC","NTPC","ONGC","KOTAKBANK","TITAN","ULTRACEMCO",
+    "ADANIPORTS","BEL","TECHM","WIPRO","TATAMOTORS","BAJAJ-AUTO",
+    "ASIANPAINT","TATASTEEL","POWERGRID","JSWSTEEL","GRASIM","NESTLEIND",
+    "CIPLA","DRREDDY","EICHERMOT","APOLLOHOSP","BPCL","DIVISLAB",
+    "BRITANNIA","COALINDIA","HEROMOTOCO","HINDALCO","INDUSINDBK","SBILIFE",
+    "SHRIRAMFIN","TATACONSUM","HDFCLIFE","TRENT","JIOFIN",
 ]
 
+BANK_NIFTY_SYMBOLS = [
+    "HDFCBANK","ICICIBANK","SBIN","AXISBANK","KOTAKBANK","FEDERALBNK",
+    "INDUSINDBK","AUBANK","IDFCFIRSTB","BANKBARODA","PNB","CANBK","YESBANK",
+]
 
-def fetch_index_constituents(session: requests.Session, index_name: str, debug: bool = False):
-    """One call to /api/equity-stockIndices returns every constituent of the
-    named NSE index with its live price and % change. Used for NIFTY 50,
-    NIFTY BANK, and each sector index in SECTOR_INDICES.
+SECTOR_STOCKS = {
+    "Banking": ["HDFCBANK","ICICIBANK","SBIN","AXISBANK","KOTAKBANK","INDUSINDBK"],
+    "IT": ["TCS","INFY","HCLTECH","WIPRO","TECHM","LTIM"],
+    "Auto": ["MARUTI","M&M","TATAMOTORS","BAJAJ-AUTO","EICHERMOT","HEROMOTOCO"],
+    "Pharma": ["SUNPHARMA","CIPLA","DRREDDY","DIVISLAB","APOLLOHOSP","LUPIN"],
+    "FMCG": ["HINDUNILVR","ITC","NESTLEIND","BRITANNIA","TATACONSUM","DABUR"],
+    "Metals": ["TATASTEEL","JSWSTEEL","HINDALCO","VEDL","JINDALSTEL","SAIL"],
+    "Energy": ["RELIANCE","ONGC","BPCL","COALINDIA","NTPC","POWERGRID"],
+    "Realty": ["DLF","GODREJPROP","OBEROIRLTY","PRESTIGE","PHOENIXLTD","LODHA"],
+    "Media": ["ZEEL","SUNTV","PVRINOX","NETWORK18","TV18BRDCST"],
+    "Financial Services": ["BAJFINANCE","BAJAJFINSV","SBILIFE","HDFCLIFE","SHRIRAMFIN","ICICIGI"],
+    "Healthcare": ["APOLLOHOSP","MAXHEALTH","FORTIS","LALPATHLAB","METROPOLIS"],
+    "Consumer Durables": ["TITAN","ASIANPAINT","VOLTAS","HAVELLS","CROMPTON","BLUESTARCO"],
+    "PSU Banks": ["SBIN","BANKBARODA","PNB","CANBK","UNIONBANK","INDIANB"],
+}
 
-    This endpoint 404s even on an otherwise-warmed session unless the
-    Referer header points at the actual index page for that index (the
-    other endpoints this script uses don't need this -- this one does).
-    So each call visits that index's live-equity-market page first to set
-    a matching Referer/cookies, the same way a real browser would before
-    the page's own JS fetches this same API.
-    """
+YAHOO_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept": "application/json",
+}
+
+
+def fetch_yahoo_quote(symbol: str, debug: bool = False):
+    """One call per stock to Yahoo Finance's chart endpoint, using the .NS
+    suffix for NSE-listed tickers. Returns {symbol, price, pChange} or None
+    if Yahoo has nothing for this symbol (e.g. a delisted/renamed ticker)."""
     from urllib.parse import quote
-    referer_page = f"{BASE}/market-data/live-equity-market?index={quote(index_name)}"
-    try:
-        session.get(referer_page, timeout=15, headers={"Referer": f"{BASE}/market-data/live-equity-market"})
-        time.sleep(0.5)
-    except Exception as e:
-        if debug:
-            print(f"Referer warm-up failed for {index_name} (continuing anyway): {e}")
+    ticker = quote(f"{symbol}.NS")
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?range=5d&interval=1d"
+    r = requests.get(url, headers=YAHOO_HEADERS, timeout=15)
+    r.raise_for_status()
+    raw = r.json()
+    if debug and symbol in ("RELIANCE", "HDFCBANK"):
+        print(f"RAW yahoo {symbol}:", json.dumps(raw, indent=2)[:600])
 
-    path = f"/api/equity-stockIndices?index={quote(index_name)}"
-    raw = fetch_json(session, path, extra_headers={"Referer": referer_page})
-    rows = raw.get("data", []) if isinstance(raw, dict) else (raw or [])
-    if debug:
-        print(f"RAW {path} sample:", json.dumps(rows[:2], indent=2))
+    result = (raw.get("chart") or {}).get("result") or []
+    if not result:
+        return None
+    meta = result[0].get("meta") or {}
+    price = meta.get("regularMarketPrice")
+    prev = meta.get("previousClose") or meta.get("chartPreviousClose")
+    if price is None or not prev:
+        return None
+    p_change = (price - prev) / prev * 100
+    return {"symbol": symbol, "price": price, "pChange": round(p_change, 2)}
 
+
+def fetch_quotes(symbols, debug: bool = False):
     out = []
-    for entry in rows:
-        symbol = entry.get("symbol")
-        # The index summary row itself (symbol == the index name) isn't a
-        # constituent stock -- skip it.
-        if not symbol or symbol.strip().upper() == index_name.strip().upper():
-            continue
-        out.append({
-            "symbol": symbol,
-            "price": entry.get("lastPrice"),
-            "pChange": entry.get("pChange"),
-            # ffmc = free-float market cap, when NSE includes it; used as a
-            # rough weight for box sizing. Falls back to equal sizing
-            # client-side if missing.
-            "weight": entry.get("ffmc"),
-        })
+    for symbol in symbols:
+        try:
+            q = fetch_yahoo_quote(symbol, debug)
+            if q:
+                out.append(q)
+        except Exception as e:
+            print(f"Yahoo quote failed for {symbol}: {e}", file=sys.stderr)
+        time.sleep(0.2)  # be polite -- ~150 calls total across a full run
     return out
 
 
 def build_heatmap(session: requests.Session, debug: bool):
-    # Each index fetched independently and wrapped in its own try/except --
-    # previously a failure on NIFTY 50 alone (fetched first, unguarded)
-    # silently aborted Bank Nifty and every sector fetch too, since they
-    # never even ran. Now one bad index can't take the rest down with it.
-    nifty50, bank_nifty = [], []
-    try:
-        nifty50 = fetch_index_constituents(session, "NIFTY 50", debug)
-        time.sleep(0.5)
-    except Exception as e:
-        print(f"Nifty 50 fetch failed: {e}", file=sys.stderr)
-
-    try:
-        bank_nifty = fetch_index_constituents(session, "NIFTY BANK", debug)
-        time.sleep(0.5)
-    except Exception as e:
-        print(f"Bank Nifty fetch failed: {e}", file=sys.stderr)
+    nifty50 = fetch_quotes(NIFTY50_SYMBOLS, debug)
+    bank_nifty = fetch_quotes(BANK_NIFTY_SYMBOLS, debug)
 
     sectors = []
-    for label, index_name in SECTOR_INDICES:
-        try:
-            stocks = fetch_index_constituents(session, index_name, debug)
-            if stocks:
-                sectors.append({"name": label, "stocks": stocks})
-            time.sleep(0.5)  # be polite between the extra sector calls
-        except Exception as e:
-            print(f"Sector fetch failed for {index_name}: {e}", file=sys.stderr)
+    for label, symbols in SECTOR_STOCKS.items():
+        stocks = fetch_quotes(symbols, debug)
+        if stocks:
+            sectors.append({"name": label, "stocks": stocks})
 
     if not nifty50 and not bank_nifty and not sectors:
         raise RuntimeError("Heatmap fetch returned nothing for Nifty 50, Bank Nifty, or any sector")

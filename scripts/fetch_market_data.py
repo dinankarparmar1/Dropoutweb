@@ -377,7 +377,15 @@ YAHOO_HEADERS = {
 def fetch_yahoo_quote(symbol: str, debug: bool = False):
     """One call per stock to Yahoo Finance's chart endpoint, using the .NS
     suffix for NSE-listed tickers. Returns {symbol, price, pChange} or None
-    if Yahoo has nothing for this symbol (e.g. a delisted/renamed ticker)."""
+    if Yahoo has nothing for this symbol (e.g. a delisted/renamed ticker).
+
+    % change is computed from the actual daily close-price series
+    (indicators.quote[0].close), not from meta.previousClose -- that meta
+    field is computed server-side by Yahoo and was observed returning a
+    stale/mismatched reference (e.g. showing a stock up when it was
+    actually down), especially right around market open/close. Reading the
+    last two real closes ourselves is slower to write but verifiable.
+    """
     from urllib.parse import quote
     ticker = quote(f"{symbol}.NS")
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?range=5d&interval=1d"
@@ -385,18 +393,32 @@ def fetch_yahoo_quote(symbol: str, debug: bool = False):
     r.raise_for_status()
     raw = r.json()
     if debug and symbol in ("RELIANCE", "HDFCBANK"):
-        print(f"RAW yahoo {symbol}:", json.dumps(raw, indent=2)[:600])
+        print(f"RAW yahoo {symbol}:", json.dumps(raw, indent=2)[:800])
 
     result = (raw.get("chart") or {}).get("result") or []
     if not result:
         return None
-    meta = result[0].get("meta") or {}
-    price = meta.get("regularMarketPrice")
-    prev = meta.get("previousClose") or meta.get("chartPreviousClose")
-    if price is None or not prev:
+    r0 = result[0]
+    meta = r0.get("meta") or {}
+    quotes = ((r0.get("indicators") or {}).get("quote") or [{}])[0]
+    closes = [c for c in (quotes.get("close") or []) if c is not None]
+
+    if len(closes) >= 2:
+        # Last close is today's (or most recent session's); the one before
+        # it is the true previous session's close -- both from the same
+        # verified series, no reliance on a separately-computed field.
+        price, prev = closes[-1], closes[-2]
+    elif len(closes) == 1 and meta.get("previousClose"):
+        # Only one close in range (e.g. right at a fresh listing) -- fall
+        # back to meta as a last resort.
+        price, prev = closes[-1], meta["previousClose"]
+    else:
+        return None
+
+    if not prev:
         return None
     p_change = (price - prev) / prev * 100
-    return {"symbol": symbol, "price": price, "pChange": round(p_change, 2)}
+    return {"symbol": symbol, "price": round(price, 2), "pChange": round(p_change, 2)}
 
 
 def fetch_quotes(symbols, debug: bool = False):

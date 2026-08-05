@@ -55,6 +55,27 @@
     return pdfLibPromise;
   }
 
+  // Reconstructs page text in actual visual reading order (top-to-bottom,
+  // left-to-right) instead of the PDF's raw internal storage order — dense
+  // financial tables otherwise come out with numbers and labels scrambled.
+  function reconstructPageText(content) {
+    const items = content.items;
+    if (!items.length) return "";
+    const yTolerance = 3;
+    const lines = [];
+    for (const item of items) {
+      const x = item.transform[4];
+      const y = item.transform[5];
+      let line = lines.find((l) => Math.abs(l.y - y) <= yTolerance);
+      if (!line) { line = { y, items: [] }; lines.push(line); }
+      line.items.push({ x, str: item.str });
+    }
+    lines.sort((a, b) => b.y - a.y); // PDF y increases upward — sort top to bottom
+    return lines
+      .map((line) => line.items.sort((a, b) => a.x - b.x).map((i) => i.str).join(" "))
+      .join("\n");
+  }
+
   async function extractPdfText(file, charCap) {
     const cap = charCap || MAX_PDF_CHARS;
     await ensurePdfLib();
@@ -72,7 +93,7 @@
       if (text.length > cap) break;
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
-      const pageText = content.items.map((it) => it.str).join(" ");
+      const pageText = reconstructPageText(content);
       const lower = pageText.toLowerCase();
       if (KEY_SECTION_TERMS.some((term) => lower.includes(term))) {
         text += `[Page ${i}]\n${pageText}\n\n`;

@@ -60,17 +60,52 @@
     await ensurePdfLib();
     const buf = await file.arrayBuffer();
     const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
-    let text = "";
     const pageCount = Math.min(pdf.numPages, MAX_PDF_PAGES);
+
+    // Don't read the whole report front-to-back — only pull in pages that
+    // actually relate to what the Dropout Score needs: business quality,
+    // financial strength, management quality, and valuation. This keeps
+    // things fast and keeps the AI focused on exactly the factors that matter.
+    let text = "";
+    let matchedPages = 0;
     for (let i = 1; i <= pageCount; i++) {
+      if (text.length > cap) break;
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
-      text += content.items.map((it) => it.str).join(" ") + "\n\n";
-      if (text.length > cap) break;
+      const pageText = content.items.map((it) => it.str).join(" ");
+      const lower = pageText.toLowerCase();
+      if (KEY_SECTION_TERMS.some((term) => lower.includes(term))) {
+        text += `[Page ${i}]\n${pageText}\n\n`;
+        matchedPages++;
+      }
     }
-    const truncated = text.length > cap || pdf.numPages > MAX_PDF_PAGES;
-    return { text: text.slice(0, cap), truncated, pages: pdf.numPages };
+
+    const truncated = pdf.numPages > pageCount || text.length > cap;
+    return { text: text.slice(0, cap), truncated, pages: pdf.numPages, matchedPages };
   }
+
+  // Terms tied directly to the four Dropout Score pillars — a page is only
+  // included if it mentions at least one of these.
+  const KEY_SECTION_TERMS = [
+    // Business Quality & Moat
+    "competitive advantage", "market leadership", "market share", "pricing power",
+    "economic moat", "brand strength", "industry outlook", "sector outlook",
+    "growth drivers", "business overview", "management discussion and analysis",
+    // Financial Strength
+    "return on equity", "return on capital employed", "roe", "roce",
+    "debt to equity", "debt-equity", "net debt", "free cash flow",
+    "operating cash flow", "cash flow from operat", "financial highlights",
+    "year financial", "ratio analysis", "ebitda margin", "net profit margin",
+    // Management Quality
+    "shareholding pattern", "promoter holding", "promoter shareholding",
+    "corporate governance", "board of directors", "related party",
+    "code of conduct", "whistle blower", "vigil mechanism", "chairman's message",
+    "managing director",
+    // Valuation
+    "price to earning", "price/earning", "p/e ratio", "earnings per share",
+    "book value per share", "market capitalisation", "market capitalization",
+    "dividend per share", "dividend payout",
+  ];
 
   // ── Tiny, safe markdown-lite renderer for bot replies ─────────────────────
   // Escapes HTML first (AI text is untrusted), then supports **bold** and
@@ -409,7 +444,7 @@
       const status = addStatus(
         isCompare
           ? `Reading report 1 of ${files.length}: ${files[0].name}…`
-          : "Reading and analyzing your document — for a long report this can take up to a minute, please hang on."
+          : "Scanning your document for the data that feeds the Dropout Score — this can take a moment for a long report, please hang on."
       );
 
       try {
@@ -418,13 +453,13 @@
 
         for (let i = 0; i < files.length; i++) {
           const f = files[i];
-          if (isCompare) status.update(`Reading report ${i + 1} of ${files.length}: ${f.name}…`);
-          const { text, truncated, pages } = await extractPdfText(f, perDocCap);
-          if (!text.trim()) {
-            docBlocks.push(`Document: "${f.name}"\n[No readable text could be extracted — likely a scanned image without selectable text.]`);
+          if (isCompare) status.update(`Scanning report ${i + 1} of ${files.length} for key data: ${f.name}…`);
+          const { text, truncated, pages, matchedPages } = await extractPdfText(f, perDocCap);
+          if (!text.trim() || matchedPages === 0) {
+            docBlocks.push(`Document: "${f.name}"\n[No pages matching the scoring-relevant terms were found — this may be a scanned image without selectable text, or a document that doesn't use standard annual-report terminology.]`);
             continue;
           }
-          const notice = truncated ? `\n[Note: only part of this ${pages}-page document was read due to length limits.]` : "";
+          const notice = `\n[Note: this is a targeted extract — ${matchedPages} page(s) out of ${pages} total that matched scoring-relevant terms (business quality, financials, governance, valuation), not the full document.${truncated ? " Some matching pages may have been left out due to length limits." : ""}]`;
           docBlocks.push(`Document: "${f.name}"\n${text}${notice}`);
         }
 

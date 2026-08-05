@@ -2,12 +2,21 @@
    Ivaan — Dropout Traders AI Financial Assistant
    Phase 1: Chat widget, futuristic mini-robot mascot edition.
    Phase 2: Persistent chat history (loads from the Worker's database).
+   Phase 3: PDF upload & analysis (annual reports, statements, etc).
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
   // 1) Point this at your deployed Worker URL, ending in /chat
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
   const HISTORY_URL = WORKER_URL.replace(/\/chat\/?$/, "/history");
+
+  // PDFs are read entirely in the visitor's own browser using pdf.js —
+  // nothing is uploaded anywhere, keeping this free and private.
+  const PDFJS_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
+  const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+  const MAX_PDF_PAGES = 25;
+  const MAX_PDF_CHARS = 18000;
+  const MAX_PDF_BYTES = 15 * 1024 * 1024; // 15MB
 
   // Each visitor gets a private, persistent ID stored only in their own
   // browser — this is how their chat history is found again on return visits.
@@ -22,6 +31,42 @@
     } catch {
       return null; // localStorage unavailable (private mode etc.) — chat still works, just won't persist
     }
+  }
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = () => reject(new Error("Failed to load " + src));
+      document.head.appendChild(s);
+    });
+  }
+
+  let pdfLibPromise = null;
+  function ensurePdfLib() {
+    if (!pdfLibPromise) {
+      pdfLibPromise = loadScript(PDFJS_URL).then(() => {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER_URL;
+      });
+    }
+    return pdfLibPromise;
+  }
+
+  async function extractPdfText(file) {
+    await ensurePdfLib();
+    const buf = await file.arrayBuffer();
+    const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
+    let text = "";
+    const pageCount = Math.min(pdf.numPages, MAX_PDF_PAGES);
+    for (let i = 1; i <= pageCount; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      text += content.items.map((it) => it.str).join(" ") + "\n\n";
+      if (text.length > MAX_PDF_CHARS) break;
+    }
+    const truncated = text.length > MAX_PDF_CHARS || pdf.numPages > MAX_PDF_PAGES;
+    return { text: text.slice(0, MAX_PDF_CHARS), truncated, pages: pdf.numPages };
   }
 
   const STYLE = `
@@ -71,16 +116,22 @@
   .ai-msg{max-width:78%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
   .ai-msg.bot{background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,.15);color:#f6f4ee;}
   .ai-msg.user{background:linear-gradient(135deg,#f3d576,#d4af37);color:#1a1305;}
+  .ai-msg.file{background:rgba(212,175,55,.12);border:1px dashed rgba(212,175,55,.5);color:#f3d576;
+    font-family:'Space Mono',monospace;font-size:12px;}
   .ai-typing-dots{display:flex;gap:4px;padding:4px 2px;}
   .ai-typing-dots span{width:5px;height:5px;border-radius:50%;background:#d4af37;animation:ai-dot 1.2s infinite;}
   .ai-typing-dots span:nth-child(2){animation-delay:.15s;}
   .ai-typing-dots span:nth-child(3){animation-delay:.3s;}
   .ai-foot{position:relative;padding:12px;border-top:1px solid rgba(212,175,55,.22);display:flex;gap:8px;}
-  .ai-foot input{flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);
+  .ai-attach{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);border-radius:10px;
+    width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;}
+  .ai-attach:hover{border-color:#d4af37;}
+  .ai-attach svg{width:17px;height:17px;}
+  .ai-foot input[type=text]{flex:1;min-width:0;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);
     border-radius:10px;padding:10px 12px;color:#f6f4ee;font-size:13.5px;font-family:inherit;}
-  .ai-foot input:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.15);}
-  .ai-foot button{background:linear-gradient(135deg,#f3d576,#d4af37);
-    border:none;border-radius:10px;padding:0 16px;color:#1a1305;font-weight:600;cursor:pointer;font-size:13px;}
+  .ai-foot input[type=text]:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.15);}
+  .ai-foot button.ai-send-btn{background:linear-gradient(135deg,#f3d576,#d4af37);
+    border:none;border-radius:10px;padding:0 16px;color:#1a1305;font-weight:600;cursor:pointer;font-size:13px;flex-shrink:0;}
   .ai-foot button:disabled{opacity:.5;cursor:default;}
   .ai-disclaimer{position:relative;padding:6px 16px 10px;font-size:9.5px;line-height:1.5;color:#6f6c66;text-align:center;}
   @media (max-width:480px){.ai-panel{left:14px;right:14px;width:auto;bottom:90px;}.ai-fab{left:16px;bottom:16px;}}
@@ -111,6 +162,8 @@
     </svg>`;
   }
 
+  const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
+
   function injectStyle() {
     const s = document.createElement("style");
     s.textContent = STYLE;
@@ -138,8 +191,10 @@
         </div>
         <div class="ai-body" id="ai-body"></div>
         <div class="ai-foot">
+          <button class="ai-attach" type="button" title="Upload a PDF (annual report, statement, etc.)">${PAPERCLIP_SVG}</button>
+          <input type="file" id="ai-file" accept="application/pdf" style="display:none">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
-          <button id="ai-send">Ask</button>
+          <button id="ai-send" class="ai-send-btn">Ask</button>
         </div>
         <div class="ai-disclaimer">Educational information only — not investment advice.</div>
       </div>
@@ -153,8 +208,10 @@
     const body = panel.querySelector("#ai-body");
     const input = panel.querySelector("#ai-input");
     const send = panel.querySelector("#ai-send");
+    const attachBtn = panel.querySelector(".ai-attach");
+    const fileInput = panel.querySelector("#ai-file");
 
-    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts.";
+    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. You can also tap the paperclip to upload a PDF — like an annual report — and I'll analyze it.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -180,6 +237,11 @@
       const row = addRow(bubble, cls, cls === "bot");
       row.querySelector(".ai-msg").textContent = text;
       return row;
+    }
+
+    function addFileChip(filename) {
+      const bubble = `<div class="ai-msg file">📄 ${filename}</div>`;
+      return addRow(bubble, "user", false);
     }
 
     function addTyping() {
@@ -223,6 +285,24 @@
       renderGreeting();
     });
 
+    // Sends a request to the Worker. `persistLabel`, when given, is what gets
+    // saved to the database instead of the (possibly huge) actual prompt —
+    // used for PDF uploads so we don't store the whole document text.
+    async function sendToIvaan(messagesForModel, persistLabel) {
+      const res = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: messagesForModel,
+          session_id: sessionId,
+          persist_label: persistLabel || undefined,
+        }),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      const data = await res.json();
+      return data.reply || "Sorry, I couldn't get an answer just now.";
+    }
+
     async function ask() {
       const q = input.value.trim();
       if (!q) return;
@@ -233,15 +313,8 @@
       const typing = addTyping();
 
       try {
-        const res = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: history.slice(-10), session_id: sessionId }),
-        });
-        if (!res.ok) throw new Error("Request failed");
-        const data = await res.json();
+        const reply = await sendToIvaan(history.slice(-10));
         typing.remove();
-        const reply = data.reply || "Sorry, I couldn't get an answer just now.";
         addMsg(reply, "bot");
         history.push({ role: "assistant", content: reply });
       } catch (err) {
@@ -256,6 +329,64 @@
     send.addEventListener("click", ask);
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") ask();
+    });
+
+    // ── Phase 3: PDF upload & analysis ──────────────────────────────────────
+    attachBtn.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", async () => {
+      const file = fileInput.files[0];
+      fileInput.value = ""; // allow re-selecting the same file later
+      if (!file) return;
+
+      if (file.type !== "application/pdf") {
+        addMsg("I can only read PDF files right now — try exporting that as a PDF first.", "bot");
+        return;
+      }
+      if (file.size > MAX_PDF_BYTES) {
+        addMsg("That PDF is too large (over 15MB) — try a smaller file or an extracted section.", "bot");
+        return;
+      }
+
+      addFileChip(file.name);
+      send.disabled = true;
+      attachBtn.style.opacity = ".5";
+      attachBtn.style.pointerEvents = "none";
+      const typing = addTyping();
+
+      try {
+        const { text, truncated, pages } = await extractPdfText(file);
+        if (!text.trim()) {
+          typing.remove();
+          addMsg("I couldn't find readable text in that PDF — it may be a scanned image rather than selectable text.", "bot");
+          return;
+        }
+
+        const notice = truncated
+          ? `\n\n[Note: only the first ${Math.min(pages, MAX_PDF_PAGES)} of ${pages} pages / ${MAX_PDF_CHARS} characters were read.]`
+          : "";
+        const prompt = `[The user uploaded a document: "${file.name}"]\n\nExtracted document text:\n${text}${notice}\n\nPlease analyze this as a financial document. Give: a brief business overview, revenue/profitability trends if visible in the text, cash flow and debt notes, key risks and opportunities, and any other notable observations. If important figures aren't present in the extracted text, say so rather than guessing.`;
+
+        // Only the current short-term context plus this prompt goes to the
+        // model — we don't want to keep resending the full document text on
+        // every later question.
+        const messagesForModel = history.slice(-4).concat([{ role: "user", content: prompt }]);
+        const persistLabel = `[Uploaded document: ${file.name}]`;
+
+        const reply = await sendToIvaan(messagesForModel, persistLabel);
+        typing.remove();
+        addMsg(reply, "bot");
+        // Store only the short label in ongoing history, not the full text.
+        history.push({ role: "user", content: persistLabel });
+        history.push({ role: "assistant", content: reply });
+      } catch (err) {
+        typing.remove();
+        addMsg("I had trouble reading that PDF. Please try a different file or try again.", "bot");
+      } finally {
+        send.disabled = false;
+        attachBtn.style.opacity = "";
+        attachBtn.style.pointerEvents = "";
+      }
     });
   }
 

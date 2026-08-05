@@ -3,15 +3,19 @@
    Phase 1: Chat widget, futuristic mini-robot mascot edition.
    Phase 2: Persistent chat history (loads from the Worker's database).
    Phase 3: PDF upload & analysis + Dropout Score + Compare & Score (multi-doc).
+   Phase 4: Image / screenshot analysis (broker app screenshots, charts, etc.)
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
   // 1) Point this at your deployed Worker URL, ending in /chat
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
   const HISTORY_URL = WORKER_URL.replace(/\/chat\/?$/, "/history");
+  const VISION_URL = WORKER_URL.replace(/\/chat\/?$/, "/vision");
 
   // PDFs are read entirely in the visitor's own browser using pdf.js —
-  // nothing is uploaded anywhere, keeping this free and private.
+  // nothing is uploaded anywhere, keeping this free and private. Images ARE
+  // sent to the Worker (a vision model has to actually look at them), but
+  // nothing is stored — only the resulting text description is kept.
   const PDFJS_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
   const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
   const MAX_PDF_PAGES = 200;
@@ -22,6 +26,8 @@
   const COMPARE_CHARS_PER_DOC = 12000;  // per-document cap when comparing several at once
   const MAX_COMPARE_DOCS = 5;
   const MAX_PDF_BYTES = 25 * 1024 * 1024; // 25MB per file
+  const MAX_IMAGE_BYTES = 8 * 1024 * 1024; // 8MB per image
+  const IMAGE_TYPES = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
 
   // Each visitor gets a private, persistent ID stored only in their own
   // browser — this is how their chat history is found again on return visits.
@@ -149,6 +155,33 @@
     "book value per share", "market capitalisation", "market capitalization",
     "dividend per share", "dividend payout",
   ];
+
+  // ── Phase 4: image / screenshot reading ────────────────────────────────
+  function fileToDataURL(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new Error("Could not read image file"));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // Sends the image to the Worker's vision endpoint and gets back a text
+  // transcription of everything readable in it (numbers, labels, ratios).
+  async function describeImage(file) {
+    const dataUrl = await fileToDataURL(file);
+    const res = await fetch(VISION_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ image: dataUrl }),
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => "");
+      throw new Error(`Status ${res.status}: ${errText}`);
+    }
+    const data = await res.json();
+    return data.description || "";
+  }
 
   // ── Tiny, safe markdown-lite renderer for bot replies ─────────────────────
   // Escapes HTML first (AI text is untrusted), then supports **bold** and
@@ -304,8 +337,8 @@
         </div>
         <div class="ai-body" id="ai-body"></div>
         <div class="ai-foot">
-          <button class="ai-attach" type="button" title="Upload 1 PDF to score, or select 2-5 to compare">${PAPERCLIP_SVG}</button>
-          <input type="file" id="ai-file" accept="application/pdf" multiple style="display:none">
+          <button class="ai-attach" type="button" title="Upload a PDF and/or screenshots — a PDF plus a screenshot fills in gaps; 2-5 PDFs compares them">${PAPERCLIP_SVG}</button>
+          <input type="file" id="ai-file" accept="application/pdf,image/png,image/jpeg,image/webp" multiple style="display:none">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
           <button id="ai-send" class="ai-send-btn">Ask</button>
         </div>
@@ -324,7 +357,7 @@
     const attachBtn = panel.querySelector(".ai-attach");
     const fileInput = panel.querySelector("#ai-file");
 
-    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to upload a PDF (like an annual report) for a Dropout Score, or select 2-5 PDFs at once to compare and rank them.";
+    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to upload a PDF (like an annual report) for a Dropout Score — add a screenshot alongside it to fill in numbers the PDF doesn't have — or select 2-5 PDFs at once to compare and rank them.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -458,7 +491,7 @@
       if (e.key === "Enter") ask();
     });
 
-    // ── Phase 3: PDF upload → Dropout Score, or Compare & Score for 2-5 ────
+    // ── Phase 3+4: PDF/image upload → Dropout Score, or Compare & Score ────
     attachBtn.addEventListener("click", () => fileInput.click());
 
     fileInput.addEventListener("change", async () => {
@@ -466,40 +499,71 @@
       fileInput.value = ""; // allow re-selecting the same file(s) later
       if (files.length === 0) return;
 
+      const pdfFiles = [];
+      const imageFiles = [];
       for (const f of files) {
-        if (f.type !== "application/pdf") {
-          addMsg("I can only read PDF files right now — try exporting that as a PDF first.", "bot");
-          return;
-        }
-        if (f.size > MAX_PDF_BYTES) {
-          addMsg(`"${f.name}" is too large (over 25MB) — try a smaller file.`, "bot");
+        if (f.type === "application/pdf") {
+          if (f.size > MAX_PDF_BYTES) {
+            addMsg(`"${f.name}" is too large (over 25MB) — try a smaller file.`, "bot");
+            return;
+          }
+          pdfFiles.push(f);
+        } else if (IMAGE_TYPES.includes(f.type)) {
+          if (f.size > MAX_IMAGE_BYTES) {
+            addMsg(`"${f.name}" is too large (over 8MB) — try a smaller image.`, "bot");
+            return;
+          }
+          imageFiles.push(f);
+        } else {
+          addMsg(`"${f.name}" isn't a PDF or a supported image (PNG/JPEG/WebP) — please try a different file.`, "bot");
           return;
         }
       }
       if (files.length > MAX_COMPARE_DOCS) {
-        addMsg(`Please select up to ${MAX_COMPARE_DOCS} documents at a time for comparison.`, "bot");
+        addMsg(`Please select up to ${MAX_COMPARE_DOCS} files at a time.`, "bot");
         return;
       }
 
-      const isCompare = files.length > 1;
-      files.forEach((f) => addFileChip(f.name));
+      // 2+ PDFs still means "compare these companies." Otherwise (0-1 PDF,
+      // plus any number of images), everything gets merged as one combined
+      // pool of evidence about a single company — a screenshot is usually
+      // there to fill in numbers the PDF extract didn't have.
+      const isCompare = pdfFiles.length > 1;
+      const orderedFiles = [...pdfFiles, ...imageFiles];
+      orderedFiles.forEach((f) => addFileChip(f.name));
       send.disabled = true;
       attachBtn.style.opacity = ".5";
       attachBtn.style.pointerEvents = "none";
 
       const status = addStatus(
         isCompare
-          ? `Reading report 1 of ${files.length}: ${files[0].name}…`
-          : "Scanning your document for the data that feeds the Dropout Score — this can take a moment for a long report, please hang on."
+          ? `Reading report 1 of ${orderedFiles.length}: ${orderedFiles[0].name}…`
+          : "Reading what you uploaded for the data that feeds the Dropout Score — this can take a moment, please hang on."
       );
 
       try {
         const docBlocks = [];
         const perDocCap = isCompare ? COMPARE_CHARS_PER_DOC : MAX_PDF_CHARS;
 
-        for (let i = 0; i < files.length; i++) {
-          const f = files[i];
-          if (isCompare) status.update(`Scanning report ${i + 1} of ${files.length} for key data: ${f.name}…`);
+        for (let i = 0; i < orderedFiles.length; i++) {
+          const f = orderedFiles[i];
+          const isImage = IMAGE_TYPES.includes(f.type);
+          if (orderedFiles.length > 1) status.update(`Reading ${i + 1} of ${orderedFiles.length}: ${f.name}…`);
+
+          if (isImage) {
+            try {
+              const description = await describeImage(f);
+              if (!description.trim()) {
+                docBlocks.push(`Screenshot: "${f.name}"\n[Could not read any text from this image.]`);
+              } else {
+                docBlocks.push(`Screenshot: "${f.name}"\n${description}`);
+              }
+            } catch (err) {
+              docBlocks.push(`Screenshot: "${f.name}"\n[Image analysis failed: ${err && err.message ? err.message : "unknown error"}]`);
+            }
+            continue;
+          }
+
           const { text, truncated, pages, matchedPages } = await extractPdfText(f, perDocCap);
           if (!text.trim() || matchedPages === 0) {
             docBlocks.push(`Document: "${f.name}"\n[No pages matching the scoring-relevant terms were found — this may be a scanned image without selectable text, or a document that doesn't use standard annual-report terminology.]`);
@@ -513,14 +577,20 @@
         const typing = addTyping();
 
         let prompt, maxTokens, persistLabel;
+        const allNames = orderedFiles.map((f) => f.name).join(", ");
         if (isCompare) {
-          prompt = `[The user uploaded ${files.length} documents to compare]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH document above, compute a Dropout Score with its full category breakdown, using only what's in the extracted text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If a document's extracted text has too little information to score fairly, say so plainly instead of guessing.`;
+          prompt = `[The user uploaded ${orderedFiles.length} files to compare — some may be supporting screenshots rather than separate companies, use judgment based on the labels]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH company/document above, compute a Dropout Score with its full breakdown, using only what's in the extracted/transcribed text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If something has too little information to score fairly, say so plainly instead of guessing.`;
           maxTokens = 1600;
-          persistLabel = `[Compared ${files.length} documents: ${files.map((f) => f.name).join(", ")}]`;
+          persistLabel = `[Compared ${orderedFiles.length} files: ${allNames}]`;
         } else {
-          prompt = `[The user uploaded a document: "${files[0].name}"]\n\n${docBlocks[0]}\n\nAnalyze this as a financial document: give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full category breakdown. If important figures aren't present in the extracted text, say so rather than guessing.`;
+          const sourceDesc = imageFiles.length && pdfFiles.length
+            ? "a document plus one or more supporting screenshots"
+            : imageFiles.length
+              ? (imageFiles.length > 1 ? "screenshots" : "a screenshot")
+              : "a document";
+          prompt = `[The user uploaded ${sourceDesc}: ${allNames}]\n\n${docBlocks.join("\n\n---\n\n")}\n\nAnalyze this as financial evidence about one company (combine information across all sources above): give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full breakdown. If important figures aren't present anywhere in the material, say so rather than guessing.`;
           maxTokens = 1400;
-          persistLabel = `[Uploaded document: ${files[0].name}]`;
+          persistLabel = `[Uploaded ${sourceDesc}: ${allNames}]`;
         }
 
         const messagesForModel = history.slice(-4).concat([{ role: "user", content: prompt }]);
@@ -532,7 +602,7 @@
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         status.remove();
-        addMsg("I had trouble reading those documents. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
+        addMsg("I had trouble reading those files. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
       } finally {
         send.disabled = false;
         attachBtn.style.opacity = "";

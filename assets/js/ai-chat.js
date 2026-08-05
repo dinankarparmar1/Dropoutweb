@@ -1,11 +1,28 @@
 /* ==========================================================================
-   Ivaan — Dropout Traders AI Financial Assistant (Phase 1: Chat widget)
-   Futuristic mini-robot mascot edition.
+   Ivaan — Dropout Traders AI Financial Assistant
+   Phase 1: Chat widget, futuristic mini-robot mascot edition.
+   Phase 2: Persistent chat history (loads from the Worker's database).
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
   // 1) Point this at your deployed Worker URL, ending in /chat
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
+  const HISTORY_URL = WORKER_URL.replace(/\/chat\/?$/, "/history");
+
+  // Each visitor gets a private, persistent ID stored only in their own
+  // browser — this is how their chat history is found again on return visits.
+  function getSessionId() {
+    try {
+      let id = localStorage.getItem("ivaan_session_id");
+      if (!id) {
+        id = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2));
+        localStorage.setItem("ivaan_session_id", id);
+      }
+      return id;
+    } catch {
+      return null; // localStorage unavailable (private mode etc.) — chat still works, just won't persist
+    }
+  }
 
   const STYLE = `
   @keyframes ai-pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.55),0 8px 26px -4px rgba(212,175,55,.55);}
@@ -43,7 +60,10 @@
   .ai-head span{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.1em;
     color:#d4af37;text-transform:uppercase;margin-top:2px;}
   .ai-head-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;margin-left:auto;}
-  .ai-close{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:18px;line-height:1;padding:4px;margin-left:6px;}
+  .ai-clear{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:10.5px;padding:4px 6px;
+    font-family:'Space Mono',monospace;letter-spacing:.03em;}
+  .ai-clear:hover{color:#d4af37;}
+  .ai-close{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:18px;line-height:1;padding:4px;margin-left:2px;}
   .ai-body{position:relative;flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
   .ai-row{display:flex;align-items:flex-end;gap:8px;}
   .ai-row.user{justify-content:flex-end;}
@@ -98,6 +118,8 @@
   }
 
   function buildUI() {
+    let sessionId = getSessionId();
+
     const fab = document.createElement("button");
     fab.className = "ai-fab";
     fab.setAttribute("aria-label", "Ask Ivaan");
@@ -111,14 +133,10 @@
           <span class="ai-head-face">${botFaceSVG(34)}</span>
           <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
           <span class="ai-head-dot" title="Online"></span>
+          <button class="ai-clear" title="Clear conversation">Clear</button>
           <button class="ai-close" aria-label="Close">✕</button>
         </div>
-        <div class="ai-body" id="ai-body">
-          <div class="ai-row bot">
-            <span class="ai-mini-face">${botFaceSVG(22)}</span>
-            <div class="ai-msg bot">Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts.</div>
-          </div>
-        </div>
+        <div class="ai-body" id="ai-body"></div>
         <div class="ai-foot">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
           <button id="ai-send">Ask</button>
@@ -130,10 +148,13 @@
     document.body.appendChild(fab);
     document.body.appendChild(panel);
 
+    const clearBtn = panel.querySelector(".ai-clear");
     const closeBtn = panel.querySelector(".ai-close");
     const body = panel.querySelector("#ai-body");
     const input = panel.querySelector("#ai-input");
     const send = panel.querySelector("#ai-send");
+
+    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -166,6 +187,42 @@
       return addRow(bubble, "bot", true);
     }
 
+    function renderGreeting() {
+      body.innerHTML = "";
+      addMsg(GREETING, "bot");
+    }
+
+    // ── Phase 2: load this visitor's past conversation, if any ─────────────
+    async function loadHistory() {
+      if (!sessionId) { renderGreeting(); return; }
+      try {
+        const res = await fetch(`${HISTORY_URL}?session_id=${encodeURIComponent(sessionId)}`);
+        const data = await res.json();
+        const past = Array.isArray(data.messages) ? data.messages : [];
+        if (past.length === 0) {
+          renderGreeting();
+          return;
+        }
+        body.innerHTML = "";
+        for (const m of past) {
+          addMsg(m.content, m.role === "user" ? "user" : "bot");
+          history.push({ role: m.role, content: m.content });
+        }
+      } catch {
+        renderGreeting();
+      }
+    }
+    loadHistory();
+
+    clearBtn.addEventListener("click", () => {
+      history = [];
+      try {
+        localStorage.removeItem("ivaan_session_id");
+      } catch {}
+      sessionId = getSessionId(); // fresh ID so old history isn't reattached
+      renderGreeting();
+    });
+
     async function ask() {
       const q = input.value.trim();
       if (!q) return;
@@ -179,7 +236,7 @@
         const res = await fetch(WORKER_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: history.slice(-10) }),
+          body: JSON.stringify({ messages: history.slice(-10), session_id: sessionId }),
         });
         if (!res.ok) throw new Error("Request failed");
         const data = await res.json();

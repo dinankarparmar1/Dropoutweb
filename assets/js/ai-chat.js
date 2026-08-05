@@ -7,13 +7,13 @@
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
 
   const STYLE = `
-  .ai-fab{position:fixed;left:26px;bottom:26px;z-index:2147483000;width:56px;height:56px;border-radius:50%;
+  .ai-fab{position:fixed;left:26px;bottom:26px;z-index:2147483647;width:56px;height:56px;border-radius:50%;
     background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));
     box-shadow:0 8px 26px -4px rgba(212,175,55,0.55);display:flex;align-items:center;justify-content:center;
     border:none;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;}
   .ai-fab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 14px 34px -4px rgba(212,175,55,0.7);}
   .ai-fab svg{width:26px;height:26px;color:#1a1305;}
-  .ai-panel{position:fixed;left:26px;bottom:96px;z-index:2147483000;width:360px;max-width:calc(100vw - 40px);
+  .ai-panel{position:fixed;left:26px;bottom:96px;z-index:2147483647;width:360px;max-width:calc(100vw - 40px);
     height:520px;max-height:calc(100vh - 140px);background:#0d0d11;background-color:#0d0d11;
     border:1px solid rgba(212,175,55,.45);border-radius:18px;isolation:isolate;
     display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);

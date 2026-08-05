@@ -15,8 +15,11 @@
   const PDFJS_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
   const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
   const MAX_PDF_PAGES = 200;
-  const MAX_PDF_CHARS = 90000;          // single-document mode
-  const COMPARE_CHARS_PER_DOC = 22000;  // per-document cap when comparing several at once
+  // Document analysis now runs on a model with a real 24,000-token context
+  // window (confirmed from an actual error, not a guess) — these budgets
+  // leave room for the system prompt and the model's own reply within that.
+  const MAX_PDF_CHARS = 55000;          // single-document mode
+  const COMPARE_CHARS_PER_DOC = 12000;  // per-document cap when comparing several at once
   const MAX_COMPARE_DOCS = 5;
   const MAX_PDF_BYTES = 25 * 1024 * 1024; // 25MB per file
 
@@ -493,11 +496,11 @@
         let prompt, maxTokens, persistLabel;
         if (isCompare) {
           prompt = `[The user uploaded ${files.length} documents to compare]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH document above, compute a Dropout Score with its full category breakdown, using only what's in the extracted text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If a document's extracted text has too little information to score fairly, say so plainly instead of guessing.`;
-          maxTokens = 2600;
+          maxTokens = 1600;
           persistLabel = `[Compared ${files.length} documents: ${files.map((f) => f.name).join(", ")}]`;
         } else {
           prompt = `[The user uploaded a document: "${files[0].name}"]\n\n${docBlocks[0]}\n\nAnalyze this as a financial document: give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full category breakdown. If important figures aren't present in the extracted text, say so rather than guessing.`;
-          maxTokens = 2000;
+          maxTokens = 1400;
           persistLabel = `[Uploaded document: ${files[0].name}]`;
         }
 
@@ -510,7 +513,7 @@
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         status.remove();
-        addMsg("DEBUG: " + (err && err.message ? err.message : String(err)), "bot");
+        addMsg("I had trouble reading those documents. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
       } finally {
         send.disabled = false;
         attachBtn.style.opacity = "";

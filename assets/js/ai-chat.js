@@ -2,7 +2,7 @@
    Ivaan — Dropout Traders AI Financial Assistant
    Phase 1: Chat widget, futuristic mini-robot mascot edition.
    Phase 2: Persistent chat history (loads from the Worker's database).
-   Phase 3: PDF upload & analysis (annual reports, statements, etc).
+   Phase 3: PDF upload & analysis + Dropout Score + Compare & Score (multi-doc).
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
@@ -15,8 +15,10 @@
   const PDFJS_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
   const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
   const MAX_PDF_PAGES = 200;
-  const MAX_PDF_CHARS = 90000; // ~22-25k tokens — safely fits the model's 128k context alongside chat history + reply
-  const MAX_PDF_BYTES = 25 * 1024 * 1024; // 25MB
+  const MAX_PDF_CHARS = 90000;          // single-document mode
+  const COMPARE_CHARS_PER_DOC = 22000;  // per-document cap when comparing several at once
+  const MAX_COMPARE_DOCS = 5;
+  const MAX_PDF_BYTES = 25 * 1024 * 1024; // 25MB per file
 
   // Each visitor gets a private, persistent ID stored only in their own
   // browser — this is how their chat history is found again on return visits.
@@ -53,7 +55,8 @@
     return pdfLibPromise;
   }
 
-  async function extractPdfText(file) {
+  async function extractPdfText(file, charCap) {
+    const cap = charCap || MAX_PDF_CHARS;
     await ensurePdfLib();
     const buf = await file.arrayBuffer();
     const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
@@ -63,10 +66,36 @@
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
       text += content.items.map((it) => it.str).join(" ") + "\n\n";
-      if (text.length > MAX_PDF_CHARS) break;
+      if (text.length > cap) break;
     }
-    const truncated = text.length > MAX_PDF_CHARS || pdf.numPages > MAX_PDF_PAGES;
-    return { text: text.slice(0, MAX_PDF_CHARS), truncated, pages: pdf.numPages };
+    const truncated = text.length > cap || pdf.numPages > MAX_PDF_PAGES;
+    return { text: text.slice(0, cap), truncated, pages: pdf.numPages };
+  }
+
+  // ── Tiny, safe markdown-lite renderer for bot replies ─────────────────────
+  // Escapes HTML first (AI text is untrusted), then supports **bold** and
+  // "- " bullet lists so the Dropout Score breakdown reads cleanly.
+  function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function renderMarkdownLite(text) {
+    const escaped = escapeHtml(text).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    const lines = escaped.split("\n");
+    let html = "";
+    let inList = false;
+    for (const line of lines) {
+      const bulletMatch = line.match(/^\s*[-*]\s+(.*)/);
+      if (bulletMatch) {
+        if (!inList) { html += "<ul>"; inList = true; }
+        html += `<li>${bulletMatch[1]}</li>`;
+      } else {
+        if (inList) { html += "</ul>"; inList = false; }
+        if (line.trim() === "") continue;
+        html += `<p>${line}</p>`;
+      }
+    }
+    if (inList) html += "</ul>";
+    return html || escaped;
   }
 
   const STYLE = `
@@ -113,11 +142,17 @@
   .ai-row{display:flex;align-items:flex-end;gap:8px;}
   .ai-row.user{justify-content:flex-end;}
   .ai-mini-face{width:22px;height:22px;flex-shrink:0;margin-bottom:2px;}
-  .ai-msg{max-width:78%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
+  .ai-msg{max-width:82%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
   .ai-msg.bot{background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,.15);color:#f6f4ee;}
   .ai-msg.user{background:linear-gradient(135deg,#f3d576,#d4af37);color:#1a1305;}
   .ai-msg.file{background:rgba(212,175,55,.12);border:1px dashed rgba(212,175,55,.5);color:#f3d576;
     font-family:'Space Mono',monospace;font-size:12px;}
+  .ai-msg p{margin:0 0 8px;}
+  .ai-msg p:last-child{margin-bottom:0;}
+  .ai-msg ul{margin:2px 0 8px;padding-left:18px;}
+  .ai-msg ul:last-child{margin-bottom:0;}
+  .ai-msg li{margin-bottom:3px;}
+  .ai-msg strong{color:#f3d576;}
   .ai-typing-dots{display:flex;gap:4px;padding:4px 2px;}
   .ai-typing-dots span{width:5px;height:5px;border-radius:50%;background:#d4af37;animation:ai-dot 1.2s infinite;}
   .ai-typing-dots span:nth-child(2){animation-delay:.15s;}
@@ -191,8 +226,8 @@
         </div>
         <div class="ai-body" id="ai-body"></div>
         <div class="ai-foot">
-          <button class="ai-attach" type="button" title="Upload a PDF (annual report, statement, etc.)">${PAPERCLIP_SVG}</button>
-          <input type="file" id="ai-file" accept="application/pdf" style="display:none">
+          <button class="ai-attach" type="button" title="Upload 1 PDF to score, or select 2-5 to compare">${PAPERCLIP_SVG}</button>
+          <input type="file" id="ai-file" accept="application/pdf" multiple style="display:none">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
           <button id="ai-send" class="ai-send-btn">Ask</button>
         </div>
@@ -211,7 +246,7 @@
     const attachBtn = panel.querySelector(".ai-attach");
     const fileInput = panel.querySelector("#ai-file");
 
-    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. You can also tap the paperclip to upload a PDF — like an annual report — and I'll analyze it.";
+    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to upload a PDF (like an annual report) for a Dropout Score, or select 2-5 PDFs at once to compare and rank them.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -235,7 +270,9 @@
     function addMsg(text, cls) {
       const bubble = `<div class="ai-msg ${cls}"></div>`;
       const row = addRow(bubble, cls, cls === "bot");
-      row.querySelector(".ai-msg").textContent = text;
+      const el = row.querySelector(".ai-msg");
+      if (cls === "bot") el.innerHTML = renderMarkdownLite(text);
+      else el.textContent = text;
       return row;
     }
 
@@ -247,6 +284,14 @@
     function addTyping() {
       const bubble = `<div class="ai-msg bot"><div class="ai-typing-dots"><span></span><span></span><span></span></div></div>`;
       return addRow(bubble, "bot", true);
+    }
+
+    function addStatus(text) {
+      const row = addMsg(text, "bot");
+      return {
+        update(t) { row.querySelector(".ai-msg").textContent = t; },
+        remove() { row.remove(); },
+      };
     }
 
     function renderGreeting() {
@@ -288,7 +333,7 @@
     // Sends a request to the Worker. `persistLabel`, when given, is what gets
     // saved to the database instead of the (possibly huge) actual prompt —
     // used for PDF uploads so we don't store the whole document text.
-    async function sendToIvaan(messagesForModel, persistLabel) {
+    async function sendToIvaan(messagesForModel, persistLabel, maxTokens) {
       const res = await fetch(WORKER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -296,6 +341,7 @@
           messages: messagesForModel,
           session_id: sessionId,
           persist_label: persistLabel || undefined,
+          max_tokens: maxTokens || undefined,
         }),
       });
       if (!res.ok) throw new Error("Request failed");
@@ -331,58 +377,81 @@
       if (e.key === "Enter") ask();
     });
 
-    // ── Phase 3: PDF upload & analysis ──────────────────────────────────────
+    // ── Phase 3: PDF upload → Dropout Score, or Compare & Score for 2-5 ────
     attachBtn.addEventListener("click", () => fileInput.click());
 
     fileInput.addEventListener("change", async () => {
-      const file = fileInput.files[0];
-      fileInput.value = ""; // allow re-selecting the same file later
-      if (!file) return;
+      const files = Array.from(fileInput.files || []);
+      fileInput.value = ""; // allow re-selecting the same file(s) later
+      if (files.length === 0) return;
 
-      if (file.type !== "application/pdf") {
-        addMsg("I can only read PDF files right now — try exporting that as a PDF first.", "bot");
+      for (const f of files) {
+        if (f.type !== "application/pdf") {
+          addMsg("I can only read PDF files right now — try exporting that as a PDF first.", "bot");
+          return;
+        }
+        if (f.size > MAX_PDF_BYTES) {
+          addMsg(`"${f.name}" is too large (over 25MB) — try a smaller file.`, "bot");
+          return;
+        }
+      }
+      if (files.length > MAX_COMPARE_DOCS) {
+        addMsg(`Please select up to ${MAX_COMPARE_DOCS} documents at a time for comparison.`, "bot");
         return;
       }
-      if (file.size > MAX_PDF_BYTES) {
-        addMsg("That PDF is too large (over 25MB) — try a smaller file or an extracted section.", "bot");
-        return;
-      }
 
-      addFileChip(file.name);
+      const isCompare = files.length > 1;
+      files.forEach((f) => addFileChip(f.name));
       send.disabled = true;
       attachBtn.style.opacity = ".5";
       attachBtn.style.pointerEvents = "none";
-      addMsg("Reading and analyzing your document — for a long report this can take up to a minute, please hang on.", "bot");
-      const typing = addTyping();
+
+      const status = addStatus(
+        isCompare
+          ? `Reading report 1 of ${files.length}: ${files[0].name}…`
+          : "Reading and analyzing your document — for a long report this can take up to a minute, please hang on."
+      );
 
       try {
-        const { text, truncated, pages } = await extractPdfText(file);
-        if (!text.trim()) {
-          typing.remove();
-          addMsg("I couldn't find readable text in that PDF — it may be a scanned image rather than selectable text.", "bot");
-          return;
+        const docBlocks = [];
+        const perDocCap = isCompare ? COMPARE_CHARS_PER_DOC : MAX_PDF_CHARS;
+
+        for (let i = 0; i < files.length; i++) {
+          const f = files[i];
+          if (isCompare) status.update(`Reading report ${i + 1} of ${files.length}: ${f.name}…`);
+          const { text, truncated, pages } = await extractPdfText(f, perDocCap);
+          if (!text.trim()) {
+            docBlocks.push(`Document: "${f.name}"\n[No readable text could be extracted — likely a scanned image without selectable text.]`);
+            continue;
+          }
+          const notice = truncated ? `\n[Note: only part of this ${pages}-page document was read due to length limits.]` : "";
+          docBlocks.push(`Document: "${f.name}"\n${text}${notice}`);
         }
 
-        const notice = truncated
-          ? `\n\n[Note: only the first ${Math.min(pages, MAX_PDF_PAGES)} of ${pages} pages / ${MAX_PDF_CHARS} characters were read.]`
-          : "";
-        const prompt = `[The user uploaded a document: "${file.name}"]\n\nExtracted document text:\n${text}${notice}\n\nPlease analyze this as a financial document. Give: a brief business overview, revenue/profitability trends if visible in the text, cash flow and debt notes, key risks and opportunities, and any other notable observations. If important figures aren't present in the extracted text, say so rather than guessing.`;
+        status.remove();
+        const typing = addTyping();
 
-        // Only the current short-term context plus this prompt goes to the
-        // model — we don't want to keep resending the full document text on
-        // every later question.
+        let prompt, maxTokens, persistLabel;
+        if (isCompare) {
+          prompt = `[The user uploaded ${files.length} documents to compare]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH document above, compute a Dropout Score with its full category breakdown, using only what's in the extracted text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If a document's extracted text has too little information to score fairly, say so plainly instead of guessing.`;
+          maxTokens = 2600;
+          persistLabel = `[Compared ${files.length} documents: ${files.map((f) => f.name).join(", ")}]`;
+        } else {
+          prompt = `[The user uploaded a document: "${files[0].name}"]\n\n${docBlocks[0]}\n\nAnalyze this as a financial document: give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full category breakdown. If important figures aren't present in the extracted text, say so rather than guessing.`;
+          maxTokens = 2000;
+          persistLabel = `[Uploaded document: ${files[0].name}]`;
+        }
+
         const messagesForModel = history.slice(-4).concat([{ role: "user", content: prompt }]);
-        const persistLabel = `[Uploaded document: ${file.name}]`;
-
-        const reply = await sendToIvaan(messagesForModel, persistLabel);
+        const reply = await sendToIvaan(messagesForModel, persistLabel, maxTokens);
         typing.remove();
         addMsg(reply, "bot");
-        // Store only the short label in ongoing history, not the full text.
+        // Store only the short label in ongoing history, not the full document text.
         history.push({ role: "user", content: persistLabel });
         history.push({ role: "assistant", content: reply });
       } catch (err) {
-        typing.remove();
-        addMsg("I had trouble reading that PDF. Please try a different file or try again.", "bot");
+        status.remove();
+        addMsg("I had trouble reading those documents. Please try again.", "bot");
       } finally {
         send.disabled = false;
         attachBtn.style.opacity = "";

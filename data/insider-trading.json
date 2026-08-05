@@ -1,60 +1,165 @@
 {
-  "updated": "2026-08-04T18:21:28.204772Z",
+  "updated": "2026-08-05T11:39:17.236555Z",
   "rows": [
     {
-      "date": "04-Aug-2026 21:13:48",
-      "company": "THE KARUR VYSYA BANK LIMITED",
+      "date": "05-Aug-2026 16:58:41",
+      "company": "V.S.T Tillers Tractors Limited",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|THE KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_202608",
+      "transactionType": "VSTTILLERS|V.S.T Tillers Tractors Limited|Original|Regulation 7 (2)|IT_4929_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Aug-2026 17:52:08",
-      "company": "360 ONE WAM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260804_17520842",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Aug-2026 17:15:45",
-      "company": "HEG LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260804_171545170.xml|IT_120",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Aug-2026 17:09:38",
-      "company": "HEG LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260804_170938925.xml|IT_120",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Aug-2026 16:11:24",
-      "company": "Agarwal Float Glass India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AGARWALFT|Agarwal Float Glass India Limited|Original|Regulation 7 (2)|IT_21454_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Aug-2026 15:57:38",
-      "company": "Cineline India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CINELINE|Cineline India Limited|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20260804_1557",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Aug-2026 15:50:41",
+      "date": "05-Aug-2026 16:42:04",
       "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260804_155",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260805_164",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Aug-2026 13:04:24",
-      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
+      "date": "05-Aug-2026 16:36:21",
+      "company": "V.S.T Tillers Tractors Limited",
       "personCategory": "\u2014",
-      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
+      "transactionType": "VSTTILLERS|V.S.T Tillers Tractors Limited|Original|Regulation 7 (2)|IT_4929_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:54:50",
+      "company": "Sterlite Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026080",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:49:01",
+      "company": "Shivalik Rasayan Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SHIVALIK|Shivalik Rasayan Limited|Original|Regulation 7 (3)|IT_20019_WebXMLFile_20260805_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:35:15",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260805_1535",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:28:43",
+      "company": "STL NETWORKS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STLNETWORK|STL NETWORKS LIMITED|Original|Regulation 7 (2)|IT_25888_WebXMLFile_20260805_152",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 15:25:10",
+      "company": "Quess Corp Limited",
+      "personCategory": "\u2014",
+      "transactionType": "QUESS|Quess Corp Limited|Original|Regulation 7 (2)|IT_14019_WebXMLFile_20260805_152510674.",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 14:34:22",
+      "company": "Satin Creditcare Network Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SATIN|Satin Creditcare Network Limited|Original|Regulation 7 (2)|IT_13014_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Aug-2026 13:23:38",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
       "quantity": "\u2014"
     }
   ],

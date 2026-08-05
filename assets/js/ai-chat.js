@@ -79,6 +79,17 @@
       .join("\n");
   }
 
+  // These specific fields have repeatedly come back missing even when
+  // present in the report — so once the whole document is scanned, pages
+  // that cover them get pulled in first when the budget is tight.
+  const HIGH_PRIORITY_TERMS = [
+    "return on equity", "roe", "return on capital employed", "roce",
+    "return on investment", " roi ",
+    "price to earning", "p/e ratio", "price/earning", "pe ratio",
+    "price to book", "p/b ratio", "price/book", "pb ratio",
+    "shareholding pattern", "promoter holding", "promoter shareholding",
+  ];
+
   async function extractPdfText(file, charCap) {
     const cap = charCap || MAX_PDF_CHARS;
     await ensurePdfLib();
@@ -87,24 +98,32 @@
     const pageCount = Math.min(pdf.numPages, MAX_PDF_PAGES);
 
     // Don't read the whole report front-to-back — only pull in pages that
-    // actually relate to what the Dropout Score needs: business quality,
-    // financial strength, management quality, and valuation. This keeps
-    // things fast and keeps the AI focused on exactly the factors that matter.
-    let text = "";
-    let matchedPages = 0;
+    // actually relate to what the Dropout Score needs. Scan every page for
+    // a match FIRST (rather than stopping once the budget fills), then fill
+    // the budget starting with whichever matched pages cover the fields that
+    // most often go missing — so a budget cutoff never silently skips a
+    // later page holding exactly the ratio that's needed.
+    const candidates = [];
     for (let i = 1; i <= pageCount; i++) {
-      if (text.length > cap) break;
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
       const pageText = reconstructPageText(content);
       const lower = pageText.toLowerCase();
-      if (KEY_SECTION_TERMS.some((term) => lower.includes(term))) {
-        text += `[Page ${i}]\n${pageText}\n\n`;
-        matchedPages++;
-      }
+      if (!KEY_SECTION_TERMS.some((term) => lower.includes(term))) continue;
+      const priority = HIGH_PRIORITY_TERMS.reduce((n, term) => n + (lower.includes(term) ? 1 : 0), 0);
+      candidates.push({ pageNum: i, text: pageText, priority });
+    }
+    candidates.sort((a, b) => (b.priority - a.priority) || (a.pageNum - b.pageNum));
+
+    let text = "";
+    let matchedPages = 0;
+    for (const c of candidates) {
+      if (text.length > cap) break;
+      text += `[Page ${c.pageNum}]\n${c.text}\n\n`;
+      matchedPages++;
     }
 
-    const truncated = pdf.numPages > pageCount || text.length > cap;
+    const truncated = pdf.numPages > pageCount || matchedPages < candidates.length || text.length > cap;
     return { text: text.slice(0, cap), truncated, pages: pdf.numPages, matchedPages };
   }
 

@@ -400,7 +400,10 @@
           max_tokens: maxTokens || undefined,
         }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) {
+        const errText = await res.text().catch(() => "");
+        throw new Error(`Status ${res.status}: ${errText}`);
+      }
       const data = await res.json();
       return data.reply || "Sorry, I couldn't get an answer just now.";
     }
@@ -507,7 +510,7 @@
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         status.remove();
-        addMsg("I had trouble reading those documents. Please try again.", "bot");
+        addMsg("DEBUG: " + (err && err.message ? err.message : String(err)), "bot");
       } finally {
         send.disabled = false;
         attachBtn.style.opacity = "";

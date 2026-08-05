@@ -14,9 +14,9 @@
   // nothing is uploaded anywhere, keeping this free and private.
   const PDFJS_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
   const PDFJS_WORKER_URL = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
-  const MAX_PDF_PAGES = 25;
-  const MAX_PDF_CHARS = 18000;
-  const MAX_PDF_BYTES = 15 * 1024 * 1024; // 15MB
+  const MAX_PDF_PAGES = 200;
+  const MAX_PDF_CHARS = 90000; // ~22-25k tokens — safely fits the model's 128k context alongside chat history + reply
+  const MAX_PDF_BYTES = 25 * 1024 * 1024; // 25MB
 
   // Each visitor gets a private, persistent ID stored only in their own
   // browser — this is how their chat history is found again on return visits.
@@ -344,7 +344,7 @@
         return;
       }
       if (file.size > MAX_PDF_BYTES) {
-        addMsg("That PDF is too large (over 15MB) — try a smaller file or an extracted section.", "bot");
+        addMsg("That PDF is too large (over 25MB) — try a smaller file or an extracted section.", "bot");
         return;
       }
 
@@ -352,6 +352,7 @@
       send.disabled = true;
       attachBtn.style.opacity = ".5";
       attachBtn.style.pointerEvents = "none";
+      addMsg("Reading and analyzing your document — for a long report this can take up to a minute, please hang on.", "bot");
       const typing = addTyping();
 
       try {

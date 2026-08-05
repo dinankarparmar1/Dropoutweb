@@ -1,5 +1,6 @@
 /* ==========================================================================
    Ivaan — Dropout Traders AI Financial Assistant (Phase 1: Chat widget)
+   Futuristic mini-robot mascot edition.
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
@@ -7,40 +8,88 @@
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
 
   const STYLE = `
-  .ai-fab{position:fixed;left:26px;bottom:26px;z-index:2147483647;width:56px;height:56px;border-radius:50%;
-    background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));
-    box-shadow:0 8px 26px -4px rgba(212,175,55,0.55);display:flex;align-items:center;justify-content:center;
-    border:none;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;}
-  .ai-fab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 14px 34px -4px rgba(212,175,55,0.7);}
-  .ai-fab svg{width:26px;height:26px;color:#1a1305;}
+  @keyframes ai-pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.55),0 8px 26px -4px rgba(212,175,55,.55);}
+    50%{box-shadow:0 0 0 10px rgba(212,175,55,0),0 8px 26px -4px rgba(212,175,55,.7);}}
+  @keyframes ai-blink{0%,88%,100%{transform:scaleY(1);}92%{transform:scaleY(.1);}}
+  @keyframes ai-bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-2px);}}
+  @keyframes ai-border-spin{to{--ai-angle:360deg;}}
+  @property --ai-angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  @keyframes ai-dot{0%,80%,100%{opacity:.25;transform:translateY(0);}40%{opacity:1;transform:translateY(-2px);}}
+
+  .ai-fab{position:fixed;left:26px;bottom:26px;z-index:2147483647;width:60px;height:60px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#3a2f10,#0d0d11 70%);
+    border:1.5px solid rgba(212,175,55,.6);display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:transform .3s ease;animation:ai-pulse 2.6s ease-in-out infinite;padding:0;}
+  .ai-fab:hover{transform:translateY(-3px) scale(1.06);}
+  .ai-bot-face{width:34px;height:34px;animation:ai-bob 3s ease-in-out infinite;}
+  .ai-eye{animation:ai-blink 4.5s ease-in-out infinite;transform-origin:center;}
+
   .ai-panel{position:fixed;left:26px;bottom:96px;z-index:2147483647;width:360px;max-width:calc(100vw - 40px);
-    height:520px;max-height:calc(100vh - 140px);background:#0d0d11;background-color:#0d0d11;
-    border:1px solid rgba(212,175,55,.45);border-radius:18px;isolation:isolate;
-    display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);
+    height:520px;max-height:calc(100vh - 140px);border-radius:20px;overflow:hidden;
     opacity:0;pointer-events:none;transform:translateY(16px) scale(.97);
-    transition:opacity .3s ease,transform .3s ease;font-family:'Inter',sans-serif;}
+    transition:opacity .3s ease,transform .3s ease;font-family:'Inter',sans-serif;
+    padding:1.5px;background:conic-gradient(from var(--ai-angle,0deg),#d4af37,#3a2f10,#f3d576,#3a2f10,#d4af37);
+    animation:ai-border-spin 6s linear infinite;isolation:isolate;}
   .ai-panel.open{opacity:1;pointer-events:auto;transform:translateY(0) scale(1);}
-  .ai-head{padding:16px 18px;border-bottom:1px solid var(--panel-border,rgba(212,175,55,.22));
-    display:flex;align-items:center;justify-content:space-between;background:rgba(212,175,55,0.05);}
-  .ai-head h4{margin:0;font-family:'Playfair Display',serif;font-size:15px;color:var(--white,#f6f4ee);}
-  .ai-head span{display:block;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;
-    color:var(--gold,#d4af37);text-transform:uppercase;margin-top:2px;}
-  .ai-close{background:none;border:none;color:var(--muted,#a8a49b);cursor:pointer;font-size:18px;line-height:1;padding:4px;}
-  .ai-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
-  .ai-msg{max-width:88%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
-  .ai-msg.bot{align-self:flex-start;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);color:var(--white,#f6f4ee);}
-  .ai-msg.user{align-self:flex-end;background:linear-gradient(135deg,var(--gold-bright,#f3d576),var(--gold,#d4af37));color:#1a1305;}
-  .ai-msg.typing{align-self:flex-start;color:var(--muted-dim,#6f6c66);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;}
-  .ai-foot{padding:12px;border-top:1px solid var(--panel-border,rgba(212,175,55,.22));display:flex;gap:8px;}
-  .ai-foot input{flex:1;background:rgba(255,255,255,0.03);border:1px solid var(--panel-border,rgba(212,175,55,.22));
-    border-radius:10px;padding:10px 12px;color:var(--white,#f6f4ee);font-size:13.5px;font-family:inherit;}
-  .ai-foot input:focus{outline:none;border-color:var(--gold,#d4af37);}
-  .ai-foot button{background:linear-gradient(135deg,var(--gold-bright,#f3d576),var(--gold,#d4af37));
+  .ai-panel-inner{position:relative;width:100%;height:100%;border-radius:19px;background:#0a0a0e;
+    display:flex;flex-direction:column;overflow:hidden;}
+  .ai-panel-inner::before{content:'';position:absolute;inset:0;opacity:.05;pointer-events:none;
+    background-image:linear-gradient(rgba(212,175,55,.6) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(212,175,55,.6) 1px,transparent 1px);background-size:22px 22px;}
+  .ai-head{position:relative;padding:14px 16px;border-bottom:1px solid rgba(212,175,55,.22);
+    display:flex;align-items:center;gap:10px;background:rgba(212,175,55,0.05);}
+  .ai-head-face{width:34px;height:34px;flex-shrink:0;}
+  .ai-head h4{margin:0;font-family:'Playfair Display',serif;font-size:15px;color:#f6f4ee;}
+  .ai-head span{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+    color:#d4af37;text-transform:uppercase;margin-top:2px;}
+  .ai-head-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;margin-left:auto;}
+  .ai-close{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:18px;line-height:1;padding:4px;margin-left:6px;}
+  .ai-body{position:relative;flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
+  .ai-row{display:flex;align-items:flex-end;gap:8px;}
+  .ai-row.user{justify-content:flex-end;}
+  .ai-mini-face{width:22px;height:22px;flex-shrink:0;margin-bottom:2px;}
+  .ai-msg{max-width:78%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
+  .ai-msg.bot{background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,.15);color:#f6f4ee;}
+  .ai-msg.user{background:linear-gradient(135deg,#f3d576,#d4af37);color:#1a1305;}
+  .ai-typing-dots{display:flex;gap:4px;padding:4px 2px;}
+  .ai-typing-dots span{width:5px;height:5px;border-radius:50%;background:#d4af37;animation:ai-dot 1.2s infinite;}
+  .ai-typing-dots span:nth-child(2){animation-delay:.15s;}
+  .ai-typing-dots span:nth-child(3){animation-delay:.3s;}
+  .ai-foot{position:relative;padding:12px;border-top:1px solid rgba(212,175,55,.22);display:flex;gap:8px;}
+  .ai-foot input{flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);
+    border-radius:10px;padding:10px 12px;color:#f6f4ee;font-size:13.5px;font-family:inherit;}
+  .ai-foot input:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.15);}
+  .ai-foot button{background:linear-gradient(135deg,#f3d576,#d4af37);
     border:none;border-radius:10px;padding:0 16px;color:#1a1305;font-weight:600;cursor:pointer;font-size:13px;}
   .ai-foot button:disabled{opacity:.5;cursor:default;}
-  .ai-disclaimer{padding:8px 16px 12px;font-size:10px;line-height:1.5;color:var(--muted-dim,#6f6c66);text-align:center;}
+  .ai-disclaimer{position:relative;padding:6px 16px 10px;font-size:9.5px;line-height:1.5;color:#6f6c66;text-align:center;}
   @media (max-width:480px){.ai-panel{left:14px;right:14px;width:auto;bottom:90px;}.ai-fab{left:16px;bottom:16px;}}
   `;
+
+  // Cute little robot mascot face — big glowing eyes, antenna, gentle smile.
+  function botFaceSVG(size) {
+    return `<svg width="${size}" height="${size}" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="32" y1="6" x2="32" y2="14" stroke="#f3d576" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="32" cy="5" r="3.2" fill="#f3d576"><animate attributeName="opacity" values="1;.4;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <rect x="9" y="14" width="46" height="40" rx="16" fill="url(#aiBodyGrad)" stroke="#f3d576" stroke-width="1.6"/>
+      <g class="ai-eye" style="transform-box:fill-box;">
+        <circle cx="23" cy="34" r="7" fill="#1a1305"/>
+        <circle cx="23" cy="34" r="7" fill="none" stroke="#6ee7ff" stroke-width="1.4"/>
+        <circle cx="24.5" cy="32.5" r="2.4" fill="#aef1ff"/>
+      </g>
+      <g class="ai-eye" style="transform-box:fill-box;">
+        <circle cx="41" cy="34" r="7" fill="#1a1305"/>
+        <circle cx="41" cy="34" r="7" fill="none" stroke="#6ee7ff" stroke-width="1.4"/>
+        <circle cx="42.5" cy="32.5" r="2.4" fill="#aef1ff"/>
+      </g>
+      <path d="M25 44c2.2 2.4 11.8 2.4 14 0" stroke="#3a2f10" stroke-width="2" stroke-linecap="round"/>
+      <defs>
+        <linearGradient id="aiBodyGrad" x1="9" y1="14" x2="55" y2="54" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#f3d576"/><stop offset="1" stop-color="#d4af37"/>
+        </linearGradient>
+      </defs>
+    </svg>`;
+  }
 
   function injectStyle() {
     const s = document.createElement("style");
@@ -52,23 +101,30 @@
     const fab = document.createElement("button");
     fab.className = "ai-fab";
     fab.setAttribute("aria-label", "Ask Ivaan");
-    fab.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`;
+    fab.innerHTML = `<span class="ai-bot-face">${botFaceSVG(34)}</span>`;
 
     const panel = document.createElement("div");
     panel.className = "ai-panel";
     panel.innerHTML = `
-      <div class="ai-head">
-        <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
-        <button class="ai-close" aria-label="Close">✕</button>
+      <div class="ai-panel-inner">
+        <div class="ai-head">
+          <span class="ai-head-face">${botFaceSVG(34)}</span>
+          <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
+          <span class="ai-head-dot" title="Online"></span>
+          <button class="ai-close" aria-label="Close">✕</button>
+        </div>
+        <div class="ai-body" id="ai-body">
+          <div class="ai-row bot">
+            <span class="ai-mini-face">${botFaceSVG(22)}</span>
+            <div class="ai-msg bot">Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts.</div>
+          </div>
+        </div>
+        <div class="ai-foot">
+          <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
+          <button id="ai-send">Ask</button>
+        </div>
+        <div class="ai-disclaimer">Educational information only — not investment advice.</div>
       </div>
-      <div class="ai-body" id="ai-body">
-        <div class="ai-msg bot">Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts.</div>
-      </div>
-      <div class="ai-foot">
-        <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
-        <button id="ai-send">Ask</button>
-      </div>
-      <div class="ai-disclaimer">Educational information only — not investment advice.</div>
     `;
 
     document.body.appendChild(fab);
@@ -87,13 +143,27 @@
 
     let history = [];
 
-    function addMsg(text, cls) {
-      const d = document.createElement("div");
-      d.className = "ai-msg " + cls;
-      d.textContent = text;
-      body.appendChild(d);
+    function addRow(html, cls, isBot) {
+      const row = document.createElement("div");
+      row.className = "ai-row " + cls;
+      row.innerHTML = isBot
+        ? `<span class="ai-mini-face">${botFaceSVG(22)}</span>${html}`
+        : html;
+      body.appendChild(row);
       body.scrollTop = body.scrollHeight;
-      return d;
+      return row;
+    }
+
+    function addMsg(text, cls) {
+      const bubble = `<div class="ai-msg ${cls}"></div>`;
+      const row = addRow(bubble, cls, cls === "bot");
+      row.querySelector(".ai-msg").textContent = text;
+      return row;
+    }
+
+    function addTyping() {
+      const bubble = `<div class="ai-msg bot"><div class="ai-typing-dots"><span></span><span></span><span></span></div></div>`;
+      return addRow(bubble, "bot", true);
     }
 
     async function ask() {
@@ -103,7 +173,7 @@
       history.push({ role: "user", content: q });
       input.value = "";
       send.disabled = true;
-      const typing = addMsg("thinking…", "typing");
+      const typing = addTyping();
 
       try {
         const res = await fetch(WORKER_URL, {

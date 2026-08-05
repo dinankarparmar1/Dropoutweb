@@ -559,7 +559,9 @@
                 docBlocks.push(`Screenshot: "${f.name}"\n${description}`);
               }
             } catch (err) {
-              docBlocks.push(`Screenshot: "${f.name}"\n[Image analysis failed: ${err && err.message ? err.message : "unknown error"}]`);
+              const errMsg = err && err.message ? err.message : "unknown error";
+              addMsg(`DEBUG (image "${f.name}"): ${errMsg}`, "bot");
+              docBlocks.push(`Screenshot: "${f.name}"\n[Image analysis failed: ${errMsg}]`);
             }
             continue;
           }

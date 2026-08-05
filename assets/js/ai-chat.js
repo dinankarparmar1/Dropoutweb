@@ -268,6 +268,15 @@
   .ai-typing-dots span{width:5px;height:5px;border-radius:50%;background:#d4af37;animation:ai-dot 1.2s infinite;}
   .ai-typing-dots span:nth-child(2){animation-delay:.15s;}
   .ai-typing-dots span:nth-child(3){animation-delay:.3s;}
+  .ai-staged{position:relative;padding:0 12px;display:flex;flex-wrap:wrap;gap:6px;}
+  .ai-staged:empty{padding:0;}
+  .ai-staged-chip{display:flex;align-items:center;gap:6px;background:rgba(212,175,55,.12);
+    border:1px dashed rgba(212,175,55,.5);color:#f3d576;font-family:'Space Mono',monospace;
+    font-size:11px;padding:5px 8px;border-radius:8px;max-width:200px;}
+  .ai-staged-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .ai-staged-chip button{background:none;border:none;color:#f3d576;cursor:pointer;font-size:13px;
+    line-height:1;padding:0;flex-shrink:0;opacity:.7;}
+  .ai-staged-chip button:hover{opacity:1;}
   .ai-foot{position:relative;padding:12px;border-top:1px solid rgba(212,175,55,.22);display:flex;gap:8px;}
   .ai-attach{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);border-radius:10px;
     width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;}
@@ -336,8 +345,9 @@
           <button class="ai-close" aria-label="Close">✕</button>
         </div>
         <div class="ai-body" id="ai-body"></div>
+        <div class="ai-staged" id="ai-staged"></div>
         <div class="ai-foot">
-          <button class="ai-attach" type="button" title="Upload a PDF and/or screenshots — a PDF plus a screenshot fills in gaps; 2-5 PDFs compares them">${PAPERCLIP_SVG}</button>
+          <button class="ai-attach" type="button" title="Attach up to 5 PDFs/screenshots, add a message if you like, then hit Ask">${PAPERCLIP_SVG}</button>
           <input type="file" id="ai-file" accept="application/pdf,image/png,image/jpeg,image/webp" multiple style="display:none">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
           <button id="ai-send" class="ai-send-btn">Ask</button>
@@ -352,12 +362,13 @@
     const clearBtn = panel.querySelector(".ai-clear");
     const closeBtn = panel.querySelector(".ai-close");
     const body = panel.querySelector("#ai-body");
+    const staged = panel.querySelector("#ai-staged");
     const input = panel.querySelector("#ai-input");
-    const send = panel.querySelector("#ai-send");
+    const sendBtn = panel.querySelector("#ai-send");
     const attachBtn = panel.querySelector(".ai-attach");
     const fileInput = panel.querySelector("#ai-file");
 
-    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to upload a PDF (like an annual report) for a Dropout Score — add a screenshot alongside it to fill in numbers the PDF doesn't have — or select 2-5 PDFs at once to compare and rank them.";
+    const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to attach a PDF and/or screenshots (up to 5) — add a message about what you want to know if you like, then hit Ask. 2+ PDFs together compares and ranks them.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -366,6 +377,21 @@
     closeBtn.addEventListener("click", () => panel.classList.remove("open"));
 
     let history = [];
+    let pendingFiles = []; // files attached but not yet sent
+
+    function renderStaged() {
+      staged.innerHTML = "";
+      pendingFiles.forEach((f, idx) => {
+        const chip = document.createElement("div");
+        chip.className = "ai-staged-chip";
+        chip.innerHTML = `<span>📎 ${f.name}</span><button type="button" aria-label="Remove">✕</button>`;
+        chip.querySelector("button").addEventListener("click", () => {
+          pendingFiles.splice(idx, 1);
+          renderStaged();
+        });
+        staged.appendChild(chip);
+      });
+    }
 
     function addRow(html, cls, isBot) {
       const row = document.createElement("div");
@@ -463,75 +489,59 @@
       return data.reply || "Sorry, I couldn't get an answer just now.";
     }
 
-    async function ask() {
+    async function sendMessage() {
       const q = input.value.trim();
-      if (!q) return;
-      addMsg(q, "user");
-      history.push({ role: "user", content: q });
-      input.value = "";
-      send.disabled = true;
-      const typing = addTyping();
+      const files = pendingFiles.slice();
 
-      try {
-        const reply = await sendToIvaan(history.slice(-10));
-        typing.remove();
-        addMsg(reply, "bot");
-        history.push({ role: "assistant", content: reply });
-      } catch (err) {
-        typing.remove();
-        addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
-      } finally {
-        send.disabled = false;
-        input.focus();
-      }
-    }
-
-    send.addEventListener("click", ask);
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") ask();
-    });
-
-    // ── Phase 3+4: PDF/image upload → Dropout Score, or Compare & Score ────
-    attachBtn.addEventListener("click", () => fileInput.click());
-
-    fileInput.addEventListener("change", async () => {
-      const files = Array.from(fileInput.files || []);
-      fileInput.value = ""; // allow re-selecting the same file(s) later
-      if (files.length === 0) return;
-
-      const pdfFiles = [];
-      const imageFiles = [];
-      for (const f of files) {
-        if (f.type === "application/pdf") {
-          if (f.size > MAX_PDF_BYTES) {
-            addMsg(`"${f.name}" is too large (over 25MB) — try a smaller file.`, "bot");
-            return;
-          }
-          pdfFiles.push(f);
-        } else if (IMAGE_TYPES.includes(f.type)) {
-          if (f.size > MAX_IMAGE_BYTES) {
-            addMsg(`"${f.name}" is too large (over 8MB) — try a smaller image.`, "bot");
-            return;
-          }
-          imageFiles.push(f);
-        } else {
-          addMsg(`"${f.name}" isn't a PDF or a supported image (PNG/JPEG/WebP) — please try a different file.`, "bot");
-          return;
+      if (files.length === 0) {
+        if (!q) return;
+        addMsg(q, "user");
+        history.push({ role: "user", content: q });
+        input.value = "";
+        sendBtn.disabled = true;
+        const typing = addTyping();
+        try {
+          const reply = await sendToIvaan(history.slice(-10));
+          typing.remove();
+          addMsg(reply, "bot");
+          history.push({ role: "assistant", content: reply });
+        } catch (err) {
+          typing.remove();
+          addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
+        } finally {
+          sendBtn.disabled = false;
+          input.focus();
         }
-      }
-      if (files.length > MAX_COMPARE_DOCS) {
-        addMsg(`Please select up to ${MAX_COMPARE_DOCS} files at a time.`, "bot");
         return;
       }
 
-      // 2+ PDFs still means "compare these companies." Otherwise (0-1 PDF,
-      // plus any number of images), everything gets merged as one combined
-      // pool of evidence about a single company — a screenshot is usually
-      // there to fill in numbers the PDF extract didn't have.
+      // Files attached — validate types/sizes before doing anything else.
+      for (const f of files) {
+        if (f.type !== "application/pdf" && !IMAGE_TYPES.includes(f.type)) {
+          addMsg(`"${f.name}" isn't a PDF or a supported image (PNG/JPEG/WebP) — please remove it and try a different file.`, "bot");
+          return;
+        }
+        if (f.type === "application/pdf" && f.size > MAX_PDF_BYTES) {
+          addMsg(`"${f.name}" is too large (over 25MB) — try a smaller file.`, "bot");
+          return;
+        }
+        if (IMAGE_TYPES.includes(f.type) && f.size > MAX_IMAGE_BYTES) {
+          addMsg(`"${f.name}" is too large (over 8MB) — try a smaller image.`, "bot");
+          return;
+        }
+      }
+
+      const pdfFiles = files.filter((f) => f.type === "application/pdf");
+      const imageFiles = files.filter((f) => IMAGE_TYPES.includes(f.type));
       const isCompare = pdfFiles.length > 1;
       const orderedFiles = [...pdfFiles, ...imageFiles];
+
       orderedFiles.forEach((f) => addFileChip(f.name));
-      send.disabled = true;
+      if (q) addMsg(q, "user");
+      pendingFiles = [];
+      renderStaged();
+      input.value = "";
+      sendBtn.disabled = true;
       attachBtn.style.opacity = ".5";
       attachBtn.style.pointerEvents = "none";
 
@@ -553,15 +563,13 @@
           if (isImage) {
             try {
               const description = await describeImage(f);
-              if (!description.trim()) {
-                docBlocks.push(`Screenshot: "${f.name}"\n[Could not read any text from this image.]`);
-              } else {
-                docBlocks.push(`Screenshot: "${f.name}"\n${description}`);
-              }
+              docBlocks.push(
+                !description.trim()
+                  ? `Screenshot: "${f.name}"\n[Could not read any text from this image.]`
+                  : `Screenshot: "${f.name}"\n${description}`
+              );
             } catch (err) {
-              const errMsg = err && err.message ? err.message : "unknown error";
-              addMsg(`DEBUG (image "${f.name}"): ${errMsg}`, "bot");
-              docBlocks.push(`Screenshot: "${f.name}"\n[Image analysis failed: ${errMsg}]`);
+              docBlocks.push(`Screenshot: "${f.name}"\n[Image analysis failed: ${err && err.message ? err.message : "unknown error"}]`);
             }
             continue;
           }
@@ -578,38 +586,66 @@
         status.remove();
         const typing = addTyping();
 
+        const userNote = q ? `\n\nThe user's specific question/note alongside these files: "${q}" — address this directly as well.` : "";
         let prompt, maxTokens, persistLabel;
         const allNames = orderedFiles.map((f) => f.name).join(", ");
         if (isCompare) {
-          prompt = `[The user uploaded ${orderedFiles.length} files to compare — some may be supporting screenshots rather than separate companies, use judgment based on the labels]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH company/document above, compute a Dropout Score with its full breakdown, using only what's in the extracted/transcribed text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If something has too little information to score fairly, say so plainly instead of guessing.`;
+          prompt = `[The user uploaded ${orderedFiles.length} files to compare — some may be supporting screenshots rather than separate companies, use judgment based on the labels]\n\n${docBlocks.join("\n\n---\n\n")}\n\nFor EACH company/document above, compute a Dropout Score with its full breakdown, using only what's in the extracted/transcribed text. Then give a final ranked comparison (best to worst) with a one-line reason for each ranking. If something has too little information to score fairly, say so plainly instead of guessing.${userNote}`;
           maxTokens = 1600;
-          persistLabel = `[Compared ${orderedFiles.length} files: ${allNames}]`;
+          persistLabel = `[Compared ${orderedFiles.length} files: ${allNames}]${q ? ` — note: "${q}"` : ""}`;
         } else {
           const sourceDesc = imageFiles.length && pdfFiles.length
             ? "a document plus one or more supporting screenshots"
             : imageFiles.length
               ? (imageFiles.length > 1 ? "screenshots" : "a screenshot")
               : "a document";
-          prompt = `[The user uploaded ${sourceDesc}: ${allNames}]\n\n${docBlocks.join("\n\n---\n\n")}\n\nAnalyze this as financial evidence about one company (combine information across all sources above): give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full breakdown. If important figures aren't present anywhere in the material, say so rather than guessing.`;
+          prompt = `[The user uploaded ${sourceDesc}: ${allNames}]\n\n${docBlocks.join("\n\n---\n\n")}\n\nAnalyze this as financial evidence about one company (combine information across all sources above): give a brief business overview, revenue/profitability trends, cash flow and debt notes, key risks and opportunities, then compute a Dropout Score with its full breakdown. If important figures aren't present anywhere in the material, say so rather than guessing.${userNote}`;
           maxTokens = 1400;
-          persistLabel = `[Uploaded ${sourceDesc}: ${allNames}]`;
+          persistLabel = `[Uploaded ${sourceDesc}: ${allNames}]${q ? ` — note: "${q}"` : ""}`;
         }
 
         const messagesForModel = history.slice(-4).concat([{ role: "user", content: prompt }]);
         const reply = await sendToIvaan(messagesForModel, persistLabel, maxTokens);
         typing.remove();
         addMsg(reply, "bot");
-        // Store only the short label in ongoing history, not the full document text.
         history.push({ role: "user", content: persistLabel });
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         status.remove();
         addMsg("I had trouble reading those files. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
       } finally {
-        send.disabled = false;
+        sendBtn.disabled = false;
         attachBtn.style.opacity = "";
         attachBtn.style.pointerEvents = "";
       }
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    // ── Phase 3+4: attach files (staged — sent together with Ask) ──────────
+    attachBtn.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", () => {
+      const picked = Array.from(fileInput.files || []);
+      fileInput.value = "";
+      if (picked.length === 0) return;
+
+      if (pendingFiles.length + picked.length > MAX_COMPARE_DOCS) {
+        addMsg(`You can attach up to ${MAX_COMPARE_DOCS} files at a time.`, "bot");
+        return;
+      }
+      for (const f of picked) {
+        if (f.type !== "application/pdf" && !IMAGE_TYPES.includes(f.type)) {
+          addMsg(`"${f.name}" isn't a PDF or a supported image (PNG/JPEG/WebP) — skipped.`, "bot");
+          continue;
+        }
+        pendingFiles.push(f);
+      }
+      renderStaged();
+      input.focus();
     });
   }
 

@@ -201,7 +201,6 @@
         const past = Array.isArray(data.messages) ? data.messages : [];
         if (past.length === 0) {
           renderGreeting();
-          addMsg("DEBUG (history load): " + JSON.stringify(data._debug || {}), "bot");
           return;
         }
         body.innerHTML = "";
@@ -211,7 +210,6 @@
         }
       } catch (err) {
         renderGreeting();
-        addMsg("DEBUG (history fetch failed): " + (err && err.message ? err.message : String(err)), "bot");
       }
     }
     loadHistory();
@@ -245,7 +243,6 @@
         typing.remove();
         const reply = data.reply || "Sorry, I couldn't get an answer just now.";
         addMsg(reply, "bot");
-        addMsg("DEBUG (save): " + JSON.stringify(data._debugSave || {}), "bot");
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         typing.remove();

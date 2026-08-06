@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T10:04:26.051208Z",
+  "updated": "2026-08-06T11:52:22.448398Z",
   "nifty50": [
     {
       "symbol": "RELIANCE",
@@ -38,8 +38,8 @@
     },
     {
       "symbol": "BAJFINANCE",
-      "price": 1150.7,
-      "pChange": -0.7
+      "price": 1144.8,
+      "pChange": -1.21
     },
     {
       "symbol": "HINDUNILVR",
@@ -193,8 +193,8 @@
     },
     {
       "symbol": "BRITANNIA",
-      "price": 5374.5,
-      "pChange": -1.2
+      "price": 5404.0,
+      "pChange": -0.66
     },
     {
       "symbol": "COALINDIA",
@@ -720,8 +720,8 @@
         },
         {
           "symbol": "BANKBARODA",
-          "price": 248.24,
-          "pChange": 1.07
+          "price": 251.0,
+          "pChange": 2.2
         },
         {
           "symbol": "PNB",

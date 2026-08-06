@@ -81,13 +81,24 @@
     width:32px;height:32px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-deep));
     box-shadow:0 0 14px rgba(201,162,39,0.4);
-    position:relative;
+    position:relative;transition:background 1s ease, box-shadow 1s ease;
   }
   .mascot-orb::after{
     content:'';position:absolute;inset:-4px;border-radius:50%;
     border:1px solid rgba(236,199,102,0.35);
     animation:breathe 3.2s ease-in-out infinite;
+    transition:border-color 1s ease;
   }
+  .mascot-orb.mood-caution{
+    background:radial-gradient(circle at 35% 30%, #f2b25a, #8a5a1f);
+    box-shadow:0 0 16px rgba(217,143,58,0.55);
+  }
+  .mascot-orb.mood-caution::after{border-color:rgba(242,178,90,0.45);animation-duration:2.4s;}
+  .mascot-orb.mood-alert{
+    background:radial-gradient(circle at 35% 30%, #e08a78, #8a3b2c);
+    box-shadow:0 0 18px rgba(193,87,74,0.65);
+  }
+  .mascot-orb.mood-alert::after{border-color:rgba(224,138,120,0.55);animation-duration:1.4s;}
   @keyframes breathe{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.12);opacity:.9;}}
 
   /* ---------- HERO ---------- */
@@ -431,10 +442,27 @@ window.addEventListener('DOMContentLoaded', async () => {
   try {
     const coachRes = await fetch(`${WORKER_URL}/journal/coach`, { headers: { 'Authorization': 'Bearer ' + authToken } });
     const coachData = await coachRes.json();
-    const count = (coachData.warnings || []).length;
+    const warnings = coachData.warnings || [];
+    const count = warnings.length;
     document.getElementById('coachTileStat').textContent = count === 0
       ? 'All clear — view full analysis'
       : count + ' alert' + (count === 1 ? '' : 's') + ' — view full analysis';
+
+    // Reactive mascot mood — reflects the same real, computed signal the
+    // Coach page shows, not a decoration. High severity beats medium.
+    const orb = document.querySelector('.mascot-orb');
+    const hasHigh = warnings.some(w => w.severity === 'high');
+    const hasAny = count > 0;
+    orb.classList.remove('mood-caution', 'mood-alert');
+    if (hasHigh) {
+      orb.classList.add('mood-alert');
+      orb.title = 'Ivaan — alert, review your last trades';
+    } else if (hasAny) {
+      orb.classList.add('mood-caution');
+      orb.title = 'Ivaan — watch this pattern';
+    } else {
+      orb.title = 'Ivaan — calm & steady';
+    }
   } catch {
     document.getElementById('coachTileStat').textContent = 'Could not check for alerts';
   }

@@ -257,17 +257,6 @@
   .ai-orb-stage{position:relative;height:112px;flex-shrink:0;border-bottom:1px solid rgba(212,175,55,.18);
     background:radial-gradient(ellipse 260px 140px at 50% 45%, rgba(212,175,55,.08), transparent 70%);overflow:hidden;}
   .ai-orb-canvas{width:100%;height:100%;display:block;}
-  .ai-hand-btn{position:absolute;top:8px;right:8px;z-index:2;width:28px;height:28px;border-radius:50%;
-    border:1px solid rgba(212,175,55,.4);background:rgba(10,10,14,.6);color:#d4af37;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;font-size:13px;padding:0;transition:all .2s ease;}
-  .ai-hand-btn:hover{border-color:#f3d576;color:#f3d576;}
-  .ai-hand-btn.active{border-color:#4ade80;color:#4ade80;}
-  .ai-orb-hint{position:absolute;bottom:6px;left:8px;z-index:2;font-family:'Space Mono',monospace;
-    font-size:8.5px;letter-spacing:.03em;color:#6f6c66;pointer-events:none;}
-  .ai-cam-preview{position:absolute;bottom:6px;right:8px;z-index:2;width:56px;height:42px;border-radius:6px;
-    overflow:hidden;border:1px solid rgba(212,175,55,.35);background:#000;display:none;}
-  .ai-cam-preview.show{display:block;}
-  .ai-cam-preview video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);}
 
   .ai-body{position:relative;flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
   .ai-row{display:flex;align-items:flex-end;gap:8px;}
@@ -314,7 +303,6 @@
   `;
 
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
-  const HAND_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 11V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M14 11V6a1.5 1.5 0 0 1 3 0v6"/><path d="M17 12V9a1.5 1.5 0 0 1 3 0v6a6 6 0 0 1-6 6h-1a7 7 0 0 1-6-3.5L5 15c-.6-1-.3-2 .5-2.4.8-.4 1.7 0 2.2.7L8 14"/></svg>`;
 
   function injectStyle() {
     const s = document.createElement("style");
@@ -527,77 +515,6 @@
     };
   }
 
-  // ── Hand tracking (MediaPipe Tasks Vision) — lazy-loaded, panel-stage only
-  async function startHandTracking(videoEl, onResult) {
-    const { HandLandmarker, FilesetResolver } = await import("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14");
-    const vision = await FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm");
-    const handLandmarker = await HandLandmarker.createFromOptions(vision, {
-      baseOptions: {
-        modelAssetPath: "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
-        delegate: "GPU",
-      },
-      runningMode: "VIDEO",
-      numHands: 2,
-    });
-
-    const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240 } });
-    videoEl.srcObject = stream;
-    await new Promise((resolve) => { videoEl.onloadedmetadata = resolve; });
-    videoEl.play();
-
-    const PINCH_ENTER = 0.055, PINCH_EXIT = 0.08;
-    const handState = [{ pinching: false, lastX: null, lastY: null }, { pinching: false, lastX: null, lastY: null }];
-    let lastTwoHandDist = null;
-    let stopped = false;
-
-    function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
-
-    function loop() {
-      if (stopped) return;
-      if (videoEl.readyState >= 2) {
-        const result = handLandmarker.detectForVideo(videoEl, performance.now());
-        const hands = result.landmarks || [];
-        const pinchedCentroids = [];
-
-        hands.forEach((landmarks, i) => {
-          const thumb = landmarks[4], index = landmarks[8], wrist = landmarks[0];
-          const d = dist(thumb, index);
-          const state = handState[i] || (handState[i] = { pinching: false, lastX: null, lastY: null });
-          if (!state.pinching && d < PINCH_ENTER) state.pinching = true;
-          else if (state.pinching && d > PINCH_EXIT) state.pinching = false;
-
-          if (state.pinching) {
-            pinchedCentroids.push({ x: wrist.x, y: wrist.y });
-            if (state.lastX !== null && hands.filter((_, j) => handState[j]?.pinching).length === 1) {
-              onResult({ type: "rotate", dx: wrist.x - state.lastX, dy: wrist.y - state.lastY });
-            }
-            state.lastX = wrist.x; state.lastY = wrist.y;
-          } else {
-            state.lastX = null; state.lastY = null;
-          }
-        });
-
-        if (pinchedCentroids.length === 2) {
-          const d = dist(pinchedCentroids[0], pinchedCentroids[1]);
-          if (lastTwoHandDist !== null) onResult({ type: "zoom", delta: d - lastTwoHandDist });
-          lastTwoHandDist = d;
-        } else {
-          lastTwoHandDist = null;
-        }
-        onResult({ type: "status", handsVisible: hands.length > 0 });
-      }
-      requestAnimationFrame(loop);
-    }
-    loop();
-
-    return {
-      stop() {
-        stopped = true;
-        stream.getTracks().forEach((t) => t.stop());
-      },
-    };
-  }
-
   function buildUI() {
     let sessionId = getSessionId();
 
@@ -619,9 +536,6 @@
         </div>
         <div class="ai-orb-stage" id="ai-orb-stage">
           <canvas class="ai-orb-canvas" id="ai-orb-canvas"></canvas>
-          <button class="ai-hand-btn" id="ai-hand-btn" title="Control the orb with hand gestures">${HAND_SVG}</button>
-          <div class="ai-orb-hint" id="ai-orb-hint"></div>
-          <div class="ai-cam-preview" id="ai-cam-preview"><video id="ai-cam-video" autoplay playsinline muted></video></div>
         </div>
         <div class="ai-body" id="ai-body"></div>
         <div class="ai-staged" id="ai-staged"></div>
@@ -648,13 +562,8 @@
 
     // Fuller orb in the panel stage — only rendered while the panel is open.
     const stageCanvas = panel.querySelector("#ai-orb-canvas");
-    const handBtn = panel.querySelector("#ai-hand-btn");
-    const orbHint = panel.querySelector("#ai-orb-hint");
-    const camPreview = panel.querySelector("#ai-cam-preview");
-    const camVideo = panel.querySelector("#ai-cam-video");
     let stageOrb = null;
     let stageOrbReady = null;
-    let handSession = null;
 
     function ensureStageOrb() {
       if (!stageOrbReady) {
@@ -662,35 +571,6 @@
       }
       return stageOrbReady;
     }
-
-    handBtn.addEventListener("click", async () => {
-      if (handSession) {
-        handSession.stop();
-        handSession = null;
-        camPreview.classList.remove("show");
-        handBtn.classList.remove("active");
-        orbHint.textContent = "";
-        if (stageOrb) stageOrb.resumeIdle();
-        return;
-      }
-      handBtn.disabled = true;
-      try {
-        await ensureStageOrb();
-        handSession = await startHandTracking(camVideo, (evt) => {
-          if (!stageOrb) return;
-          if (evt.type === "rotate") stageOrb.rotate(evt.dx * 4, evt.dy * 4);
-          else if (evt.type === "zoom") stageOrb.zoomBy(evt.delta);
-          else if (evt.type === "status") { if (!evt.handsVisible) stageOrb.resumeIdle(); }
-        });
-        camPreview.classList.add("show");
-        handBtn.classList.add("active");
-        orbHint.textContent = "Pinch to rotate · two hands to zoom";
-      } catch (err) {
-        orbHint.textContent = "Camera unavailable — orb stays idle";
-      } finally {
-        handBtn.disabled = false;
-      }
-    });
 
     const clearBtn = panel.querySelector(".ai-clear");
     const closeBtn = panel.querySelector(".ai-close");
@@ -711,7 +591,6 @@
         ensureStageOrb().then((orb) => { orb.start(); orb.resize(); });
       } else {
         if (stageOrb) stageOrb.stop();
-        if (handSession) { handSession.stop(); handSession = null; camPreview.classList.remove("show"); handBtn.classList.remove("active"); }
       }
     });
     closeBtn.addEventListener("click", () => panel.classList.remove("open"));

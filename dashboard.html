@@ -321,11 +321,11 @@
       <h3>Trading Journal</h3>
       <p id="journalTileStat">Loading...</p>
     </a>
-    <div class="module" style="cursor:default;">
-      <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/></svg><span class="arrow">Soon</span></div>
+    <a href="coach.html" class="module">
+      <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/></svg><span class="arrow">→</span></div>
       <h3>AI Coach</h3>
-      <p>Watching your live session</p>
-    </div>
+      <p id="coachTileStat">Loading...</p>
+    </a>
     <div class="module" style="cursor:default;">
       <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="4" height="10"/><rect x="10" y="4" width="4" height="16"/><rect x="17" y="13" width="4" height="7"/></svg><span class="arrow">Soon</span></div>
       <h3>Simulator</h3>
@@ -424,6 +424,19 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (data.entryCount > 0) {
     document.getElementById('heroHeadline').textContent = `Your Trader Score is ${data.score}.`;
     document.getElementById('heroSub').textContent = 'Based on ' + data.entryCount + ' logged trade' + (data.entryCount === 1 ? '' : 's') + ' — keep logging to sharpen every sub-score below.';
+  }
+
+  // AI Coach tile — separate fetch, since a signed-in user with zero
+  // entries yet has nothing for the coach to check.
+  try {
+    const coachRes = await fetch(`${WORKER_URL}/journal/coach`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    const coachData = await coachRes.json();
+    const count = (coachData.warnings || []).length;
+    document.getElementById('coachTileStat').textContent = count === 0
+      ? 'All clear — view full analysis'
+      : count + ' alert' + (count === 1 ? '' : 's') + ' — view full analysis';
+  } catch {
+    document.getElementById('coachTileStat').textContent = 'Could not check for alerts';
   }
 });
 

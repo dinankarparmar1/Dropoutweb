@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Base — Ivaan Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --emerald:#5da583;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;
+    background:radial-gradient(ellipse 800px 500px at 20% -5%, rgba(201,162,39,0.08), transparent 60%), var(--bg);
+  }
+  .wrap{max-width:800px;margin:0 auto;padding:0 20px 80px;}
+
+  @keyframes riseIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .reveal{animation:riseIn .7s cubic-bezier(.19,.7,.3,1) both;}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 0 24px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;display:flex;align-items:baseline;gap:8px;}
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+
+  .page-head{margin-bottom:18px;}
+  .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+  .page-head h1{font-family:var(--serif);font-weight:600;font-size:24px;margin:0;}
+  .page-head p{color:var(--sub);font-size:13px;margin:8px 0 0;line-height:1.55;max-width:520px;}
+
+  /* gate */
+  .gate-card{
+    max-width:400px;margin:60px auto;
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:32px;text-align:center;
+  }
+  .gate-card p{color:var(--sub);font-size:13px;margin:0 0 18px;}
+
+  .panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:22px 24px;margin-bottom:16px;}
+  .section-title{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0 0 4px;padding:0 4px;}
+
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:600px){.form-grid{grid-template-columns:1fr;}}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+  .field input, .field textarea{
+    width:100%;background:rgba(0,0,0,0.2);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);font-family:var(--sans);font-size:13.5px;padding:9px 11px;
+  }
+  .field textarea{resize:vertical;min-height:160px;font-family:var(--mono);font-size:12.5px;line-height:1.5;}
+  .field input:focus, .field textarea:focus{outline:none;border-color:var(--brass);}
+  .field-hint{font-family:var(--mono);font-size:10px;color:var(--sub-dim);margin-top:6px;}
+
+  .btn{font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:11px 20px;border-radius:20px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;}
+  .btn-primary{background:var(--brass);border:none;color:#0b0a08;}
+  .btn-primary:hover{background:var(--brass-bright);}
+  .btn-outline{background:transparent;border:1px solid var(--line-hi);color:var(--sub);}
+  .btn-outline:hover{border-color:var(--brass);color:var(--brass-bright);}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+  .form-error{color:var(--terracotta);font-family:var(--mono);font-size:11.5px;margin-top:10px;min-height:14px;}
+  .form-success{color:var(--emerald);font-family:var(--mono);font-size:11.5px;margin-top:10px;min-height:14px;}
+
+  .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:16px;}
+  .ledger-head{display:grid;grid-template-columns:2fr 1.2fr 1fr 0.7fr 0.6fr;padding:12px 20px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;}
+  .ledger-row{display:grid;grid-template-columns:2fr 1.2fr 1fr 0.7fr 0.6fr;padding:13px 20px;border-bottom:1px solid var(--line);align-items:center;font-size:12.5px;}
+  .ledger-row:last-child{border-bottom:none;}
+  .ledger-row .tags{color:var(--sub-dim);font-family:var(--mono);font-size:11px;}
+  .ledger-empty{padding:24px 20px;text-align:center;color:var(--sub-dim);font-family:var(--mono);font-size:11.5px;}
+  .btn-del{font-family:var(--mono);font-size:9.5px;font-weight:700;padding:5px 11px;border-radius:14px;border:1px solid var(--line);background:transparent;color:var(--sub-dim);cursor:pointer;}
+  .btn-del:hover{border-color:var(--terracotta);color:var(--terracotta);}
+  @media(max-width:700px){.ledger-head{display:none;}.ledger-row{grid-template-columns:1fr 1fr;gap:6px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar reveal">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+  </div>
+
+  <div id="gateSection">
+    <div class="gate-card reveal">
+      <div class="page-head" style="text-align:center;">
+        <div class="eyebrow">Ivaan Admin</div>
+        <h1>Knowledge Base</h1>
+      </div>
+      <p>Enter your admin key to manage what Ivaan has been taught.</p>
+      <div class="field"><input type="password" id="adminKeyInput" placeholder="Admin key"></div>
+      <button class="btn btn-primary" id="btnUnlock" style="width:100%;">Unlock</button>
+      <div class="form-error" id="gateError"></div>
+    </div>
+  </div>
+
+  <div id="adminSection" style="display:none;">
+    <div class="page-head reveal" style="animation-delay:.03s">
+      <div class="eyebrow">Ivaan Admin</div>
+      <h1>Knowledge Base</h1>
+      <p>Everything you add here gets searched automatically whenever a visitor asks Ivaan something — matching entries are handed to it as trusted reference material. Feed it strategies, concepts, definitions, or extracted text from a PDF.</p>
+    </div>
+
+    <div class="panel reveal" style="animation-delay:.06s">
+      <div class="section-title">Add New Entry</div>
+      <div style="margin-top:14px;">
+        <div class="field">
+          <label>Title</label>
+          <input type="text" id="fTitle" placeholder="e.g. Our approach to position sizing">
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label>Tags (comma-separated, optional)</label>
+            <input type="text" id="fTags" placeholder="e.g. risk management, position sizing">
+          </div>
+          <div class="field">
+            <label>Or extract from a PDF</label>
+            <input type="file" id="fPdf" accept="application/pdf">
+            <div class="field-hint" id="pdfStatus"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Content</label>
+          <textarea id="fContent" placeholder="Paste or type the strategy, concept, or notes here — or upload a PDF above to auto-fill this."></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btnSave">Add to Knowledge Base</button>
+        </div>
+        <div class="form-error" id="formError"></div>
+        <div class="form-success" id="formSuccess"></div>
+      </div>
+    </div>
+
+    <div class="section-title reveal">Existing Entries</div>
+    <div class="ledger reveal" style="margin-top:6px;">
+      <div class="ledger-head"><div>Title</div><div>Tags</div><div>Added</div><div>Size</div><div></div></div>
+      <div id="entriesBody"><div class="ledger-empty">Loading...</div></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script>
+const WORKER_URL = 'https://ivaan.dinankarparmar12345.workers.dev';
+let adminKey = localStorage.getItem('ivaan_admin_key') || '';
+
+function headers(){
+  return { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + adminKey };
+}
+
+async function tryUnlock(){
+  const errorEl = document.getElementById('gateError');
+  errorEl.textContent = '';
+  try {
+    const res = await fetch(`${WORKER_URL}/knowledge/list`, { headers: headers() });
+    if (res.status === 401) {
+      errorEl.textContent = 'Incorrect admin key.';
+      return false;
+    }
+    if (!res.ok) {
+      errorEl.textContent = 'Could not reach the server — try again.';
+      return false;
+    }
+    document.getElementById('gateSection').style.display = 'none';
+    document.getElementById('adminSection').style.display = 'block';
+    loadEntries();
+    return true;
+  } catch {
+    errorEl.textContent = 'Network error — try again.';
+    return false;
+  }
+}
+
+document.getElementById('btnUnlock').addEventListener('click', async () => {
+  adminKey = document.getElementById('adminKeyInput').value.trim();
+  if (!adminKey) return;
+  const ok = await tryUnlock();
+  if (ok) localStorage.setItem('ivaan_admin_key', adminKey);
+});
+
+// If a key is already saved on this device, try it automatically.
+if (adminKey) tryUnlock();
+
+function escapeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
+}
+
+async function loadEntries(){
+  const body = document.getElementById('entriesBody');
+  try {
+    const res = await fetch(`${WORKER_URL}/knowledge/list`, { headers: headers() });
+    const data = await res.json();
+    const entries = data.entries || [];
+    if (!entries.length){
+      body.innerHTML = '<div class="ledger-empty">Nothing added yet — use the form above.</div>';
+      return;
+    }
+    body.innerHTML = entries.map(e => `
+      <div class="ledger-row">
+        <div>${escapeHtml(e.title)}</div>
+        <div class="tags">${escapeHtml(e.tags || '—')}</div>
+        <div>${new Date(e.created_at.replace(' ', 'T') + 'Z').toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</div>
+        <div>${Math.round((e.content_length || 0) / 100) / 10}k</div>
+        <div><button class="btn-del" data-id="${e.id}">Delete</button></div>
+      </div>
+    `).join('');
+  } catch {
+    body.innerHTML = '<div class="ledger-empty">Could not load entries — try reloading.</div>';
+  }
+}
+
+document.getElementById('entriesBody').addEventListener('click', async (e) => {
+  const btn = e.target.closest('.btn-del');
+  if (!btn) return;
+  if (!confirm('Delete this entry? Ivaan will no longer be able to reference it.')) return;
+  try {
+    await fetch(`${WORKER_URL}/knowledge/delete`, {
+      method: 'POST', headers: headers(), body: JSON.stringify({ id: Number(btn.dataset.id) }),
+    });
+    loadEntries();
+  } catch {
+    alert('Could not delete — try again.');
+  }
+});
+
+// ── PDF extraction (client-side, same pdf.js as the chat widget) ─────────
+let pdfLibReady = false;
+async function ensurePdfLib(){
+  if (pdfLibReady) return;
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+  pdfLibReady = true;
+}
+
+document.getElementById('fPdf').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const statusEl = document.getElementById('pdfStatus');
+  statusEl.textContent = 'Reading PDF...';
+  try {
+    await ensurePdfLib();
+    const buf = await file.arrayBuffer();
+    const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
+    const maxPages = Math.min(pdf.numPages, 100);
+    let fullText = '';
+    for (let i = 1; i <= maxPages; i++){
+      statusEl.textContent = `Reading page ${i} of ${maxPages}...`;
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      const pageText = content.items.map(item => item.str).join(' ');
+      fullText += `[Page ${i}]\n${pageText}\n\n`;
+      if (fullText.length > 40000) break; // matches the server-side content cap
+    }
+    document.getElementById('fContent').value = fullText.slice(0, 40000);
+    if (!document.getElementById('fTitle').value) {
+      document.getElementById('fTitle').value = file.name.replace(/\.pdf$/i, '');
+    }
+    statusEl.textContent = `Extracted ${Math.min(pdf.numPages, maxPages)} of ${pdf.numPages} pages into Content below — review before saving.`;
+  } catch (err) {
+    statusEl.textContent = 'Could not read that PDF — try pasting the text directly instead.';
+  }
+});
+
+document.getElementById('btnSave').addEventListener('click', async () => {
+  const errorEl = document.getElementById('formError');
+  const successEl = document.getElementById('formSuccess');
+  errorEl.textContent = ''; successEl.textContent = '';
+
+  const title = document.getElementById('fTitle').value.trim();
+  const tags = document.getElementById('fTags').value.trim();
+  const content = document.getElementById('fContent').value.trim();
+
+  if (!title || !content) {
+    errorEl.textContent = 'Title and Content are both required.';
+    return;
+  }
+
+  const btn = document.getElementById('btnSave');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  try {
+    const res = await fetch(`${WORKER_URL}/knowledge/add`, {
+      method: 'POST', headers: headers(),
+      body: JSON.stringify({ title, content, tags: tags || null }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      errorEl.textContent = data.error || 'Could not save — try again.';
+    } else {
+      successEl.textContent = 'Added — Ivaan can now use this.';
+      document.getElementById('fTitle').value = '';
+      document.getElementById('fTags').value = '';
+      document.getElementById('fContent').value = '';
+      document.getElementById('fPdf').value = '';
+      document.getElementById('pdfStatus').textContent = '';
+      loadEntries();
+    }
+  } catch {
+    errorEl.textContent = 'Network error — try again.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Add to Knowledge Base';
+  }
+});
+</script>
+</body>
+</html>

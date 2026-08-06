@@ -144,12 +144,12 @@
   .section-title{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0 0 4px;padding:0 4px;}
   .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:24px;}
   .ledger-head{
-    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 2.2fr 0.6fr;
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr 1.9fr 0.6fr 0.7fr;
     padding:12px 22px;border-bottom:1px solid var(--line);
     font-family:var(--mono);font-size:9.5px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;
   }
   .ledger-row{
-    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 2.2fr 0.6fr;
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr 1.9fr 0.6fr 0.7fr;
     padding:15px 22px;border-bottom:1px solid var(--line);align-items:center;
     transition:background .2s ease;
   }
@@ -166,11 +166,21 @@
   .cell-note{font-size:12.5px;color:var(--sub);line-height:1.4;font-style:italic;}
   .cell-note.reflection{color:var(--terracotta);opacity:0.85;}
   .cell-date{font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);}
+  .cell-actions{display:flex;gap:6px;}
+  .cell-actions button{
+    width:26px;height:26px;border-radius:7px;border:1px solid var(--line);
+    background:rgba(255,255,255,0.02);color:var(--sub-dim);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:all .2s ease;
+    font-size:12px;padding:0;
+  }
+  .cell-actions .btn-edit:hover{border-color:var(--brass);color:var(--brass-bright);}
+  .cell-actions .btn-delete:hover{border-color:var(--terracotta);color:var(--terracotta);}
 
   @media(max-width:800px){
     .ledger-head{display:none;}
     .ledger-row{grid-template-columns:1fr;gap:6px;padding:16px 20px;}
     .cell-num::before{content:attr(data-label) ': ';color:var(--sub-dim);font-family:var(--mono);font-size:9px;}
+    .cell-actions{margin-top:6px;}
   }
 </style>
 </head>
@@ -207,7 +217,7 @@
 
   <div class="new-entry-bar reveal" style="animation-delay:.09s">
     <h2>Recent Entries</h2>
-    <button class="btn-new" onclick="document.getElementById('entryForm').classList.toggle('open')">+ Log a Trade</button>
+    <button class="btn-new" id="btnNewTrade" onclick="toggleEntryForm()">+ Log a Trade</button>
   </div>
 
   <div class="entry-form reveal" id="entryForm">
@@ -222,7 +232,7 @@
     <div class="form-grid">
       <div class="field required"><label>Entry Price</label><input type="text" id="f-entry" placeholder="0.00"></div>
       <div class="field required"><label>Exit Price</label><input type="text" id="f-exit" placeholder="0.00"></div>
-      <div class="field"><label>P&L</label><input type="text" id="f-pnl" placeholder="e.g. 5100 or -3500"></div>
+      <div class="field"><label>P&L (auto-calculated)</label><input type="text" id="f-pnl" placeholder="Fill in Entry, Exit &amp; Size" readonly style="opacity:0.85;cursor:not-allowed;"></div>
       <div class="field"><label>Date</label><input type="date" id="f-date"></div>
     </div>
     <div class="form-grid wide">
@@ -231,14 +241,14 @@
     </div>
     <div class="form-actions">
       <div id="formError" style="color:var(--terracotta);font-family:var(--mono);font-size:11.5px;margin-right:auto;align-self:center;"></div>
-      <button class="btn-cancel" onclick="document.getElementById('entryForm').classList.remove('open')">Cancel</button>
+      <button class="btn-cancel" onclick="exitEditMode(); document.getElementById('entryForm').classList.remove('open'); ['f-instrument','f-size','f-risk','f-entry','f-exit','f-pnl','f-note','f-reflection'].forEach(id => document.getElementById(id).value = '');">Cancel</button>
       <button class="btn-save" id="btnSave">Save Entry</button>
     </div>
   </div>
 
   <div class="ledger reveal" style="animation-delay:.12s">
     <div class="ledger-head">
-      <div>Instrument</div><div>Entry</div><div>Exit</div><div>Risk</div><div>P&L</div><div>Note</div><div>Date</div>
+      <div>Instrument</div><div>Entry</div><div>Exit</div><div>Risk</div><div>P&L</div><div>Note</div><div>Date</div><div>Actions</div>
     </div>
     <div id="ledgerBody">
       <div class="ledger-row"><div class="cell-note" style="grid-column:1/-1;">Loading your entries...</div></div>
@@ -277,7 +287,90 @@ function formatDate(sqliteUtc){
   return d.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
 }
 
+let entriesCache = [];
+let editingId = null;
+
+function exitEditMode(){
+  editingId = null;
+  document.getElementById('btnSave').textContent = 'Save Entry';
+  document.querySelector('.new-entry-bar h2').textContent = 'Recent Entries';
+  document.getElementById('btnNewTrade').textContent = '+ Log a Trade';
+}
+
+function toggleEntryForm(){
+  if (editingId !== null) {
+    exitEditMode();
+    document.getElementById('entryForm').classList.remove('open');
+    ['f-instrument','f-size','f-risk','f-entry','f-exit','f-pnl','f-note','f-reflection'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+  } else {
+    document.getElementById('entryForm').classList.toggle('open');
+  }
+}
+
+function enterEditMode(entry){
+  editingId = entry.id;
+  document.querySelector('.new-entry-bar h2').textContent = 'Editing Trade';
+  document.getElementById('btnNewTrade').textContent = 'Cancel Edit';
+  document.getElementById('f-instrument').value = entry.instrument || '';
+  document.getElementById('f-direction').value = entry.direction || 'Long';
+  document.getElementById('f-size').value = entry.size || '';
+  document.getElementById('f-risk').value = entry.risk_pct ?? '';
+  document.getElementById('f-entry').value = entry.entry_price ?? '';
+  document.getElementById('f-exit').value = entry.exit_price ?? '';
+  document.getElementById('f-pnl').value = entry.pnl ?? '';
+  document.getElementById('f-note').value = entry.note || '';
+  document.getElementById('f-reflection').value = entry.reflection || '';
+  document.getElementById('formError').textContent = '';
+  document.getElementById('btnSave').textContent = 'Update Entry';
+  document.getElementById('entryForm').classList.add('open');
+  document.getElementById('entryForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function deleteEntry(id){
+  if (!confirm('Delete this entry? This cannot be undone.')) return;
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/delete`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + authToken },
+      body: JSON.stringify({ id }),
+    });
+    if (res.status === 401) {
+      localStorage.removeItem('dt_auth_token');
+      localStorage.removeItem('dt_user_email');
+      window.location.href = 'auth.html?redirect=journal.html';
+      return;
+    }
+    const result = await res.json();
+    if (!res.ok || result.error) {
+      alert(result.error || 'Could not delete — try again.');
+    } else {
+      await loadEntries();
+      await loadCoach();
+    }
+  } catch {
+    alert('Network error — try again.');
+  }
+}
+
+// One delegated listener on the ledger body handles Edit/Delete for every
+// row, including rows re-rendered after each load — no per-row rebinding.
+document.getElementById('ledgerBody').addEventListener('click', (e) => {
+  const editBtn = e.target.closest('.btn-edit');
+  const deleteBtn = e.target.closest('.btn-delete');
+  if (editBtn) {
+    const id = Number(editBtn.dataset.id);
+    const entry = entriesCache.find(en => en.id === id);
+    if (entry) enterEditMode(entry);
+  } else if (deleteBtn) {
+    const id = Number(deleteBtn.dataset.id);
+    deleteEntry(id);
+  }
+});
+
 function renderEntries(entries){
+  entriesCache = entries;
   const body = document.getElementById('ledgerBody');
   if (!entries.length){
     body.innerHTML = '<div class="ledger-row"><div class="cell-note" style="grid-column:1/-1;">No entries yet — log your first trade above.</div></div>';
@@ -290,7 +383,7 @@ function renderEntries(entries){
       const hasReflection = e.reflection && e.reflection.trim().length > 0;
       const noteText = isLoss && hasReflection ? e.reflection : (e.note || '—');
       const noteClass = isLoss ? ' reflection' : '';
-      return `<div class="ledger-row">
+      return `<div class="ledger-row" data-id="${e.id}">
         <div class="cell-instrument">${escapeHtml(e.instrument)} <span class="dir ${dir}">${dir.toUpperCase()}</span></div>
         <div class="cell-num" data-label="Entry">${e.entry_price ?? '—'}</div>
         <div class="cell-num" data-label="Exit">${e.exit_price ?? '—'}</div>
@@ -298,6 +391,10 @@ function renderEntries(entries){
         <div class="cell-pnl ${pnlClass}" data-label="P&L">${pnlText}</div>
         <div class="cell-note${noteClass}">${escapeHtml(noteText)}</div>
         <div class="cell-date">${formatDate(e.created_at)}</div>
+        <div class="cell-actions">
+          <button class="btn-edit" data-id="${e.id}" title="Edit">✎</button>
+          <button class="btn-delete" data-id="${e.id}" title="Delete">✕</button>
+        </div>
       </div>`;
     }).join('');
   }
@@ -378,6 +475,36 @@ async function loadEntries(){
   }
 }
 
+// P&L is always derived from Entry, Exit, Direction, and Size — never typed
+// in directly. This is what actually fixes the "shows profit on a loss"
+// class of bug: there's no longer a way for the numbers to disagree.
+function recalcPnl(){
+  const entry = parseFloat(document.getElementById('f-entry').value);
+  const exit = parseFloat(document.getElementById('f-exit').value);
+  const direction = document.getElementById('f-direction').value;
+  const sizeRaw = document.getElementById('f-size').value.trim();
+  const pnlField = document.getElementById('f-pnl');
+
+  if (isNaN(entry) || isNaN(exit)) {
+    pnlField.value = '';
+    return;
+  }
+
+  // Pull a plain quantity out of the Size field if one is there (e.g. "2
+  // lots" → 2). If nothing numeric is found, treat it as 1 unit so the
+  // field still shows a meaningful per-unit P&L rather than staying blank.
+  const qtyMatch = sizeRaw.match(/(\d+(\.\d+)?)/);
+  const qty = qtyMatch ? parseFloat(qtyMatch[1]) : 1;
+
+  const perUnit = direction === 'Short' ? (entry - exit) : (exit - entry);
+  const pnl = Math.round(perUnit * qty * 100) / 100;
+  pnlField.value = pnl;
+}
+['f-entry', 'f-exit', 'f-direction', 'f-size'].forEach(id => {
+  document.getElementById(id).addEventListener('input', recalcPnl);
+  document.getElementById(id).addEventListener('change', recalcPnl);
+});
+
 document.getElementById('btnSave').addEventListener('click', async () => {
   const errorEl = document.getElementById('formError');
   errorEl.textContent = '';
@@ -415,10 +542,14 @@ document.getElementById('btnSave').addEventListener('click', async () => {
 
   const btn = document.getElementById('btnSave');
   btn.disabled = true;
-  btn.textContent = 'Saving...';
+  const isEditing = editingId !== null;
+  btn.textContent = isEditing ? 'Updating...' : 'Saving...';
+
+  if (isEditing) payload.id = editingId;
+  const endpoint = isEditing ? '/journal/update' : '/journal/add';
 
   try {
-    const res = await fetch(`${WORKER_URL}/journal/add`, {
+    const res = await fetch(`${WORKER_URL}${endpoint}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + authToken },
       body: JSON.stringify(payload),
@@ -433,6 +564,7 @@ document.getElementById('btnSave').addEventListener('click', async () => {
     if (!res.ok || result.error) {
       errorEl.textContent = result.error || 'Could not save — try again.';
     } else {
+      exitEditMode();
       document.getElementById('entryForm').classList.remove('open');
       ['f-instrument','f-size','f-risk','f-entry','f-exit','f-pnl','f-note','f-reflection'].forEach(id => {
         document.getElementById(id).value = '';

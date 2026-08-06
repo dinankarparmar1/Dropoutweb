@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulator — TraderOS — Dropout Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+  /* ===================================================================
+     Every token below is copied verbatim from dashboard.html / journal.html
+     / coach.html — nothing here is a new color, font, radius, or spacing
+     value. This file inherits the existing design system on purpose.
+     =================================================================== */
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --emerald:#5da583;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(ellipse 800px 500px at 20% -5%, rgba(201,162,39,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, rgba(93,165,131,0.04), transparent 60%),
+      var(--bg);
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px;}
+
+  @keyframes riseIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .reveal{animation:riseIn .7s cubic-bezier(.19,.7,.3,1) both;}
+
+  /* topbar — copied from journal.html/coach.html */
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 0 24px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;display:flex;align-items:baseline;gap:8px;}
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+  .back-link{font-family:var(--mono);font-size:11px;color:var(--sub-dim);letter-spacing:0.05em;text-decoration:none;}
+  .mascot-orb{
+    width:24px;height:24px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-deep));
+    box-shadow:0 0 12px rgba(201,162,39,0.4);position:relative;flex-shrink:0;
+  }
+  .mascot-orb::after{
+    content:'';position:absolute;inset:-3px;border-radius:50%;
+    border:1px solid rgba(236,199,102,0.35);animation:orbBreathe 3.2s ease-in-out infinite;
+  }
+  @keyframes orbBreathe{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.12);opacity:.9;}}
+
+  /* page head — copied pattern */
+  .page-head{margin-bottom:18px;}
+  .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+  .page-head h1{font-family:var(--serif);font-weight:600;font-size:24px;margin:0;}
+  .page-head p{color:var(--sub);font-size:13px;margin:8px 0 0;line-height:1.55;max-width:560px;}
+
+  /* panel — copied from coach.html .panel */
+  .panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:22px 24px;margin-bottom:16px;}
+  .section-title{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0 0 4px;padding:0 4px;}
+
+  /* form fields — copied verbatim from journal.html .field */
+  .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:700px){.form-grid{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+  .field input, .field select{
+    width:100%;background:rgba(0,0,0,0.2);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);font-family:var(--sans);font-size:13.5px;padding:9px 11px;
+  }
+  .field input:focus, .field select:focus{outline:none;border-color:var(--brass);}
+  .field input[readonly]{opacity:0.85;cursor:not-allowed;}
+  .form-note{font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);margin-top:10px;line-height:1.6;}
+  .form-error{color:var(--terracotta);font-family:var(--mono);font-size:11.5px;margin-top:10px;min-height:14px;}
+
+  /* buttons — copied from journal.html .btn-save / .btn-cancel, and the
+     existing emerald/terracotta semantics already used for P&L + Long/Short
+     tags in the ledger (not a new color choice) */
+  .btn{font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:10px 18px;border-radius:20px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;}
+  .btn-primary{background:var(--brass);border:none;color:#0b0a08;}
+  .btn-primary:hover{background:var(--brass-bright);}
+  .btn-outline{background:transparent;border:1px solid var(--line);color:var(--sub-dim);}
+  .btn-outline:hover{border-color:var(--brass);color:var(--brass-bright);}
+  .btn-long{background:var(--emerald);border:none;color:#0b0a08;}
+  .btn-long:hover{filter:brightness(1.1);}
+  .btn-short{background:var(--terracotta);border:none;color:#0b0a08;}
+  .btn-short:hover{filter:brightness(1.1);}
+  .btn:disabled{opacity:.35;cursor:not-allowed;}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+
+  /* stat cards — copied from coach.html .stats-row/.stat-card, using the
+     auto-fit grid pattern already established in dashboard.html .subscores */
+  .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px;}
+  .stat-card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:16px;text-align:center;}
+  .stat-card .val{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--brass-bright);}
+  .stat-card .val.pos{color:var(--emerald);}
+  .stat-card .val.neg{color:var(--terracotta);}
+  .stat-card .lbl{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;margin-top:6px;}
+
+  /* chart panel */
+  .chart-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .chart-head .symbol{font-family:var(--serif);font-weight:600;font-size:16px;}
+  .chart-head .ohlc{font-family:var(--mono);font-size:11.5px;color:var(--sub);}
+  .chart-head .ohlc b{color:var(--ink);font-weight:600;}
+  #chartContainer{width:100%;height:340px;border-radius:12px;overflow:hidden;}
+
+  .replay-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;}
+  .speed-group{display:flex;gap:4px;border:1px solid var(--line);border-radius:20px;padding:3px;}
+  .speed-btn{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:6px 12px;border-radius:16px;border:none;background:transparent;color:var(--sub-dim);cursor:pointer;transition:all .2s ease;}
+  .speed-btn.active{background:var(--brass);color:#0b0a08;}
+
+  /* ledger — copied verbatim from journal.html .ledger/.ledger-row */
+  .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:16px;}
+  .ledger-head{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;padding:12px 20px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;}
+  .ledger-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;padding:13px 20px;border-bottom:1px solid var(--line);align-items:center;font-size:12.5px;}
+  .ledger-row:last-child{border-bottom:none;}
+  .dir.long{color:var(--emerald);font-family:var(--mono);font-size:10.5px;font-weight:700;}
+  .dir.short{color:var(--terracotta);font-family:var(--mono);font-size:10.5px;font-weight:700;}
+  .cell-pnl.pos{color:var(--emerald);font-weight:600;font-family:var(--serif);}
+  .cell-pnl.neg{color:var(--terracotta);font-weight:600;font-family:var(--serif);}
+  .ledger-empty{padding:24px 20px;text-align:center;color:var(--sub-dim);font-family:var(--mono);font-size:11.5px;}
+  .btn-close-position{font-family:var(--mono);font-size:9.5px;font-weight:700;padding:5px 11px;border-radius:14px;border:1px solid var(--line);background:transparent;color:var(--sub-dim);cursor:pointer;}
+  .btn-close-position:hover{border-color:var(--terracotta);color:var(--terracotta);}
+  @media(max-width:760px){
+    .ledger-head{display:none;}
+    .ledger-row{grid-template-columns:1fr 1fr;gap:6px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar reveal">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="dashboard.html" class="back-link">← Dashboard</a>
+      <div class="mascot-orb" title="Ivaan — calm & steady"></div>
+    </div>
+  </div>
+
+  <div class="page-head reveal" style="animation-delay:.03s">
+    <div class="eyebrow">Interactive Simulator</div>
+    <h1>Historical Replay</h1>
+    <p>Pick a real stock, a past session, and a timeframe. The simulator replays exactly what happened, candle by candle — future price action stays hidden until you reveal it.</p>
+  </div>
+
+  <div class="panel reveal" style="animation-delay:.06s">
+    <div class="section-title">Set Up a Session</div>
+    <div class="form-grid" style="margin-top:12px;">
+      <div class="field">
+        <label>Stock</label>
+        <select id="fStock"></select>
+      </div>
+      <div class="field">
+        <label>Historical Date</label>
+        <input type="date" id="fDate">
+      </div>
+      <div class="field">
+        <label>Timeframe</label>
+        <select id="fTimeframe">
+          <option value="1m">1 Minute</option>
+          <option value="3m">3 Minutes</option>
+          <option value="5m">5 Minutes</option>
+          <option value="15m">15 Minutes</option>
+          <option value="30m">30 Minutes</option>
+          <option value="1H">1 Hour</option>
+          <option value="4H">4 Hours</option>
+          <option value="1D" selected>1 Day</option>
+          <option value="1W">1 Week</option>
+        </select>
+      </div>
+      <div class="field" style="display:flex;align-items:flex-end;">
+        <button class="btn btn-primary" id="btnLoadSession" style="width:100%;">Load Session</button>
+      </div>
+    </div>
+    <div class="form-note">Real historical data via Yahoo Finance. Fine-grained intraday timeframes (1m–1H) only go back a limited recent window — for anything older, use 1D or 1W.</div>
+    <div class="form-error" id="setupError"></div>
+  </div>
+
+  <div class="stats-row reveal" style="animation-delay:.09s">
+    <div class="stat-card"><div class="val" id="statBalance">₹1,00,000</div><div class="lbl">Virtual Balance</div></div>
+    <div class="stat-card"><div class="val" id="statRealized">–</div><div class="lbl">Realized P&L</div></div>
+    <div class="stat-card"><div class="val" id="statUnrealized">–</div><div class="lbl">Unrealized P&L</div></div>
+    <div class="stat-card"><div class="val" id="statOpenCount">0</div><div class="lbl">Open Positions</div></div>
+    <div class="stat-card"><div class="val" id="statWinRate">–</div><div class="lbl">Win Rate</div></div>
+  </div>
+
+  <div class="panel reveal" style="animation-delay:.12s">
+    <div class="chart-head">
+      <span class="symbol" id="chartSymbol">Select a stock and load a session</span>
+      <span class="ohlc" id="chartOhlc"></span>
+    </div>
+    <div id="chartContainer"></div>
+
+    <div class="replay-row">
+      <button class="btn btn-outline" id="btnPrev" disabled>◀ Prev</button>
+      <button class="btn btn-primary" id="btnPlayPause" disabled>▶ Play</button>
+      <button class="btn btn-outline" id="btnNext" disabled>Next ▶</button>
+      <div class="speed-group">
+        <button class="speed-btn active" data-speed="1">1x</button>
+        <button class="speed-btn" data-speed="2">2x</button>
+        <button class="speed-btn" data-speed="5">5x</button>
+        <button class="speed-btn" data-speed="10">10x</button>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-long" id="btnBuy" disabled>Buy / Long</button>
+      <button class="btn btn-short" id="btnSell" disabled>Sell / Short</button>
+    </div>
+
+    <div class="panel" id="ticket" style="display:none;margin-top:14px;margin-bottom:0;background:rgba(0,0,0,0.15);">
+      <div class="form-grid">
+        <div class="field"><label>Direction</label><input type="text" id="ticketDirection" readonly></div>
+        <div class="field"><label>Quantity</label><input type="number" id="ticketQty" value="10" min="1"></div>
+        <div class="field"><label>Stop Loss</label><input type="number" id="ticketStop" placeholder="optional"></div>
+        <div class="field"><label>Target</label><input type="number" id="ticketTarget" placeholder="optional"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btnConfirmTicket">Confirm Order</button>
+        <button class="btn btn-outline" id="btnCancelTicket">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title reveal">Open Positions</div>
+  <div class="ledger reveal" style="margin-top:6px;">
+    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Qty</div><div>SL / Target</div><div>Unrealized P&L</div><div></div></div>
+    <div id="positionsBody"><div class="ledger-empty">No open positions.</div></div>
+  </div>
+
+  <div class="section-title reveal">Trade History</div>
+  <div class="ledger reveal" style="margin-top:6px;">
+    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Exit</div><div>Qty</div><div>Realized P&L</div><div>Closed</div></div>
+    <div id="historyBody"><div class="ledger-empty">No trades closed yet this session.</div></div>
+  </div>
+
+</div>
+
+<script src="market-data.js"></script>
+<script>
+const authToken = localStorage.getItem('dt_auth_token');
+if (!authToken) {
+  window.location.href = 'auth.html?redirect=simulator.html';
+}
+
+// ── State ──────────────────────────────────────────────────────────────
+const STARTING_BALANCE = 100000;
+let fullCandles = [];
+let revealedCount = 0;
+let realized = 0;
+let positions = [];   // open positions, plural — a real portfolio
+let history = [];     // closed trades
+let positionIdCounter = 1;
+let isPlaying = false;
+let playTimer = null;
+let currentSpeed = 1;
+let pendingDirection = null;
+
+// ── Populate the stock picker from the separated data layer ──────────────
+const stockSelect = document.getElementById('fStock');
+MarketData.listStocks().forEach(s => {
+  const opt = document.createElement('option');
+  opt.value = s.symbol;
+  opt.textContent = `${s.name} (${s.symbol})`;
+  stockSelect.appendChild(opt);
+});
+
+// Default date: 10 calendar days ago, a reasonable starting point that's
+// likely to have intraday data available.
+const defaultDate = new Date();
+defaultDate.setDate(defaultDate.getDate() - 10);
+document.getElementById('fDate').value = defaultDate.toISOString().slice(0, 10);
+
+// ── Chart setup (Lightweight Charts) — colors pulled directly from the
+// same palette as the rest of the site, not a new chart theme ───────────
+const chart = LightweightCharts.createChart(document.getElementById('chartContainer'), {
+  layout: { background: { type: 'solid', color: 'transparent' }, textColor: '#a8a08c', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
+  grid: { vertLines: { color: 'rgba(224,197,138,0.06)' }, horzLines: { color: 'rgba(224,197,138,0.06)' } },
+  crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: 'rgba(236,199,102,0.4)' }, horzLine: { color: 'rgba(236,199,102,0.4)' } },
+  rightPriceScale: { borderColor: 'rgba(224,197,138,0.14)' },
+  timeScale: { borderColor: 'rgba(224,197,138,0.14)', timeVisible: true },
+  handleScroll: true,
+  handleScale: true,
+});
+const candleSeries = chart.addCandlestickSeries({
+  upColor: '#5da583', downColor: '#c17a5f',
+  borderUpColor: '#5da583', borderDownColor: '#c17a5f',
+  wickUpColor: '#5da583', wickDownColor: '#c17a5f',
+});
+const volumeSeries = chart.addHistogramSeries({
+  priceFormat: { type: 'volume' },
+  priceScaleId: '',
+});
+volumeSeries.priceScale().applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
+candleSeries.priceScale().applyOptions({ scaleMargins: { top: 0.06, bottom: 0.22 } });
+
+function resizeChart(){
+  const el = document.getElementById('chartContainer');
+  chart.applyOptions({ width: el.clientWidth, height: 340 });
+}
+window.addEventListener('resize', resizeChart);
+
+// Crosshair hover → live OHLC readout, native to the library
+chart.subscribeCrosshairMove(param => {
+  if (!param || !param.time || !fullCandles.length) return;
+  const bar = param.seriesData.get(candleSeries);
+  if (!bar) return;
+  document.getElementById('chartOhlc').innerHTML =
+    `O <b>${bar.open.toFixed(2)}</b>  H <b>${bar.high.toFixed(2)}</b>  L <b>${bar.low.toFixed(2)}</b>  C <b>${bar.close.toFixed(2)}</b>`;
+});
+
+// ── Helpers ────────────────────────────────────────────────────────────
+function fmtMoney(n){
+  const sign = n < 0 ? '−' : '';
+  return sign + '₹' + Math.abs(Math.round(n)).toLocaleString('en-IN');
+}
+function currentPrice(){
+  return fullCandles[revealedCount - 1]?.close ?? null;
+}
+function toChartBar(c){
+  return { time: c.time, open: c.open, high: c.high, low: c.low, close: c.close };
+}
+function toVolumeBar(c){
+  return { time: c.time, value: c.volume || 0, color: c.close >= c.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' };
+}
+
+function redrawChart(){
+  const visible = fullCandles.slice(0, revealedCount);
+  candleSeries.setData(visible.map(toChartBar));
+  volumeSeries.setData(visible.map(toVolumeBar));
+  const last = visible[visible.length - 1];
+  if (last) document.getElementById('chartOhlc').innerHTML =
+    `O <b>${last.open.toFixed(2)}</b>  H <b>${last.high.toFixed(2)}</b>  L <b>${last.low.toFixed(2)}</b>  C <b>${last.close.toFixed(2)}</b>`;
+}
+
+function updateStats(){
+  document.getElementById('statBalance').textContent = fmtMoney(STARTING_BALANCE + realized);
+  const realizedEl = document.getElementById('statRealized');
+  realizedEl.textContent = (realized >= 0 ? '+' : '') + fmtMoney(realized).replace('−', '-');
+  realizedEl.className = 'val ' + (realized > 0 ? 'pos' : realized < 0 ? 'neg' : '');
+
+  const price = currentPrice();
+  const unrealized = price === null ? 0 : positions.reduce((sum, p) => {
+    const diff = p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice);
+    return sum + diff * p.qty;
+  }, 0);
+  const unrealizedEl = document.getElementById('statUnrealized');
+  unrealizedEl.textContent = positions.length ? (unrealized >= 0 ? '+' : '') + fmtMoney(unrealized).replace('−', '-') : '–';
+  unrealizedEl.className = 'val ' + (unrealized > 0 ? 'pos' : unrealized < 0 ? 'neg' : '');
+
+  document.getElementById('statOpenCount').textContent = positions.length;
+  const wins = history.filter(t => t.pnl > 0).length;
+  document.getElementById('statWinRate').textContent = history.length ? Math.round((wins / history.length) * 100) + '%' : '–';
+}
+
+function renderPositions(){
+  const body = document.getElementById('positionsBody');
+  if (!positions.length){
+    body.innerHTML = '<div class="ledger-empty">No open positions.</div>';
+    return;
+  }
+  const price = currentPrice() ?? 0;
+  body.innerHTML = positions.map(p => {
+    const pnl = (p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice)) * p.qty;
+    return `<div class="ledger-row">
+      <div class="dir ${p.direction === 'Short' ? 'short' : 'long'}">${p.direction}</div>
+      <div>₹${p.entryPrice.toFixed(2)}</div>
+      <div>${p.qty}</div>
+      <div style="font-size:11px;color:var(--sub-dim);">${p.stop ? 'SL ' + p.stop : '–'} / ${p.target ? 'TGT ' + p.target : '–'}</div>
+      <div class="cell-pnl ${pnl >= 0 ? 'pos' : 'neg'}">${pnl >= 0 ? '+' : ''}${fmtMoney(pnl).replace('−','-')}</div>
+      <div><button class="btn-close-position" data-id="${p.id}">Close</button></div>
+    </div>`;
+  }).join('');
+}
+
+function renderHistory(){
+  const body = document.getElementById('historyBody');
+  if (!history.length){
+    body.innerHTML = '<div class="ledger-empty">No trades closed yet this session.</div>';
+    return;
+  }
+  body.innerHTML = history.slice().reverse().map(t => `
+    <div class="ledger-row">
+      <div class="dir ${t.direction === 'Short' ? 'short' : 'long'}">${t.direction}</div>
+      <div>₹${t.entryPrice.toFixed(2)}</div>
+      <div>₹${t.exitPrice.toFixed(2)}</div>
+      <div>${t.qty}</div>
+      <div class="cell-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${t.pnl >= 0 ? '+' : ''}${fmtMoney(t.pnl).replace('−','-')}</div>
+      <div style="font-size:11px;color:var(--sub-dim);">${new Date(t.closedAt * 1000).toLocaleString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}</div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('positionsBody').addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-close-position');
+  if (btn) closePosition(Number(btn.dataset.id));
+});
+
+// ── Session loading ────────────────────────────────────────────────────
+document.getElementById('btnLoadSession').addEventListener('click', async () => {
+  const symbol = stockSelect.value;
+  const dateStr = document.getElementById('fDate').value;
+  const timeframe = document.getElementById('fTimeframe').value;
+  const errorEl = document.getElementById('setupError');
+  errorEl.textContent = '';
+
+  if (!symbol || !dateStr) { errorEl.textContent = 'Pick a stock and a date.'; return; }
+
+  const btn = document.getElementById('btnLoadSession');
+  btn.disabled = true;
+  btn.textContent = 'Loading real data...';
+
+  const result = await MarketData.getHistory(symbol, timeframe, dateStr);
+
+  btn.disabled = false;
+  btn.textContent = 'Load Session';
+
+  if (result.error || !result.candles.length) {
+    errorEl.textContent = result.error || 'No data found for that selection.';
+    return;
+  }
+
+  fullCandles = result.candles;
+  revealedCount = Math.min(15, fullCandles.length);
+  positions = [];
+  history = [];
+  realized = 0;
+
+  const stockLabel = stockSelect.options[stockSelect.selectedIndex].textContent;
+  document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe} · ${dateStr}`;
+
+  resizeChart();
+  redrawChart();
+  updateStats();
+  renderPositions();
+  renderHistory();
+
+  ['btnPrev','btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = false);
+  stopPlaying();
+});
+
+// ── Replay controls ────────────────────────────────────────────────────
+function stepForward(){
+  if (revealedCount >= fullCandles.length){
+    stopPlaying();
+    return false;
+  }
+  revealedCount++;
+  checkStopsAndTargets();
+  redrawChart();
+  updateStats();
+  renderPositions();
+  return true;
+}
+function stepBackward(){
+  const minCount = Math.min(15, fullCandles.length);
+  if (revealedCount <= minCount) return;
+  revealedCount--;
+  redrawChart();
+  updateStats();
+  renderPositions();
+}
+
+function checkStopsAndTargets(){
+  const c = fullCandles[revealedCount - 1];
+  if (!c) return;
+  // Iterate a copy since closePosition mutates the positions array.
+  [...positions].forEach(p => {
+    if (p.direction === 'Long'){
+      if (p.stop && c.low <= p.stop) closePosition(p.id, p.stop);
+      else if (p.target && c.high >= p.target) closePosition(p.id, p.target);
+    } else {
+      if (p.stop && c.high >= p.stop) closePosition(p.id, p.stop);
+      else if (p.target && c.low <= p.target) closePosition(p.id, p.target);
+    }
+  });
+}
+
+document.getElementById('btnNext').addEventListener('click', stepForward);
+document.getElementById('btnPrev').addEventListener('click', stepBackward);
+
+function startPlaying(){
+  isPlaying = true;
+  document.getElementById('btnPlayPause').textContent = '⏸ Pause';
+  const delay = 700 / currentSpeed;
+  playTimer = setInterval(() => { if (!stepForward()) stopPlaying(); }, delay);
+}
+function stopPlaying(){
+  isPlaying = false;
+  document.getElementById('btnPlayPause').textContent = '▶ Play';
+  if (playTimer) clearInterval(playTimer);
+  playTimer = null;
+}
+document.getElementById('btnPlayPause').addEventListener('click', () => {
+  if (isPlaying) stopPlaying(); else startPlaying();
+});
+
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSpeed = Number(btn.dataset.speed);
+    if (isPlaying){ stopPlaying(); startPlaying(); }
+  });
+});
+
+// ── Order ticket / paper trading ───────────────────────────────────────
+function openTicket(direction){
+  pendingDirection = direction;
+  document.getElementById('ticketDirection').value = direction;
+  document.getElementById('ticketQty').value = 10;
+  document.getElementById('ticketStop').value = '';
+  document.getElementById('ticketTarget').value = '';
+  document.getElementById('ticket').style.display = 'block';
+}
+function closeTicket(){
+  document.getElementById('ticket').style.display = 'none';
+  pendingDirection = null;
+}
+document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long'));
+document.getElementById('btnSell').addEventListener('click', () => openTicket('Short'));
+document.getElementById('btnCancelTicket').addEventListener('click', closeTicket);
+
+document.getElementById('btnConfirmTicket').addEventListener('click', () => {
+  const qty = Math.max(1, parseInt(document.getElementById('ticketQty').value) || 1);
+  const stopRaw = document.getElementById('ticketStop').value;
+  const targetRaw = document.getElementById('ticketTarget').value;
+  positions.push({
+    id: positionIdCounter++,
+    direction: pendingDirection,
+    qty,
+    entryPrice: currentPrice(),
+    entryTime: fullCandles[revealedCount - 1].time,
+    stop: stopRaw ? Number(stopRaw) : null,
+    target: targetRaw ? Number(targetRaw) : null,
+  });
+  closeTicket();
+  updateStats();
+  renderPositions();
+});
+
+function closePosition(id, forcedExitPrice){
+  const idx = positions.findIndex(p => p.id === id);
+  if (idx === -1) return;
+  const p = positions[idx];
+  const exitPrice = forcedExitPrice ?? currentPrice();
+  const pnl = (p.direction === 'Short' ? (p.entryPrice - exitPrice) : (exitPrice - p.entryPrice)) * p.qty;
+  realized += pnl;
+  history.push({
+    direction: p.direction, entryPrice: p.entryPrice, exitPrice, qty: p.qty, pnl,
+    closedAt: fullCandles[revealedCount - 1].time,
+  });
+  positions.splice(idx, 1);
+  updateStats();
+  renderPositions();
+  renderHistory();
+}
+
+resizeChart();
+</script>
+</body>
+</html>

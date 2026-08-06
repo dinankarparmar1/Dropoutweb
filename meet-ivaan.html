@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Ivaan — Dropout Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Same tokens as the rest of the site — nothing new invented here. */
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --emerald:#5da583;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px;}
+
+  @keyframes riseIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .reveal{animation:riseIn .7s cubic-bezier(.19,.7,.3,1) both;}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 0 24px;position:relative;z-index:2;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;display:flex;align-items:baseline;gap:8px;}
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+  .back-link{font-family:var(--mono);font-size:11px;color:var(--sub-dim);letter-spacing:0.05em;text-decoration:none;}
+
+  .page-head{margin-bottom:18px;position:relative;z-index:2;text-align:center;}
+  .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+  .page-head h1{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,36px);margin:0;}
+  .page-head p{color:var(--sub);font-size:13.5px;margin:10px auto 0;line-height:1.6;max-width:480px;}
+
+  /* orb stage */
+  .orb-stage{
+    position:relative;
+    width:100%;
+    height:min(64vh, 560px);
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:radial-gradient(ellipse 700px 500px at 50% 40%, rgba(201,162,39,0.07), transparent 65%), var(--panel);
+    overflow:hidden;margin-bottom:18px;
+  }
+  #orbCanvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+
+  .cam-preview{
+    position:absolute;bottom:14px;right:14px;width:120px;height:90px;
+    border:1px solid var(--line-hi);border-radius:10px;overflow:hidden;
+    background:#000;display:none;z-index:3;
+  }
+  .cam-preview.show{display:block;}
+  .cam-preview video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);}
+
+  .stage-overlay{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;gap:14px;text-align:center;padding:20px;z-index:4;
+    background:rgba(11,10,8,0.55);backdrop-filter:blur(2px);
+  }
+  .stage-overlay.hidden{display:none;}
+  .stage-overlay p{color:var(--sub);font-size:13px;max-width:340px;line-height:1.6;margin:0;}
+
+  .status-chip{
+    position:absolute;top:14px;left:14px;z-index:3;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;
+    padding:6px 12px;border-radius:20px;border:1px solid var(--line);background:rgba(11,10,8,0.6);color:var(--sub-dim);
+    display:flex;align-items:center;gap:7px;
+  }
+  .status-chip .dot{width:6px;height:6px;border-radius:50%;background:var(--sub-dim);}
+  .status-chip.active .dot{background:var(--emerald);box-shadow:0 0 6px var(--emerald);}
+  .status-chip.active{color:var(--emerald);border-color:rgba(93,165,131,0.35);}
+
+  .btn{font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;padding:11px 20px;border-radius:20px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;}
+  .btn-primary{background:var(--brass);border:none;color:#0b0a08;}
+  .btn-primary:hover{background:var(--brass-bright);}
+  .btn-outline{background:transparent;border:1px solid var(--line-hi);color:var(--sub);}
+  .btn-outline:hover{border-color:var(--brass);color:var(--brass-bright);}
+
+  .form-note{
+    font-family:var(--mono);font-size:11px;color:var(--sub-dim);text-align:center;
+    line-height:1.7;margin:0 auto 20px;max-width:520px;
+  }
+  .form-note b{color:var(--brass-bright);font-weight:600;}
+
+  .panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:20px 22px;margin-bottom:16px;}
+  .panel h2{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--brass);text-transform:uppercase;margin:0 0 10px;}
+  .panel p{color:var(--sub);font-size:13px;line-height:1.6;margin:0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar reveal">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+    <a href="index.html" class="back-link">← Home</a>
+  </div>
+
+  <div class="page-head reveal" style="animation-delay:.03s">
+    <div class="eyebrow">Meet Ivaan</div>
+    <h1>Your AI, Given a Presence</h1>
+    <p>A holographic orb you can spin and zoom with your bare hands — no mouse, no controller, just a webcam.</p>
+  </div>
+
+  <div class="orb-stage reveal" style="animation-delay:.06s">
+    <canvas id="orbCanvas"></canvas>
+    <div class="status-chip" id="statusChip"><span class="dot"></span><span id="statusText">Idle rotation</span></div>
+    <div class="cam-preview" id="camPreview"><video id="camVideo" autoplay playsinline muted></video></div>
+
+    <div class="stage-overlay" id="stageOverlay">
+      <p>Enable your camera to control the orb with hand gestures — or skip it and the orb rotates on its own.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <button class="btn btn-primary" id="btnEnableCam">Enable Hand Control</button>
+        <button class="btn btn-outline" id="btnSkipCam">Skip — Just Watch</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-note reveal" style="animation-delay:.09s">
+    <b>One hand, pinched</b> — move it to rotate the orb &nbsp;·&nbsp; <b>Both hands, pinched</b> — spread apart or together to zoom
+  </div>
+
+  <div class="panel reveal" style="animation-delay:.12s">
+    <h2>What am I looking at?</h2>
+    <p>This is the same Ivaan that powers chat, document analysis, and your AI Coach across the site — just given a visual form. Nothing here is a separate AI; it's a rendering of the same assistant, running entirely in your browser. Your camera feed never leaves your device — hand positions are processed locally and never uploaded anywhere.</p>
+  </div>
+
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
+
+const BRASS = 0xc9a227;
+const BRASS_BRIGHT = 0xecc766;
+const BRASS_DEEP = 0x7a6118;
+
+const stage = document.getElementById('orbCanvas').parentElement;
+const canvas = document.getElementById('orbCanvas');
+
+// ── Scene setup ────────────────────────────────────────────────────────
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, stage.clientWidth / stage.clientHeight, 0.1, 100);
+camera.position.set(0, 0, 7);
+
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(stage.clientWidth, stage.clientHeight);
+
+const orbGroup = new THREE.Group();
+scene.add(orbGroup);
+
+// ── Layered wireframe shells ────────────────────────────────────────────
+const shells = [];
+[1.5, 1.9, 2.3].forEach((radius, i) => {
+  const geo = new THREE.IcosahedronGeometry(radius, 1);
+  const wireGeo = new THREE.WireframeGeometry(geo);
+  const mat = new THREE.LineBasicMaterial({ color: BRASS_BRIGHT, transparent: true, opacity: 0.45 - i * 0.1 });
+  const mesh = new THREE.LineSegments(wireGeo, mat);
+  mesh.userData.speed = 0.04 + i * 0.015;
+  mesh.userData.axis = new THREE.Vector3(Math.random() - 0.5, 1, Math.random() - 0.5).normalize();
+  shells.push(mesh);
+  orbGroup.add(mesh);
+});
+
+// ── Glowing inner core ───────────────────────────────────────────────────
+const coreGeo = new THREE.IcosahedronGeometry(0.55, 2);
+const coreMat = new THREE.MeshBasicMaterial({ color: BRASS_BRIGHT });
+const core = new THREE.Mesh(coreGeo, coreMat);
+orbGroup.add(core);
+const coreLight = new THREE.PointLight(BRASS_BRIGHT, 8, 6);
+orbGroup.add(coreLight);
+
+// ── Scan rings ───────────────────────────────────────────────────────────
+const rings = [];
+[[2.6, 0.02, Math.PI / 2.2], [2.9, 0.015, -Math.PI / 3]].forEach(([radius, tube, tilt]) => {
+  const geo = new THREE.TorusGeometry(radius, tube, 8, 80);
+  const mat = new THREE.MeshBasicMaterial({ color: BRASS, transparent: true, opacity: 0.3 });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.rotation.x = tilt;
+  mesh.userData.speed = 0.01 + Math.random() * 0.015;
+  rings.push(mesh);
+  orbGroup.add(mesh);
+});
+
+// ── Orbiting debris ──────────────────────────────────────────────────────
+const debris = [];
+for (let i = 0; i < 26; i++){
+  const pivot = new THREE.Object3D();
+  pivot.rotation.x = Math.random() * Math.PI;
+  pivot.rotation.y = Math.random() * Math.PI;
+  const size = 0.02 + Math.random() * 0.05;
+  const geo = new THREE.IcosahedronGeometry(size, 0);
+  const mat = new THREE.MeshBasicMaterial({ color: Math.random() > 0.5 ? BRASS_BRIGHT : BRASS_DEEP, transparent: true, opacity: 0.7 });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.x = 2.7 + Math.random() * 1.2;
+  pivot.add(mesh);
+  pivot.userData.speed = (Math.random() - 0.5) * 0.02;
+  debris.push(pivot);
+  orbGroup.add(pivot);
+}
+
+// ── Dust particle field ──────────────────────────────────────────────────
+const dustCount = 700;
+const dustPositions = new Float32Array(dustCount * 3);
+for (let i = 0; i < dustCount; i++){
+  const r = 4 + Math.random() * 6;
+  const theta = Math.random() * Math.PI * 2;
+  const phi = Math.acos((Math.random() * 2) - 1);
+  dustPositions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+  dustPositions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.6;
+  dustPositions[i * 3 + 2] = r * Math.cos(phi);
+}
+const dustGeo = new THREE.BufferGeometry();
+dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPositions, 3));
+const dustMat = new THREE.PointsMaterial({ color: BRASS, size: 0.02, transparent: true, opacity: 0.5 });
+const dust = new THREE.Points(dustGeo, dustMat);
+scene.add(dust);
+
+// ── Floating ticker-text sprites (a TraderOS-flavored touch, not generic
+// "code fragments") ───────────────────────────────────────────────────
+function makeTextSprite(text){
+  const canvasEl = document.createElement('canvas');
+  canvasEl.width = 256; canvasEl.height = 64;
+  const ctx = canvasEl.getContext('2d');
+  ctx.font = '600 30px JetBrains Mono, monospace';
+  ctx.fillStyle = 'rgba(236,199,102,0.85)';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, 128, 32);
+  const texture = new THREE.CanvasTexture(canvasEl);
+  const mat = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0.75 });
+  const sprite = new THREE.Sprite(mat);
+  sprite.scale.set(1.1, 0.28, 1);
+  return sprite;
+}
+const tickerLabels = ['NIFTY', 'TCS', '+2.4%', 'RELIANCE', 'IVAAN', 'HDFC'];
+const tickerSprites = [];
+tickerLabels.forEach((label, i) => {
+  const sprite = makeTextSprite(label);
+  const angle = (i / tickerLabels.length) * Math.PI * 2;
+  const radius = 3.6;
+  sprite.position.set(Math.cos(angle) * radius, (Math.random() - 0.5) * 2, Math.sin(angle) * radius);
+  sprite.userData.baseY = sprite.position.y;
+  sprite.userData.phase = Math.random() * Math.PI * 2;
+  tickerSprites.push(sprite);
+  scene.add(sprite);
+});
+
+// ── Post-processing: bloom + subtle chromatic aberration ─────────────────
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloomPass = new UnrealBloomPass(new THREE.Vector2(stage.clientWidth, stage.clientHeight), 1.1, 0.6, 0.15);
+composer.addPass(bloomPass);
+const rgbShift = new ShaderPass(RGBShiftShader);
+rgbShift.uniforms['amount'].value = 0.0015;
+composer.addPass(rgbShift);
+
+function resizeStage(){
+  const w = stage.clientWidth, h = stage.clientHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+  composer.setSize(w, h);
+}
+window.addEventListener('resize', resizeStage);
+
+// ── Idle + gesture-driven animation state ─────────────────────────────────
+let idleRotation = true;
+let targetZoom = 7;
+const clock = new THREE.Clock();
+
+function animate(){
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+  const delta = clock.getDelta();
+
+  shells.forEach(s => s.rotateOnAxis(s.userData.axis, s.userData.speed * delta * 5));
+  rings.forEach(r => { r.rotation.z += r.userData.speed; });
+  debris.forEach(d => { d.rotation.y += d.userData.speed; });
+  core.rotation.y += 0.3 * delta;
+  core.rotation.x += 0.15 * delta;
+  coreLight.intensity = 7 + Math.sin(t * 2) * 1.5;
+  dust.rotation.y += 0.01 * delta;
+  tickerSprites.forEach(s => {
+    s.position.y = s.userData.baseY + Math.sin(t * 0.6 + s.userData.phase) * 0.15;
+  });
+
+  if (idleRotation) {
+    orbGroup.rotation.y += 0.12 * delta;
+  }
+
+  camera.position.z += (targetZoom - camera.position.z) * 0.08;
+  composer.render();
+}
+resizeStage();
+animate();
+
+// ── Hand tracking (MediaPipe Tasks Vision) ────────────────────────────────
+const stageOverlay = document.getElementById('stageOverlay');
+const statusChip = document.getElementById('statusChip');
+const statusText = document.getElementById('statusText');
+const camPreview = document.getElementById('camPreview');
+const camVideo = document.getElementById('camVideo');
+
+document.getElementById('btnSkipCam').addEventListener('click', () => {
+  stageOverlay.classList.add('hidden');
+});
+
+document.getElementById('btnEnableCam').addEventListener('click', async () => {
+  const btn = document.getElementById('btnEnableCam');
+  btn.disabled = true;
+  btn.textContent = 'Starting camera...';
+  try {
+    await startHandTracking();
+    stageOverlay.classList.add('hidden');
+    camPreview.classList.add('show');
+    statusChip.classList.add('active');
+    statusText.textContent = 'Hand control active';
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Enable Hand Control';
+    alert("Couldn't access your camera — you can still watch the orb idle-rotate. (" + (err.message || 'permission denied') + ')');
+  }
+});
+
+async function startHandTracking(){
+  const { HandLandmarker, FilesetResolver } = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14');
+  const vision = await FilesetResolver.forVisionTasks(
+    'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm'
+  );
+  const handLandmarker = await HandLandmarker.createFromOptions(vision, {
+    baseOptions: {
+      modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task',
+      delegate: 'GPU',
+    },
+    runningMode: 'VIDEO',
+    numHands: 2,
+  });
+
+  const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 480, height: 360 } });
+  camVideo.srcObject = stream;
+  await new Promise(resolve => { camVideo.onloadedmetadata = resolve; });
+  camVideo.play();
+
+  // Pinch state per hand, with hysteresis to avoid flicker at the threshold.
+  const PINCH_ENTER = 0.055, PINCH_EXIT = 0.08;
+  const handState = [
+    { pinching: false, lastX: null, lastY: null },
+    { pinching: false, lastX: null, lastY: null },
+  ];
+  let lastTwoHandDist = null;
+
+  function dist(a, b){
+    return Math.hypot(a.x - b.x, a.y - b.y);
+  }
+
+  function loop(){
+    if (camVideo.readyState >= 2) {
+      const nowMs = performance.now();
+      const result = handLandmarker.detectForVideo(camVideo, nowMs);
+      const hands = result.landmarks || [];
+
+      const pinchedCentroids = [];
+      hands.forEach((landmarks, i) => {
+        const thumb = landmarks[4], index = landmarks[8], wrist = landmarks[0];
+        const d = dist(thumb, index);
+        const state = handState[i] || (handState[i] = { pinching: false, lastX: null, lastY: null });
+
+        if (!state.pinching && d < PINCH_ENTER) state.pinching = true;
+        else if (state.pinching && d > PINCH_EXIT) state.pinching = false;
+
+        if (state.pinching) {
+          pinchedCentroids.push({ x: wrist.x, y: wrist.y });
+          if (state.lastX !== null) {
+            const dx = wrist.x - state.lastX;
+            const dy = wrist.y - state.lastY;
+            // Only apply single-hand rotation when just one hand is pinching —
+            // two-hand pinch is reserved for zoom instead.
+            if (hands.filter((_, j) => handState[j]?.pinching).length === 1) {
+              idleRotation = false;
+              orbGroup.rotation.y += dx * 4;
+              orbGroup.rotation.x = THREE.MathUtils.clamp(orbGroup.rotation.x + dy * 4, -1, 1);
+            }
+          }
+          state.lastX = wrist.x;
+          state.lastY = wrist.y;
+        } else {
+          state.lastX = null;
+          state.lastY = null;
+        }
+      });
+
+      if (pinchedCentroids.length === 2) {
+        const d = dist(pinchedCentroids[0], pinchedCentroids[1]);
+        if (lastTwoHandDist !== null) {
+          const delta = d - lastTwoHandDist;
+          targetZoom = THREE.MathUtils.clamp(targetZoom - delta * 14, 3.5, 12);
+        }
+        lastTwoHandDist = d;
+        statusText.textContent = 'Zooming';
+      } else {
+        lastTwoHandDist = null;
+        statusText.textContent = pinchedCentroids.length === 1 ? 'Rotating' : 'Hand control active';
+      }
+
+      if (hands.length === 0) idleRotation = true;
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+}
+</script>
+</body>
+</html>

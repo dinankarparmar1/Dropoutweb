@@ -365,9 +365,9 @@
       <p>Practice trades risk-free</p>
     </a>
     <div class="module" style="cursor:default;">
-      <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg><span class="arrow">Soon</span></div>
+      <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg><span class="arrow" id="weekVsLastArrow"></span></div>
       <h3>This Week vs Last</h3>
-      <p>Compared to your own history</p>
+      <p id="weekVsLastStat">Compared to your own history</p>
     </div>
   </div>
 
@@ -467,6 +467,23 @@ window.addEventListener('DOMContentLoaded', async () => {
     heroDeltaEl.style.color = d > 0 ? 'var(--emerald)' : 'var(--terracotta)';
   } else {
     heroDeltaEl.textContent = '';
+  }
+
+  // "This Week vs Last" tile — same weeklyDelta data, just summarized as
+  // a module card instead of repeating the ring's own delta label.
+  const wvlStat = document.getElementById('weekVsLastStat');
+  const wvlArrow = document.getElementById('weekVsLastArrow');
+  if (!data.weeklyDelta?.hasComparison) {
+    wvlStat.textContent = 'Log trades two weeks running to unlock this';
+    wvlArrow.textContent = '';
+  } else if (data.weeklyDelta.overall === 0) {
+    wvlStat.textContent = 'Holding steady vs last week';
+    wvlArrow.textContent = '';
+  } else {
+    const d = data.weeklyDelta.overall;
+    wvlStat.textContent = (d > 0 ? 'Up ' : 'Down ') + Math.abs(d) + ' points vs last week';
+    wvlArrow.textContent = d > 0 ? '▲' : '▼';
+    wvlArrow.style.color = d > 0 ? 'var(--emerald)' : 'var(--terracotta)';
   }
 
   document.getElementById('insightText').textContent = data.insight;

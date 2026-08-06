@@ -4,6 +4,10 @@
    Phase 2: Persistent chat history (loads from the Worker's database).
    Phase 3: PDF upload & analysis + Dropout Score + Compare & Score (multi-doc).
    Phase 4: Image / screenshot analysis (broker app screenshots, charts, etc.)
+   Phase 10: Mascot replaced with a Three.js holographic orb — a lightweight
+             version always running in the launcher, a fuller version with
+             MediaPipe hand-tracking (pinch-to-rotate, two-hand pinch-to-zoom)
+             active only while the chat panel is open.
    Talks to a Cloudflare Worker backend — see ivaan-worker.js
    ========================================================================== */
 (function () {
@@ -212,8 +216,6 @@
   const STYLE = `
   @keyframes ai-pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.55),0 8px 26px -4px rgba(212,175,55,.55);}
     50%{box-shadow:0 0 0 10px rgba(212,175,55,0),0 8px 26px -4px rgba(212,175,55,.7);}}
-  @keyframes ai-blink{0%,88%,100%{transform:scaleY(1);}92%{transform:scaleY(.1);}}
-  @keyframes ai-bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-2px);}}
   @keyframes ai-border-spin{to{--ai-angle:360deg;}}
   @property --ai-angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
   @keyframes ai-dot{0%,80%,100%{opacity:.25;transform:translateY(0);}40%{opacity:1;transform:translateY(-2px);}}
@@ -221,10 +223,9 @@
   .ai-fab{position:fixed;left:26px;bottom:26px;z-index:2147483647;width:60px;height:60px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%,#3a2f10,#0d0d11 70%);
     border:1.5px solid rgba(212,175,55,.6);display:flex;align-items:center;justify-content:center;
-    cursor:pointer;transition:transform .3s ease;animation:ai-pulse 2.6s ease-in-out infinite;padding:0;}
+    cursor:pointer;transition:transform .3s ease;animation:ai-pulse 2.6s ease-in-out infinite;padding:0;overflow:hidden;}
   .ai-fab:hover{transform:translateY(-3px) scale(1.06);}
-  .ai-bot-face{width:34px;height:34px;animation:ai-bob 3s ease-in-out infinite;}
-  .ai-eye{animation:ai-blink 4.5s ease-in-out infinite;transform-origin:center;}
+  .ai-fab-orb{width:100%;height:100%;display:block;}
 
   .ai-panel{position:fixed;left:26px;bottom:96px;z-index:2147483647;width:360px;max-width:calc(100vw - 40px);
     height:520px;max-height:calc(100vh - 140px);border-radius:20px;overflow:hidden;
@@ -238,9 +239,11 @@
   .ai-panel-inner::before{content:'';position:absolute;inset:0;opacity:.05;pointer-events:none;
     background-image:linear-gradient(rgba(212,175,55,.6) 1px,transparent 1px),
     linear-gradient(90deg,rgba(212,175,55,.6) 1px,transparent 1px);background-size:22px 22px;}
-  .ai-head{position:relative;padding:14px 16px;border-bottom:1px solid rgba(212,175,55,.22);
+  .ai-head{position:relative;padding:12px 16px;border-bottom:1px solid rgba(212,175,55,.22);
     display:flex;align-items:center;gap:10px;background:rgba(212,175,55,0.05);}
-  .ai-head-face{width:34px;height:34px;flex-shrink:0;}
+  .ai-mini-orb-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;
+    background:radial-gradient(circle at 35% 30%,#f3d576,#7a6118);
+    box-shadow:0 0 8px rgba(212,175,55,.6);}
   .ai-head h4{margin:0;font-family:'Playfair Display',serif;font-size:15px;color:#f6f4ee;}
   .ai-head span{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.1em;
     color:#d4af37;text-transform:uppercase;margin-top:2px;}
@@ -249,10 +252,28 @@
     font-family:'Space Mono',monospace;letter-spacing:.03em;}
   .ai-clear:hover{color:#d4af37;}
   .ai-close{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:18px;line-height:1;padding:4px;margin-left:2px;}
+
+  /* ── Orb stage — the full holographic orb, shown once the panel is open ── */
+  .ai-orb-stage{position:relative;height:112px;flex-shrink:0;border-bottom:1px solid rgba(212,175,55,.18);
+    background:radial-gradient(ellipse 260px 140px at 50% 45%, rgba(212,175,55,.08), transparent 70%);overflow:hidden;}
+  .ai-orb-canvas{width:100%;height:100%;display:block;}
+  .ai-hand-btn{position:absolute;top:8px;right:8px;z-index:2;width:28px;height:28px;border-radius:50%;
+    border:1px solid rgba(212,175,55,.4);background:rgba(10,10,14,.6);color:#d4af37;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-size:13px;padding:0;transition:all .2s ease;}
+  .ai-hand-btn:hover{border-color:#f3d576;color:#f3d576;}
+  .ai-hand-btn.active{border-color:#4ade80;color:#4ade80;}
+  .ai-orb-hint{position:absolute;bottom:6px;left:8px;z-index:2;font-family:'Space Mono',monospace;
+    font-size:8.5px;letter-spacing:.03em;color:#6f6c66;pointer-events:none;}
+  .ai-cam-preview{position:absolute;bottom:6px;right:8px;z-index:2;width:56px;height:42px;border-radius:6px;
+    overflow:hidden;border:1px solid rgba(212,175,55,.35);background:#000;display:none;}
+  .ai-cam-preview.show{display:block;}
+  .ai-cam-preview video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);}
+
   .ai-body{position:relative;flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
   .ai-row{display:flex;align-items:flex-end;gap:8px;}
   .ai-row.user{justify-content:flex-end;}
-  .ai-mini-face{width:22px;height:22px;flex-shrink:0;margin-bottom:2px;}
+  .ai-mini-face{width:22px;height:22px;flex-shrink:0;margin-bottom:2px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#f3d576,#7a6118);box-shadow:0 0 7px rgba(212,175,55,.55);}
   .ai-msg{max-width:82%;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:12px;white-space:pre-wrap;}
   .ai-msg.bot{background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,.15);color:#f6f4ee;}
   .ai-msg.user{background:linear-gradient(135deg,#f3d576,#d4af37);color:#1a1305;}
@@ -292,37 +313,289 @@
   @media (max-width:480px){.ai-panel{left:14px;right:14px;width:auto;bottom:90px;}.ai-fab{left:16px;bottom:16px;}}
   `;
 
-  // Cute little robot mascot face — big glowing eyes, antenna, gentle smile.
-  function botFaceSVG(size) {
-    return `<svg width="${size}" height="${size}" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="32" y1="6" x2="32" y2="14" stroke="#f3d576" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="32" cy="5" r="3.2" fill="#f3d576"><animate attributeName="opacity" values="1;.4;1" dur="1.8s" repeatCount="indefinite"/></circle>
-      <rect x="9" y="14" width="46" height="40" rx="16" fill="url(#aiBodyGrad)" stroke="#f3d576" stroke-width="1.6"/>
-      <g class="ai-eye" style="transform-box:fill-box;">
-        <circle cx="23" cy="34" r="7" fill="#1a1305"/>
-        <circle cx="23" cy="34" r="7" fill="none" stroke="#6ee7ff" stroke-width="1.4"/>
-        <circle cx="24.5" cy="32.5" r="2.4" fill="#aef1ff"/>
-      </g>
-      <g class="ai-eye" style="transform-box:fill-box;">
-        <circle cx="41" cy="34" r="7" fill="#1a1305"/>
-        <circle cx="41" cy="34" r="7" fill="none" stroke="#6ee7ff" stroke-width="1.4"/>
-        <circle cx="42.5" cy="32.5" r="2.4" fill="#aef1ff"/>
-      </g>
-      <path d="M25 44c2.2 2.4 11.8 2.4 14 0" stroke="#3a2f10" stroke-width="2" stroke-linecap="round"/>
-      <defs>
-        <linearGradient id="aiBodyGrad" x1="9" y1="14" x2="55" y2="54" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#f3d576"/><stop offset="1" stop-color="#d4af37"/>
-        </linearGradient>
-      </defs>
-    </svg>`;
-  }
-
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
+  const HAND_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 11V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M14 11V6a1.5 1.5 0 0 1 3 0v6"/><path d="M17 12V9a1.5 1.5 0 0 1 3 0v6a6 6 0 0 1-6 6h-1a7 7 0 0 1-6-3.5L5 15c-.6-1-.3-2 .5-2.4.8-.4 1.7 0 2.2.7L8 14"/></svg>`;
 
   function injectStyle() {
     const s = document.createElement("style");
     s.textContent = STYLE;
     document.head.appendChild(s);
+  }
+
+  // ── Phase 10: the holographic orb ────────────────────────────────────────
+  // Three.js is loaded once (dynamic import — works fine inside a plain
+  // script, no need for this file itself to be type="module") and shared
+  // by both orb instances. The hand-tracking library is loaded separately,
+  // and only when someone actually taps "Enable Hand Control".
+  const BRASS = 0xc9a227;
+  const BRASS_BRIGHT = 0xecc766;
+  const BRASS_DEEP = 0x7a6118;
+
+  let threePromise = null;
+  function ensureThree() {
+    if (!threePromise) threePromise = import("https://unpkg.com/three@0.160.0/build/three.module.js");
+    return threePromise;
+  }
+
+  // Builds one orb instance bound to a canvas. `full: true` adds rings,
+  // debris, dust, ticker sprites, and bloom/chromatic-aberration
+  // post-processing — used for the panel stage. `full: false` (the FAB)
+  // stays deliberately minimal since it runs non-stop on every page.
+  async function createOrb(canvas, { full }) {
+    const THREE = await ensureThree();
+
+    const scene = new THREE.Scene();
+    const getSize = () => ({ w: canvas.clientWidth || canvas.width, h: canvas.clientHeight || canvas.height });
+    const { w, h } = getSize();
+    const camera = new THREE.PerspectiveCamera(45, w / h || 1, 0.1, 100);
+    camera.position.set(0, 0, full ? 7 : 4.2);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: full });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, full ? 2 : 1));
+    renderer.setSize(w || 1, h || 1, false);
+
+    const orbGroup = new THREE.Group();
+    scene.add(orbGroup);
+
+    const shellCount = full ? 3 : 2;
+    const shells = [];
+    const radii = full ? [1.5, 1.9, 2.3] : [1.1, 1.4];
+    radii.slice(0, shellCount).forEach((radius, i) => {
+      const geo = new THREE.IcosahedronGeometry(radius, 1);
+      const wireGeo = new THREE.WireframeGeometry(geo);
+      const mat = new THREE.LineBasicMaterial({ color: BRASS_BRIGHT, transparent: true, opacity: 0.45 - i * 0.1 });
+      const mesh = new THREE.LineSegments(wireGeo, mat);
+      mesh.userData.speed = 0.04 + i * 0.015;
+      mesh.userData.axis = new THREE.Vector3(Math.random() - 0.5, 1, Math.random() - 0.5).normalize();
+      shells.push(mesh);
+      orbGroup.add(mesh);
+    });
+
+    const coreGeo = new THREE.IcosahedronGeometry(full ? 0.55 : 0.42, full ? 2 : 1);
+    const coreMat = new THREE.MeshBasicMaterial({ color: BRASS_BRIGHT });
+    const core = new THREE.Mesh(coreGeo, coreMat);
+    orbGroup.add(core);
+    const coreLight = new THREE.PointLight(BRASS_BRIGHT, full ? 8 : 4, 6);
+    orbGroup.add(coreLight);
+
+    let rings = [], debris = [], dust = null, tickerSprites = [];
+    let composer = null, bloomPass = null;
+
+    if (full) {
+      [[2.6, 0.02, Math.PI / 2.2], [2.9, 0.015, -Math.PI / 3]].forEach(([radius, tube, tilt]) => {
+        const geo = new THREE.TorusGeometry(radius, tube, 8, 80);
+        const mat = new THREE.MeshBasicMaterial({ color: BRASS, transparent: true, opacity: 0.3 });
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.rotation.x = tilt;
+        mesh.userData.speed = 0.01 + Math.random() * 0.015;
+        rings.push(mesh);
+        orbGroup.add(mesh);
+      });
+
+      for (let i = 0; i < 20; i++) {
+        const pivot = new THREE.Object3D();
+        pivot.rotation.x = Math.random() * Math.PI;
+        pivot.rotation.y = Math.random() * Math.PI;
+        const size = 0.02 + Math.random() * 0.04;
+        const geo = new THREE.IcosahedronGeometry(size, 0);
+        const mat = new THREE.MeshBasicMaterial({ color: Math.random() > 0.5 ? BRASS_BRIGHT : BRASS_DEEP, transparent: true, opacity: 0.7 });
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.position.x = 2.7 + Math.random() * 1.1;
+        pivot.add(mesh);
+        pivot.userData.speed = (Math.random() - 0.5) * 0.02;
+        debris.push(pivot);
+        orbGroup.add(pivot);
+      }
+
+      const dustCount = 350;
+      const dustPositions = new Float32Array(dustCount * 3);
+      for (let i = 0; i < dustCount; i++) {
+        const r = 4 + Math.random() * 5;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos((Math.random() * 2) - 1);
+        dustPositions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+        dustPositions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.6;
+        dustPositions[i * 3 + 2] = r * Math.cos(phi);
+      }
+      const dustGeo = new THREE.BufferGeometry();
+      dustGeo.setAttribute("position", new THREE.BufferAttribute(dustPositions, 3));
+      const dustMat = new THREE.PointsMaterial({ color: BRASS, size: 0.02, transparent: true, opacity: 0.5 });
+      dust = new THREE.Points(dustGeo, dustMat);
+      scene.add(dust);
+
+      function makeTextSprite(text) {
+        const c = document.createElement("canvas");
+        c.width = 256; c.height = 64;
+        const ctx = c.getContext("2d");
+        ctx.font = "600 30px JetBrains Mono, monospace";
+        ctx.fillStyle = "rgba(236,199,102,0.85)";
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(text, 128, 32);
+        const texture = new THREE.CanvasTexture(c);
+        const mat = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0.75 });
+        const sprite = new THREE.Sprite(mat);
+        sprite.scale.set(1.0, 0.26, 1);
+        return sprite;
+      }
+      ["NIFTY", "TCS", "+2.4%", "IVAAN"].forEach((label, i, arr) => {
+        const sprite = makeTextSprite(label);
+        const angle = (i / arr.length) * Math.PI * 2;
+        const radius = 3.4;
+        sprite.position.set(Math.cos(angle) * radius, (Math.random() - 0.5) * 1.6, Math.sin(angle) * radius);
+        sprite.userData.baseY = sprite.position.y;
+        sprite.userData.phase = Math.random() * Math.PI * 2;
+        tickerSprites.push(sprite);
+        scene.add(sprite);
+      });
+
+      try {
+        const [{ EffectComposer }, { RenderPass }, { UnrealBloomPass }, { ShaderPass }, { RGBShiftShader }] = await Promise.all([
+          import("https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js"),
+          import("https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/RenderPass.js"),
+          import("https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js"),
+          import("https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/ShaderPass.js"),
+          import("https://unpkg.com/three@0.160.0/examples/jsm/shaders/RGBShiftShader.js"),
+        ]);
+        composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.0, 0.6, 0.2);
+        composer.addPass(bloomPass);
+        const rgbShift = new ShaderPass(RGBShiftShader);
+        rgbShift.uniforms["amount"].value = 0.0012;
+        composer.addPass(rgbShift);
+      } catch {
+        composer = null; // bloom is cosmetic — orb still renders fine without it
+      }
+    }
+
+    let idleRotation = true;
+    let targetZoom = camera.position.z;
+    const clock = new THREE.Clock();
+    let rafId = null;
+    let running = false;
+
+    function resize() {
+      const { w, h } = getSize();
+      if (!w || !h) return;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h, false);
+      if (composer) composer.setSize(w, h);
+    }
+
+    function frame() {
+      if (!running) return;
+      rafId = requestAnimationFrame(frame);
+      const t = clock.getElapsedTime();
+      const delta = Math.min(clock.getDelta(), 0.05);
+
+      shells.forEach((s) => s.rotateOnAxis(s.userData.axis, s.userData.speed * delta * 5));
+      rings.forEach((r) => { r.rotation.z += r.userData.speed; });
+      debris.forEach((d) => { d.rotation.y += d.userData.speed; });
+      core.rotation.y += 0.3 * delta;
+      core.rotation.x += 0.15 * delta;
+      coreLight.intensity = (full ? 7 : 3.5) + Math.sin(t * 2) * (full ? 1.5 : 0.8);
+      if (dust) dust.rotation.y += 0.01 * delta;
+      tickerSprites.forEach((s) => { s.position.y = s.userData.baseY + Math.sin(t * 0.6 + s.userData.phase) * 0.15; });
+
+      if (idleRotation) orbGroup.rotation.y += (full ? 0.12 : 0.18) * delta;
+      camera.position.z += (targetZoom - camera.position.z) * 0.08;
+
+      if (composer) composer.render(); else renderer.render(scene, camera);
+    }
+
+    return {
+      start() { if (running) return; running = true; resize(); frame(); },
+      stop() { running = false; if (rafId) cancelAnimationFrame(rafId); },
+      resize,
+      setIdle(v) { idleRotation = v; },
+      rotate(dx, dy) {
+        idleRotation = false;
+        orbGroup.rotation.y += dx;
+        orbGroup.rotation.x = THREE.MathUtils.clamp(orbGroup.rotation.x + dy, -1, 1);
+      },
+      zoomBy(delta) {
+        const min = full ? 3.5 : 2.5, max = full ? 12 : 6;
+        targetZoom = THREE.MathUtils.clamp(targetZoom - delta * 14, min, max);
+      },
+      resumeIdle() { idleRotation = true; },
+      dispose() {
+        running = false;
+        if (rafId) cancelAnimationFrame(rafId);
+        renderer.dispose();
+      },
+    };
+  }
+
+  // ── Hand tracking (MediaPipe Tasks Vision) — lazy-loaded, panel-stage only
+  async function startHandTracking(videoEl, onResult) {
+    const { HandLandmarker, FilesetResolver } = await import("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14");
+    const vision = await FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm");
+    const handLandmarker = await HandLandmarker.createFromOptions(vision, {
+      baseOptions: {
+        modelAssetPath: "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+        delegate: "GPU",
+      },
+      runningMode: "VIDEO",
+      numHands: 2,
+    });
+
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240 } });
+    videoEl.srcObject = stream;
+    await new Promise((resolve) => { videoEl.onloadedmetadata = resolve; });
+    videoEl.play();
+
+    const PINCH_ENTER = 0.055, PINCH_EXIT = 0.08;
+    const handState = [{ pinching: false, lastX: null, lastY: null }, { pinching: false, lastX: null, lastY: null }];
+    let lastTwoHandDist = null;
+    let stopped = false;
+
+    function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+
+    function loop() {
+      if (stopped) return;
+      if (videoEl.readyState >= 2) {
+        const result = handLandmarker.detectForVideo(videoEl, performance.now());
+        const hands = result.landmarks || [];
+        const pinchedCentroids = [];
+
+        hands.forEach((landmarks, i) => {
+          const thumb = landmarks[4], index = landmarks[8], wrist = landmarks[0];
+          const d = dist(thumb, index);
+          const state = handState[i] || (handState[i] = { pinching: false, lastX: null, lastY: null });
+          if (!state.pinching && d < PINCH_ENTER) state.pinching = true;
+          else if (state.pinching && d > PINCH_EXIT) state.pinching = false;
+
+          if (state.pinching) {
+            pinchedCentroids.push({ x: wrist.x, y: wrist.y });
+            if (state.lastX !== null && hands.filter((_, j) => handState[j]?.pinching).length === 1) {
+              onResult({ type: "rotate", dx: wrist.x - state.lastX, dy: wrist.y - state.lastY });
+            }
+            state.lastX = wrist.x; state.lastY = wrist.y;
+          } else {
+            state.lastX = null; state.lastY = null;
+          }
+        });
+
+        if (pinchedCentroids.length === 2) {
+          const d = dist(pinchedCentroids[0], pinchedCentroids[1]);
+          if (lastTwoHandDist !== null) onResult({ type: "zoom", delta: d - lastTwoHandDist });
+          lastTwoHandDist = d;
+        } else {
+          lastTwoHandDist = null;
+        }
+        onResult({ type: "status", handsVisible: hands.length > 0 });
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    return {
+      stop() {
+        stopped = true;
+        stream.getTracks().forEach((t) => t.stop());
+      },
+    };
   }
 
   function buildUI() {
@@ -331,18 +604,24 @@
     const fab = document.createElement("button");
     fab.className = "ai-fab";
     fab.setAttribute("aria-label", "Ask Ivaan");
-    fab.innerHTML = `<span class="ai-bot-face">${botFaceSVG(34)}</span>`;
+    fab.innerHTML = `<canvas class="ai-fab-orb" id="ai-fab-orb"></canvas>`;
 
     const panel = document.createElement("div");
     panel.className = "ai-panel";
     panel.innerHTML = `
       <div class="ai-panel-inner">
         <div class="ai-head">
-          <span class="ai-head-face">${botFaceSVG(34)}</span>
+          <span class="ai-mini-orb-dot"></span>
           <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
           <span class="ai-head-dot" title="Online"></span>
           <button class="ai-clear" title="Clear conversation">Clear</button>
           <button class="ai-close" aria-label="Close">✕</button>
+        </div>
+        <div class="ai-orb-stage" id="ai-orb-stage">
+          <canvas class="ai-orb-canvas" id="ai-orb-canvas"></canvas>
+          <button class="ai-hand-btn" id="ai-hand-btn" title="Control the orb with hand gestures">${HAND_SVG}</button>
+          <div class="ai-orb-hint" id="ai-orb-hint"></div>
+          <div class="ai-cam-preview" id="ai-cam-preview"><video id="ai-cam-video" autoplay playsinline muted></video></div>
         </div>
         <div class="ai-body" id="ai-body"></div>
         <div class="ai-staged" id="ai-staged"></div>
@@ -359,6 +638,60 @@
     document.body.appendChild(fab);
     document.body.appendChild(panel);
 
+    // Lightweight orb in the launcher — runs continuously, low cost by design.
+    const fabCanvas = fab.querySelector("#ai-fab-orb");
+    let fabOrb = null;
+    createOrb(fabCanvas, { full: false }).then((orb) => {
+      fabOrb = orb;
+      orb.start();
+    }).catch(() => {}); // if this fails for any reason, the launcher still works, just without the orb visual
+
+    // Fuller orb in the panel stage — only rendered while the panel is open.
+    const stageCanvas = panel.querySelector("#ai-orb-canvas");
+    const handBtn = panel.querySelector("#ai-hand-btn");
+    const orbHint = panel.querySelector("#ai-orb-hint");
+    const camPreview = panel.querySelector("#ai-cam-preview");
+    const camVideo = panel.querySelector("#ai-cam-video");
+    let stageOrb = null;
+    let stageOrbReady = null;
+    let handSession = null;
+
+    function ensureStageOrb() {
+      if (!stageOrbReady) {
+        stageOrbReady = createOrb(stageCanvas, { full: true }).then((orb) => { stageOrb = orb; return orb; });
+      }
+      return stageOrbReady;
+    }
+
+    handBtn.addEventListener("click", async () => {
+      if (handSession) {
+        handSession.stop();
+        handSession = null;
+        camPreview.classList.remove("show");
+        handBtn.classList.remove("active");
+        orbHint.textContent = "";
+        if (stageOrb) stageOrb.resumeIdle();
+        return;
+      }
+      handBtn.disabled = true;
+      try {
+        await ensureStageOrb();
+        handSession = await startHandTracking(camVideo, (evt) => {
+          if (!stageOrb) return;
+          if (evt.type === "rotate") stageOrb.rotate(evt.dx * 4, evt.dy * 4);
+          else if (evt.type === "zoom") stageOrb.zoomBy(evt.delta);
+          else if (evt.type === "status") { if (!evt.handsVisible) stageOrb.resumeIdle(); }
+        });
+        camPreview.classList.add("show");
+        handBtn.classList.add("active");
+        orbHint.textContent = "Pinch to rotate · two hands to zoom";
+      } catch (err) {
+        orbHint.textContent = "Camera unavailable — orb stays idle";
+      } finally {
+        handBtn.disabled = false;
+      }
+    });
+
     const clearBtn = panel.querySelector(".ai-clear");
     const closeBtn = panel.querySelector(".ai-close");
     const body = panel.querySelector("#ai-body");
@@ -372,7 +705,14 @@
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
-      if (panel.classList.contains("open")) input.focus();
+      const isOpen = panel.classList.contains("open");
+      if (isOpen) {
+        input.focus();
+        ensureStageOrb().then((orb) => { orb.start(); orb.resize(); });
+      } else {
+        if (stageOrb) stageOrb.stop();
+        if (handSession) { handSession.stop(); handSession = null; camPreview.classList.remove("show"); handBtn.classList.remove("active"); }
+      }
     });
     closeBtn.addEventListener("click", () => panel.classList.remove("open"));
 
@@ -397,7 +737,7 @@
       const row = document.createElement("div");
       row.className = "ai-row " + cls;
       row.innerHTML = isBot
-        ? `<span class="ai-mini-face">${botFaceSVG(22)}</span>${html}`
+        ? `<span class="ai-mini-face"></span>${html}`
         : html;
       body.appendChild(row);
       body.scrollTop = body.scrollHeight;

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — TraderOS — Dropout Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;min-height:100vh;
+    background:var(--bg);color:var(--ink);
+    font-family:var(--sans);-webkit-font-smoothing:antialiased;
+    display:flex;align-items:center;justify-content:center;padding:20px;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(ellipse 800px 500px at 20% -5%, rgba(201,162,39,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, rgba(93,165,131,0.04), transparent 60%),
+      var(--bg);
+  }
+  .card{
+    width:100%;max-width:400px;
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));
+    padding:38px 34px;
+  }
+  .brand{
+    font-family:var(--serif);font-weight:600;font-size:19px;
+    display:flex;align-items:baseline;gap:8px;justify-content:center;margin-bottom:6px;
+  }
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+  .subtitle{
+    text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);
+    letter-spacing:0.14em;text-transform:uppercase;margin-bottom:30px;
+  }
+  .tabs{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:26px;}
+  .tab{
+    flex:1;text-align:center;padding:10px;font-family:var(--mono);font-size:11.5px;
+    letter-spacing:0.06em;text-transform:uppercase;color:var(--sub-dim);
+    cursor:pointer;transition:all .25s ease;background:transparent;border:none;
+  }
+  .tab.active{background:rgba(212,175,55,0.08);color:var(--brass-bright);}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);
+    letter-spacing:0.08em;text-transform:uppercase;margin-bottom:7px;
+  }
+  .field input{
+    width:100%;background:rgba(0,0,0,0.2);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);font-family:var(--sans);font-size:14px;padding:11px 13px;
+  }
+  .field input:focus{outline:none;border-color:var(--brass);}
+  .btn-submit{
+    width:100%;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0.06em;
+    text-transform:uppercase;background:var(--brass);border:none;color:#0b0a08;
+    padding:13px;border-radius:20px;cursor:pointer;margin-top:8px;transition:background .2s ease;
+  }
+  .btn-submit:hover{background:var(--brass-bright);}
+  .btn-submit:disabled{opacity:.5;cursor:not-allowed;}
+  .error-box{
+    color:var(--terracotta);font-family:var(--mono);font-size:11.5px;
+    margin-bottom:14px;min-height:14px;line-height:1.5;
+  }
+  .success-box{
+    color:#5da583;font-family:var(--mono);font-size:11.5px;
+    margin-bottom:14px;min-height:14px;line-height:1.5;
+  }
+  .foot-note{
+    text-align:center;margin-top:22px;font-family:var(--mono);font-size:10.5px;
+    color:var(--sub-dim);line-height:1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+  <div class="subtitle">Sign in to see your data on any device</div>
+
+  <div class="tabs" id="tabsRow">
+    <button class="tab active" id="tabLogin">Sign In</button>
+    <button class="tab" id="tabSignup">Create Account</button>
+  </div>
+
+  <div class="error-box" id="errorBox"></div>
+  <div class="success-box" id="successBox"></div>
+
+  <form id="authForm">
+    <div class="field" id="fieldName" style="display:none;">
+      <label>Name</label>
+      <input type="text" id="fName" placeholder="Your name">
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="fEmail" placeholder="you@email.com" required>
+    </div>
+    <div class="field" id="fieldPassword">
+      <label>Password</label>
+      <input type="password" id="fPassword" placeholder="••••••••" required>
+    </div>
+    <button type="submit" class="btn-submit" id="btnSubmit">Sign In</button>
+  </form>
+
+  <div style="text-align:center;margin-top:16px;">
+    <a href="#" id="forgotLink" style="font-family:var(--mono);font-size:11px;color:var(--sub-dim);text-decoration:underline;">Forgot password?</a>
+    <a href="#" id="backToSignInLink" style="display:none;font-family:var(--mono);font-size:11px;color:var(--sub-dim);text-decoration:underline;">← Back to Sign In</a>
+  </div>
+
+  <div class="foot-note" id="footNote">New here? Passwords need at least 6 characters.</div>
+</div>
+
+<script>
+const WORKER_URL = 'https://ivaan.dinankarparmar12345.workers.dev';
+let mode = 'login'; // 'login' | 'signup' | 'forgot'
+
+const tabsRow = document.getElementById('tabsRow');
+const tabLogin = document.getElementById('tabLogin');
+const tabSignup = document.getElementById('tabSignup');
+const btnSubmit = document.getElementById('btnSubmit');
+const errorBox = document.getElementById('errorBox');
+const successBox = document.getElementById('successBox');
+const footNote = document.getElementById('footNote');
+const form = document.getElementById('authForm');
+const fieldName = document.getElementById('fieldName');
+const fieldPassword = document.getElementById('fieldPassword');
+const forgotLink = document.getElementById('forgotLink');
+const backToSignInLink = document.getElementById('backToSignInLink');
+
+function setMode(newMode){
+  mode = newMode;
+  errorBox.textContent = '';
+  successBox.textContent = '';
+
+  if (mode === 'login') {
+    tabsRow.style.display = 'flex';
+    tabLogin.classList.add('active'); tabSignup.classList.remove('active');
+    fieldName.style.display = 'none';
+    fieldPassword.style.display = 'block';
+    forgotLink.style.display = 'inline';
+    backToSignInLink.style.display = 'none';
+    btnSubmit.textContent = 'Sign In';
+    footNote.textContent = 'New here? Passwords need at least 6 characters.';
+  } else if (mode === 'signup') {
+    tabsRow.style.display = 'flex';
+    tabSignup.classList.add('active'); tabLogin.classList.remove('active');
+    fieldName.style.display = 'block';
+    fieldPassword.style.display = 'block';
+    forgotLink.style.display = 'inline';
+    backToSignInLink.style.display = 'none';
+    btnSubmit.textContent = 'Create Account';
+    footNote.textContent = 'Already have an account? Switch to Sign In above.';
+  } else if (mode === 'forgot') {
+    tabsRow.style.display = 'none';
+    fieldName.style.display = 'none';
+    fieldPassword.style.display = 'none';
+    forgotLink.style.display = 'none';
+    backToSignInLink.style.display = 'inline';
+    btnSubmit.textContent = 'Send Reset Link';
+    footNote.textContent = "We'll email you a link to set a new password.";
+  }
+}
+tabLogin.addEventListener('click', () => setMode('login'));
+tabSignup.addEventListener('click', () => setMode('signup'));
+forgotLink.addEventListener('click', (e) => { e.preventDefault(); setMode('forgot'); });
+backToSignInLink.addEventListener('click', (e) => { e.preventDefault(); setMode('login'); });
+
+// If already signed in, skip straight to the dashboard.
+if (localStorage.getItem('dt_auth_token')) {
+  window.location.href = 'dashboard.html';
+}
+
+// If the sign-in flow was triggered by a redirect (e.g. from dashboard.html
+// because there was no valid session), send the user back there afterward.
+const params = new URLSearchParams(window.location.search);
+const redirectTo = params.get('redirect') || 'dashboard.html';
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorBox.textContent = '';
+  successBox.textContent = '';
+  const email = document.getElementById('fEmail').value.trim().toLowerCase();
+
+  btnSubmit.disabled = true;
+
+  if (mode === 'forgot') {
+    btnSubmit.textContent = 'Sending...';
+    try {
+      const res = await fetch(`${WORKER_URL}/auth/forgot-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        errorBox.textContent = data.error || 'Something went wrong — try again.';
+      } else {
+        successBox.textContent = data.message || 'If an account exists for that email, a reset link has been sent.';
+        form.reset();
+      }
+    } catch {
+      errorBox.textContent = 'Network error — try again.';
+    }
+    btnSubmit.disabled = false;
+    btnSubmit.textContent = 'Send Reset Link';
+    return;
+  }
+
+  const password = document.getElementById('fPassword').value;
+  const name = document.getElementById('fName').value.trim();
+
+  if (mode === 'signup' && !name) {
+    errorBox.textContent = 'Enter your name.';
+    btnSubmit.disabled = false;
+    return;
+  }
+
+  btnSubmit.textContent = mode === 'login' ? 'Signing in...' : 'Creating account...';
+
+  try {
+    const payload = mode === 'signup' ? { name, email, password } : { email, password };
+    const res = await fetch(`${WORKER_URL}/auth/${mode}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      errorBox.textContent = data.error || 'Something went wrong — try again.';
+    } else {
+      localStorage.setItem('dt_auth_token', data.token);
+      localStorage.setItem('dt_user_email', data.email);
+      if (data.name) localStorage.setItem('dt_user_name', data.name);
+      window.location.href = redirectTo;
+      return;
+    }
+  } catch {
+    errorBox.textContent = 'Network error — try again.';
+  }
+  btnSubmit.disabled = false;
+  btnSubmit.textContent = mode === 'login' ? 'Sign In' : 'Create Account';
+});
+</script>
+</body>
+</html>

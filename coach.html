@@ -48,6 +48,22 @@
   .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
   .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
   .back-link{font-family:var(--mono);font-size:11px;color:var(--sub-dim);letter-spacing:0.05em;text-decoration:none;}
+  .mascot-orb{
+    width:24px;height:24px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-deep));
+    box-shadow:0 0 12px rgba(201,162,39,0.4);
+    position:relative;transition:background 1s ease, box-shadow 1s ease;flex-shrink:0;
+  }
+  .mascot-orb::after{
+    content:'';position:absolute;inset:-3px;border-radius:50%;
+    border:1px solid rgba(236,199,102,0.35);
+    animation:orbBreathe 3.2s ease-in-out infinite;transition:border-color 1s ease;
+  }
+  .mascot-orb.mood-caution{background:radial-gradient(circle at 35% 30%, #f2b25a, #8a5a1f);box-shadow:0 0 14px rgba(217,143,58,0.55);}
+  .mascot-orb.mood-caution::after{border-color:rgba(242,178,90,0.45);animation-duration:2.4s;}
+  .mascot-orb.mood-alert{background:radial-gradient(circle at 35% 30%, #e08a78, #8a3b2c);box-shadow:0 0 16px rgba(193,87,74,0.65);}
+  .mascot-orb.mood-alert::after{border-color:rgba(224,138,120,0.55);animation-duration:1.4s;}
+  @keyframes orbBreathe{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.12);opacity:.9;}}
 
   .page-head{margin-bottom:22px;}
   .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
@@ -130,7 +146,10 @@
 
   <div class="topbar reveal">
     <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
-    <a href="dashboard.html" class="back-link">← Dashboard</a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="dashboard.html" class="back-link">← Dashboard</a>
+      <div class="mascot-orb" id="mascotOrb" title="Ivaan — calm & steady"></div>
+    </div>
   </div>
 
   <div class="page-head reveal" style="animation-delay:.03s">
@@ -271,7 +290,30 @@ function render(data){
   }
 }
 
+async function loadMascotMood(){
+  const orb = document.getElementById('mascotOrb');
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/coach`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    const data = await res.json();
+    const warnings = data.warnings || [];
+    const hasHigh = warnings.some(w => w.severity === 'high');
+    orb.classList.remove('mood-caution', 'mood-alert');
+    if (hasHigh) {
+      orb.classList.add('mood-alert');
+      orb.title = 'Ivaan — alert, review your last trades';
+    } else if (warnings.length > 0) {
+      orb.classList.add('mood-caution');
+      orb.title = 'Ivaan — watch this pattern';
+    } else {
+      orb.title = 'Ivaan — calm & steady';
+    }
+  } catch {
+    // leave the orb at its default calm state
+  }
+}
+
 loadReport();
+loadMascotMood();
 </script>
 </body>
 </html>

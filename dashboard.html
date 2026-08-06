@@ -223,8 +223,9 @@
   <div class="topbar reveal">
     <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
     <div class="user-cluster">
-      <div class="streak">12-day streak <b>·</b></div>
+      <div class="streak" id="userEmailLabel">–</div>
       <div class="mascot-orb" title="Ivaan — calm & steady"></div>
+      <button id="btnSignOut" style="background:transparent;border:1px solid var(--line);color:var(--sub-dim);font-family:var(--mono);font-size:10.5px;letter-spacing:0.05em;padding:7px 14px;border-radius:20px;cursor:pointer;">Sign Out</button>
     </div>
   </div>
 
@@ -243,10 +244,10 @@
     </div>
     <div class="score-meta">
       <div class="eyebrow">Stage 4 — Consistency</div>
-      <h1>You're trading like a Stage 4 trader.</h1>
-      <p>Strong execution and consistency this month — discipline is the metric holding your overall score back. Fix that, and Elite is within reach.</p>
-      <svg class="spark" id="sparkline" viewBox="0 0 340 60" preserveAspectRatio="none"></svg>
-      <div class="spark-label">7-day score trend</div>
+      <h1 id="heroHeadline">Log a few trades to see where you stand.</h1>
+      <p id="heroSub">Your Trader Score builds from real entries in your journal — nothing here is guessed.</p>
+      <!-- 7-day trend line returns once daily score history is tracked (a later phase) -->
+      <div class="spark-label">Trend appears once you have a few days of entries</div>
     </div>
   </div>
 
@@ -257,50 +258,49 @@
         <svg class="lr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4 4L21 4"/><path d="M3 18l4 4"/></svg>
         <span class="lr-label">Consistency</span>
         <span class="lr-leader"></span>
-        <span class="lr-num">91</span>
-        <span class="lr-delta up">▲2</span>
+        <span class="lr-num" id="lr-num-consistency">–</span>
+        <span class="lr-delta" id="lr-delta-consistency"></span>
       </div>
-      <div class="lr-bar"><div class="lr-fill" data-w="91"></div></div>
+      <div class="lr-bar"><div class="lr-fill" id="lr-fill-consistency" data-w="0"></div></div>
     </div>
     <div class="ledger-row">
       <div class="lr-top">
         <svg class="lr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3.5v6c0 5-3.5 8.5-8 10.5-4.5-2-8-5.5-8-10.5v-6z"/></svg>
         <span class="lr-label">Risk Management</span>
         <span class="lr-leader"></span>
-        <span class="lr-num">84</span>
-        <span class="lr-delta down">▼1</span>
+        <span class="lr-num" id="lr-num-risk">–</span>
+        <span class="lr-delta" id="lr-delta-risk"></span>
       </div>
-      <div class="lr-bar"><div class="lr-fill" data-w="84"></div></div>
+      <div class="lr-bar"><div class="lr-fill" id="lr-fill-risk" data-w="0"></div></div>
     </div>
     <div class="ledger-row">
       <div class="lr-top">
         <svg class="lr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         <span class="lr-label">Discipline</span>
         <span class="lr-leader"></span>
-        <span class="lr-num">78</span>
-        <span class="lr-delta down">▼5</span>
+        <span class="lr-num" id="lr-num-discipline">–</span>
+        <span class="lr-delta" id="lr-delta-discipline"></span>
       </div>
-      <div class="lr-bar"><div class="lr-fill" data-w="78"></div></div>
+      <div class="lr-bar"><div class="lr-fill" id="lr-fill-discipline" data-w="0"></div></div>
     </div>
     <div class="ledger-row">
       <div class="lr-top">
         <svg class="lr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
         <span class="lr-label">Execution</span>
         <span class="lr-leader"></span>
-        <span class="lr-num">95</span>
-        <span class="lr-delta up">▲3</span>
+        <span class="lr-num" id="lr-num-execution">–</span>
+        <span class="lr-delta" id="lr-delta-execution"></span>
       </div>
-      <div class="lr-bar"><div class="lr-fill" data-w="95"></div></div>
+      <div class="lr-bar"><div class="lr-fill" id="lr-fill-execution" data-w="0"></div></div>
     </div>
   </div>
 
   <div class="row2 reveal" style="animation-delay:.15s">
     <div class="panel">
       <div class="panel-head"><h2>Ivaan — Live Analysis</h2><span class="ts">2 min ago</span></div>
-      <p class="insight-text">"Your last 20 trades show your performance drops significantly after 2 consecutive losses — average position size increases 40% on the 3rd trade of a losing streak."</p>
+      <p class="insight-text" id="insightText">Log a trade to get your first insight from Ivaan.</p>
       <div class="insight-tags">
-        <span class="tag">Pattern confidence: high</span>
-        <span class="tag">30-day sample</span>
+        <span class="tag" id="entryCountTag">0 entries logged</span>
       </div>
     </div>
 
@@ -319,7 +319,7 @@
     <a href="journal.html" class="module">
       <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M8 8h8M8 12h8"/></svg><span class="arrow">→</span></div>
       <h3>Trading Journal</h3>
-      <p>12 entries this week, +3 vs last</p>
+      <p id="journalTileStat">Loading...</p>
     </a>
     <div class="module" style="cursor:default;">
       <div class="m-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/></svg><span class="arrow">Soon</span></div>
@@ -352,45 +352,79 @@ const track = document.getElementById('ticker');
 const build = () => tickerData.map(t => `<span>${t.n}<b class="${t.c}">${t.v} ${t.d}</b></span>`).join('');
 track.innerHTML = build() + build();
 
-window.addEventListener('DOMContentLoaded', () => {
-  const score = 87, circumference = 320;
+// ── Auth: must be signed in to see this page ──────────────────────────────
+const WORKER_URL = 'https://ivaan.dinankarparmar12345.workers.dev';
+const authToken = localStorage.getItem('dt_auth_token');
+if (!authToken) {
+  window.location.href = 'auth.html?redirect=dashboard.html';
+}
+document.getElementById('userEmailLabel').textContent = localStorage.getItem('dt_user_email') || '';
+document.getElementById('btnSignOut').addEventListener('click', async () => {
+  try {
+    await fetch(`${WORKER_URL}/auth/logout`, { method: 'POST', headers: { 'Authorization': 'Bearer ' + authToken } });
+  } catch {}
+  localStorage.removeItem('dt_auth_token');
+  localStorage.removeItem('dt_user_email');
+  window.location.href = 'auth.html';
+});
+
+function animateNumber(el, target){
+  let cur = 0;
+  const step = Math.max(1, Math.round(target/60));
+  const t = setInterval(() => {
+    cur = Math.min(target, cur + step);
+    el.textContent = cur;
+    if (cur >= target) clearInterval(t);
+  }, 13);
+}
+
+function renderSubscore(prefix, value){
+  const numEl = document.getElementById('lr-num-' + prefix);
+  const fillEl = document.getElementById('lr-fill-' + prefix);
+  if (numEl) numEl.textContent = value;
+  if (fillEl) requestAnimationFrame(() => { fillEl.style.width = value + '%'; });
+  // No day-over-day history yet, so the delta stays blank until Phase 6+
+  // adds a way to compare this week's score against last week's.
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
+  if (!authToken) return; // redirect to auth.html already in flight
   const ring = document.getElementById('scoreRing');
   const num = document.getElementById('scoreNum');
-  requestAnimationFrame(() => { ring.style.strokeDashoffset = circumference - (score/100)*circumference; });
-  let cur = 0;
-  const t = setInterval(() => { cur++; num.textContent = cur; if (cur >= score) clearInterval(t); }, 13);
+  const circumference = 320;
 
-  document.querySelectorAll('.lr-fill').forEach(el => {
-    requestAnimationFrame(() => { el.style.width = el.dataset.w + '%'; });
-  });
-
-  // smooth sparkline path
-  const days = [61, 68, 64, 72, 79, 83, 87];
-  const svg = document.getElementById('sparkline');
-  const w = 340, h = 60, pad = 6;
-  const max = Math.max(...days), min = Math.min(...days);
-  const pts = days.map((d,i) => {
-    const x = pad + (i/(days.length-1)) * (w - pad*2);
-    const y = h - pad - ((d-min)/(max-min||1)) * (h - pad*2);
-    return [x,y];
-  });
-  let path = `M ${pts[0][0]},${pts[0][1]}`;
-  for (let i=1;i<pts.length;i++){
-    const [px,py]=pts[i-1], [cx,cy]=pts[i];
-    const mx=(px+cx)/2;
-    path += ` C ${mx},${py} ${mx},${cy} ${cx},${cy}`;
+  let data;
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/score`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    if (res.status === 401) {
+      localStorage.removeItem('dt_auth_token');
+      localStorage.removeItem('dt_user_email');
+      window.location.href = 'auth.html?redirect=dashboard.html';
+      return;
+    }
+    data = await res.json();
+  } catch {
+    data = { score:0, consistency:0, riskManagement:0, discipline:0, execution:0, insight:'Could not reach the server — try reloading.', entryCount:0 };
   }
-  const areaPath = path + ` L ${pts[pts.length-1][0]},${h} L ${pts[0][0]},${h} Z`;
-  svg.innerHTML = `
-    <defs>
-      <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#ecc766" stop-opacity="0.35"/>
-        <stop offset="100%" stop-color="#ecc766" stop-opacity="0"/>
-      </linearGradient>
-    </defs>
-    <path d="${areaPath}" fill="url(#sparkFill)" stroke="none"/>
-    <path d="${path}" fill="none" stroke="#ecc766" stroke-width="1.75" stroke-linecap="round"/>
-  `;
+
+  requestAnimationFrame(() => { ring.style.strokeDashoffset = circumference - (data.score/100)*circumference; });
+  animateNumber(num, data.score);
+
+  renderSubscore('consistency', data.consistency);
+  renderSubscore('risk', data.riskManagement);
+  renderSubscore('discipline', data.discipline);
+  renderSubscore('execution', data.execution);
+
+  document.getElementById('insightText').textContent = data.insight;
+  document.getElementById('entryCountTag').textContent = data.entryCount + ' entr' + (data.entryCount === 1 ? 'y' : 'ies') + ' logged';
+  document.getElementById('journalTileStat').textContent = data.entryCount === 0
+    ? 'No entries yet — log your first trade'
+    : data.entryCount + ' entr' + (data.entryCount === 1 ? 'y' : 'ies') + ' logged';
+
+  if (data.entryCount > 0) {
+    document.getElementById('heroHeadline').textContent = `Your Trader Score is ${data.score}.`;
+    document.getElementById('heroSub').textContent = 'Based on ' + data.entryCount + ' logged trade' + (data.entryCount === 1 ? '' : 's') + ' — keep logging to sharpen every sub-score below.';
+  }
 });
 
 document.querySelectorAll('.mission-item').forEach(item => {

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Journal — Dropout Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --emerald:#5da583;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(ellipse 800px 500px at 20% -5%, rgba(201,162,39,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, rgba(93,165,131,0.04), transparent 60%),
+      var(--bg);
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 80px;}
+
+  @keyframes riseIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .reveal{animation:riseIn .7s cubic-bezier(.19,.7,.3,1) both;}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 0 30px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;display:flex;align-items:baseline;gap:8px;}
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+  .back-link{font-family:var(--mono);font-size:11px;color:var(--sub-dim);letter-spacing:0.05em;text-decoration:none;}
+
+  .page-head{margin-bottom:22px;}
+  .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+  .page-head h1{font-family:var(--serif);font-weight:600;font-size:26px;margin:0;}
+
+  /* streak strip */
+  .streak-strip{
+    display:flex;align-items:center;gap:24px;
+    border:1px solid var(--line);border-radius:16px;
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));
+    padding:16px 24px;margin-bottom:20px;flex-wrap:wrap;
+  }
+  .streak-item{display:flex;flex-direction:column;gap:3px;}
+  .streak-item .num{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--brass-bright);}
+  .streak-item .lbl{font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;}
+  .streak-divider{width:1px;height:32px;background:var(--line);}
+
+  /* new entry button */
+  .new-entry-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+  .new-entry-bar h2{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0;}
+  .btn-new{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    background:transparent;border:1px solid var(--brass-deep);color:var(--brass-bright);
+    padding:9px 18px;border-radius:20px;cursor:pointer;transition:all .25s ease;
+  }
+  .btn-new:hover{background:rgba(201,162,39,0.1);border-color:var(--brass-bright);}
+
+  /* new entry form panel */
+  .entry-form{
+    border:1px solid var(--line-hi);border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));
+    padding:24px 26px;margin-bottom:22px;
+    display:none;
+  }
+  .entry-form.open{display:block;}
+  .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;}
+  .form-grid.wide{grid-template-columns:repeat(2,1fr);}
+  @media(max-width:640px){.form-grid,.form-grid.wide{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%;background:rgba(0,0,0,0.2);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);font-family:var(--sans);font-size:13.5px;padding:9px 11px;
+  }
+  .field textarea{resize:vertical;min-height:52px;font-family:var(--sans);}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--brass);}
+  .field.required label::after{content:' *';color:var(--terracotta);}
+  .form-actions{display:flex;gap:10px;justify-content:flex-end;}
+  .btn-save{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    background:var(--brass);border:none;color:#0b0a08;font-weight:600;
+    padding:10px 22px;border-radius:20px;cursor:pointer;
+  }
+  .btn-cancel{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    background:transparent;border:1px solid var(--line);color:var(--sub);
+    padding:10px 18px;border-radius:20px;cursor:pointer;
+  }
+
+  /* ledger table */
+  .section-title{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0 0 4px;padding:0 4px;}
+  .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:24px;}
+  .ledger-head{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 2.2fr 0.6fr;
+    padding:12px 22px;border-bottom:1px solid var(--line);
+    font-family:var(--mono);font-size:9.5px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;
+  }
+  .ledger-row{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 2.2fr 0.6fr;
+    padding:15px 22px;border-bottom:1px solid var(--line);align-items:center;
+    transition:background .2s ease;
+  }
+  .ledger-row:last-child{border-bottom:none;}
+  .ledger-row:hover{background:rgba(255,255,255,0.015);}
+  .cell-instrument{font-size:13.5px;color:var(--ink);}
+  .cell-instrument .dir{font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:20px;margin-left:8px;letter-spacing:0.04em;}
+  .dir.long{background:rgba(93,165,131,0.12);color:var(--emerald);}
+  .dir.short{background:rgba(193,122,95,0.12);color:var(--terracotta);}
+  .cell-num{font-family:var(--serif);font-size:14px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .cell-pnl{font-family:var(--serif);font-weight:600;font-size:14.5px;font-variant-numeric:tabular-nums;}
+  .cell-pnl.pos{color:var(--emerald);}
+  .cell-pnl.neg{color:var(--terracotta);}
+  .cell-note{font-size:12.5px;color:var(--sub);line-height:1.4;font-style:italic;}
+  .cell-note.reflection{color:var(--terracotta);opacity:0.85;}
+  .cell-date{font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);}
+
+  @media(max-width:800px){
+    .ledger-head{display:none;}
+    .ledger-row{grid-template-columns:1fr;gap:6px;padding:16px 20px;}
+    .cell-num::before{content:attr(data-label) ': ';color:var(--sub-dim);font-family:var(--mono);font-size:9px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar reveal">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+    <a href="dashboard.html" class="back-link">← Dashboard</a>
+  </div>
+
+  <div class="page-head reveal" style="animation-delay:.03s">
+    <div class="eyebrow">Trading Journal</div>
+    <h1>Your Trading Ledger</h1>
+  </div>
+
+  <div class="streak-strip reveal" style="animation-delay:.06s">
+    <div class="streak-item"><div class="num">12</div><div class="lbl">Disciplined streak</div></div>
+    <div class="streak-divider"></div>
+    <div class="streak-item"><div class="num">47</div><div class="lbl">Entries this month</div></div>
+    <div class="streak-divider"></div>
+    <div class="streak-item"><div class="num">100%</div><div class="lbl">Losses reflected on</div></div>
+  </div>
+
+  <div class="new-entry-bar reveal" style="animation-delay:.09s">
+    <h2>Recent Entries</h2>
+    <button class="btn-new" onclick="document.getElementById('entryForm').classList.toggle('open')">+ Log a Trade</button>
+  </div>
+
+  <div class="entry-form reveal" id="entryForm">
+    <div class="form-grid">
+      <div class="field required"><label>Instrument</label><input type="text" placeholder="e.g. NIFTY 24800 CE"></div>
+      <div class="field required"><label>Direction</label>
+        <select><option>Long</option><option>Short</option></select>
+      </div>
+      <div class="field required"><label>Size / Qty</label><input type="text" placeholder="e.g. 2 lots"></div>
+      <div class="field required"><label>Risk %</label><input type="text" placeholder="e.g. 0.5%"></div>
+    </div>
+    <div class="form-grid">
+      <div class="field required"><label>Entry Price</label><input type="text" placeholder="0.00"></div>
+      <div class="field required"><label>Exit Price</label><input type="text" placeholder="0.00"></div>
+      <div class="field"><label>P&L</label><input type="text" placeholder="auto-calculated"></div>
+      <div class="field"><label>Date</label><input type="date"></div>
+    </div>
+    <div class="form-grid wide">
+      <div class="field required"><label>Why this trade? (feeds your AI Coach)</label><textarea placeholder="What was your setup, thesis, or signal?"></textarea></div>
+      <div class="field"><label>Reflection (required on losses)</label><textarea placeholder="What actually happened? What would you do differently?"></textarea></div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="document.getElementById('entryForm').classList.remove('open')">Cancel</button>
+      <button class="btn-save">Save Entry</button>
+    </div>
+  </div>
+
+  <div class="ledger reveal" style="animation-delay:.12s">
+    <div class="ledger-head">
+      <div>Instrument</div><div>Entry</div><div>Exit</div><div>Risk</div><div>P&L</div><div>Note</div><div>Date</div>
+    </div>
+
+    <div class="ledger-row">
+      <div class="cell-instrument">NIFTY 24800 CE <span class="dir long">LONG</span></div>
+      <div class="cell-num" data-label="Entry">142.50</div>
+      <div class="cell-num" data-label="Exit">168.00</div>
+      <div class="cell-num" data-label="Risk">0.4%</div>
+      <div class="cell-pnl pos" data-label="P&L">+₹5,100</div>
+      <div class="cell-note">Breakout above VWAP, held per plan</div>
+      <div class="cell-date">Aug 5</div>
+    </div>
+
+    <div class="ledger-row">
+      <div class="cell-instrument">BANKNIFTY 52400 PE <span class="dir short">SHORT</span></div>
+      <div class="cell-num" data-label="Entry">210.00</div>
+      <div class="cell-num" data-label="Exit">245.00</div>
+      <div class="cell-num" data-label="Risk">0.6%</div>
+      <div class="cell-pnl neg" data-label="P&L">−₹3,500</div>
+      <div class="cell-note reflection">Entered too early, ignored the 15-min close confirmation</div>
+      <div class="cell-date">Aug 5</div>
+    </div>
+
+    <div class="ledger-row">
+      <div class="cell-instrument">RELIANCE <span class="dir long">LONG</span></div>
+      <div class="cell-num" data-label="Entry">2,845</div>
+      <div class="cell-num" data-label="Exit">2,878</div>
+      <div class="cell-num" data-label="Risk">0.3%</div>
+      <div class="cell-pnl pos" data-label="P&L">+₹1,980</div>
+      <div class="cell-note">Support bounce, target hit</div>
+      <div class="cell-date">Aug 4</div>
+    </div>
+
+    <div class="ledger-row">
+      <div class="cell-instrument">NIFTY 24700 PE <span class="dir short">SHORT</span></div>
+      <div class="cell-num" data-label="Entry">95.00</div>
+      <div class="cell-num" data-label="Exit">130.00</div>
+      <div class="cell-num" data-label="Risk">0.5%</div>
+      <div class="cell-pnl neg" data-label="P&L">−₹2,100</div>
+      <div class="cell-note reflection">3rd trade after two losses — this is the exact pattern Ivaan flagged</div>
+      <div class="cell-date">Aug 3</div>
+    </div>
+
+    <div class="ledger-row">
+      <div class="cell-instrument">TCS <span class="dir long">LONG</span></div>
+      <div class="cell-num" data-label="Entry">3,910</div>
+      <div class="cell-num" data-label="Exit">3,955</div>
+      <div class="cell-num" data-label="Risk">0.4%</div>
+      <div class="cell-pnl pos" data-label="P&L">+₹2,700</div>
+      <div class="cell-note">Earnings gap fill, planned and sized correctly</div>
+      <div class="cell-date">Aug 2</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

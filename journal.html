@@ -148,7 +148,10 @@
 
   <div class="topbar reveal">
     <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
-    <a href="dashboard.html" class="back-link">← Dashboard</a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="dashboard.html" class="back-link">← Dashboard</a>
+      <button id="btnSignOut" style="background:transparent;border:1px solid var(--line);color:var(--sub-dim);font-family:var(--mono);font-size:10px;letter-spacing:0.05em;padding:6px 12px;border-radius:20px;cursor:pointer;">Sign Out</button>
+    </div>
   </div>
 
   <div class="page-head reveal" style="animation-delay:.03s">
@@ -157,11 +160,11 @@
   </div>
 
   <div class="streak-strip reveal" style="animation-delay:.06s">
-    <div class="streak-item"><div class="num">12</div><div class="lbl">Disciplined streak</div></div>
+    <div class="streak-item"><div class="num" id="statStreak">–</div><div class="lbl">Disciplined streak</div></div>
     <div class="streak-divider"></div>
-    <div class="streak-item"><div class="num">47</div><div class="lbl">Entries this month</div></div>
+    <div class="streak-item"><div class="num" id="statMonthCount">–</div><div class="lbl">Entries this month</div></div>
     <div class="streak-divider"></div>
-    <div class="streak-item"><div class="num">100%</div><div class="lbl">Losses reflected on</div></div>
+    <div class="streak-item"><div class="num" id="statReflectedPct">–</div><div class="lbl">Losses reflected on</div></div>
   </div>
 
   <div class="new-entry-bar reveal" style="animation-delay:.09s">
@@ -171,26 +174,27 @@
 
   <div class="entry-form reveal" id="entryForm">
     <div class="form-grid">
-      <div class="field required"><label>Instrument</label><input type="text" placeholder="e.g. NIFTY 24800 CE"></div>
+      <div class="field required"><label>Instrument</label><input type="text" id="f-instrument" placeholder="e.g. NIFTY 24800 CE"></div>
       <div class="field required"><label>Direction</label>
-        <select><option>Long</option><option>Short</option></select>
+        <select id="f-direction"><option value="Long">Long</option><option value="Short">Short</option></select>
       </div>
-      <div class="field required"><label>Size / Qty</label><input type="text" placeholder="e.g. 2 lots"></div>
-      <div class="field required"><label>Risk %</label><input type="text" placeholder="e.g. 0.5%"></div>
+      <div class="field required"><label>Size / Qty</label><input type="text" id="f-size" placeholder="e.g. 2 lots"></div>
+      <div class="field required"><label>Risk %</label><input type="text" id="f-risk" placeholder="e.g. 0.5"></div>
     </div>
     <div class="form-grid">
-      <div class="field required"><label>Entry Price</label><input type="text" placeholder="0.00"></div>
-      <div class="field required"><label>Exit Price</label><input type="text" placeholder="0.00"></div>
-      <div class="field"><label>P&L</label><input type="text" placeholder="auto-calculated"></div>
-      <div class="field"><label>Date</label><input type="date"></div>
+      <div class="field required"><label>Entry Price</label><input type="text" id="f-entry" placeholder="0.00"></div>
+      <div class="field required"><label>Exit Price</label><input type="text" id="f-exit" placeholder="0.00"></div>
+      <div class="field"><label>P&L</label><input type="text" id="f-pnl" placeholder="e.g. 5100 or -3500"></div>
+      <div class="field"><label>Date</label><input type="date" id="f-date"></div>
     </div>
     <div class="form-grid wide">
-      <div class="field required"><label>Why this trade? (feeds your AI Coach)</label><textarea placeholder="What was your setup, thesis, or signal?"></textarea></div>
-      <div class="field"><label>Reflection (required on losses)</label><textarea placeholder="What actually happened? What would you do differently?"></textarea></div>
+      <div class="field required"><label>Why this trade? (feeds your AI Coach)</label><textarea id="f-note" placeholder="What was your setup, thesis, or signal?"></textarea></div>
+      <div class="field"><label>Reflection (required on losses)</label><textarea id="f-reflection" placeholder="What actually happened? What would you do differently?"></textarea></div>
     </div>
     <div class="form-actions">
+      <div id="formError" style="color:var(--terracotta);font-family:var(--mono);font-size:11.5px;margin-right:auto;align-self:center;"></div>
       <button class="btn-cancel" onclick="document.getElementById('entryForm').classList.remove('open')">Cancel</button>
-      <button class="btn-save">Save Entry</button>
+      <button class="btn-save" id="btnSave">Save Entry</button>
     </div>
   </div>
 
@@ -198,58 +202,179 @@
     <div class="ledger-head">
       <div>Instrument</div><div>Entry</div><div>Exit</div><div>Risk</div><div>P&L</div><div>Note</div><div>Date</div>
     </div>
-
-    <div class="ledger-row">
-      <div class="cell-instrument">NIFTY 24800 CE <span class="dir long">LONG</span></div>
-      <div class="cell-num" data-label="Entry">142.50</div>
-      <div class="cell-num" data-label="Exit">168.00</div>
-      <div class="cell-num" data-label="Risk">0.4%</div>
-      <div class="cell-pnl pos" data-label="P&L">+₹5,100</div>
-      <div class="cell-note">Breakout above VWAP, held per plan</div>
-      <div class="cell-date">Aug 5</div>
-    </div>
-
-    <div class="ledger-row">
-      <div class="cell-instrument">BANKNIFTY 52400 PE <span class="dir short">SHORT</span></div>
-      <div class="cell-num" data-label="Entry">210.00</div>
-      <div class="cell-num" data-label="Exit">245.00</div>
-      <div class="cell-num" data-label="Risk">0.6%</div>
-      <div class="cell-pnl neg" data-label="P&L">−₹3,500</div>
-      <div class="cell-note reflection">Entered too early, ignored the 15-min close confirmation</div>
-      <div class="cell-date">Aug 5</div>
-    </div>
-
-    <div class="ledger-row">
-      <div class="cell-instrument">RELIANCE <span class="dir long">LONG</span></div>
-      <div class="cell-num" data-label="Entry">2,845</div>
-      <div class="cell-num" data-label="Exit">2,878</div>
-      <div class="cell-num" data-label="Risk">0.3%</div>
-      <div class="cell-pnl pos" data-label="P&L">+₹1,980</div>
-      <div class="cell-note">Support bounce, target hit</div>
-      <div class="cell-date">Aug 4</div>
-    </div>
-
-    <div class="ledger-row">
-      <div class="cell-instrument">NIFTY 24700 PE <span class="dir short">SHORT</span></div>
-      <div class="cell-num" data-label="Entry">95.00</div>
-      <div class="cell-num" data-label="Exit">130.00</div>
-      <div class="cell-num" data-label="Risk">0.5%</div>
-      <div class="cell-pnl neg" data-label="P&L">−₹2,100</div>
-      <div class="cell-note reflection">3rd trade after two losses — this is the exact pattern Ivaan flagged</div>
-      <div class="cell-date">Aug 3</div>
-    </div>
-
-    <div class="ledger-row">
-      <div class="cell-instrument">TCS <span class="dir long">LONG</span></div>
-      <div class="cell-num" data-label="Entry">3,910</div>
-      <div class="cell-num" data-label="Exit">3,955</div>
-      <div class="cell-num" data-label="Risk">0.4%</div>
-      <div class="cell-pnl pos" data-label="P&L">+₹2,700</div>
-      <div class="cell-note">Earnings gap fill, planned and sized correctly</div>
-      <div class="cell-date">Aug 2</div>
+    <div id="ledgerBody">
+      <div class="ledger-row"><div class="cell-note" style="grid-column:1/-1;">Loading your entries...</div></div>
     </div>
   </div>
 
 </div>
+
+<script>
+const WORKER_URL = 'https://ivaan.dinankarparmar12345.workers.dev';
+
+// ── Auth: must be signed in to see this page ──────────────────────────────
+const authToken = localStorage.getItem('dt_auth_token');
+if (!authToken) {
+  window.location.href = 'auth.html?redirect=journal.html';
+}
+document.getElementById('btnSignOut').addEventListener('click', async () => {
+  try {
+    await fetch(`${WORKER_URL}/auth/logout`, { method: 'POST', headers: { 'Authorization': 'Bearer ' + authToken } });
+  } catch {}
+  localStorage.removeItem('dt_auth_token');
+  localStorage.removeItem('dt_user_email');
+  window.location.href = 'auth.html';
+});
+
+function escapeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
+}
+
+function formatDate(sqliteUtc){
+  // SQLite's datetime('now') returns "YYYY-MM-DD HH:MM:SS" in UTC, no "Z" suffix
+  const d = new Date(sqliteUtc.replace(' ', 'T') + 'Z');
+  if (isNaN(d)) return '';
+  return d.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' });
+}
+
+function renderEntries(entries){
+  const body = document.getElementById('ledgerBody');
+  if (!entries.length){
+    body.innerHTML = '<div class="ledger-row"><div class="cell-note" style="grid-column:1/-1;">No entries yet — log your first trade above.</div></div>';
+  } else {
+    body.innerHTML = entries.map(e => {
+      const dir = (e.direction || '').toLowerCase() === 'short' ? 'short' : 'long';
+      const pnlClass = e.pnl == null ? '' : (e.pnl >= 0 ? 'pos' : 'neg');
+      const pnlText = e.pnl == null ? '—' : (e.pnl >= 0 ? '+' : '−') + '₹' + Math.abs(e.pnl).toLocaleString('en-IN');
+      const isLoss = e.pnl != null && e.pnl < 0;
+      const hasReflection = e.reflection && e.reflection.trim().length > 0;
+      const noteText = isLoss && hasReflection ? e.reflection : (e.note || '—');
+      const noteClass = isLoss ? ' reflection' : '';
+      return `<div class="ledger-row">
+        <div class="cell-instrument">${escapeHtml(e.instrument)} <span class="dir ${dir}">${dir.toUpperCase()}</span></div>
+        <div class="cell-num" data-label="Entry">${e.entry_price ?? '—'}</div>
+        <div class="cell-num" data-label="Exit">${e.exit_price ?? '—'}</div>
+        <div class="cell-num" data-label="Risk">${e.risk_pct != null ? e.risk_pct + '%' : '—'}</div>
+        <div class="cell-pnl ${pnlClass}" data-label="P&L">${pnlText}</div>
+        <div class="cell-note${noteClass}">${escapeHtml(noteText)}</div>
+        <div class="cell-date">${formatDate(e.created_at)}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // Streak strip — computed client-side from the same entries just fetched.
+  const now = Date.now();
+  const THIRTY_DAYS = 30*24*60*60*1000;
+  const monthCount = entries.filter(e => {
+    const t = Date.parse(e.created_at.replace(' ', 'T') + 'Z');
+    return !isNaN(t) && now - t <= THIRTY_DAYS;
+  }).length;
+
+  const losses = entries.filter(e => e.pnl != null && e.pnl < 0);
+  const reflectedLosses = losses.filter(e => e.reflection && e.reflection.trim().length > 0);
+  const reflectedPct = losses.length ? Math.round((reflectedLosses.length / losses.length) * 100) : 100;
+
+  // Disciplined streak: consecutive most-recent entries (newest first) that
+  // are either a win, or a loss with a reflection filled in.
+  let streak = 0;
+  for (const e of entries) {
+    const disciplined = e.pnl == null || e.pnl >= 0 || (e.reflection && e.reflection.trim().length > 0);
+    if (disciplined) streak++; else break;
+  }
+
+  document.getElementById('statStreak').textContent = streak;
+  document.getElementById('statMonthCount').textContent = monthCount;
+  document.getElementById('statReflectedPct').textContent = reflectedPct + '%';
+}
+
+async function loadEntries(){
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/list`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    if (res.status === 401) {
+      localStorage.removeItem('dt_auth_token');
+      localStorage.removeItem('dt_user_email');
+      window.location.href = 'auth.html?redirect=journal.html';
+      return;
+    }
+    const data = await res.json();
+    renderEntries(data.entries || []);
+  } catch {
+    document.getElementById('ledgerBody').innerHTML = '<div class="ledger-row"><div class="cell-note" style="grid-column:1/-1;">Could not load entries — try reloading the page.</div></div>';
+  }
+}
+
+document.getElementById('btnSave').addEventListener('click', async () => {
+  const errorEl = document.getElementById('formError');
+  errorEl.textContent = '';
+
+  const instrument = document.getElementById('f-instrument').value.trim();
+  const direction = document.getElementById('f-direction').value;
+  const size = document.getElementById('f-size').value.trim();
+  const riskRaw = document.getElementById('f-risk').value.trim();
+  const entryRaw = document.getElementById('f-entry').value.trim();
+  const exitRaw = document.getElementById('f-exit').value.trim();
+  const pnlRaw = document.getElementById('f-pnl').value.trim();
+  const note = document.getElementById('f-note').value.trim();
+  const reflection = document.getElementById('f-reflection').value.trim();
+
+  if (!instrument) { errorEl.textContent = 'Instrument is required.'; return; }
+  if (!note) { errorEl.textContent = 'Add a reason for the trade — this is what feeds your AI Coach later.'; return; }
+
+  const pnl = pnlRaw === '' ? null : Number(pnlRaw);
+  if (pnl !== null && pnl < 0 && !reflection) {
+    errorEl.textContent = 'This trade lost money — add a reflection before saving.';
+    return;
+  }
+
+  const payload = {
+    instrument,
+    direction,
+    size: size || null,
+    risk_pct: riskRaw === '' ? null : Number(riskRaw),
+    entry_price: entryRaw === '' ? null : Number(entryRaw),
+    exit_price: exitRaw === '' ? null : Number(exitRaw),
+    pnl,
+    note,
+    reflection: reflection || null,
+  };
+
+  const btn = document.getElementById('btnSave');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/add`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + authToken },
+      body: JSON.stringify(payload),
+    });
+    if (res.status === 401) {
+      localStorage.removeItem('dt_auth_token');
+      localStorage.removeItem('dt_user_email');
+      window.location.href = 'auth.html?redirect=journal.html';
+      return;
+    }
+    const result = await res.json();
+    if (!res.ok || result.error) {
+      errorEl.textContent = result.error || 'Could not save — try again.';
+    } else {
+      document.getElementById('entryForm').classList.remove('open');
+      ['f-instrument','f-size','f-risk','f-entry','f-exit','f-pnl','f-note','f-reflection'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      await loadEntries();
+    }
+  } catch {
+    errorEl.textContent = 'Network error — try again.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Save Entry';
+  }
+});
+
+loadEntries();
+</script>
 </body>
 </html>

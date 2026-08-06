@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coach — TraderOS — Dropout Traders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0a08;
+    --panel:rgba(255,248,235,0.025);
+    --panel-hi:rgba(255,248,235,0.045);
+    --line:rgba(224,197,138,0.14);
+    --line-hi:rgba(224,197,138,0.4);
+    --brass:#c9a227;
+    --brass-bright:#ecc766;
+    --brass-deep:#7a6118;
+    --ink:#f2ede1;
+    --sub:#a8a08c;
+    --sub-dim:#5f5a4d;
+    --emerald:#5da583;
+    --terracotta:#c17a5f;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(ellipse 800px 500px at 20% -5%, rgba(201,162,39,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, rgba(93,165,131,0.04), transparent 60%),
+      var(--bg);
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 80px;}
+
+  @keyframes riseIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .reveal{animation:riseIn .7s cubic-bezier(.19,.7,.3,1) both;}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 0 30px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;display:flex;align-items:baseline;gap:8px;}
+  .brand .thin{color:var(--sub-dim);font-weight:500;font-size:14px;}
+  .brand .rule{width:24px;height:1px;background:var(--brass);display:inline-block;}
+  .back-link{font-family:var(--mono);font-size:11px;color:var(--sub-dim);letter-spacing:0.05em;text-decoration:none;}
+
+  .page-head{margin-bottom:22px;}
+  .page-head .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+  .page-head h1{font-family:var(--serif);font-weight:600;font-size:26px;margin:0;}
+
+  .loading-note{font-family:var(--mono);font-size:12px;color:var(--sub-dim);text-align:center;padding:60px 20px;}
+
+  /* Trader type hero */
+  .type-hero{
+    border:1px solid var(--line-hi);border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));
+    padding:30px 32px;margin-bottom:20px;text-align:center;
+  }
+  .type-hero .eyebrow{font-family:var(--mono);font-size:10px;color:var(--sub-dim);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:10px;}
+  .type-hero h2{font-family:var(--serif);font-weight:600;font-size:26px;color:var(--brass-bright);margin:0 0 10px;}
+  .type-hero p{color:var(--sub);font-size:14px;line-height:1.6;max-width:520px;margin:0 auto;}
+
+  .narrative-panel{
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--panel-hi), var(--panel));
+    padding:24px 28px;margin-bottom:20px;
+  }
+  .narrative-panel .ph{display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+  .narrative-panel .ico{width:28px;height:28px;border-radius:8px;background:rgba(212,175,55,0.1);display:flex;align-items:center;justify-content:center;font-size:14px;}
+  .narrative-panel h2{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--brass);text-transform:uppercase;margin:0;}
+  .narrative-panel p{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.7;color:var(--ink);margin:0;}
+
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+  .stat-card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:18px 16px;text-align:center;}
+  .stat-card .val{font-family:var(--serif);font-weight:600;font-size:26px;color:var(--brass-bright);}
+  .stat-card .lbl{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;margin-top:6px;}
+  @media(max-width:600px){.stats-row{grid-template-columns:1fr;}}
+
+  .section-title{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;color:var(--sub-dim);text-transform:uppercase;margin:0 0 4px;padding:0 4px;}
+
+  .setup-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+  @media(max-width:640px){.setup-row{grid-template-columns:1fr;}}
+  .setup-card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:20px 22px;}
+  .setup-card.best{border-color:rgba(93,165,131,0.4);}
+  .setup-card.worst{border-color:rgba(193,122,95,0.4);}
+  .setup-card .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;}
+  .setup-card.best .tag{color:var(--emerald);}
+  .setup-card.worst .tag{color:var(--terracotta);}
+  .setup-card .label{font-family:var(--serif);font-weight:600;font-size:16px;margin-bottom:6px;}
+  .setup-card .meta{font-family:var(--mono);font-size:11.5px;color:var(--sub-dim);}
+  .setup-card.empty{color:var(--sub-dim);font-family:var(--mono);font-size:12px;text-align:center;padding:24px 10px;}
+
+  .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));margin-bottom:20px;overflow:hidden;}
+  .ledger-head{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:12px 22px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:9.5px;letter-spacing:0.08em;color:var(--sub-dim);text-transform:uppercase;}
+  .ledger-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:14px 22px;border-bottom:1px solid var(--line);align-items:center;}
+  .ledger-row:last-child{border-bottom:none;}
+  .ledger-row .name{font-size:13.5px;color:var(--ink);}
+  .ledger-row .num{font-family:var(--serif);font-size:14px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .ledger-row .win{color:var(--brass-bright);font-weight:600;}
+  @media(max-width:700px){
+    .ledger-head{display:none;}
+    .ledger-row{grid-template-columns:1fr;gap:4px;}
+    .ledger-row .num::before{content:attr(data-label) ': ';color:var(--sub-dim);font-family:var(--mono);font-size:9px;}
+  }
+
+  .mistake-list{list-style:none;margin:0;padding:0;}
+  .mistake-item{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .mistake-item:last-child{border-bottom:none;}
+  .mistake-item .count-badge{
+    font-family:var(--serif);font-weight:600;font-size:15px;color:var(--terracotta);
+    background:rgba(193,122,95,0.1);border:1px solid rgba(193,122,95,0.3);
+    width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .mistake-item p{margin:0;font-size:13.5px;color:var(--ink);line-height:1.55;padding-top:5px;}
+  .no-mistakes{font-family:var(--mono);font-size:12.5px;color:var(--emerald);text-align:center;padding:20px;}
+
+  .panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));padding:22px 24px;margin-bottom:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar reveal">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+    <a href="dashboard.html" class="back-link">← Dashboard</a>
+  </div>
+
+  <div class="page-head reveal" style="animation-delay:.03s">
+    <div class="eyebrow">AI Trader Coach</div>
+    <h1>Your Full Analysis</h1>
+  </div>
+
+  <div id="loadingNote" class="loading-note">Analyzing your journal...</div>
+  <div id="reportBody" style="display:none;">
+
+    <div class="type-hero reveal">
+      <div class="eyebrow">Trader Type</div>
+      <h2 id="typeLabel">–</h2>
+      <p id="typeReason"></p>
+    </div>
+
+    <div class="narrative-panel reveal" id="narrativePanel" style="display:none;">
+      <div class="ph"><div class="ico">🤖</div><h2>Ivaan's Analysis</h2></div>
+      <p id="narrativeText"></p>
+    </div>
+
+    <div class="stats-row reveal">
+      <div class="stat-card"><div class="val" id="statTotal">–</div><div class="lbl">Trades Logged</div></div>
+      <div class="stat-card"><div class="val" id="statWinRate">–</div><div class="lbl">Win Rate</div></div>
+      <div class="stat-card"><div class="val" id="statAvgRisk">–</div><div class="lbl">Avg Risk / Trade</div></div>
+    </div>
+
+    <div class="section-title reveal">Best &amp; Worst Setups</div>
+    <div class="setup-row reveal" style="margin-top:6px;">
+      <div class="setup-card best" id="bestSetupCard">
+        <div class="tag">✓ Best Performing</div>
+        <div class="label" id="bestSetupLabel">–</div>
+        <div class="meta" id="bestSetupMeta"></div>
+      </div>
+      <div class="setup-card worst" id="worstSetupCard">
+        <div class="tag">✕ Worst Performing</div>
+        <div class="label" id="worstSetupLabel">–</div>
+        <div class="meta" id="worstSetupMeta"></div>
+      </div>
+    </div>
+
+    <div class="section-title reveal">Performance by Instrument</div>
+    <div class="ledger reveal" style="margin-top:6px;">
+      <div class="ledger-head"><div>Instrument</div><div>Trades</div><div>Win Rate</div><div>Avg P&amp;L</div></div>
+      <div id="instrumentBody"></div>
+    </div>
+
+    <div class="section-title reveal">Logged Mistakes</div>
+    <div class="panel reveal" style="margin-top:6px;">
+      <ul class="mistake-list" id="mistakeList"></ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const WORKER_URL = 'https://ivaan.dinankarparmar12345.workers.dev';
+const authToken = localStorage.getItem('dt_auth_token');
+if (!authToken) {
+  window.location.href = 'auth.html?redirect=coach.html';
+}
+
+function escapeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
+}
+
+async function loadReport(){
+  try {
+    const res = await fetch(`${WORKER_URL}/journal/coach-report`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    if (res.status === 401) {
+      localStorage.removeItem('dt_auth_token');
+      localStorage.removeItem('dt_user_email');
+      window.location.href = 'auth.html?redirect=coach.html';
+      return;
+    }
+    const data = await res.json();
+    render(data);
+  } catch {
+    document.getElementById('loadingNote').textContent = 'Could not reach the server — try reloading the page.';
+  }
+}
+
+function render(data){
+  document.getElementById('loadingNote').style.display = 'none';
+  document.getElementById('reportBody').style.display = 'block';
+
+  document.getElementById('typeLabel').textContent = data.traderType.label;
+  document.getElementById('typeReason').textContent = data.traderType.reason;
+
+  if (data.narrative) {
+    document.getElementById('narrativePanel').style.display = 'block';
+    document.getElementById('narrativeText').textContent = data.narrative;
+  }
+
+  document.getElementById('statTotal').textContent = data.totalTrades;
+  document.getElementById('statWinRate').textContent = data.overallWinRate !== null ? data.overallWinRate + '%' : '–';
+  document.getElementById('statAvgRisk').textContent = data.avgRiskPct !== null ? data.avgRiskPct + '%' : '–';
+
+  if (data.bestSetup) {
+    document.getElementById('bestSetupLabel').textContent = data.bestSetup.label;
+    document.getElementById('bestSetupMeta').textContent = `${data.bestSetup.winRate}% win rate over ${data.bestSetup.count} trades`;
+  } else {
+    document.getElementById('bestSetupCard').innerHTML = '<div class="empty">Not enough trades yet on any single setup (need at least 3).</div>';
+  }
+  if (data.worstSetup) {
+    document.getElementById('worstSetupLabel').textContent = data.worstSetup.label;
+    document.getElementById('worstSetupMeta').textContent = `${data.worstSetup.winRate}% win rate over ${data.worstSetup.count} trades`;
+  } else {
+    document.getElementById('worstSetupCard').innerHTML = '<div class="empty">Not enough data to identify a weak setup yet.</div>';
+  }
+
+  const instBody = document.getElementById('instrumentBody');
+  if (!data.byInstrument.length) {
+    instBody.innerHTML = '<div class="ledger-row"><div class="name">No entries yet</div></div>';
+  } else {
+    instBody.innerHTML = data.byInstrument.map(row => `
+      <div class="ledger-row">
+        <div class="name">${escapeHtml(row.instrument)}</div>
+        <div class="num" data-label="Trades">${row.count}</div>
+        <div class="num win" data-label="Win Rate">${row.winRate !== null ? row.winRate + '%' : '–'}</div>
+        <div class="num" data-label="Avg P&L">${row.avgPnl !== null ? (row.avgPnl >= 0 ? '+' : '') + '₹' + row.avgPnl.toLocaleString('en-IN') : '–'}</div>
+      </div>
+    `).join('');
+  }
+
+  const mistakeList = document.getElementById('mistakeList');
+  if (!data.mistakes.length) {
+    mistakeList.innerHTML = '<div class="no-mistakes">No recurring mistakes flagged in your logged trades.</div>';
+  } else {
+    mistakeList.innerHTML = data.mistakes.map(m => `
+      <li class="mistake-item">
+        <div class="count-badge">${m.count}</div>
+        <p>${escapeHtml(m.description)}</p>
+      </li>
+    `).join('');
+  }
+}
+
+loadReport();
+</script>
+</body>
+</html>

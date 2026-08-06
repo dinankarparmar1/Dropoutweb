@@ -187,6 +187,19 @@
   .insight-tags{display:flex;gap:8px;flex-wrap:wrap;}
   .tag{font-family:var(--mono);font-size:9.5px;padding:5px 10px;border-radius:20px;background:rgba(93,165,131,0.1);color:var(--emerald);border:1px solid rgba(93,165,131,0.25);letter-spacing:0.03em;}
 
+  /* badges — same chip pattern as .tag, reused rather than a new component */
+  .badges-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+  .badge-chip{
+    font-family:var(--mono);font-size:10.5px;padding:8px 14px;border-radius:20px;
+    letter-spacing:0.03em;border:1px solid var(--line);background:var(--panel);color:var(--sub-dim);
+    display:flex;align-items:center;gap:7px;cursor:default;
+  }
+  .badge-chip.earned{
+    background:rgba(212,175,55,0.1);border-color:rgba(212,175,55,0.35);color:var(--brass-bright);
+  }
+  .badge-chip .dot{width:6px;height:6px;border-radius:50%;background:var(--sub-dim);flex-shrink:0;}
+  .badge-chip.earned .dot{background:var(--brass-bright);box-shadow:0 0 6px rgba(212,175,55,0.6);}
+
   .mission-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
   .mission-item{
     display:flex;align-items:center;gap:12px;
@@ -250,7 +263,7 @@
       <div class="m-center">
         <div class="num" id="scoreNum">0</div>
         <div class="lbl">Trader Score</div>
-        <div class="delta">▲ 4 this week</div>
+        <div class="delta" id="heroDelta"></div>
       </div>
     </div>
     <div class="score-meta">
@@ -325,6 +338,15 @@
     </div>
   </div>
 
+  <div class="panel reveal" style="animation-delay:.16s">
+    <div class="panel-head"><h2>Your Week</h2><span class="ts" id="recapTs"></span></div>
+    <p class="insight-text" id="recapText">Log a few trades this week to get your first weekly recap.</p>
+    <div class="insight-tags" id="recapTags"></div>
+  </div>
+
+  <div class="section-title reveal" style="animation-delay:.17s">Badges</div>
+  <div class="badges-row reveal" style="animation-delay:.18s" id="badgesRow"></div>
+
   <div class="section-title reveal" style="animation-delay:.18s">Connected</div>
   <div class="modules reveal" style="animation-delay:.2s">
     <a href="journal.html" class="module">
@@ -389,13 +411,25 @@ function animateNumber(el, target){
   }, 13);
 }
 
-function renderSubscore(prefix, value){
+function renderSubscore(prefix, value, delta, hasComparison){
   const numEl = document.getElementById('lr-num-' + prefix);
   const fillEl = document.getElementById('lr-fill-' + prefix);
+  const deltaEl = document.getElementById('lr-delta-' + prefix);
   if (numEl) numEl.textContent = value;
   if (fillEl) requestAnimationFrame(() => { fillEl.style.width = value + '%'; });
-  // No day-over-day history yet, so the delta stays blank until Phase 6+
-  // adds a way to compare this week's score against last week's.
+
+  // Past-you comparison: this week's sub-score vs the 7 days before that,
+  // both computed server-side from real entries — only shown once there's
+  // an actual prior week to compare against.
+  if (deltaEl) {
+    if (!hasComparison || delta === 0) {
+      deltaEl.textContent = '';
+      deltaEl.className = 'lr-delta';
+    } else {
+      deltaEl.textContent = (delta > 0 ? '▲' : '▼') + Math.abs(delta);
+      deltaEl.className = 'lr-delta ' + (delta > 0 ? 'up' : 'down');
+    }
+  }
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -421,10 +455,19 @@ window.addEventListener('DOMContentLoaded', async () => {
   requestAnimationFrame(() => { ring.style.strokeDashoffset = circumference - (data.score/100)*circumference; });
   animateNumber(num, data.score);
 
-  renderSubscore('consistency', data.consistency);
-  renderSubscore('risk', data.riskManagement);
-  renderSubscore('discipline', data.discipline);
-  renderSubscore('execution', data.execution);
+  renderSubscore('consistency', data.consistency, data.weeklyDelta?.consistency ?? 0, data.weeklyDelta?.hasComparison);
+  renderSubscore('risk', data.riskManagement, data.weeklyDelta?.riskManagement ?? 0, data.weeklyDelta?.hasComparison);
+  renderSubscore('discipline', data.discipline, data.weeklyDelta?.discipline ?? 0, data.weeklyDelta?.hasComparison);
+  renderSubscore('execution', data.execution, data.weeklyDelta?.execution ?? 0, data.weeklyDelta?.hasComparison);
+
+  const heroDeltaEl = document.getElementById('heroDelta');
+  if (data.weeklyDelta?.hasComparison && data.weeklyDelta.overall !== 0) {
+    const d = data.weeklyDelta.overall;
+    heroDeltaEl.textContent = (d > 0 ? '▲ ' : '▼ ') + Math.abs(d) + ' this week';
+    heroDeltaEl.style.color = d > 0 ? 'var(--emerald)' : 'var(--terracotta)';
+  } else {
+    heroDeltaEl.textContent = '';
+  }
 
   document.getElementById('insightText').textContent = data.insight;
   document.getElementById('entryCountTag').textContent = data.entryCount + ' entr' + (data.entryCount === 1 ? 'y' : 'ies') + ' logged';
@@ -435,6 +478,35 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (data.entryCount > 0) {
     document.getElementById('heroHeadline').textContent = `Your Trader Score is ${data.score}.`;
     document.getElementById('heroSub').textContent = 'Based on ' + data.entryCount + ' logged trade' + (data.entryCount === 1 ? '' : 's') + ' — keep logging to sharpen every sub-score below.';
+  }
+
+  // Badges — rendered straight from the same /journal/score response,
+  // each earned/unearned state computed server-side from real entries.
+  const badgesRow = document.getElementById('badgesRow');
+  if (data.badges && data.badges.length) {
+    badgesRow.innerHTML = data.badges.map(b => `
+      <div class="badge-chip ${b.earned ? 'earned' : ''}" title="${b.description}">
+        <span class="dot"></span>${b.label}
+      </div>
+    `).join('');
+  }
+
+  // Weekly Recap — separate call, since it needs its own AI narrative.
+  try {
+    const recapRes = await fetch(`${WORKER_URL}/journal/weekly-recap`, { headers: { 'Authorization': 'Bearer ' + authToken } });
+    const recap = await recapRes.json();
+    if (recap.tradeCount > 0) {
+      document.getElementById('recapText').textContent = recap.narrative ||
+        `${recap.tradeCount} trades this week, ${recap.winRate}% win rate, ${recap.reflectedPct}% of losses reflected on.`;
+      const tags = [];
+      tags.push(`${recap.tradeCount} trade${recap.tradeCount === 1 ? '' : 's'}`);
+      if (recap.winRate !== null) tags.push(`${recap.winRate}% win rate`);
+      if (recap.bestDay) tags.push(`Best day: ${recap.bestDay.day}`);
+      document.getElementById('recapTags').innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+      document.getElementById('recapTs').textContent = 'Last 7 days';
+    }
+  } catch {
+    // recap panel just keeps its default placeholder text on failure
   }
 
   // AI Coach tile — separate fetch, since a signed-in user with zero

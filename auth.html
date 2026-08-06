@@ -107,18 +107,18 @@
   <div class="error-box" id="errorBox"></div>
   <div class="success-box" id="successBox"></div>
 
-  <form id="authForm">
+  <form id="authForm" novalidate>
     <div class="field" id="fieldName" style="display:none;">
       <label>Name</label>
       <input type="text" id="fName" placeholder="Your name">
     </div>
     <div class="field">
       <label>Email</label>
-      <input type="email" id="fEmail" placeholder="you@email.com" required>
+      <input type="email" id="fEmail" placeholder="you@email.com">
     </div>
     <div class="field" id="fieldPassword">
       <label>Password</label>
-      <input type="password" id="fPassword" placeholder="••••••••" required>
+      <input type="password" id="fPassword" placeholder="••••••••">
     </div>
     <button type="submit" class="btn-submit" id="btnSubmit">Sign In</button>
   </form>
@@ -202,6 +202,15 @@ form.addEventListener('submit', async (e) => {
   successBox.textContent = '';
   const email = document.getElementById('fEmail').value.trim().toLowerCase();
 
+  // Manual validation for every mode (the form has novalidate, so nothing
+  // is enforced by the browser itself — this avoids inconsistent behavior
+  // across mobile browsers with hidden required fields).
+  const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!emailLooksValid) {
+    errorBox.textContent = 'Enter a valid email address.';
+    return;
+  }
+
   btnSubmit.disabled = true;
 
   if (mode === 'forgot') {
@@ -230,6 +239,11 @@ form.addEventListener('submit', async (e) => {
   const password = document.getElementById('fPassword').value;
   const name = document.getElementById('fName').value.trim();
 
+  if (!password) {
+    errorBox.textContent = 'Enter a password.';
+    btnSubmit.disabled = false;
+    return;
+  }
   if (mode === 'signup' && !name) {
     errorBox.textContent = 'Enter your name.';
     btnSubmit.disabled = false;

@@ -651,48 +651,21 @@
     let hasGreetedVoice = false;
     const VOICE_GREETING = "हैलो, मेरा नाम इवान है। आप मुझसे कुछ भी पूछ सकते हैं।";
 
-    // ── Continuous voice conversation (ChatGPT-style) ──────────────────────
-    // Tap the mic once to start: it listens, automatically detects when
-    // you've stopped talking (3 seconds of silence), transcribes, sends,
-    // shows + speaks the reply, then starts listening again on its own —
-    // no button press needed between turns. Tap the mic again to end it.
+    // ── Press-and-hold voice input ──────────────────────────────────────
+    // Hold the mic button down while talking, release when you're done —
+    // no silence detection to get wrong, no waiting, no guessing. This
+    // replaces the earlier auto-listening approach, which depended on
+    // reliably detecting silence and proved too inconsistent across
+    // different microphones to trust as the only way in.
     let mediaRecorder = null;
     let recordedChunks = [];
-    let continuousMode = false;
     let currentStream = null;
-    let audioContext = null;
-    let volumeCheckInterval = null;
-    let hasSpokenInTurn = false;
-    let lastLoudTime = 0;
-    let turnStartTime = 0;
-    let noiseFloor = 0;
     let recordingMimeType = "";
-
-    // Adaptive instead of a fixed magic number: the first ~400ms of every
-    // turn is treated as a sample of ambient background noise, and speech
-    // only counts once it's clearly above that — not a hardcoded threshold
-    // that could be wrong for someone's specific mic or room. This is what
-    // actually fixes "my voice never registers" without needing to guess.
-    const CALIBRATION_MS = 400;
-    const SPEECH_MARGIN = 8;           // how far above the noise floor counts as "talking"
-    const SILENCE_DURATION_MS = 3000;  // how long it must stay quiet before we consider the turn over
-    const MIN_SPEECH_MS = 400;         // ignore brief noise blips as "having spoken"
-    const MAX_TURN_MS = 60000;         // safety cap so a noisy room can't record forever
-
-    function computeVolumeLevel(dataArray) {
-      let sum = 0;
-      for (let i = 0; i < dataArray.length; i++) {
-        const v = (dataArray[i] - 128) / 128;
-        sum += v * v;
-      }
-      return Math.sqrt(sum / dataArray.length) * 100;
-    }
+    let isRecording = false;
 
     // Picks a format the browser actually supports and remembers it, so the
-    // audio sent to the server is labeled correctly instead of always being
-    // called "webm" regardless of what was really recorded — Safari/iOS in
-    // particular often don't support webm, and a mislabeled file won't
-    // transcribe correctly even though it looks like it recorded fine.
+    // audio sent to the server is labeled correctly instead of assuming one
+    // fixed format — Safari/iOS in particular often don't support webm.
     function pickSupportedMimeType() {
       const candidates = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"];
       if (window.MediaRecorder && MediaRecorder.isTypeSupported) {
@@ -703,103 +676,43 @@
       return ""; // let the browser choose its own default
     }
 
-    async function startContinuousVoiceMode() {
-      continuousMode = true;
-      micBtn.title = "Listening... tap to stop";
-      try {
-        currentStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      } catch (err) {
-        addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
-        continuousMode = false;
-        return;
-      }
+    async function startRecording() {
+      if (isRecording) return;
       if (!hasGreetedVoice) {
         hasGreetedVoice = true;
         speakRaw(VOICE_GREETING);
       }
-      listenOneTurn();
-    }
-
-    function stopContinuousVoiceMode() {
-      continuousMode = false;
-      if (volumeCheckInterval) { clearInterval(volumeCheckInterval); volumeCheckInterval = null; }
-      if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
-      if (currentStream) { currentStream.getTracks().forEach((t) => t.stop()); currentStream = null; }
-      micBtn.classList.remove("recording");
-      micBtn.title = "Ask by voice";
-      input.placeholder = "e.g. What is P/E ratio?";
-    }
-
-    function listenOneTurn() {
-      if (!continuousMode || !currentStream) return;
+      try {
+        currentStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      } catch (err) {
+        addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
+        return;
+      }
+      isRecording = true;
       micBtn.classList.add("recording");
-      input.placeholder = "🎙️ Listening...";
+      input.placeholder = "🎙️ Listening... release to send";
       recordedChunks = [];
       recordingMimeType = pickSupportedMimeType();
       mediaRecorder = recordingMimeType
         ? new MediaRecorder(currentStream, { mimeType: recordingMimeType })
         : new MediaRecorder(currentStream);
       mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
-      mediaRecorder.onstop = handleTurnRecorded;
+      mediaRecorder.onstop = handleRecordingStopped;
       mediaRecorder.start();
-
-      if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      // Some browsers (notably iOS Safari) create a new AudioContext in a
-      // suspended state until explicitly resumed — without this, volume
-      // readings can silently stay at zero and your voice never registers.
-      if (audioContext.state === "suspended") audioContext.resume().catch(() => {});
-      const source = audioContext.createMediaStreamSource(currentStream);
-      const analyser = audioContext.createAnalyser();
-      analyser.fftSize = 512;
-      source.connect(analyser);
-      const dataArray = new Uint8Array(analyser.fftSize);
-
-      hasSpokenInTurn = false;
-      lastLoudTime = Date.now();
-      turnStartTime = Date.now();
-      noiseFloor = 0;
-      let calibrationSamples = 0;
-      let calibrationSum = 0;
-
-      if (volumeCheckInterval) clearInterval(volumeCheckInterval);
-      volumeCheckInterval = setInterval(() => {
-        if (!continuousMode || !mediaRecorder || mediaRecorder.state !== "recording") return;
-        analyser.getByteTimeDomainData(dataArray);
-        const level = computeVolumeLevel(dataArray);
-        const now = Date.now();
-        const elapsed = now - turnStartTime;
-
-        // First ~400ms of each turn: sample the room's ambient noise level
-        // instead of assuming a fixed number — this is what makes the
-        // threshold adapt to whatever mic/environment is actually in use.
-        if (elapsed < CALIBRATION_MS) {
-          calibrationSum += level;
-          calibrationSamples++;
-          noiseFloor = calibrationSamples ? calibrationSum / calibrationSamples : 0;
-          return;
-        }
-
-        const speechThreshold = noiseFloor + SPEECH_MARGIN;
-        if (level > speechThreshold) {
-          lastLoudTime = now;
-          if (elapsed > MIN_SPEECH_MS) hasSpokenInTurn = true;
-        }
-        const silenceDuration = now - lastLoudTime;
-        if ((hasSpokenInTurn && silenceDuration > SILENCE_DURATION_MS) || elapsed > MAX_TURN_MS) {
-          if (volumeCheckInterval) { clearInterval(volumeCheckInterval); volumeCheckInterval = null; }
-          if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
-        }
-      }, 200);
     }
 
-    async function handleTurnRecorded() {
+    function stopRecording() {
+      if (!isRecording) return;
+      isRecording = false;
+      micBtn.classList.remove("recording");
       input.placeholder = "e.g. What is P/E ratio?";
-      if (!hasSpokenInTurn) {
-        // Nothing meaningful was captured (silence/noise only) — just
-        // listen again rather than sending an empty turn.
-        if (continuousMode) listenOneTurn();
-        return;
-      }
+      if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+      if (currentStream) { currentStream.getTracks().forEach((t) => t.stop()); currentStream = null; }
+    }
+
+    async function handleRecordingStopped() {
+      const totalBytes = recordedChunks.reduce((s, c) => s + c.size, 0);
+      if (totalBytes < 500) return; // a very quick tap with basically nothing captured — skip silently
 
       const blob = new Blob(recordedChunks, { type: recordingMimeType || "audio/webm" });
       let transcript = "";
@@ -822,8 +735,7 @@
       }
 
       if (!transcript.trim()) {
-        await speakRaw("माफ़ कीजिए, मैं समझ नहीं पाया। फिर से बोलिए।");
-        if (continuousMode) listenOneTurn();
+        addMsg("Couldn't make that out — try holding the mic a little longer and speaking clearly.", "bot");
         return;
       }
 
@@ -835,25 +747,21 @@
         typing.remove();
         addMsg(reply, "bot");
         history.push({ role: "assistant", content: reply });
-        // Always spoken in continuous voice mode — separate from the
-        // speaker toggle, since a hands-free conversation only makes sense
-        // if the replies are actually spoken back.
-        await speakRaw(reply);
+        speak(reply); // respects the speaker on/off toggle, same as typed messages
       } catch (err) {
         typing.remove();
         addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
       }
-
-      if (continuousMode) listenOneTurn();
     }
 
-    micBtn.addEventListener("click", () => {
-      if (continuousMode) {
-        stopContinuousVoiceMode();
-      } else {
-        startContinuousVoiceMode();
-      }
-    });
+    // pointerdown/up covers mouse and touch in one pair of handlers.
+    // pointerleave/cancel makes sure dragging off the button (or an
+    // interrupted touch) still stops the recording instead of leaving the
+    // mic stuck on.
+    micBtn.addEventListener("pointerdown", (e) => { e.preventDefault(); startRecording(); });
+    micBtn.addEventListener("pointerup", stopRecording);
+    micBtn.addEventListener("pointerleave", () => { if (isRecording) stopRecording(); });
+    micBtn.addEventListener("pointercancel", stopRecording);
 
     const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to attach a PDF and/or screenshots (up to 5) — add a message about what you want to know if you like, then hit Ask. 2+ PDFs together compares and ranks them.";
 
@@ -865,12 +773,12 @@
         ensureStageOrb().then((orb) => { orb.start(); orb.resize(); });
       } else {
         if (stageOrb) stageOrb.stop();
-        if (continuousMode) stopContinuousVoiceMode();
+        if (isRecording) stopRecording();
       }
     });
     closeBtn.addEventListener("click", () => {
       panel.classList.remove("open");
-      if (continuousMode) stopContinuousVoiceMode();
+      if (isRecording) stopRecording();
     });
 
     let history = [];

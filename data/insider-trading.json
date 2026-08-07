@@ -1,6 +1,69 @@
 {
-  "updated": "2026-08-07T12:31:32.937259Z",
+  "updated": "2026-08-07T15:41:10.312195Z",
   "rows": [
+    {
+      "date": "07-Aug-2026 20:34:49",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260807_203",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 20:26:38",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260807_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 20:10:39",
+      "company": "JEYYAM GLOBAL FOODS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JEYYAM|JEYYAM GLOBAL FOODS LIMITED|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260807_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 20:06:05",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260807_200",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 19:39:48",
+      "company": "JSW Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260807_1939482",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 19:08:39",
+      "company": "Dhampur Bio Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260807_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 19:07:32",
+      "company": "Dhampur Bio Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260807_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 18:29:00",
+      "company": "Ravindra Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RELTD|Ravindra Energy Limited|Original|Regulation 7 (2)|IT_23918_WebXMLFile_20260807_18290",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 18:23:03",
+      "company": "Sterlite Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026080",
+      "quantity": "\u2014"
+    },
     {
       "date": "07-Aug-2026 17:50:34",
       "company": "Tata Consumer Products Limited",
@@ -97,69 +160,6 @@
       "company": "JALAN TRANSOLUTIONS (INDIA) LIMITED",
       "personCategory": "\u2014",
       "transactionType": "JALAN|JALAN TRANSOLUTIONS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15136_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 14:50:45",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260807_1450",
       "quantity": "\u2014"
     },
     {

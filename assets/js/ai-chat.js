@@ -295,14 +295,11 @@
   .ai-attach:hover{border-color:#d4af37;}
   .ai-attach svg{width:17px;height:17px;}
   .ai-mic{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);border-radius:10px;
-    width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;transition:all .2s ease;}
+    width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;transition:all .2s ease;
+    touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
   .ai-mic:hover{border-color:#d4af37;}
-  .ai-mic svg{width:16px;height:16px;}
+  .ai-mic svg{width:16px;height:16px;pointer-events:none;}
   .ai-mic.recording{border-color:#e2735a;color:#e2735a;background:rgba(226,115,90,.1);animation:ai-pulse 1.4s ease-in-out infinite;}
-  .ai-voice-toggle{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:13px;padding:4px 6px;
-    display:flex;align-items:center;transition:color .2s ease;}
-  .ai-voice-toggle.active{color:#4ade80;}
-  .ai-voice-toggle svg{width:15px;height:15px;}
   .ai-foot input[type=text]{flex:1;min-width:0;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);
     border-radius:10px;padding:10px 12px;color:#f6f4ee;font-size:13.5px;font-family:inherit;}
   .ai-foot input[type=text]:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.15);}
@@ -315,8 +312,6 @@
 
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
   const MIC_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>`;
-  const SPEAKER_ON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
-  const SPEAKER_OFF_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>`;
 
   function injectStyle() {
     const s = document.createElement("style");
@@ -545,7 +540,6 @@
           <span class="ai-mini-orb-dot"></span>
           <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
           <span class="ai-head-dot" title="Online"></span>
-          <button class="ai-voice-toggle" id="ai-voice-toggle" title="Have Ivaan speak its replies aloud">${SPEAKER_OFF_SVG}</button>
           <button class="ai-clear" title="Clear conversation">Clear</button>
           <button class="ai-close" aria-label="Close">✕</button>
         </div>
@@ -597,29 +591,28 @@
     const attachBtn = panel.querySelector(".ai-attach");
     const fileInput = panel.querySelector("#ai-file");
     const micBtn = panel.querySelector("#ai-mic");
-    const voiceToggle = panel.querySelector("#ai-voice-toggle");
 
-    // ── Phase 11: voice ──────────────────────────────────────────────────
-    let voiceEnabled = false;
-    try { voiceEnabled = localStorage.getItem("ivaan_voice_enabled") === "1"; } catch {}
-    function updateVoiceToggleUI() {
-      voiceToggle.classList.toggle("active", voiceEnabled);
-      voiceToggle.innerHTML = voiceEnabled ? SPEAKER_ON_SVG : SPEAKER_OFF_SVG;
+    // ── Voice ────────────────────────────────────────────────────────────
+    // The input method decides the output, automatically — no manual
+    // toggle needed: type a question, get a text-only reply; ask by voice,
+    // get the reply spoken aloud AND shown as text together. speakRaw() is
+    // only ever called from the voice-input path further down.
+    //
+    // iOS Safari specifically blocks audio that starts playing AFTER an
+    // async operation (like the network fetch to get the TTS clip) — by
+    // the time the response arrives, the "user gesture" that would normally
+    // authorize playback has expired. The standard fix: reuse ONE <audio>
+    // element that gets "unlocked" synchronously during the actual tap
+    // (see the mic's pointerdown handler below), then just swap its `src`
+    // and call play() again later — an already-unlocked element is allowed
+    // to keep playing after an async delay, unlike a freshly created one.
+    const ttsAudioEl = new Audio();
+    function unlockAudioPlayback() {
+      // A real user gesture is happening right now (pointerdown) — play()
+      // with no source yet will reject immediately, which is fine and
+      // expected; the attempt itself is what unlocks the element.
+      ttsAudioEl.play().catch(() => {});
     }
-    updateVoiceToggleUI();
-    voiceToggle.addEventListener("click", () => {
-      voiceEnabled = !voiceEnabled;
-      try { localStorage.setItem("ivaan_voice_enabled", voiceEnabled ? "1" : "0"); } catch {}
-      updateVoiceToggleUI();
-    });
-
-    // Speaks a reply aloud via the Worker's /tts route — only called when
-    // the person has turned voice on, and errors here are silent (voice is
-    // a nice-to-have; a failed TTS call should never block or interrupt chat).
-    // Plays audio through /tts unconditionally — used both by speak() (which
-    // respects the voice-on/off toggle) and the first-tap mic greeting
-    // (which should play regardless, since tapping the mic is itself an
-    // explicit request to use voice).
     async function speakRaw(text) {
       if (!text) return;
       try {
@@ -633,15 +626,11 @@
         if (!res.ok) return;
         const data = await res.json();
         if (!data.audio) return;
-        const audio = new Audio(`data:audio/mpeg;base64,${data.audio}`);
-        audio.play().catch(() => {});
+        ttsAudioEl.src = `data:audio/mpeg;base64,${data.audio}`;
+        ttsAudioEl.play().catch(() => {});
       } catch {
-        // silent — voice is best-effort
+        // silent — voice is best-effort, never blocks the text reply
       }
-    }
-    async function speak(text) {
-      if (!voiceEnabled) return;
-      return speakRaw(text);
     }
 
     // First time the mic is tapped in this session, Ivaan introduces itself
@@ -678,27 +667,32 @@
 
     async function startRecording() {
       if (isRecording) return;
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
+        addMsg("Voice input isn't supported in this browser — try typing your question instead, or use a recent version of Chrome or Safari.", "bot");
+        return;
+      }
       if (!hasGreetedVoice) {
         hasGreetedVoice = true;
         speakRaw(VOICE_GREETING);
       }
       try {
         currentStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        recordedChunks = [];
+        recordingMimeType = pickSupportedMimeType();
+        mediaRecorder = recordingMimeType
+          ? new MediaRecorder(currentStream, { mimeType: recordingMimeType })
+          : new MediaRecorder(currentStream);
+        mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+        mediaRecorder.onstop = handleRecordingStopped;
+        mediaRecorder.start();
       } catch (err) {
         addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
+        if (currentStream) { currentStream.getTracks().forEach((t) => t.stop()); currentStream = null; }
         return;
       }
       isRecording = true;
       micBtn.classList.add("recording");
       input.placeholder = "🎙️ Listening... release to send";
-      recordedChunks = [];
-      recordingMimeType = pickSupportedMimeType();
-      mediaRecorder = recordingMimeType
-        ? new MediaRecorder(currentStream, { mimeType: recordingMimeType })
-        : new MediaRecorder(currentStream);
-      mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
-      mediaRecorder.onstop = handleRecordingStopped;
-      mediaRecorder.start();
     }
 
     function stopRecording() {
@@ -747,7 +741,7 @@
         typing.remove();
         addMsg(reply, "bot");
         history.push({ role: "assistant", content: reply });
-        speak(reply); // respects the speaker on/off toggle, same as typed messages
+        speakRaw(reply); // asked by voice → always answered with voice + text together
       } catch (err) {
         typing.remove();
         addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
@@ -758,7 +752,7 @@
     // pointerleave/cancel makes sure dragging off the button (or an
     // interrupted touch) still stops the recording instead of leaving the
     // mic stuck on.
-    micBtn.addEventListener("pointerdown", (e) => { e.preventDefault(); startRecording(); });
+    micBtn.addEventListener("pointerdown", (e) => { e.preventDefault(); unlockAudioPlayback(); startRecording(); });
     micBtn.addEventListener("pointerup", stopRecording);
     micBtn.addEventListener("pointerleave", () => { if (isRecording) stopRecording(); });
     micBtn.addEventListener("pointercancel", stopRecording);
@@ -908,8 +902,7 @@
         try {
           const reply = await sendToIvaan(history.slice(-10));
           typing.remove();
-          addMsg(reply, "bot");
-          speak(reply);
+          addMsg(reply, "bot"); // typed question → text-only reply, no audio
           history.push({ role: "assistant", content: reply });
         } catch (err) {
           typing.remove();
@@ -1013,8 +1006,7 @@
         const messagesForModel = history.slice(-4).concat([{ role: "user", content: prompt }]);
         const reply = await sendToIvaan(messagesForModel, persistLabel, maxTokens);
         typing.remove();
-        addMsg(reply, "bot");
-        speak(reply);
+        addMsg(reply, "bot"); // uploaded via the paperclip/typed flow → text-only reply
         history.push({ role: "user", content: persistLabel });
         history.push({ role: "assistant", content: reply });
       } catch (err) {

@@ -1,6 +1,69 @@
 {
-  "updated": "2026-08-07T09:49:45.008528Z",
+  "updated": "2026-08-07T11:15:16.171844Z",
   "rows": [
+    {
+      "date": "07-Aug-2026 16:22:46",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260807_162",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 16:13:06",
+      "company": "BAJAJ FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BAJFINANCE|BAJAJ FINANCE LIMITED|Original|Regulation 7 (2)|IT_1257_WebXMLFile_20260807_161",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 16:06:32",
+      "company": "WIPRO LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20260807_160632226.xml|IT_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 16:06:10",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260807",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 15:55:16",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260807_15551634",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 15:53:06",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (3)|IT_17593_WebXMLFile_20260807_15530637",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 15:32:53",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260807_153",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 15:32:32",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260807_153",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Aug-2026 15:19:08",
+      "company": "GHCL Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GHCL|GHCL Limited|Original|Regulation 7 (2)|IT_1006_WebXMLFile_20260807_151908544.xml|IT_1",
+      "quantity": "\u2014"
+    },
     {
       "date": "07-Aug-2026 15:07:41",
       "company": "JALAN TRANSOLUTIONS (INDIA) LIMITED",
@@ -111,20 +174,6 @@
       "company": "BMW VENTURES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260807_133",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 13:10:02",
-      "company": "Allied Digital Services Limited",
-      "personCategory": "\u2014",
-      "transactionType": "ADSL|Allied Digital Services Limited|Original|Regulation 7 (2)|IT_2631_WebXMLFile_20260807",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Aug-2026 09:55:16",
-      "company": "KCP LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KCP|KCP LIMITED|Original|Regulation 7 (2)|IT_176_WebXMLFile_20260807_095516246.xml|IT_176_",
       "quantity": "\u2014"
     }
   ],

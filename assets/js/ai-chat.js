@@ -651,59 +651,164 @@
     let hasGreetedVoice = false;
     const VOICE_GREETING = "हैलो, मेरा नाम इवान है। आप मुझसे कुछ भी पूछ सकते हैं।";
 
-    // Voice input: record with MediaRecorder, transcribe via /stt, drop the
-    // text into the input box (not auto-sent — a misheard financial
-    // question is worth a glance before it goes anywhere).
+    // ── Continuous voice conversation (ChatGPT-style) ──────────────────────
+    // Tap the mic once to start: it listens, automatically detects when
+    // you've stopped talking (3 seconds of silence), transcribes, sends,
+    // shows + speaks the reply, then starts listening again on its own —
+    // no button press needed between turns. Tap the mic again to end it.
     let mediaRecorder = null;
     let recordedChunks = [];
-    micBtn.addEventListener("click", async () => {
-      if (mediaRecorder && mediaRecorder.state === "recording") {
-        mediaRecorder.stop();
+    let continuousMode = false;
+    let currentStream = null;
+    let audioContext = null;
+    let volumeCheckInterval = null;
+    let hasSpokenInTurn = false;
+    let lastLoudTime = 0;
+    let turnStartTime = 0;
+
+    // Raised from 12 → 22: this can't truly tell your voice apart from
+    // someone else's (that needs real speaker-identification AI, which
+    // isn't feasible to build here) — but requiring louder, closer-sounding
+    // speech to count as "talking" does meaningfully cut down on quieter
+    // background chatter getting picked up, without needing you to shout.
+    const SILENCE_THRESHOLD = 22;     // amplitude level below which we count as "quiet"
+    const SILENCE_DURATION_MS = 3000; // how long it must stay quiet before we consider the turn over
+    const MIN_SPEECH_MS = 400;        // ignore brief noise blips as "having spoken"
+    const MAX_TURN_MS = 60000;        // safety cap so a noisy room can't record forever
+
+    function computeVolumeLevel(dataArray) {
+      let sum = 0;
+      for (let i = 0; i < dataArray.length; i++) {
+        const v = (dataArray[i] - 128) / 128;
+        sum += v * v;
+      }
+      return Math.sqrt(sum / dataArray.length) * 100;
+    }
+
+    async function startContinuousVoiceMode() {
+      continuousMode = true;
+      micBtn.title = "Listening... tap to stop";
+      try {
+        currentStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      } catch (err) {
+        addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
+        continuousMode = false;
         return;
       }
       if (!hasGreetedVoice) {
         hasGreetedVoice = true;
         speakRaw(VOICE_GREETING);
       }
+      listenOneTurn();
+    }
+
+    function stopContinuousVoiceMode() {
+      continuousMode = false;
+      if (volumeCheckInterval) { clearInterval(volumeCheckInterval); volumeCheckInterval = null; }
+      if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+      if (currentStream) { currentStream.getTracks().forEach((t) => t.stop()); currentStream = null; }
+      micBtn.classList.remove("recording");
+      micBtn.title = "Ask by voice";
+    }
+
+    function listenOneTurn() {
+      if (!continuousMode || !currentStream) return;
+      micBtn.classList.add("recording");
+      recordedChunks = [];
+      mediaRecorder = new MediaRecorder(currentStream);
+      mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+      mediaRecorder.onstop = handleTurnRecorded;
+      mediaRecorder.start();
+
+      if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const source = audioContext.createMediaStreamSource(currentStream);
+      const analyser = audioContext.createAnalyser();
+      analyser.fftSize = 512;
+      source.connect(analyser);
+      const dataArray = new Uint8Array(analyser.fftSize);
+
+      hasSpokenInTurn = false;
+      lastLoudTime = Date.now();
+      turnStartTime = Date.now();
+
+      if (volumeCheckInterval) clearInterval(volumeCheckInterval);
+      volumeCheckInterval = setInterval(() => {
+        if (!continuousMode || !mediaRecorder || mediaRecorder.state !== "recording") return;
+        analyser.getByteTimeDomainData(dataArray);
+        const level = computeVolumeLevel(dataArray);
+        const now = Date.now();
+        if (level > SILENCE_THRESHOLD) {
+          lastLoudTime = now;
+          if (now - turnStartTime > MIN_SPEECH_MS) hasSpokenInTurn = true;
+        }
+        const silenceDuration = now - lastLoudTime;
+        const turnDuration = now - turnStartTime;
+        if ((hasSpokenInTurn && silenceDuration > SILENCE_DURATION_MS) || turnDuration > MAX_TURN_MS) {
+          if (volumeCheckInterval) { clearInterval(volumeCheckInterval); volumeCheckInterval = null; }
+          if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+        }
+      }, 200);
+    }
+
+    async function handleTurnRecorded() {
+      if (!hasSpokenInTurn) {
+        // Nothing meaningful was captured (silence/noise only) — just
+        // listen again rather than sending an empty turn.
+        if (continuousMode) listenOneTurn();
+        return;
+      }
+
+      const blob = new Blob(recordedChunks, { type: "audio/webm" });
+      let transcript = "";
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        recordedChunks = [];
-        mediaRecorder = new MediaRecorder(stream);
-        mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
-        mediaRecorder.onstop = async () => {
-          stream.getTracks().forEach((t) => t.stop());
-          micBtn.classList.remove("recording");
-          micBtn.disabled = true;
-          const blob = new Blob(recordedChunks, { type: "audio/webm" });
-          try {
-            const base64 = await new Promise((resolve, reject) => {
-              const reader = new FileReader();
-              reader.onload = () => resolve(reader.result);
-              reader.onerror = () => reject(new Error("Could not read recording"));
-              reader.readAsDataURL(blob);
-            });
-            const res = await fetch(STT_URL, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ audio: base64 }),
-            });
-            const data = await res.json();
-            if (data.text) {
-              input.value = data.text;
-              input.focus();
-            } else {
-              addMsg(data.error || "Couldn't make that out — try again.", "bot");
-            }
-          } catch {
-            addMsg("Couldn't reach Ivaan to transcribe that — try again.", "bot");
-          } finally {
-            micBtn.disabled = false;
-          }
-        };
-        mediaRecorder.start();
-        micBtn.classList.add("recording");
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(new Error("Could not read recording"));
+          reader.readAsDataURL(blob);
+        });
+        const res = await fetch(STT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ audio: base64 }),
+        });
+        const data = await res.json();
+        transcript = data.text || "";
+      } catch {
+        transcript = "";
+      }
+
+      if (!transcript.trim()) {
+        await speakRaw("माफ़ कीजिए, मैं समझ नहीं पाया। फिर से बोलिए।");
+        if (continuousMode) listenOneTurn();
+        return;
+      }
+
+      addMsg(transcript, "user");
+      history.push({ role: "user", content: transcript });
+      const typing = addTyping();
+      try {
+        const reply = await sendToIvaan(history.slice(-10));
+        typing.remove();
+        addMsg(reply, "bot");
+        history.push({ role: "assistant", content: reply });
+        // Always spoken in continuous voice mode — separate from the
+        // speaker toggle, since a hands-free conversation only makes sense
+        // if the replies are actually spoken back.
+        await speakRaw(reply);
       } catch (err) {
-        addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
+        typing.remove();
+        addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
+      }
+
+      if (continuousMode) listenOneTurn();
+    }
+
+    micBtn.addEventListener("click", () => {
+      if (continuousMode) {
+        stopContinuousVoiceMode();
+      } else {
+        startContinuousVoiceMode();
       }
     });
 
@@ -717,9 +822,13 @@
         ensureStageOrb().then((orb) => { orb.start(); orb.resize(); });
       } else {
         if (stageOrb) stageOrb.stop();
+        if (continuousMode) stopContinuousVoiceMode();
       }
     });
-    closeBtn.addEventListener("click", () => panel.classList.remove("open"));
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+      if (continuousMode) stopContinuousVoiceMode();
+    });
 
     let history = [];
     let pendingFiles = []; // files attached but not yet sent

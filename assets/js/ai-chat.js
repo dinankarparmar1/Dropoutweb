@@ -665,16 +665,19 @@
     let hasSpokenInTurn = false;
     let lastLoudTime = 0;
     let turnStartTime = 0;
+    let noiseFloor = 0;
+    let recordingMimeType = "";
 
-    // Raised from 12 → 22: this can't truly tell your voice apart from
-    // someone else's (that needs real speaker-identification AI, which
-    // isn't feasible to build here) — but requiring louder, closer-sounding
-    // speech to count as "talking" does meaningfully cut down on quieter
-    // background chatter getting picked up, without needing you to shout.
-    const SILENCE_THRESHOLD = 22;     // amplitude level below which we count as "quiet"
-    const SILENCE_DURATION_MS = 3000; // how long it must stay quiet before we consider the turn over
-    const MIN_SPEECH_MS = 400;        // ignore brief noise blips as "having spoken"
-    const MAX_TURN_MS = 60000;        // safety cap so a noisy room can't record forever
+    // Adaptive instead of a fixed magic number: the first ~400ms of every
+    // turn is treated as a sample of ambient background noise, and speech
+    // only counts once it's clearly above that — not a hardcoded threshold
+    // that could be wrong for someone's specific mic or room. This is what
+    // actually fixes "my voice never registers" without needing to guess.
+    const CALIBRATION_MS = 400;
+    const SPEECH_MARGIN = 8;           // how far above the noise floor counts as "talking"
+    const SILENCE_DURATION_MS = 3000;  // how long it must stay quiet before we consider the turn over
+    const MIN_SPEECH_MS = 400;         // ignore brief noise blips as "having spoken"
+    const MAX_TURN_MS = 60000;         // safety cap so a noisy room can't record forever
 
     function computeVolumeLevel(dataArray) {
       let sum = 0;
@@ -683,6 +686,21 @@
         sum += v * v;
       }
       return Math.sqrt(sum / dataArray.length) * 100;
+    }
+
+    // Picks a format the browser actually supports and remembers it, so the
+    // audio sent to the server is labeled correctly instead of always being
+    // called "webm" regardless of what was really recorded — Safari/iOS in
+    // particular often don't support webm, and a mislabeled file won't
+    // transcribe correctly even though it looks like it recorded fine.
+    function pickSupportedMimeType() {
+      const candidates = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"];
+      if (window.MediaRecorder && MediaRecorder.isTypeSupported) {
+        for (const type of candidates) {
+          if (MediaRecorder.isTypeSupported(type)) return type;
+        }
+      }
+      return ""; // let the browser choose its own default
     }
 
     async function startContinuousVoiceMode() {
@@ -709,18 +727,27 @@
       if (currentStream) { currentStream.getTracks().forEach((t) => t.stop()); currentStream = null; }
       micBtn.classList.remove("recording");
       micBtn.title = "Ask by voice";
+      input.placeholder = "e.g. What is P/E ratio?";
     }
 
     function listenOneTurn() {
       if (!continuousMode || !currentStream) return;
       micBtn.classList.add("recording");
+      input.placeholder = "🎙️ Listening...";
       recordedChunks = [];
-      mediaRecorder = new MediaRecorder(currentStream);
+      recordingMimeType = pickSupportedMimeType();
+      mediaRecorder = recordingMimeType
+        ? new MediaRecorder(currentStream, { mimeType: recordingMimeType })
+        : new MediaRecorder(currentStream);
       mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
       mediaRecorder.onstop = handleTurnRecorded;
       mediaRecorder.start();
 
       if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      // Some browsers (notably iOS Safari) create a new AudioContext in a
+      // suspended state until explicitly resumed — without this, volume
+      // readings can silently stay at zero and your voice never registers.
+      if (audioContext.state === "suspended") audioContext.resume().catch(() => {});
       const source = audioContext.createMediaStreamSource(currentStream);
       const analyser = audioContext.createAnalyser();
       analyser.fftSize = 512;
@@ -730,6 +757,9 @@
       hasSpokenInTurn = false;
       lastLoudTime = Date.now();
       turnStartTime = Date.now();
+      noiseFloor = 0;
+      let calibrationSamples = 0;
+      let calibrationSum = 0;
 
       if (volumeCheckInterval) clearInterval(volumeCheckInterval);
       volumeCheckInterval = setInterval(() => {
@@ -737,13 +767,25 @@
         analyser.getByteTimeDomainData(dataArray);
         const level = computeVolumeLevel(dataArray);
         const now = Date.now();
-        if (level > SILENCE_THRESHOLD) {
+        const elapsed = now - turnStartTime;
+
+        // First ~400ms of each turn: sample the room's ambient noise level
+        // instead of assuming a fixed number — this is what makes the
+        // threshold adapt to whatever mic/environment is actually in use.
+        if (elapsed < CALIBRATION_MS) {
+          calibrationSum += level;
+          calibrationSamples++;
+          noiseFloor = calibrationSamples ? calibrationSum / calibrationSamples : 0;
+          return;
+        }
+
+        const speechThreshold = noiseFloor + SPEECH_MARGIN;
+        if (level > speechThreshold) {
           lastLoudTime = now;
-          if (now - turnStartTime > MIN_SPEECH_MS) hasSpokenInTurn = true;
+          if (elapsed > MIN_SPEECH_MS) hasSpokenInTurn = true;
         }
         const silenceDuration = now - lastLoudTime;
-        const turnDuration = now - turnStartTime;
-        if ((hasSpokenInTurn && silenceDuration > SILENCE_DURATION_MS) || turnDuration > MAX_TURN_MS) {
+        if ((hasSpokenInTurn && silenceDuration > SILENCE_DURATION_MS) || elapsed > MAX_TURN_MS) {
           if (volumeCheckInterval) { clearInterval(volumeCheckInterval); volumeCheckInterval = null; }
           if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
         }
@@ -751,6 +793,7 @@
     }
 
     async function handleTurnRecorded() {
+      input.placeholder = "e.g. What is P/E ratio?";
       if (!hasSpokenInTurn) {
         // Nothing meaningful was captured (silence/noise only) — just
         // listen again rather than sending an empty turn.
@@ -758,7 +801,7 @@
         return;
       }
 
-      const blob = new Blob(recordedChunks, { type: "audio/webm" });
+      const blob = new Blob(recordedChunks, { type: recordingMimeType || "audio/webm" });
       let transcript = "";
       try {
         const base64 = await new Promise((resolve, reject) => {

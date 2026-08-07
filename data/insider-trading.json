@@ -1,179 +1,25 @@
 {
-  "updated": "2026-08-06T11:52:23.045082Z",
+  "updated": "2026-08-07T08:21:03.543443Z",
   "rows": [
     {
-      "date": "06-Aug-2026 17:19:48",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260806_171948370.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 17:04:33",
-      "company": "Infosys Limited",
-      "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260806_170433177.xml|IT",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 16:03:29",
+      "date": "07-Aug-2026 13:32:29",
       "company": "BMW VENTURES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260806_160",
+      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260807_133",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Aug-2026 15:59:09",
-      "company": "MILTON INDUSTRIES LIMITED",
+      "date": "07-Aug-2026 13:10:02",
+      "company": "Allied Digital Services Limited",
       "personCategory": "\u2014",
-      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260806_15",
+      "transactionType": "ADSL|Allied Digital Services Limited|Original|Regulation 7 (2)|IT_2631_WebXMLFile_20260807",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Aug-2026 15:58:40",
-      "company": "BMW VENTURES LIMITED",
+      "date": "07-Aug-2026 09:55:16",
+      "company": "KCP LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260806_155",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 15:58:06",
-      "company": "MILTON INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260806_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 15:43:42",
-      "company": "Steel Exchange India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STEELXIND|Steel Exchange India Limited|Original|Regulation 7 (2)|IT_15345_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 15:43:26",
-      "company": "FUSION FINANCE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "FUSION|FUSION FINANCE LIMITED|Original|Regulation 7 (2)|IT_19884_WebXMLFile_20260806_15432",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 13:14:25",
-      "company": "Sampann Utpadan India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAMPANN|Sampann Utpadan India Limited|Original|Regulation 7 (2)|IT_6066_WebXMLFile_2026080",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 13:11:48",
-      "company": "Sampann Utpadan India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAMPANN|Sampann Utpadan India Limited|Original|Regulation 7 (2)|IT_6066_WebXMLFile_2026080",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 12:58:20",
-      "company": "Newjaisa Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NEWJAISA|Newjaisa Technologies Limited|Original|Regulation 7 (2)|IT_22325_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 12:55:59",
-      "company": "OMAX AUTOS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OMAXAUTO|OMAX AUTOS LIMITED|Original|Regulation 7 (2)|IT_2127_WebXMLFile_20260806_12555933",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Aug-2026 11:52:08",
-      "company": "AAA TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAATECH|AAA TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_18645_WebXMLFile_20260806_11",
+      "transactionType": "KCP|KCP LIMITED|Original|Regulation 7 (2)|IT_176_WebXMLFile_20260807_095516246.xml|IT_176_",
       "quantity": "\u2014"
     }
   ],

@@ -15,6 +15,8 @@
   const WORKER_URL = "https://ivaan.dinankarparmar12345.workers.dev/chat";
   const HISTORY_URL = WORKER_URL.replace(/\/chat\/?$/, "/history");
   const VISION_URL = WORKER_URL.replace(/\/chat\/?$/, "/vision");
+  const STT_URL = WORKER_URL.replace(/\/chat\/?$/, "/stt");
+  const TTS_URL = WORKER_URL.replace(/\/chat\/?$/, "/tts");
 
   // PDFs are read entirely in the visitor's own browser using pdf.js —
   // nothing is uploaded anywhere, keeping this free and private. Images ARE
@@ -292,6 +294,15 @@
     width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;}
   .ai-attach:hover{border-color:#d4af37;}
   .ai-attach svg{width:17px;height:17px;}
+  .ai-mic{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);border-radius:10px;
+    width:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#d4af37;transition:all .2s ease;}
+  .ai-mic:hover{border-color:#d4af37;}
+  .ai-mic svg{width:16px;height:16px;}
+  .ai-mic.recording{border-color:#e2735a;color:#e2735a;background:rgba(226,115,90,.1);animation:ai-pulse 1.4s ease-in-out infinite;}
+  .ai-voice-toggle{background:none;border:none;color:#a8a49b;cursor:pointer;font-size:13px;padding:4px 6px;
+    display:flex;align-items:center;transition:color .2s ease;}
+  .ai-voice-toggle.active{color:#4ade80;}
+  .ai-voice-toggle svg{width:15px;height:15px;}
   .ai-foot input[type=text]{flex:1;min-width:0;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,.22);
     border-radius:10px;padding:10px 12px;color:#f6f4ee;font-size:13.5px;font-family:inherit;}
   .ai-foot input[type=text]:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.15);}
@@ -303,6 +314,9 @@
   `;
 
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
+  const MIC_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>`;
+  const SPEAKER_ON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
+  const SPEAKER_OFF_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>`;
 
   function injectStyle() {
     const s = document.createElement("style");
@@ -531,6 +545,7 @@
           <span class="ai-mini-orb-dot"></span>
           <div><h4>Ivaan</h4><span>AI Financial Assistant</span></div>
           <span class="ai-head-dot" title="Online"></span>
+          <button class="ai-voice-toggle" id="ai-voice-toggle" title="Have Ivaan speak its replies aloud">${SPEAKER_OFF_SVG}</button>
           <button class="ai-clear" title="Clear conversation">Clear</button>
           <button class="ai-close" aria-label="Close">✕</button>
         </div>
@@ -541,6 +556,7 @@
         <div class="ai-staged" id="ai-staged"></div>
         <div class="ai-foot">
           <button class="ai-attach" type="button" title="Attach up to 5 PDFs/screenshots, add a message if you like, then hit Ask">${PAPERCLIP_SVG}</button>
+          <button class="ai-mic" type="button" id="ai-mic" title="Ask by voice">${MIC_SVG}</button>
           <input type="file" id="ai-file" accept="application/pdf,image/png,image/jpeg,image/webp" multiple style="display:none">
           <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
           <button id="ai-send" class="ai-send-btn">Ask</button>
@@ -580,6 +596,116 @@
     const sendBtn = panel.querySelector("#ai-send");
     const attachBtn = panel.querySelector(".ai-attach");
     const fileInput = panel.querySelector("#ai-file");
+    const micBtn = panel.querySelector("#ai-mic");
+    const voiceToggle = panel.querySelector("#ai-voice-toggle");
+
+    // ── Phase 11: voice ──────────────────────────────────────────────────
+    let voiceEnabled = false;
+    try { voiceEnabled = localStorage.getItem("ivaan_voice_enabled") === "1"; } catch {}
+    function updateVoiceToggleUI() {
+      voiceToggle.classList.toggle("active", voiceEnabled);
+      voiceToggle.innerHTML = voiceEnabled ? SPEAKER_ON_SVG : SPEAKER_OFF_SVG;
+    }
+    updateVoiceToggleUI();
+    voiceToggle.addEventListener("click", () => {
+      voiceEnabled = !voiceEnabled;
+      try { localStorage.setItem("ivaan_voice_enabled", voiceEnabled ? "1" : "0"); } catch {}
+      updateVoiceToggleUI();
+    });
+
+    // Speaks a reply aloud via the Worker's /tts route — only called when
+    // the person has turned voice on, and errors here are silent (voice is
+    // a nice-to-have; a failed TTS call should never block or interrupt chat).
+    // Plays audio through /tts unconditionally — used both by speak() (which
+    // respects the voice-on/off toggle) and the first-tap mic greeting
+    // (which should play regardless, since tapping the mic is itself an
+    // explicit request to use voice).
+    async function speakRaw(text) {
+      if (!text) return;
+      try {
+        // Strip markdown-ish formatting so it doesn't read "asterisk asterisk" aloud.
+        const clean = text.replace(/\*\*/g, "").replace(/^[-*]\s+/gm, "").slice(0, 1500);
+        const res = await fetch(TTS_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: clean }),
+        });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.audio) return;
+        const audio = new Audio(`data:audio/mpeg;base64,${data.audio}`);
+        audio.play().catch(() => {});
+      } catch {
+        // silent — voice is best-effort
+      }
+    }
+    async function speak(text) {
+      if (!voiceEnabled) return;
+      return speakRaw(text);
+    }
+
+    // First time the mic is tapped in this session, Ivaan introduces itself
+    // out loud — written in actual Devanagari (not Roman-letter Hinglish) so
+    // it routes through the real Hindi voice path and pronounces correctly,
+    // rather than being read as mangled English by the English engine.
+    let hasGreetedVoice = false;
+    const VOICE_GREETING = "हैलो, मेरा नाम इवान है। आप मुझसे कुछ भी पूछ सकते हैं।";
+
+    // Voice input: record with MediaRecorder, transcribe via /stt, drop the
+    // text into the input box (not auto-sent — a misheard financial
+    // question is worth a glance before it goes anywhere).
+    let mediaRecorder = null;
+    let recordedChunks = [];
+    micBtn.addEventListener("click", async () => {
+      if (mediaRecorder && mediaRecorder.state === "recording") {
+        mediaRecorder.stop();
+        return;
+      }
+      if (!hasGreetedVoice) {
+        hasGreetedVoice = true;
+        speakRaw(VOICE_GREETING);
+      }
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        recordedChunks = [];
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+        mediaRecorder.onstop = async () => {
+          stream.getTracks().forEach((t) => t.stop());
+          micBtn.classList.remove("recording");
+          micBtn.disabled = true;
+          const blob = new Blob(recordedChunks, { type: "audio/webm" });
+          try {
+            const base64 = await new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = () => reject(new Error("Could not read recording"));
+              reader.readAsDataURL(blob);
+            });
+            const res = await fetch(STT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ audio: base64 }),
+            });
+            const data = await res.json();
+            if (data.text) {
+              input.value = data.text;
+              input.focus();
+            } else {
+              addMsg(data.error || "Couldn't make that out — try again.", "bot");
+            }
+          } catch {
+            addMsg("Couldn't reach Ivaan to transcribe that — try again.", "bot");
+          } finally {
+            micBtn.disabled = false;
+          }
+        };
+        mediaRecorder.start();
+        micBtn.classList.add("recording");
+      } catch (err) {
+        addMsg("Couldn't access your microphone — check your browser's permission for this site.", "bot");
+      }
+    });
 
     const GREETING = "Hi, I'm Ivaan. Ask me anything about stocks, forex, crypto, options, valuation, or investing concepts. Tap the paperclip to attach a PDF and/or screenshots (up to 5) — add a message about what you want to know if you like, then hit Ask. 2+ PDFs together compares and ranks them.";
 
@@ -723,6 +849,7 @@
           const reply = await sendToIvaan(history.slice(-10));
           typing.remove();
           addMsg(reply, "bot");
+          speak(reply);
           history.push({ role: "assistant", content: reply });
         } catch (err) {
           typing.remove();
@@ -827,6 +954,7 @@
         const reply = await sendToIvaan(messagesForModel, persistLabel, maxTokens);
         typing.remove();
         addMsg(reply, "bot");
+        speak(reply);
         history.push({ role: "user", content: persistLabel });
         history.push({ role: "assistant", content: reply });
       } catch (err) {
@@ -873,4 +1001,3 @@
     buildUI();
   });
 })();
-

@@ -830,20 +830,34 @@
       };
     }
 
-    function renderGreeting() {
+    // Shows the greeting only if this browser has genuinely never seen it
+    // before — stored as a flag rather than relying purely on the history
+    // fetch succeeding, so a flaky network call or a temporary Worker issue
+    // can't cause it to reappear on every visit.
+    function maybeRenderGreeting() {
+      let alreadyGreeted = false;
+      try { alreadyGreeted = localStorage.getItem("ivaan_has_greeted") === "1"; } catch {}
+      if (alreadyGreeted) return;
       body.innerHTML = "";
       addMsg(GREETING, "bot");
+      try { localStorage.setItem("ivaan_has_greeted", "1"); } catch {}
+    }
+    function renderGreeting() {
+      // Used explicitly (e.g., after Clear) — always shows it and marks the flag.
+      body.innerHTML = "";
+      addMsg(GREETING, "bot");
+      try { localStorage.setItem("ivaan_has_greeted", "1"); } catch {}
     }
 
     // ── Phase 2: load this visitor's past conversation, if any ─────────────
     async function loadHistory() {
-      if (!sessionId) { renderGreeting(); return; }
+      if (!sessionId) { maybeRenderGreeting(); return; }
       try {
         const res = await fetch(`${HISTORY_URL}?session_id=${encodeURIComponent(sessionId)}`);
         const data = await res.json();
         const past = Array.isArray(data.messages) ? data.messages : [];
         if (past.length === 0) {
-          renderGreeting();
+          maybeRenderGreeting();
           return;
         }
         body.innerHTML = "";
@@ -852,7 +866,7 @@
           history.push({ role: m.role, content: m.content });
         }
       } catch (err) {
-        renderGreeting();
+        maybeRenderGreeting();
       }
     }
     loadHistory();

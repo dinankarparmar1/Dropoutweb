@@ -633,13 +633,6 @@
       }
     }
 
-    // First time the mic is tapped in this session, Ivaan introduces itself
-    // out loud — written in actual Devanagari (not Roman-letter Hinglish) so
-    // it routes through the real Hindi voice path and pronounces correctly,
-    // rather than being read as mangled English by the English engine.
-    let hasGreetedVoice = false;
-    const VOICE_GREETING = "हैलो, मेरा नाम इवान है। आप मुझसे कुछ भी पूछ सकते हैं।";
-
     // ── Press-and-hold voice input ──────────────────────────────────────
     // Hold the mic button down while talking, release when you're done —
     // no silence detection to get wrong, no waiting, no guessing. This
@@ -670,10 +663,6 @@
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
         addMsg("Voice input isn't supported in this browser — try typing your question instead, or use a recent version of Chrome or Safari.", "bot");
         return;
-      }
-      if (!hasGreetedVoice) {
-        hasGreetedVoice = true;
-        speakRaw(VOICE_GREETING);
       }
       try {
         currentStream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -723,6 +712,10 @@
           body: JSON.stringify({ audio: base64 }),
         });
         const data = await res.json();
+        if (data.unsupportedLanguage) {
+          addMsg(data.error, "bot");
+          return;
+        }
         transcript = data.text || "";
       } catch {
         transcript = "";
@@ -757,7 +750,7 @@
     micBtn.addEventListener("pointerleave", () => { if (isRecording) stopRecording(); });
     micBtn.addEventListener("pointercancel", stopRecording);
 
-    const GREETING = "Hey, I'm Ivaan!";
+    const GREETING = "Hlw";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");

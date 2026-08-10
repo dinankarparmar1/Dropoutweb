@@ -1,6 +1,48 @@
 {
-  "updated": "2026-08-10T09:01:53.858055Z",
+  "updated": "2026-08-10T11:57:42.068939Z",
   "rows": [
+    {
+      "date": "10-Aug-2026 17:20:58",
+      "company": "Life Insurance Corporation of India",
+      "personCategory": "\u2014",
+      "transactionType": "LICI|Life Insurance Corporation of India|Original|Regulation 7 (2)|IT_20463_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 17:11:42",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 16:58:54",
+      "company": "R P P Infra Projects Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 15:33:50",
+      "company": "HOMESFY REALTY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HOMESFY|HOMESFY REALTY LIMITED|Original|Regulation 7 (2)|IT_21349_WebXMLFile_20260810_1533",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 15:24:45",
+      "company": "CEAT Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260810_152444947.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 15:20:06",
+      "company": "HAPPY FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260810_1",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Aug-2026 11:04:04",
       "company": "Info Edge (India) Limited",

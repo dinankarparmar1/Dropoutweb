@@ -1,6 +1,62 @@
 {
-  "updated": "2026-08-10T12:35:59.740332Z",
+  "updated": "2026-08-10T16:11:36.601728Z",
   "rows": [
+    {
+      "date": "10-Aug-2026 21:34:02",
+      "company": "ICRA Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (2)|IT_2575_WebXMLFile_20260810_213402668.xml|IT_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 20:24:48",
+      "company": "JSW Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260810_2024482",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 19:49:32",
+      "company": "Divi's Laboratories Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Revision|Regulation 7 (2)|IT_2132_WebXMLFile_20260810",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 19:07:20",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260810_190",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 19:03:48",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260810_190",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 18:54:16",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260810",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 18:27:00",
+      "company": "Kody Technolab Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KODYTECH|Kody Technolab Limited|Original|Regulation 7 (2)|IT_22192_WebXMLFile_20260810_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Aug-2026 18:18:00",
+      "company": "BERGER PAINTS (I) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BERGEPAINT|BERGER PAINTS (I) LIMITED|Original|Regulation 7 (2)|IT_488_WebXMLFile_20260810_",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Aug-2026 17:28:34",
       "company": "AVENUE SUPERMARTS LIMITED",

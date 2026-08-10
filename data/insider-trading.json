@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-10T11:57:42.068939Z",
+  "updated": "2026-08-10T12:35:59.740332Z",
   "rows": [
+    {
+      "date": "10-Aug-2026 17:28:34",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260810_172",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Aug-2026 17:20:58",
       "company": "Life Insurance Corporation of India",

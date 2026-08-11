@@ -1,6 +1,48 @@
 {
-  "updated": "2026-08-11T06:40:54.261282Z",
+  "updated": "2026-08-11T09:46:05.090352Z",
   "rows": [
+    {
+      "date": "11-Aug-2026 15:04:07",
+      "company": "HAPPY FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260811_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 13:34:27",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260811_133427291",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 12:49:29",
+      "company": "THANGAMAYIL JEWELLERY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 12:26:03",
+      "company": "Wheels India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WHEELS|Wheels India Limited|Original|Regulation 7 (2)|IT_76_WebXMLFile_20260811_122603251.",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 12:25:35",
+      "company": "Wheels India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WHEELS|Wheels India Limited|Original|Regulation 7 (2)|IT_76_WebXMLFile_20260811_122535204.",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 12:22:42",
+      "company": "THANGAMAIYL  JEWELLERY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "THANGAMAYL|THANGAMAIYL  JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
     {
       "date": "11-Aug-2026 10:39:48",
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES LIMITED",

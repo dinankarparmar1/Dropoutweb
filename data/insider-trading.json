@@ -1,6 +1,48 @@
 {
-  "updated": "2026-08-11T12:30:21.811933Z",
+  "updated": "2026-08-11T16:13:42.114334Z",
   "rows": [
+    {
+      "date": "11-Aug-2026 19:19:04",
+      "company": "BHARAT WIRE ROPES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BHARATWIRE|BHARAT WIRE ROPES LIMITED|Original|Regulation 7 (2)|IT_13662_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 19:10:36",
+      "company": "HEG LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260811_191036449.xml|IT_120",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 18:49:19",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260811_184919032",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 18:49:13",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260811_184",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 18:29:43",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260811",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Aug-2026 18:13:01",
+      "company": "Healthcare Global Enterprises Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
     {
       "date": "11-Aug-2026 17:54:23",
       "company": "Fischer Medical Ventures Limited",

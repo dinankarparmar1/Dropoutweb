@@ -1,172 +1,46 @@
 {
-  "updated": "2026-08-11T16:13:42.114334Z",
+  "updated": "2026-08-12T08:44:31.565193Z",
   "rows": [
     {
-      "date": "11-Aug-2026 19:19:04",
-      "company": "BHARAT WIRE ROPES LIMITED",
+      "date": "12-Aug-2026 12:08:58",
+      "company": "Satin Creditcare Network Limited",
       "personCategory": "\u2014",
-      "transactionType": "BHARATWIRE|BHARAT WIRE ROPES LIMITED|Original|Regulation 7 (2)|IT_13662_WebXMLFile_2026081",
+      "transactionType": "SATIN|Satin Creditcare Network Limited|Original|Regulation 7 (2)|IT_13014_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Aug-2026 19:10:36",
-      "company": "HEG LIMITED",
+      "date": "12-Aug-2026 12:04:16",
+      "company": "Divi's Laboratories Limited",
       "personCategory": "\u2014",
-      "transactionType": "HEG|HEG LIMITED|Original|Regulation 7 (2)|IT_1202_WebXMLFile_20260811_191036449.xml|IT_120",
+      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260812",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Aug-2026 18:49:19",
-      "company": "eClerx Services Ltd",
+      "date": "12-Aug-2026 11:48:46",
+      "company": "Aimtron Electronics Limited",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260811_184919032",
+      "transactionType": "AIMTRON|Aimtron Electronics Limited|Original|Regulation 7 (2)|IT_22944_WebXMLFile_20260812",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Aug-2026 18:49:13",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "12-Aug-2026 11:42:16",
+      "company": "MASTER TRUST LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260811_184",
+      "transactionType": "MASTERTR|MASTER TRUST LIMITED|Original|Regulation 7 (2)|IT_22191_WebXMLFile_20260812_11421",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Aug-2026 18:29:43",
-      "company": "DR. LAL PATHLABS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260811",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 18:13:01",
-      "company": "Healthcare Global Enterprises Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:54:23",
-      "company": "Fischer Medical Ventures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:51:19",
-      "company": "Prataap Snacks Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DIAMONDYD|Prataap Snacks Limited|Original|Regulation 7 (2)|IT_15510_WebXMLFile_20260811_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:50:35",
-      "company": "Fischer Medical Ventures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:35:50",
-      "company": "Affle 3i Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260811_173550234.xm",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:31:48",
-      "company": "NURECA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260811_173148017.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 17:09:52",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260811_170",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 16:36:38",
-      "company": "HMA AGRO INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HMAAGRO|HMA AGRO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_20597_WebXMLFile_20260811",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 16:36:18",
-      "company": "HMA AGRO INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HMAAGRO|HMA AGRO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_20597_WebXMLFile_20260811",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 16:25:10",
-      "company": "GNA AXLES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260811_162510450.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 15:56:52",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260811_155652345.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 15:49:04",
-      "company": "ADF FOODS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ADFFOODS|ADF FOODS LIMITED|Original|Regulation 7 (2)|IT_3510_WebXMLFile_20260811_154904730",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 15:04:07",
-      "company": "HAPPY FORGINGS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260811_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 13:34:27",
-      "company": "JSW STEEL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260811_133427291",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 12:49:29",
-      "company": "THANGAMAYIL JEWELLERY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 12:26:03",
-      "company": "Wheels India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "WHEELS|Wheels India Limited|Original|Regulation 7 (2)|IT_76_WebXMLFile_20260811_122603251.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 12:25:35",
-      "company": "Wheels India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "WHEELS|Wheels India Limited|Original|Regulation 7 (2)|IT_76_WebXMLFile_20260811_122535204.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 12:22:42",
-      "company": "THANGAMAIYL  JEWELLERY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "THANGAMAYL|THANGAMAIYL  JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Aug-2026 10:39:48",
+      "date": "12-Aug-2026 10:11:30",
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES LIMITED|Original|Regulation 7 (2)|IT_20397",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 10:04:15",
+      "company": "Jain Resource Recycling Limited",
+      "personCategory": "\u2014",
+      "transactionType": "JAINREC|Jain Resource Recycling Limited|Original|Regulation 7 (2)|IT_25795_WebXMLFile_2026",
       "quantity": "\u2014"
     }
   ],

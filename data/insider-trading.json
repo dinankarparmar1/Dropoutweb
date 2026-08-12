@@ -1,6 +1,111 @@
 {
-  "updated": "2026-08-12T08:48:43.510904Z",
+  "updated": "2026-08-12T11:35:47.929346Z",
   "rows": [
+    {
+      "date": "12-Aug-2026 16:54:36",
+      "company": "NILA SPACES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260812_1654",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 16:35:54",
+      "company": "ASAHI SONGWON COLORS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ASAHISONG|ASAHI SONGWON COLORS LIMITED|Original|Regulation 7 (2)|IT_5165_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 16:29:35",
+      "company": "JUBILANT INGREVIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 16:24:35",
+      "company": "JUBILANT INGREVIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 16:08:49",
+      "company": "Kirloskar Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KIRLOSIND|Kirloskar Industries Limited|Original|Regulation 7 (2)|IT_3308_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 16:06:58",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260812_160",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:49:28",
+      "company": "ARVIND PORT AND INFRA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:42:43",
+      "company": "Dalmia Bharat Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DALBHARAT|Dalmia Bharat Limited|Original|Regulation 7 (2)|IT_17144_WebXMLFile_20260812_154",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:32:43",
+      "company": "GNA AXLES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260812_153243430.xml",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:32:37",
+      "company": "GNA AXLES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260812_153237526.xml",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:31:32",
+      "company": "SENORES PHARMACEUTICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:31:06",
+      "company": "SENORES PHARMACEUTICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:19:36",
+      "company": "SENORES PHARMACEUTICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 15:07:36",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260812_150",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 14:55:22",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260812_145",
+      "quantity": "\u2014"
+    },
     {
       "date": "12-Aug-2026 12:08:58",
       "company": "Satin Creditcare Network Limited",

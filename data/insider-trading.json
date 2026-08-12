@@ -1,6 +1,76 @@
 {
-  "updated": "2026-08-12T11:35:47.929346Z",
+  "updated": "2026-08-12T12:36:26.195261Z",
   "rows": [
+    {
+      "date": "12-Aug-2026 18:05:35",
+      "company": "NRB BEARING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260812_18053",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:52:00",
+      "company": "Tata Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:49:32",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260812_174931",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:29:19",
+      "company": "CHAMAN METALLICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CMNL|CHAMAN METALLICS LIMITED|Original|Regulation 7 (2)|IT_21177_WebXMLFile_20260812_17291",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:28:30",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260812_172",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:27:06",
+      "company": "CHAMAN METALLICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CMNL|CHAMAN METALLICS LIMITED|Original|Regulation 7 (2)|IT_21177_WebXMLFile_20260812_17270",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:24:00",
+      "company": "Kirloskar Oil Engines Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KIRLOSENG|Kirloskar Oil Engines Limited|Original|Regulation 7 (2)|IT_3845_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:23:40",
+      "company": "CEAT Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260812_172340320.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:19:28",
+      "company": "Infosys Limited",
+      "personCategory": "\u2014",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260812_171928063.xml|IT",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 17:14:08",
+      "company": "APCOTEX INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "APCOTEXIND|APCOTEX INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_519_WebXMLFile_20260812",
+      "quantity": "\u2014"
+    },
     {
       "date": "12-Aug-2026 16:54:36",
       "company": "NILA SPACES LIMITED",
@@ -104,48 +174,6 @@
       "company": "TRUALT BIOENERGY LIMITED",
       "personCategory": "\u2014",
       "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260812_145",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 12:08:58",
-      "company": "Satin Creditcare Network Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SATIN|Satin Creditcare Network Limited|Original|Regulation 7 (2)|IT_13014_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 12:04:16",
-      "company": "Divi's Laboratories Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260812",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 11:48:46",
-      "company": "Aimtron Electronics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AIMTRON|Aimtron Electronics Limited|Original|Regulation 7 (2)|IT_22944_WebXMLFile_20260812",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 11:42:16",
-      "company": "MASTER TRUST LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MASTERTR|MASTER TRUST LIMITED|Original|Regulation 7 (2)|IT_22191_WebXMLFile_20260812_11421",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 10:11:30",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES LIMITED|Original|Regulation 7 (2)|IT_20397",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 10:04:15",
-      "company": "Jain Resource Recycling Limited",
-      "personCategory": "\u2014",
-      "transactionType": "JAINREC|Jain Resource Recycling Limited|Original|Regulation 7 (2)|IT_25795_WebXMLFile_2026",
       "quantity": "\u2014"
     }
   ],

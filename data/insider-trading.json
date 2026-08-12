@@ -1,6 +1,55 @@
 {
-  "updated": "2026-08-12T12:36:26.195261Z",
+  "updated": "2026-08-12T16:12:44.104597Z",
   "rows": [
+    {
+      "date": "12-Aug-2026 21:13:12",
+      "company": "Healthcare Global Enterprises Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:54:05",
+      "company": "Fischer Medical Ventures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:44:58",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:44:22",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:42:27",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260812_184227555",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:11:06",
+      "company": "Sterlite Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "12-Aug-2026 18:08:03",
+      "company": "NRB BEARING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260812_18080",
+      "quantity": "\u2014"
+    },
     {
       "date": "12-Aug-2026 18:05:35",
       "company": "NRB BEARING LIMITED",
@@ -125,55 +174,6 @@
       "company": "Dalmia Bharat Limited",
       "personCategory": "\u2014",
       "transactionType": "DALBHARAT|Dalmia Bharat Limited|Original|Regulation 7 (2)|IT_17144_WebXMLFile_20260812_154",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:32:43",
-      "company": "GNA AXLES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260812_153243430.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:32:37",
-      "company": "GNA AXLES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260812_153237526.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:31:32",
-      "company": "SENORES PHARMACEUTICALS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:31:06",
-      "company": "SENORES PHARMACEUTICALS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:19:36",
-      "company": "SENORES PHARMACEUTICALS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SENORES|SENORES PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_24156_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:07:36",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260812_150",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 14:55:22",
-      "company": "TRUALT BIOENERGY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260812_145",
       "quantity": "\u2014"
     }
   ],

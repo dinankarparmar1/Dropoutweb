@@ -1,179 +1,67 @@
 {
-  "updated": "2026-08-12T16:12:44.104597Z",
+  "updated": "2026-08-13T08:51:27.217219Z",
   "rows": [
     {
-      "date": "12-Aug-2026 21:13:12",
-      "company": "Healthcare Global Enterprises Limited",
+      "date": "13-Aug-2026 13:49:50",
+      "company": "Kanpur Plastipack Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
+      "transactionType": "KANPRPLA|Kanpur Plastipack Limited|Original|Regulation 7 (2)|IT_19045_WebXMLFile_20260813_",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:54:05",
-      "company": "Fischer Medical Ventures Limited",
+      "date": "13-Aug-2026 13:49:29",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260813_13492911",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:44:58",
-      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "date": "13-Aug-2026 12:34:21",
+      "company": "BERGER PAINTS (I) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "transactionType": "BERGEPAINT|BERGER PAINTS (I) LIMITED|Original|Regulation 7 (2)|IT_488_WebXMLFile_20260813_",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:44:22",
-      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "date": "13-Aug-2026 12:25:22",
+      "company": "Jindal Saw Limited",
       "personCategory": "\u2014",
-      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "transactionType": "JINDALSAW|Jindal Saw Limited|Original|Regulation 7 (2)|IT_743_WebXMLFile_20260813_12252277",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:42:27",
-      "company": "eClerx Services Ltd",
+      "date": "13-Aug-2026 11:56:24",
+      "company": "SUMEET INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260812_184227555",
+      "transactionType": "SUMEETINDS|SUMEET INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_3809_WebXMLFile_20260813",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:11:06",
-      "company": "Sterlite Technologies Limited",
+      "date": "13-Aug-2026 11:53:44",
+      "company": "NCC LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026081",
+      "transactionType": "NCC|NCC LIMITED|Original|Regulation 7 (2)|IT_917_WebXMLFile_20260813_115344518.xml|IT_917_",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 18:08:03",
-      "company": "NRB BEARING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260812_18080",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 18:05:35",
-      "company": "NRB BEARING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260812_18053",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:52:00",
-      "company": "Tata Consumer Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:49:32",
+      "date": "13-Aug-2026 11:04:43",
       "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260812_174931",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260813_110442",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 17:29:19",
-      "company": "CHAMAN METALLICS LIMITED",
+      "date": "13-Aug-2026 11:04:08",
+      "company": "Faze Three Limited",
       "personCategory": "\u2014",
-      "transactionType": "CMNL|CHAMAN METALLICS LIMITED|Original|Regulation 7 (2)|IT_21177_WebXMLFile_20260812_17291",
+      "transactionType": "FAZE3Q|Faze Three Limited|Original|Regulation 7 (2)|IT_21202_WebXMLFile_20260813_110408069",
       "quantity": "\u2014"
     },
     {
-      "date": "12-Aug-2026 17:28:30",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "13-Aug-2026 08:43:12",
+      "company": "Divi's Laboratories Limited",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260812_172",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:27:06",
-      "company": "CHAMAN METALLICS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "CMNL|CHAMAN METALLICS LIMITED|Original|Regulation 7 (2)|IT_21177_WebXMLFile_20260812_17270",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:24:00",
-      "company": "Kirloskar Oil Engines Limited",
-      "personCategory": "\u2014",
-      "transactionType": "KIRLOSENG|Kirloskar Oil Engines Limited|Original|Regulation 7 (2)|IT_3845_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:23:40",
-      "company": "CEAT Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260812_172340320.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:19:28",
-      "company": "Infosys Limited",
-      "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260812_171928063.xml|IT",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 17:14:08",
-      "company": "APCOTEX INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "APCOTEXIND|APCOTEX INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_519_WebXMLFile_20260812",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:54:36",
-      "company": "NILA SPACES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260812_1654",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:35:54",
-      "company": "ASAHI SONGWON COLORS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ASAHISONG|ASAHI SONGWON COLORS LIMITED|Original|Regulation 7 (2)|IT_5165_WebXMLFile_202608",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:29:35",
-      "company": "JUBILANT INGREVIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:24:35",
-      "company": "JUBILANT INGREVIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:08:49",
-      "company": "Kirloskar Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "KIRLOSIND|Kirloskar Industries Limited|Original|Regulation 7 (2)|IT_3308_WebXMLFile_202608",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 16:06:58",
-      "company": "SANGAM (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260812_160",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:49:28",
-      "company": "ARVIND PORT AND INFRA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "12-Aug-2026 15:42:43",
-      "company": "Dalmia Bharat Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DALBHARAT|Dalmia Bharat Limited|Original|Regulation 7 (2)|IT_17144_WebXMLFile_20260812_154",
+      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260813",
       "quantity": "\u2014"
     }
   ],

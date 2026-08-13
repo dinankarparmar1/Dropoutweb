@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-13T11:35:09.549571Z",
+  "updated": "2026-08-13T12:37:01.954153Z",
   "rows": [
+    {
+      "date": "13-Aug-2026 17:34:30",
+      "company": "Thyrocare Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "THYROCARE|Thyrocare Technologies Limited|Original|Regulation 7 (2)|IT_13770_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
     {
       "date": "13-Aug-2026 16:56:41",
       "company": "NIKITA GREENTECH RECYCLING LIMITED",
@@ -104,13 +111,6 @@
       "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
       "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
       "quantity": "\u2014"
     },
     {

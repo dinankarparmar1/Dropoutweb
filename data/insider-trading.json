@@ -1,67 +1,179 @@
 {
-  "updated": "2026-08-13T08:53:16.910092Z",
+  "updated": "2026-08-13T11:35:09.549571Z",
   "rows": [
     {
-      "date": "13-Aug-2026 13:49:50",
-      "company": "Kanpur Plastipack Limited",
+      "date": "13-Aug-2026 16:56:41",
+      "company": "NIKITA GREENTECH RECYCLING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KANPRPLA|Kanpur Plastipack Limited|Original|Regulation 7 (2)|IT_19045_WebXMLFile_20260813_",
+      "transactionType": "NIKITA|NIKITA GREENTECH RECYCLING LIMITED|Original|Regulation 7 (2)|IT_24067_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 13:49:29",
-      "company": "360 ONE WAM LIMITED",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260813_13492911",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 12:34:21",
-      "company": "BERGER PAINTS (I) LIMITED",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BERGEPAINT|BERGER PAINTS (I) LIMITED|Original|Regulation 7 (2)|IT_488_WebXMLFile_20260813_",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 12:25:22",
-      "company": "Jindal Saw Limited",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JINDALSAW|Jindal Saw Limited|Original|Regulation 7 (2)|IT_743_WebXMLFile_20260813_12252277",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 11:56:24",
-      "company": "SUMEET INDUSTRIES LIMITED",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUMEETINDS|SUMEET INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_3809_WebXMLFile_20260813",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 11:53:44",
-      "company": "NCC LIMITED",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCC|NCC LIMITED|Original|Regulation 7 (2)|IT_917_WebXMLFile_20260813_115344518.xml|IT_917_",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 11:04:43",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260813_110442",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 11:04:08",
-      "company": "Faze Three Limited",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "FAZE3Q|Faze Three Limited|Original|Regulation 7 (2)|IT_21202_WebXMLFile_20260813_110408069",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 08:43:12",
-      "company": "Divi's Laboratories Limited",
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260813",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:44:38",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 16:39:54",
+      "company": "Sakar Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
       "quantity": "\u2014"
     }
   ],

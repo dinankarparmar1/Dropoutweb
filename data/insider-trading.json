@@ -1,179 +1,179 @@
 {
-  "updated": "2026-08-13T12:37:01.954153Z",
+  "updated": "2026-08-13T16:12:41.125692Z",
   "rows": [
+    {
+      "date": "13-Aug-2026 19:27:26",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 19:02:56",
+      "company": "Fischer Medical Ventures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:57:24",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260813_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:53:52",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260813_185352290.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:50:45",
+      "company": "Metropolis Healthcare Limited",
+      "personCategory": "\u2014",
+      "transactionType": "METROPOLIS|Metropolis Healthcare Limited|Original|Regulation 7 (2)|IT_17414_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:47:09",
+      "company": "HI",
+      "personCategory": "\u2014",
+      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:37:09",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260813_183709606.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:29:46",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:27:58",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260813",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "13-Aug-2026 18:08:28",
+      "company": "Sterlite Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
     {
       "date": "13-Aug-2026 17:34:30",
       "company": "Thyrocare Technologies Limited",
       "personCategory": "\u2014",
       "transactionType": "THYROCARE|Thyrocare Technologies Limited|Original|Regulation 7 (2)|IT_13770_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:56:41",
-      "company": "NIKITA GREENTECH RECYCLING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NIKITA|NIKITA GREENTECH RECYCLING LIMITED|Original|Regulation 7 (2)|IT_24067_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:44:38",
-      "company": "SAKAR HEALTHCARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1644",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 16:39:54",
-      "company": "Sakar Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SAKAR|Sakar Healthcare Limited|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20260813_1639",
       "quantity": "\u2014"
     }
   ],

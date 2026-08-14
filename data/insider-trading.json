@@ -1,6 +1,34 @@
 {
-  "updated": "2026-08-14T11:24:47.684763Z",
+  "updated": "2026-08-14T12:30:08.079414Z",
   "rows": [
+    {
+      "date": "14-Aug-2026 17:56:57",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260814_175",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 17:52:35",
+      "company": "ARVIND FASHIONS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARVINDFASN|ARVIND FASHIONS LIMITED|Original|Regulation 7 (2)|IT_17278_WebXMLFile_20260814_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 17:29:15",
+      "company": "Tata Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 17:20:01",
+      "company": "MONOLITHISCH INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MONOLITH|MONOLITHISCH INDIA LIMITED|Original|Regulation 7 (2)|IT_25174_WebXMLFile_20260814",
+      "quantity": "\u2014"
+    },
     {
       "date": "14-Aug-2026 16:34:59",
       "company": "Infosys Limited",
@@ -101,34 +129,6 @@
     },
     {
       "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 15:59:11",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 15:59:11",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 15:59:11",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 15:59:11",
       "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",

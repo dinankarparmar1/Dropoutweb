@@ -1,46 +1,179 @@
 {
-  "updated": "2026-08-14T08:42:46.083964Z",
+  "updated": "2026-08-14T11:24:47.684763Z",
   "rows": [
     {
-      "date": "14-Aug-2026 12:02:52",
-      "company": "Kody Technolab Limited",
+      "date": "14-Aug-2026 16:34:59",
+      "company": "Infosys Limited",
       "personCategory": "\u2014",
-      "transactionType": "KODYTECH|Kody Technolab Limited|Original|Regulation 7 (2)|IT_22192_WebXMLFile_20260814_120",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260814_163459200.xml|IT",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 11:56:45",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260814_",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 11:48:34",
-      "company": "Healthcare Global Enterprises Limited",
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 11:06:32",
-      "company": "Affle 3i Limited",
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260814_110632546.xm",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 10:34:10",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260814_103410",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 00:30:53",
-      "company": "DEE Development Engineers Limited",
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DEEDEV|DEE Development Engineers Limited|Original|Regulation 7 (2)|IT_22583_WebXMLFile_202",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 16:00:51",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Aug-2026 15:59:11",
+      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     }
   ],

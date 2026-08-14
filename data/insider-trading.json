@@ -1,179 +1,46 @@
 {
-  "updated": "2026-08-13T16:12:41.125692Z",
+  "updated": "2026-08-14T08:40:47.189558Z",
   "rows": [
     {
-      "date": "13-Aug-2026 19:27:26",
-      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "date": "14-Aug-2026 12:02:52",
+      "company": "Kody Technolab Limited",
       "personCategory": "\u2014",
-      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "transactionType": "KODYTECH|Kody Technolab Limited|Original|Regulation 7 (2)|IT_22192_WebXMLFile_20260814_120",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 19:02:56",
-      "company": "Fischer Medical Ventures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:57:24",
+      "date": "14-Aug-2026 11:56:45",
       "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260813_",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260814_",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 18:53:52",
-      "company": "T T LIMITED",
+      "date": "14-Aug-2026 11:48:34",
+      "company": "Healthcare Global Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260813_185352290.xml|IT_253",
+      "transactionType": "HCG|Healthcare Global Enterprises Limited|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 18:50:45",
-      "company": "Metropolis Healthcare Limited",
+      "date": "14-Aug-2026 11:06:32",
+      "company": "Affle 3i Limited",
       "personCategory": "\u2014",
-      "transactionType": "METROPOLIS|Metropolis Healthcare Limited|Original|Regulation 7 (2)|IT_17414_WebXMLFile_202",
+      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260814_110632546.xm",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
+      "date": "14-Aug-2026 10:34:10",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260814_103410",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
+      "date": "14-Aug-2026 00:30:53",
+      "company": "DEE Development Engineers Limited",
       "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:47:09",
-      "company": "HI",
-      "personCategory": "\u2014",
-      "transactionType": "HITECH|HI-TECH PIPES LIMITED|Original|Regulation 7 (2)|IT_13489_WebXMLFile_20260813_184709",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:37:09",
-      "company": "T T LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260813_183709606.xml|IT_253",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:29:46",
-      "company": "BlueStone Jewellery and Lifestyle Limited",
-      "personCategory": "\u2014",
-      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:27:58",
-      "company": "DR. LAL PATHLABS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260813",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 18:08:28",
-      "company": "Sterlite Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Aug-2026 17:34:30",
-      "company": "Thyrocare Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "THYROCARE|Thyrocare Technologies Limited|Original|Regulation 7 (2)|IT_13770_WebXMLFile_202",
+      "transactionType": "DEEDEV|DEE Development Engineers Limited|Original|Regulation 7 (2)|IT_22583_WebXMLFile_202",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-17T08:07:35.804754Z",
+  "updated": "2026-08-17T10:07:21.736257Z",
   "rows": [
+    {
+      "date": "17-Aug-2026 15:36:32",
+      "company": "JUBILANT INGREVIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Aug-2026 15:19:38",
+      "company": "PONNI SUGARS (ERODE) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PONNIERODE|PONNI SUGARS (ERODE) LIMITED|Original|Regulation 7 (2)|IT_2008_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Aug-2026 15:09:20",
+      "company": "Fischer Medical Ventures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
     {
       "date": "17-Aug-2026 13:32:49",
       "company": "NIIT Learning Systems Limited",

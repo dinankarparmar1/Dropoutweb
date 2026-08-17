@@ -1,179 +1,32 @@
 {
-  "updated": "2026-08-14T15:38:45.501145Z",
+  "updated": "2026-08-17T08:07:35.804754Z",
   "rows": [
     {
-      "date": "14-Aug-2026 20:24:58",
-      "company": "Sonata Software Limited",
+      "date": "17-Aug-2026 13:32:49",
+      "company": "NIIT Learning Systems Limited",
       "personCategory": "\u2014",
-      "transactionType": "SONATSOFTW|Sonata Software Limited|Original|Regulation 7 (2)|IT_1704_WebXMLFile_20260814_2",
+      "transactionType": "NIITMTS|NIIT Learning Systems Limited|Original|Regulation 7 (2)|IT_22067_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 20:21:53",
-      "company": "Sonata Software Limited",
+      "date": "17-Aug-2026 12:41:20",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "SONATSOFTW|Sonata Software Limited|Original|Regulation 7 (2)|IT_1704_WebXMLFile_20260814_2",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260817_12",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 19:50:20",
-      "company": "Info Edge (India) Limited",
+      "date": "17-Aug-2026 12:27:42",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260814_195",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260817_12",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Aug-2026 19:14:13",
-      "company": "eClerx Services Ltd",
+      "date": "17-Aug-2026 12:19:41",
+      "company": "ESTER INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260814_191413198",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 19:09:36",
-      "company": "CHAMAN METALLICS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "CMNL|CHAMAN METALLICS LIMITED|Original|Regulation 7 (2)|IT_21177_WebXMLFile_20260814_19093",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 19:09:22",
-      "company": "MINDSPACE BUSINESS PARKS REIT",
-      "personCategory": "\u2014",
-      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 19:09:22",
-      "company": "MINDSPACE BUSINESS PARKS REIT",
-      "personCategory": "\u2014",
-      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 19:04:35",
-      "company": "Zee Entertainment Enterprises Limited",
-      "personCategory": "\u2014",
-      "transactionType": "ZEEL|Zee Entertainment Enterprises Limited|Original|Regulation 7 (2)|IT_1105_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 18:57:22",
-      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 18:07:26",
-      "company": "JSW STEEL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260814_180726494",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 17:56:57",
-      "company": "AVENUE SUPERMARTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260814_175",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 17:52:35",
-      "company": "ARVIND FASHIONS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVINDFASN|ARVIND FASHIONS LIMITED|Original|Regulation 7 (2)|IT_17278_WebXMLFile_20260814_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 17:29:15",
-      "company": "Tata Consumer Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 17:20:01",
-      "company": "MONOLITHISCH INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MONOLITH|MONOLITHISCH INDIA LIMITED|Original|Regulation 7 (2)|IT_25174_WebXMLFile_20260814",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:34:59",
-      "company": "Infosys Limited",
-      "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260814_163459200.xml|IT",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "14-Aug-2026 16:00:51",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "transactionType": "ESTER|ESTER INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_4930_WebXMLFile_20260817_12194",
       "quantity": "\u2014"
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T11:02:11.589911Z",
+  "updated": "2026-08-17T14:05:21.872290Z",
   "nifty50": [
     {
       "symbol": "RELIANCE",
@@ -39,7 +39,7 @@
     {
       "symbol": "BAJFINANCE",
       "price": 1089.3,
-      "pChange": -0.14
+      "pChange": 0.21
     },
     {
       "symbol": "HINDUNILVR",
@@ -84,7 +84,7 @@
     {
       "symbol": "NTPC",
       "price": 337.0,
-      "pChange": -2.11
+      "pChange": -0.88
     },
     {
       "symbol": "ONGC",
@@ -109,7 +109,7 @@
     {
       "symbol": "ADANIPORTS",
       "price": 1691.0,
-      "pChange": 1.99
+      "pChange": -0.53
     },
     {
       "symbol": "BEL",
@@ -149,7 +149,7 @@
     {
       "symbol": "JSWSTEEL",
       "price": 1277.8,
-      "pChange": 0.22
+      "pChange": 0.61
     },
     {
       "symbol": "GRASIM",
@@ -204,7 +204,7 @@
     {
       "symbol": "HEROMOTOCO",
       "price": 5745.0,
-      "pChange": -1.79
+      "pChange": -0.78
     },
     {
       "symbol": "HINDALCO",
@@ -224,7 +224,7 @@
     {
       "symbol": "SHRIRAMFIN",
       "price": 1122.0,
-      "pChange": -0.91
+      "pChange": 0.0
     },
     {
       "symbol": "TATACONSUM",
@@ -281,7 +281,7 @@
     {
       "symbol": "INDUSINDBK",
       "price": 1010.6,
-      "pChange": -1.38
+      "pChange": -1.0
     },
     {
       "symbol": "AUBANK",
@@ -346,7 +346,7 @@
         {
           "symbol": "INDUSINDBK",
           "price": 1010.6,
-          "pChange": -1.38
+          "pChange": -1.0
         }
       ]
     },
@@ -361,7 +361,7 @@
         {
           "symbol": "INFY",
           "price": 1139.9,
-          "pChange": -2.99
+          "pChange": -2.51
         },
         {
           "symbol": "HCLTECH",
@@ -406,7 +406,7 @@
         {
           "symbol": "HEROMOTOCO",
           "price": 5745.0,
-          "pChange": -1.79
+          "pChange": -0.78
         }
       ]
     },
@@ -441,7 +441,7 @@
         {
           "symbol": "LUPIN",
           "price": 2259.0,
-          "pChange": 0.39
+          "pChange": 1.07
         }
       ]
     },
@@ -486,12 +486,12 @@
         {
           "symbol": "TATASTEEL",
           "price": 186.0,
-          "pChange": 0.62
+          "pChange": 1.36
         },
         {
           "symbol": "JSWSTEEL",
           "price": 1277.8,
-          "pChange": 0.22
+          "pChange": 0.61
         },
         {
           "symbol": "HINDALCO",
@@ -616,7 +616,7 @@
         {
           "symbol": "BAJFINANCE",
           "price": 1089.3,
-          "pChange": -0.14
+          "pChange": 0.21
         },
         {
           "symbol": "BAJAJFINSV",
@@ -661,7 +661,7 @@
         {
           "symbol": "FORTIS",
           "price": 908.75,
-          "pChange": 0.29
+          "pChange": -2.18
         },
         {
           "symbol": "LALPATHLAB",

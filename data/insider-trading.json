@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-18T10:05:02.794633Z",
+  "updated": "2026-08-18T11:00:57.755957Z",
   "rows": [
+    {
+      "date": "18-Aug-2026 16:20:00",
+      "company": "GO FASHION (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GOCOLORS|GO FASHION (INDIA) LIMITED|Original|Regulation 7 (2)|IT_19868_WebXMLFile_20260818",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 16:09:20",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260818_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 15:37:30",
+      "company": "Firstsource Solutions Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FSL|Firstsource Solutions Limited|Original|Regulation 7 (2)|IT_2535_WebXMLFile_20260818_15",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Aug-2026 13:44:14",
       "company": "eClerx Services Ltd",

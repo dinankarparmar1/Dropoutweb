@@ -1,6 +1,41 @@
 {
-  "updated": "2026-08-18T07:26:44.500034Z",
+  "updated": "2026-08-18T09:06:49.585705Z",
   "rows": [
+    {
+      "date": "18-Aug-2026 13:44:14",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260818_134414564",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 13:42:31",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260818_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 13:37:01",
+      "company": "ESCONET TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ESCONET|ESCONET TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_23018_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 13:11:16",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 13:08:35",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Aug-2026 12:32:20",
       "company": "Agarwal Float Glass India Limited",

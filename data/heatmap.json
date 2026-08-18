@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T11:00:57.044419Z",
+  "updated": "2026-08-18T14:19:36.082720Z",
   "nifty50": [
     {
       "symbol": "RELIANCE",
@@ -600,8 +600,8 @@
         },
         {
           "symbol": "PVRINOX",
-          "price": 1205.0,
-          "pChange": 1.09
+          "price": 1198.1,
+          "pChange": 0.51
         },
         {
           "symbol": "NETWORK18",

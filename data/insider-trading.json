@@ -1,109 +1,179 @@
 {
-  "updated": "2026-08-18T11:00:57.755957Z",
+  "updated": "2026-08-18T14:19:36.816209Z",
   "rows": [
+    {
+      "date": "18-Aug-2026 18:59:34",
+      "company": "MILTON INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260818_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:49:34",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260818_184934120.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:32:33",
+      "company": "MINDSPACE BUSINESS PARKS REIT",
+      "personCategory": "\u2014",
+      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:32:33",
+      "company": "MINDSPACE BUSINESS PARKS REIT",
+      "personCategory": "\u2014",
+      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:24:17",
+      "company": "Landmark Cars Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LANDMARK|Landmark Cars Limited|Original|Regulation 7 (2)|IT_20392_WebXMLFile_20260818_1824",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:09:00",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260818",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 18:05:18",
+      "company": "Baazar Style Retail Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STYLEBAAZA|Baazar Style Retail Limited|Original|Regulation 7 (2)|IT_23456_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:49:35",
+      "company": "ALPHAGEO (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALPHAGEO|ALPHAGEO (INDIA) LIMITED|Original|Regulation 7 (2)|IT_2590_WebXMLFile_20260818_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:41:42",
+      "company": "W S Industries (I) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260818_174142",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:39:14",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:38:50",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:38:31",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:36:08",
+      "company": "Menon Bearings Limited",
+      "personCategory": "\u2014",
+      "transactionType": "MENONBE|Menon Bearings Limited|Original|Regulation 7 (2)|IT_11603_WebXMLFile_20260818_1736",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:35:06",
+      "company": "Menon Bearings Limited",
+      "personCategory": "\u2014",
+      "transactionType": "MENONBE|Menon Bearings Limited|Original|Regulation 7 (2)|IT_11603_WebXMLFile_20260818_1735",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:34:29",
+      "company": "Menon Bearings Limited",
+      "personCategory": "\u2014",
+      "transactionType": "MENONBE|Menon Bearings Limited|Original|Regulation 7 (2)|IT_11603_WebXMLFile_20260818_1734",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:28:22",
+      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Revision|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:27:00",
+      "company": "W.S. Industries (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WSI|W.S. Industries (India) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260818_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:21:26",
+      "company": "HAPPY FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Revision|Regulation 7 (2)|IT_22370_WebXMLFile_20260818_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:19:53",
+      "company": "ARVIND PORT AND INFRA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:19:52",
+      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 17:14:44",
+      "company": "Aarti Pharmalabs Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "AARTIPHARM|Aarti Pharmalabs Ltd|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260818_171",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 16:47:40",
+      "company": "HAPPY FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260818_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 16:36:47",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260818_163",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 16:36:34",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260818_163",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Aug-2026 16:20:00",
       "company": "GO FASHION (INDIA) LIMITED",
       "personCategory": "\u2014",
       "transactionType": "GOCOLORS|GO FASHION (INDIA) LIMITED|Original|Regulation 7 (2)|IT_19868_WebXMLFile_20260818",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 16:09:20",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260818_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 15:37:30",
-      "company": "Firstsource Solutions Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FSL|Firstsource Solutions Limited|Original|Regulation 7 (2)|IT_2535_WebXMLFile_20260818_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 13:44:14",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260818_134414564",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 13:42:31",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260818_13",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 13:37:01",
-      "company": "ESCONET TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ESCONET|ESCONET TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_23018_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 13:11:16",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 13:08:35",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 12:32:20",
-      "company": "Agarwal Float Glass India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AGARWALFT|Agarwal Float Glass India Limited|Original|Regulation 7 (2)|IT_21454_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 12:12:57",
-      "company": "Fischer Medical Ventures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 11:54:14",
-      "company": "JUBILANT FOODWORKS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260818_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 10:54:22",
-      "company": "Thyrocare Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "THYROCARE|Thyrocare Technologies Limited|Original|Regulation 7 (2)|IT_13770_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 10:51:14",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260818_105",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 10:27:46",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260818_102746312.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Aug-2026 10:19:14",
-      "company": "TITAN COMPANY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20260818_101914171",
       "quantity": "\u2014"
     }
   ],

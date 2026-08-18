@@ -1,6 +1,41 @@
 {
-  "updated": "2026-08-18T05:17:13.409483Z",
+  "updated": "2026-08-18T07:26:44.500034Z",
   "rows": [
+    {
+      "date": "18-Aug-2026 12:32:20",
+      "company": "Agarwal Float Glass India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AGARWALFT|Agarwal Float Glass India Limited|Original|Regulation 7 (2)|IT_21454_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 12:12:57",
+      "company": "Fischer Medical Ventures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FISCHER|Fischer Medical Ventures Limited|Original|Regulation 7 (2)|IT_26115_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 11:54:14",
+      "company": "JUBILANT FOODWORKS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260818_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 10:54:22",
+      "company": "Thyrocare Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "THYROCARE|Thyrocare Technologies Limited|Original|Regulation 7 (2)|IT_13770_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Aug-2026 10:51:14",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260818_105",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Aug-2026 10:27:46",
       "company": "OBCL LIMITED",

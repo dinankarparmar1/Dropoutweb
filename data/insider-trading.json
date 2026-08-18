@@ -1,179 +1,18 @@
 {
-  "updated": "2026-08-17T14:05:22.596242Z",
+  "updated": "2026-08-18T05:06:42.101469Z",
   "rows": [
     {
-      "date": "17-Aug-2026 19:34:08",
-      "company": "Alembic Limited",
+      "date": "18-Aug-2026 10:27:46",
+      "company": "OBCL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260817_193408015",
+      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260818_102746312.xml|IT_",
       "quantity": "\u2014"
     },
     {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
+      "date": "18-Aug-2026 10:19:14",
+      "company": "TITAN COMPANY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:56:23",
-      "company": "SWARAJ SUITING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SWARAJ|SWARAJ SUITING LIMITED|Original|Regulation 7 (2)|IT_20487_WebXMLFile_20260817_18562",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 18:34:38",
-      "company": "ADF FOODS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ADFFOODS|ADF FOODS LIMITED|Original|Regulation 7 (2)|IT_3510_WebXMLFile_20260817_183438170",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 17:40:39",
-      "company": "THE ANUP ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ANUP|THE ANUP ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_17254_WebXMLFile_20260817_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 17:18:56",
-      "company": "JEYYAM GLOBAL FOODS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JEYYAM|JEYYAM GLOBAL FOODS LIMITED|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260817_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 17:13:20",
-      "company": "R P P Infra Projects Limited",
-      "personCategory": "\u2014",
-      "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 17:09:38",
-      "company": "JEYYAM GLOBAL FOODS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JEYYAM|JEYYAM GLOBAL FOODS LIMITED|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260817_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 17:07:56",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260817_170",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 16:48:19",
-      "company": "BALU FORGE INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BALUFORGE|BALU FORGE INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_21961_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 16:35:26",
-      "company": "SUMEET INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUMEETINDS|SUMEET INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_3809_WebXMLFile_20260817",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 16:25:06",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Aug-2026 16:25:06",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20260",
+      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20260818_101914171",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-19T09:09:46.742479Z",
+  "updated": "2026-08-19T10:05:14.812140Z",
   "rows": [
+    {
+      "date": "19-Aug-2026 15:00:40",
+      "company": "MILTON INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260819_15",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 14:55:48",
+      "company": "CORONA Remedies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CORONA|CORONA Remedies Limited|Original|Regulation 7 (2)|IT_25973_WebXMLFile_20260819_1455",
+      "quantity": "\u2014"
+    },
     {
       "date": "19-Aug-2026 14:07:44",
       "company": "BHARTIYA INTERNATIONAL LIMITED",

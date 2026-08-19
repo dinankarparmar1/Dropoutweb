@@ -1,6 +1,160 @@
 {
-  "updated": "2026-08-19T11:00:29.466134Z",
+  "updated": "2026-08-19T14:21:00.095235Z",
   "rows": [
+    {
+      "date": "19-Aug-2026 19:40:50",
+      "company": "Alembic Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260819_194050316",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 19:27:44",
+      "company": "Excelsoft Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "EXCELSOFT|Excelsoft Technologies Limited|Original|Regulation 7 (2)|IT_25530_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 19:04:03",
+      "company": "Landmark Cars Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LANDMARK|Landmark Cars Limited|Original|Regulation 7 (2)|IT_20392_WebXMLFile_20260819_1904",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 18:04:36",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260819_180436422",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 18:04:31",
+      "company": "Aarti Pharmalabs Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260819",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 18:03:09",
+      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:58:23",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:57:53",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:55:09",
+      "company": "Godawari Power And Ispat Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GPIL|Godawari Power And Ispat Limited|Original|Regulation 7 (2)|IT_2397_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:49:29",
+      "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "APOLLOHOSP|APOLLO HOSPITALS ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_417_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:47:46",
+      "company": "SIYARAM SILK MILLS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SIYSIL|SIYARAM SILK MILLS LIMITED|Original|Regulation 7 (2)|IT_903_WebXMLFile_20260819_174",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:40:49",
+      "company": "W S Industries (I) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260819_174048",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:37:38",
+      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:36:24",
+      "company": "HEXAGON NUTRITION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HEXAGON|HEXAGON NUTRITION LIMITED|Original|Regulation 7 (2)|IT_20301_WebXMLFile_20260819_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:34:39",
+      "company": "Baazar Style Retail Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STYLEBAAZA|Baazar Style Retail Limited|Original|Regulation 7 (2)|IT_23456_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:19:21",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260819_171921748",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:19:12",
+      "company": "NILA SPACES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260819_1719",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:10:14",
+      "company": "HEXAGON NUTRITION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HEXAGON|HEXAGON NUTRITION LIMITED|Original|Regulation 7 (2)|IT_20301_WebXMLFile_20260819_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:09:41",
+      "company": "MANAPPURAM FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MANAPPURAM|MANAPPURAM FINANCE LIMITED|Original|Regulation 7 (2)|IT_3317_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 17:02:02",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260819_170",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 16:42:48",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 16:34:14",
+      "company": "NCC LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCC|NCC LIMITED|Original|Regulation 7 (2)|IT_917_WebXMLFile_20260819_163413934.xml|IT_917_",
+      "quantity": "\u2014"
+    },
     {
       "date": "19-Aug-2026 16:28:41",
       "company": "FIDEL SOFTECH LIMITED",
@@ -20,90 +174,6 @@
       "company": "R P P Infra Projects Limited",
       "personCategory": "\u2014",
       "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026081",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 15:00:40",
-      "company": "MILTON INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260819_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 14:55:48",
-      "company": "CORONA Remedies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CORONA|CORONA Remedies Limited|Original|Regulation 7 (2)|IT_25973_WebXMLFile_20260819_1455",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 14:07:44",
-      "company": "BHARTIYA INTERNATIONAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260819_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 13:49:13",
-      "company": "360 ONE WAM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260819_13491379",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 12:57:59",
-      "company": "NCL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260819_125759",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 11:49:42",
-      "company": "V",
-      "personCategory": "\u2014",
-      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260819_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 11:41:06",
-      "company": "V",
-      "personCategory": "\u2014",
-      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260819_11",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 10:51:43",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 10:51:24",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260819_10",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 10:36:06",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 10:35:57",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260819_103",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Aug-2026 09:56:56",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260819_095656508.xml|IT_",
       "quantity": "\u2014"
     }
   ],

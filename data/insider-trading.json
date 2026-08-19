@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-19T10:05:14.812140Z",
+  "updated": "2026-08-19T11:00:29.466134Z",
   "rows": [
+    {
+      "date": "19-Aug-2026 16:28:41",
+      "company": "FIDEL SOFTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "FIDEL|FIDEL SOFTECH LIMITED|Original|Regulation 7 (2)|IT_20691_WebXMLFile_20260819_1628413",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 16:28:15",
+      "company": "FIDEL SOFTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "FIDEL|FIDEL SOFTECH LIMITED|Original|Regulation 7 (2)|IT_20691_WebXMLFile_20260819_1628149",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 15:52:48",
+      "company": "R P P Infra Projects Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026081",
+      "quantity": "\u2014"
+    },
     {
       "date": "19-Aug-2026 15:00:40",
       "company": "MILTON INDUSTRIES LIMITED",

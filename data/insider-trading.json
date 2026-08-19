@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-19T07:27:28.035125Z",
+  "updated": "2026-08-19T09:09:46.742479Z",
   "rows": [
+    {
+      "date": "19-Aug-2026 14:07:44",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260819_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 13:49:13",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260819_13491379",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 12:57:59",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260819_125759",
+      "quantity": "\u2014"
+    },
     {
       "date": "19-Aug-2026 11:49:42",
       "company": "V",

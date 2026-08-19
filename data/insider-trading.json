@@ -1,6 +1,34 @@
 {
-  "updated": "2026-08-19T05:17:03.829703Z",
+  "updated": "2026-08-19T07:27:28.035125Z",
   "rows": [
+    {
+      "date": "19-Aug-2026 11:49:42",
+      "company": "V",
+      "personCategory": "\u2014",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260819_11",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 11:41:06",
+      "company": "V",
+      "personCategory": "\u2014",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20260819_11",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 10:51:43",
+      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "19-Aug-2026 10:51:24",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260819_10",
+      "quantity": "\u2014"
+    },
     {
       "date": "19-Aug-2026 10:36:06",
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",

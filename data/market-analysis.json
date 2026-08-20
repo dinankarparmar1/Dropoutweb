@@ -1,6 +1,16 @@
 {
-  "updated": "2026-08-20T06:27:15.300Z",
+  "updated": "2026-08-20T06:32:14.462Z",
   "rows": [
+    {
+      "slug": "fusion-finance-2026-08-20",
+      "stockName": "Fusion Finance",
+      "title": "Buy above 204 Major supply and breakout area",
+      "call": "HOLD",
+      "target": "300,500",
+      "stopLoss": "150",
+      "image": "assets/analysis/fusion-finance-2026-08-20.jpg",
+      "date": "2026-08-20T06:32:14.462Z"
+    },
     {
       "slug": "buy-just-dial-at-673-2026-08-20",
       "stockName": "Buy Just Dial at 673",

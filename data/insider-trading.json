@@ -1,6 +1,34 @@
 {
-  "updated": "2026-08-20T09:18:54.584945Z",
+  "updated": "2026-08-20T10:58:22.817273Z",
   "rows": [
+    {
+      "date": "20-Aug-2026 16:08:34",
+      "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "APOLLOHOSP|APOLLO HOSPITALS ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_417_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 16:08:19",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260820_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 15:49:05",
+      "company": "WIPRO LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20260820_154905748.xml|IT_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 15:27:56",
+      "company": "SAFARI INDUSTRIES (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAFARI|SAFARI INDUSTRIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_17590_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
     {
       "date": "20-Aug-2026 14:43:52",
       "company": "CSL Finance Limited",

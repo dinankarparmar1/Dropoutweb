@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-20T05:18:56.056285Z",
+  "updated": "2026-08-20T07:29:50.220577Z",
   "rows": [
+    {
+      "date": "20-Aug-2026 12:43:06",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260820_124",
+      "quantity": "\u2014"
+    },
     {
       "date": "20-Aug-2026 10:41:16",
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",

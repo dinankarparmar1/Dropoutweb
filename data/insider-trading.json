@@ -1,81 +1,179 @@
 {
-  "updated": "2026-08-20T11:03:48.937584Z",
+  "updated": "2026-08-20T15:00:41.967525Z",
   "rows": [
+    {
+      "date": "20-Aug-2026 20:20:08",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:59:14",
+      "company": "Infosys Limited",
+      "personCategory": "\u2014",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260820_195914515.xml|IT",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:56:54",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260820_195",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:24:14",
+      "company": "SENCO GOLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SENCO|SENCO GOLD LIMITED|Original|Regulation 7 (2)|IT_20714_WebXMLFile_20260820_192414291.",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:21:48",
+      "company": "GRAVITA INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260820_192148",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:12:40",
+      "company": "LIBERTY SHOES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LIBERTSHOE|LIBERTY SHOES LIMITED|Original|Regulation 7 (2)|IT_681_WebXMLFile_20260820_1912",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:02:46",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260820_190246753.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:02:03",
+      "company": "Turtlemint Fintech Solutions Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 19:01:27",
+      "company": "Turtlemint Fintech Solutions Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:53:46",
+      "company": "TITAGARH RAIL SYSTEMS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TITAGARH|TITAGARH RAIL SYSTEMS LIMITED|Original|Regulation 7 (2)|IT_2744_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:49:10",
+      "company": "Turtlemint Fintech Solutions Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:43:20",
+      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:41:56",
+      "company": "ASTRAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ASTRAL|ASTRAL LIMITED|Original|Regulation 7 (2)|IT_2559_WebXMLFile_20260820_184156418.xml|",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:34:44",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Revision|Regulation 7 (2)|IT_13310_WebXMLFile_20260820",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 18:06:44",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260820_180644377",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:55:23",
+      "company": "Coffee Day Enterprises Limited",
+      "personCategory": "\u2014",
+      "transactionType": "COFFEEDAY|Coffee Day Enterprises Limited|Original|Regulation 7 (2)|IT_13209_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:54:49",
+      "company": "Coffee Day Enterprises Limited",
+      "personCategory": "\u2014",
+      "transactionType": "COFFEEDAY|Coffee Day Enterprises Limited|Original|Regulation 7 (2)|IT_13209_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:50:32",
+      "company": "Coffee Day Enterprises Limited",
+      "personCategory": "\u2014",
+      "transactionType": "COFFEEDAY|Coffee Day Enterprises Limited|Original|Regulation 7 (2)|IT_13209_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:49:28",
+      "company": "U. Y. Fincorp Limited",
+      "personCategory": "\u2014",
+      "transactionType": "UYFINCORP|U. Y. Fincorp Limited|Original|Regulation 7 (2)|IT_21090_WebXMLFile_20260820_174",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:42:44",
+      "company": "W S Industries (I) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260820_174244",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:11:16",
+      "company": "JAY SHREE TEA & INDUSTRIES LTD",
+      "personCategory": "\u2014",
+      "transactionType": "JAYSREETEA|JAY SHREE TEA & INDUSTRIES LTD|Original|Regulation 7 (2)|IT_1139_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 17:07:58",
+      "company": "ARVIND PORT AND INFRA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 16:34:53",
+      "company": "SIYARAM SILK MILLS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SIYSIL|SIYARAM SILK MILLS LIMITED|Original|Regulation 7 (2)|IT_903_WebXMLFile_20260820_163",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 16:34:10",
+      "company": "STAR CEMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STARCEMENT|STAR CEMENT LIMITED|Original|Regulation 7 (2)|IT_15239_WebXMLFile_20260820_1634",
+      "quantity": "\u2014"
+    },
     {
       "date": "20-Aug-2026 16:08:34",
       "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
       "personCategory": "\u2014",
       "transactionType": "APOLLOHOSP|APOLLO HOSPITALS ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_417_WebXMLFile",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 16:08:19",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260820_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 15:49:05",
-      "company": "WIPRO LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20260820_154905748.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 15:27:56",
-      "company": "SAFARI INDUSTRIES (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SAFARI|SAFARI INDUSTRIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_17590_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 14:43:52",
-      "company": "CSL Finance Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260820_1443",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 13:57:49",
-      "company": "Greenleaf Envirotech Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GREENLEAF|Greenleaf Envirotech Limited|Original|Regulation 7 (2)|IT_23559_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 13:14:09",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260820_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 12:43:06",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260820_124",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 10:41:16",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 09:52:47",
-      "company": "YASHO INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "YASHO|YASHO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_22010_WebXMLFile_20260820_0952",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "20-Aug-2026 09:49:36",
-      "company": "YASHO INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "YASHO|YASHO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_22010_WebXMLFile_20260820_0949",
       "quantity": "\u2014"
     }
   ],

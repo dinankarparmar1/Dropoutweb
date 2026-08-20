@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-20T07:29:50.220577Z",
+  "updated": "2026-08-20T09:18:54.584945Z",
   "rows": [
+    {
+      "date": "20-Aug-2026 14:43:52",
+      "company": "CSL Finance Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260820_1443",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 13:57:49",
+      "company": "Greenleaf Envirotech Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENLEAF|Greenleaf Envirotech Limited|Original|Regulation 7 (2)|IT_23559_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "20-Aug-2026 13:14:09",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260820_",
+      "quantity": "\u2014"
+    },
     {
       "date": "20-Aug-2026 12:43:06",
       "company": "VIBHOR STEEL TUBES LIMITED",

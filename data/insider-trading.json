@@ -1,6 +1,62 @@
 {
-  "updated": "2026-08-21T09:56:05.045879Z",
+  "updated": "2026-08-21T11:03:27.697551Z",
   "rows": [
+    {
+      "date": "21-Aug-2026 16:26:06",
+      "company": "KPI Green Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KPIGREEN|KPI Green Energy Limited|Original|Regulation 7 (2)|IT_19804_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 16:24:46",
+      "company": "Sasken Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SASKEN|Sasken Technologies Limited|Original|Regulation 7 (2)|IT_2320_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 16:10:18",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Revision|Regulation 7 (2)|IT_17593_WebXMLFile_20260821_16101875",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 16:07:10",
+      "company": "HINDUJA GLOBAL SOLUTIONS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HGS|HINDUJA GLOBAL SOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_2614_WebXMLFile_20260821",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 16:05:46",
+      "company": "HINDUJA GLOBAL SOLUTIONS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HGS|HINDUJA GLOBAL SOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_2614_WebXMLFile_20260821",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 15:37:40",
+      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 15:34:20",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260821_153420482",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 15:29:24",
+      "company": "SURYA ROSHNI LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SURYAROSNI|SURYA ROSHNI LIMITED|Original|Regulation 7 (2)|IT_1209_WebXMLFile_20260821_1529",
+      "quantity": "\u2014"
+    },
     {
       "date": "21-Aug-2026 15:08:12",
       "company": "Dudigital Global Limited",
@@ -118,62 +174,6 @@
       "company": "M TEK COPPER LIMITED",
       "personCategory": "\u2014",
       "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
       "quantity": "\u2014"
     }
   ],

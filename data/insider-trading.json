@@ -1,11 +1,60 @@
 {
-  "updated": "2026-08-21T07:58:04.288346Z",
+  "updated": "2026-08-21T09:56:05.045879Z",
   "rows": [
     {
-      "date": "21-Aug-2026 13:23:43",
-      "company": "M TEK COPPER LIMITED",
+      "date": "21-Aug-2026 15:08:12",
+      "company": "Dudigital Global Limited",
       "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 15:04:18",
+      "company": "Dudigital Global Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 14:58:44",
+      "company": "Dudigital Global Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 14:55:14",
+      "company": "Dudigital Global Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 14:50:40",
+      "company": "Dudigital Global Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 14:48:38",
+      "company": "Dudigital Global Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DUGLOBAL|Dudigital Global Limited|Original|Regulation 7 (2)|IT_19781_WebXMLFile_20260821_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 14:20:21",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260821_142",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Aug-2026 13:38:02",
+      "company": "HAPPY FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260821_1",
       "quantity": "\u2014"
     },
     {
@@ -100,59 +149,10 @@
       "quantity": "\u2014"
     },
     {
-      "date": "21-Aug-2026 13:21:49",
+      "date": "21-Aug-2026 13:23:43",
       "company": "M TEK COPPER LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 13:21:49",
-      "company": "M TEK COPPER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132149513.",
+      "transactionType": "MCL|M TEK COPPER LIMITED|Original|Regulation 7 (2)|IT_14514_WebXMLFile_20260821_132343412.",
       "quantity": "\u2014"
     },
     {

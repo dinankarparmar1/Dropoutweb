@@ -1,179 +1,18 @@
 {
-  "updated": "2026-08-21T14:58:42.879458Z",
+  "updated": "2026-08-24T05:56:24.004839Z",
   "rows": [
     {
-      "date": "21-Aug-2026 20:06:02",
-      "company": "JSW Energy Limited",
+      "date": "24-Aug-2026 10:38:07",
+      "company": "INDO",
       "personCategory": "\u2014",
-      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260821_2006023",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260824_103806829.",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Aug-2026 19:56:34",
-      "company": "Info Edge (India) Limited",
+      "date": "24-Aug-2026 10:19:04",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260821_195",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:13:50",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191350649",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:13:50",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191350649",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:13:10",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191310049",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:13:10",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191310049",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:12:51",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191251295",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:12:51",
-      "company": "NXT",
-      "personCategory": "\u2014",
-      "transactionType": "NXT-INFRA|NXT-INFRA TRUST|Original|Regulation 7 (2)|IT_24001_WebXMLFile_20260821_191251295",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 19:04:08",
-      "company": "Baazar Style Retail Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STYLEBAAZA|Baazar Style Retail Limited|Original|Regulation 7 (2)|IT_23456_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 18:59:06",
-      "company": "Baazar Style Retail Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STYLEBAAZA|Baazar Style Retail Limited|Original|Regulation 7 (2)|IT_23456_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 18:50:17",
-      "company": "THE KARUR VYSYA BANK LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|THE KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_202608",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 18:26:58",
-      "company": "GANESHA ECOSPHERE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GANECOS|GANESHA ECOSPHERE LIMITED|Original|Regulation 7 (2)|IT_11601_WebXMLFile_20260821_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 18:11:36",
-      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 17:48:30",
-      "company": "DPSC LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "DPSCLTD|DPSC LIMITED|Original|Regulation 7 (2)|IT_2743_WebXMLFile_20260821_174830454.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 17:35:18",
-      "company": "Samvardhana Motherson International Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MOTHERSON|Samvardhana Motherson International Limited|Original|Regulation 7 (2)|IT_1385_We",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 17:29:28",
-      "company": "RAMCO INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "RAMCOIND|RAMCO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1560_WebXMLFile_20260821_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 17:25:37",
-      "company": "REGAAL RESOURCES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "REGAAL|REGAAL RESOURCES LIMITED|Original|Regulation 7 (2)|IT_25173_WebXMLFile_20260821_172",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 17:19:08",
-      "company": "Bhageria Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:49:20",
-      "company": "GLOBUS SPIRITS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GLOBUSSPR|GLOBUS SPIRITS LIMITED|Original|Regulation 7 (2)|IT_2904_WebXMLFile_20260821_164",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:36:20",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260821_163620266.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:35:12",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:35:12",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:35:12",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:35:12",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Aug-2026 16:35:12",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     }
   ],

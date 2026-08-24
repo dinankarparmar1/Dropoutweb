@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-24T08:27:25.003752Z",
+  "updated": "2026-08-24T10:23:42.456131Z",
   "rows": [
+    {
+      "date": "24-Aug-2026 14:59:24",
+      "company": "Bhageria Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
+      "quantity": "\u2014"
+    },
     {
       "date": "24-Aug-2026 13:52:04",
       "company": "BERGER PAINTS (I) LIMITED",

@@ -1,53 +1,179 @@
 {
-  "updated": "2026-08-24T11:15:23.610837Z",
+  "updated": "2026-08-24T15:12:46.672602Z",
   "rows": [
     {
-      "date": "24-Aug-2026 14:59:24",
-      "company": "Bhageria Industries Limited",
+      "date": "24-Aug-2026 19:45:40",
+      "company": "ZYDUS LIFESCIENCES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
+      "transactionType": "ZYDUSLIFE|ZYDUS LIFESCIENCES LIMITED|Original|Regulation 7 (2)|IT_1852_WebXMLFile_20260824",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 13:52:04",
-      "company": "BERGER PAINTS (I) LIMITED",
+      "date": "24-Aug-2026 19:41:35",
+      "company": "CONFIDENCE PETROLEUM INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BERGEPAINT|BERGER PAINTS (I) LIMITED|Original|Regulation 7 (2)|IT_488_WebXMLFile_20260824_",
+      "transactionType": "CONFIPET|CONFIDENCE PETROLEUM INDIA LIMITED|Original|Regulation 7 (2)|IT_17510_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 12:34:47",
-      "company": "Shivalik Rasayan Limited",
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHIVALIK|Shivalik Rasayan Limited|Original|Regulation 7 (3)|IT_20019_WebXMLFile_20260824_1",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 12:21:00",
-      "company": "CSL Finance Limited",
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
       "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260824_1221",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 12:07:58",
-      "company": "CSL Finance Limited",
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
       "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260824_1207",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 10:38:07",
-      "company": "INDO",
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
       "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260824_103806829.",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
       "quantity": "\u2014"
     },
     {
-      "date": "24-Aug-2026 10:19:04",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:40:20",
+      "company": "Krishana Phoschem Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KRISHANA|Krishana Phoschem Limited|Original|Regulation 7 (2)|IT_14570_WebXMLFile_20260824_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:34:39",
+      "company": "CONFIDENCE PETROLEUM INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CONFIPET|CONFIDENCE PETROLEUM INDIA LIMITED|Original|Regulation 7 (2)|IT_17510_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:34:18",
+      "company": "CONFIDENCE PETROLEUM INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CONFIPET|CONFIDENCE PETROLEUM INDIA LIMITED|Original|Regulation 7 (2)|IT_17510_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 19:29:58",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260824_192958",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:48",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260824_183448656",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:27",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260824_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:27",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260824_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:27",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260824_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:27",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260824_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Aug-2026 18:34:27",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260824_18",
       "quantity": "\u2014"
     }
   ],

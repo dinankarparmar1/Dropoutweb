@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-25T06:05:41.224640Z",
+  "updated": "2026-08-25T07:06:33.159787Z",
   "rows": [
+    {
+      "date": "25-Aug-2026 12:15:11",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260825_121",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 12:04:27",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260825_12042734",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 11:57:24",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "quantity": "\u2014"
+    },
     {
       "date": "25-Aug-2026 10:36:48",
       "company": "KDDL LIMITED",

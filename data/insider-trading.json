@@ -1,6 +1,118 @@
 {
-  "updated": "2026-08-25T09:59:11.055902Z",
+  "updated": "2026-08-25T10:35:10.659959Z",
   "rows": [
+    {
+      "date": "25-Aug-2026 15:54:20",
+      "company": "Nippon Life India Asset Management Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAM-INDIA|Nippon Life India Asset Management Limited|Original|Regulation 7 (2)|IT_15552_We",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:49:20",
+      "company": "MAZDA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260825_154919947.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 15:44:20",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "quantity": "\u2014"
+    },
     {
       "date": "25-Aug-2026 15:08:18",
       "company": "PI INDUSTRIES LIMITED",
@@ -62,13 +174,6 @@
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Aug-2026 10:36:48",
-      "company": "KDDL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KDDL|KDDL LIMITED|Original|Regulation 7 (2)|IT_13614_WebXMLFile_20260825_103648506.xml|IT_",
       "quantity": "\u2014"
     }
   ],

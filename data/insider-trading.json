@@ -1,179 +1,179 @@
 {
-  "updated": "2026-08-25T10:35:10.659959Z",
+  "updated": "2026-08-25T13:42:52.668925Z",
   "rows": [
     {
-      "date": "25-Aug-2026 15:54:20",
-      "company": "Nippon Life India Asset Management Limited",
+      "date": "25-Aug-2026 19:06:18",
+      "company": "MOS Utility Limited",
       "personCategory": "\u2014",
-      "transactionType": "NAM-INDIA|Nippon Life India Asset Management Limited|Original|Regulation 7 (2)|IT_15552_We",
+      "transactionType": "MOS|MOS Utility Limited|Original|Regulation 7 (2)|IT_21589_WebXMLFile_20260825_190618637.x",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:49:20",
-      "company": "MAZDA LIMITED",
+      "date": "25-Aug-2026 19:04:25",
+      "company": "MOS Utility Limited",
       "personCategory": "\u2014",
-      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260825_154919947.xml|I",
+      "transactionType": "MOS|MOS Utility Limited|Original|Regulation 7 (2)|IT_21589_WebXMLFile_20260825_190425071.x",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 19:04:23",
+      "company": "Landmark Cars Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "LANDMARK|Landmark Cars Limited|Original|Regulation 7 (2)|IT_20392_WebXMLFile_20260825_1904",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 19:04:14",
+      "company": "Landmark Cars Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "LANDMARK|Landmark Cars Limited|Revision|Regulation 7 (2)|IT_20392_WebXMLFile_20260825_1904",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 19:04:08",
+      "company": "Landmark Cars Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "LANDMARK|Landmark Cars Limited|Original|Regulation 7 (2)|IT_20392_WebXMLFile_20260825_1904",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 18:58:46",
+      "company": "VA TECH WABAG LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "WABAG|VA TECH WABAG LIMITED|Original|Regulation 7 (2)|IT_3630_WebXMLFile_20260825_18584596",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 18:54:20",
+      "company": "GRAVITA INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260825_185420",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 18:27:20",
+      "company": "JUBILANT INGREVIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026082",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 18:11:02",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260825_181102353",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:53:28",
+      "company": "ARVIND PORT AND INFRA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:52:12",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260825_175212653.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:49:09",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260825_174909",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:43:26",
+      "company": "ION EXCHANGE (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "IONEXCHANG|ION EXCHANGE (INDIA) LIMITED|Original|Regulation 7 (2)|IT_185_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:36:38",
+      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 17:11:33",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:44:20",
-      "company": "Hindcon Chemicals Limited",
+      "date": "25-Aug-2026 16:56:45",
+      "company": "DR. LAL PATHLABS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260825_1",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260825",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 15:08:18",
-      "company": "PI INDUSTRIES LIMITED",
+      "date": "25-Aug-2026 16:55:12",
+      "company": "Bhageria Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "PIIND|PI INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_4909_WebXMLFile_20260825_15081835",
+      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 14:43:56",
-      "company": "THANGAMAYIL JEWELLERY LIMITED",
+      "date": "25-Aug-2026 16:48:12",
+      "company": "WEST COAST PAPER MILLS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
+      "transactionType": "WSTCSTPAPR|WEST COAST PAPER MILLS LIMITED|Original|Regulation 7 (2)|IT_991_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 14:40:34",
-      "company": "ALKYL AMINES CHEMICALS LIMITED",
+      "date": "25-Aug-2026 16:27:22",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALKYLAMINE|ALKYL AMINES CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_1527_WebXMLFile_202",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260825_1",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 14:34:12",
-      "company": "Panacea Biotec Limited",
+      "date": "25-Aug-2026 16:16:20",
+      "company": "Patel Integrated Logistics Limited",
       "personCategory": "\u2014",
-      "transactionType": "PANACEABIO|Panacea Biotec Limited|Original|Regulation 7 (2)|IT_1350_WebXMLFile_20260825_14",
+      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Original|Regulation 7 (2)|IT_2705_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 12:49:10",
-      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
+      "date": "25-Aug-2026 16:12:45",
+      "company": "Bharat Gears Limited",
       "personCategory": "\u2014",
-      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
+      "transactionType": "BHARATGEAR|Bharat Gears Limited|Original|Regulation 7 (2)|IT_1253_WebXMLFile_20260825_1612",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 12:44:38",
-      "company": "INDO",
+      "date": "25-Aug-2026 16:12:10",
+      "company": "Patel Integrated Logistics Limited",
       "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260825_124438354.",
+      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Original|Regulation 7 (2)|IT_2705_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 12:15:11",
-      "company": "VIBHOR STEEL TUBES LIMITED",
+      "date": "25-Aug-2026 16:08:18",
+      "company": "Bharat Gears Limited",
       "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260825_121",
+      "transactionType": "BHARATGEAR|Bharat Gears Limited|Original|Regulation 7 (2)|IT_1253_WebXMLFile_20260825_1608",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 12:04:27",
-      "company": "360 ONE WAM LIMITED",
+      "date": "25-Aug-2026 16:06:22",
+      "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260825_12042734",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260825_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Aug-2026 11:57:24",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "25-Aug-2026 16:05:26",
+      "company": "Firstsource Solutions Limited",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "FSL|Firstsource Solutions Limited|Original|Regulation 7 (2)|IT_2535_WebXMLFile_20260825_16",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-25T09:19:52.459012Z",
+  "updated": "2026-08-25T09:59:11.055902Z",
   "rows": [
+    {
+      "date": "25-Aug-2026 15:08:18",
+      "company": "PI INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PIIND|PI INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_4909_WebXMLFile_20260825_15081835",
+      "quantity": "\u2014"
+    },
     {
       "date": "25-Aug-2026 14:43:56",
       "company": "THANGAMAYIL JEWELLERY LIMITED",

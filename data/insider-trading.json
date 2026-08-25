@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-25T08:34:02.119157Z",
+  "updated": "2026-08-25T09:19:52.459012Z",
   "rows": [
+    {
+      "date": "25-Aug-2026 14:43:56",
+      "company": "THANGAMAYIL JEWELLERY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 14:40:34",
+      "company": "ALKYL AMINES CHEMICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALKYLAMINE|ALKYL AMINES CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_1527_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Aug-2026 14:34:12",
+      "company": "Panacea Biotec Limited",
+      "personCategory": "\u2014",
+      "transactionType": "PANACEABIO|Panacea Biotec Limited|Original|Regulation 7 (2)|IT_1350_WebXMLFile_20260825_14",
+      "quantity": "\u2014"
+    },
     {
       "date": "25-Aug-2026 12:49:10",
       "company": "GOKUL REFOILS AND SOLVENT LIMITED",

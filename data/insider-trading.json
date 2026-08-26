@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-26T05:06:50.304559Z",
+  "updated": "2026-08-26T05:48:39.870004Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 10:57:46",
+      "company": "ideaForge Technology Limited",
+      "personCategory": "\u2014",
+      "transactionType": "IDEAFORGE|ideaForge Technology Limited|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 10:35:22",
       "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",

@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-26T09:45:21.062996Z",
+  "updated": "2026-08-26T10:19:49.000959Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 15:35:44",
+      "company": "Bhageria Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 15:25:36",
+      "company": "BLB LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260826_152536577.xml",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 15:08:32",
       "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",

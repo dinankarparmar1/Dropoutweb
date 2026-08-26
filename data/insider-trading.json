@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-26T07:27:02.035776Z",
+  "updated": "2026-08-26T08:07:19.205950Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 13:22:33",
+      "company": "NATCO PHARMA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20260826_1322",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 13:10:13",
+      "company": "GNA AXLES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260826_131013047.xml",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 13:06:04",
+      "company": "GNA AXLES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260826_130604294.xml",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 12:20:01",
       "company": "SANGAM (INDIA) LIMITED",

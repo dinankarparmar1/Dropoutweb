@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-26T06:30:54.261122Z",
+  "updated": "2026-08-26T07:27:02.035776Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 12:20:01",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260826_122",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 12:03:53",
+      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 10:57:46",
       "company": "ideaForge Technology Limited",

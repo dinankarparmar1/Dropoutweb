@@ -1,109 +1,179 @@
 {
-  "updated": "2026-08-26T10:37:05.831586Z",
+  "updated": "2026-08-26T13:46:56.832998Z",
   "rows": [
     {
-      "date": "26-Aug-2026 15:35:44",
-      "company": "Bhageria Industries Limited",
+      "date": "26-Aug-2026 19:14:46",
+      "company": "AURIONPRO SOLUTIONS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BHAGERIA|Bhageria Industries Limited|Original|Regulation 7 (2)|IT_13498_WebXMLFile_2026082",
+      "transactionType": "AURIONPRO|AURIONPRO SOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_2329_WebXMLFile_2026082",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 15:25:36",
-      "company": "BLB LIMITED",
+      "date": "26-Aug-2026 18:49:53",
+      "company": "CENTUM ELECTRONICS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260826_152536577.xml",
+      "transactionType": "CENTUM|CENTUM ELECTRONICS LIMITED|Original|Regulation 7 (2)|IT_2659_WebXMLFile_20260826_18",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 15:08:32",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "26-Aug-2026 18:49:18",
+      "company": "CENTUM ELECTRONICS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "CENTUM|CENTUM ELECTRONICS LIMITED|Original|Regulation 7 (2)|IT_2659_WebXMLFile_20260826_18",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 14:53:54",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "26-Aug-2026 18:42:57",
+      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260826_145",
+      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 13:44:40",
-      "company": "GFL LIMITED",
+      "date": "26-Aug-2026 18:41:28",
+      "company": "eClerx Services Ltd",
       "personCategory": "\u2014",
-      "transactionType": "GFLLIMITED|GFL LIMITED|Original|Regulation 7 (2)|IT_198_WebXMLFile_20260826_134440795.xml|",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260826_184128240",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 13:44:06",
-      "company": "GFL LIMITED",
+      "date": "26-Aug-2026 18:37:10",
+      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GFLLIMITED|GFL LIMITED|Original|Regulation 7 (2)|IT_198_WebXMLFile_20260826_134406824.xml|",
+      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 13:22:33",
-      "company": "NATCO PHARMA LIMITED",
+      "date": "26-Aug-2026 17:40:44",
+      "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20260826_1322",
+      "transactionType": "APOLLOHOSP|APOLLO HOSPITALS ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_417_WebXMLFile",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 13:10:13",
-      "company": "GNA AXLES LIMITED",
+      "date": "26-Aug-2026 17:39:44",
+      "company": "W S Industries (I) Limited",
       "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260826_131013047.xml",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260826_173943",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 13:06:04",
-      "company": "GNA AXLES LIMITED",
+      "date": "26-Aug-2026 17:28:02",
+      "company": "VA TECH WABAG LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260826_130604294.xml",
+      "transactionType": "WABAG|VA TECH WABAG LIMITED|Original|Regulation 7 (2)|IT_3630_WebXMLFile_20260826_17280233",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 12:20:01",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260826_122",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 12:03:53",
-      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 10:57:46",
-      "company": "ideaForge Technology Limited",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "IDEAFORGE|ideaForge Technology Limited|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20260",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 10:35:22",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 10:06:10",
-      "company": "CHEMBOND CHEMICALS LIMITED",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202608",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 09:40:58",
-      "company": "ZENSAR TECHNOLOGIES LIMITED",
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ZENSARTECH|ZENSAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026082",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 17:23:52",
+      "company": "BRAND CONCEPTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 16:59:32",
+      "company": "SHREYANS INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREYANIND|SHREYANS INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_399_WebXMLFile_2026082",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 16:58:55",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
       "quantity": "\u2014"
     }
   ],

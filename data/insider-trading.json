@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-26T09:00:54.539977Z",
+  "updated": "2026-08-26T09:45:21.062996Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 15:08:32",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 14:53:54",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260826_145",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 13:44:40",
       "company": "GFL LIMITED",

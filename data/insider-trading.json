@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-26T04:30:57.077872Z",
+  "updated": "2026-08-26T05:06:50.304559Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 10:35:22",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 10:06:10",
+      "company": "CHEMBOND CHEMICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 09:40:58",
       "company": "ZENSAR TECHNOLOGIES LIMITED",

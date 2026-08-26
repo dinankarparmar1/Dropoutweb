@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-26T08:07:19.205950Z",
+  "updated": "2026-08-26T09:00:54.539977Z",
   "rows": [
+    {
+      "date": "26-Aug-2026 13:44:40",
+      "company": "GFL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GFLLIMITED|GFL LIMITED|Original|Regulation 7 (2)|IT_198_WebXMLFile_20260826_134440795.xml|",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Aug-2026 13:44:06",
+      "company": "GFL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GFLLIMITED|GFL LIMITED|Original|Regulation 7 (2)|IT_198_WebXMLFile_20260826_134406824.xml|",
+      "quantity": "\u2014"
+    },
     {
       "date": "26-Aug-2026 13:22:33",
       "company": "NATCO PHARMA LIMITED",

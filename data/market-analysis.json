@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T06:32:14.462Z",
+  "updated": "2026-08-27T04:18:50.983Z",
   "rows": [
     {
       "slug": "fusion-finance-2026-08-20",
@@ -13,11 +13,11 @@
     },
     {
       "slug": "buy-just-dial-at-673-2026-08-20",
-      "stockName": "Buy Just Dial at 673",
+      "stockName": "Buy Just Dial at 640",
       "title": "Breakout",
       "call": "HOLD",
       "target": "800, 950",
-      "stopLoss": "600",
+      "stopLoss": "580",
       "image": "assets/analysis/buy-just-dial-at-673-2026-08-20.jpg",
       "date": "2026-08-20T06:26:06.639Z"
     },

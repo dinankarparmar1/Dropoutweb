@@ -1,179 +1,179 @@
 {
-  "updated": "2026-08-26T13:46:56.832998Z",
+  "updated": "2026-08-27T14:47:40.909535Z",
   "rows": [
     {
-      "date": "26-Aug-2026 19:14:46",
-      "company": "AURIONPRO SOLUTIONS LIMITED",
+      "date": "27-Aug-2026 19:53:26",
+      "company": "GRAVITA INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AURIONPRO|AURIONPRO SOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_2329_WebXMLFile_2026082",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260827_195326",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 18:49:53",
-      "company": "CENTUM ELECTRONICS LIMITED",
+      "date": "27-Aug-2026 19:50:48",
+      "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CENTUM|CENTUM ELECTRONICS LIMITED|Original|Regulation 7 (2)|IT_2659_WebXMLFile_20260826_18",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260827_1",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 18:49:18",
-      "company": "CENTUM ELECTRONICS LIMITED",
+      "date": "27-Aug-2026 19:25:13",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CENTUM|CENTUM ELECTRONICS LIMITED|Original|Regulation 7 (2)|IT_2659_WebXMLFile_20260826_18",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260827",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 18:42:57",
-      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
+      "date": "27-Aug-2026 19:22:02",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260827",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 18:41:28",
-      "company": "eClerx Services Ltd",
+      "date": "27-Aug-2026 19:11:58",
+      "company": "Inox Wind Limited",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260826_184128240",
+      "transactionType": "INOXWIND|Inox Wind Limited|Original|Regulation 7 (2)|IT_11855_WebXMLFile_20260827_19115834",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 18:37:10",
-      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
+      "date": "27-Aug-2026 18:36:36",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260827_183636316.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:40:44",
-      "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
+      "date": "27-Aug-2026 18:34:17",
+      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "APOLLOHOSP|APOLLO HOSPITALS ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_417_WebXMLFile",
+      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:39:44",
-      "company": "W S Industries (I) Limited",
+      "date": "27-Aug-2026 18:32:37",
+      "company": "Hindustan Copper Limited",
       "personCategory": "\u2014",
-      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260826_173943",
+      "transactionType": "HINDCOPPER|Hindustan Copper Limited|Original|Regulation 7 (2)|IT_3022_WebXMLFile_20260827_",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:28:02",
+      "date": "27-Aug-2026 18:05:56",
+      "company": "LCC INFOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LCCINFOTEC|LCC INFOTECH LIMITED|Original|Regulation 7 (2)|IT_1864_WebXMLFile_20260827_1805",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:52:36",
+      "company": "Tata Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:50:18",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260827_175018429",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:37:26",
+      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:34:42",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260827_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:05:39",
+      "company": "NILA SPACES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260827_1705",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:04:54",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 17:02:55",
+      "company": "ASHAPURA MINECHEM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ASHAPURMIN|ASHAPURA MINECHEM LIMITED|Original|Regulation 7 (2)|IT_1262_WebXMLFile_20260827",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 16:57:40",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260827_165",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 16:35:50",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260827_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Aug-2026 16:17:23",
       "company": "VA TECH WABAG LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WABAG|VA TECH WABAG LIMITED|Original|Regulation 7 (2)|IT_3630_WebXMLFile_20260826_17280233",
+      "transactionType": "WABAG|VA TECH WABAG LIMITED|Original|Regulation 7 (2)|IT_3630_WebXMLFile_20260827_16172353",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:59:08",
+      "company": "STEL HOLDINGS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260827_155908881",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:58:13",
+      "company": "Rajnandini Metal Limited",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:58:13",
+      "company": "Rajnandini Metal Limited",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:58:13",
+      "company": "Rajnandini Metal Limited",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:58:13",
+      "company": "Rajnandini Metal Limited",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
+      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
       "quantity": "\u2014"
     },
     {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
+      "date": "27-Aug-2026 15:58:13",
+      "company": "Rajnandini Metal Limited",
       "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 17:23:52",
-      "company": "BRAND CONCEPTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BCONCEPTS|BRAND CONCEPTS LIMITED|Original|Regulation 7 (2)|IT_15702_WebXMLFile_20260826_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 16:59:32",
-      "company": "SHREYANS INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHREYANIND|SHREYANS INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_399_WebXMLFile_2026082",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "26-Aug-2026 16:58:55",
-      "company": "Libas Consumer Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
+      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
       "quantity": "\u2014"
     }
   ],

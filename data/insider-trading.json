@@ -1,179 +1,109 @@
 {
-  "updated": "2026-08-27T14:53:03.995963Z",
+  "updated": "2026-08-28T15:41:23.354458Z",
   "rows": [
     {
-      "date": "27-Aug-2026 19:53:26",
-      "company": "GRAVITA INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260827_195326",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 19:50:48",
+      "date": "28-Aug-2026 20:57:17",
       "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260827_1",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260828_2",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 19:25:13",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "28-Aug-2026 18:43:30",
+      "company": "JINDAL STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260827",
+      "transactionType": "JINDALSTEL|JINDAL STEEL LIMITED|Original|Regulation 7 (2)|IT_1816_WebXMLFile_20260828_1843",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 19:22:02",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "28-Aug-2026 18:43:23",
+      "company": "RUBICON RESEARCH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260827",
+      "transactionType": "RUBICON|RUBICON RESEARCH LIMITED|Original|Regulation 7 (2)|IT_24193_WebXMLFile_20260828_18",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 19:11:58",
-      "company": "Inox Wind Limited",
+      "date": "28-Aug-2026 18:23:59",
+      "company": "Turtlemint Fintech Solutions Limited",
       "personCategory": "\u2014",
-      "transactionType": "INOXWIND|Inox Wind Limited|Original|Regulation 7 (2)|IT_11855_WebXMLFile_20260827_19115834",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 18:36:36",
-      "company": "T T LIMITED",
+      "date": "28-Aug-2026 18:04:09",
+      "company": "Turtlemint Fintech Solutions Limited",
       "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260827_183636316.xml|IT_253",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 18:34:17",
-      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "date": "28-Aug-2026 17:53:48",
+      "company": "GANESH BENZOPLAST LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "transactionType": "GANESHBE|GANESH BENZOPLAST LIMITED|Original|Regulation 7 (2)|IT_19975_WebXMLFile_20260828_",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 18:32:37",
-      "company": "Hindustan Copper Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCOPPER|Hindustan Copper Limited|Original|Regulation 7 (2)|IT_3022_WebXMLFile_20260827_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 18:05:56",
-      "company": "LCC INFOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LCCINFOTEC|LCC INFOTECH LIMITED|Original|Regulation 7 (2)|IT_1864_WebXMLFile_20260827_1805",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:52:36",
-      "company": "Tata Consumer Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:50:18",
-      "company": "JSW STEEL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260827_175018429",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:37:26",
-      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:34:42",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260827_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:05:39",
-      "company": "NILA SPACES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260827_1705",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 17:04:54",
+      "date": "28-Aug-2026 17:01:46",
       "company": "Sree Rayalaseema Hi",
       "personCategory": "\u2014",
       "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 17:02:55",
-      "company": "ASHAPURA MINECHEM LIMITED",
+      "date": "28-Aug-2026 15:49:09",
+      "company": "Ather Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "ASHAPURMIN|ASHAPURA MINECHEM LIMITED|Original|Regulation 7 (2)|IT_1262_WebXMLFile_20260827",
+      "transactionType": "ATHERENERG|Ather Energy Limited|Original|Regulation 7 (2)|IT_24448_WebXMLFile_20260828_154",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 16:57:40",
-      "company": "Info Edge (India) Limited",
+      "date": "28-Aug-2026 15:49:05",
+      "company": "RAMCO INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260827_165",
+      "transactionType": "RAMCOIND|RAMCO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1560_WebXMLFile_20260828_15",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 16:35:50",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "28-Aug-2026 15:36:58",
+      "company": "INDO",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260827_",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260828_153658353.",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 16:17:23",
-      "company": "VA TECH WABAG LIMITED",
+      "date": "28-Aug-2026 12:53:50",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WABAG|VA TECH WABAG LIMITED|Original|Regulation 7 (2)|IT_3630_WebXMLFile_20260827_16172353",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260828_125350532.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 15:59:08",
-      "company": "STEL HOLDINGS LIMITED",
+      "date": "28-Aug-2026 11:38:26",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260827_155908881",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 15:58:13",
-      "company": "Rajnandini Metal Limited",
+      "date": "28-Aug-2026 11:24:00",
+      "company": "GANESH CONSUMER PRODUCTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
+      "transactionType": "GANESHCP|GANESH CONSUMER PRODUCTS LIMITED|Original|Regulation 7 (2)|IT_25074_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 15:58:13",
-      "company": "Rajnandini Metal Limited",
+      "date": "28-Aug-2026 11:23:28",
+      "company": "Divi's Laboratories Limited",
       "personCategory": "\u2014",
-      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
+      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260828",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Aug-2026 15:58:13",
-      "company": "Rajnandini Metal Limited",
+      "date": "28-Aug-2026 11:16:34",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 15:58:13",
-      "company": "Rajnandini Metal Limited",
-      "personCategory": "\u2014",
-      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "27-Aug-2026 15:58:13",
-      "company": "Rajnandini Metal Limited",
-      "personCategory": "\u2014",
-      "transactionType": "RAJMET|Rajnandini Metal Limited|Original|Regulation 7 (2)|IT_16759_WebXMLFile_20260827_155",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     }
   ],

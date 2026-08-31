@@ -1,109 +1,179 @@
 {
-  "updated": "2026-08-28T15:48:07.571749Z",
+  "updated": "2026-08-31T10:06:26.838387Z",
   "rows": [
     {
-      "date": "28-Aug-2026 20:57:17",
-      "company": "KARUR VYSYA BANK LIMITED",
+      "date": "31-Aug-2026 15:35:41",
+      "company": "SANSERA ENGINEERING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260828_2",
+      "transactionType": "SANSERA|SANSERA ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_19738_WebXMLFile_20260831",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 18:43:30",
-      "company": "JINDAL STEEL LIMITED",
+      "date": "31-Aug-2026 15:34:39",
+      "company": "R P P Infra Projects Limited",
       "personCategory": "\u2014",
-      "transactionType": "JINDALSTEL|JINDAL STEEL LIMITED|Original|Regulation 7 (2)|IT_1816_WebXMLFile_20260828_1843",
+      "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026083",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 18:43:23",
-      "company": "RUBICON RESEARCH LIMITED",
+      "date": "31-Aug-2026 15:29:54",
+      "company": "V MARC INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RUBICON|RUBICON RESEARCH LIMITED|Original|Regulation 7 (2)|IT_24193_WebXMLFile_20260828_18",
+      "transactionType": "VMARCIND|V MARC INDIA LIMITED|Original|Regulation 7 (2)|IT_19194_WebXMLFile_20260831_15295",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 18:23:59",
-      "company": "Turtlemint Fintech Solutions Limited",
+      "date": "31-Aug-2026 15:07:43",
+      "company": "ARVIND PORT AND INFRA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 18:04:09",
-      "company": "Turtlemint Fintech Solutions Limited",
+      "date": "31-Aug-2026 15:02:15",
+      "company": "SHREE KARNI FABCOM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 17:53:48",
-      "company": "GANESH BENZOPLAST LIMITED",
+      "date": "31-Aug-2026 14:43:37",
+      "company": "SHREE KARNI FABCOM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GANESHBE|GANESH BENZOPLAST LIMITED|Original|Regulation 7 (2)|IT_19975_WebXMLFile_20260828_",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 17:01:46",
-      "company": "Sree Rayalaseema Hi",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 15:49:09",
-      "company": "Ather Energy Limited",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "ATHERENERG|Ather Energy Limited|Original|Regulation 7 (2)|IT_24448_WebXMLFile_20260828_154",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 15:49:05",
-      "company": "RAMCO INDUSTRIES LIMITED",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "RAMCOIND|RAMCO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1560_WebXMLFile_20260828_15",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 15:36:58",
-      "company": "INDO",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260828_153658353.",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 12:53:50",
-      "company": "BLB LIMITED",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260828_125350532.xml",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 11:38:26",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 11:24:00",
-      "company": "GANESH CONSUMER PRODUCTS LIMITED",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "GANESHCP|GANESH CONSUMER PRODUCTS LIMITED|Original|Regulation 7 (2)|IT_25074_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 11:23:28",
-      "company": "Divi's Laboratories Limited",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260828",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Aug-2026 11:16:34",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:42:43",
+      "company": "Hindcon Chemicals Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:39:06",
+      "company": "Aarti Pharmalabs Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260831",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:37:21",
+      "company": "SHREE KARNI FABCOM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:22:20",
+      "company": "SHREE KARNI FABCOM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:16:03",
+      "company": "SHREE KARNI FABCOM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "31-Aug-2026 14:13:31",
+      "company": "SPORTKING INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SPORTKING|SPORTKING INDIA LIMITED|Original|Regulation 7 (2)|IT_20830_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     }
   ],

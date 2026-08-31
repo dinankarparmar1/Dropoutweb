@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-31T10:06:26.838387Z",
+  "updated": "2026-08-31T10:16:07.098006Z",
   "rows": [
+    {
+      "date": "31-Aug-2026 15:41:26",
+      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
     {
       "date": "31-Aug-2026 15:35:41",
       "company": "SANSERA ENGINEERING LIMITED",
@@ -167,13 +174,6 @@
       "company": "SHREE KARNI FABCOM LIMITED",
       "personCategory": "\u2014",
       "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 14:13:31",
-      "company": "SPORTKING INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SPORTKING|SPORTKING INDIA LIMITED|Original|Regulation 7 (2)|IT_20830_WebXMLFile_20260831_1",
       "quantity": "\u2014"
     }
   ],

@@ -1,179 +1,179 @@
 {
-  "updated": "2026-08-31T10:16:07.098006Z",
+  "updated": "2026-08-31T17:26:47.613793Z",
   "rows": [
     {
-      "date": "31-Aug-2026 15:41:26",
-      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
+      "date": "31-Aug-2026 19:41:04",
+      "company": "Zee Entertainment Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
+      "transactionType": "ZEEL|Zee Entertainment Enterprises Limited|Original|Regulation 7 (2)|IT_1105_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 15:35:41",
-      "company": "SANSERA ENGINEERING LIMITED",
+      "date": "31-Aug-2026 19:19:57",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SANSERA|SANSERA ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_19738_WebXMLFile_20260831",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260831",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 15:34:39",
-      "company": "R P P Infra Projects Limited",
+      "date": "31-Aug-2026 19:14:26",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RPPINFRA|R P P Infra Projects Limited|Original|Regulation 7 (2)|IT_3798_WebXMLFile_2026083",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260831",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 15:29:54",
-      "company": "V MARC INDIA LIMITED",
+      "date": "31-Aug-2026 18:17:24",
+      "company": "Roto Pumps Limited",
       "personCategory": "\u2014",
-      "transactionType": "VMARCIND|V MARC INDIA LIMITED|Original|Regulation 7 (2)|IT_19194_WebXMLFile_20260831_15295",
+      "transactionType": "ROTO|Roto Pumps Limited|Original|Regulation 7 (2)|IT_20335_WebXMLFile_20260831_181723934.x",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 15:07:43",
-      "company": "ARVIND PORT AND INFRA LIMITED",
+      "date": "31-Aug-2026 18:13:54",
+      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 15:02:15",
-      "company": "SHREE KARNI FABCOM LIMITED",
+      "date": "31-Aug-2026 17:56:35",
+      "company": "INDOCO REMEDIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260831_17563",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:43:37",
-      "company": "SHREE KARNI FABCOM LIMITED",
+      "date": "31-Aug-2026 17:40:12",
+      "company": "HCL Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260831_174",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:42:43",
-      "company": "Hindcon Chemicals Limited",
+      "date": "31-Aug-2026 17:36:19",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260831_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:39:06",
-      "company": "Aarti Pharmalabs Limited",
+      "date": "31-Aug-2026 17:35:10",
+      "company": "GRAVITA INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260831",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260831_173510",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:37:21",
-      "company": "SHREE KARNI FABCOM LIMITED",
+      "date": "31-Aug-2026 17:30:20",
+      "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:22:20",
-      "company": "SHREE KARNI FABCOM LIMITED",
+      "date": "31-Aug-2026 17:30:20",
+      "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 14:16:03",
-      "company": "SHREE KARNI FABCOM LIMITED",
+      "date": "31-Aug-2026 17:30:20",
+      "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
       "quantity": "\u2014"
     }
   ],

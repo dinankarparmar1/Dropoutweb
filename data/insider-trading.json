@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-01T14:01:09.279849Z",
+  "updated": "2026-09-01T14:37:13.310168Z",
   "rows": [
+    {
+      "date": "01-Sep-2026 19:41:33",
+      "company": "KPI Green Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "KPIGREEN|KPI Green Energy Limited|Original|Regulation 7 (2)|IT_19804_WebXMLFile_20260901_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 19:36:58",
+      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 19:34:39",
+      "company": "ICRA Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (2)|IT_2575_WebXMLFile_20260901_193439061.xml|IT_2",
+      "quantity": "\u2014"
+    },
     {
       "date": "01-Sep-2026 19:19:49",
       "company": "Alembic Limited",
@@ -97,27 +118,6 @@
       "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
       "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260901_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {

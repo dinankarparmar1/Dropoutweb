@@ -1,172 +1,179 @@
 {
-  "updated": "2026-09-01T09:00:56.525465Z",
+  "updated": "2026-09-01T14:01:09.279849Z",
   "rows": [
     {
-      "date": "01-Sep-2026 13:52:46",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "01-Sep-2026 19:19:49",
+      "company": "Alembic Limited",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260901_191949014",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 13:22:42",
-      "company": "ICRA Limited",
+      "date": "01-Sep-2026 19:06:17",
+      "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (2)|IT_2575_WebXMLFile_20260901_132242695.xml|IT_2",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260901_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 13:21:01",
-      "company": "CEAT Limited",
+      "date": "01-Sep-2026 18:43:02",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260901_132101406.xml|I",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260901_184302360.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 13:04:39",
-      "company": "AYM Syntex Limited",
+      "date": "01-Sep-2026 18:33:29",
+      "company": "JUBILANT INGREVIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AYMSYNTEX|AYM Syntex Limited|Original|Regulation 7 (2)|IT_12957_WebXMLFile_20260901_130439",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026090",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 12:57:10",
-      "company": "eClerx Services Ltd",
+      "date": "01-Sep-2026 18:29:34",
+      "company": "Sree Rayalaseema Hi",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260901_125710413",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:52:30",
-      "company": "BLB LIMITED",
+      "date": "01-Sep-2026 18:18:53",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260901_115230704.xml",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260901_181853",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 17:23:46",
+      "company": "THANGAMAYIL JEWELLERY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 17:13:45",
+      "company": "D.B.Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "DBCORP|D.B.Corp Limited|Original|Regulation 7 (2)|IT_3015_WebXMLFile_20260901_171345407.xm",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 17:08:48",
+      "company": "KPI Green Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "KPIGREEN|KPI Green Energy Limited|Original|Regulation 7 (2)|IT_19804_WebXMLFile_20260901_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 17:03:21",
+      "company": "Responsive Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 17:02:54",
+      "company": "RAMCO INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "RAMCOIND|RAMCO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1560_WebXMLFile_20260901_17",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:59:53",
+      "company": "ENVIRO INFRA ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "EIEL|ENVIRO INFRA ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_21143_WebXMLFile_20260901",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:51:13",
+      "company": "W S Industries (I) Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260901_165113",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:16:33",
+      "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260901_161",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:32:20",
-      "company": "Libas Consumer Products Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 11:14:22",
-      "company": "Sterlite Technologies Limited",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026090",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 10:30:35",
-      "company": "VIBHOR STEEL TUBES LIMITED",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260901_103",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 10:04:36",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 09:40:10",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 16:12:20",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     }
   ],

@@ -1,179 +1,172 @@
 {
-  "updated": "2026-08-31T17:26:47.613793Z",
+  "updated": "2026-09-01T08:55:39.978407Z",
   "rows": [
     {
-      "date": "31-Aug-2026 19:41:04",
-      "company": "Zee Entertainment Enterprises Limited",
+      "date": "01-Sep-2026 13:52:46",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ZEEL|Zee Entertainment Enterprises Limited|Original|Regulation 7 (2)|IT_1105_WebXMLFile_20",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 19:19:57",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "01-Sep-2026 13:22:42",
+      "company": "ICRA Limited",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260831",
+      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (2)|IT_2575_WebXMLFile_20260901_132242695.xml|IT_2",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 19:14:26",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "01-Sep-2026 13:21:01",
+      "company": "CEAT Limited",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260831",
+      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260901_132101406.xml|I",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 18:17:24",
-      "company": "Roto Pumps Limited",
+      "date": "01-Sep-2026 13:04:39",
+      "company": "AYM Syntex Limited",
       "personCategory": "\u2014",
-      "transactionType": "ROTO|Roto Pumps Limited|Original|Regulation 7 (2)|IT_20335_WebXMLFile_20260831_181723934.x",
+      "transactionType": "AYMSYNTEX|AYM Syntex Limited|Original|Regulation 7 (2)|IT_12957_WebXMLFile_20260901_130439",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 18:13:54",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+      "date": "01-Sep-2026 12:57:10",
+      "company": "eClerx Services Ltd",
       "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260901_125710413",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 17:56:35",
-      "company": "INDOCO REMEDIES LIMITED",
+      "date": "01-Sep-2026 11:52:30",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260831_17563",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260901_115230704.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 17:40:12",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260831_174",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:36:19",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:35:10",
-      "company": "GRAVITA INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260831_173510",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "31-Aug-2026 17:30:20",
+      "date": "01-Sep-2026 11:32:20",
       "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 17:30:20",
+      "date": "01-Sep-2026 11:32:20",
       "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "31-Aug-2026 17:30:20",
+      "date": "01-Sep-2026 11:32:20",
       "company": "Libas Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202608",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:32:20",
+      "company": "Libas Consumer Products Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LIBAS|Libas Consumer Products Limited|Original|Regulation 7 (2)|IT_14456_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 11:14:22",
+      "company": "Sterlite Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026090",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 10:30:35",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260901_103",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 10:04:36",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Sep-2026 09:40:10",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

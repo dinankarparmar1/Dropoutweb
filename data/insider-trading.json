@@ -1,179 +1,165 @@
 {
-  "updated": "2026-09-01T17:05:11.130657Z",
+  "updated": "2026-09-02T08:09:10.839026Z",
   "rows": [
     {
-      "date": "01-Sep-2026 20:07:54",
-      "company": "JSW Energy Limited",
+      "date": "02-Sep-2026 13:04:31",
+      "company": "SINCLAIRS HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260901_2007543",
+      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 19:41:33",
-      "company": "KPI Green Energy Limited",
+      "date": "02-Sep-2026 12:50:06",
+      "company": "HCL Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "KPIGREEN|KPI Green Energy Limited|Original|Regulation 7 (2)|IT_19804_WebXMLFile_20260901_1",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260902_125",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 19:36:58",
-      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "date": "02-Sep-2026 12:29:28",
+      "company": "ALICON CASTALLOY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
+      "transactionType": "ALICON|ALICON CASTALLOY LIMITED|Original|Regulation 7 (2)|IT_2440_WebXMLFile_20260902_1229",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 19:34:39",
-      "company": "ICRA Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (2)|IT_2575_WebXMLFile_20260901_193439061.xml|IT_2",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 19:19:49",
-      "company": "Alembic Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260901_191949014",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 19:06:17",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260901_",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 18:43:02",
-      "company": "T T LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260901_184302360.xml|IT_253",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 18:33:29",
-      "company": "JUBILANT INGREVIA LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026090",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 18:29:34",
-      "company": "Sree Rayalaseema Hi",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 18:18:53",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260901_181853",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 17:23:46",
-      "company": "THANGAMAYIL JEWELLERY LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "THANGAMAYL|THANGAMAYIL JEWELLERY LIMITED|Original|Regulation 7 (2)|IT_3067_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 17:13:45",
-      "company": "D.B.Corp Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "DBCORP|D.B.Corp Limited|Original|Regulation 7 (2)|IT_3015_WebXMLFile_20260901_171345407.xm",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 17:08:48",
-      "company": "KPI Green Energy Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "KPIGREEN|KPI Green Energy Limited|Original|Regulation 7 (2)|IT_19804_WebXMLFile_20260901_1",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 17:03:21",
-      "company": "Responsive Industries Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20260",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 17:02:54",
-      "company": "RAMCO INDUSTRIES LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "RAMCOIND|RAMCO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1560_WebXMLFile_20260901_17",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:59:53",
-      "company": "ENVIRO INFRA ENGINEERS LIMITED",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "EIEL|ENVIRO INFRA ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_21143_WebXMLFile_20260901",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:51:13",
-      "company": "W S Industries (I) Limited",
+      "date": "02-Sep-2026 12:11:45",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260901_165113",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:16:33",
-      "company": "Info Edge (India) Limited",
+      "date": "02-Sep-2026 12:03:46",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260901_161",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260902_120346722.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 11:05:48",
+      "company": "JUBILANT FOODWORKS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260902_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 10:59:14",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 10:48:47",
+      "company": "VIBHOR STEEL TUBES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260902_104",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 10:24:38",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "02-Sep-2026 10:04:28",
+      "company": "M & B Engineering Limited",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "01-Sep-2026 16:12:20",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "MBEL|M & B Engineering Limited|Original|Regulation 7 (2)|IT_24557_WebXMLFile_20260902_1004",
       "quantity": "\u2014"
     }
   ],

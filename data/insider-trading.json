@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-02T14:10:26.707011Z",
+  "updated": "2026-09-02T16:56:38.652781Z",
   "rows": [
+    {
+      "date": "02-Sep-2026 20:28:54",
+      "company": "Aster DM Quality Care Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ASTERDM|Aster DM Quality Care Limited|Original|Regulation 7 (2)|IT_15805_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 20:13:34",
+      "company": "IRB INFRASTRUCTURE DEVELOPERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IRB|IRB INFRASTRUCTURE DEVELOPERS LIMITED|Original|Regulation 7 (2)|IT_2724_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 19:51:55",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260902_195155",
+      "quantity": "\u2014"
+    },
     {
       "date": "02-Sep-2026 19:14:35",
       "company": "Knowledge Realty Trust",
@@ -139,27 +160,6 @@
       "company": "ALICON CASTALLOY LIMITED",
       "personCategory": "\u2014",
       "transactionType": "ALICON|ALICON CASTALLOY LIMITED|Original|Regulation 7 (2)|IT_2440_WebXMLFile_20260902_1229",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
       "quantity": "\u2014"
     },
     {

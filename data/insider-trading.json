@@ -1,6 +1,97 @@
 {
-  "updated": "2026-09-02T08:14:35.549224Z",
+  "updated": "2026-09-02T12:47:17.052476Z",
   "rows": [
+    {
+      "date": "02-Sep-2026 18:08:20",
+      "company": "GODAWARI POWER AND ISPAT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GPIL|GODAWARI POWER AND ISPAT LIMITED|Original|Regulation 7 (2)|IT_2397_WebXMLFile_2026090",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 17:59:10",
+      "company": "OBCL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260902_175910272.xml|IT_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 17:19:24",
+      "company": "INDOCO REMEDIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260902_17192",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:59:41",
+      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:50:14",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260902_165014338",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:43:38",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260902_164",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:26:58",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:25:40",
+      "company": "MANAPPURAM FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MANAPPURAM|MANAPPURAM FINANCE LIMITED|Original|Regulation 7 (2)|IT_3317_WebXMLFile_2026090",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 16:24:20",
+      "company": "NIIT Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NIITLTD|NIIT Limited|Original|Regulation 7 (2)|IT_2209_WebXMLFile_20260902_162420144.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 15:58:08",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 15:57:02",
+      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 15:52:56",
+      "company": "ARMAN FINANCIAL SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARMANFIN|ARMAN FINANCIAL SERVICES LIMITED|Original|Regulation 7 (2)|IT_13898_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "02-Sep-2026 15:04:18",
+      "company": "STEL HOLDINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260902_150418256",
+      "quantity": "\u2014"
+    },
     {
       "date": "02-Sep-2026 13:04:31",
       "company": "SINCLAIRS HOTELS LIMITED",
@@ -83,83 +174,6 @@
       "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
       "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 12:03:46",
-      "company": "BLB LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260902_120346722.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 11:05:48",
-      "company": "JUBILANT FOODWORKS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260902_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 10:59:14",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 10:48:47",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260902_104",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 10:24:38",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 10:04:28",
-      "company": "M & B Engineering Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MBEL|M & B Engineering Limited|Original|Regulation 7 (2)|IT_24557_WebXMLFile_20260902_1004",
       "quantity": "\u2014"
     }
   ],

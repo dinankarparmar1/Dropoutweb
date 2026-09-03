@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-02T16:56:38.652781Z",
+  "updated": "2026-09-03T12:55:23.852929Z",
   "rows": [
     {
-      "date": "02-Sep-2026 20:28:54",
-      "company": "Aster DM Quality Care Limited",
-      "personCategory": "\u2014",
-      "transactionType": "ASTERDM|Aster DM Quality Care Limited|Original|Regulation 7 (2)|IT_15805_WebXMLFile_202609",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 20:13:34",
-      "company": "IRB INFRASTRUCTURE DEVELOPERS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "IRB|IRB INFRASTRUCTURE DEVELOPERS LIMITED|Original|Regulation 7 (2)|IT_2724_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 19:51:55",
-      "company": "NCL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260902_195155",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 19:14:35",
-      "company": "Knowledge Realty Trust",
-      "personCategory": "\u2014",
-      "transactionType": "KRT|Knowledge Realty Trust|Original|Regulation 7 (2)|IT_26747_WebXMLFile_20260902_19143541",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 19:14:35",
-      "company": "Knowledge Realty Trust",
-      "personCategory": "\u2014",
-      "transactionType": "KRT|Knowledge Realty Trust|Original|Regulation 7 (2)|IT_26747_WebXMLFile_20260902_19143541",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 18:56:47",
-      "company": "SUPER SPINNING MILLS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUPERSPIN|SUPER SPINNING MILLS LIMITED|Original|Regulation 7 (2)|IT_122_WebXMLFile_2026090",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 18:44:20",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260902_184420242",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 18:08:20",
-      "company": "GODAWARI POWER AND ISPAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GPIL|GODAWARI POWER AND ISPAT LIMITED|Original|Regulation 7 (2)|IT_2397_WebXMLFile_2026090",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 17:59:10",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260902_175910272.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 17:19:24",
-      "company": "INDOCO REMEDIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260902_17192",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "02-Sep-2026 16:59:41",
+      "date": "03-Sep-2026 18:22:12",
       "company": "GOKUL REFOILS AND SOLVENT LIMITED",
       "personCategory": "\u2014",
       "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 16:50:14",
-      "company": "JSW STEEL LIMITED",
+      "date": "03-Sep-2026 18:21:18",
+      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260902_165014338",
+      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 16:43:38",
-      "company": "Info Edge (India) Limited",
+      "date": "03-Sep-2026 18:20:30",
+      "company": "GOKUL REFOILS AND SOLVENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260902_164",
+      "transactionType": "GOKUL|GOKUL REFOILS AND SOLVENT LIMITED|Original|Regulation 7 (2)|IT_2754_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 16:26:58",
-      "company": "Sree Rayalaseema Hi",
+      "date": "03-Sep-2026 18:19:22",
+      "company": "Jeyyam Global Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "transactionType": "JEYYAM|Jeyyam Global Foods Limited|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260903_",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 16:25:40",
-      "company": "MANAPPURAM FINANCE LIMITED",
+      "date": "03-Sep-2026 18:18:44",
+      "company": "Jeyyam Global Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "MANAPPURAM|MANAPPURAM FINANCE LIMITED|Original|Regulation 7 (2)|IT_3317_WebXMLFile_2026090",
+      "transactionType": "JEYYAM|Jeyyam Global Foods Limited|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260903_",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 16:24:20",
-      "company": "NIIT Limited",
+      "date": "03-Sep-2026 18:17:32",
+      "company": "Jeyyam Global Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "NIITLTD|NIIT Limited|Original|Regulation 7 (2)|IT_2209_WebXMLFile_20260902_162420144.xml|I",
+      "transactionType": "JEYYAM|Jeyyam Global Foods Limited|Original|Regulation 7 (2)|IT_23648_WebXMLFile_20260903_",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 15:58:08",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "03-Sep-2026 18:06:02",
+      "company": "AKI India Limited",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "AKI|AKI India Limited|Original|Regulation 7 (2)|IT_21546_WebXMLFile_20260903_180602055.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 15:57:02",
-      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
+      "date": "03-Sep-2026 17:56:14",
+      "company": "GRAVITA INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260903_175614",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 15:52:56",
-      "company": "ARMAN FINANCIAL SERVICES LIMITED",
+      "date": "03-Sep-2026 17:51:34",
+      "company": "DR. LAL PATHLABS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ARMANFIN|ARMAN FINANCIAL SERVICES LIMITED|Original|Regulation 7 (2)|IT_13898_WebXMLFile_20",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260903",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 15:04:18",
-      "company": "STEL HOLDINGS LIMITED",
+      "date": "03-Sep-2026 17:49:26",
+      "company": "THOMAS COOK  (INDIA)  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260902_150418256",
+      "transactionType": "THOMASCOOK|THOMAS COOK  (INDIA)  LIMITED|Original|Regulation 7 (2)|IT_602_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 13:04:31",
-      "company": "SINCLAIRS HOTELS LIMITED",
+      "date": "03-Sep-2026 17:35:54",
+      "company": "HATSUN AGRO PRODUCT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260902_1",
+      "transactionType": "HATSUN|HATSUN AGRO PRODUCT LIMITED|Original|Regulation 7 (2)|IT_10091_WebXMLFile_20260903_",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 12:50:06",
+      "date": "03-Sep-2026 17:35:19",
       "company": "HCL Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260902_125",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260903_173",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 12:29:28",
-      "company": "ALICON CASTALLOY LIMITED",
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALICON|ALICON CASTALLOY LIMITED|Original|Regulation 7 (2)|IT_2440_WebXMLFile_20260902_1229",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Sep-2026 12:11:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260902_1",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 17:22:21",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     }
   ],

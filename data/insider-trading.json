@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-03T14:13:20.823576Z",
+  "updated": "2026-09-03T16:47:12.539808Z",
   "rows": [
+    {
+      "date": "03-Sep-2026 20:50:50",
+      "company": "ANMOL INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ANMOL|ANMOL INDIA LIMITED|Original|Regulation 7 (2)|IT_19518_WebXMLFile_20260903_205050084",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 20:48:30",
+      "company": "ANMOL INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ANMOL|ANMOL INDIA LIMITED|Original|Regulation 7 (2)|IT_19518_WebXMLFile_20260903_204830221",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 20:35:49",
+      "company": "Alembic Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260903_203549229",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 20:25:22",
+      "company": "Alembic Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260903_202522297",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Sep-2026 19:49:23",
+      "company": "SHREE KARNI FABCOM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEKARNI|SHREE KARNI FABCOM LIMITED|Original|Regulation 7 (2)|IT_22938_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
     {
       "date": "03-Sep-2026 19:39:44",
       "company": "SHREE KARNI FABCOM LIMITED",
@@ -139,41 +174,6 @@
       "company": "AKI India Limited",
       "personCategory": "\u2014",
       "transactionType": "AKI|AKI India Limited|Original|Regulation 7 (2)|IT_21546_WebXMLFile_20260903_191209043.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Sep-2026 19:07:41",
-      "company": "JINKUSHAL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JKIPL|JINKUSHAL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_25984_WebXMLFile_20260903_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Sep-2026 19:07:04",
-      "company": "JINKUSHAL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JKIPL|JINKUSHAL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_25984_WebXMLFile_20260903_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Sep-2026 19:06:20",
-      "company": "AKI India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AKI|AKI India Limited|Original|Regulation 7 (2)|IT_21546_WebXMLFile_20260903_190620206.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Sep-2026 19:05:37",
-      "company": "Chalet Hotels Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CHALET|Chalet Hotels Limited|Original|Regulation 7 (2)|IT_17190_WebXMLFile_20260903_190537",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Sep-2026 19:04:35",
-      "company": "AKI India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AKI|AKI India Limited|Original|Regulation 7 (2)|IT_21546_WebXMLFile_20260903_190435807.xml",
       "quantity": "\u2014"
     }
   ],

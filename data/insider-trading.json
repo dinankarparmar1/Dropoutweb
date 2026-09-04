@@ -1,6 +1,90 @@
 {
-  "updated": "2026-09-04T12:49:00.005262Z",
+  "updated": "2026-09-04T14:04:25.583041Z",
   "rows": [
+    {
+      "date": "04-Sep-2026 19:21:01",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260904_192",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 19:20:37",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260904",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 19:20:32",
+      "company": "Excelsoft Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "EXCELSOFT|Excelsoft Technologies Limited|Original|Regulation 7 (2)|IT_25530_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 19:19:25",
+      "company": "VIBHOR STEEL TUBES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260904_191",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 19:18:40",
+      "company": "KALANA ISPAT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1918398",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 19:17:07",
+      "company": "Excelsoft Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "EXCELSOFT|Excelsoft Technologies Limited|Original|Regulation 7 (2)|IT_25530_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:52:42",
+      "company": "ESCORTS KUBOTA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ESCORTS|ESCORTS KUBOTA LIMITED|Original|Regulation 7 (2)|IT_224_WebXMLFile_20260904_185242",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:31:29",
+      "company": "KALANA ISPAT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1831296",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:30:39",
+      "company": "KALANA ISPAT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1830395",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:25:18",
+      "company": "KALANA ISPAT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1825186",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:24:33",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260904_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "04-Sep-2026 18:21:25",
+      "company": "PAISALO DIGITAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260904_1821",
+      "quantity": "\u2014"
+    },
     {
       "date": "04-Sep-2026 18:18:46",
       "company": "KALANA ISPAT LIMITED",
@@ -90,90 +174,6 @@
       "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
       "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:08:20",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:07:14",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260904_170714018.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:05:17",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260904_170517487.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 17:04:46",
-      "company": "RUBICON RESEARCH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "RUBICON|RUBICON RESEARCH LIMITED|Original|Regulation 7 (2)|IT_24193_WebXMLFile_20260904_17",
       "quantity": "\u2014"
     }
   ],

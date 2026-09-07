@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-07T15:34:41.901528Z",
+  "updated": "2026-09-07T18:01:02.135962Z",
   "rows": [
+    {
+      "date": "07-Sep-2026 21:20:10",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260907_212",
+      "quantity": "\u2014"
+    },
     {
       "date": "07-Sep-2026 19:11:20",
       "company": "eClerx Services Ltd",
@@ -167,13 +174,6 @@
       "company": "LANCOR HOLDINGS LIMITED",
       "personCategory": "\u2014",
       "transactionType": "LANCORHOL|LANCOR HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_22427_WebXMLFile_20260907_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Sep-2026 16:35:07",
-      "company": "Aarti Pharmalabs Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260907",
       "quantity": "\u2014"
     }
   ],

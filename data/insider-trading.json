@@ -1,81 +1,179 @@
 {
-  "updated": "2026-09-07T08:45:13.719860Z",
+  "updated": "2026-09-07T14:28:56.482471Z",
   "rows": [
     {
-      "date": "07-Sep-2026 13:50:38",
+      "date": "07-Sep-2026 19:11:20",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260907_191120432",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:50:01",
       "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260907_1350",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260907_1850",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 13:50:04",
-      "company": "W S Industries (I) Limited",
+      "date": "07-Sep-2026 18:26:18",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260907_135004",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260907_182618596",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 13:23:14",
-      "company": "Asian Hotels (East) Limited",
-      "personCategory": "Promoter",
-      "transactionType": "Inter-se Transfer",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "07-Sep-2026 13:04:33",
-      "company": "Donear Industries Limited",
+      "date": "07-Sep-2026 18:14:40",
+      "company": "IRB INFRASTRUCTURE DEVELOPERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DONEAR|Donear Industries Limited|Original|Regulation 7 (2)|IT_2474_WebXMLFile_20260907_130",
+      "transactionType": "IRB|IRB INFRASTRUCTURE DEVELOPERS LIMITED|Original|Regulation 7 (2)|IT_2724_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 12:57:01",
-      "company": "Asian Hotels (East) Limited",
+      "date": "07-Sep-2026 18:10:24",
+      "company": "OBCL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AHLEAST|Asian Hotels (East) Limited|Original|Regulation 7 (2)|IT_3415_WebXMLFile_20260907_",
+      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260907_181024296.xml|IT_",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 12:55:32",
-      "company": "Asian Hotels (East) Limited",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AHLEAST|Asian Hotels (East) Limited|Original|Regulation 7 (2)|IT_3415_WebXMLFile_20260907_",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 12:55:24",
-      "company": "Donear Industries Limited",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DONEAR|Donear Industries Limited|Original|Regulation 7 (2)|IT_2474_WebXMLFile_20260907_125",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 12:11:56",
-      "company": "CSL Finance Limited",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260907_1211",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 11:53:31",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 11:53:23",
-      "company": "INDO",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260907_115322776.",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
       "quantity": "\u2014"
     },
     {
-      "date": "07-Sep-2026 11:49:39",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 18:09:27",
+      "company": "NITIRAJ ENGINEERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NITIRAJ|NITIRAJ ENGINEERS LIMITED|Original|Regulation 7 (2)|IT_14639_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 17:52:50",
+      "company": "ALKYL AMINES CHEMICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALKYLAMINE|ALKYL AMINES CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_1527_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 17:51:27",
+      "company": "FERMENTA BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "FERMENTA|FERMENTA BIOTECH LIMITED|Original|Regulation 7 (2)|IT_28435_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 17:30:35",
+      "company": "ALPINE TEXWORLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALPINETEX|ALPINE TEXWORLD LIMITED|Original|Regulation 7 (2)|IT_27009_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 17:28:45",
+      "company": "ALPINE TEXWORLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALPINETEX|ALPINE TEXWORLD LIMITED|Original|Regulation 7 (2)|IT_27009_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 17:03:41",
+      "company": "LANCOR HOLDINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LANCORHOL|LANCOR HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_22427_WebXMLFile_20260907_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Sep-2026 16:35:07",
+      "company": "Aarti Pharmalabs Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260907",
       "quantity": "\u2014"
     }
   ],

@@ -1,179 +1,81 @@
 {
-  "updated": "2026-09-04T16:41:07.773725Z",
+  "updated": "2026-09-07T08:39:05.190943Z",
   "rows": [
     {
-      "date": "04-Sep-2026 21:15:43",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 13:50:38",
+      "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260907_1350",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 21:15:15",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 13:50:04",
+      "company": "W S Industries (I) Limited",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260907_135004",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 21:14:56",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "date": "07-Sep-2026 13:23:14",
+      "company": "Asian Hotels (East) Limited",
+      "personCategory": "Promoter",
+      "transactionType": "Inter-se Transfer",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 21:14:13",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 13:04:33",
+      "company": "Donear Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "DONEAR|Donear Industries Limited|Original|Regulation 7 (2)|IT_2474_WebXMLFile_20260907_130",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 21:09:43",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 12:57:01",
+      "company": "Asian Hotels (East) Limited",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "AHLEAST|Asian Hotels (East) Limited|Original|Regulation 7 (2)|IT_3415_WebXMLFile_20260907_",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 21:04:08",
-      "company": "Connplex Cinemas Limited",
+      "date": "07-Sep-2026 12:55:32",
+      "company": "Asian Hotels (East) Limited",
       "personCategory": "\u2014",
-      "transactionType": "CONNPLEX|Connplex Cinemas Limited|Original|Regulation 7 (2)|IT_25259_WebXMLFile_20260904_2",
+      "transactionType": "AHLEAST|Asian Hotels (East) Limited|Original|Regulation 7 (2)|IT_3415_WebXMLFile_20260907_",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 20:55:50",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 12:55:24",
+      "company": "Donear Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "DONEAR|Donear Industries Limited|Original|Regulation 7 (2)|IT_2474_WebXMLFile_20260907_125",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 20:50:54",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 12:11:56",
+      "company": "CSL Finance Limited",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260907_1211",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 20:49:36",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "07-Sep-2026 11:53:31",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 20:31:57",
-      "company": "SAPPHIRE FOODS INDIA LIMITED",
+      "date": "07-Sep-2026 11:53:23",
+      "company": "INDO",
       "personCategory": "\u2014",
-      "transactionType": "SAPPHIRE|SAPPHIRE FOODS INDIA LIMITED|Original|Regulation 7 (2)|IT_19858_WebXMLFile_202609",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260907_115322776.",
       "quantity": "\u2014"
     },
     {
-      "date": "04-Sep-2026 20:26:52",
-      "company": "RUBICON RESEARCH LIMITED",
+      "date": "07-Sep-2026 11:49:39",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RUBICON|RUBICON RESEARCH LIMITED|Original|Regulation 7 (2)|IT_24193_WebXMLFile_20260904_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 20:06:49",
-      "company": "JSW Energy Limited",
-      "personCategory": "\u2014",
-      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260904_2006494",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:38:13",
-      "company": "Patel Integrated Logistics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Revision|Regulation 7 (2)|IT_2705_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:37:14",
-      "company": "Patel Integrated Logistics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Original|Regulation 7 (2)|IT_2705_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:37:09",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260904_193",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:21:01",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260904_192",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:20:37",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260904",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:20:32",
-      "company": "Excelsoft Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "EXCELSOFT|Excelsoft Technologies Limited|Original|Regulation 7 (2)|IT_25530_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:19:25",
-      "company": "VIBHOR STEEL TUBES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VSTL|VIBHOR STEEL TUBES LIMITED|Original|Regulation 7 (2)|IT_22607_WebXMLFile_20260904_191",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:18:40",
-      "company": "KALANA ISPAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1918398",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 19:17:07",
-      "company": "Excelsoft Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "EXCELSOFT|Excelsoft Technologies Limited|Original|Regulation 7 (2)|IT_25530_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 18:52:42",
-      "company": "ESCORTS KUBOTA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ESCORTS|ESCORTS KUBOTA LIMITED|Original|Regulation 7 (2)|IT_224_WebXMLFile_20260904_185242",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 18:31:29",
-      "company": "KALANA ISPAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1831296",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 18:30:39",
-      "company": "KALANA ISPAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1830395",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "04-Sep-2026 18:25:18",
-      "company": "KALANA ISPAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KALANA|KALANA ISPAT LIMITED|Original|Regulation 7 (2)|IT_23704_WebXMLFile_20260904_1825186",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

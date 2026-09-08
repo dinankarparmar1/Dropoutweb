@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-08T12:58:11.294240Z",
+  "updated": "2026-09-08T14:13:52.569883Z",
   "rows": [
+    {
+      "date": "08-Sep-2026 19:43:09",
+      "company": "PELATRO LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PELATRO|PELATRO LIMITED|Original|Regulation 7 (2)|IT_23993_WebXMLFile_20260908_194309468.x",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 19:42:52",
+      "company": "Valor Estate Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBREALTY|Valor Estate Limited|Original|Regulation 7 (2)|IT_3072_WebXMLFile_20260908_194252",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 19:04:18",
+      "company": "SENCO GOLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SENCO|SENCO GOLD LIMITED|Original|Regulation 7 (2)|IT_20714_WebXMLFile_20260908_190418248.",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 18:52:30",
+      "company": "MERCURY EVTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MERCURYEV|MERCURY EVTECH LIMITED|Original|Regulation 7 (2)|IT_27329_WebXMLFile_20260908_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 18:39:24",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260908",
+      "quantity": "\u2014"
+    },
     {
       "date": "08-Sep-2026 18:13:27",
       "company": "ASAHI INDIA GLASS LIMITED",
@@ -97,41 +132,6 @@
       "company": "Sameera Agro And Infra Limited",
       "personCategory": "\u2014",
       "transactionType": "SAIFL|Sameera Agro And Infra Limited|Original|Regulation 7 (2)|IT_22448_WebXMLFile_2026090",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {

@@ -1,11 +1,102 @@
 {
-  "updated": "2026-09-08T08:26:16.161171Z",
+  "updated": "2026-09-08T12:58:11.294240Z",
   "rows": [
     {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "date": "08-Sep-2026 18:13:27",
+      "company": "ASAHI INDIA GLASS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "transactionType": "ASAHIINDIA|ASAHI INDIA GLASS LIMITED|Original|Regulation 7 (2)|IT_1672_WebXMLFile_20260908",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 18:13:20",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260908_181320306.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 17:27:36",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 16:56:12",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 16:39:08",
+      "company": "Valiant Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "VALIANTORG|Valiant Organics Limited|Original|Regulation 7 (2)|IT_18775_WebXMLFile_20260908",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 16:38:24",
+      "company": "W S Industries (I) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260908_163824",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 16:21:35",
+      "company": "Capri Global Capital Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CGCL|Capri Global Capital Limited|Original|Regulation 7 (2)|IT_3673_WebXMLFile_20260908_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 15:52:45",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260908_15",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 15:52:21",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260908_15",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 15:37:42",
+      "company": "MTAR TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MTARTECH|MTAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19009_WebXMLFile_20260908_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 15:25:36",
+      "company": "ORIENT CERATECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ORIENTCER|ORIENT CERATECH LIMITED|Original|Regulation 7 (2)|IT_2342_WebXMLFile_20260908_15",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 15:13:50",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260908_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 14:11:26",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Sep-2026 14:09:15",
+      "company": "Sameera Agro And Infra Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SAIFL|Sameera Agro And Infra Limited|Original|Regulation 7 (2)|IT_22448_WebXMLFile_2026090",
       "quantity": "\u2014"
     },
     {
@@ -83,97 +174,6 @@
       "company": "AAKASH EXPLORATION SERVICES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 13:28:14",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     }
   ],

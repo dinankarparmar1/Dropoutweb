@@ -1,179 +1,81 @@
 {
-  "updated": "2026-09-08T16:57:18.366948Z",
+  "updated": "2026-09-09T08:24:14.247659Z",
   "rows": [
     {
-      "date": "08-Sep-2026 21:35:49",
-      "company": "K M Sugar Mills Limited",
+      "date": "09-Sep-2026 13:34:52",
+      "company": "SINCLAIRS HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KMSUGAR|K M Sugar Mills Limited|Original|Regulation 7 (2)|IT_2605_WebXMLFile_20260908_2135",
+      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260909_1",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 20:56:04",
-      "company": "Chalet Hotels Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CHALET|Chalet Hotels Limited|Original|Regulation 7 (2)|IT_17190_WebXMLFile_20260908_205604",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 20:40:00",
-      "company": "NCL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260908_204000",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 19:43:09",
-      "company": "PELATRO LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PELATRO|PELATRO LIMITED|Original|Regulation 7 (2)|IT_23993_WebXMLFile_20260908_194309468.x",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 19:42:52",
-      "company": "Valor Estate Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DBREALTY|Valor Estate Limited|Original|Regulation 7 (2)|IT_3072_WebXMLFile_20260908_194252",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 19:04:18",
-      "company": "SENCO GOLD LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SENCO|SENCO GOLD LIMITED|Original|Regulation 7 (2)|IT_20714_WebXMLFile_20260908_190418248.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 18:52:30",
-      "company": "MERCURY EVTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MERCURYEV|MERCURY EVTECH LIMITED|Original|Regulation 7 (2)|IT_27329_WebXMLFile_20260908_18",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 18:39:24",
-      "company": "DR. LAL PATHLABS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260908",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 18:13:27",
-      "company": "ASAHI INDIA GLASS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ASAHIINDIA|ASAHI INDIA GLASS LIMITED|Original|Regulation 7 (2)|IT_1672_WebXMLFile_20260908",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 18:13:20",
-      "company": "T T LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260908_181320306.xml|IT_253",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 17:27:36",
-      "company": "Sree Rayalaseema Hi",
-      "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 16:56:12",
-      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 16:39:08",
-      "company": "Valiant Organics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "VALIANTORG|Valiant Organics Limited|Original|Regulation 7 (2)|IT_18775_WebXMLFile_20260908",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 16:38:24",
+      "date": "09-Sep-2026 12:53:30",
       "company": "W S Industries (I) Limited",
       "personCategory": "\u2014",
-      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260908_163824",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20260909_125330",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 16:21:35",
-      "company": "Capri Global Capital Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CGCL|Capri Global Capital Limited|Original|Regulation 7 (2)|IT_3673_WebXMLFile_20260908_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 15:52:45",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260908_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 15:52:21",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260908_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 15:37:42",
-      "company": "MTAR TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MTARTECH|MTAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19009_WebXMLFile_20260908_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Sep-2026 15:25:36",
+      "date": "09-Sep-2026 12:52:34",
       "company": "ORIENT CERATECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ORIENTCER|ORIENT CERATECH LIMITED|Original|Regulation 7 (2)|IT_2342_WebXMLFile_20260908_15",
+      "transactionType": "ORIENTCER|ORIENT CERATECH LIMITED|Original|Regulation 7 (2)|IT_2342_WebXMLFile_20260909_12",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 15:13:50",
-      "company": "BHARTIYA INTERNATIONAL LIMITED",
+      "date": "09-Sep-2026 12:45:50",
+      "company": "NURECA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260908_1",
+      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260909_124550600.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 14:11:26",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "09-Sep-2026 12:43:57",
+      "company": "SHAKTI PUMPS (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "SHAKTIPUMP|SHAKTI PUMPS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_5329_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 14:09:15",
-      "company": "Sameera Agro And Infra Limited",
+      "date": "09-Sep-2026 12:34:52",
+      "company": "Aarti Pharmalabs Limited",
       "personCategory": "\u2014",
-      "transactionType": "SAIFL|Sameera Agro And Infra Limited|Original|Regulation 7 (2)|IT_22448_WebXMLFile_2026090",
+      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260909",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "date": "09-Sep-2026 11:36:01",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260909_113600966.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "date": "09-Sep-2026 10:44:34",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Sep-2026 13:51:10",
-      "company": "AAKASH EXPLORATION SERVICES LIMITED",
+      "date": "09-Sep-2026 10:36:18",
+      "company": "Swan Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "AAKASH|AAKASH EXPLORATION SERVICES LIMITED|Original|Regulation 7 (2)|IT_16114_WebXMLFile_2",
+      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20260909_103617926",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Sep-2026 10:27:14",
+      "company": "Swan Corp Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20260909_102714425",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Sep-2026 09:49:48",
+      "company": "INDO",
+      "personCategory": "\u2014",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260909_094948456.",
       "quantity": "\u2014"
     }
   ],

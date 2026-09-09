@@ -1,6 +1,20 @@
 {
-  "updated": "2026-09-09T13:04:55.003369Z",
+  "updated": "2026-09-09T14:14:28.464080Z",
   "rows": [
+    {
+      "date": "09-Sep-2026 19:34:46",
+      "company": "INDOCO REMEDIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260909_19344",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Sep-2026 19:08:00",
+      "company": "ADVENT HOTELS INTERNATIONAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ADVENTHTL|ADVENT HOTELS INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_26727_WebXMLFil",
+      "quantity": "\u2014"
+    },
     {
       "date": "09-Sep-2026 18:22:50",
       "company": "eClerx Services Ltd",
@@ -76,20 +90,6 @@
       "company": "NAVA LIMITED",
       "personCategory": "\u2014",
       "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260909_173520671.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
       "quantity": "\u2014"
     },
     {

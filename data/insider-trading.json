@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-09T14:14:28.464080Z",
+  "updated": "2026-09-09T16:57:29.105806Z",
   "rows": [
+    {
+      "date": "09-Sep-2026 21:35:21",
+      "company": "NIIT Learning Systems Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NIITMTS|NIIT Learning Systems Limited|Original|Regulation 7 (2)|IT_22067_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Sep-2026 20:29:30",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Sep-2026 19:54:00",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "Market Purchase",
+      "quantity": "\u2014"
+    },
     {
       "date": "09-Sep-2026 19:34:46",
       "company": "INDOCO REMEDIES LIMITED",
@@ -90,27 +111,6 @@
       "company": "NAVA LIMITED",
       "personCategory": "\u2014",
       "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260909_173520671.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
       "quantity": "\u2014"
     },
     {

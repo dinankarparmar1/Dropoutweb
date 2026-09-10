@@ -1,6 +1,48 @@
 {
-  "updated": "2026-09-10T14:08:03.330506Z",
+  "updated": "2026-09-10T16:47:33.051407Z",
   "rows": [
+    {
+      "date": "10-Sep-2026 22:10:05",
+      "company": "SHUBHLAXMI JEWEL ART LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHUBHLAXMI|SHUBHLAXMI JEWEL ART LIMITED|Original|Regulation 7 (2)|IT_16928_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 20:46:52",
+      "company": "KARUR VYSYA BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260910_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 20:31:30",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260910_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 20:30:39",
+      "company": "Signet Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260910_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 20:27:10",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260910_202710",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 19:58:34",
+      "company": "JSW Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260910_1958343",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Sep-2026 19:34:48",
       "company": "SUVIDHAA INFOSERVE LIMITED",
@@ -132,48 +174,6 @@
       "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
       "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 17:16:38",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 17:16:38",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 17:16:38",
-      "company": "Focus Lighting And Fixtures Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 17:04:45",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260910_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 16:50:52",
-      "company": "Sree Rayalaseema Hi",
-      "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 16:50:24",
-      "company": "Sree Rayalaseema Hi",
-      "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
       "quantity": "\u2014"
     }
   ],

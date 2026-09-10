@@ -1,60 +1,179 @@
 {
-  "updated": "2026-09-10T08:30:57.263793Z",
+  "updated": "2026-09-10T13:04:33.524209Z",
   "rows": [
     {
-      "date": "10-Sep-2026 13:27:10",
-      "company": "Affle 3i Limited",
+      "date": "10-Sep-2026 18:34:00",
+      "company": "Dhampur Bio Organics Limited",
       "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260910_132710472.xm",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260910_1",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:46:59",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "10-Sep-2026 18:21:27",
+      "company": "Quess Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260910_114",
+      "transactionType": "QUESS|Quess Corp Limited|Original|Regulation 7 (2)|IT_14019_WebXMLFile_20260910_182127063.",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:46:54",
-      "company": "SHIVA TEXYARN LIMITED",
+      "date": "10-Sep-2026 18:13:55",
+      "company": "BELLA CASA FASHION & RETAIL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Revision|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1146",
+      "transactionType": "BELLACASA|BELLA CASA FASHION & RETAIL LIMITED|Original|Regulation 7 (2)|IT_26028_WebXMLFil",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:37:38",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "10-Sep-2026 18:10:02",
+      "company": "Sterlite Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026091",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:17:00",
-      "company": "SHIVA TEXYARN LIMITED",
+      "date": "10-Sep-2026 18:08:46",
+      "company": "MERCURY EVTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1117",
+      "transactionType": "MERCURYEV|MERCURY EVTECH LIMITED|Original|Regulation 7 (2)|IT_27329_WebXMLFile_20260910_18",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:16:54",
-      "company": "SHIVA TEXYARN LIMITED",
+      "date": "10-Sep-2026 17:36:58",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1116",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260910_173658289.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:16:49",
-      "company": "SHIVA TEXYARN LIMITED",
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1116",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Sep-2026 11:04:37",
-      "company": "CONFIDENCE PETROLEUM INDIA LIMITED",
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "CONFIPET|CONFIDENCE PETROLEUM INDIA LIMITED|Original|Regulation 7 (2)|IT_17510_WebXMLFile_",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:16:38",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 17:04:45",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260910_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 16:50:52",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 16:50:24",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 16:49:59",
+      "company": "Visaka Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260910_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 16:42:22",
+      "company": "TITAN COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20260910_164222009",
       "quantity": "\u2014"
     }
   ],

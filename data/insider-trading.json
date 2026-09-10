@@ -1,179 +1,60 @@
 {
-  "updated": "2026-09-09T16:57:29.105806Z",
+  "updated": "2026-09-10T08:24:36.578623Z",
   "rows": [
     {
-      "date": "09-Sep-2026 21:35:21",
-      "company": "NIIT Learning Systems Limited",
+      "date": "10-Sep-2026 13:27:10",
+      "company": "Affle 3i Limited",
       "personCategory": "\u2014",
-      "transactionType": "NIITMTS|NIIT Learning Systems Limited|Original|Regulation 7 (2)|IT_22067_WebXMLFile_202609",
+      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260910_132710472.xm",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 20:29:30",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "10-Sep-2026 11:46:59",
+      "company": "SANGAM (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260910_114",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 19:54:00",
-      "company": "HCL Technologies Limited",
+      "date": "10-Sep-2026 11:46:54",
+      "company": "SHIVA TEXYARN LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "Market Purchase",
+      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Revision|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1146",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 19:34:46",
-      "company": "INDOCO REMEDIES LIMITED",
+      "date": "10-Sep-2026 11:37:38",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20260909_19344",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 19:08:00",
-      "company": "ADVENT HOTELS INTERNATIONAL LIMITED",
+      "date": "10-Sep-2026 11:17:00",
+      "company": "SHIVA TEXYARN LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ADVENTHTL|ADVENT HOTELS INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_26727_WebXMLFil",
+      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1117",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 18:22:50",
-      "company": "eClerx Services Ltd",
+      "date": "10-Sep-2026 11:16:54",
+      "company": "SHIVA TEXYARN LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260909_182250516",
+      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1116",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 18:18:35",
-      "company": "JINDAL STAINLESS LIMITED",
+      "date": "10-Sep-2026 11:16:49",
+      "company": "SHIVA TEXYARN LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20260909_1818352",
+      "transactionType": "SHIVATEX|SHIVA TEXYARN LIMITED|Original|Regulation 7 (2)|IT_15657_WebXMLFile_20260910_1116",
       "quantity": "\u2014"
     },
     {
-      "date": "09-Sep-2026 18:17:56",
-      "company": "JINDAL STAINLESS LIMITED",
+      "date": "10-Sep-2026 11:04:37",
+      "company": "CONFIDENCE PETROLEUM INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20260909_1817565",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:58:40",
-      "company": "SUPER SPINNING MILLS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUPERSPIN|SUPER SPINNING MILLS LIMITED|Original|Regulation 7 (2)|IT_122_WebXMLFile_2026090",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:55:15",
-      "company": "Greenpanel Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:52:16",
-      "company": "SUPER SPINNING MILLS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUPERSPIN|SUPER SPINNING MILLS LIMITED|Original|Regulation 7 (2)|IT_122_WebXMLFile_2026090",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:50:16",
-      "company": "JINDAL STAINLESS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20260909_1750158",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:50:03",
-      "company": "360 ONE WAM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260909_17500353",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:49:52",
-      "company": "CEAT Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CEATLTD|CEAT Limited|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20260909_174952204.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:40:42",
-      "company": "Suraj Estate Developers Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SURAJEST|Suraj Estate Developers Limited|Original|Regulation 7 (2)|IT_20525_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:35:20",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260909_173520671.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Sep-2026 17:28:56",
-      "company": "JASH ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JASH|JASH ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_15524_WebXMLFile_20260909_17285",
+      "transactionType": "CONFIPET|CONFIDENCE PETROLEUM INDIA LIMITED|Original|Regulation 7 (2)|IT_17510_WebXMLFile_",
       "quantity": "\u2014"
     }
   ],

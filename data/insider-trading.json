@@ -1,6 +1,20 @@
 {
-  "updated": "2026-09-10T13:04:33.524209Z",
+  "updated": "2026-09-10T14:08:03.330506Z",
   "rows": [
+    {
+      "date": "10-Sep-2026 19:34:48",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260910",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Sep-2026 19:34:10",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260910",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Sep-2026 18:34:00",
       "company": "Dhampur Bio Organics Limited",
@@ -160,20 +174,6 @@
       "company": "Sree Rayalaseema Hi",
       "personCategory": "\u2014",
       "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 16:49:59",
-      "company": "Visaka Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260910_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "10-Sep-2026 16:42:22",
-      "company": "TITAN COMPANY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20260910_164222009",
       "quantity": "\u2014"
     }
   ],

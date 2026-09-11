@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-11T12:55:03.288565Z",
+  "updated": "2026-09-11T14:07:03.899662Z",
   "rows": [
     {
-      "date": "11-Sep-2026 18:23:50",
-      "company": "AvenuesAI Limited",
+      "date": "11-Sep-2026 19:24:37",
+      "company": "SIMCA ADVERTISING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CCAVENUE|AvenuesAI Limited|Original|Regulation 7 (2)|IT_13663_WebXMLFile_20260911_18235043",
+      "transactionType": "SIMCA|SIMCA ADVERTISING LIMITED|Original|Regulation 7 (2)|IT_26441_WebXMLFile_20260911_192",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 18:19:21",
-      "company": "DR. LAL PATHLABS LIMITED",
+      "date": "11-Sep-2026 19:12:14",
+      "company": "eClerx Services Ltd",
       "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260911",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260911_191214648",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:58:12",
-      "company": "WIPRO LIMITED",
+      "date": "11-Sep-2026 19:04:21",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20260911_175812282.xml|IT_",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260911_190420687",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:23:00",
-      "company": "Fonebox Retail Limited",
+      "date": "11-Sep-2026 18:42:02",
+      "company": "ICRA Limited",
       "personCategory": "\u2014",
-      "transactionType": "FONEBOX|Fonebox Retail Limited|Original|Regulation 7 (2)|IT_22630_WebXMLFile_20260911_1723",
+      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (3)|IT_2575_WebXMLFile_20260911_184202535.xml|IT_2",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:19:10",
-      "company": "ELECTROTHERM (INDIA) LIMITED",
+      "date": "11-Sep-2026 18:37:06",
+      "company": "Sterlite Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "ELECTHERM|ELECTROTHERM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1496_WebXMLFile_202609",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026091",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:19:05",
-      "company": "ELECTROTHERM (INDIA) LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ELECTHERM|ELECTROTHERM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1496_WebXMLFile_202609",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:49",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:11:04",
-      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 17:02:35",
-      "company": "Suraj Estate Developers Limited",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SURAJEST|Suraj Estate Developers Limited|Original|Regulation 7 (2)|IT_20525_WebXMLFile_202",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 16:51:55",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260911",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 16:49:57",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260911",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 16:34:30",
-      "company": "Sree Rayalaseema Hi",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 16:20:17",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
+      "date": "11-Sep-2026 18:28:31",
+      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
+      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
       "quantity": "\u2014"
     }
   ],

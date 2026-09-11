@@ -1,81 +1,179 @@
 {
-  "updated": "2026-09-11T08:25:07.364109Z",
+  "updated": "2026-09-11T12:55:03.288565Z",
   "rows": [
     {
-      "date": "11-Sep-2026 13:48:46",
-      "company": "SINCLAIRS HOTELS LIMITED",
+      "date": "11-Sep-2026 18:23:50",
+      "company": "AvenuesAI Limited",
       "personCategory": "\u2014",
-      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260911_1",
+      "transactionType": "CCAVENUE|AvenuesAI Limited|Original|Regulation 7 (2)|IT_13663_WebXMLFile_20260911_18235043",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 13:35:40",
-      "company": "OBCL LIMITED",
+      "date": "11-Sep-2026 18:19:21",
+      "company": "DR. LAL PATHLABS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260911_133540265.xml|IT_",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260911",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 13:06:26",
-      "company": "SAPPHIRE FOODS INDIA LIMITED",
+      "date": "11-Sep-2026 17:58:12",
+      "company": "WIPRO LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SAPPHIRE|SAPPHIRE FOODS INDIA LIMITED|Original|Regulation 7 (2)|IT_19858_WebXMLFile_202609",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20260911_175812282.xml|IT_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 12:21:22",
-      "company": "Fujiyama Power Systems Limited",
+      "date": "11-Sep-2026 17:23:00",
+      "company": "Fonebox Retail Limited",
       "personCategory": "\u2014",
-      "transactionType": "UTLSOLAR|Fujiyama Power Systems Limited|Original|Regulation 7 (2)|IT_25131_WebXMLFile_2026",
+      "transactionType": "FONEBOX|Fonebox Retail Limited|Original|Regulation 7 (2)|IT_22630_WebXMLFile_20260911_1723",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 12:10:10",
-      "company": "Signet Industries Limited",
+      "date": "11-Sep-2026 17:19:10",
+      "company": "ELECTROTHERM (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260911_12",
+      "transactionType": "ELECTHERM|ELECTROTHERM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1496_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 11:54:10",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "11-Sep-2026 17:19:05",
+      "company": "ELECTROTHERM (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "ELECTHERM|ELECTROTHERM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1496_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 11:40:42",
-      "company": "BLB LIMITED",
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260911_114042447.xml",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 11:37:50",
-      "company": "Visaka Industries Limited",
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260911_",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 11:12:04",
-      "company": "SYNERGY GREEN INDUSTRIES LIMITED",
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SGIL|SYNERGY GREEN INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_19808_WebXMLFile_202609",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 10:25:22",
-      "company": "DIAMINES & CHEMICALS LIMITED",
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DIAMINESQ|DIAMINES & CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_22360_WebXMLFile_20260",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 10:14:24",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:11:04",
+      "company": "SOUTH WEST PINNACLE EXPLORATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SOUTHWEST|SOUTH WEST PINNACLE EXPLORATION LIMITED|Original|Regulation 7 (2)|IT_15798_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 17:02:35",
+      "company": "Suraj Estate Developers Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SURAJEST|Suraj Estate Developers Limited|Original|Regulation 7 (2)|IT_20525_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 16:51:55",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260911",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 16:49:57",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260911",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 16:34:30",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Sep-2026 16:20:17",
+      "company": "ACTIVE INFRASTRUCTURES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

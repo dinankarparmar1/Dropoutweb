@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-11T08:19:01.967033Z",
+  "updated": "2026-09-11T08:25:07.364109Z",
   "rows": [
+    {
+      "date": "11-Sep-2026 13:48:46",
+      "company": "SINCLAIRS HOTELS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260911_1",
+      "quantity": "\u2014"
+    },
     {
       "date": "11-Sep-2026 13:35:40",
       "company": "OBCL LIMITED",

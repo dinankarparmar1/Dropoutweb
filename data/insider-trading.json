@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-11T14:07:03.899662Z",
+  "updated": "2026-09-11T16:50:38.132886Z",
   "rows": [
+    {
+      "date": "11-Sep-2026 21:03:30",
+      "company": "NCL INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260911_210329",
+      "quantity": "\u2014"
+    },
     {
       "date": "11-Sep-2026 19:24:37",
       "company": "SIMCA ADVERTISING LIMITED",
@@ -129,13 +136,6 @@
     },
     {
       "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
       "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",

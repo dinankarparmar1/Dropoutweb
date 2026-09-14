@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-14T09:23:22.105348Z",
+  "updated": "2026-09-14T15:57:11.151776Z",
   "rows": [
+    {
+      "date": "14-Sep-2026 19:09:16",
+      "company": "USHA MARTIN LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "USHAMART|USHA MARTIN LIMITED|Original|Regulation 7 (2)|IT_1938_WebXMLFile_20260914_1909162",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Sep-2026 17:25:46",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260914_172",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "14-Sep-2026 17:23:54",
+      "company": "SANGAM (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260914_172",
+      "quantity": "\u2014"
+    },
     {
       "date": "14-Sep-2026 14:45:55",
       "company": "BHARTIYA INTERNATIONAL LIMITED",

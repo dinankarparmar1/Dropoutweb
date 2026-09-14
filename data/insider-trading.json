@@ -1,179 +1,53 @@
 {
-  "updated": "2026-09-11T16:50:38.132886Z",
+  "updated": "2026-09-14T09:16:43.484034Z",
   "rows": [
     {
-      "date": "11-Sep-2026 21:03:30",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "14-Sep-2026 14:45:55",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260911_210329",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260914_1",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 19:24:37",
-      "company": "SIMCA ADVERTISING LIMITED",
+      "date": "14-Sep-2026 13:41:58",
+      "company": "JUBILANT INGREVIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SIMCA|SIMCA ADVERTISING LIMITED|Original|Regulation 7 (2)|IT_26441_WebXMLFile_20260911_192",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026091",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 19:12:14",
-      "company": "eClerx Services Ltd",
+      "date": "14-Sep-2026 12:49:24",
+      "company": "AVENUE SUPERMARTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260911_191214648",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260914_124",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 19:04:21",
-      "company": "JSW STEEL LIMITED",
+      "date": "14-Sep-2026 12:14:31",
+      "company": "Signet Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260911_190420687",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260914_12",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 18:42:02",
-      "company": "ICRA Limited",
+      "date": "14-Sep-2026 11:07:34",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ICRA|ICRA Limited|Original|Regulation 7 (3)|IT_2575_WebXMLFile_20260911_184202535.xml|IT_2",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 18:37:06",
-      "company": "Sterlite Technologies Limited",
+      "date": "14-Sep-2026 10:44:16",
+      "company": "CSL Finance Limited",
       "personCategory": "\u2014",
-      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026091",
+      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260914_1044",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
+      "date": "14-Sep-2026 10:37:11",
+      "company": "Signet Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:49",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Sep-2026 18:28:31",
-      "company": "SILVER TOUCH TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SILVERTUC|SILVER TOUCH TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_15598_WebXMLFile_",
+      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260914_10",
       "quantity": "\u2014"
     }
   ],

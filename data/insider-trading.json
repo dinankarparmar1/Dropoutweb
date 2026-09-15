@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-15T14:41:50.836848Z",
+  "updated": "2026-09-15T17:25:18.398851Z",
   "rows": [
+    {
+      "date": "15-Sep-2026 21:28:46",
+      "company": "CONTROL PRINT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260915_212",
+      "quantity": "\u2014"
+    },
     {
       "date": "15-Sep-2026 19:19:58",
       "company": "TRUALT BIOENERGY LIMITED",
@@ -167,13 +174,6 @@
       "company": "NOVA AGRITECH LIMITED",
       "personCategory": "\u2014",
       "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1154",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 11:53:06",
-      "company": "NOVA AGRITECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1153",
       "quantity": "\u2014"
     }
   ],

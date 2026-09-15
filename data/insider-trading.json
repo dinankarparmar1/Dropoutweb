@@ -1,74 +1,88 @@
 {
-  "updated": "2026-09-14T18:17:24.842464Z",
+  "updated": "2026-09-15T08:59:03.564576Z",
   "rows": [
     {
-      "date": "14-Sep-2026 19:09:16",
-      "company": "USHA MARTIN LIMITED",
+      "date": "15-Sep-2026 13:17:47",
+      "company": "BlueStone Jewellery and Lifestyle Limited",
       "personCategory": "\u2014",
-      "transactionType": "USHAMART|USHA MARTIN LIMITED|Original|Regulation 7 (2)|IT_1938_WebXMLFile_20260914_1909162",
+      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 17:25:46",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "15-Sep-2026 12:24:03",
+      "company": "Fiberweb (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260914_172",
+      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20260915_1",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 17:23:54",
-      "company": "SANGAM (INDIA) LIMITED",
+      "date": "15-Sep-2026 12:20:39",
+      "company": "Fiberweb (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260914_172",
+      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20260915_1",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 14:45:55",
-      "company": "BHARTIYA INTERNATIONAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260914_1",
+      "date": "15-Sep-2026 12:19:36",
+      "company": "INDO",
+      "personCategory": "Designated Person",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Revision|Regulation 7 (2)|IT_27036_WebXMLFile_20260915_121936140.",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 13:41:58",
-      "company": "JUBILANT INGREVIA LIMITED",
+      "date": "15-Sep-2026 12:07:24",
+      "company": "GNA AXLES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026091",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260915_120724267.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 12:49:24",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "15-Sep-2026 12:07:00",
+      "company": "GNA AXLES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20260914_124",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260915_120700327.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 12:14:31",
-      "company": "Signet Industries Limited",
+      "date": "15-Sep-2026 11:54:35",
+      "company": "NOVA AGRITECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260914_12",
+      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1154",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 11:07:34",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "15-Sep-2026 11:54:07",
+      "company": "NOVA AGRITECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1154",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 10:44:16",
-      "company": "CSL Finance Limited",
+      "date": "15-Sep-2026 11:53:06",
+      "company": "NOVA AGRITECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260914_1044",
+      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1153",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Sep-2026 10:37:11",
-      "company": "Signet Industries Limited",
+      "date": "15-Sep-2026 11:39:20",
+      "company": "Visaka Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260914_10",
+      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260915_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "15-Sep-2026 10:36:42",
+      "company": "SYNERGY GREEN INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SGIL|SYNERGY GREEN INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_19808_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "15-Sep-2026 10:27:48",
+      "company": "INDO",
+      "personCategory": "\u2014",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260915_102748304.",
       "quantity": "\u2014"
     }
   ],

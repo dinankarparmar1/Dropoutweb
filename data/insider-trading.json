@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-16T14:41:44.577075Z",
+  "updated": "2026-09-16T17:24:11.096923Z",
   "rows": [
+    {
+      "date": "16-Sep-2026 22:42:46",
+      "company": "TRUALT BIOENERGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260916_224",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 20:43:11",
+      "company": "NRB BEARING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260916_20431",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 20:36:10",
+      "company": "NRB BEARING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260916_20361",
+      "quantity": "\u2014"
+    },
     {
       "date": "16-Sep-2026 18:38:42",
       "company": "HCL Technologies Limited",
@@ -146,27 +167,6 @@
       "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:34:56",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:34:56",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:34:56",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
       "quantity": "\u2014"
     },
     {

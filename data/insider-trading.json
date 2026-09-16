@@ -1,53 +1,179 @@
 {
-  "updated": "2026-09-16T08:56:36.405884Z",
+  "updated": "2026-09-16T13:55:57.550424Z",
   "rows": [
     {
-      "date": "16-Sep-2026 13:53:14",
-      "company": "KESORAM INDUSTRIES LIMITED",
+      "date": "16-Sep-2026 18:38:42",
+      "company": "HCL Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "KESORAMIND|KESORAM INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1267_WebXMLFile_2026091",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260916_183",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 13:42:26",
-      "company": "OBCL LIMITED",
+      "date": "16-Sep-2026 18:34:26",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260916_134226379.xml|IT_",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260916_183426578",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 12:54:08",
-      "company": "INTELLECT DESIGN ARENA LIMITED",
+      "date": "16-Sep-2026 18:23:04",
+      "company": "ARVIND FASHIONS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INTELLECT|INTELLECT DESIGN ARENA LIMITED|Original|Regulation 7 (2)|IT_11206_WebXMLFile_202",
+      "transactionType": "ARVINDFASN|ARVIND FASHIONS LIMITED|Original|Regulation 7 (2)|IT_17278_WebXMLFile_20260916_",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 12:34:18",
-      "company": "Valiant Organics Limited",
+      "date": "16-Sep-2026 18:11:10",
+      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "VALIANTORG|Valiant Organics Limited|Original|Regulation 7 (2)|IT_18775_WebXMLFile_20260916",
+      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 11:34:54",
+      "date": "16-Sep-2026 17:19:33",
+      "company": "NAVA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260916_171933811.xml|IT_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:57:16",
+      "company": "Visaka Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260916_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:55:14",
       "company": "Sree Rayalaseema Hi",
       "personCategory": "\u2014",
       "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 11:19:19",
-      "company": "BLB LIMITED",
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260916_111919713.xml",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 11:04:26",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:38:02",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:34:56",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:34:56",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:34:56",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Sep-2026 16:34:56",
+      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
       "quantity": "\u2014"
     }
   ],

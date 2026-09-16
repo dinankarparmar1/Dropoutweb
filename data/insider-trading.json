@@ -1,179 +1,53 @@
 {
-  "updated": "2026-09-15T17:25:18.398851Z",
+  "updated": "2026-09-16T08:51:43.488818Z",
   "rows": [
     {
-      "date": "15-Sep-2026 21:28:46",
-      "company": "CONTROL PRINT LIMITED",
+      "date": "16-Sep-2026 13:53:14",
+      "company": "KESORAM INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260915_212",
+      "transactionType": "KESORAMIND|KESORAM INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_1267_WebXMLFile_2026091",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 19:19:58",
-      "company": "TRUALT BIOENERGY LIMITED",
+      "date": "16-Sep-2026 13:42:26",
+      "company": "OBCL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260915_191",
+      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260916_134226379.xml|IT_",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 19:04:23",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "16-Sep-2026 12:54:08",
+      "company": "INTELLECT DESIGN ARENA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260915",
+      "transactionType": "INTELLECT|INTELLECT DESIGN ARENA LIMITED|Original|Regulation 7 (2)|IT_11206_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 19:02:36",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "16-Sep-2026 12:34:18",
+      "company": "Valiant Organics Limited",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260915",
+      "transactionType": "VALIANTORG|Valiant Organics Limited|Original|Regulation 7 (2)|IT_18775_WebXMLFile_20260916",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 17:49:15",
-      "company": "DR. LAL PATHLABS LIMITED",
+      "date": "16-Sep-2026 11:34:54",
+      "company": "Sree Rayalaseema Hi",
       "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260915",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 17:49:10",
-      "company": "HLE Glascoat Limited",
+      "date": "16-Sep-2026 11:19:19",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HLEGLAS|HLE Glascoat Limited|Original|Regulation 7 (2)|IT_19192_WebXMLFile_20260915_174910",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260916_111919713.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Sep-2026 17:45:13",
-      "company": "CONTROL PRINT LIMITED",
+      "date": "16-Sep-2026 11:04:26",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260915_174",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 17:44:52",
-      "company": "CONTROL PRINT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260915_174",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 17:33:36",
-      "company": "RUBICON RESEARCH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "RUBICON|RUBICON RESEARCH LIMITED|Original|Regulation 7 (2)|IT_24193_WebXMLFile_20260915_17",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 17:26:40",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 17:26:05",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 16:19:29",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260915_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 16:09:32",
-      "company": "INDO",
-      "personCategory": "\u2014",
-      "transactionType": "Disposal",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 16:06:25",
-      "company": "VIP CLOTHING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIPCLOTHNG|VIP CLOTHING LIMITED|Original|Regulation 7 (2)|IT_1783_WebXMLFile_20260915_1606",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 15:41:06",
-      "company": "Studds Accessories Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STUDDS|Studds Accessories Limited|Original|Regulation 7 (2)|IT_25886_WebXMLFile_20260915_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 15:39:28",
-      "company": "Studds Accessories Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STUDDS|Studds Accessories Limited|Original|Regulation 7 (2)|IT_25886_WebXMLFile_20260915_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 15:33:58",
-      "company": "INDO",
-      "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Revision|Regulation 7 (2)|IT_27036_WebXMLFile_20260915_153358309.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 13:17:47",
-      "company": "BlueStone Jewellery and Lifestyle Limited",
-      "personCategory": "\u2014",
-      "transactionType": "BLUESTONE|BlueStone Jewellery and Lifestyle Limited|Original|Regulation 7 (2)|IT_25008_Web",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 12:24:03",
-      "company": "Fiberweb (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20260915_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 12:20:39",
-      "company": "Fiberweb (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20260915_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 12:19:36",
-      "company": "INDO",
-      "personCategory": "Designated Person",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Revision|Regulation 7 (2)|IT_27036_WebXMLFile_20260915_121936140.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 12:07:24",
-      "company": "GNA AXLES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260915_120724267.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 12:07:00",
-      "company": "GNA AXLES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260915_120700327.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 11:54:35",
-      "company": "NOVA AGRITECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1154",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Sep-2026 11:54:07",
-      "company": "NOVA AGRITECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NOVAAGRI|NOVA AGRITECH LIMITED|Original|Regulation 7 (2)|IT_21751_WebXMLFile_20260915_1154",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     }
   ],

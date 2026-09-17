@@ -1,179 +1,172 @@
 {
-  "updated": "2026-09-16T17:24:11.096923Z",
+  "updated": "2026-09-17T08:55:35.499289Z",
   "rows": [
     {
-      "date": "16-Sep-2026 22:42:46",
-      "company": "TRUALT BIOENERGY LIMITED",
+      "date": "17-Sep-2026 14:13:02",
+      "company": "MARKSANS PHARMA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260916_224",
+      "transactionType": "MARKSANS|MARKSANS PHARMA LIMITED|Original|Regulation 7 (2)|IT_1969_WebXMLFile_20260917_141",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 20:43:11",
-      "company": "NRB BEARING LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260916_20431",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 20:36:10",
-      "company": "NRB BEARING LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260916_20361",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 18:38:42",
-      "company": "HCL Technologies Limited",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260916_183",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 18:34:26",
-      "company": "JSW STEEL LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260916_183426578",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 18:23:04",
-      "company": "ARVIND FASHIONS LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "ARVINDFASN|ARVIND FASHIONS LIMITED|Original|Regulation 7 (2)|IT_17278_WebXMLFile_20260916_",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 18:11:10",
-      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 17:19:33",
-      "company": "NAVA LIMITED",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
       "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260916_171933811.xml|IT_1",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 16:57:16",
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:44:13",
+      "company": "Focus Lighting And Fixtures Limited",
+      "personCategory": "\u2014",
+      "transactionType": "FOCUS|Focus Lighting And Fixtures Limited|Original|Regulation 7 (2)|IT_14891_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:42:44",
+      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 13:20:38",
+      "company": "SINCLAIRS HOTELS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260917_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 12:23:20",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 12:19:13",
+      "company": "SRG HOUSING FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SRGHFL|SRG HOUSING FINANCE LIMITED|Original|Regulation 7 (2)|IT_22272_WebXMLFile_20260917_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Sep-2026 12:14:56",
       "company": "Visaka Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260916_",
+      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260917_",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 16:55:14",
-      "company": "Sree Rayalaseema Hi",
+      "date": "17-Sep-2026 10:43:38",
+      "company": "CSL Finance Limited",
       "personCategory": "\u2014",
-      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20260917_1043",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "date": "17-Sep-2026 09:50:01",
+      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "date": "17-Sep-2026 09:33:58",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260917_093358020.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
+      "date": "17-Sep-2026 09:21:02",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:38:02",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Revision|Regulation 7 (2)|IT_19148_WebXM",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Sep-2026 16:34:56",
-      "company": "NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NPST|NETWORK PEOPLE SERVICES TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19148_WebXM",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260917_092102",
       "quantity": "\u2014"
     }
   ],

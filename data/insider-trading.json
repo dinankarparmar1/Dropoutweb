@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-17T14:17:06.123044Z",
+  "updated": "2026-09-17T14:45:41.643332Z",
   "rows": [
+    {
+      "date": "17-Sep-2026 19:48:40",
+      "company": "Grand Continent Hotels Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GCHOTELS|Grand Continent Hotels Limited|Original|Regulation 7 (2)|IT_24894_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
     {
       "date": "17-Sep-2026 19:41:25",
       "company": "AEROFLEX ENTERPRISES LIMITED",
@@ -160,13 +167,6 @@
       "company": "Nippon Life India Asset Management Limited",
       "personCategory": "\u2014",
       "transactionType": "NAM-INDIA|Nippon Life India Asset Management Limited|Original|Regulation 7 (2)|IT_15552_We",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Sep-2026 17:50:30",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {

@@ -1,53 +1,179 @@
 {
-  "updated": "2026-09-18T08:36:22.805326Z",
+  "updated": "2026-09-18T13:09:44.601749Z",
   "rows": [
     {
-      "date": "18-Sep-2026 13:21:38",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "18-Sep-2026 18:35:36",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 13:04:45",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "18-Sep-2026 18:27:06",
+      "company": "Sejal Glass Limited",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "SEJALLTD|Sejal Glass Limited|Original|Regulation 7 (2)|IT_20255_WebXMLFile_20260918_182706",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 12:23:46",
-      "company": "BMW VENTURES LIMITED",
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260918_122",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 11:40:14",
-      "company": "GNG ELECTRONICS LIMITED",
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "EBGNG|GNG ELECTRONICS LIMITED|Revision|Regulation 7 (2)|IT_25012_WebXMLFile_20260918_11401",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 10:49:07",
-      "company": "NIIT Learning Systems Limited",
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NIITMTS|NIIT Learning Systems Limited|Original|Regulation 7 (2)|IT_22067_WebXMLFile_202609",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 09:34:31",
-      "company": "BLB LIMITED",
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260918_093430950.xml",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "18-Sep-2026 00:04:46",
-      "company": "STEL HOLDINGS LIMITED",
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260918_000446594",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:12:31",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 17:59:42",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260918_175942270.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 17:32:03",
+      "company": "ION EXCHANGE (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IONEXCHANG|ION EXCHANGE (INDIA) LIMITED|Original|Regulation 7 (2)|IT_185_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 17:23:14",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 17:19:10",
+      "company": "MTAR TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MTARTECH|MTAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19009_WebXMLFile_20260918_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 17:19:05",
+      "company": "UPDATER SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "UDS|UPDATER SERVICES LIMITED|Original|Regulation 7 (2)|IT_21897_WebXMLFile_20260918_171905",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 16:58:04",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260918_165",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 16:23:18",
+      "company": "Cera Sanitaryware Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CERA|Cera Sanitaryware Limited|Original|Regulation 7 (2)|IT_2673_WebXMLFile_20260918_16231",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 15:56:50",
+      "company": "JUBILANT INGREVIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026091",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 15:49:08",
+      "company": "INDO",
+      "personCategory": "\u2014",
+      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260918_154908764.",
       "quantity": "\u2014"
     }
   ],

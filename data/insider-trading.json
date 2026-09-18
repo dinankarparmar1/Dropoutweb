@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-18T13:09:44.601749Z",
+  "updated": "2026-09-18T14:10:50.270372Z",
   "rows": [
+    {
+      "date": "18-Sep-2026 19:34:07",
+      "company": "AvenuesAI Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CCAVENUE|AvenuesAI Limited|Revision|Regulation 7 (2)|IT_13663_WebXMLFile_20260918_19340744",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 19:10:11",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 19:09:44",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:49:50",
+      "company": "SONU INFRATECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SONUINFRA|SONU INFRATECH LIMITED|Original|Regulation 7 (2)|IT_20418_WebXMLFile_20260918_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Sep-2026 18:48:44",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Sep-2026 18:35:36",
       "company": "SARLA PERFORMANCE FIBERS LIMITED",
@@ -139,41 +174,6 @@
       "company": "MTAR TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "MTARTECH|MTAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_19009_WebXMLFile_20260918_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Sep-2026 17:19:05",
-      "company": "UPDATER SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "UDS|UPDATER SERVICES LIMITED|Original|Regulation 7 (2)|IT_21897_WebXMLFile_20260918_171905",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Sep-2026 16:58:04",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260918_165",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Sep-2026 16:23:18",
-      "company": "Cera Sanitaryware Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CERA|Cera Sanitaryware Limited|Original|Regulation 7 (2)|IT_2673_WebXMLFile_20260918_16231",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Sep-2026 15:56:50",
-      "company": "JUBILANT INGREVIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026091",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Sep-2026 15:49:08",
-      "company": "INDO",
-      "personCategory": "\u2014",
-      "transactionType": "INDOMIM|INDO-MIM Limited|Original|Regulation 7 (2)|IT_27036_WebXMLFile_20260918_154908764.",
       "quantity": "\u2014"
     }
   ],

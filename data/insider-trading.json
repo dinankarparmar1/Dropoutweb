@@ -1,53 +1,179 @@
 {
-  "updated": "2026-09-21T09:25:30.375963Z",
+  "updated": "2026-09-21T15:58:09.047695Z",
   "rows": [
     {
-      "date": "21-Sep-2026 12:43:41",
-      "company": "Affle 3i Limited",
+      "date": "21-Sep-2026 20:48:39",
+      "company": "Newjaisa Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260921_124341386.xm",
+      "transactionType": "NEWJAISA|Newjaisa Technologies Limited|Original|Regulation 7 (2)|IT_22325_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 12:04:52",
-      "company": "Visaka Industries Limited",
+      "date": "21-Sep-2026 20:19:57",
+      "company": "JSW Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260921_",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20260921_2019575",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 11:49:41",
-      "company": "AFFORDABLE ROBOTIC & AUTOMATION LIMITED",
+      "date": "21-Sep-2026 19:41:55",
+      "company": "STAR CEMENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AFFORDABLE|AFFORDABLE ROBOTIC & AUTOMATION LIMITED|Original|Regulation 7 (2)|IT_22451_WebX",
+      "transactionType": "STARCEMENT|STAR CEMENT LIMITED|Original|Regulation 7 (2)|IT_15239_WebXMLFile_20260921_1941",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 11:34:46",
-      "company": "SMS PHARMACEUTICALS LIMITED",
+      "date": "21-Sep-2026 19:06:48",
+      "company": "SPECIALITY RESTAURANTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SMSPHARMA|SMS PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_2539_WebXMLFile_2026092",
+      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 11:11:43",
-      "company": "JUBILANT FOODWORKS LIMITED",
+      "date": "21-Sep-2026 18:40:54",
+      "company": "REPRO INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260921_",
+      "transactionType": "REPRO|REPRO INDIA LIMITED|Original|Regulation 7 (2)|IT_1916_WebXMLFile_20260921_184054642.",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 11:05:58",
-      "company": "Infosys Limited",
+      "date": "21-Sep-2026 18:34:39",
+      "company": "CALIFORNIA SOFTWARE COMPANY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260921_110558446.xml|IT",
+      "transactionType": "CALSOFT|CALIFORNIA SOFTWARE COMPANY LIMITED|Original|Regulation 7 (2)|IT_1899_WebXMLFile_2",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Sep-2026 10:58:14",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "21-Sep-2026 18:27:15",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260921",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 18:26:04",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260921",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 18:23:42",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260921_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 18:12:29",
+      "company": "DR. LAL PATHLABS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260921",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 18:06:54",
+      "company": "Anthem Biosciences Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ANTHEM|Anthem Biosciences Limited|Original|Regulation 7 (2)|IT_25167_WebXMLFile_20260921_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:49:55",
+      "company": "AKSH OPTIFIBRE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260921_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:23:32",
+      "company": "ALICON CASTALLOY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALICON|ALICON CASTALLOY LIMITED|Original|Regulation 7 (2)|IT_2440_WebXMLFile_20260921_1723",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:21:31",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260921_172131612",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:20:10",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:08:04",
+      "company": "BGR ENERGY SYSTEM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BGRENERGY|BGR ENERGY SYSTEM LIMITED|Original|Regulation 7 (2)|IT_2701_WebXMLFile_20260921_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:02:37",
+      "company": "Greenpanel Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:02:13",
+      "company": "Greenpanel Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:01:46",
+      "company": "Greenpanel Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 17:01:14",
+      "company": "Greenpanel Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 16:44:30",
+      "company": "Dhampur Bio Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260921_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 16:40:55",
+      "company": "Sree Rayalaseema Hi",
+      "personCategory": "\u2014",
+      "transactionType": "SRHHYPOLTD|Sree Rayalaseema Hi-Strength Hypo Limited|Original|Regulation 7 (2)|IT_2588_Web",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 16:34:03",
+      "company": "PATEL ENGINEERING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PATELENG|PATEL ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_2262_WebXMLFile_20260921_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 16:33:58",
+      "company": "PATEL ENGINEERING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PATELENG|PATEL ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_2262_WebXMLFile_20260921_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Sep-2026 16:22:28",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260921_",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-21T16:18:59.033865Z",
+  "updated": "2026-09-21T18:24:38.258906Z",
   "rows": [
+    {
+      "date": "21-Sep-2026 23:29:03",
+      "company": "NILA SPACES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260921_2329",
+      "quantity": "\u2014"
+    },
     {
       "date": "21-Sep-2026 21:44:25",
       "company": "AEQUS LIMITED",
@@ -164,13 +171,6 @@
     },
     {
       "date": "21-Sep-2026 16:34:03",
-      "company": "PATEL ENGINEERING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PATELENG|PATEL ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_2262_WebXMLFile_20260921_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Sep-2026 16:33:58",
       "company": "PATEL ENGINEERING LIMITED",
       "personCategory": "\u2014",
       "transactionType": "PATELENG|PATEL ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_2262_WebXMLFile_20260921_1",

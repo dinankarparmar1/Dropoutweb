@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-21T15:58:09.047695Z",
+  "updated": "2026-09-21T16:18:59.033865Z",
   "rows": [
+    {
+      "date": "21-Sep-2026 21:44:25",
+      "company": "AEQUS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20260921_214424928.xml|I",
+      "quantity": "\u2014"
+    },
     {
       "date": "21-Sep-2026 20:48:39",
       "company": "Newjaisa Technologies Limited",
@@ -167,13 +174,6 @@
       "company": "PATEL ENGINEERING LIMITED",
       "personCategory": "\u2014",
       "transactionType": "PATELENG|PATEL ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_2262_WebXMLFile_20260921_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Sep-2026 16:22:28",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260921_",
       "quantity": "\u2014"
     }
   ],

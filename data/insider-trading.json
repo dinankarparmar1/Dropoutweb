@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-22T13:46:42.354539Z",
+  "updated": "2026-09-22T14:26:36.852706Z",
   "rows": [
+    {
+      "date": "22-Sep-2026 19:43:12",
+      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
+      "quantity": "\u2014"
+    },
     {
       "date": "22-Sep-2026 19:04:53",
       "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
@@ -167,13 +174,6 @@
       "company": "Signet Industries Limited",
       "personCategory": "\u2014",
       "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260922_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 14:53:39",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

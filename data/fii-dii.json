@@ -1,19 +1,19 @@
 {
-  "updated": "2026-09-22T08:54:14.215261Z",
+  "updated": "2026-09-22T13:46:41.843579Z",
   "rows": [
     {
-      "date": "21-Sep-2026",
+      "date": "22-Sep-2026",
       "category": "DII",
-      "buyValue": "14098.64",
-      "sellValue": "11301.37",
-      "netValue": "2797.27"
+      "buyValue": "14599.72",
+      "sellValue": "10479.65",
+      "netValue": "4120.07"
     },
     {
-      "date": "21-Sep-2026",
+      "date": "22-Sep-2026",
       "category": "FII/FPI",
-      "buyValue": "10637.17",
-      "sellValue": "11213.37",
-      "netValue": "-576.2"
+      "buyValue": "9845.81",
+      "sellValue": "13655.8",
+      "netValue": "-3809.99"
     }
   ]
 }

@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-22T14:26:36.852706Z",
+  "updated": "2026-09-22T17:27:50.835192Z",
   "rows": [
+    {
+      "date": "22-Sep-2026 21:19:23",
+      "company": "Aurum PropTech Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AURUM|Aurum PropTech Limited|Original|Regulation 7 (2)|IT_12987_WebXMLFile_20260922_211923",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "22-Sep-2026 20:52:29",
+      "company": "SHAH METACORP LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHAH|SHAH METACORP LIMITED|Original|Regulation 7 (2)|IT_3662_WebXMLFile_20260922_205229144",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "22-Sep-2026 20:11:05",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260922_",
+      "quantity": "\u2014"
+    },
     {
       "date": "22-Sep-2026 19:43:12",
       "company": "SHREEJI SHIPPING GLOBAL LIMITED",
@@ -153,27 +174,6 @@
       "company": "Asian Hotels (West) Limited",
       "personCategory": "\u2014",
       "transactionType": "AHLWEST|Asian Hotels (West) Limited|Original|Regulation 7 (2)|IT_3399_WebXMLFile_20260922_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:37:29",
-      "company": "Asian Hotels (West) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AHLWEST|Asian Hotels (West) Limited|Original|Regulation 7 (2)|IT_3399_WebXMLFile_20260922_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:08:43",
-      "company": "Veegaland Developers Limited",
-      "personCategory": "\u2014",
-      "transactionType": "VEEGALAND|Veegaland Developers Limited|Original|Regulation 7 (2)|IT_27602_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:00:08",
-      "company": "Signet Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SIGIND|Signet Industries Limited|Original|Regulation 7 (2)|IT_16593_WebXMLFile_20260922_15",
       "quantity": "\u2014"
     }
   ],

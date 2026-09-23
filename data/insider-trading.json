@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-23T14:46:34.727938Z",
+  "updated": "2026-09-23T17:37:12.042037Z",
   "rows": [
+    {
+      "date": "23-Sep-2026 20:19:19",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
     {
       "date": "23-Sep-2026 19:39:37",
       "company": "Jayant Agro",
@@ -167,13 +174,6 @@
       "company": "TSC INDIA LIMITED",
       "personCategory": "\u2014",
       "transactionType": "TSC|TSC INDIA LIMITED|Original|Regulation 7 (2)|IT_25110_WebXMLFile_20260923_180017420.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 17:59:46",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

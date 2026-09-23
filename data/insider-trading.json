@@ -1,6 +1,118 @@
 {
-  "updated": "2026-09-23T13:59:32.997131Z",
+  "updated": "2026-09-23T14:46:34.727938Z",
   "rows": [
+    {
+      "date": "23-Sep-2026 19:39:37",
+      "company": "Jayant Agro",
+      "personCategory": "\u2014",
+      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:39:30",
+      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:29:48",
+      "company": "SANGHVI MOVERS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SANGHVIMOV|SANGHVI MOVERS LIMITED|Original|Regulation 7 (2)|IT_1741_WebXMLFile_20260923_19",
+      "quantity": "\u2014"
+    },
     {
       "date": "23-Sep-2026 19:12:20",
       "company": "GRAVITA INDIA LIMITED",
@@ -62,118 +174,6 @@
       "company": "ACTIVE INFRASTRUCTURES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 17:59:16",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 17:50:42",
-      "company": "Dhampur Bio Organics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260923_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 17:37:05",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260923_173704867",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:55:35",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260923_165",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:49:23",
-      "company": "Veegaland Developers Limited",
-      "personCategory": "\u2014",
-      "transactionType": "VEEGALAND|Veegaland Developers Limited|Original|Regulation 7 (2)|IT_27602_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:36:56",
-      "company": "LINC LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LINC|LINC LIMITED|Original|Regulation 7 (2)|IT_11602_WebXMLFile_20260923_163656369.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:36:30",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260923_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:35:10",
-      "company": "KPIT TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260923_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 16:10:59",
-      "company": "Affle 3i Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260923_161059240.xm",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 15:53:15",
-      "company": "Turtlemint Fintech Solutions Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 15:49:56",
-      "company": "63 moons technolgoies limited",
-      "personCategory": "\u2014",
-      "transactionType": "63MOONS|63 moons technolgoies limited|Original|Regulation 7 (2)|IT_2295_WebXMLFile_2026092",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 14:59:12",
-      "company": "SPECIALITY RESTAURANTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 14:50:10",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 13:49:55",
-      "company": "BMW VENTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260923_134",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 12:56:08",
-      "company": "HOMESFY REALTY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HOMESFY|HOMESFY REALTY LIMITED|Original|Regulation 7 (2)|IT_21349_WebXMLFile_20260923_1256",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 12:54:04",
-      "company": "T T LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260923_125404774.xml|IT_253",
       "quantity": "\u2014"
     }
   ],

@@ -1,179 +1,74 @@
 {
-  "updated": "2026-09-22T17:27:50.835192Z",
+  "updated": "2026-09-23T08:51:00.573923Z",
   "rows": [
     {
-      "date": "22-Sep-2026 21:19:23",
-      "company": "Aurum PropTech Limited",
+      "date": "23-Sep-2026 13:49:55",
+      "company": "BMW VENTURES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AURUM|Aurum PropTech Limited|Original|Regulation 7 (2)|IT_12987_WebXMLFile_20260922_211923",
+      "transactionType": "BMWVENTLTD|BMW VENTURES LIMITED|Original|Regulation 7 (2)|IT_24065_WebXMLFile_20260923_134",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 20:52:29",
-      "company": "SHAH METACORP LIMITED",
+      "date": "23-Sep-2026 12:56:08",
+      "company": "HOMESFY REALTY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHAH|SHAH METACORP LIMITED|Original|Regulation 7 (2)|IT_3662_WebXMLFile_20260922_205229144",
+      "transactionType": "HOMESFY|HOMESFY REALTY LIMITED|Original|Regulation 7 (2)|IT_21349_WebXMLFile_20260923_1256",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 20:11:05",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "23-Sep-2026 12:54:04",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260922_",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260923_125404774.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 19:43:12",
-      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
+      "date": "23-Sep-2026 12:19:48",
+      "company": "PI Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
+      "transactionType": "PIIND|PI Industries Limited|Original|Regulation 7 (2)|IT_4909_WebXMLFile_20260923_12194868",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 19:04:53",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+      "date": "23-Sep-2026 12:11:16",
+      "company": "MAZDA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
+      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260923_121116507.xml|I",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 18:59:05",
-      "company": "WESTERN CARRIERS (INDIA) LIMITED",
+      "date": "23-Sep-2026 11:45:15",
+      "company": "Bajaj Holdings & Investment Ltd",
       "personCategory": "\u2014",
-      "transactionType": "WCIL|WESTERN CARRIERS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_22116_WebXMLFile_202609",
+      "transactionType": "BAJAJHLDNG|Bajaj Holdings & Investment Ltd|Original|Regulation 7 (2)|IT_227_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 18:57:39",
-      "company": "GANESHA ECOSPHERE LIMITED",
+      "date": "23-Sep-2026 11:37:41",
+      "company": "Quess Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "GANECOS|GANESHA ECOSPHERE LIMITED|Original|Regulation 7 (2)|IT_11601_WebXMLFile_20260922_1",
+      "transactionType": "QUESS|Quess Corp Limited|Original|Regulation 7 (2)|IT_14019_WebXMLFile_20260923_113740846.",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 18:29:58",
-      "company": "Aarti Pharmalabs Limited",
+      "date": "23-Sep-2026 11:35:13",
+      "company": "SANGAM (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AARTIPHARM|Aarti Pharmalabs Limited|Original|Regulation 7 (2)|IT_21272_WebXMLFile_20260922",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260923_113",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 18:29:42",
-      "company": "PAISALO DIGITAL LIMITED",
+      "date": "23-Sep-2026 11:28:28",
+      "company": "SANGAM (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260922_1829",
+      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260923_112",
       "quantity": "\u2014"
     },
     {
-      "date": "22-Sep-2026 18:25:05",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
+      "date": "23-Sep-2026 10:20:16",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 18:24:25",
-      "company": "ACTIVE INFRASTRUCTURES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 18:13:32",
-      "company": "AKSH OPTIFIBRE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260922_18",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 18:06:24",
-      "company": "OBCL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OBCL|OBCL LIMITED|Original|Regulation 7 (2)|IT_20443_WebXMLFile_20260922_180624173.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 17:45:05",
-      "company": "PAISALO DIGITAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260922_1745",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 17:32:51",
-      "company": "NRB BEARING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260922_17325",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 17:32:03",
-      "company": "NRB BEARING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260922_17320",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 17:04:57",
-      "company": "RISHABH INSTRUMENTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "RISHABH|RISHABH INSTRUMENTS LIMITED|Revision|Regulation 7 (2)|IT_21507_WebXMLFile_20260922",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 17:04:30",
-      "company": "RISHABH INSTRUMENTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "RISHABH|RISHABH INSTRUMENTS LIMITED|Original|Regulation 7 (2)|IT_21507_WebXMLFile_20260922",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 16:44:59",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260922_164459611",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 16:40:13",
-      "company": "Parag Milk Foods Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260922_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 16:38:57",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20260922_163857378.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 16:04:20",
-      "company": "JINDAL STAINLESS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20260922_1604206",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:49:55",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260922",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:49:27",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260922",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "22-Sep-2026 15:41:34",
-      "company": "Asian Hotels (West) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AHLWEST|Asian Hotels (West) Limited|Original|Regulation 7 (2)|IT_3399_WebXMLFile_20260922_",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260923_102016775.xml",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,160 @@
 {
-  "updated": "2026-09-23T08:56:20.608822Z",
+  "updated": "2026-09-23T13:59:32.997131Z",
   "rows": [
+    {
+      "date": "23-Sep-2026 19:12:20",
+      "company": "GRAVITA INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260923_191220",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:07:42",
+      "company": "AGI GREENPAC LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AGI|AGI GREENPAC LIMITED|Original|Regulation 7 (2)|IT_1088_WebXMLFile_20260923_190742453.x",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:05:39",
+      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 19:04:39",
+      "company": "Alembic Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260923_190439123",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 18:56:23",
+      "company": "NILA SPACES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260923_1856",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 18:18:59",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 18:04:44",
+      "company": "Cera Sanitaryware Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CERA|Cera Sanitaryware Limited|Original|Regulation 7 (2)|IT_2673_WebXMLFile_20260923_18044",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 18:00:17",
+      "company": "TSC INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TSC|TSC INDIA LIMITED|Original|Regulation 7 (2)|IT_25110_WebXMLFile_20260923_180017420.xml",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 17:59:46",
+      "company": "ACTIVE INFRASTRUCTURES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 17:59:16",
+      "company": "ACTIVE INFRASTRUCTURES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ACTIVEINFR|ACTIVE INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_24506_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 17:50:42",
+      "company": "Dhampur Bio Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260923_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 17:37:05",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260923_173704867",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:55:35",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260923_165",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:49:23",
+      "company": "Veegaland Developers Limited",
+      "personCategory": "\u2014",
+      "transactionType": "VEEGALAND|Veegaland Developers Limited|Original|Regulation 7 (2)|IT_27602_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:36:56",
+      "company": "LINC LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "LINC|LINC LIMITED|Original|Regulation 7 (2)|IT_11602_WebXMLFile_20260923_163656369.xml|IT_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:36:30",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260923_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:35:10",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260923_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 16:10:59",
+      "company": "Affle 3i Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20260923_161059240.xm",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 15:53:15",
+      "company": "Turtlemint Fintech Solutions Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TURTLEMINT|Turtlemint Fintech Solutions Limited|Original|Regulation 7 (2)|IT_26874_WebXMLF",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 15:49:56",
+      "company": "63 moons technolgoies limited",
+      "personCategory": "\u2014",
+      "transactionType": "63MOONS|63 moons technolgoies limited|Original|Regulation 7 (2)|IT_2295_WebXMLFile_2026092",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 14:59:12",
+      "company": "SPECIALITY RESTAURANTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "23-Sep-2026 14:50:10",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
     {
       "date": "23-Sep-2026 13:49:55",
       "company": "BMW VENTURES LIMITED",
@@ -20,55 +174,6 @@
       "company": "T T LIMITED",
       "personCategory": "\u2014",
       "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260923_125404774.xml|IT_253",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 12:19:48",
-      "company": "PI Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PIIND|PI Industries Limited|Original|Regulation 7 (2)|IT_4909_WebXMLFile_20260923_12194868",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 12:11:16",
-      "company": "MAZDA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260923_121116507.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 11:45:15",
-      "company": "Bajaj Holdings & Investment Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "BAJAJHLDNG|Bajaj Holdings & Investment Ltd|Original|Regulation 7 (2)|IT_227_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 11:37:41",
-      "company": "Quess Corp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "QUESS|Quess Corp Limited|Original|Regulation 7 (2)|IT_14019_WebXMLFile_20260923_113740846.",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 11:35:13",
-      "company": "SANGAM (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260923_113",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 11:28:28",
-      "company": "SANGAM (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SANGAMIND|SANGAM (INDIA) LIMITED|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20260923_112",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "23-Sep-2026 10:20:16",
-      "company": "BLB LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260923_102016775.xml",
       "quantity": "\u2014"
     }
   ],

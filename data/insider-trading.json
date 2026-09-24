@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-24T14:41:57.478923Z",
+  "updated": "2026-09-24T17:40:14.251459Z",
   "rows": [
+    {
+      "date": "24-Sep-2026 21:04:22",
+      "company": "Indiqube Spaces Limited",
+      "personCategory": "\u2014",
+      "transactionType": "INDIQUBE|Indiqube Spaces Limited|Original|Regulation 7 (2)|IT_25080_WebXMLFile_20260924_21",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 20:49:48",
+      "company": "SAURASHTRA CEMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260924_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 20:39:28",
+      "company": "SAURASHTRA CEMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260924_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 20:35:04",
+      "company": "USHA MARTIN LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "USHAMART|USHA MARTIN LIMITED|Original|Regulation 7 (2)|IT_1938_WebXMLFile_20260924_2035044",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 20:22:43",
+      "company": "TD POWER SYSTEMS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TDPOWERSYS|TD POWER SYSTEMS LIMITED|Original|Regulation 7 (2)|IT_5180_WebXMLFile_20260924_",
+      "quantity": "\u2014"
+    },
     {
       "date": "24-Sep-2026 20:09:39",
       "company": "AFFORDABLE ROBOTIC & AUTOMATION LIMITED",
@@ -139,41 +174,6 @@
       "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
       "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260924_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:24:00",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260924_182400491",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:21:53",
-      "company": "VISHNU PRAKASH R PUNGLIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VPRPL|VISHNU PRAKASH R PUNGLIA LIMITED|Original|Regulation 7 (2)|IT_21894_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:19:27",
-      "company": "Dhampur Bio Organics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260924_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:12:26",
-      "company": "Allied Blenders and Distillers Limited",
-      "personCategory": "\u2014",
-      "transactionType": "ABDL|Allied Blenders and Distillers Limited|Original|Regulation 7 (2)|IT_20854_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:08:10",
-      "company": "AKSH OPTIFIBRE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260924_18",
       "quantity": "\u2014"
     }
   ],

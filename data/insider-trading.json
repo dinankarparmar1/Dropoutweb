@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-23T17:37:12.042037Z",
+  "updated": "2026-09-24T08:46:18.501214Z",
   "rows": [
     {
-      "date": "23-Sep-2026 20:19:19",
-      "company": "Tiger Logistics (India) Limited",
+      "date": "24-Sep-2026 13:19:51",
+      "company": "JALAN TRANSOLUTIONS (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "transactionType": "JALAN|JALAN TRANSOLUTIONS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15136_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:37",
-      "company": "Jayant Agro",
+      "date": "24-Sep-2026 12:53:33",
+      "company": "MAZDA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202609",
+      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260924_125333752.xml|I",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:44:12",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260924",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:43:23",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260924",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:39:52",
+      "company": "GHCL TEXTILES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "GHCLTEXTIL|GHCL TEXTILES LIMITED|Original|Regulation 7 (2)|IT_21880_WebXMLFile_20260924_12",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:39:30",
-      "company": "MARINE ELECTRICALS (INDIA) LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MARINE|MARINE ELECTRICALS (INDIA) LIMITED|Original|Regulation 7 (3)|IT_16788_WebXMLFile_20",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:29:48",
-      "company": "SANGHVI MOVERS LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "SANGHVIMOV|SANGHVI MOVERS LIMITED|Original|Regulation 7 (2)|IT_1741_WebXMLFile_20260923_19",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:12:20",
-      "company": "GRAVITA INDIA LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260923_191220",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:07:42",
-      "company": "AGI GREENPAC LIMITED",
+      "date": "24-Sep-2026 12:34:51",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "AGI|AGI GREENPAC LIMITED|Original|Regulation 7 (2)|IT_1088_WebXMLFile_20260923_190742453.x",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:05:39",
-      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "date": "24-Sep-2026 12:29:31",
+      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 19:04:39",
-      "company": "Alembic Limited",
+      "date": "24-Sep-2026 12:04:45",
+      "company": "GALAXY MEDICARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260923_190439123",
+      "transactionType": "GML|GALAXY MEDICARE LIMITED|Original|Regulation 7 (2)|IT_25638_WebXMLFile_20260924_1204455",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 18:56:23",
-      "company": "NILA SPACES LIMITED",
+      "date": "24-Sep-2026 11:40:10",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NILASPACES|NILA SPACES LIMITED|Original|Regulation 7 (2)|IT_17088_WebXMLFile_20260923_1856",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 18:18:59",
-      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "date": "24-Sep-2026 11:35:22",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260924_11352253",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 18:04:44",
-      "company": "Cera Sanitaryware Limited",
+      "date": "24-Sep-2026 11:18:05",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CERA|Cera Sanitaryware Limited|Original|Regulation 7 (2)|IT_2673_WebXMLFile_20260923_18044",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20260924_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Sep-2026 18:00:17",
-      "company": "TSC INDIA LIMITED",
+      "date": "24-Sep-2026 09:12:20",
+      "company": "BLB LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TSC|TSC INDIA LIMITED|Original|Regulation 7 (2)|IT_25110_WebXMLFile_20260923_180017420.xml",
+      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260924_091220686.xml",
       "quantity": "\u2014"
     }
   ],

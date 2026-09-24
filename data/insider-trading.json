@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-24T13:54:48.935266Z",
+  "updated": "2026-09-24T14:41:57.478923Z",
   "rows": [
+    {
+      "date": "24-Sep-2026 20:09:39",
+      "company": "AFFORDABLE ROBOTIC & AUTOMATION LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AFFORDABLE|AFFORDABLE ROBOTIC & AUTOMATION LIMITED|Original|Regulation 7 (2)|IT_22451_WebX",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 19:51:10",
+      "company": "DAMODAR INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DAMODARIND|DAMODAR INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13962_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "24-Sep-2026 19:50:16",
+      "company": "DAMODAR INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DAMODARIND|DAMODAR INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13962_WebXMLFile_202609",
+      "quantity": "\u2014"
+    },
     {
       "date": "24-Sep-2026 18:57:44",
       "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
@@ -153,27 +174,6 @@
       "company": "AKSH OPTIFIBRE LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260924_18",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 18:05:38",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 17:49:26",
-      "company": "Jayant Agro",
-      "personCategory": "\u2014",
-      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202609",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "24-Sep-2026 17:49:16",
-      "company": "EMA PARTNERS INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "EMAPARTNER|EMA PARTNERS INDIA LIMITED|Original|Regulation 7 (2)|IT_24505_WebXMLFile_202609",
       "quantity": "\u2014"
     }
   ],

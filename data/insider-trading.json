@@ -1,123 +1,179 @@
 {
-  "updated": "2026-09-25T09:12:30.614661Z",
+  "updated": "2026-09-25T14:36:44.630089Z",
   "rows": [
     {
-      "date": "25-Sep-2026 14:40:54",
-      "company": "NRB BEARING LIMITED",
+      "date": "25-Sep-2026 20:04:34",
+      "company": "Alembic Limited",
       "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260925_14405",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260925_200434505",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 14:15:57",
-      "company": "Divi's Laboratories Limited",
+      "date": "25-Sep-2026 19:28:03",
+      "company": "TIME TECHNOPLAST LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260925",
+      "transactionType": "TIMETECHNO|TIME TECHNOPLAST LIMITED|Original|Regulation 7 (2)|IT_2609_WebXMLFile_20260925_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 13:49:49",
-      "company": "JSW STEEL LIMITED",
+      "date": "25-Sep-2026 19:25:45",
+      "company": "CARYSIL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260925_134948959",
+      "transactionType": "CARYSIL|CARYSIL LIMITED|Original|Regulation 7 (2)|IT_19070_WebXMLFile_20260925_192544945.x",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 13:44:18",
-      "company": "AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED",
+      "date": "25-Sep-2026 19:24:12",
+      "company": "CARYSIL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AVONMORE|AVONMORE CAPITAL & MANAGEMENT SERVICES  LIMITED|Original|Regulation 7 (2)|IT_2039",
+      "transactionType": "CARYSIL|CARYSIL LIMITED|Original|Regulation 7 (2)|IT_19070_WebXMLFile_20260925_192411979.x",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 13:40:38",
+      "date": "25-Sep-2026 18:43:08",
+      "company": "AKSH OPTIFIBRE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260925_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 18:28:29",
+      "company": "IMAGICAAWORLD ENTERTAINMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IMAGICAA|IMAGICAAWORLD ENTERTAINMENT LIMITED|Original|Regulation 7 (2)|IT_11790_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 18:24:02",
+      "company": "IMAGICAAWORLD ENTERTAINMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IMAGICAA|IMAGICAAWORLD ENTERTAINMENT LIMITED|Original|Regulation 7 (2)|IT_11790_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 18:09:55",
       "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
       "personCategory": "\u2014",
       "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 13:20:11",
-      "company": "SINCLAIRS HOTELS LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20260925_1",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 12:57:45",
-      "company": "NURECA LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260925_125745047.xml",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 12:42:48",
-      "company": "Parag Milk Foods Limited",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260925_",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 12:42:05",
-      "company": "Parag Milk Foods Limited",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260925_",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 12:05:17",
-      "company": "SARLA PERFORMANCE FIBERS LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:37:12",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:35:30",
-      "company": "TWAMEV CONSTRUCTION AND INFRASTRUCTURE LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TICL|TWAMEV CONSTRUCTION AND INFRASTRUCTURE LIMITED|Original|Regulation 7 (2)|IT_22331_Web",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:30:12",
-      "company": "TWAMEV CONSTRUCTION AND INFRASTRUCTURE LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TICL|TWAMEV CONSTRUCTION AND INFRASTRUCTURE LIMITED|Original|Regulation 7 (2)|IT_22331_Web",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:28:16",
-      "company": "PDS Limited",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PDSL|PDS Limited|Original|Regulation 7 (2)|IT_10866_WebXMLFile_20260925_112816420.xml|IT_1",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:10:43",
-      "company": "PREMIER POLYFILM LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PREMIERPOL|PREMIER POLYFILM LIMITED|Original|Regulation 7 (2)|IT_91_WebXMLFile_20260925_11",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 11:08:58",
-      "company": "MAZDA LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260925_110858583.xml|I",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 10:19:44",
-      "company": "BLB LIMITED",
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLBLIMITED|BLB LIMITED|Original|Regulation 7 (2)|IT_1893_WebXMLFile_20260925_101944735.xml",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 17:58:24",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 17:48:34",
+      "company": "Dangee Dums Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 17:48:34",
+      "company": "Dangee Dums Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "25-Sep-2026 17:48:34",
+      "company": "Dangee Dums Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-25T09:06:45.342888Z",
+  "updated": "2026-09-25T09:12:30.614661Z",
   "rows": [
+    {
+      "date": "25-Sep-2026 14:40:54",
+      "company": "NRB BEARING LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260925_14405",
+      "quantity": "\u2014"
+    },
     {
       "date": "25-Sep-2026 14:15:57",
       "company": "Divi's Laboratories Limited",

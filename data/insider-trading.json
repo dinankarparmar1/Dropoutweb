@@ -1,179 +1,123 @@
 {
-  "updated": "2026-09-25T17:39:37.086031Z",
+  "updated": "2026-09-28T10:11:00.588442Z",
   "rows": [
     {
-      "date": "25-Sep-2026 20:04:34",
-      "company": "Alembic Limited",
+      "date": "28-Sep-2026 15:36:10",
+      "company": "MAYUR UNIQUOTERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260925_200434505",
+      "transactionType": "MAYURUNIQ|MAYUR UNIQUOTERS LIMITED|Original|Regulation 7 (2)|IT_6149_WebXMLFile_20260928_1",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 19:28:03",
-      "company": "TIME TECHNOPLAST LIMITED",
+      "date": "28-Sep-2026 15:34:55",
+      "company": "Infosys Limited",
       "personCategory": "\u2014",
-      "transactionType": "TIMETECHNO|TIME TECHNOPLAST LIMITED|Original|Regulation 7 (2)|IT_2609_WebXMLFile_20260925_",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20260928_153455146.xml|IT",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 19:25:45",
-      "company": "CARYSIL LIMITED",
+      "date": "28-Sep-2026 15:20:24",
+      "company": "WESTLIFE FOODWORLD LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CARYSIL|CARYSIL LIMITED|Original|Regulation 7 (2)|IT_19070_WebXMLFile_20260925_192544945.x",
+      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (3)|IT_17571_WebXMLFile_20260928",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 19:24:12",
-      "company": "CARYSIL LIMITED",
+      "date": "28-Sep-2026 15:05:46",
+      "company": "Jayant Agro",
       "personCategory": "\u2014",
-      "transactionType": "CARYSIL|CARYSIL LIMITED|Original|Regulation 7 (2)|IT_19070_WebXMLFile_20260925_192411979.x",
+      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 18:43:08",
-      "company": "AKSH OPTIFIBRE LIMITED",
+      "date": "28-Sep-2026 15:05:26",
+      "company": "WESTLIFE FOODWORLD LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AKSHOPTFBR|AKSH OPTIFIBRE LIMITED|Original|Regulation 7 (2)|IT_1925_WebXMLFile_20260925_18",
+      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20260928",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 18:28:29",
-      "company": "IMAGICAAWORLD ENTERTAINMENT LIMITED",
+      "date": "28-Sep-2026 14:52:53",
+      "company": "Visaka Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "IMAGICAA|IMAGICAAWORLD ENTERTAINMENT LIMITED|Original|Regulation 7 (2)|IT_11790_WebXMLFile",
+      "transactionType": "VISAKAIND|Visaka Industries Limited|Original|Regulation 7 (2)|IT_1388_WebXMLFile_20260928_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 18:24:02",
-      "company": "IMAGICAAWORLD ENTERTAINMENT LIMITED",
+      "date": "28-Sep-2026 14:34:27",
+      "company": "Savita Oil Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "IMAGICAA|IMAGICAAWORLD ENTERTAINMENT LIMITED|Original|Regulation 7 (2)|IT_11790_WebXMLFile",
+      "transactionType": "SOTL|Savita Oil Technologies Limited|Original|Regulation 7 (2)|IT_526_WebXMLFile_20260928_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 18:09:55",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
+      "date": "28-Sep-2026 14:34:26",
+      "company": "Savita Oil Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
+      "transactionType": "SOTL|Savita Oil Technologies Limited|Original|Regulation 7 (2)|IT_526_WebXMLFile_20260928_",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 13:15:20",
+      "company": "Sanofi India Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "SANOFI|Sanofi India Limited|Original|Regulation 7 (2)|IT_676_WebXMLFile_20260928_131520188",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 13:14:45",
+      "company": "Sanofi India Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "SANOFI|Sanofi India Limited|Original|Regulation 7 (2)|IT_676_WebXMLFile_20260928_131444955",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "date": "28-Sep-2026 12:45:06",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
+      "personCategory": "Director",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Revision|Regulation 7 (2)|IT_2507_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 12:23:20",
+      "company": "Camlin Fine Sciences Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "CAMLINFINE|Camlin Fine Sciences Limited|Original|Regulation 7 (2)|IT_11353_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 12:22:08",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260928_122208061.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 12:22:01",
+      "company": "Camlin Fine Sciences Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "CAMLINFINE|Camlin Fine Sciences Limited|Original|Regulation 7 (2)|IT_11353_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 11:53:32",
+      "company": "SARLA PERFORMANCE FIBERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "SARLAPOLY|SARLA PERFORMANCE FIBERS LIMITED|Original|Regulation 7 (2)|IT_2507_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 11:47:44",
+      "company": "NURECA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260928_114744183.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "28-Sep-2026 11:20:12",
+      "company": "Goodluck India Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:58:24",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:48:34",
-      "company": "Dangee Dums Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:48:34",
-      "company": "Dangee Dums Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "25-Sep-2026 17:48:34",
-      "company": "Dangee Dums Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DANGEE|Dangee Dums Limited|Original|Regulation 7 (2)|IT_16594_WebXMLFile_20260925_17483402",
+      "transactionType": "GOODLUCK|Goodluck India Limited|Original|Regulation 7 (2)|IT_11300_WebXMLFile_20260928_112",
       "quantity": "\u2014"
     }
   ],

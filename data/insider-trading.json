@@ -1,81 +1,179 @@
 {
-  "updated": "2026-09-29T10:15:02.826957Z",
+  "updated": "2026-09-29T16:22:54.206363Z",
   "rows": [
     {
-      "date": "29-Sep-2026 14:39:44",
-      "company": "SHILPA MEDICARE LIMITED",
+      "date": "29-Sep-2026 21:40:32",
+      "company": "Parag Milk Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHILPAMED|SHILPA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_2988_WebXMLFile_20260929_14",
+      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 14:38:38",
-      "company": "SHILPA MEDICARE LIMITED",
+      "date": "29-Sep-2026 20:24:23",
+      "company": "WESTERN CARRIERS (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHILPAMED|SHILPA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_2988_WebXMLFile_20260929_14",
+      "transactionType": "WCIL|WESTERN CARRIERS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_22116_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 14:37:15",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "29-Sep-2026 20:14:02",
+      "company": "THE SOUTH INDIAN BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260929_143715",
+      "transactionType": "SOUTHBANK|THE SOUTH INDIAN BANK LIMITED|Original|Regulation 7 (2)|IT_1684_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 14:06:12",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "29-Sep-2026 19:32:03",
+      "company": "SAURASHTRA CEMENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260929_",
+      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 14:05:12",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "29-Sep-2026 19:29:50",
+      "company": "SAURASHTRA CEMENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260929_",
+      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 13:32:02",
-      "company": "FERMENTA BIOTECH LIMITED",
+      "date": "29-Sep-2026 19:29:44",
+      "company": "Sheetal Cool Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "FERMENTA|FERMENTA BIOTECH LIMITED|Original|Regulation 7 (2)|IT_28435_WebXMLFile_20260929_1",
+      "transactionType": "SCPL|Sheetal Cool Products Limited|Original|Regulation 7 (2)|IT_21096_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 12:35:16",
-      "company": "NURECA LIMITED",
+      "date": "29-Sep-2026 19:27:39",
+      "company": "Sheetal Cool Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260929_123516803.xml",
+      "transactionType": "SCPL|Sheetal Cool Products Limited|Original|Regulation 7 (2)|IT_21096_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 11:52:22",
-      "company": "GNA AXLES LIMITED",
+      "date": "29-Sep-2026 19:24:34",
+      "company": "MINDSPACE BUSINESS PARKS REIT",
       "personCategory": "\u2014",
-      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260929_115222665.xml",
+      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 11:24:21",
-      "company": "WEST COAST PAPER MILLS LIMITED",
+      "date": "29-Sep-2026 19:24:34",
+      "company": "MINDSPACE BUSINESS PARKS REIT",
       "personCategory": "\u2014",
-      "transactionType": "WSTCSTPAPR|WEST COAST PAPER MILLS LIMITED|Original|Regulation 7 (2)|IT_991_WebXMLFile_2026",
+      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 10:54:02",
-      "company": "Indiqube Spaces Limited",
+      "date": "29-Sep-2026 19:16:07",
+      "company": "VIP CLOTHING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDIQUBE|Indiqube Spaces Limited|Original|Regulation 7 (2)|IT_25080_WebXMLFile_20260929_10",
+      "transactionType": "VIPCLOTHNG|VIP CLOTHING LIMITED|Original|Regulation 7 (2)|IT_1783_WebXMLFile_20260929_1916",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 09:40:18",
+      "date": "29-Sep-2026 18:59:13",
+      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:44:33",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:37:41",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:36:47",
+      "company": "Dhampur Bio Organics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260929_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:34:24",
       "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260929_0940",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260929_1834",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:28:12",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260929_18281222",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:24:14",
+      "company": "Cura Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "CURAA|Cura Technologies Limited|Original|Regulation 7 (2)|IT_22660_WebXMLFile_20260929_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:21:40",
+      "company": "Bajaj Housing Finance Limited",
+      "personCategory": "\u2014",
+      "transactionType": "BAJAJHFL|Bajaj Housing Finance Limited|Original|Regulation 7 (2)|IT_23913_WebXMLFile_20260",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:14:25",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260929_181424929",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:13:20",
+      "company": "MAZDA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260929_181320845.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:06:27",
+      "company": "T T LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260929_180627844.xml|IT_253",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 18:04:16",
+      "company": "Hy",
+      "personCategory": "\u2014",
+      "transactionType": "HTEL|Hy-Tech Engineers Limited|Original|Regulation 7 (2)|IT_26873_WebXMLFile_20260929_1804",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 17:52:08",
+      "company": "GRAVITA INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260929_175208",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 17:40:57",
+      "company": "Goodluck India Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GOODLUCK|Goodluck India Limited|Original|Regulation 7 (2)|IT_11300_WebXMLFile_20260929_174",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 17:38:36",
+      "company": "HEALTHCARE GLOBAL ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "HCG|HEALTHCARE GLOBAL ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

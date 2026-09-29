@@ -1,179 +1,81 @@
 {
-  "updated": "2026-09-28T18:00:44.236498Z",
+  "updated": "2026-09-29T10:09:06.942818Z",
   "rows": [
     {
-      "date": "28-Sep-2026 22:09:56",
-      "company": "ANONDITA MEDICARE LIMITED",
+      "date": "29-Sep-2026 14:39:44",
+      "company": "SHILPA MEDICARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ANONDITA|ANONDITA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_25013_WebXMLFile_20260928_",
+      "transactionType": "SHILPAMED|SHILPA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_2988_WebXMLFile_20260929_14",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 22:05:44",
-      "company": "NEULAND LABORATORIES LIMITED",
+      "date": "29-Sep-2026 14:38:38",
+      "company": "SHILPA MEDICARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NEULANDLAB|NEULAND LABORATORIES LIMITED|Original|Regulation 7 (2)|IT_465_WebXMLFile_202609",
+      "transactionType": "SHILPAMED|SHILPA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_2988_WebXMLFile_20260929_14",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 21:20:34",
-      "company": "Indiabulls Limited",
+      "date": "29-Sep-2026 14:37:15",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "IBULLSLTD|Indiabulls Limited|Original|Regulation 7 (2)|IT_5135_WebXMLFile_20260928_2120340",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260929_143715",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 20:49:07",
-      "company": "AFFORDABLE ROBOTIC & AUTOMATION LIMITED",
+      "date": "29-Sep-2026 14:06:12",
+      "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AFFORDABLE|AFFORDABLE ROBOTIC & AUTOMATION LIMITED|Original|Regulation 7 (2)|IT_22451_WebX",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 19:50:57",
-      "company": "REPRO INDIA LIMITED",
+      "date": "29-Sep-2026 14:05:12",
+      "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "REPRO|REPRO INDIA LIMITED|Original|Regulation 7 (2)|IT_1916_WebXMLFile_20260928_195057216.",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20260929_",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 19:37:56",
-      "company": "TRUALT BIOENERGY LIMITED",
+      "date": "29-Sep-2026 13:32:02",
+      "company": "FERMENTA BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260928_193",
+      "transactionType": "FERMENTA|FERMENTA BIOTECH LIMITED|Original|Regulation 7 (2)|IT_28435_WebXMLFile_20260929_1",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 19:03:05",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "29-Sep-2026 12:35:16",
+      "company": "NURECA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260928",
+      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260929_123516803.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 18:58:32",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "29-Sep-2026 11:52:22",
+      "company": "GNA AXLES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260928",
+      "transactionType": "GNA|GNA AXLES LIMITED|Original|Regulation 7 (2)|IT_14236_WebXMLFile_20260929_115222665.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 18:34:24",
-      "company": "GANESHA ECOSPHERE LIMITED",
+      "date": "29-Sep-2026 11:24:21",
+      "company": "WEST COAST PAPER MILLS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GANECOS|GANESHA ECOSPHERE LIMITED|Original|Regulation 7 (2)|IT_11601_WebXMLFile_20260928_1",
+      "transactionType": "WSTCSTPAPR|WEST COAST PAPER MILLS LIMITED|Original|Regulation 7 (2)|IT_991_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 18:26:41",
-      "company": "eClerx Services Ltd",
+      "date": "29-Sep-2026 10:54:02",
+      "company": "Indiqube Spaces Limited",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260928_182641050",
+      "transactionType": "INDIQUBE|Indiqube Spaces Limited|Original|Regulation 7 (2)|IT_25080_WebXMLFile_20260929_10",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Sep-2026 18:21:50",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+      "date": "29-Sep-2026 09:40:18",
+      "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 18:05:39",
-      "company": "PNC INFRATECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PNCINFRA|PNC INFRATECH LIMITED|Original|Regulation 7 (2)|IT_12451_WebXMLFile_20260928_1805",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 18:04:05",
-      "company": "PDS Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PDSL|PDS Limited|Original|Regulation 7 (2)|IT_10866_WebXMLFile_20260928_180405146.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:52:52",
-      "company": "HAPPY FORGINGS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20260928_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:49:17",
-      "company": "PNC INFRATECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PNCINFRA|PNC INFRATECH LIMITED|Original|Regulation 7 (2)|IT_12451_WebXMLFile_20260928_1749",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:40:21",
-      "company": "KARUR VYSYA BANK LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20260928_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:39:56",
-      "company": "IND",
-      "personCategory": "\u2014",
-      "transactionType": "INDSWFTLAB|IND-SWIFT LABORATORIES LIMITED|Original|Regulation 7 (2)|IT_1622_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:34:09",
-      "company": "IND SWIFT LABORATORIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "INDSWFTLAB|IND SWIFT LABORATORIES LIMITED|Original|Regulation 7 (2)|IT_1622_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:12:40",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20260928_171",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:08:30",
-      "company": "ALMONDZ GLOBAL SECURITIES  LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ALMONDZ|ALMONDZ GLOBAL SECURITIES  LIMITED|Original|Regulation 7 (2)|IT_2757_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:04:48",
-      "company": "SPECIALITY RESTAURANTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:00:50",
-      "company": "ARVEE LABORATORIES (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVEE|ARVEE LABORATORIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15804_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:00:50",
-      "company": "ARVEE LABORATORIES (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVEE|ARVEE LABORATORIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15804_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:00:50",
-      "company": "ARVEE LABORATORIES (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVEE|ARVEE LABORATORIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15804_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Sep-2026 17:00:50",
-      "company": "ARVEE LABORATORIES (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ARVEE|ARVEE LABORATORIES (INDIA) LIMITED|Original|Regulation 7 (2)|IT_15804_WebXMLFile_202",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260929_0940",
       "quantity": "\u2014"
     }
   ],

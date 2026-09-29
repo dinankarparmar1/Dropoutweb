@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-29T16:22:54.206363Z",
+  "updated": "2026-09-29T18:24:15.069588Z",
   "rows": [
+    {
+      "date": "29-Sep-2026 22:59:18",
+      "company": "ORBIT EXPORTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ORBTEXP|ORBIT EXPORTS LIMITED|Original|Regulation 7 (2)|IT_7870_WebXMLFile_20260929_225917",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 22:58:19",
+      "company": "AXISCADES Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AXISCADES|AXISCADES Technologies Limited|Original|Regulation 7 (2)|IT_1939_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Sep-2026 22:20:05",
+      "company": "MAYUR UNIQUOTERS",
+      "personCategory": "\u2014",
+      "transactionType": "MAYURUNIQ|MAYUR UNIQUOTERS|Original|Regulation 7 (2)|IT_6149_WebXMLFile_20260929_222005829",
+      "quantity": "\u2014"
+    },
     {
       "date": "29-Sep-2026 21:40:32",
       "company": "Parag Milk Foods Limited",
@@ -153,27 +174,6 @@
       "company": "Hy",
       "personCategory": "\u2014",
       "transactionType": "HTEL|Hy-Tech Engineers Limited|Original|Regulation 7 (2)|IT_26873_WebXMLFile_20260929_1804",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 17:52:08",
-      "company": "GRAVITA INDIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20260929_175208",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 17:40:57",
-      "company": "Goodluck India Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GOODLUCK|Goodluck India Limited|Original|Regulation 7 (2)|IT_11300_WebXMLFile_20260929_174",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 17:38:36",
-      "company": "HEALTHCARE GLOBAL ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "HCG|HEALTHCARE GLOBAL ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_13642_WebXMLFile_20",
       "quantity": "\u2014"
     }
   ],

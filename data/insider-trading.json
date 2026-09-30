@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-30T10:06:34.161967Z",
+  "updated": "2026-09-30T16:18:33.334607Z",
   "rows": [
     {
-      "date": "30-Sep-2026 15:35:01",
-      "company": "WESTLIFE FOODWORLD LIMITED",
+      "date": "30-Sep-2026 20:36:34",
+      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (3)|IT_17571_WebXMLFile_20260930",
+      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 15:34:57",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 15:34:50",
-      "company": "WESTLIFE FOODWORLD LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 15:34:38",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 15:12:54",
-      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 15:05:49",
-      "company": "JM Financial Limited",
-      "personCategory": "\u2014",
-      "transactionType": "JMFINANCIL|JM Financial Limited|Original|Regulation 7 (2)|IT_2447_WebXMLFile_20260930_1505",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 15:00:25",
+      "date": "30-Sep-2026 20:04:23",
       "company": "IDEAFORGE TECHNOLOGY LIMITED",
       "personCategory": "\u2014",
       "transactionType": "IDEAFORGE|IDEAFORGE TECHNOLOGY LIMITED|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:46:08",
-      "company": "HCL Technologies Limited",
+      "date": "30-Sep-2026 18:59:01",
+      "company": "TRUALT BIOENERGY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260930_144",
+      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260930_185",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:45:27",
+      "company": "GALA PRECISION ENGINEERING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "GALAPREC|GALA PRECISION ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_23291_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:40:45",
+      "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260930_1840",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:39:26",
+      "company": "NRB BEARING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260930_18392",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:29:15",
+      "company": "FUSION FINANCE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "FUSION|FUSION FINANCE LIMITED|Original|Regulation 7 (2)|IT_19884_WebXMLFile_20260930_18291",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:27:14",
+      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:26:13",
+      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:12:03",
+      "company": "MILTON INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260930_18",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:06:41",
+      "company": "DR. LAL PATHLABS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260930",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 18:05:49",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260930_180549275",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 17:59:48",
+      "company": "Sterlite Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026093",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 17:55:47",
+      "company": "MOS Utility Limited",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "MOS|MOS Utility Limited|Original|Regulation 7 (2)|IT_21589_WebXMLFile_20260930_175547742.x",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 17:54:48",
+      "company": "Tata Consumer Products Limited",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 17:53:35",
+      "company": "RAJPUTANA STAINLESS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "RSL|RAJPUTANA STAINLESS LIMITED|Original|Regulation 7 (2)|IT_25166_WebXMLFile_20260930_175",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:43:02",
-      "company": "SHREE VASU LOGISTICS LIMITED",
+      "date": "30-Sep-2026 17:53:30",
+      "company": "JUBILANT FOODWORKS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260930_",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 14:02:07",
-      "company": "ARVIND PORT AND INFRA LIMITED",
+      "date": "30-Sep-2026 17:49:32",
+      "company": "K.M. SUGAR MILLS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "transactionType": "KMSUGAR|K.M. SUGAR MILLS LIMITED|Original|Regulation 7 (2)|IT_2605_WebXMLFile_20260930_174",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 13:59:09",
-      "company": "Parag Milk Foods Limited",
+      "date": "30-Sep-2026 17:37:03",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260930_",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260930_173703",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 12:49:55",
-      "company": "Divi's Laboratories Limited",
+      "date": "30-Sep-2026 17:34:40",
+      "company": "Action Constuction Equipment Limited",
       "personCategory": "\u2014",
-      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260930",
+      "transactionType": "ACE|Action Constuction Equipment Limited|Original|Regulation 7 (2)|IT_2433_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 17:26:49",
+      "company": "Rama Steel Tubes Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RAMASTEEL|Rama Steel Tubes Limited|Original|Regulation 7 (2)|IT_12986_WebXMLFile_20260930_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 17:20:55",
+      "company": "GENUS POWER INFRASTRUCTURES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GENUSPOWER|GENUS POWER INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_2303_WebXMLFil",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 17:04:23",
+      "company": "CONTROL PRINT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260930_170",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 17:04:11",
+      "company": "MEDICAMEN BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MEDICAMEQ|MEDICAMEN BIOTECH LIMITED|Original|Regulation 7 (2)|IT_19996_WebXMLFile_20260930",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 17:02:57",
+      "company": "ORIANA POWER LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ORIANA|ORIANA POWER LIMITED|Original|Regulation 7 (2)|IT_22131_WebXMLFile_20260930_1702572",
       "quantity": "\u2014"
     }
   ],

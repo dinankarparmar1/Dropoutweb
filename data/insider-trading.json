@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-29T18:24:15.069588Z",
+  "updated": "2026-09-30T10:01:03.167068Z",
   "rows": [
     {
-      "date": "29-Sep-2026 22:59:18",
-      "company": "ORBIT EXPORTS LIMITED",
+      "date": "30-Sep-2026 15:12:54",
+      "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ORBTEXP|ORBIT EXPORTS LIMITED|Original|Regulation 7 (2)|IT_7870_WebXMLFile_20260929_225917",
+      "transactionType": "TAINWALCHM|TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_48",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 22:58:19",
-      "company": "AXISCADES Technologies Limited",
+      "date": "30-Sep-2026 15:05:49",
+      "company": "JM Financial Limited",
       "personCategory": "\u2014",
-      "transactionType": "AXISCADES|AXISCADES Technologies Limited|Original|Regulation 7 (2)|IT_1939_WebXMLFile_2026",
+      "transactionType": "JMFINANCIL|JM Financial Limited|Original|Regulation 7 (2)|IT_2447_WebXMLFile_20260930_1505",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 22:20:05",
-      "company": "MAYUR UNIQUOTERS",
+      "date": "30-Sep-2026 15:00:25",
+      "company": "IDEAFORGE TECHNOLOGY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MAYURUNIQ|MAYUR UNIQUOTERS|Original|Regulation 7 (2)|IT_6149_WebXMLFile_20260929_222005829",
+      "transactionType": "IDEAFORGE|IDEAFORGE TECHNOLOGY LIMITED|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20260",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 21:40:32",
+      "date": "30-Sep-2026 14:46:08",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20260930_144",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:43:02",
+      "company": "SHREE VASU LOGISTICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SVLL|SHREE VASU LOGISTICS LIMITED|Original|Regulation 7 (2)|IT_16229_WebXMLFile_20260930_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 14:02:07",
+      "company": "ARVIND PORT AND INFRA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 13:59:09",
       "company": "Parag Milk Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260929_",
+      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20260930_",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 20:24:23",
-      "company": "WESTERN CARRIERS (INDIA) LIMITED",
+      "date": "30-Sep-2026 12:49:55",
+      "company": "Divi's Laboratories Limited",
       "personCategory": "\u2014",
-      "transactionType": "WCIL|WESTERN CARRIERS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_22116_WebXMLFile_202609",
+      "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260930",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 20:14:02",
-      "company": "THE SOUTH INDIAN BANK LIMITED",
+      "date": "30-Sep-2026 12:24:00",
+      "company": "Amanta Healthcare Limited",
       "personCategory": "\u2014",
-      "transactionType": "SOUTHBANK|THE SOUTH INDIAN BANK LIMITED|Original|Regulation 7 (2)|IT_1684_WebXMLFile_20260",
+      "transactionType": "AMANTA|Amanta Healthcare Limited|Original|Regulation 7 (2)|IT_24620_WebXMLFile_20260930_12",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 19:32:03",
-      "company": "SAURASHTRA CEMENT LIMITED",
+      "date": "30-Sep-2026 12:18:08",
+      "company": "NURECA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260929_",
+      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260930_121808253.xml",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 19:29:50",
-      "company": "SAURASHTRA CEMENT LIMITED",
+      "date": "30-Sep-2026 12:06:02",
+      "company": "Alembic Limited",
       "personCategory": "\u2014",
-      "transactionType": "SAURASHCEM|SAURASHTRA CEMENT LIMITED|Original|Regulation 7 (2)|IT_355_WebXMLFile_20260929_",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260930_120602255",
       "quantity": "\u2014"
     },
     {
-      "date": "29-Sep-2026 19:29:44",
-      "company": "Sheetal Cool Products Limited",
+      "date": "30-Sep-2026 11:23:52",
+      "company": "Kirloskar Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "SCPL|Sheetal Cool Products Limited|Original|Regulation 7 (2)|IT_21096_WebXMLFile_20260929_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 19:27:39",
-      "company": "Sheetal Cool Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SCPL|Sheetal Cool Products Limited|Original|Regulation 7 (2)|IT_21096_WebXMLFile_20260929_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 19:24:34",
-      "company": "MINDSPACE BUSINESS PARKS REIT",
-      "personCategory": "\u2014",
-      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 19:24:34",
-      "company": "MINDSPACE BUSINESS PARKS REIT",
-      "personCategory": "\u2014",
-      "transactionType": "MINDSPACE|MINDSPACE BUSINESS PARKS REIT|Original|Regulation 7 (2)|IT_18608_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 19:16:07",
-      "company": "VIP CLOTHING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIPCLOTHNG|VIP CLOTHING LIMITED|Original|Regulation 7 (2)|IT_1783_WebXMLFile_20260929_1916",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:59:13",
-      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:44:33",
-      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:37:41",
-      "company": "Tiger Logistics (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:36:47",
-      "company": "Dhampur Bio Organics Limited",
-      "personCategory": "\u2014",
-      "transactionType": "DBOL|Dhampur Bio Organics Limited|Original|Regulation 7 (2)|IT_20812_WebXMLFile_20260929_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:34:24",
-      "company": "PAISALO DIGITAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260929_1834",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:28:12",
-      "company": "360 ONE WAM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20260929_18281222",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:24:14",
-      "company": "Cura Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CURAA|Cura Technologies Limited|Original|Regulation 7 (2)|IT_22660_WebXMLFile_20260929_182",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:21:40",
-      "company": "Bajaj Housing Finance Limited",
-      "personCategory": "\u2014",
-      "transactionType": "BAJAJHFL|Bajaj Housing Finance Limited|Original|Regulation 7 (2)|IT_23913_WebXMLFile_20260",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:14:25",
-      "company": "eClerx Services Ltd",
-      "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20260929_181424929",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:13:20",
-      "company": "MAZDA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAZDA|MAZDA LIMITED|Original|Regulation 7 (2)|IT_14337_WebXMLFile_20260929_181320845.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:06:27",
-      "company": "T T LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20260929_180627844.xml|IT_253",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "29-Sep-2026 18:04:16",
-      "company": "Hy",
-      "personCategory": "\u2014",
-      "transactionType": "HTEL|Hy-Tech Engineers Limited|Original|Regulation 7 (2)|IT_26873_WebXMLFile_20260929_1804",
+      "transactionType": "KIRLOSIND|Kirloskar Industries Limited|Original|Regulation 7 (2)|IT_3308_WebXMLFile_202609",
       "quantity": "\u2014"
     }
   ],

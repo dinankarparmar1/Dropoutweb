@@ -1,6 +1,34 @@
 {
-  "updated": "2026-09-30T10:01:03.167068Z",
+  "updated": "2026-09-30T10:06:34.161967Z",
   "rows": [
+    {
+      "date": "30-Sep-2026 15:35:01",
+      "company": "WESTLIFE FOODWORLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (3)|IT_17571_WebXMLFile_20260930",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 15:34:57",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260930",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 15:34:50",
+      "company": "WESTLIFE FOODWORLD LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20260930",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Sep-2026 15:34:38",
+      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20260930",
+      "quantity": "\u2014"
+    },
     {
       "date": "30-Sep-2026 15:12:54",
       "company": "TAINWALA CHEMICALS AND PLASTICS (INDIA) LIMITED",
@@ -146,34 +174,6 @@
       "company": "Divi's Laboratories Limited",
       "personCategory": "\u2014",
       "transactionType": "DIVISLAB|Divi's Laboratories Limited|Original|Regulation 7 (2)|IT_2132_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 12:24:00",
-      "company": "Amanta Healthcare Limited",
-      "personCategory": "\u2014",
-      "transactionType": "AMANTA|Amanta Healthcare Limited|Original|Regulation 7 (2)|IT_24620_WebXMLFile_20260930_12",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 12:18:08",
-      "company": "NURECA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NURECA|NURECA LIMITED|Original|Regulation 7 (2)|IT_18918_WebXMLFile_20260930_121808253.xml",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 12:06:02",
-      "company": "Alembic Limited",
-      "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20260930_120602255",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 11:23:52",
-      "company": "Kirloskar Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "KIRLOSIND|Kirloskar Industries Limited|Original|Regulation 7 (2)|IT_3308_WebXMLFile_202609",
       "quantity": "\u2014"
     }
   ],

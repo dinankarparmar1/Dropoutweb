@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-30T16:18:33.334607Z",
+  "updated": "2026-09-30T18:13:39.668169Z",
   "rows": [
+    {
+      "date": "30-Sep-2026 22:04:27",
+      "company": "STEL HOLDINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260930_220427236",
+      "quantity": "\u2014"
+    },
     {
       "date": "30-Sep-2026 20:36:34",
       "company": "JAY JALARAM TECHNOLOGIES LIMITED",
@@ -167,13 +174,6 @@
       "company": "MEDICAMEN BIOTECH LIMITED",
       "personCategory": "\u2014",
       "transactionType": "MEDICAMEQ|MEDICAMEN BIOTECH LIMITED|Original|Regulation 7 (2)|IT_19996_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 17:02:57",
-      "company": "ORIANA POWER LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ORIANA|ORIANA POWER LIMITED|Original|Regulation 7 (2)|IT_22131_WebXMLFile_20260930_1702572",
       "quantity": "\u2014"
     }
   ],

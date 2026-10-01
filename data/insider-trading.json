@@ -1,179 +1,179 @@
 {
-  "updated": "2026-09-30T18:13:39.668169Z",
+  "updated": "2026-10-01T10:28:28.697834Z",
   "rows": [
     {
-      "date": "30-Sep-2026 22:04:27",
-      "company": "STEL HOLDINGS LIMITED",
+      "date": "01-Oct-2026 15:57:25",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20260930_220427236",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Revision|Regulation 7 (2)|IT_17593_WebXMLFile_20261001_15572574",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 20:36:34",
-      "company": "JAY JALARAM TECHNOLOGIES LIMITED",
+      "date": "01-Oct-2026 15:50:32",
+      "company": "KAJARIA CERAMICS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KORE|JAY JALARAM TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_20786_WebXMLFile_202609",
+      "transactionType": "KAJARIACER|KAJARIA CERAMICS LIMITED|Original|Regulation 7 (2)|IT_689_WebXMLFile_20261001_1",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 20:04:23",
-      "company": "IDEAFORGE TECHNOLOGY LIMITED",
+      "date": "01-Oct-2026 15:13:07",
+      "company": "T T LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "IDEAFORGE|IDEAFORGE TECHNOLOGY LIMITED|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20260",
+      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20261001_151307845.xml|IT_253",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 18:59:01",
-      "company": "TRUALT BIOENERGY LIMITED",
+      "date": "01-Oct-2026 15:07:20",
+      "company": "Alembic Limited",
       "personCategory": "\u2014",
-      "transactionType": "TRUALT|TRUALT BIOENERGY LIMITED|Original|Regulation 7 (2)|IT_24291_WebXMLFile_20260930_185",
+      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20261001_150720466",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 18:45:27",
-      "company": "GALA PRECISION ENGINEERING LIMITED",
+      "date": "01-Oct-2026 15:00:34",
+      "company": "WESTLIFE FOODWORLD LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GALAPREC|GALA PRECISION ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_23291_WebXMLFile_",
+      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 18:40:45",
-      "company": "PAISALO DIGITAL LIMITED",
+      "date": "01-Oct-2026 14:51:34",
+      "company": "BODAL CHEMICALS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20260930_1840",
+      "transactionType": "BODALCHEM|BODAL CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_5143_WebXMLFile_20261001_14",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 18:39:26",
-      "company": "NRB BEARING LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NRBBEARING|NRB BEARING LIMITED|Original|Regulation 7 (2)|IT_1867_WebXMLFile_20260930_18392",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:29:15",
-      "company": "FUSION FINANCE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "FUSION|FUSION FINANCE LIMITED|Original|Regulation 7 (2)|IT_19884_WebXMLFile_20260930_18291",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:27:14",
-      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:26:13",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:12:03",
-      "company": "MILTON INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MILTON|MILTON INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_15536_WebXMLFile_20260930_18",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:06:41",
-      "company": "DR. LAL PATHLABS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "LALPATHLAB|DR. LAL PATHLABS LIMITED|Original|Regulation 7 (2)|IT_13310_WebXMLFile_20260930",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 18:05:49",
-      "company": "JSW STEEL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20260930_180549275",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 17:59:48",
-      "company": "Sterlite Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "STLTECH|Sterlite Technologies Limited|Original|Regulation 7 (2)|IT_1950_WebXMLFile_2026093",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 17:55:47",
-      "company": "MOS Utility Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MOS|MOS Utility Limited|Original|Regulation 7 (2)|IT_21589_WebXMLFile_20260930_175547742.x",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 17:54:48",
-      "company": "Tata Consumer Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TATACONSUM|Tata Consumer Products Limited|Original|Regulation 7 (2)|IT_1098_WebXMLFile_202",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Sep-2026 17:53:35",
+      "date": "01-Oct-2026 14:23:20",
       "company": "RAJPUTANA STAINLESS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RSL|RAJPUTANA STAINLESS LIMITED|Original|Regulation 7 (2)|IT_25166_WebXMLFile_20260930_175",
+      "transactionType": "RSL|RAJPUTANA STAINLESS LIMITED|Original|Regulation 7 (2)|IT_25166_WebXMLFile_20261001_142",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:53:30",
-      "company": "JUBILANT FOODWORKS LIMITED",
+      "date": "01-Oct-2026 14:00:07",
+      "company": "PAISALO DIGITAL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20260930_",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261001_1400",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:49:32",
-      "company": "K.M. SUGAR MILLS LIMITED",
+      "date": "01-Oct-2026 13:50:12",
+      "company": "JINDAL STAINLESS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KMSUGAR|K.M. SUGAR MILLS LIMITED|Original|Regulation 7 (2)|IT_2605_WebXMLFile_20260930_174",
+      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20261001_1350123",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:37:03",
-      "company": "NCL INDUSTRIES LIMITED",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20260930_173703",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:34:40",
-      "company": "Action Constuction Equipment Limited",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ACE|Action Constuction Equipment Limited|Original|Regulation 7 (2)|IT_2433_WebXMLFile_2026",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:26:49",
-      "company": "Rama Steel Tubes Limited",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RAMASTEEL|Rama Steel Tubes Limited|Original|Regulation 7 (2)|IT_12986_WebXMLFile_20260930_",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:20:55",
-      "company": "GENUS POWER INFRASTRUCTURES LIMITED",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GENUSPOWER|GENUS POWER INFRASTRUCTURES LIMITED|Original|Regulation 7 (2)|IT_2303_WebXMLFil",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:04:23",
-      "company": "CONTROL PRINT LIMITED",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20260930_170",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
       "quantity": "\u2014"
     },
     {
-      "date": "30-Sep-2026 17:04:11",
-      "company": "MEDICAMEN BIOTECH LIMITED",
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MEDICAMEQ|MEDICAMEN BIOTECH LIMITED|Original|Regulation 7 (2)|IT_19996_WebXMLFile_20260930",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:38:16",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 13:05:31",
+      "company": "One MobiKwik Systems Limited",
+      "personCategory": "\u2014",
+      "transactionType": "MOBIKWIK|One MobiKwik Systems Limited|Original|Regulation 7 (2)|IT_19759_WebXMLFile_202610",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "01-Oct-2026 12:20:24",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261001_12202430",
       "quantity": "\u2014"
     }
   ],

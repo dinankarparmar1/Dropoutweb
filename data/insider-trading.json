@@ -1,179 +1,179 @@
 {
-  "updated": "2026-10-01T10:34:31.870367Z",
+  "updated": "2026-10-01T16:55:49.191516Z",
   "rows": [
     {
-      "date": "01-Oct-2026 15:57:25",
-      "company": "360 ONE WAM LIMITED",
+      "date": "01-Oct-2026 20:27:59",
+      "company": "SKYWAYS AIR SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Revision|Regulation 7 (2)|IT_17593_WebXMLFile_20261001_15572574",
+      "transactionType": "SKYWAYS|SKYWAYS AIR SERVICES LIMITED|Original|Regulation 7 (2)|IT_26444_WebXMLFile_2026100",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 15:50:32",
-      "company": "KAJARIA CERAMICS LIMITED",
+      "date": "01-Oct-2026 19:39:34",
+      "company": "Ravindra Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAJARIACER|KAJARIA CERAMICS LIMITED|Original|Regulation 7 (2)|IT_689_WebXMLFile_20261001_1",
+      "transactionType": "RELTD|Ravindra Energy Limited|Original|Regulation 7 (2)|IT_23918_WebXMLFile_20261001_19393",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 15:13:07",
-      "company": "T T LIMITED",
+      "date": "01-Oct-2026 19:35:41",
+      "company": "JSW Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "TTL|T T LIMITED|Original|Regulation 7 (2)|IT_2534_WebXMLFile_20261001_151307845.xml|IT_253",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20261001_1935411",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 15:07:20",
-      "company": "Alembic Limited",
+      "date": "01-Oct-2026 19:34:11",
+      "company": "Parag Milk Foods Limited",
       "personCategory": "\u2014",
-      "transactionType": "ALEMBICLTD|Alembic Limited|Original|Regulation 7 (2)|IT_1817_WebXMLFile_20261001_150720466",
+      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20261001_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 15:00:34",
-      "company": "WESTLIFE FOODWORLD LIMITED",
+      "date": "01-Oct-2026 19:20:09",
+      "company": "SANSERA ENGINEERING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20261001",
+      "transactionType": "SANSERA|SANSERA ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_19738_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 14:51:34",
-      "company": "BODAL CHEMICALS LIMITED",
+      "date": "01-Oct-2026 19:14:09",
+      "company": "ANONDITA MEDICARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BODALCHEM|BODAL CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_5143_WebXMLFile_20261001_14",
+      "transactionType": "ANONDITA|ANONDITA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_25013_WebXMLFile_20261001_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 14:23:20",
-      "company": "RAJPUTANA STAINLESS LIMITED",
+      "date": "01-Oct-2026 19:13:37",
+      "company": "ANONDITA MEDICARE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "RSL|RAJPUTANA STAINLESS LIMITED|Original|Regulation 7 (2)|IT_25166_WebXMLFile_20261001_142",
+      "transactionType": "ANONDITA|ANONDITA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_25013_WebXMLFile_20261001_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 14:00:07",
-      "company": "PAISALO DIGITAL LIMITED",
+      "date": "01-Oct-2026 19:04:44",
+      "company": "Dalmia Bharat Limited",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261001_1400",
+      "transactionType": "DALBHARAT|Dalmia Bharat Limited|Original|Regulation 7 (2)|IT_17144_WebXMLFile_20261001_190",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:50:12",
-      "company": "JINDAL STAINLESS LIMITED",
+      "date": "01-Oct-2026 19:04:29",
+      "company": "SWELECT ENERGY SYSTEMS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20261001_1350123",
+      "transactionType": "SWELECTES|SWELECT ENERGY SYSTEMS LIMITED|Original|Regulation 7 (2)|IT_2403_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:44:59",
+      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:44:36",
+      "company": "VISHNUSURYA PROJECTS AND INFRA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "VISHNUINFR|VISHNUSURYA PROJECTS AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22361_WebXM",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:35:31",
+      "company": "SPECIALITY RESTAURANTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:34:14",
+      "company": "Tiger Logistics (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:32:03",
+      "company": "ASHIANA HOUSING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261001_1832",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:23:57",
+      "company": "Patel Integrated Logistics Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Revision|Regulation 7 (2)|IT_2705_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:21:02",
+      "company": "Patel Integrated Logistics Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "PATINTLOG|Patel Integrated Logistics Limited|Original|Regulation 7 (2)|IT_2705_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 18:20:35",
+      "company": "ASHIANA HOUSING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261001_1820",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:46:38",
+      "company": "Augmont Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "AUGMONT|Augmont Enterprises Limited|Original|Regulation 7 (2)|IT_27082_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:38:00",
+      "company": "KRONOX LAB SCIENCES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "KRONOX|KRONOX LAB SCIENCES LIMITED|Original|Regulation 7 (2)|IT_22833_WebXMLFile_20261001_",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:37:42",
+      "company": "RBZ JEWELLERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "RBZJEWEL|RBZ JEWELLERS LIMITED|Original|Regulation 7 (2)|IT_22186_WebXMLFile_20261001_1737",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:27:15",
+      "company": "Augmont Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "AUGMONT|Augmont Enterprises Limited|Original|Regulation 7 (2)|IT_27082_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:26:36",
+      "company": "RBZ JEWELLERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "RBZJEWEL|RBZ JEWELLERS LIMITED|Original|Regulation 7 (2)|IT_22186_WebXMLFile_20261001_1726",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:38:16",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "01-Oct-2026 17:21:13",
+      "company": "Augmont Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261001_13",
+      "transactionType": "AUGMONT|Augmont Enterprises Limited|Original|Regulation 7 (2)|IT_27082_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 13:05:31",
-      "company": "One MobiKwik Systems Limited",
+      "date": "01-Oct-2026 17:20:49",
+      "company": "Augmont Enterprises Limited",
       "personCategory": "\u2014",
-      "transactionType": "MOBIKWIK|One MobiKwik Systems Limited|Original|Regulation 7 (2)|IT_19759_WebXMLFile_202610",
+      "transactionType": "AUGMONT|Augmont Enterprises Limited|Original|Regulation 7 (2)|IT_27082_WebXMLFile_20261001",
       "quantity": "\u2014"
     },
     {
-      "date": "01-Oct-2026 12:20:24",
-      "company": "360 ONE WAM LIMITED",
+      "date": "01-Oct-2026 17:17:25",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261001_12202430",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20261001_17",
       "quantity": "\u2014"
     }
   ],

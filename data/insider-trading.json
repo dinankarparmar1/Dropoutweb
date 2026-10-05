@@ -1,18 +1,32 @@
 {
-  "updated": "2026-10-02T18:08:46.551932Z",
+  "updated": "2026-10-05T10:52:07.765427Z",
   "rows": [
     {
-      "date": "02-Oct-2026 16:57:07",
-      "company": "ACUTAAS CHEMICALS LIMITED",
+      "date": "05-Oct-2026 15:42:05",
+      "company": "MAXVOLT ENERGY INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ACUTAAS|ACUTAAS CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_19536_WebXMLFile_20261002_1",
+      "transactionType": "Gift",
+      "quantity": "4,48,986"
+    },
+    {
+      "date": "05-Oct-2026 14:50:01",
+      "company": "OMAXE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "OMAXE|OMAXE LIMITED|Original|Regulation 7 (2)|IT_2637_WebXMLFile_20261005_145001250.xml|IT",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Oct-2026 11:03:02",
-      "company": "Mayur Uniquoters Ltd",
+      "date": "05-Oct-2026 14:22:39",
+      "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "MAYURUNIQ|Mayur Uniquoters Ltd|Original|Regulation 7 (2)|IT_6149_WebXMLFile_20261002_11030",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261005_142",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Oct-2026 11:48:24",
+      "company": "Affle 3i Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20261005_114824661.xm",
       "quantity": "\u2014"
     }
   ],

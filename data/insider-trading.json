@@ -1,32 +1,46 @@
 {
-  "updated": "2026-10-05T10:59:11.139039Z",
+  "updated": "2026-10-06T10:47:58.507956Z",
   "rows": [
     {
-      "date": "05-Oct-2026 15:42:05",
-      "company": "MAXVOLT ENERGY INDUSTRIES LIMITED",
+      "date": "06-Oct-2026 15:08:58",
+      "company": "JAYASWAL NECO INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "Gift",
-      "quantity": "4,48,986"
-    },
-    {
-      "date": "05-Oct-2026 14:50:01",
-      "company": "OMAXE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "OMAXE|OMAXE LIMITED|Original|Regulation 7 (2)|IT_2637_WebXMLFile_20261005_145001250.xml|IT",
+      "transactionType": "JAYNECOIND|JAYASWAL NECO INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_517_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "05-Oct-2026 14:22:39",
-      "company": "Info Edge (India) Limited",
+      "date": "06-Oct-2026 15:07:28",
+      "company": "SHANKARA BUILDING PRODUCTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261005_142",
+      "transactionType": "SHANKARA|SHANKARA BUILDING PRODUCTS LIMITED|Original|Regulation 7 (2)|IT_14812_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "05-Oct-2026 11:48:24",
-      "company": "Affle 3i Limited",
+      "date": "06-Oct-2026 15:07:02",
+      "company": "SHANKARA BUILDING PRODUCTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20261005_114824661.xm",
+      "transactionType": "SHANKARA|SHANKARA BUILDING PRODUCTS LIMITED|Original|Regulation 7 (2)|IT_14812_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "06-Oct-2026 14:18:21",
+      "company": "SHANKARA BUILDING PRODUCTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHANKARA|SHANKARA BUILDING PRODUCTS LIMITED|Original|Regulation 7 (2)|IT_14812_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "06-Oct-2026 12:27:08",
+      "company": "Sical Logistics Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SICALLOG|Sical Logistics Limited|Original|Regulation 7 (2)|IT_21775_WebXMLFile_20261006_12",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "06-Oct-2026 11:54:57",
+      "company": "JSW STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20261006_115456951",
       "quantity": "\u2014"
     }
   ],

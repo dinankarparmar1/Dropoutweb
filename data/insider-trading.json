@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-07T10:42:09.455723Z",
+  "updated": "2026-10-07T17:20:14.630265Z",
   "rows": [
+    {
+      "date": "07-Oct-2026 19:09:40",
+      "company": "Ravindra Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RELTD|Ravindra Energy Limited|Original|Regulation 7 (2)|IT_23918_WebXMLFile_20261007_19094",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Oct-2026 18:47:45",
+      "company": "Indiabulls Limited",
+      "personCategory": "\u2014",
+      "transactionType": "IBULLSLTD|Indiabulls Limited|Original|Regulation 7 (2)|IT_5135_WebXMLFile_20261007_1847456",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "07-Oct-2026 17:13:52",
+      "company": "BHARTIYA INTERNATIONAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BIL|BHARTIYA INTERNATIONAL LIMITED|Original|Regulation 7 (2)|IT_1877_WebXMLFile_20261007_1",
+      "quantity": "\u2014"
+    },
     {
       "date": "07-Oct-2026 15:54:09",
       "company": "MAHINDRA HOLIDAYS & RESORTS INDIA LIMITED",

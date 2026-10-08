@@ -1,6 +1,41 @@
 {
-  "updated": "2026-10-08T11:02:07.245558Z",
+  "updated": "2026-10-08T17:15:43.453481Z",
   "rows": [
+    {
+      "date": "08-Oct-2026 21:57:22",
+      "company": "VINTAGE COFFEE AND BEVERAGES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VINCOFE|VINTAGE COFFEE AND BEVERAGES LIMITED|Original|Regulation 7 (2)|IT_24345_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Oct-2026 18:36:17",
+      "company": "AXISCADES Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AXISCADES|AXISCADES Technologies Limited|Original|Regulation 7 (2)|IT_1939_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Oct-2026 17:33:44",
+      "company": "HCL Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261008_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Oct-2026 17:30:09",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "Designated Person",
+      "transactionType": "Pledge",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "08-Oct-2026 17:27:52",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Revision|Regulation 7 (2)|IT_2460_WebXMLFile_20261008_172",
+      "quantity": "\u2014"
+    },
     {
       "date": "08-Oct-2026 16:00:04",
       "company": "ideaForge Technology Limited",

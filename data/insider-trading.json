@@ -1,53 +1,25 @@
 {
-  "updated": "2026-10-08T17:15:43.453481Z",
+  "updated": "2026-10-09T10:55:47.775928Z",
   "rows": [
     {
-      "date": "08-Oct-2026 21:57:22",
-      "company": "VINTAGE COFFEE AND BEVERAGES LIMITED",
+      "date": "09-Oct-2026 14:44:45",
+      "company": "CSL Finance Limited",
       "personCategory": "\u2014",
-      "transactionType": "VINCOFE|VINTAGE COFFEE AND BEVERAGES LIMITED|Original|Regulation 7 (2)|IT_24345_WebXMLFile",
+      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20261009_1444",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Oct-2026 18:36:17",
-      "company": "AXISCADES Technologies Limited",
+      "date": "09-Oct-2026 10:45:22",
+      "company": "ZENSAR TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AXISCADES|AXISCADES Technologies Limited|Original|Regulation 7 (2)|IT_1939_WebXMLFile_2026",
+      "transactionType": "ZENSARTECH|ZENSAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026100",
       "quantity": "\u2014"
     },
     {
-      "date": "08-Oct-2026 17:33:44",
-      "company": "HCL Technologies Limited",
+      "date": "09-Oct-2026 10:27:03",
+      "company": "W S Industries (I) Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261008_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Oct-2026 17:30:09",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "Designated Person",
-      "transactionType": "Pledge",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Oct-2026 17:27:52",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Revision|Regulation 7 (2)|IT_2460_WebXMLFile_20261008_172",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Oct-2026 16:00:04",
-      "company": "ideaForge Technology Limited",
-      "personCategory": "\u2014",
-      "transactionType": "IDEAFORGE|ideaForge Technology Limited|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "08-Oct-2026 11:26:47",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261008_112",
+      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20261009_102703",
       "quantity": "\u2014"
     }
   ],

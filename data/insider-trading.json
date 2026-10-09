@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-09T11:01:50.595801Z",
+  "updated": "2026-10-09T16:51:52.974173Z",
   "rows": [
+    {
+      "date": "09-Oct-2026 19:18:02",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261009_191",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Oct-2026 18:21:11",
+      "company": "AEQUS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20261009_182111689.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Oct-2026 17:53:22",
+      "company": "KEI INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KEI|KEI INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2379_WebXMLFile_20261009_175321911",
+      "quantity": "\u2014"
+    },
     {
       "date": "09-Oct-2026 14:44:45",
       "company": "CSL Finance Limited",

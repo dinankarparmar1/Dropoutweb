@@ -1,46 +1,11 @@
 {
-  "updated": "2026-10-09T16:51:52.974173Z",
+  "updated": "2026-10-12T11:20:54.312257Z",
   "rows": [
     {
-      "date": "09-Oct-2026 19:18:02",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "12-Oct-2026 14:11:27",
+      "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261009_191",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Oct-2026 18:21:11",
-      "company": "AEQUS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20261009_182111689.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Oct-2026 17:53:22",
-      "company": "KEI INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KEI|KEI INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2379_WebXMLFile_20261009_175321911",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Oct-2026 14:44:45",
-      "company": "CSL Finance Limited",
-      "personCategory": "\u2014",
-      "transactionType": "CSLFINANCE|CSL Finance Limited|Original|Regulation 7 (2)|IT_20784_WebXMLFile_20261009_1444",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Oct-2026 10:45:22",
-      "company": "ZENSAR TECHNOLOGIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ZENSARTECH|ZENSAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026100",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "09-Oct-2026 10:27:03",
-      "company": "W S Industries (I) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "WSI|W S Industries (I) Limited|Original|Regulation 7 (2)|IT_587_WebXMLFile_20261009_102703",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261012_141",
       "quantity": "\u2014"
     }
   ],

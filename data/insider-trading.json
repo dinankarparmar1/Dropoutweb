@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-13T17:25:15.162925Z",
+  "updated": "2026-10-14T09:02:18.659026Z",
   "rows": [
     {
-      "date": "13-Oct-2026 12:43:53",
-      "company": "eClerx Services Ltd",
+      "date": "14-Oct-2026 12:38:56",
+      "company": "Blue Water Logistics Limited",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261013_124353188",
+      "transactionType": "BLUEWATER|Blue Water Logistics Limited|Original|Regulation 7 (2)|IT_24515_WebXMLFile_20261",
       "quantity": "\u2014"
     }
   ],

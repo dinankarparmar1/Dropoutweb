@@ -1,6 +1,13 @@
 {
-  "updated": "2026-10-14T14:56:01.789899Z",
+  "updated": "2026-10-14T17:42:25.580737Z",
   "rows": [
+    {
+      "date": "14-Oct-2026 21:25:54",
+      "company": "Nazara Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAZARA|Nazara Technologies Limited|Original|Regulation 7 (2)|IT_19166_WebXMLFile_20261014_",
+      "quantity": "\u2014"
+    },
     {
       "date": "14-Oct-2026 19:34:01",
       "company": "Embassy Developments Limited",

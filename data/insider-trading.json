@@ -1,67 +1,74 @@
 {
-  "updated": "2026-10-14T17:42:25.580737Z",
+  "updated": "2026-10-15T13:41:56.167240Z",
   "rows": [
     {
-      "date": "14-Oct-2026 21:25:54",
-      "company": "Nazara Technologies Limited",
+      "date": "15-Oct-2026 18:23:47",
+      "company": "AVENUE SUPERMARTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NAZARA|Nazara Technologies Limited|Original|Regulation 7 (2)|IT_19166_WebXMLFile_20261014_",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261015_182",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 19:34:01",
-      "company": "Embassy Developments Limited",
+      "date": "15-Oct-2026 18:14:18",
+      "company": "Swan Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "EMBDL|Embassy Developments Limited|Original|Regulation 7 (2)|IT_2560_WebXMLFile_20261014_1",
+      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20261015_181418677",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 17:13:08",
-      "company": "HCL Technologies Limited",
+      "date": "15-Oct-2026 18:09:54",
+      "company": "NATCO PHARMA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261014_171",
+      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20261015_1809",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 16:30:55",
-      "company": "Sheetal Universal Limited",
+      "date": "15-Oct-2026 17:58:30",
+      "company": "SHAIVAL REALITY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHEETAL|Sheetal Universal Limited|Original|Regulation 7 (2)|IT_22458_WebXMLFile_20261014_1",
+      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 16:29:40",
-      "company": "Sheetal Universal Limited",
+      "date": "15-Oct-2026 17:57:53",
+      "company": "SHAIVAL REALITY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHEETAL|Sheetal Universal Limited|Original|Regulation 7 (2)|IT_22458_WebXMLFile_20261014_1",
+      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 16:28:03",
-      "company": "Sheetal Universal Limited",
+      "date": "15-Oct-2026 17:51:50",
+      "company": "SHAIVAL REALITY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHEETAL|Sheetal Universal Limited|Original|Regulation 7 (2)|IT_22458_WebXMLFile_20261014_1",
+      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 16:08:19",
-      "company": "Infosys Limited",
+      "date": "15-Oct-2026 17:49:12",
+      "company": "Responsive Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20261014_160819152.xml|IT",
+      "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20261",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 16:01:17",
-      "company": "Sheetal Universal Limited",
+      "date": "15-Oct-2026 17:44:38",
+      "company": "Swan Corp Limited",
       "personCategory": "\u2014",
-      "transactionType": "SHEETAL|Sheetal Universal Limited|Original|Regulation 7 (2)|IT_22458_WebXMLFile_20261014_1",
+      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20261015_174438311",
       "quantity": "\u2014"
     },
     {
-      "date": "14-Oct-2026 12:38:56",
-      "company": "Blue Water Logistics Limited",
+      "date": "15-Oct-2026 17:42:49",
+      "company": "AEQUS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "BLUEWATER|Blue Water Logistics Limited|Original|Regulation 7 (2)|IT_24515_WebXMLFile_20261",
+      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20261015_174249262.xml|I",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "15-Oct-2026 16:55:55",
+      "company": "UNIHEALTH HOSPITALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "UNIHEALTH|UNIHEALTH HOSPITALS LIMITED|Original|Regulation 7 (2)|IT_22130_WebXMLFile_202610",
       "quantity": "\u2014"
     }
   ],

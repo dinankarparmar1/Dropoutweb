@@ -1,116 +1,25 @@
 {
-  "updated": "2026-10-15T17:31:34.023644Z",
+  "updated": "2026-10-16T13:32:13.073614Z",
   "rows": [
     {
-      "date": "15-Oct-2026 21:18:10",
-      "company": "Texmo Pipes and Products Limited",
+      "date": "16-Oct-2026 18:03:47",
+      "company": "HCL Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
+      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261016_180",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Oct-2026 21:17:48",
-      "company": "Texmo Pipes and Products Limited",
+      "date": "16-Oct-2026 16:47:37",
+      "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261016_164",
       "quantity": "\u2014"
     },
     {
-      "date": "15-Oct-2026 21:17:46",
-      "company": "Texmo Pipes and Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 21:17:08",
-      "company": "Texmo Pipes and Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 21:16:44",
-      "company": "Texmo Pipes and Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 21:14:18",
-      "company": "Texmo Pipes and Products Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TEXMOPIPES|Texmo Pipes and Products Limited|Original|Regulation 7 (2)|IT_3093_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 18:23:47",
-      "company": "AVENUE SUPERMARTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261015_182",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 18:14:18",
-      "company": "Swan Corp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20261015_181418677",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 18:09:54",
+      "date": "16-Oct-2026 16:46:48",
       "company": "NATCO PHARMA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20261015_1809",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:58:30",
-      "company": "SHAIVAL REALITY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:57:53",
-      "company": "SHAIVAL REALITY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:51:50",
-      "company": "SHAIVAL REALITY LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHAIVAL|SHAIVAL REALITY LIMITED|Original|Regulation 7 (2)|IT_13117_WebXMLFile_20261015_175",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:49:12",
-      "company": "Responsive Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:44:38",
-      "company": "Swan Corp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SWANCORP|Swan Corp Limited|Original|Regulation 7 (2)|IT_5939_WebXMLFile_20261015_174438311",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 17:42:49",
-      "company": "AEQUS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20261015_174249262.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "15-Oct-2026 16:55:55",
-      "company": "UNIHEALTH HOSPITALS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "UNIHEALTH|UNIHEALTH HOSPITALS LIMITED|Original|Regulation 7 (2)|IT_22130_WebXMLFile_202610",
+      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20261016_1646",
       "quantity": "\u2014"
     }
   ],

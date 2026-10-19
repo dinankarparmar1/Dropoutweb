@@ -1,46 +1,18 @@
 {
-  "updated": "2026-10-16T17:07:00.987221Z",
+  "updated": "2026-10-19T09:19:23.852766Z",
   "rows": [
     {
-      "date": "16-Oct-2026 19:10:40",
-      "company": "S H Kelkar and Company Limited",
+      "date": "19-Oct-2026 10:38:35",
+      "company": "NAVA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261016_",
+      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20261019_103835832.xml|IT_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Oct-2026 19:10:04",
-      "company": "S H Kelkar and Company Limited",
+      "date": "19-Oct-2026 10:38:01",
+      "company": "NAVA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261016_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Oct-2026 19:05:54",
-      "company": "S H Kelkar and Company Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261016_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Oct-2026 18:03:47",
-      "company": "HCL Technologies Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261016_180",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Oct-2026 16:47:37",
-      "company": "Info Edge (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261016_164",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Oct-2026 16:46:48",
-      "company": "NATCO PHARMA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20261016_1646",
+      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20261019_103801240.xml|IT_1",
       "quantity": "\u2014"
     }
   ],

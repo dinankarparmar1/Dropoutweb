@@ -1,6 +1,69 @@
 {
-  "updated": "2026-10-21T08:59:22.898990Z",
+  "updated": "2026-10-21T14:22:09.143851Z",
   "rows": [
+    {
+      "date": "21-Oct-2026 18:28:48",
+      "company": "KARUR VYSYA BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261021_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 18:20:16",
+      "company": "AHIMSA INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 18:18:57",
+      "company": "Pritika Engineering Components Limited",
+      "personCategory": "\u2014",
+      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 18:14:39",
+      "company": "Pritika Engineering Components Limited",
+      "personCategory": "\u2014",
+      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 18:12:48",
+      "company": "Pritika Engineering Components Limited",
+      "personCategory": "\u2014",
+      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 16:49:59",
+      "company": "S H Kelkar and Company Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261021_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 16:48:42",
+      "company": "S H Kelkar and Company Limited",
+      "personCategory": "\u2014",
+      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261021_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 16:43:33",
+      "company": "AHIMSA INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "21-Oct-2026 16:43:09",
+      "company": "AHIMSA INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_16",
+      "quantity": "\u2014"
+    },
     {
       "date": "21-Oct-2026 12:30:02",
       "company": "Mangal Credit and Fincorp Limited",

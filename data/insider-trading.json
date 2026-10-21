@@ -1,39 +1,32 @@
 {
-  "updated": "2026-10-19T16:51:31.631369Z",
+  "updated": "2026-10-21T08:53:30.797025Z",
   "rows": [
     {
-      "date": "19-Oct-2026 18:43:32",
-      "company": "HCL Technologies Limited",
+      "date": "21-Oct-2026 12:30:02",
+      "company": "Mangal Credit and Fincorp Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261019_184",
+      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (3)|IT_19071_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "19-Oct-2026 18:41:11",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "21-Oct-2026 12:28:32",
+      "company": "Mangal Credit and Fincorp Limited",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261019_184",
+      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (2)|IT_19071_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "19-Oct-2026 18:03:19",
-      "company": "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+      "date": "21-Oct-2026 12:26:25",
+      "company": "Mangal Credit and Fincorp Limited",
       "personCategory": "\u2014",
-      "transactionType": "MAGSON|MAGSON RETAIL AND DISTRIBUTION LIMITED|Original|Regulation 7 (2)|IT_21860_WebXMLFil",
+      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (3)|IT_19071_WebXMLFile_",
       "quantity": "\u2014"
     },
     {
-      "date": "19-Oct-2026 10:38:35",
-      "company": "NAVA LIMITED",
+      "date": "21-Oct-2026 12:24:55",
+      "company": "Mangal Credit and Fincorp Limited",
       "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20261019_103835832.xml|IT_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "19-Oct-2026 10:38:01",
-      "company": "NAVA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NAVA|NAVA LIMITED|Original|Regulation 7 (2)|IT_1264_WebXMLFile_20261019_103801240.xml|IT_1",
+      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (2)|IT_19071_WebXMLFile_",
       "quantity": "\u2014"
     }
   ],

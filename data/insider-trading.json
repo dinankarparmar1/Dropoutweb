@@ -1,95 +1,32 @@
 {
-  "updated": "2026-10-21T17:48:28.281696Z",
+  "updated": "2026-10-22T14:29:57.702625Z",
   "rows": [
     {
-      "date": "21-Oct-2026 18:28:48",
+      "date": "22-Oct-2026 19:29:01",
       "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261021_1",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261022_1",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Oct-2026 18:20:16",
-      "company": "AHIMSA INDUSTRIES LIMITED",
+      "date": "22-Oct-2026 17:07:57",
+      "company": "AVENUE SUPERMARTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_18",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261022_170",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Oct-2026 18:18:57",
-      "company": "Pritika Engineering Components Limited",
+      "date": "22-Oct-2026 16:13:12",
+      "company": "EMBASSY OFFICE PARKS REIT",
       "personCategory": "\u2014",
-      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
+      "transactionType": "EMBASSY|EMBASSY OFFICE PARKS REIT|Original|Regulation 7 (2)|IT_17363_WebXMLFile_20261022_1",
       "quantity": "\u2014"
     },
     {
-      "date": "21-Oct-2026 18:14:39",
-      "company": "Pritika Engineering Components Limited",
+      "date": "22-Oct-2026 16:13:12",
+      "company": "EMBASSY OFFICE PARKS REIT",
       "personCategory": "\u2014",
-      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 18:12:48",
-      "company": "Pritika Engineering Components Limited",
-      "personCategory": "\u2014",
-      "transactionType": "PRITIKA|Pritika Engineering Components Limited|Original|Regulation 7 (2)|IT_21144_WebXMLFi",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 16:49:59",
-      "company": "S H Kelkar and Company Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261021_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 16:48:42",
-      "company": "S H Kelkar and Company Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SHK|S H Kelkar and Company Limited|Original|Regulation 7 (2)|IT_13234_WebXMLFile_20261021_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 16:43:33",
-      "company": "AHIMSA INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 16:43:09",
-      "company": "AHIMSA INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AHIMSA|AHIMSA INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13148_WebXMLFile_20261021_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 12:30:02",
-      "company": "Mangal Credit and Fincorp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (3)|IT_19071_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 12:28:32",
-      "company": "Mangal Credit and Fincorp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (2)|IT_19071_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 12:26:25",
-      "company": "Mangal Credit and Fincorp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (3)|IT_19071_WebXMLFile_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "21-Oct-2026 12:24:55",
-      "company": "Mangal Credit and Fincorp Limited",
-      "personCategory": "\u2014",
-      "transactionType": "MANCREDIT|Mangal Credit and Fincorp Limited|Original|Regulation 7 (2)|IT_19071_WebXMLFile_",
+      "transactionType": "EMBASSY|EMBASSY OFFICE PARKS REIT|Original|Regulation 7 (2)|IT_17363_WebXMLFile_20261022_1",
       "quantity": "\u2014"
     }
   ],

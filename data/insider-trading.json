@@ -1,6 +1,13 @@
 {
-  "updated": "2026-10-23T14:43:42.725092Z",
+  "updated": "2026-10-23T17:37:59.210797Z",
   "rows": [
+    {
+      "date": "23-Oct-2026 21:18:34",
+      "company": "GRANULES INDIA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GRANULES|GRANULES INDIA LIMITED|Original|Regulation 7 (2)|IT_2296_WebXMLFile_20261023_2118",
+      "quantity": "\u2014"
+    },
     {
       "date": "23-Oct-2026 18:56:25",
       "company": "eClerx Services Ltd",

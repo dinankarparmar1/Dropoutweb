@@ -1,74 +1,109 @@
 {
-  "updated": "2026-10-23T17:37:59.210797Z",
+  "updated": "2026-10-26T16:16:01.636242Z",
   "rows": [
     {
-      "date": "23-Oct-2026 21:18:34",
-      "company": "GRANULES INDIA LIMITED",
+      "date": "26-Oct-2026 19:33:35",
+      "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GRANULES|GRANULES INDIA LIMITED|Original|Regulation 7 (2)|IT_2296_WebXMLFile_20261023_2118",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261026_1",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 18:56:25",
-      "company": "eClerx Services Ltd",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261023_185625000",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 18:51:04",
-      "company": "Gallantt Ispat Limited",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261023_1851",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 18:37:58",
-      "company": "Gallantt Ispat Limited",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261023_1837",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 17:33:49",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261023_173",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 17:28:09",
-      "company": "Bank of Maharashtra",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MAHABANK|Bank of Maharashtra|Original|Regulation 7 (2)|IT_2182_WebXMLFile_20261023_1728094",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 16:28:20",
-      "company": "CINELINE INDIA LIMITED",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CINELINE|CINELINE INDIA LIMITED|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20261023_1628",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 16:25:26",
-      "company": "CINELINE INDIA LIMITED",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CINELINE|CINELINE INDIA LIMITED|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20261023_1625",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 16:23:33",
-      "company": "CINELINE INDIA LIMITED",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CINELINE|CINELINE INDIA LIMITED|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20261023_1623",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     },
     {
-      "date": "23-Oct-2026 16:18:03",
-      "company": "CINELINE INDIA LIMITED",
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CINELINE|CINELINE INDIA LIMITED|Original|Regulation 7 (2)|IT_5974_WebXMLFile_20261023_1618",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "26-Oct-2026 17:33:41",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Original|Regulation 7 (2)|IT_16784_WebXMLFile_20261026_173",
       "quantity": "\u2014"
     }
   ],

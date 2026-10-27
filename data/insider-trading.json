@@ -1,6 +1,55 @@
 {
-  "updated": "2026-10-27T09:27:21.127714Z",
+  "updated": "2026-10-27T15:28:52.630642Z",
   "rows": [
+    {
+      "date": "27-Oct-2026 19:22:49",
+      "company": "EMBASSY DEVELOPMENTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "EMBDL|EMBASSY DEVELOPMENTS LIMITED|Original|Regulation 7 (2)|IT_2560_WebXMLFile_20261027_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 18:03:13",
+      "company": "360 ONE WAM LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261027_18031374",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 17:41:07",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261027_174",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 17:21:34",
+      "company": "SESHASAYEE PAPER AND BOARDS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SESHAPAPER|SESHASAYEE PAPER AND BOARDS LIMITED|Original|Regulation 7 (2)|IT_118_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 16:17:59",
+      "company": "UNICOMMERCE ESOLUTIONS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "UNIECOM|UNICOMMERCE ESOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_23091_WebXMLFile_20261",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 16:11:43",
+      "company": "KARUR VYSYA BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261027_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "27-Oct-2026 15:54:09",
+      "company": "SHAKTI PUMPS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHAKTIPUMP|SHAKTI PUMPS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_5329_WebXMLFile_20261",
+      "quantity": "\u2014"
+    },
     {
       "date": "27-Oct-2026 14:46:25",
       "company": "Gallantt Ispat Limited",

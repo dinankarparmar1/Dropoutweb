@@ -1,67 +1,179 @@
 {
-  "updated": "2026-10-27T18:30:00.935259Z",
+  "updated": "2026-10-28T10:02:05.230270Z",
   "rows": [
     {
-      "date": "27-Oct-2026 19:22:49",
-      "company": "EMBASSY DEVELOPMENTS LIMITED",
+      "date": "28-Oct-2026 14:37:32",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "EMBDL|EMBASSY DEVELOPMENTS LIMITED|Original|Regulation 7 (2)|IT_2560_WebXMLFile_20261027_1",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20261028_143732",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 18:03:13",
-      "company": "360 ONE WAM LIMITED",
+      "date": "28-Oct-2026 14:14:29",
+      "company": "PREMIER POLYFILM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261027_18031374",
+      "transactionType": "PREMIERPOL|PREMIER POLYFILM LIMITED|Original|Regulation 7 (2)|IT_91_WebXMLFile_20261028_14",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 17:41:07",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261027_174",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 17:21:34",
-      "company": "SESHASAYEE PAPER AND BOARDS LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SESHAPAPER|SESHASAYEE PAPER AND BOARDS LIMITED|Original|Regulation 7 (2)|IT_118_WebXMLFile",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 16:17:59",
-      "company": "UNICOMMERCE ESOLUTIONS LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "UNIECOM|UNICOMMERCE ESOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_23091_WebXMLFile_20261",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 16:11:43",
-      "company": "KARUR VYSYA BANK LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261027_1",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 15:54:09",
-      "company": "SHAKTI PUMPS (INDIA) LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SHAKTIPUMP|SHAKTI PUMPS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_5329_WebXMLFile_20261",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 14:46:25",
-      "company": "Gallantt Ispat Limited",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261027_1446",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
       "quantity": "\u2014"
     },
     {
-      "date": "27-Oct-2026 14:21:32",
-      "company": "SESHASAYEE PAPER AND BOARDS LIMITED",
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SESHAPAPER|SESHASAYEE PAPER AND BOARDS LIMITED|Original|Regulation 7 (2)|IT_118_WebXMLFile",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:39",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 10:02:12",
+      "company": "AJOONI BIOTECH LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
       "quantity": "\u2014"
     }
   ],

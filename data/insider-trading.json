@@ -1,6 +1,146 @@
 {
-  "updated": "2026-10-28T10:09:36.183831Z",
+  "updated": "2026-10-28T16:28:32.402260Z",
   "rows": [
+    {
+      "date": "28-Oct-2026 21:48:02",
+      "company": "Aurum PropTech Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AURUM|Aurum PropTech Limited|Original|Regulation 7 (2)|IT_12987_WebXMLFile_20261028_214802",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 19:35:01",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 18:23:34",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261028_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 18:18:48",
+      "company": "PAISALO DIGITAL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261028_1818",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 18:14:27",
+      "company": "PARIN ENTERPRISES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
+      "quantity": "500"
+    },
+    {
+      "date": "28-Oct-2026 17:44:10",
+      "company": "SHAKTI PUMPS (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SHAKTIPUMP|SHAKTI PUMPS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_5329_WebXMLFile_20261",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "28-Oct-2026 15:42:57",
+      "company": "WIPRO LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261028_154257814.xml|IT_",
+      "quantity": "\u2014"
+    },
     {
       "date": "28-Oct-2026 14:37:32",
       "company": "NCL INDUSTRIES LIMITED",
@@ -34,146 +174,6 @@
       "company": "AJOONI BIOTECH LIMITED",
       "personCategory": "\u2014",
       "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:12",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10021",
       "quantity": "\u2014"
     }
   ],

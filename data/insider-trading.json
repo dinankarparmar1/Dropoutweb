@@ -1,179 +1,39 @@
 {
-  "updated": "2026-10-28T16:28:32.402260Z",
+  "updated": "2026-10-29T10:25:44.189653Z",
   "rows": [
     {
-      "date": "28-Oct-2026 21:48:02",
-      "company": "Aurum PropTech Limited",
+      "date": "29-Oct-2026 15:40:56",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AURUM|Aurum PropTech Limited|Original|Regulation 7 (2)|IT_12987_WebXMLFile_20261028_214802",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20261029_154056749",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Oct-2026 19:35:01",
-      "company": "Tiger Logistics (India) Limited",
+      "date": "29-Oct-2026 12:28:56",
+      "company": "Camlin Fine Sciences Limited",
       "personCategory": "\u2014",
-      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "transactionType": "CAMLINFINE|Camlin Fine Sciences Limited|Original|Regulation 7 (2)|IT_11353_WebXMLFile_2026",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Oct-2026 18:23:34",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "29-Oct-2026 12:06:57",
+      "company": "Infosys Limited",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261028_182",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20261029_120656926.xml|IT",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Oct-2026 18:18:48",
-      "company": "PAISALO DIGITAL LIMITED",
+      "date": "29-Oct-2026 10:19:19",
+      "company": "BAJAJ FINANCE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261028_1818",
+      "transactionType": "BAJFINANCE|BAJAJ FINANCE LIMITED|Original|Regulation 7 (2)|IT_1257_WebXMLFile_20261029_101",
       "quantity": "\u2014"
     },
     {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
+      "date": "29-Oct-2026 09:36:18",
+      "company": "SKM Egg Products Export (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 18:14:27",
-      "company": "PARIN ENTERPRISES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PARIN|PARIN ENTERPRISES LIMITED|Revision|Regulation 7 (2)|IT_16784_WebXMLFile_20261028_181",
-      "quantity": "500"
-    },
-    {
-      "date": "28-Oct-2026 17:44:10",
-      "company": "SHAKTI PUMPS (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHAKTIPUMP|SHAKTI PUMPS (INDIA) LIMITED|Original|Regulation 7 (2)|IT_5329_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 15:42:57",
-      "company": "WIPRO LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261028_154257814.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 14:37:32",
-      "company": "NCL INDUSTRIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20261028_143732",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 14:14:29",
-      "company": "PREMIER POLYFILM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PREMIERPOL|PREMIER POLYFILM LIMITED|Original|Regulation 7 (2)|IT_91_WebXMLFile_20261028_14",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "28-Oct-2026 10:02:39",
-      "company": "AJOONI BIOTECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "AJOONI|AJOONI BIOTECH LIMITED|Original|Regulation 7 (2)|IT_15677_WebXMLFile_20261028_10023",
+      "transactionType": "SKMEGGPROD|SKM Egg Products Export (India) Limited|Original|Regulation 7 (2)|IT_1597_WebXM",
       "quantity": "\u2014"
     }
   ],

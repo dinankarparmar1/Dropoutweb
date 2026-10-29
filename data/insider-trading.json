@@ -1,6 +1,55 @@
 {
-  "updated": "2026-10-29T10:34:29.931601Z",
+  "updated": "2026-10-29T16:42:32.298261Z",
   "rows": [
+    {
+      "date": "29-Oct-2026 20:28:28",
+      "company": "JSW Energy Limited",
+      "personCategory": "\u2014",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20261029_2028280",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 20:09:55",
+      "company": "Hitech Corporation Limited",
+      "personCategory": "\u2014",
+      "transactionType": "HITECHCORP|Hitech Corporation Limited|Original|Regulation 7 (2)|IT_2696_WebXMLFile_2026102",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 18:21:56",
+      "company": "Info Edge (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261029_182",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 17:21:01",
+      "company": "TITAN COMPANY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20261029_172100958",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 17:17:29",
+      "company": "NATCO PHARMA LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "NATCOPHARM|NATCO PHARMA LIMITED|Original|Regulation 7 (2)|IT_1299_WebXMLFile_20261029_1717",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 16:20:38",
+      "company": "WIPRO LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261029_162038635.xml|IT_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "29-Oct-2026 16:11:05",
+      "company": "ACEVECTOR LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ACEVECTOR|ACEVECTOR LIMITED|Original|Regulation 7 (2)|IT_20276_WebXMLFile_20261029_1611052",
+      "quantity": "\u2014"
+    },
     {
       "date": "29-Oct-2026 15:59:44",
       "company": "WESTLIFE FOODWORLD LIMITED",

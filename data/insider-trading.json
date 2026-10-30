@@ -1,11 +1,137 @@
 {
-  "updated": "2026-10-30T10:34:52.617944Z",
+  "updated": "2026-10-30T16:34:41.168294Z",
   "rows": [
     {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "30-Oct-2026 19:22:30",
+      "company": "Aurum PropTech Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
+      "transactionType": "AURUM|Aurum PropTech Limited|Original|Regulation 7 (2)|IT_12987_WebXMLFile_20261030_192230",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 18:40:03",
+      "company": "KARUR VYSYA BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261030_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:58:59",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261030_175",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 17:00:21",
+      "company": "SAKAR HEALTHCARE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "SAKAR|SAKAR HEALTHCARE LIMITED|Original|Regulation 7 (2)|IT_14283_WebXMLFile_20261030_1700",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 16:50:25",
+      "company": "JINDAL STEEL LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "JINDALSTEL|JINDAL STEEL LIMITED|Original|Regulation 7 (2)|IT_1816_WebXMLFile_20261030_1650",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "30-Oct-2026 16:34:20",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
@@ -48,69 +174,6 @@
       "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
       "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 15:56:22",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261030_15",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 14:05:40",
-      "company": "PAISALO DIGITAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261030_1405",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "30-Oct-2026 10:27:09",
-      "company": "SKM Egg Products Export (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "SKMEGGPROD|SKM Egg Products Export (India) Limited|Original|Regulation 7 (2)|IT_1597_WebXM",
       "quantity": "\u2014"
     }
   ],

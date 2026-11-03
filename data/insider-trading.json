@@ -1,67 +1,151 @@
 {
-  "updated": "2026-11-02T11:50:37.512862Z",
+  "updated": "2026-11-03T11:21:37.270946Z",
   "rows": [
     {
-      "date": "02-Nov-2026 17:19:31",
-      "company": "JINDAL STEEL LIMITED",
+      "date": "03-Nov-2026 16:44:04",
+      "company": "GO FASHION (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JINDALSTEL|JINDAL STEEL LIMITED|Original|Regulation 7 (2)|IT_1816_WebXMLFile_20261102_1719",
+      "transactionType": "GOCOLORS|GO FASHION (INDIA) LIMITED|Original|Regulation 7 (2)|IT_19868_WebXMLFile_20261103",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 16:08:57",
-      "company": "PARAMOUNT COMMUNICATIONS LIMITED",
+      "date": "03-Nov-2026 16:31:00",
+      "company": "Ginni filaments limited",
       "personCategory": "\u2014",
-      "transactionType": "PARACABLES|PARAMOUNT COMMUNICATIONS LIMITED|Original|Regulation 7 (2)|IT_2492_WebXMLFile_2",
+      "transactionType": "GINNIFILA|Ginni filaments limited|Original|Regulation 7 (2)|IT_447_WebXMLFile_20261103_163",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 16:07:04",
-      "company": "WIPRO LIMITED",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261102_160704183.xml|IT_",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 15:04:34",
-      "company": "Fiberweb (India) Limited",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20261102_1",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 14:56:05",
-      "company": "Fiberweb (India) Limited",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "FIBERWEB|Fiberweb (India) Limited|Original|Regulation 7 (2)|IT_19088_WebXMLFile_20261102_1",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 14:49:14",
-      "company": "ADOR WELDING LIMITED",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ADOR|ADOR WELDING LIMITED|Original|Regulation 7 (2)|IT_301_WebXMLFile_20261102_144914296.x",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 14:28:11",
-      "company": "PAISALO DIGITAL LIMITED",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PAISALO|PAISALO DIGITAL LIMITED|Original|Regulation 7 (2)|IT_5294_WebXMLFile_20261102_1428",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 11:03:45",
-      "company": "JUBILANT INGREVIA LIMITED",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026110",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
       "quantity": "\u2014"
     },
     {
-      "date": "02-Nov-2026 10:19:57",
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 16:05:01",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 15:48:40",
       "company": "JINDAL STAINLESS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20261102_1019568",
+      "transactionType": "JSL|JINDAL STAINLESS LIMITED|Original|Regulation 7 (2)|IT_2156_WebXMLFile_20261103_1548401",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 15:33:30",
+      "company": "Zensar Technologies Limited",
+      "personCategory": "\u2014",
+      "transactionType": "ZENSARTECH|Zensar Technologies Limited|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026110",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 15:18:51",
+      "company": "INDOCO REMEDIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20261103_15185",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 13:04:38",
+      "company": "eClerx Services Ltd",
+      "personCategory": "\u2014",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261103_130438884",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "03-Nov-2026 12:57:09",
+      "company": "CHEMBOND CHEMICALS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202611",
       "quantity": "\u2014"
     }
   ],

@@ -1,179 +1,74 @@
 {
-  "updated": "2026-11-03T17:36:59.590816Z",
+  "updated": "2026-11-04T11:35:51.957865Z",
   "rows": [
     {
-      "date": "03-Nov-2026 22:09:12",
-      "company": "ACEVECTOR LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACEVECTOR|ACEVECTOR LIMITED|Original|Regulation 7 (2)|IT_20276_WebXMLFile_20261103_2209126",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 22:02:58",
-      "company": "UNICOMMERCE ESOLUTIONS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "UNIECOM|UNICOMMERCE ESOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_23091_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 20:03:18",
-      "company": "Tiger Logistics (India) Limited",
-      "personCategory": "\u2014",
-      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 19:44:22",
-      "company": "EMBASSY DEVELOPMENTS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "EMBDL|EMBASSY DEVELOPMENTS LIMITED|Original|Regulation 7 (2)|IT_2560_WebXMLFile_20261103_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 19:15:20",
-      "company": "MAITREYA MEDICARE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MAITREYA|MAITREYA MEDICARE LIMITED|Original|Regulation 7 (2)|IT_22421_WebXMLFile_20261103_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 19:11:02",
+      "date": "04-Nov-2026 16:35:57",
       "company": "JUBILANT INGREVIA LIMITED",
       "personCategory": "\u2014",
       "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026110",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 18:08:33",
-      "company": "Gallantt Ispat Limited",
+      "date": "04-Nov-2026 16:34:28",
+      "company": "Zensar Technologies Limited",
       "personCategory": "\u2014",
-      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261103_1808",
+      "transactionType": "ZENSARTECH|Zensar Technologies Limited|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026110",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 17:34:21",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "04-Nov-2026 16:21:32",
+      "company": "SAJ HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261103_173",
+      "transactionType": "SAJHOTELS|SAJ HOTELS LIMITED|Original|Regulation 7 (2)|IT_23800_WebXMLFile_20261104_162132",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 17:30:02",
-      "company": "WIPRO LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261103_173002363.xml|IT_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 17:05:36",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 17:04:29",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 17:03:43",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:44:04",
+      "date": "04-Nov-2026 15:52:41",
       "company": "GO FASHION (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GOCOLORS|GO FASHION (INDIA) LIMITED|Original|Regulation 7 (2)|IT_19868_WebXMLFile_20261103",
+      "transactionType": "GOCOLORS|GO FASHION (INDIA) LIMITED|Original|Regulation 7 (2)|IT_19868_WebXMLFile_20261104",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:31:00",
-      "company": "Ginni filaments limited",
+      "date": "04-Nov-2026 15:06:10",
+      "company": "Ola Electric Mobility Limited",
       "personCategory": "\u2014",
-      "transactionType": "GINNIFILA|Ginni filaments limited|Original|Regulation 7 (2)|IT_447_WebXMLFile_20261103_163",
+      "transactionType": "OLAELEC|Ola Electric Mobility Limited|Original|Regulation 7 (2)|IT_22983_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "04-Nov-2026 14:43:14",
+      "company": "INDOCO REMEDIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20261104_14431",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "04-Nov-2026 14:03:39",
+      "company": "Advait Energy Transitions Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "transactionType": "ADVAIT|Advait Energy Transitions Limited|Original|Regulation 7 (2)|IT_26866_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "04-Nov-2026 13:08:40",
+      "company": "JSW STEEL LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20261104_130840296",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "04-Nov-2026 12:15:14",
+      "company": "Aether Industries Limited",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "transactionType": "AETHER|Aether Industries Limited|Original|Regulation 7 (2)|IT_20333_WebXMLFile_20261104_12",
       "quantity": "\u2014"
     },
     {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
+      "date": "04-Nov-2026 12:05:26",
+      "company": "eClerx Services Ltd",
       "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "03-Nov-2026 16:05:01",
-      "company": "KAPSTON SERVICES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261103_16",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261104_120526557",
       "quantity": "\u2014"
     }
   ],

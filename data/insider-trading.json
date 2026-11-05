@@ -1,6 +1,167 @@
 {
-  "updated": "2026-11-05T11:44:11.378302Z",
+  "updated": "2026-11-05T17:53:56.581763Z",
   "rows": [
+    {
+      "date": "05-Nov-2026 21:15:36",
+      "company": "GERMAN GREEN STEEL AND POWER LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GERMAN|GERMAN GREEN STEEL AND POWER LIMITED|Original|Regulation 7 (2)|IT_26436_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 21:14:46",
+      "company": "GERMAN GREEN STEEL AND POWER LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GERMAN|GERMAN GREEN STEEL AND POWER LIMITED|Original|Regulation 7 (2)|IT_26436_WebXMLFile_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 19:40:43",
+      "company": "Sri Lotus Developers and Realty Limited",
+      "personCategory": "\u2014",
+      "transactionType": "LOTUSDEV|Sri Lotus Developers and Realty Limited|Original|Regulation 7 (2)|IT_25082_WebXML",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 19:22:28",
+      "company": "Aeroflex Neu Limited",
+      "personCategory": "\u2014",
+      "transactionType": "AERONEU|Aeroflex Neu Limited|Original|Regulation 7 (2)|IT_21510_WebXMLFile_20261105_192228",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 18:49:23",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:38:14",
+      "company": "Infosys Limited",
+      "personCategory": "\u2014",
+      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20261105_173814250.xml|IT",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:36:34",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:36:29",
+      "company": "Responsive Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20261",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:26:33",
+      "company": "IDEAFORGE TECHNOLOGY LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IDEAFORGE|IDEAFORGE TECHNOLOGY LIMITED|Original|Regulation 7 (2)|IT_21638_WebXMLFile_20261",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "05-Nov-2026 17:17:00",
+      "company": "KAPSTON SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "KAPSTON|KAPSTON SERVICES LIMITED|Original|Regulation 7 (2)|IT_16041_WebXMLFile_20261105_17",
+      "quantity": "\u2014"
+    },
     {
       "date": "05-Nov-2026 16:48:40",
       "company": "SAJ HOTELS LIMITED",
@@ -13,34 +174,6 @@
       "company": "Responsive Industries Limited",
       "personCategory": "\u2014",
       "transactionType": "RESPONIND|Responsive Industries Limited|Original|Regulation 7 (2)|IT_3674_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "05-Nov-2026 15:53:09",
-      "company": "SHREEJI SHIPPING GLOBAL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SHREEJISPG|SHREEJI SHIPPING GLOBAL LIMITED|Original|Regulation 7 (2)|IT_25314_WebXMLFile_2",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "05-Nov-2026 15:35:43",
-      "company": "JUBILANT INGREVIA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JUBLINGREA|JUBILANT INGREVIA LIMITED|Original|Regulation 7 (2)|IT_19288_WebXMLFile_2026110",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "05-Nov-2026 13:53:54",
-      "company": "360 ONE WAM LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261105_13535436",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "05-Nov-2026 13:08:12",
-      "company": "ACEVECTOR LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "ACEVECTOR|ACEVECTOR LIMITED|Original|Regulation 7 (2)|IT_20276_WebXMLFile_20261105_1308120",
       "quantity": "\u2014"
     }
   ],

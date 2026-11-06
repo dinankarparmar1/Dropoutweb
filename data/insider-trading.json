@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-06T11:31:55.394145Z",
+  "updated": "2026-11-06T11:42:02.236470Z",
   "rows": [
+    {
+      "date": "06-Nov-2026 17:05:45",
+      "company": "APCOTEX INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "APCOTEXIND|APCOTEX INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_519_WebXMLFile_20261106",
+      "quantity": "\u2014"
+    },
     {
       "date": "06-Nov-2026 16:56:01",
       "company": "AEQUS LIMITED",
@@ -167,13 +174,6 @@
       "company": "WESTLIFE FOODWORLD LIMITED",
       "personCategory": "\u2014",
       "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20261106",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 13:48:32",
-      "company": "INDOCO REMEDIES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20261106_13483",
       "quantity": "\u2014"
     }
   ],

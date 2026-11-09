@@ -1,179 +1,116 @@
 {
-  "updated": "2026-11-06T11:42:02.236470Z",
+  "updated": "2026-11-09T12:09:19.626833Z",
   "rows": [
     {
-      "date": "06-Nov-2026 17:05:45",
-      "company": "APCOTEX INDUSTRIES LIMITED",
+      "date": "09-Nov-2026 17:18:12",
+      "company": "MASTER TRUST LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "APCOTEXIND|APCOTEX INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_519_WebXMLFile_20261106",
+      "transactionType": "MASTERTR|MASTER TRUST LIMITED|Original|Regulation 7 (2)|IT_22191_WebXMLFile_20261109_17181",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 16:56:01",
-      "company": "AEQUS LIMITED",
+      "date": "09-Nov-2026 17:18:12",
+      "company": "MASTER TRUST LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AEQUS|AEQUS LIMITED|Original|Regulation 7 (2)|IT_26252_WebXMLFile_20261106_165601733.xml|I",
+      "transactionType": "MASTERTR|MASTER TRUST LIMITED|Original|Regulation 7 (2)|IT_22191_WebXMLFile_20261109_17181",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 16:49:37",
-      "company": "360 ONE WAM LIMITED",
+      "date": "09-Nov-2026 17:03:07",
+      "company": "AVENUE SUPERMARTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261106_16493736",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261109_170",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 16:33:08",
-      "company": "KPIT TECHNOLOGIES LIMITED",
+      "date": "09-Nov-2026 16:33:48",
+      "company": "CEAT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20261106_",
+      "transactionType": "CEATLTD|CEAT LIMITED|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20261109_163348528.xml|I",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 16:22:13",
+      "date": "09-Nov-2026 16:17:58",
+      "company": "RAMKRISHNA FORGINGS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "RKFORGE|RAMKRISHNA FORGINGS LIMITED|Original|Regulation 7 (2)|IT_2188_WebXMLFile_20261109_",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:57:16",
+      "company": "GLOBUS SPIRITS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GLOBUSSPR|GLOBUS SPIRITS LIMITED|Original|Regulation 7 (2)|IT_2904_WebXMLFile_20261109_155",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:47:57",
+      "company": "VINATI ORGANICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VINATIORGA|VINATI ORGANICS LIMITED|Original|Regulation 7 (2)|IT_2897_WebXMLFile_20261109_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:47:52",
+      "company": "VINATI ORGANICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VINATIORGA|VINATI ORGANICS LIMITED|Original|Regulation 7 (2)|IT_2897_WebXMLFile_20261109_1",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:44:33",
+      "company": "Tiger Logistics (India) Limited",
+      "personCategory": "\u2014",
+      "transactionType": "TIGERLOGS|Tiger Logistics (India) Limited|Original|Regulation 7 (2)|IT_26474_WebXMLFile_20",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:18:20",
+      "company": "ION EXCHANGE (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "IONEXCHANG|ION EXCHANGE (INDIA) LIMITED|Original|Regulation 7 (2)|IT_185_WebXMLFile_202611",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:04:23",
+      "company": "ZENSAR TECHNOLOGIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "ZENSARTECH|ZENSAR TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_476_WebXMLFile_2026110",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "09-Nov-2026 15:01:20",
       "company": "CHEMBOND CHEMICALS LIMITED",
       "personCategory": "\u2014",
       "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 16:22:08",
-      "company": "JSW Energy Limited",
+      "date": "09-Nov-2026 15:00:57",
+      "company": "CHEMBOND CHEMICALS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20261106_1622085",
+      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 15:55:53",
-      "company": "Affle 3i Limited",
+      "date": "09-Nov-2026 13:55:22",
+      "company": "UNICOMMERCE ESOLUTIONS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "AFFLE|Affle 3i Limited|Original|Regulation 7 (2)|IT_17565_WebXMLFile_20261106_155553757.xm",
+      "transactionType": "UNIECOM|UNICOMMERCE ESOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_23091_WebXMLFile_20261",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 15:51:06",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "09-Nov-2026 13:54:48",
+      "company": "UNICOMMERCE ESOLUTIONS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "UNIECOM|UNICOMMERCE ESOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_23091_WebXMLFile_20261",
       "quantity": "\u2014"
     },
     {
-      "date": "06-Nov-2026 15:49:42",
-      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "date": "09-Nov-2026 13:36:14",
+      "company": "Camlin Fine Sciences Limited",
       "personCategory": "\u2014",
-      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:44:30",
-      "company": "VINATI ORGANICS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VINATIORGA|VINATI ORGANICS LIMITED|Original|Regulation 7 (2)|IT_2897_WebXMLFile_20261106_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:37:26",
-      "company": "MACPOWER CNC MACHINES LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MACPOWER|MACPOWER CNC MACHINES LIMITED|Original|Regulation 7 (2)|IT_15961_WebXMLFile_20261",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "06-Nov-2026 15:05:34",
-      "company": "WESTLIFE FOODWORLD LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20261106",
+      "transactionType": "CAMLINFINE|Camlin Fine Sciences Limited|Original|Regulation 7 (2)|IT_11353_WebXMLFile_2026",
       "quantity": "\u2014"
     }
   ],

@@ -1,6 +1,41 @@
 {
-  "updated": "2026-11-10T11:57:28.220203Z",
+  "updated": "2026-11-10T17:32:21.920537Z",
   "rows": [
+    {
+      "date": "10-Nov-2026 21:04:34",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Nov-2026 21:03:59",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Nov-2026 21:03:43",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Nov-2026 21:03:03",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "10-Nov-2026 19:42:52",
+      "company": "BHAGIRADHA CHEMICALS & INDUSTRIES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "BHAGCHEM|BHAGIRADHA CHEMICALS & INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_19102_WebX",
+      "quantity": "\u2014"
+    },
     {
       "date": "10-Nov-2026 15:58:09",
       "company": "Hindcon Chemicals Limited",

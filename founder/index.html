@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About the Founder | Dinankar Dev Parmar — Dropout Traders</title>
-  <meta name="description" content="Meet Dinankar Dev Parmar, founder of Dropout Traders. Discover the mission behind structured financial education, practical market analysis and disciplined risk management.">
+  <meta name="description" content="Meet Dinankar Dev Parmar, NISM-certified founder of Dropout Traders. From a small town and a law-school exit at 21 to national recognition, his story of hard work, dedication and discipline.">
   <link rel="canonical" href="https://dropouttraders.in/founder/">
   <meta name="theme-color" content="#08090c">
   <meta property="og:type" content="profile">
@@ -22,6 +22,7 @@
     "@type": "Person",
     "name": "Dinankar Dev Parmar",
     "jobTitle": "Founder & CEO",
+    "award": ["Rashtriya Divya Pratibha Samman", "Honorary Doctorate in Finance"],
     "worksFor": {
       "@type": "Organization",
       "name": "Dropout Traders",
@@ -262,14 +263,88 @@
       flex-wrap: wrap;
     }
 
+    /* Hero achievement badges */
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 14px; border-radius: 99px;
+      background: #d4af3712; border: 1px solid var(--line);
+      font-size: 12.5px; font-weight: 600; color: var(--gold2);
+    }
+    .badge svg { width: 15px; height: 15px; flex: none; }
+
+    /* My Story */
+    .story { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(30px, 5vw, 64px); align-items: start; }
+    .story p { color: var(--muted); line-height: 1.9; margin: 0 0 18px; }
+    .story p strong { color: var(--white); font-weight: 600; }
+    .story .drop {
+      float: left; font: 600 64px/.8 'Playfair Display', Georgia, serif;
+      color: var(--gold2); margin: 8px 12px 0 0;
+    }
+    .pillars { display: grid; gap: 14px; }
+    .pillar {
+      padding: 20px 22px; border-radius: 15px;
+      border: 1px solid #ffffff17;
+      background: linear-gradient(150deg, #ffffff0b, #ffffff04);
+    }
+    .pillar .num { display: block; margin-bottom: 6px; }
+    .pillar h3 { font: 600 21px 'Playfair Display', Georgia, serif; margin: 0 0 4px; color: var(--white); }
+    .pillar p { margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--muted); }
+    .quote {
+      margin: 30px 0 0; padding: 26px 28px; border-left: 2px solid var(--gold);
+      background: #d4af370b; border-radius: 0 15px 15px 0;
+      font: italic 500 clamp(19px, 2.2vw, 24px)/1.5 'Playfair Display', Georgia, serif;
+      color: #e8e3d6;
+    }
+    .quote cite { display: block; margin-top: 10px; font: 11px 'Space Mono', monospace; letter-spacing: .14em; color: var(--gold); font-style: normal; text-transform: uppercase; }
+
+    /* Achievements */
+    .awards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .award {
+      position: relative; overflow: hidden;
+      padding: 30px 24px 26px; border-radius: 18px;
+      border: 1px solid var(--line);
+      background: radial-gradient(circle at 50% 0%, rgba(212,175,55,.16), transparent 62%), linear-gradient(160deg, #15130e, #0b0b0e);
+      text-align: center;
+      transition: transform .35s ease, border-color .35s ease;
+    }
+    .award:hover { transform: translateY(-4px); border-color: rgba(241,215,124,.5); }
+    .award .icon {
+      width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%;
+      display: grid; place-items: center;
+      border: 1px solid rgba(241,215,124,.45);
+      background: radial-gradient(circle at 35% 30%, rgba(241,215,124,.28), rgba(212,175,55,.05) 70%);
+      color: var(--gold2); box-shadow: 0 0 34px #d4af3726;
+    }
+    .award .icon svg { width: 30px; height: 30px; }
+    .award .tag { font: 10.5px 'Space Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+    .award h3 { font: 600 22px/1.25 'Playfair Display', Georgia, serif; margin: 10px 0 8px; color: var(--white); }
+    .award p { margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--muted); }
+    .featured {
+      margin-top: 18px; display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; flex-wrap: wrap; padding: 18px 22px; border-radius: 15px;
+      border: 1px solid #ffffff17; background: #ffffff06;
+    }
+    .featured span { font-size: 13.5px; color: var(--muted); }
+    .featured b { color: var(--white); font-weight: 600; }
+
+    @media(max-width:900px) {
+      .story { grid-template-columns: 1fr; }
+      .awards { grid-template-columns: 1fr 1fr; }
+    }
+
     @media(max-width:760px) {
       main { padding: 52px 0 72px; }
       .hero { grid-template-columns: 1fr; gap: 35px; }
       .portrait { width: min(78%, 340px); }
       .copy { text-align: center; }
-      .links { justify-content: center; }
+      .links, .badges { justify-content: center; }
       .timeline { grid-template-columns: 1fr 1fr; }
       .section { margin-top: 68px; }
+    }
+
+    @media(max-width:560px) {
+      .awards { grid-template-columns: 1fr; }
     }
 
     @media(max-width:430px) {
@@ -302,6 +377,12 @@
 
         <div class="role">Founder &amp; CEO · Dropout Traders</div>
 
+        <div class="badges" aria-label="Key achievements">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>Rashtriya Divya Pratibha Samman</span>
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg>Honorary Doctorate in Finance</span>
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>NISM Certified</span>
+        </div>
+
         <div class="lead">
           Simplifying financial education, one trader at a time.
         </div>
@@ -331,6 +412,62 @@
       </div>
     </section>
 
+    <section class="section" id="story" aria-labelledby="story-title">
+      <div class="eyebrow">My Story</div>
+      <h2 id="story-title">From a small town to the national stage.</h2>
+
+      <div class="story">
+        <div>
+          <p><span class="drop">I</span> grew up in a small town, in a family with humble means and big hopes. Long before I understood charts, I was curious about money: how it grows, how it's protected, and how it can give an ordinary family real freedom.</p>
+          <p>Everyone around me had a safer plan. I was expected to become a lawyer, and I enrolled in law school. But at <strong>21, I made the hardest decision of my life: I walked away from law</strong> to follow finance. In a small town, that choice comes with questions, doubts and a lot of silence.</p>
+          <p>What carried me through was one person who never stopped believing: my father, <strong>Surendra Singh Parmar</strong>. When others doubted, he stood behind me. Guided by my mentor <strong>Akash Joshi</strong> and backed by friends who stayed through every moment of self-doubt, I studied, practised and kept going until I earned my <strong>NISM certification</strong>.</p>
+          <p>That is where Dropout Traders comes from: hard work, dedication and discipline. Today my mission is simple. I want to make sure young people from towns like mine get the financial education I had to fight for.</p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar"><span class="num">01 · HARD WORK</span><h3>Earned, not given</h3><p>Years of self-study and practice, with no shortcuts and no safety net.</p></div>
+          <div class="pillar"><span class="num">02 · DEDICATION</span><h3>Chose the harder path</h3><p>Left law school at 21 to commit fully to finance and financial education.</p></div>
+          <div class="pillar"><span class="num">03 · DISCIPLINE</span><h3>Process over prediction</h3><p>Structured learning and strict risk management, the same way I teach every student.</p></div>
+        </div>
+      </div>
+
+      <blockquote class="quote">
+        "I stand on the shoulders of those who believed in me."
+        <cite>— Dinankar Dev Parmar</cite>
+      </blockquote>
+    </section>
+
+    <section class="section" id="achievements" aria-labelledby="achievements-title">
+      <div class="eyebrow">Achievements &amp; Recognition</div>
+      <h2 id="achievements-title">Honours earned along the way.</h2>
+
+      <div class="awards">
+        <article class="award">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+          <div class="tag">National Honour</div>
+          <h3>Rashtriya Divya Pratibha Samman</h3>
+          <p>Recognised at the national level for outstanding talent and contribution to society.</p>
+        </article>
+        <article class="award">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg></div>
+          <div class="tag">Honorary Doctorate</div>
+          <h3>Honorary Doctorate in Finance</h3>
+          <p>Conferred for work in advancing financial literacy and social awareness.</p>
+        </article>
+        <article class="award">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
+          <div class="tag">Professional Certification</div>
+          <h3>NISM Certified</h3>
+          <p>Certified by the National Institute of Securities Markets (NISM).</p>
+        </article>
+      </div>
+
+      <div class="featured">
+        <span>As featured in <b>Hindustan Metro</b>: "From a Small Town to the National Stage"</span>
+        <a class="pill" href="https://hindustanmetro.com/from-a-small-town-to-the-national-stage-the-emotional-journey-of-dinankar-dev-parmar" target="_blank" rel="noopener noreferrer">Read the story ↗</a>
+      </div>
+    </section>
+
     <section class="section">
       <div class="eyebrow">The Journey</div>
 
@@ -340,26 +477,26 @@
 
         <article class="step">
           <div class="num">CHAPTER 01</div>
-          <h3>Started Trading</h3>
-          <p>First steps into the markets — learning through experience.</p>
+          <h3>Small-Town Roots</h3>
+          <p>Humble beginnings and an early fascination with money and markets.</p>
         </article>
 
         <article class="step">
           <div class="num">CHAPTER 02</div>
-          <h3>Founded Dropout Traders</h3>
-          <p>Turned personal discipline into a structured teaching method.</p>
+          <h3>The Dropout Decision</h3>
+          <p>Left law school at 21 to follow finance, with his father's full trust.</p>
         </article>
 
         <article class="step">
           <div class="num">CHAPTER 03</div>
-          <h3>Training Students</h3>
-          <p>Built a growing community of practical, risk-aware traders.</p>
+          <h3>NISM Certified</h3>
+          <p>Earned NISM certification and founded Dropout Traders.</p>
         </article>
 
         <article class="step">
           <div class="num">CHAPTER 04</div>
-          <h3>Expanding Education</h3>
-          <p>Scaling structured financial education across new markets.</p>
+          <h3>National Recognition</h3>
+          <p>Rashtriya Divya Pratibha Samman and an Honorary Doctorate in Finance.</p>
         </article>
 
       </div>

@@ -299,7 +299,7 @@
     .quote cite { display: block; margin-top: 10px; font: 11px 'Space Mono', monospace; letter-spacing: .14em; color: var(--gold); font-style: normal; text-transform: uppercase; }
 
     /* Achievements */
-    .awards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .awards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .award {
       position: relative; overflow: hidden;
       padding: 30px 24px 26px; border-radius: 18px;
@@ -325,6 +325,9 @@
       border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
       background: radial-gradient(circle at 100% 0%, rgba(212,175,55,.16), transparent 55%), linear-gradient(160deg, #15130e, #0b0b0e);
     }
+    .award-hero.reverse { grid-template-columns: .85fr 1.15fr; }
+    .award-hero.reverse figure { order: 2; }
+    .award-hero.reverse img { object-position: 50% 30%; }
     .award-hero figure { margin: 0; position: relative; min-height: 260px; }
     .award-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; display: block; }
     .award-hero figure:after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(241,215,124,.18); pointer-events: none; }
@@ -345,9 +348,9 @@
 
     @media(max-width:900px) {
       .story { grid-template-columns: 1fr; }
-      .award-hero { grid-template-columns: 1fr; }
+      .award-hero, .award-hero.reverse { grid-template-columns: 1fr; }
+      .award-hero.reverse figure { order: 0; }
       .award-hero figure { min-height: 0; aspect-ratio: 3/2; }
-      .awards { grid-template-columns: 1fr 1fr; }
     }
 
     @media(max-width:760px) {
@@ -471,13 +474,18 @@
         </div>
       </article>
 
-      <div class="awards">
-        <article class="award">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
-          <div class="tag">National Honour</div>
+      <article class="award-hero reverse">
+        <figure>
+          <img src="/assets/founder/rashtriya-divya-pratibha-samman.jpg" alt="Dinankar Dev Parmar receiving the Rashtriya Divya Pratibha Samman on stage" width="1093" height="623" loading="lazy" decoding="async">
+        </figure>
+        <div class="body">
+          <div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>National Honour</div>
           <h3>Rashtriya Divya Pratibha Samman</h3>
-          <p>Recognised at the national level for outstanding talent and contribution to society.</p>
-        </article>
+          <p>Recognised at the <b>national level</b> for outstanding talent and contribution to society, and presented with a citation on stage at the awards ceremony.</p>
+        </div>
+      </article>
+
+      <div class="awards">
         <article class="award">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg></div>
           <div class="tag">Honorary Doctorate</div>

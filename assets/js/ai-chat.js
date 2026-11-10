@@ -174,18 +174,76 @@
 
   // Sends the image to the Worker's vision endpoint and gets back a text
   // transcription of everything readable in it (numbers, labels, ratios).
+  // ── Reliability: one helper for every Worker call ─────────────────────────
+  // Adds a timeout (so "typing…" can never hang forever) and one automatic
+  // retry for temporary problems: network blips, rate limits (429) and
+  // server errors (5xx). Errors carry a `kind` so the UI can explain them.
+  function ivaanError(kind, status, detail) {
+    const e = new Error(detail || kind);
+    e.kind = kind;        // "timeout" | "network" | "busy" | "server" | "bad_request"
+    e.status = status || 0;
+    return e;
+  }
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  async function postJSON(url, payload, opts) {
+    const timeoutMs = (opts && opts.timeoutMs) || 45000;
+    const retries = opts && typeof opts.retries === "number" ? opts.retries : 1;
+    let lastErr;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      const ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(() => ctrl.abort(), timeoutMs) : null;
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          signal: ctrl ? ctrl.signal : undefined,
+        });
+        if (!res.ok) {
+          const detail = await res.text().catch(() => "");
+          if (res.status === 429) throw ivaanError("busy", 429, detail);
+          if (res.status >= 500) throw ivaanError("server", res.status, detail);
+          // 4xx other than 429 won't fix itself on retry
+          const e = ivaanError("bad_request", res.status, detail);
+          e.noRetry = true;
+          throw e;
+        }
+        try {
+          return await res.json();
+        } catch {
+          throw ivaanError("server", res.status, "Invalid JSON from Worker");
+        }
+      } catch (err) {
+        lastErr = err && err.kind ? err
+          : (err && err.name === "AbortError") ? ivaanError("timeout")
+          : ivaanError("network", 0, err && err.message);
+        if (lastErr.noRetry || attempt === retries) break;
+        await sleep(lastErr.kind === "busy" ? 2500 : 1200);
+      } finally {
+        if (timer) clearTimeout(timer);
+      }
+    }
+    throw lastErr;
+  }
+
+  // Plain-language explanation for the visitor, based on what went wrong.
+  function friendlyError(err, context) {
+    const kind = err && err.kind;
+    if (kind === "busy") return "Ivaan is getting a lot of questions right now. Please wait about 30 seconds and ask again.";
+    if (kind === "timeout") return context === "files"
+      ? "Reading those files took too long. Try fewer files, or a shorter section of the PDF."
+      : "Ivaan took too long to answer. Please try again — shorter questions usually come back faster.";
+    if (kind === "network") return "Couldn't reach Ivaan — please check your internet connection and try again.";
+    if (kind === "bad_request") return context === "files"
+      ? "Ivaan couldn't process those files (they may be too large). Try a smaller file or a shorter section."
+      : "Ivaan couldn't process that message. Try rephrasing it, or tap Clear to start a fresh chat.";
+    return "Ivaan's server is having trouble right now. Please try again in a minute.";
+  }
+
   async function describeImage(file) {
     const dataUrl = await fileToDataURL(file);
-    const res = await fetch(VISION_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: dataUrl }),
-    });
-    if (!res.ok) {
-      const errText = await res.text().catch(() => "");
-      throw new Error(`Status ${res.status}: ${errText}`);
-    }
-    const data = await res.json();
+    const data = await postJSON(VISION_URL, { image: dataUrl }, { timeoutMs: 60000 });
     return data.description || "";
   }
 
@@ -750,7 +808,7 @@
     micBtn.addEventListener("pointerleave", () => { if (isRecording) stopRecording(); });
     micBtn.addEventListener("pointercancel", stopRecording);
 
-    const GREETING = "Hlw";
+    const GREETING = "Namaste! I'm Ivaan, the Dropout Traders AI assistant. Ask me anything about stocks, forex, gold, crypto or our courses — in English or Hinglish. You can also upload an annual report (PDF) or a screenshot and I'll give it a Dropout Score.";
 
     fab.addEventListener("click", () => {
       panel.classList.toggle("open");
@@ -863,22 +921,15 @@
     // saved to the database instead of the (possibly huge) actual prompt —
     // used for PDF uploads so we don't store the whole document text.
     async function sendToIvaan(messagesForModel, persistLabel, maxTokens) {
-      const res = await fetch(WORKER_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          messages: messagesForModel,
-          session_id: sessionId,
-          persist_label: persistLabel || undefined,
-          max_tokens: maxTokens || undefined,
-        }),
-      });
-      if (!res.ok) {
-        const errText = await res.text().catch(() => "");
-        throw new Error(`Status ${res.status}: ${errText}`);
-      }
-      const data = await res.json();
-      return data.reply || "Sorry, I couldn't get an answer just now.";
+      const data = await postJSON(WORKER_URL, {
+        messages: messagesForModel,
+        session_id: sessionId,
+        persist_label: persistLabel || undefined,
+        max_tokens: maxTokens || undefined,
+      }, { timeoutMs: persistLabel ? 90000 : 45000 });
+      const reply = typeof data.reply === "string" ? data.reply.trim() : "";
+      if (!reply) throw ivaanError("server", 200, "Empty reply");
+      return reply;
     }
 
     async function sendMessage() {
@@ -899,7 +950,8 @@
           history.push({ role: "assistant", content: reply });
         } catch (err) {
           typing.remove();
-          addMsg("Something went wrong reaching Ivaan. Please try again shortly.", "bot");
+          history.pop(); // don't resend an unanswered question as context next time
+          addMsg(friendlyError(err, "text"), "bot");
         } finally {
           sendBtn.disabled = false;
           input.focus();
@@ -943,6 +995,7 @@
           : "Reading what you uploaded for the data that feeds the Dropout Score — this can take a moment, please hang on."
       );
 
+      let typing = null;
       try {
         const docBlocks = [];
         const perDocCap = isCompare ? COMPARE_CHARS_PER_DOC : MAX_PDF_CHARS;
@@ -976,7 +1029,7 @@
         }
 
         status.remove();
-        const typing = addTyping();
+        typing = addTyping();
 
         const userNote = q ? `\n\nThe user's specific question/note alongside these files: "${q}" — address this directly as well.` : "";
         let prompt, maxTokens, persistLabel;
@@ -1004,7 +1057,10 @@
         history.push({ role: "assistant", content: reply });
       } catch (err) {
         status.remove();
-        addMsg("I had trouble reading those files. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
+        if (typing) typing.remove();
+        addMsg(err && err.kind
+          ? friendlyError(err, "files")
+          : "I had trouble reading those files. Please try again — if it's a very large or complex PDF, try a shorter section.", "bot");
       } finally {
         sendBtn.disabled = false;
         attachBtn.style.opacity = "";
@@ -1014,7 +1070,10 @@
 
     sendBtn.addEventListener("click", sendMessage);
     input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") sendMessage();
+      if (e.key === "Enter" && !e.isComposing && !sendBtn.disabled) {
+        e.preventDefault();
+        sendMessage();
+      }
     });
 
     // ── Phase 3+4: attach files (staged — sent together with Ask) ──────────

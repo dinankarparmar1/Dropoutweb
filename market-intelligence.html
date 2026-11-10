@@ -194,6 +194,11 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
   .cta-banner{padding:30px 20px;}
 }
 </style>
+<style>/* Subtle TradingView attribution (kept visible per TradingView terms) */
+.tradingview-widget-copyright{font-size:10px!important;line-height:1.4!important;text-align:right!important;margin-top:6px!important;opacity:.55;letter-spacing:.06em;font-family:'Space Mono',monospace!important}
+.tradingview-widget-copyright a,.tradingview-widget-copyright .blue-text{color:#a8a49b!important;text-decoration:none!important}
+.tradingview-widget-copyright a:hover .blue-text{color:#d4af37!important}
+</style>
 </head>
 
 <body>
@@ -249,7 +254,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Charts by TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
           {
             "symbols": [
@@ -287,7 +292,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container" style="height:430px;">
           <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Charts by TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
           {
             "colorTheme": "dark",
@@ -383,7 +388,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <div class="tv-wrap">
         <div class="tradingview-widget-container" style="height:400px;">
           <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Charts by TradingView</span></a></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
           {
             "interval": "1D",
@@ -634,7 +639,7 @@ if(miMarketsGrid){
     '</div>'+
     '<div class="tv-wrap"><div class="tradingview-widget-container" id="mi-tv-mini-'+idx+'" style="height:100%;">'+
       '<div class="tradingview-widget-container__widget"></div>'+
-      '<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>'+
+      '<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Charts by TradingView</span></a></div>'+
     '</div></div></div>';
   }).join('');
   MI_MARKETS.forEach(function(m, idx){

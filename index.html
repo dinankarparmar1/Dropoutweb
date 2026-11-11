@@ -146,18 +146,22 @@ html body .tradingview-widget-container .tradingview-widget-copyright a,html bod
 .vs-story .vs-k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .vs-story p{margin:0;padding:16px 0;border-top:1px solid rgba(244,241,232,.11);font-family:Inter,sans-serif;font-size:clamp(20px,2.2vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.2;color:#f4f1e8;opacity:.12;transform:translateY(14px);transition:opacity .45s,transform .45s}
 .vs-story p.on{opacity:1;transform:none}.vs-story p b{color:var(--gold)}
-.vs-stage{grid-column:2;grid-row:1;position:relative;height:640px;margin-right:-60px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.vs-stage{grid-column:2;grid-row:1;position:relative;height:640px;margin-right:-60px}
+.vs-stage:before,.vs-stage:after{content:'';position:absolute;left:-40px;right:-40px;height:18%;z-index:2;pointer-events:none}
+.vs-stage:before{top:0;background:linear-gradient(#07070a,rgba(7,7,10,0))}.vs-stage:after{bottom:0;background:linear-gradient(rgba(7,7,10,0),#07070a)}
 .vs-glow{position:absolute;left:50%;top:50%;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;background:radial-gradient(circle,rgba(220,130,40,.20),rgba(212,120,30,.06) 45%,transparent 70%);filter:blur(10px)}
 .vs-scene{position:absolute;inset:0;perspective:1150px;perspective-origin:50% 46%}
-.vs-tower,.vs-blk{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
-.vs-f{position:absolute;left:0;top:0;backface-visibility:hidden;filter:brightness(var(--l,1));overflow:hidden;display:grid;place-items:center;
+.vs-tower,.vs-blk{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.vs-f{position:absolute;left:0;top:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;display:grid;place-items:center;
   background:repeating-linear-gradient(90deg,#2e2e33 0 9px,#121214 9px 12px,#45454b 12px 13px,#1f1f23 13px 24px),#1c1c1f;box-shadow:inset 0 0 0 2px #0a0a0b,inset 0 0 40px rgba(0,0,0,.55)}
-.vs-f:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.20) 50%,transparent 62%);background-size:320% 100%;background-position:var(--s,50%) 0;mix-blend-mode:screen;pointer-events:none}
+.vs-f:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.10) 50%,transparent 70%);pointer-events:none}
+/* lighting = a black layer whose opacity changes (cheap for the GPU), instead of a per-frame CSS filter */
+.vs-sh{position:absolute;inset:0;background:#000;opacity:.4;pointer-events:none;will-change:opacity;z-index:1}
 .vs-f.cap{background:repeating-linear-gradient(0deg,#242427 0 10px,#18181a 10px 12px),#1e1e21}
 .vs-f.door{background:repeating-linear-gradient(90deg,#d9772a 0 12px,#9c4a12 12px 15px,#f0a050 15px 16px,#c0601c 16px 30px),#c96a22;box-shadow:inset 0 0 0 3px #4a2208,inset 0 0 36px rgba(60,20,0,.55)}
 .vs-f.lab span{position:relative;font:900 84px/1 'Arial Black',Inter,Helvetica,Arial,sans-serif;letter-spacing:-.02em;color:#d9d6ce;transform:scaleY(1.08);text-shadow:0 2px 0 #000,0 -1px 0 rgba(255,255,255,.35),0 0 26px rgba(0,0,0,.6);white-space:nowrap}
 .vs-blk:nth-child(6) .vs-f.lab span{font-size:70px}
-.vs-orb{position:absolute;left:-34px;top:-34px;width:68px;height:68px;border-radius:50%;
+.vs-orb{position:absolute;left:-34px;top:-34px;width:68px;height:68px;border-radius:50%;will-change:transform,opacity;
   background:radial-gradient(circle at 34% 28%,#fff 0,#fff1d0 7%,#f6c56a 20%,#c9771f 46%,#3a1c05 80%,#100702 100%);
   box-shadow:0 0 30px 8px rgba(255,190,90,.55),0 0 110px 40px rgba(230,130,40,.25),inset -7px -9px 14px rgba(0,0,0,.55)}
 .vs-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted,#9b978d);display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .4s}
@@ -167,13 +171,15 @@ html body .tradingview-widget-container .tradingview-widget-copyright a,html bod
 /* cube finale */
 .vs-pin2{height:240vh;background:radial-gradient(700px 400px at 50% 60%,rgba(212,140,40,.07),transparent 70%)}
 .vs-cscene{position:absolute;left:50%;top:44%;width:0;height:0;perspective:1000px}
-.vs-cube{position:absolute;left:-110px;top:-110px;width:220px;height:220px;transform-style:preserve-3d}
-.vs-cf{position:absolute;inset:0;border:1.5px solid rgba(243,213,118,var(--e,.25));background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.01));box-shadow:inset 0 0 calc(var(--g,0)*60px) rgba(243,190,90,calc(var(--g,0)*.55)),0 0 calc(var(--g,0)*40px) rgba(243,190,90,calc(var(--g,0)*.35))}
+.vs-cube{position:absolute;left:-110px;top:-110px;width:220px;height:220px;transform-style:preserve-3d;will-change:transform}
+.vs-cf{position:absolute;inset:0;border:1.5px solid rgba(243,213,118,.25);background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+/* glow is drawn once and only faded in (opacity), not re-drawn on every scroll step */
+.vs-cf b{position:absolute;inset:-1.5px;border:1.5px solid #f3d576;box-shadow:inset 0 0 60px rgba(243,190,90,.55),0 0 40px rgba(243,190,90,.35);opacity:0;will-change:opacity}
 .vs-c1{transform:translateZ(110px)}.vs-c2{transform:rotateY(180deg) translateZ(110px)}.vs-c3{transform:rotateY(90deg) translateZ(110px)}.vs-c4{transform:rotateY(-90deg) translateZ(110px)}.vs-c5{transform:rotateX(90deg) translateZ(110px)}.vs-c6{transform:rotateX(-90deg) translateZ(110px)}
-.vs-ball{position:absolute;left:-46px;top:-46px;width:92px;height:92px;border-radius:50%;
+.vs-ball{position:absolute;left:-46px;top:-46px;width:92px;height:92px;border-radius:50%;will-change:transform,opacity;
   background:radial-gradient(circle at 34% 28%,#fff 0,#fff1d0 7%,#f6c56a 20%,#c9771f 46%,#3a1c05 80%,#100702 100%);
   box-shadow:0 0 30px 8px rgba(255,190,90,.5),0 0 120px 50px rgba(230,130,40,.22),inset -8px -10px 16px rgba(0,0,0,.55)}
-.vs-cglow{position:absolute;left:-260px;top:-260px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(243,190,90,.35),transparent 65%);opacity:0;pointer-events:none}
+.vs-cglow{position:absolute;left:-260px;top:-260px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(243,190,90,.35),transparent 65%);opacity:0;pointer-events:none;will-change:opacity}
 .vs-ccopy{position:absolute;left:0;right:0;bottom:9%;text-align:center;opacity:0;transform:translateY(20px);padding:0 20px}
 .vs-ccopy .vs-k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .vs-ccopy h2{margin:10px 0 0;font-family:Inter,sans-serif;font-weight:800;font-size:clamp(36px,5.4vw,74px);line-height:.98;letter-spacing:-.04em;color:#f4f1e8}
@@ -555,7 +561,7 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
 <section class="vs-pin vs-pin2" id="vs-finale" aria-label="Your journey starts here">
   <div class="vs-sticky">
     <div class="vs-cscene" aria-hidden="true">
-      <div class="vs-cube" id="vs-cube"><i class="vs-cf vs-c1"></i><i class="vs-cf vs-c2"></i><i class="vs-cf vs-c3"></i><i class="vs-cf vs-c4"></i><i class="vs-cf vs-c5"></i><i class="vs-cf vs-c6"></i></div>
+      <div class="vs-cube" id="vs-cube"><i class="vs-cf vs-c1"><b></b></i><i class="vs-cf vs-c2"><b></b></i><i class="vs-cf vs-c3"><b></b></i><i class="vs-cf vs-c4"><b></b></i><i class="vs-cf vs-c5"><b></b></i><i class="vs-cf vs-c6"><b></b></i></div>
       <div class="vs-ball" id="vs-ball"></div>
       <div class="vs-cglow" id="vs-cglow"></div>
     </div>
@@ -1008,7 +1014,7 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
   var LABELS=['GOLD','NIFTY','BTC','USD','FOREX','SENSEX','GOLD','BTC'];
   var W=340,H=132,D=172,GAP=4,N=LABELS.length,STEP=H+GAP,TOTAL=N*STEP;
   var yaw=[-22,30,-48,14,-30,52,-8,36],off=[[0,0],[28,-12],[-22,16],[16,8],[-26,-10],[12,14],[-14,4],[20,-6]],blocks=[];
-  function face(cls,w,h,tr,txt){var f=document.createElement('div');f.className='vs-f '+cls;f.style.cssText='width:'+w+'px;height:'+h+'px;margin:'+(-h/2)+'px 0 0 '+(-w/2)+'px;transform:'+tr;if(txt){var s=document.createElement('span');s.textContent=txt;f.appendChild(s);}return f;}
+  function face(cls,w,h,tr,txt){var f=document.createElement('div');f.className='vs-f '+cls;f.style.cssText='width:'+w+'px;height:'+h+'px;margin:'+(-h/2)+'px 0 0 '+(-w/2)+'px;transform:'+tr;if(txt){var s=document.createElement('span');s.textContent=txt;f.appendChild(s);}var sh=document.createElement('i');sh.className='vs-sh';f.appendChild(sh);f._sh=sh;f._o=-1;return f;}
   LABELS.forEach(function(t,i){
     var b=document.createElement('div');b.className='vs-blk';
     var fs=[
@@ -1018,7 +1024,7 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
     fs.forEach(function(x){b.appendChild(x[0]);});tower.appendChild(b);blocks.push({el:b,faces:fs,i:i});
   });
   var L=[-0.52,-0.55,0.65],ll=Math.hypot(L[0],L[1],L[2]);L=[L[0]/ll,L[1]/ll,L[2]/ll];
-  var ox=1,oz=0,oy=0,P=0,visible=true;
+  var ox=1,oz=0,oy=0,P=0,visible=true,tick=0,lightOn=true;
   function frame(t){
     var E=Math.max(0,Math.min(1,(P-0.12)/0.5)),E2=E*E*(3-2*E),spin=t*12+P*220,scroll=(t*30+P*900)%TOTAL,sc=(stage.clientWidth<560?0.58:0.92)*(1-E2*0.12);
     tower.style.transform='scale('+sc+') rotateX(-9deg) rotateY('+spin+'deg)';
@@ -1031,15 +1037,19 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
       var y=(((b.i*STEP+scroll)%TOTAL)-TOTAL/2+STEP/2)*(1+E2*0.55),a=yaw[b.i]+Math.sin(t*0.5+b.i)*6+E2*(b.i%2?38:-38),sx=E2*(b.i%2?70:-70);
       b.el.style.transform='translate3d('+(off[b.i][0]+sx)+'px,'+y+'px,'+off[b.i][1]+'px) rotateY('+a+'deg)';
       var ang=(a+spin)*Math.PI/180,c=Math.cos(ang),s=Math.sin(ang);
+      if(!lightOn||(tick+b.i)%2) return;            // light half the blocks each frame
       b.faces.forEach(function(f){
         var nx=f[1]*c+f[3]*s,nz=-f[1]*s+f[3]*c,ny=f[2];
+        if(nz<-0.2&&ny===0) return;                     // face is turned away: skip
         var lit=0.16+Math.max(nx*L[0]+ny*L[1]+nz*L[2],0)*1.15+0.75*Math.max(nx*ox+nz*oz,0)*Math.max(0,1-Math.abs(y-oy)/230);
-        f[0].style.setProperty('--l',lit.toFixed(3));f[0].style.setProperty('--s',(50+nx*140).toFixed(1)+'%');
+        var o=Math.round(Math.max(0,Math.min(0.86,1-lit/1.25))*50)/50;   // 2% steps -> fewer style writes
+        if(o!==f[0]._o){f[0]._o=o;f[0]._sh.style.opacity=o;}
       });
     });
   }
   var PIN=document.getElementById('home'),copy=document.getElementById('vs-copy'),story=document.getElementById('vs-story'),lines=story.querySelectorAll('p'),hint=document.getElementById('vs-hint');
   var PIN2=document.getElementById('vs-finale'),cube=document.getElementById('vs-cube'),ball=document.getElementById('vs-ball'),cg=document.getElementById('vs-cglow'),cc=document.getElementById('vs-ccopy'),cfs=cube?cube.querySelectorAll('.vs-cf'):[];
+  var lastG='';
   function prog(el){var r=el.getBoundingClientRect(),run=el.offsetHeight-innerHeight;return Math.max(0,Math.min(1,-r.top/Math.max(run,1)));}
   function cubeFrame(){
     if(!PIN2) return;
@@ -1047,7 +1057,7 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
     cube.style.transform='rotateX('+(-24+q*30)+'deg) rotateY('+(30+q*200)+'deg) scale('+(0.8+q*0.25)+')';
     ball.style.transform='translate3d('+(Math.sin(q*9)*(1-d)*(small?60:140))+'px,'+((d-1)*(small?320:420))+'px,0) scale('+(0.7+d*0.3)+')';
     ball.style.opacity=Math.min(1,q*8).toFixed(2);
-    for(var i=0;i<cfs.length;i++){cfs[i].style.setProperty('--g',g.toFixed(3));cfs[i].style.setProperty('--e',(0.25+g*0.65).toFixed(3));}
+    var go=g.toFixed(2);if(go!==lastG){lastG=go;for(var i=0;i<cfs.length;i++)cfs[i].firstChild.style.opacity=go;}
     cg.style.opacity=(g*0.9).toFixed(3);
     var c=Math.max(0,Math.min(1,(q-0.62)/0.18));cc.style.opacity=c.toFixed(3);cc.style.transform='translateY('+(20-c*20)+'px)';
   }
@@ -1060,11 +1070,20 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
     hint.style.opacity=P>0.03?0:1;
     cubeFrame();
   }
-  window.__vsFrame=function(t){window.__vsManual=true;frame(t);};
+  window.__vsFrame=function(t){window.__vsManual=true;tick++;frame(t);tick++;frame(t);};
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){frame(2.2);cubeFrame();return;}
-  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+  var sq=false;function queue(){if(!sq){sq=true;requestAnimationFrame(function(){sq=false;onScroll();});}}
+  addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);onScroll();
   new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(stage);
-  (function loop(ms){if(visible&&!window.__vsManual)frame(ms/1000);requestAnimationFrame(loop);})(0);
+  var last=0,slow=0,fast=0;
+  (function loop(ms){
+    if(visible&&!window.__vsManual){
+      var dt=ms-last;last=ms;tick++;
+      if(dt>24&&dt<500){if(++slow>40&&lightOn){lightOn=false;}}else if(dt<20){fast++;}
+      frame(ms/1000);
+    }
+    requestAnimationFrame(loop);
+  })(0);
 })();
 </script>
 </body>

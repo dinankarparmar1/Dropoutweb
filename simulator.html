@@ -156,119 +156,223 @@
   }
 </style>
 <style>/* iPhone zooms the page when a field under 16px is focused */@media (max-width:900px){input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),select,textarea{font-size:16px!important}}</style>
+<style>
+  /* ── Trading-terminal layout ───────────────────────────────────────── */
+  .wrap{max-width:1360px;padding:0 20px 40px;}
+  .topbar{padding:18px 0 14px;}
+  .mode-chip{margin-left:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-bright);border:1px solid var(--line-hi);border-radius:4px;padding:3px 7px;align-self:center;}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;border:1px solid var(--line);border-radius:10px;background:var(--panel-hi);padding:10px 12px;}
+  .tb-field{display:flex;flex-direction:column;gap:4px;}
+  .tb-field label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sub-dim);}
+  .tb-field select,.tb-field input{background:#0f0e0b;border:1px solid var(--line);border-radius:6px;color:var(--ink);font-family:var(--sans);font-size:13px;padding:8px 10px;height:36px;}
+  .tb-field select:focus,.tb-field input:focus{outline:none;border-color:var(--brass);}
+  .tb-stock{flex:1;min-width:220px;}
+  .tb-load{height:36px;border-radius:6px;padding:0 18px;}
+  #setupError{margin-top:6px;}
+
+  .quote{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding:12px 4px 14px;border-bottom:1px solid var(--line);}
+  .q-sym{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--sub);}
+  .q-px{display:flex;align-items:baseline;gap:10px;margin-top:2px;}
+  .q-ltp{font-family:var(--mono);font-weight:600;font-size:26px;color:var(--ink);transition:color .25s ease;}
+  .q-ltp.up{color:var(--emerald);} .q-ltp.down{color:var(--terracotta);}
+  .q-chg{font-family:var(--mono);font-size:13px;}
+  .q-chg.pos{color:var(--emerald);} .q-chg.neg{color:var(--terracotta);}
+  .q-stats{display:flex;flex-wrap:wrap;gap:6px 22px;}
+  .q-stats div{display:flex;flex-direction:column;gap:2px;}
+  .q-stats span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--sub-dim);}
+  .q-stats b{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--ink);}
+  .quote .mkt-clock{margin-left:auto;}
+
+  .term{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:14px;background:rgba(0,0,0,.18);}
+  .chart-pane{padding:10px 12px 12px;min-width:0;border-right:1px solid var(--line);}
+  .chart-head{margin-bottom:6px;min-height:18px;}
+  #chartContainer{height:460px;border-radius:6px;}
+  .replay-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);}
+  .ctl{height:34px;min-width:40px;border-radius:6px;border:1px solid var(--line);background:#0f0e0b;color:var(--ink);font-size:13px;cursor:pointer;}
+  .ctl-play{min-width:96px;font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:.05em;background:var(--brass);border-color:var(--brass);color:#0b0a08;}
+  .ctl:disabled{opacity:.35;cursor:not-allowed;}
+  .speed-group{border-radius:6px;margin-left:auto;}
+  .speed-btn{border-radius:4px;}
+  .sim-msg{margin-top:8px;}
+
+  .order-pane{display:flex;flex-direction:column;background:var(--panel);}
+  .ticket{padding:0 0 14px;border-bottom:1px solid var(--line);}
+  .side-tabs{display:grid;grid-template-columns:1fr 1fr;}
+  .side-tab{height:44px;border:none;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer;background:#0f0e0b;color:var(--sub-dim);border-bottom:2px solid var(--line);}
+  .side-tab.buy.active{color:var(--emerald);border-bottom-color:var(--emerald);background:rgba(93,165,131,.08);}
+  .side-tab.sell.active{color:var(--terracotta);border-bottom-color:var(--terracotta);background:rgba(193,122,95,.08);}
+  .side-tab:disabled{cursor:not-allowed;}
+  .product{font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);padding:12px 16px 0;letter-spacing:.04em;}
+  .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 16px 0;}
+  .t-grid .field label{font-size:10px;margin-bottom:5px;}
+  .t-grid .field input{background:#0f0e0b;border-radius:6px;height:38px;font-family:var(--mono);font-size:13px;}
+  .qty-box{display:flex;}
+  .qty-box input{border-radius:0 !important;text-align:center;min-width:0;-moz-appearance:textfield;}
+  .qty-box input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .qty-step{width:30px;flex:none;height:38px;border:1px solid var(--line);background:#16140f;color:var(--ink);cursor:pointer;font-size:15px;}
+  .qty-step:first-child{border-radius:6px 0 0 6px;border-right:none;} .qty-step:last-child{border-radius:0 6px 6px 0;border-left:none;}
+  .ticket-info{padding:0 16px;}
+  .ticket .form-error{padding:0 16px;margin-top:6px;}
+  .btn-place{display:block;width:calc(100% - 32px);margin:8px 16px 0;height:44px;border:none;border-radius:6px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer;color:#0b0a08;}
+  .btn-place.buy{background:var(--emerald);} .btn-place.sell{background:var(--terracotta);}
+  .btn-place:disabled{opacity:.35;cursor:not-allowed;}
+  .btn-cancel-sheet{display:none;}
+  .funds{padding:14px 16px;}
+  .funds-title{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub-dim);margin-bottom:8px;}
+  .f-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed rgba(224,197,138,.08);font-size:12.5px;color:var(--sub);}
+  .f-row:last-child{border-bottom:none;}
+  .f-row b{font-family:var(--mono);font-weight:500;color:var(--ink);}
+  .f-row b.pos{color:var(--emerald);} .f-row b.neg{color:var(--terracotta);}
+
+  .tabs{display:flex;gap:4px;margin:18px 0 0;border-bottom:1px solid var(--line);}
+  .tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--sub-dim);font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;cursor:pointer;margin-bottom:-1px;}
+  .tab.active{color:var(--brass-bright);border-bottom-color:var(--brass);}
+  .ledger{border-radius:0 0 10px 10px;border-top:none;margin-bottom:12px;}
+  .ledger-head{font-size:9.5px;}
+  .ledger-row{font-family:var(--mono);font-size:12px;}
+  .cell-pnl.pos,.cell-pnl.neg{font-family:var(--mono);}
+  #setupNote{margin-top:6px;}
+  .m-orderbar{display:none;}
+
+  @media (max-width:979px){
+    .wrap{padding:0 14px 90px;}
+    .term{grid-template-columns:1fr;border:none;background:none;margin-top:10px;}
+    .chart-pane{border:1px solid var(--line);border-radius:10px;padding:8px;}
+    #chartContainer{height:320px;}
+    .order-pane{background:none;}
+    .funds{border:1px solid var(--line);border-radius:10px;margin-top:12px;}
+    .ticket{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#12100c;border-top:1px solid var(--line-hi);border-radius:16px 16px 0 0;padding-bottom:calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1);max-height:88vh;overflow:auto;box-shadow:0 -20px 40px rgba(0,0,0,.5);}
+    .ticket.open{transform:none;}
+    .side-tab:first-child{border-top-left-radius:16px;} .side-tab:last-child{border-top-right-radius:16px;}
+    .sheet-backdrop{position:fixed;inset:0;z-index:59;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s ease;}
+    .sheet-backdrop.open{opacity:1;pointer-events:auto;}
+    .btn-cancel-sheet{display:block;width:calc(100% - 32px);margin:8px 16px 0;height:40px;border:1px solid var(--line);border-radius:6px;background:none;color:var(--sub);font-family:var(--mono);font-size:12px;}
+    .m-orderbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(11,10,8,.94);border-top:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+    .m-orderbar button{height:46px;border:none;border-radius:8px;font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.1em;color:#0b0a08;}
+    .m-buy{background:var(--emerald);} .m-sell{background:var(--terracotta);}
+    .m-orderbar button:disabled{opacity:.35;}
+    .quote{gap:10px 18px;}
+    .quote .mkt-clock{margin-left:0;width:100%;}
+    .q-ltp{font-size:24px;}
+    .speed-group{margin-left:0;}
+  }
+  @media (max-width:600px){ .mode-chip{display:none;} }
+  @media (max-width:420px){ .tb-field:not(.tb-stock){flex:1;} .tb-load{width:100%;} }
+</style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="topbar reveal">
-    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+  <div class="topbar">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span><span class="mode-chip">Paper Trading · Replay</span></div>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="dashboard.html" class="back-link">← Dashboard</a>
       <div class="mascot-orb" title="Ivaan — calm & steady"></div>
     </div>
   </div>
 
-  <div class="page-head reveal" style="animation-delay:.03s">
-    <div class="eyebrow">Interactive Simulator</div>
-    <h1>Historical Replay</h1>
-    <p>Pick one of 100 NSE stocks and any session up to the latest close. The market replays exactly as it happened — each candle builds tick by tick at a calm pace, and the future stays hidden. Practise with ₹1,00,000 of virtual money.</p>
+  <!-- Session toolbar -->
+  <div class="toolbar">
+    <div class="tb-field tb-stock"><label for="fStock">Stock</label><select id="fStock"></select></div>
+    <div class="tb-field"><label for="fDate">Session</label><input type="date" id="fDate"></div>
+    <div class="tb-field"><label for="fTimeframe">Interval</label>
+      <select id="fTimeframe">
+        <option value="1m">1m</option><option value="3m">3m</option><option value="5m" selected>5m</option>
+        <option value="15m">15m</option><option value="30m">30m</option><option value="1H">1H</option>
+        <option value="4H">4H</option><option value="1D">1D</option><option value="1W">1W</option>
+      </select></div>
+    <button class="btn btn-primary tb-load" id="btnLoadSession">Load Session</button>
+  </div>
+  <div class="form-error" id="setupError"></div>
+
+  <!-- Quote strip -->
+  <div class="quote">
+    <div class="q-main">
+      <div class="q-sym" id="chartSymbol">Select a stock and load a session</div>
+      <div class="q-px"><span class="q-ltp" id="qLtp">—</span><span class="q-chg" id="qChg"></span></div>
+    </div>
+    <div class="q-stats">
+      <div><span>Open</span><b id="qOpen">—</b></div>
+      <div><span>High</span><b id="qHigh">—</b></div>
+      <div><span>Low</span><b id="qLow">—</b></div>
+      <div><span>Prev close</span><b id="qPrev">—</b></div>
+      <div><span>Volume</span><b id="qVol">—</b></div>
+    </div>
+    <div class="mkt-clock" id="mktClock"></div>
   </div>
 
-  <div class="panel reveal" style="animation-delay:.06s">
-    <div class="section-title">Set Up a Session</div>
-    <div class="form-grid" style="margin-top:12px;">
-      <div class="field">
-        <label for="fStock">Stock</label>
-        <select id="fStock"></select>
+  <div class="term">
+    <!-- Chart -->
+    <div class="chart-pane">
+      <div class="chart-head"><span class="ohlc" id="chartOhlc"></span></div>
+      <div id="chartContainer"></div>
+      <div class="replay-row">
+        <button class="ctl" id="btnPrev" disabled aria-label="Previous candle">⏮</button>
+        <button class="ctl ctl-play" id="btnPlayPause" disabled>▶ Play</button>
+        <button class="ctl" id="btnNext" disabled aria-label="Next candle">⏭</button>
+        <div class="speed-group" role="group" aria-label="Replay speed">
+          <button class="speed-btn" data-speed="8000">Slow</button>
+          <button class="speed-btn active" data-speed="4000">Normal</button>
+          <button class="speed-btn" data-speed="2000">Fast</button>
+        </div>
       </div>
-      <div class="field">
-        <label for="fDate">Session Date</label>
-        <input type="date" id="fDate">
-      </div>
-      <div class="field">
-        <label for="fTimeframe">Timeframe</label>
-        <select id="fTimeframe">
-          <option value="1m">1 Minute</option>
-          <option value="3m">3 Minutes</option>
-          <option value="5m" selected>5 Minutes</option>
-          <option value="15m">15 Minutes</option>
-          <option value="30m">30 Minutes</option>
-          <option value="1H">1 Hour</option>
-          <option value="4H">4 Hours</option>
-          <option value="1D">1 Day</option>
-          <option value="1W">1 Week</option>
-        </select>
-      </div>
-      <div class="field" style="display:flex;align-items:flex-end;">
-        <button class="btn btn-primary" id="btnLoadSession" style="width:100%;">Load Session</button>
-      </div>
+      <div class="sim-msg" id="simMsg" aria-live="polite"></div>
     </div>
-    <div class="form-note" id="setupNote">Real NSE data via Yahoo Finance, up to yesterday — and today too once the market closes at 3:30 PM. Intraday timeframes (1m–4H) only go back a limited recent window; for older dates use 1D or 1W.</div>
-    <div class="form-error" id="setupError"></div>
+
+    <!-- Order window -->
+    <aside class="order-pane">
+      <div class="sheet-backdrop" id="sheetBackdrop"></div>
+      <div class="ticket" id="ticket">
+        <div class="side-tabs">
+          <button class="side-tab buy active" id="btnBuy" disabled>BUY</button>
+          <button class="side-tab sell" id="btnSell" disabled>SELL</button>
+        </div>
+        <div class="product" id="ticketProduct">MIS · Intraday · Market order</div>
+        <div class="t-grid">
+          <div class="field"><label for="ticketQty">Qty</label>
+            <div class="qty-box"><button type="button" class="qty-step" data-step="-1" aria-label="Decrease quantity">−</button><input type="number" id="ticketQty" value="10" min="1" inputmode="numeric"><button type="button" class="qty-step" data-step="1" aria-label="Increase quantity">+</button></div></div>
+          <div class="field"><label for="ticketLtp">Price · Market</label><input type="text" id="ticketLtp" value="Market" readonly></div>
+          <div class="field"><label for="ticketStop">Stop-loss</label><input type="number" id="ticketStop" placeholder="optional" step="0.05" inputmode="decimal"></div>
+          <div class="field"><label for="ticketTarget">Target</label><input type="number" id="ticketTarget" placeholder="optional" step="0.05" inputmode="decimal"></div>
+        </div>
+        <div class="ticket-info" id="ticketInfo">Load a session to start trading.</div>
+        <div class="form-error" id="ticketError"></div>
+        <button class="btn-place buy" id="btnConfirmTicket" disabled>BUY</button>
+        <button class="btn-cancel-sheet" id="btnCancelTicket" type="button">Cancel</button>
+      </div>
+
+      <div class="funds">
+        <div class="funds-title">Funds</div>
+        <div class="f-row"><span>Account value</span><b id="statBalance">₹1,00,000</b></div>
+        <div class="f-row"><span>Available margin</span><b id="statFunds">₹1,00,000</b></div>
+        <div class="f-row"><span>Realised P&amp;L</span><b id="statRealized">–</b></div>
+        <div class="f-row"><span>Unrealised P&amp;L</span><b id="statUnrealized">–</b></div>
+        <div class="f-row"><span>Win rate</span><b id="statWinRate">–</b></div>
+      </div>
+    </aside>
   </div>
 
-  <div class="stats-row reveal" style="animation-delay:.09s">
-    <div class="stat-card"><div class="val" id="statBalance">₹1,00,000</div><div class="lbl">Virtual Balance</div></div>
-    <div class="stat-card"><div class="val" id="statFunds">₹1,00,000</div><div class="lbl">Available Funds</div></div>
-    <div class="stat-card"><div class="val" id="statRealized">–</div><div class="lbl">Realized P&L</div></div>
-    <div class="stat-card"><div class="val" id="statUnrealized">–</div><div class="lbl">Unrealized P&L</div></div>
-    <div class="stat-card"><div class="val" id="statOpenCount">0</div><div class="lbl">Open Positions</div></div>
-    <div class="stat-card"><div class="val" id="statWinRate">–</div><div class="lbl">Win Rate</div></div>
+  <!-- Positions / history -->
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="pos" role="tab">Positions (<span id="statOpenCount">0</span>)</button>
+    <button class="tab" data-tab="hist" role="tab">Trade history</button>
   </div>
-
-  <div class="panel reveal" style="animation-delay:.12s">
-    <div class="chart-head">
-      <span class="symbol" id="chartSymbol">Select a stock and load a session</span>
-      <span class="mkt-clock" id="mktClock"></span>
-      <span class="ohlc" id="chartOhlc"></span>
-    </div>
-    <div id="chartContainer"></div>
-
-    <div class="replay-row">
-      <button class="btn btn-outline" id="btnPrev" disabled>◀ Prev</button>
-      <button class="btn btn-primary" id="btnPlayPause" disabled>▶ Play</button>
-      <button class="btn btn-outline" id="btnNext" disabled>Next ▶</button>
-      <div class="speed-group" role="group" aria-label="Replay speed">
-        <button class="speed-btn" data-speed="8000">Slow</button>
-        <button class="speed-btn active" data-speed="4000">Normal</button>
-        <button class="speed-btn" data-speed="2000">Fast</button>
-      </div>
-    </div>
-
-    <div class="sim-msg" id="simMsg" aria-live="polite"></div>
-    <div class="btn-row">
-      <button class="btn btn-long" id="btnBuy" disabled>Buy / Long</button>
-      <button class="btn btn-short" id="btnSell" disabled>Sell / Short</button>
-    </div>
-
-    <div class="panel" id="ticket" style="display:none;margin-top:14px;margin-bottom:0;background:rgba(0,0,0,0.15);">
-      <div class="form-grid">
-        <div class="field"><label for="ticketDirection">Direction</label><input type="text" id="ticketDirection" readonly></div>
-        <div class="field"><label for="ticketQty">Quantity</label><input type="number" id="ticketQty" value="10" min="1" inputmode="numeric"></div>
-        <div class="field"><label for="ticketStop">Stop Loss</label><input type="number" id="ticketStop" placeholder="optional"></div>
-        <div class="field"><label for="ticketTarget">Target</label><input type="number" id="ticketTarget" placeholder="optional"></div>
-      </div>
-      <div class="ticket-info" id="ticketInfo"></div>
-      <div class="form-error" id="ticketError"></div>
-      <div class="btn-row">
-        <button class="btn btn-primary" id="btnConfirmTicket">Place Market Order</button>
-        <button class="btn btn-outline" id="btnCancelTicket">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title reveal">Open Positions</div>
-  <div class="ledger reveal" style="margin-top:6px;">
-    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Qty</div><div>SL / Target</div><div>Unrealized P&L</div><div></div></div>
+  <div class="ledger" id="tabPos">
+    <div class="ledger-head"><div>Side</div><div>Avg. price</div><div>Qty</div><div>SL / Target</div><div>P&amp;L</div><div></div></div>
     <div id="positionsBody"><div class="ledger-empty">No open positions.</div></div>
   </div>
-
-  <div class="section-title reveal">Trade History</div>
-  <div class="ledger reveal" style="margin-top:6px;">
-    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Exit</div><div>Qty</div><div>Realized P&L</div><div>Closed</div></div>
+  <div class="ledger" id="tabHist" hidden>
+    <div class="ledger-head"><div>Side</div><div>Entry</div><div>Exit</div><div>Qty</div><div>P&amp;L</div><div>Closed</div></div>
     <div id="historyBody"><div class="ledger-empty">No trades closed yet this session.</div></div>
   </div>
 
+  <p class="form-note" id="setupNote">Replays real NSE data (Yahoo Finance) up to yesterday — and today once the market closes at 3:30 PM IST. Intraday intervals only go back a limited recent window; for older dates use 1D or 1W. Virtual money only, brokerage and taxes not included. For learning, not investment advice.</p>
+
+  <!-- Mobile order bar -->
+  <div class="m-orderbar" id="mOrderBar">
+    <button class="m-buy" id="mBuy" disabled>BUY</button>
+    <button class="m-sell" id="mSell" disabled>SELL</button>
+  </div>
 </div>
 
 <script src="market-data.js"></script>
@@ -336,7 +440,7 @@ candleSeries.priceScale().applyOptions({ scaleMargins: { top: 0.06, bottom: 0.22
 
 function resizeChart(){
   const el = document.getElementById('chartContainer');
-  chart.applyOptions({ width: el.clientWidth, height: window.innerWidth < 640 ? 300 : 360 });
+  chart.applyOptions({ width: el.clientWidth, height: window.innerWidth < 980 ? 320 : 460 });
 }
 window.addEventListener('resize', resizeChart);
 
@@ -457,7 +561,50 @@ function renderHistory(){
     </div>`).join('');
 }
 
-function refreshAll(){ updateStats(); renderPositions(); updateClock(); }
+let lastLtp = null;
+function fmtVol(v){
+  if (v >= 1e7) return (v / 1e7).toFixed(2) + ' Cr';
+  if (v >= 1e5) return (v / 1e5).toFixed(2) + ' L';
+  return Math.round(v).toLocaleString('en-IN');
+}
+// Quote strip: LTP, change vs previous close, day open/high/low/volume.
+function updateQuote(){
+  if (!fullCandles.length || livePrice === null) return;
+  const lastIdx = revealedCount - 1;
+  const barAt = i => (forming && forming.idx === i) ? { ...fullCandles[i], ...forming.bar, volume: forming.vol } : fullCandles[i];
+  let prevClose, day;
+  if (sessionIntraday){
+    prevClose = replayFrom > 0 && MarketData.istDate(fullCandles[replayFrom - 1].time) !== MarketData.istDate(fullCandles[Math.min(replayFrom, fullCandles.length - 1)].time)
+      ? fullCandles[replayFrom - 1].close : null;
+    const start = Math.min(replayFrom, lastIdx);
+    const bars = [];
+    for (let i = start; i <= lastIdx; i++) bars.push(barAt(i));
+    const todays = bars.filter(b => MarketData.istDate(b.time) === MarketData.istDate(fullCandles[lastIdx].time));
+    day = { open: todays[0].open, high: Math.max(...todays.map(b => b.high)), low: Math.min(...todays.map(b => b.low)), volume: todays.reduce((a, b) => a + (b.volume || 0), 0) };
+  } else {
+    prevClose = lastIdx > 0 ? fullCandles[lastIdx - 1].close : null;
+    day = barAt(lastIdx);
+  }
+  const ltpEl = document.getElementById('qLtp');
+  ltpEl.textContent = livePrice.toFixed(2);
+  if (lastLtp !== null && livePrice !== lastLtp) ltpEl.className = 'q-ltp ' + (livePrice > lastLtp ? 'up' : 'down');
+  lastLtp = livePrice;
+  const chgEl = document.getElementById('qChg');
+  if (prevClose){
+    const d = livePrice - prevClose, pct = d / prevClose * 100;
+    chgEl.textContent = `${d >= 0 ? '+' : ''}${d.toFixed(2)} (${d >= 0 ? '+' : ''}${pct.toFixed(2)}%)`;
+    chgEl.className = 'q-chg ' + (d >= 0 ? 'pos' : 'neg');
+  } else { chgEl.textContent = ''; }
+  document.getElementById('qOpen').textContent = day.open.toFixed(2);
+  document.getElementById('qHigh').textContent = day.high.toFixed(2);
+  document.getElementById('qLow').textContent = day.low.toFixed(2);
+  document.getElementById('qPrev').textContent = prevClose ? prevClose.toFixed(2) : '—';
+  document.getElementById('qVol').textContent = fmtVol(day.volume || 0);
+  const t = document.getElementById('ticketLtp');
+  if (t) t.value = livePrice.toFixed(2);
+}
+
+function refreshAll(){ updateStats(); renderPositions(); updateClock(); updateQuote(); }
 
 document.getElementById('positionsBody').addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-close-position');
@@ -525,9 +672,14 @@ document.getElementById('btnLoadSession').addEventListener('click', async () => 
   chart.timeScale().scrollToRealTime();
   refreshAll();
   renderHistory();
-  ['btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = false);
+  ORDER_CONTROLS.forEach(id => document.getElementById(id).disabled = false);
   document.getElementById('btnPrev').disabled = true;
+  document.getElementById('ticketProduct').textContent = sessionIntraday ? 'MIS · Intraday · Market order' : 'NRML · Positional · Market order';
+  lastLtp = null;
+  openTicket(pendingDirection || 'Long', true);
 });
+
+const ORDER_CONTROLS = ['btnPlayPause','btnNext','btnBuy','btnSell','btnConfirmTicket','mBuy','mSell'];
 
 // ── Tick engine: each real candle builds up gradually ───────────────────
 // The path is open → (low/high) → (high/low) → close with small wiggles,
@@ -619,7 +771,8 @@ function endSession(){
   } else {
     say('Replay finished — this is where the real chart ended.');
   }
-  ['btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = true);
+  ORDER_CONTROLS.forEach(id => document.getElementById(id).disabled = true);
+  closeTicket();
   refreshAll();
 }
 
@@ -685,28 +838,45 @@ function ticketPreview(){
   const need = qty * price;
   const free = availableFunds();
   document.getElementById('ticketInfo').innerHTML =
-    `Market price <b>₹${price.toFixed(2)}</b> · Order value <b>${fmtMoney(need)}</b> · Available <b>${fmtMoney(Math.max(0, free))}</b>` +
-    `<br>Max quantity at this price: <b>${Math.max(0, Math.floor(free / price))}</b>. Brokerage and taxes are not included.`;
+    `Margin required <b>${fmtMoney(need)}</b><br>Available <b>${fmtMoney(Math.max(0, free))}</b> · Max qty <b>${Math.max(0, Math.floor(free / price))}</b>`;
 }
-function openTicket(direction){
-  if (sessionOver) return;
+const isSheet = () => window.matchMedia('(max-width:979px)').matches;
+const ticketEl = document.getElementById('ticket');
+const backdrop = document.getElementById('sheetBackdrop');
+function openTicket(direction, quiet){
+  if (sessionOver || !fullCandles.length) return;
   pendingDirection = direction;
-  document.getElementById('ticketDirection').value = direction === 'Long' ? 'Buy (Long)' : 'Sell (Short)';
-  document.getElementById('ticketQty').value = 10;
-  document.getElementById('ticketStop').value = '';
-  document.getElementById('ticketTarget').value = '';
+  const buy = direction === 'Long';
+  document.getElementById('btnBuy').classList.toggle('active', buy);
+  document.getElementById('btnSell').classList.toggle('active', !buy);
+  const place = document.getElementById('btnConfirmTicket');
+  place.className = 'btn-place ' + (buy ? 'buy' : 'sell');
+  place.textContent = (buy ? 'BUY ' : 'SELL ') + stockSelect.value.replace('.NS', '');
   document.getElementById('ticketError').textContent = '';
-  document.getElementById('ticket').style.display = 'block';
+  if (!quiet && isSheet()){ ticketEl.classList.add('open'); backdrop.classList.add('open'); }
   ticketPreview();
 }
 function closeTicket(){
-  document.getElementById('ticket').style.display = 'none';
-  pendingDirection = null;
+  ticketEl.classList.remove('open');
+  backdrop.classList.remove('open');
 }
-setInterval(() => { if (pendingDirection) ticketPreview(); }, 400);
+backdrop.addEventListener('click', closeTicket);
+document.getElementById('mBuy').addEventListener('click', () => openTicket('Long'));
+document.getElementById('mSell').addEventListener('click', () => openTicket('Short'));
+document.querySelectorAll('.qty-step').forEach(b => b.addEventListener('click', () => {
+  const q = document.getElementById('ticketQty');
+  q.value = Math.max(1, (parseInt(q.value) || 0) + Number(b.dataset.step));
+  ticketPreview();
+}));
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x === t));
+  document.getElementById('tabPos').hidden = t.dataset.tab !== 'pos';
+  document.getElementById('tabHist').hidden = t.dataset.tab !== 'hist';
+}));
+setInterval(() => { if (pendingDirection && fullCandles.length && !sessionOver) ticketPreview(); }, 400);
 document.getElementById('ticketQty').addEventListener('input', ticketPreview);
-document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long'));
-document.getElementById('btnSell').addEventListener('click', () => openTicket('Short'));
+document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long', !ticketEl.classList.contains('open')));
+document.getElementById('btnSell').addEventListener('click', () => openTicket('Short', !ticketEl.classList.contains('open')));
 document.getElementById('btnCancelTicket').addEventListener('click', closeTicket);
 
 document.getElementById('btnConfirmTicket').addEventListener('click', () => {
@@ -723,6 +893,8 @@ document.getElementById('btnConfirmTicket').addEventListener('click', () => {
   const c = fullCandles[revealedCount - 1];
   positions.push({ id: positionIdCounter++, direction: pendingDirection, qty, entryPrice: price, entryTime: c.time, stop, target });
   say(`${longSide ? 'Bought' : 'Sold'} ${qty} @ ₹${price.toFixed(2)} (${fmtIst(c.time, sessionIntraday)} IST).`);
+  document.getElementById('ticketStop').value = '';
+  document.getElementById('ticketTarget').value = '';
   closeTicket();
   refreshPriceLines();
   refreshAll();

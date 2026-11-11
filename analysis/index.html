@@ -1,86 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>All Market Analysis | Dropout Traders</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta property="og:image" content="https://dropouttraders.in/assets/img/og-share.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dropouttraders.in/assets/img/og-share.jpg">
-<meta name="description" content="Every stock analysis published by Dropout Traders — buy, sell and hold calls with target and stop loss.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://dropouttraders.in/analysis/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Dropout Traders">
-<meta property="og:title" content="All Market Analysis | Dropout Traders">
-<meta property="og:description" content="Every stock analysis published by Dropout Traders — buy, sell and hold calls with target and stop loss.">
-<meta property="og:url" content="https://dropouttraders.in/analysis/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#07070a;--bg-raise:#111116;--panel:rgba(255,255,255,0.035);--panel-border:rgba(212,175,55,0.22);--panel-border-strong:rgba(212,175,55,0.45);--gold:#d4af37;--gold-bright:#f3d576;--gold-deep:#8a6d1f;--white:#f6f4ee;--muted:#a8a49b;--muted-dim:#6f6c66;--green:#4a9a76;--red:#b1594a;--radius:14px;--radius-lg:22px;--ease:cubic-bezier(.16,.84,.44,1);--maxw:1200px;}
-*{box-sizing:border-box;}
-body{margin:0;background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:50px 24px 90px;}
-.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;margin-bottom:30px;}
-.back:hover{color:var(--gold-bright);}
-.eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.6vw,46px);line-height:1.15;margin:0 0 34px;}
-h1 .accent{color:var(--gold-bright);font-style:italic;}
-.glass{background:var(--panel);border:1px solid var(--panel-border);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:var(--radius-lg);}
-.analysis-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;}
-.analysis-card{display:block;overflow:hidden;text-decoration:none;transition:transform .35s var(--ease),border-color .35s var(--ease);}
-.analysis-card:hover{transform:translateY(-4px);border-color:var(--panel-border-strong);}
-.ac-image{aspect-ratio:16/10;overflow:hidden;background:var(--bg-raise);}
-.ac-image img{width:100%;height:100%;object-fit:cover;display:block;}
-.ac-body{padding:18px 20px 20px;}
-.ac-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
-.ac-stock{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
-.ac-title{font-family:'Playfair Display',serif;font-size:19px;color:var(--white);line-height:1.35;margin-bottom:10px;}
-.ac-meta{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--muted-dim);letter-spacing:.02em;}
-.call-badge{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:700;white-space:nowrap;}
-.call-buy{background:rgba(74,154,118,.15);color:var(--green);border:1px solid rgba(74,154,118,.35);}
-.call-sell{background:rgba(177,89,74,.15);color:var(--red);border:1px solid rgba(177,89,74,.35);}
-.call-hold{background:rgba(212,175,55,.15);color:var(--gold-bright);border:1px solid rgba(212,175,55,.35);}
-.empty{padding:60px 30px;text-align:center;color:var(--muted);}
-</style>
+<meta charset="utf-8">
+<title>Dropout Traders</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://dropouttraders.in/">
+<meta http-equiv="refresh" content="0; url=/">
+<script>location.replace("/");</script>
 </head>
-<body>
-<div class="wrap">
-<a href="../index.html#market-analysis" class="back">&larr; Dropout Traders</a>
-<div class="eyebrow">The Full Archive</div>
-<h1>All Market <span class="accent">Analysis</span></h1>
-<div class="analysis-grid" id="all-analysis-grid">
-  <div class="empty glass"><p>Nothing published yet — check back soon.</p></div>
-</div>
-</div>
-<script>
-fetch('../data/market-analysis.json').then(function(r){ if(!r.ok) throw new Error('no data'); return r.json(); })
-.then(function(payload){
-  var rows = payload.rows || [];
-  if(!rows.length) return;
-  var callClass = { BUY:'call-buy', SELL:'call-sell', HOLD:'call-hold' };
-  var grid = document.getElementById('all-analysis-grid');
-  grid.innerHTML = rows.map(function(row){
-    var call = (row.call || 'HOLD').toUpperCase();
-    var dateStr = row.date ? new Date(row.date).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'}) : '';
-    return '<a href="'+row.slug+'.html" class="analysis-card glass">'
-      + '<div class="ac-image"><img src="../'+row.image+'" alt="'+row.stockName+' analysis" loading="lazy"></div>'
-      + '<div class="ac-body">'
-      +   '<div class="ac-head"><span class="ac-stock">'+row.stockName+'</span><span class="call-badge '+(callClass[call]||'call-hold')+'">'+call+'</span></div>'
-      +   '<h4 class="ac-title">'+row.title+'</h4>'
-      +   '<div class="ac-meta">'+dateStr+' &middot; Target &#8377;'+row.target+' &middot; SL &#8377;'+row.stopLoss+'</div>'
-      + '</div></a>';
-  }).join('');
-})
-.catch(function(){ /* placeholder stays as-is */ });
-</script>
+<body style="background:#07070a;color:#f6f4ee;font-family:Arial,sans-serif;text-align:center;padding:60px 20px">
+This page is no longer available. <a href="/" style="color:#d4af37">Go to Dropout Traders →</a>
 </body>
 </html>

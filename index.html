@@ -200,6 +200,8 @@ html body .tradingview-widget-container .tradingview-widget-copyright a,html bod
 #mobile-menu{justify-content:flex-start;gap:22px;padding-bottom:40px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 #mobile-menu a{font-size:24px;line-height:1.2}
 @media(max-height:700px){#mobile-menu{gap:14px}#mobile-menu a{font-size:21px}}
+.stats-grid{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:600px){.stats-grid{grid-template-columns:1fr 1fr!important}.stats-grid>div:last-child{grid-column:1/-1}}
 /* overflow-x:hidden on both html and body turns body into a scroll box and breaks position:sticky; clip hides sideways overflow the same way without that */
 html,body{overflow-x:clip}
 /* About photo collapsed to ~0px on phones/tablets; give it a real width */
@@ -305,8 +307,6 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
       <a href="founder/">Founder</a>
       <a href="courses.html">Courses</a>
       <a href="market-intelligence.html">Market Intelligence</a>
-      <a href="#market-analysis">Market Analysis</a>
-      <a href="#watchlist">Watchlist</a>
       <a href="#calculators">Calculators</a>
       <a href="#contact">Contact Us</a>
     </div>
@@ -323,8 +323,6 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
   <a href="founder/">Founder</a>
   <a href="courses.html">Courses</a>
   <a href="market-intelligence.html">Market Intelligence</a>
-  <a href="#market-analysis">Market Analysis</a>
-  <a href="#watchlist">Watchlist</a>
   <a href="#calculators">Calculators</a>
   <a href="#contact">Contact Us</a>
 </div>
@@ -340,7 +338,6 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
       <div class="vs-cta"><a href="#contact" class="btn btn-gold">Book Free Demo →</a><a href="courses.html" class="btn btn-outline-gold">Explore Courses</a><span class="vs-hand">← start here, it's free</span></div>
       <div class="hero-links">
         <a href="market-intelligence.html">Market Intelligence</a><span aria-hidden="true">·</span>
-        <a href="#market-analysis">Market Analysis</a><span aria-hidden="true">·</span>
         <a href="#" data-modal="calculators">Calculators</a><span aria-hidden="true">·</span>
         <a href="dashboard.html">Dashboard</a>
       </div>
@@ -407,10 +404,6 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
       <div class="reveal">
         <div class="stat-num"><span class="counter" data-target="480">0</span><span class="suffix">+</span></div>
         <div class="stat-label">Live Sessions</div>
-      </div>
-      <div class="reveal">
-        <div class="stat-num"><span class="counter" data-target="3000">0</span><span class="suffix">+</span></div>
-        <div class="stat-label">Market Analysis</div>
       </div>
       <div class="reveal">
         <div class="stat-num"><span class="counter" data-target="3000">0</span><span class="suffix">+</span></div>
@@ -497,46 +490,6 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
             </script>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARKET ANALYSIS ============ -->
-<section id="market-analysis">
-  <div class="container">
-    <div class="section-head center reveal">
-      <div class="eyebrow" style="justify-content:center;">Fresh Off The Charts</div>
-      <h2>Latest <span class="accent">Market Analysis</span></h2>
-      <p>Buy, sell and hold calls on individual stocks — with target, stop loss, and the setup behind each one.</p>
-    </div>
-    <div class="analysis-grid" id="analysis-grid">
-      <div class="analysis-empty glass">
-        <p>New analysis is published here regularly — check back soon.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:34px;">
-      <a href="analysis/" class="btn btn-outline-gold" style="display:inline-block;width:auto;padding:13px 30px;">View All Analysis</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WATCHLIST ============ -->
-<section id="watchlist">
-  <div class="container">
-    <div class="section-head center reveal">
-      <div class="eyebrow" style="justify-content:center;">On The Radar</div>
-      <h2>Stock <span class="accent">Watchlist</span></h2>
-      <p>Names currently being tracked, split by trade horizon.</p>
-    </div>
-    <div class="watchlist-grid">
-      <div class="watchlist-col glass">
-        <div class="wl-col-head">Swing</div>
-        <div class="wl-list" id="wl-swing"><p class="wl-empty">Nothing on the swing list yet.</p></div>
-      </div>
-      <div class="watchlist-col glass">
-        <div class="wl-col-head">Long-Term</div>
-        <div class="wl-list" id="wl-longterm"><p class="wl-empty">Nothing on the long-term list yet.</p></div>
       </div>
     </div>
   </div>
@@ -941,69 +894,12 @@ document.querySelectorAll('[data-modal]').forEach(function(link){
 document.getElementById('modal-close').addEventListener('click', function(){ modalOverlay.classList.remove('open'); });
 modalOverlay.addEventListener('click', function(e){ if(e.target === modalOverlay) modalOverlay.classList.remove('open'); });
 
-/* ---------------------------------------------------------------
-   MARKET ANALYSIS — reads data/market-analysis.json (same pattern
-   as the Market Intelligence data feeds) and renders cards. Stays
-   on the placeholder if the file doesn't exist yet or is empty.
---------------------------------------------------------------- */
-fetch('data/market-analysis.json').then(function(r){ if(!r.ok) throw new Error('no data yet'); return r.json(); })
-.then(function(payload){
-  var rows = payload.rows || [];
-  if(!rows.length) return;
-  var callClass = { BUY:'call-buy', SELL:'call-sell', HOLD:'call-hold' };
-  var grid = document.getElementById('analysis-grid');
-  grid.innerHTML = rows.slice(0,1).map(function(row){
-    var call = (row.call || 'HOLD').toUpperCase();
-    var dateStr = row.date ? new Date(row.date).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'}) : '';
-    return '<a href="analysis/'+row.slug+'.html" class="analysis-card glass">'
-      + '<div class="ac-image"><img src="'+row.image+'" alt="'+row.stockName+' analysis" loading="lazy"></div>'
-      + '<div class="ac-body">'
-      +   '<div class="ac-head"><span class="ac-stock">'+row.stockName+'</span><span class="call-badge '+(callClass[call]||'call-hold')+'">'+call+'</span></div>'
-      +   '<h4 class="ac-title">'+row.title+'</h4>'
-      +   '<div class="ac-meta">'+dateStr+' &middot; Target &#8377;'+row.target+' &middot; SL &#8377;'+row.stopLoss+'</div>'
-      + '</div></a>';
-  }).join('');
-})
-.catch(function(){ /* data/market-analysis.json not published yet — placeholder stays as-is */ });
+
 
 })();
 </script>
 
-<script type="module">
-/* ---------------------------------------------------------------
-   WATCHLIST — reads from Firestore ('watchlist' collection) and
-   splits into the Swing and Long-Term columns.
---------------------------------------------------------------- */
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDwPUSWui-PyZJ8uhzZjbb5ap8_nKYP564",
-  authDomain: "dropout-traders.firebaseapp.com",
-  projectId: "dropout-traders",
-  storageBucket: "dropout-traders.firebasestorage.app",
-  messagingSenderId: "980071485559",
-  appId: "1:980071485559:web:1eaf5d2744ce886b96b672"
-};
-var fbApp = initializeApp(firebaseConfig);
-var db = getFirestore(fbApp);
-
-function renderCol(id, items){
-  if(!items.length) return;
-  document.getElementById(id).innerHTML = items.map(function(r){ return '<div class="wl-item">'+r.stockName+'</div>'; }).join('');
-}
-
-getDocs(collection(db, 'watchlist')).then(function(snap){
-  var swing = [], longterm = [];
-  snap.forEach(function(d){
-    var data = d.data();
-    if(data.category === 'SWING') swing.push(data);
-    else if(data.category === 'LONGTERM') longterm.push(data);
-  });
-  renderCol('wl-swing', swing);
-  renderCol('wl-longterm', longterm);
-}).catch(function(){ /* watchlist not set up yet — placeholders stay as-is */ });
-</script>
 <script src="assets/js/ai-chat.js"></script>
 
 <script>

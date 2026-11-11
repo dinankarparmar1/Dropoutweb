@@ -188,6 +188,9 @@
   .vs-c1{transform:translateZ(80px)}.vs-c2{transform:rotateY(180deg) translateZ(80px)}.vs-c3{transform:rotateY(90deg) translateZ(80px)}.vs-c4{transform:rotateY(-90deg) translateZ(80px)}.vs-c5{transform:rotateX(90deg) translateZ(80px)}.vs-c6{transform:rotateX(-90deg) translateZ(80px)}
   .vs-ball{left:-34px;top:-34px;width:68px;height:68px}
 }
+#mobile-menu{justify-content:flex-start;gap:22px;padding-bottom:40px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#mobile-menu a{font-size:24px;line-height:1.2}
+@media(max-height:700px){#mobile-menu{gap:14px}#mobile-menu a{font-size:21px}}
 /* overflow-x:hidden on both html and body turns body into a scroll box and breaks position:sticky; clip hides sideways overflow the same way without that */
 html,body{overflow-x:clip}
 /* About photo collapsed to ~0px on phones/tablets; give it a real width */
@@ -710,7 +713,12 @@ window.addEventListener('scroll', function(){
 });
 var burger = document.getElementById('nav-burger');
 var mobileMenu = document.getElementById('mobile-menu');
-burger.addEventListener('click', function(){ mobileMenu.classList.toggle('open'); });
+// Start the menu links below the fixed ticker + nav bar so nothing hides behind them
+function fitMobileMenu(){
+  var t = (tickerWrap && tickerWrap.offsetHeight) || 0;
+  mobileMenu.style.paddingTop = (t + navbar.offsetHeight + 18) + 'px';
+}
+burger.addEventListener('click', function(){ fitMobileMenu(); mobileMenu.classList.toggle('open'); });
 mobileMenu.querySelectorAll('a').forEach(function(a){
   a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
 });
@@ -721,6 +729,7 @@ function setTickerOffset(){
   document.documentElement.style.setProperty('--ticker-h', h+'px');
   navbar.style.top = h+'px';
   document.getElementById('mobile-menu').style.top = 0;
+  if(typeof fitMobileMenu === 'function') fitMobileMenu();
 }
 setTimeout(setTickerOffset, 800);
 window.addEventListener('resize', setTickerOffset);

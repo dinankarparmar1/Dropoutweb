@@ -664,7 +664,7 @@ document.getElementById('btnLoadSession').addEventListener('click', async () => 
   const stockLabel = stockSelect.options[stockSelect.selectedIndex].textContent;
   document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe}`;
   say(dateStr !== asked
-    ? `${asked} was a market holiday — loaded the previous session (${dateStr}). Press Play.`
+    ? `${asked} was not a trading day (weekend or holiday) — loaded the previous session (${dateStr}). Press Play.`
     : sessionIntraday ? 'Market is about to open. Earlier sessions are shown for context — press Play.' : 'Chart loaded up to the start of the replay window — press Play.');
 
   resizeChart();

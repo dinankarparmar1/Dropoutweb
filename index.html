@@ -511,6 +511,71 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
   </div>
 </section>
 
+<!-- ============ STUDENT REVIEWS ============ -->
+<section id="reviews" aria-label="Student reviews">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Student Stories</div>
+      <h2>What our <span class="accent">students</span> say</h2>
+      <p>Real messages our students sent us on WhatsApp — shared here as they wrote them, with their permission.</p>
+    </div>
+    <div class="sr-track" id="sr-track" tabindex="0" aria-label="Student reviews, swipe to see more">
+      <article class="sr-card"><div class="sr-q" aria-hidden="true">“</div><p class="sr-text">Main pehle har trade mein profit banane ke pressure mein rehta tha. Dinankar Sir ne patience, discipline aur risk management ki importance samjhayi. Ab trading ko lekar meri thinking kaafi change hui hai.</p><span class="sr-tag">Stock Market</span><div class="sr-who"><span class="sr-av" aria-hidden="true">AR</span><div><b>Aditya Raj</b><span>Raipur · via WhatsApp</span></div><button class="sr-orig" type="button" data-img="assets/img/reviews/review-1.webp">See original</button></div></article>
+      <article class="sr-card"><div class="sr-q" aria-hidden="true">“</div><p class="sr-text">Yahan aane ke baad samajh aaya ki trading sirf profit banane ke baare mein nahi hai. Capital protection, stop loss aur proper risk management kitne important hain, ye seekhne ko mila.</p><span class="sr-tag">Stock Market</span><div class="sr-who"><span class="sr-av" aria-hidden="true">PS</span><div><b>Priya Singh</b><span>Chhatarpur · via WhatsApp</span></div><button class="sr-orig" type="button" data-img="assets/img/reviews/review-5.webp">See original</button></div></article>
+      <article class="sr-card"><div class="sr-q" aria-hidden="true">“</div><p class="sr-text">Dinankar Sir jis tarah live market examples ke through concepts explain karte hain, woh mujhe sabse achha laga. Sirf theory nahi, practical chart analysis bhi seekhne ko mila. Great learning experience!</p><span class="sr-tag">Options</span><div class="sr-who"><span class="sr-av" aria-hidden="true">R</span><div><b>Rajdeep</b><span>Chhatarpur · via WhatsApp</span></div><button class="sr-orig" type="button" data-img="assets/img/reviews/review-2.webp">See original</button></div></article>
+      <article class="sr-card"><div class="sr-q" aria-hidden="true">“</div><p class="sr-text">Trading ke baare mein mujhe pehle kuch khaas knowledge nahi thi. Dropout Traders se basics seekhne ke baad charts, indicators aur market movements samajhne mein help mili.</p><span class="sr-tag">Forex</span><div class="sr-who"><span class="sr-av" aria-hidden="true">A</span><div><b>Anshuman</b><span>Bhopal · via WhatsApp</span></div><button class="sr-orig" type="button" data-img="assets/img/reviews/review-4.webp">See original</button></div></article>
+      <article class="sr-card"><div class="sr-q" aria-hidden="true">“</div><p class="sr-text">Overall experience bahut achha raha. Learning process simple hai, concepts easily understandable hain aur trading ko lekar ek disciplined approach develop karne mein help mili.</p><span class="sr-tag">Fundamental</span><div class="sr-who"><span class="sr-av" aria-hidden="true">HP</span><div><b>Hardik Pandey</b><span>Delhi · via WhatsApp</span></div><button class="sr-orig" type="button" data-img="assets/img/reviews/review-3.webp">See original</button></div></article>
+    </div>
+    <div class="sr-nav"><button class="testi-arrow" type="button" id="sr-prev" aria-label="Previous review">←</button><div class="sr-dots" id="sr-dots" aria-hidden="true"></div><button class="testi-arrow" type="button" id="sr-next" aria-label="Next review">→</button></div>
+    <p class="sr-note">Individual learning experiences. Trading involves risk; past learning does not guarantee any returns.</p>
+    <div style="text-align:center;margin-top:30px;"><a href="#contact" class="btn btn-gold">Book Your Free Demo →</a></div>
+  </div>
+  <div class="sr-lb" id="sr-lb" role="dialog" aria-modal="true" aria-label="Original WhatsApp message" hidden><button class="sr-lb-x" type="button" aria-label="Close">×</button><img id="sr-lb-img" alt="Original WhatsApp message from a student"></div>
+</section>
+<style>
+#reviews{padding:110px 0}
+.sr-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch;outline:none}
+.sr-track::-webkit-scrollbar{display:none}
+.sr-card{scroll-snap-align:start;background:var(--panel);border:1px solid var(--panel-border);border-radius:18px;padding:30px 26px 22px;display:flex;flex-direction:column;gap:16px;min-height:290px;transition:border-color .3s ease,transform .4s var(--ease)}
+.sr-card:hover{border-color:var(--panel-border-strong);transform:translateY(-4px)}
+.sr-q{font-family:'Playfair Display',serif;font-size:46px;line-height:.6;height:18px;color:var(--gold);opacity:.6}
+.sr-text{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;line-height:1.7;color:var(--white);flex:1}
+.sr-who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--panel-border);padding-top:16px}
+.sr-av{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:var(--gold-bright);border:1px solid var(--panel-border-strong);background:radial-gradient(circle at 35% 30%,rgba(243,213,118,.25),rgba(212,175,55,.05))}
+.sr-tag{align-self:flex-start;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--panel-border);border-radius:99px;padding:5px 11px}
+.sr-who b{display:block;font-size:14px;font-weight:600}.sr-who div span{font-size:12px;color:var(--muted-dim)}
+.sr-orig{margin-left:auto;flex:none;background:none;border:1px solid var(--panel-border-strong);color:var(--gold-bright);border-radius:99px;padding:7px 12px;font-size:11.5px;letter-spacing:.03em}
+.sr-orig:hover{background:rgba(212,175,55,.1)}
+.sr-nav{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:26px}
+.sr-dots{display:flex;gap:8px}.sr-dots span{width:6px;height:6px;border-radius:50%;background:var(--panel-border-strong);transition:all .3s ease}.sr-dots span.on{background:var(--gold-bright);width:20px;border-radius:4px}
+.sr-note{margin-top:18px;text-align:center;font-size:11.5px;color:var(--muted-dim)}
+.sr-lb{position:fixed;inset:0;z-index:900;background:rgba(5,5,7,.9);display:flex;align-items:center;justify-content:center;padding:24px}
+.sr-lb[hidden]{display:none}
+.sr-lb img{max-width:min(560px,100%);max-height:80vh;width:auto;border-radius:14px;border:1px solid var(--panel-border-strong)}
+.sr-lb-x{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--panel-border-strong);background:var(--bg-raise);color:var(--white);font-size:24px;line-height:1}
+@media(max-width:1080px){.sr-track{grid-auto-columns:calc((100% - 22px)/2)}}
+@media(max-width:760px){#reviews{padding:80px 0}.sr-track{grid-auto-columns:86%;gap:14px}.sr-card{min-height:0;padding:26px 20px 18px}.sr-text{font-size:15.5px}.sr-av{width:36px;height:36px;font-size:12px}}
+</style>
+<script>
+(function(){
+  var t=document.getElementById('sr-track');if(!t)return;
+  var cards=t.querySelectorAll('.sr-card'),dots=document.getElementById('sr-dots');
+  cards.forEach(function(){dots.appendChild(document.createElement('span'));});
+  function step(){return cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||0);}
+  function upd(){var i=Math.round(t.scrollLeft/step());i=Math.min(i,cards.length-1);dots.querySelectorAll('span').forEach(function(d,k){d.classList.toggle('on',k===i);});}
+  var raf=0;t.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;upd();});},{passive:true});
+  document.getElementById('sr-prev').onclick=function(){t.scrollBy({left:-step(),behavior:'smooth'});};
+  document.getElementById('sr-next').onclick=function(){
+    if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)t.scrollTo({left:0,behavior:'smooth'});else t.scrollBy({left:step(),behavior:'smooth'});};
+  upd();
+  var lb=document.getElementById('sr-lb'),img=document.getElementById('sr-lb-img'),last=null;
+  function close(){lb.hidden=true;document.body.classList.remove('no-scroll');if(last)last.focus();}
+  t.addEventListener('click',function(e){var b=e.target.closest('.sr-orig');if(!b)return;last=b;img.src=b.dataset.img;lb.hidden=false;document.body.classList.add('no-scroll');lb.querySelector('.sr-lb-x').focus();});
+  lb.addEventListener('click',function(e){if(e.target!==img)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
+})();
+</script>
+
 <!-- ============ CONTACT ============ -->
 <!-- ============ CUBE FINALE (scroll-driven) ============ -->
 <section class="vs-pin vs-pin2" id="vs-finale" aria-label="Your journey starts here">

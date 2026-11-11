@@ -130,6 +130,13 @@
   .speed-group{display:flex;gap:4px;border:1px solid var(--line);border-radius:20px;padding:3px;}
   .speed-btn{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:6px 12px;border-radius:16px;border:none;background:transparent;color:var(--sub-dim);cursor:pointer;transition:all .2s ease;}
   .speed-btn.active{background:var(--brass);color:#0b0a08;}
+  .mkt-clock{font-family:var(--mono);font-size:11px;color:var(--sub-dim);display:inline-flex;align-items:center;gap:6px;}
+  .mkt-clock .dot{width:7px;height:7px;border-radius:50%;background:#5da583;box-shadow:0 0 8px #5da583;animation:mkpulse 1.4s ease-in-out infinite;}
+  .mkt-clock .dot.off{background:var(--sub-dim);box-shadow:none;animation:none;}
+  @keyframes mkpulse{50%{opacity:.35}}
+  .sim-msg{font-family:var(--mono);font-size:11.5px;color:var(--brass-bright);min-height:16px;margin-top:10px;}
+  .ticket-info{font-family:var(--mono);font-size:11.5px;color:var(--sub-dim);margin-top:12px;line-height:1.7;}
+  .ticket-info b{color:var(--brass-bright);font-weight:600;}
 
   /* ledger — copied verbatim from journal.html .ledger/.ledger-row */
   .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:16px;}
@@ -164,7 +171,7 @@
   <div class="page-head reveal" style="animation-delay:.03s">
     <div class="eyebrow">Interactive Simulator</div>
     <h1>Historical Replay</h1>
-    <p>Pick a real stock, a past session, and a timeframe. The simulator replays exactly what happened, candle by candle — future price action stays hidden until you reveal it.</p>
+    <p>Pick one of 100 NSE stocks and any session up to the latest close. The market replays exactly as it happened — each candle builds tick by tick at a calm pace, and the future stays hidden. Practise with ₹1,00,000 of virtual money.</p>
   </div>
 
   <div class="panel reveal" style="animation-delay:.06s">
@@ -175,7 +182,7 @@
         <select id="fStock"></select>
       </div>
       <div class="field">
-        <label for="fDate">Historical Date</label>
+        <label for="fDate">Session Date</label>
         <input type="date" id="fDate">
       </div>
       <div class="field">
@@ -183,12 +190,12 @@
         <select id="fTimeframe">
           <option value="1m">1 Minute</option>
           <option value="3m">3 Minutes</option>
-          <option value="5m">5 Minutes</option>
+          <option value="5m" selected>5 Minutes</option>
           <option value="15m">15 Minutes</option>
           <option value="30m">30 Minutes</option>
           <option value="1H">1 Hour</option>
           <option value="4H">4 Hours</option>
-          <option value="1D" selected>1 Day</option>
+          <option value="1D">1 Day</option>
           <option value="1W">1 Week</option>
         </select>
       </div>
@@ -196,12 +203,13 @@
         <button class="btn btn-primary" id="btnLoadSession" style="width:100%;">Load Session</button>
       </div>
     </div>
-    <div class="form-note">Real historical data via Yahoo Finance. Fine-grained intraday timeframes (1m–1H) only go back a limited recent window — for anything older, use 1D or 1W.</div>
+    <div class="form-note" id="setupNote">Real NSE data via Yahoo Finance, up to yesterday — and today too once the market closes at 3:30 PM. Intraday timeframes (1m–4H) only go back a limited recent window; for older dates use 1D or 1W.</div>
     <div class="form-error" id="setupError"></div>
   </div>
 
   <div class="stats-row reveal" style="animation-delay:.09s">
     <div class="stat-card"><div class="val" id="statBalance">₹1,00,000</div><div class="lbl">Virtual Balance</div></div>
+    <div class="stat-card"><div class="val" id="statFunds">₹1,00,000</div><div class="lbl">Available Funds</div></div>
     <div class="stat-card"><div class="val" id="statRealized">–</div><div class="lbl">Realized P&L</div></div>
     <div class="stat-card"><div class="val" id="statUnrealized">–</div><div class="lbl">Unrealized P&L</div></div>
     <div class="stat-card"><div class="val" id="statOpenCount">0</div><div class="lbl">Open Positions</div></div>
@@ -211,6 +219,7 @@
   <div class="panel reveal" style="animation-delay:.12s">
     <div class="chart-head">
       <span class="symbol" id="chartSymbol">Select a stock and load a session</span>
+      <span class="mkt-clock" id="mktClock"></span>
       <span class="ohlc" id="chartOhlc"></span>
     </div>
     <div id="chartContainer"></div>
@@ -219,14 +228,14 @@
       <button class="btn btn-outline" id="btnPrev" disabled>◀ Prev</button>
       <button class="btn btn-primary" id="btnPlayPause" disabled>▶ Play</button>
       <button class="btn btn-outline" id="btnNext" disabled>Next ▶</button>
-      <div class="speed-group">
-        <button class="speed-btn active" data-speed="1">1x</button>
-        <button class="speed-btn" data-speed="2">2x</button>
-        <button class="speed-btn" data-speed="5">5x</button>
-        <button class="speed-btn" data-speed="10">10x</button>
+      <div class="speed-group" role="group" aria-label="Replay speed">
+        <button class="speed-btn" data-speed="8000">Slow</button>
+        <button class="speed-btn active" data-speed="4000">Normal</button>
+        <button class="speed-btn" data-speed="2000">Fast</button>
       </div>
     </div>
 
+    <div class="sim-msg" id="simMsg" aria-live="polite"></div>
     <div class="btn-row">
       <button class="btn btn-long" id="btnBuy" disabled>Buy / Long</button>
       <button class="btn btn-short" id="btnSell" disabled>Sell / Short</button>
@@ -235,12 +244,14 @@
     <div class="panel" id="ticket" style="display:none;margin-top:14px;margin-bottom:0;background:rgba(0,0,0,0.15);">
       <div class="form-grid">
         <div class="field"><label for="ticketDirection">Direction</label><input type="text" id="ticketDirection" readonly></div>
-        <div class="field"><label for="ticketQty">Quantity</label><input type="number" id="ticketQty" value="10" min="1"></div>
+        <div class="field"><label for="ticketQty">Quantity</label><input type="number" id="ticketQty" value="10" min="1" inputmode="numeric"></div>
         <div class="field"><label for="ticketStop">Stop Loss</label><input type="number" id="ticketStop" placeholder="optional"></div>
         <div class="field"><label for="ticketTarget">Target</label><input type="number" id="ticketTarget" placeholder="optional"></div>
       </div>
+      <div class="ticket-info" id="ticketInfo"></div>
+      <div class="form-error" id="ticketError"></div>
       <div class="btn-row">
-        <button class="btn btn-primary" id="btnConfirmTicket">Confirm Order</button>
+        <button class="btn btn-primary" id="btnConfirmTicket">Place Market Order</button>
         <button class="btn btn-outline" id="btnCancelTicket">Cancel</button>
       </div>
     </div>
@@ -269,40 +280,48 @@ if (!authToken) {
 
 // ── State ──────────────────────────────────────────────────────────────
 const STARTING_BALANCE = 100000;
+const IST = MarketData.IST_OFFSET;
+const TICKS_PER_CANDLE = 24;
 let fullCandles = [];
-let revealedCount = 0;
+let replayFrom = 0;      // first candle that was hidden at load
+let revealedCount = 0;   // candles on screen (the last one may still be forming)
+let forming = null;      // { idx, path, step, bar } while a candle is building
+let livePrice = null;    // last traded price on screen
 let realized = 0;
-let positions = [];   // open positions, plural — a real portfolio
-let history = [];     // closed trades
+let positions = [];
+let history = [];
 let positionIdCounter = 1;
 let isPlaying = false;
 let playTimer = null;
-let currentSpeed = 1;
+let candleMs = 4000;     // Normal: one candle every 4 seconds
 let pendingDirection = null;
+let sessionTf = '5m';
+let sessionIntraday = true;
+let sessionOver = false;
+let priceLines = [];
 
-// ── Populate the stock picker from the separated data layer ──────────────
+// ── Stock picker (100 stocks) ──────────────────────────────────────────
 const stockSelect = document.getElementById('fStock');
 MarketData.listStocks().forEach(s => {
   const opt = document.createElement('option');
   opt.value = s.symbol;
-  opt.textContent = `${s.name} (${s.symbol})`;
+  opt.textContent = `${s.name} (${s.symbol.replace('.NS', '')})`;
   stockSelect.appendChild(opt);
 });
 
-// Default date: 10 calendar days ago, a reasonable starting point that's
-// likely to have intraday data available.
-const defaultDate = new Date();
-defaultDate.setDate(defaultDate.getDate() - 10);
-document.getElementById('fDate').value = defaultDate.toISOString().slice(0, 10);
+// Default date = latest complete session: yesterday, or today after 3:30 PM.
+const dateInput = document.getElementById('fDate');
+const latest = MarketData.latestSessionDate();
+dateInput.value = latest;
+dateInput.max = latest;
 
-// ── Chart setup (Lightweight Charts) — colors pulled directly from the
-// same palette as the rest of the site, not a new chart theme ───────────
+// ── Chart setup (Lightweight Charts) ───────────────────────────────────
 const chart = LightweightCharts.createChart(document.getElementById('chartContainer'), {
   layout: { background: { type: 'solid', color: 'transparent' }, textColor: '#a8a08c', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
   grid: { vertLines: { color: 'rgba(224,197,138,0.06)' }, horzLines: { color: 'rgba(224,197,138,0.06)' } },
   crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: 'rgba(236,199,102,0.4)' }, horzLine: { color: 'rgba(236,199,102,0.4)' } },
   rightPriceScale: { borderColor: 'rgba(224,197,138,0.14)' },
-  timeScale: { borderColor: 'rgba(224,197,138,0.14)', timeVisible: true },
+  timeScale: { borderColor: 'rgba(224,197,138,0.14)', timeVisible: true, secondsVisible: false, rightOffset: 6 },
   handleScroll: true,
   handleScale: true,
 });
@@ -311,26 +330,20 @@ const candleSeries = chart.addCandlestickSeries({
   borderUpColor: '#5da583', borderDownColor: '#c17a5f',
   wickUpColor: '#5da583', wickDownColor: '#c17a5f',
 });
-const volumeSeries = chart.addHistogramSeries({
-  priceFormat: { type: 'volume' },
-  priceScaleId: '',
-});
+const volumeSeries = chart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: '' });
 volumeSeries.priceScale().applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 candleSeries.priceScale().applyOptions({ scaleMargins: { top: 0.06, bottom: 0.22 } });
 
 function resizeChart(){
   const el = document.getElementById('chartContainer');
-  chart.applyOptions({ width: el.clientWidth, height: 340 });
+  chart.applyOptions({ width: el.clientWidth, height: window.innerWidth < 640 ? 300 : 360 });
 }
 window.addEventListener('resize', resizeChart);
 
-// Crosshair hover → live OHLC readout, native to the library
 chart.subscribeCrosshairMove(param => {
   if (!param || !param.time || !fullCandles.length) return;
   const bar = param.seriesData.get(candleSeries);
-  if (!bar) return;
-  document.getElementById('chartOhlc').innerHTML =
-    `O <b>${bar.open.toFixed(2)}</b>  H <b>${bar.high.toFixed(2)}</b>  L <b>${bar.low.toFixed(2)}</b>  C <b>${bar.close.toFixed(2)}</b>`;
+  if (bar) showOhlc(bar);
 });
 
 // ── Helpers ────────────────────────────────────────────────────────────
@@ -338,40 +351,76 @@ function fmtMoney(n){
   const sign = n < 0 ? '−' : '';
   return sign + '₹' + Math.abs(Math.round(n)).toLocaleString('en-IN');
 }
-function currentPrice(){
-  return fullCandles[revealedCount - 1]?.close ?? null;
-}
-function toChartBar(c){
-  return { time: c.time, open: c.open, high: c.high, low: c.low, close: c.close };
-}
+function signed(n){ return (n >= 0 ? '+' : '') + fmtMoney(n).replace('−', '-'); }
+function currentPrice(){ return livePrice; }
+// Charts show Indian time (IST), like a real trading terminal.
+function chartTime(c){ return c.time + IST; }
+function toChartBar(c){ return { time: chartTime(c), open: c.open, high: c.high, low: c.low, close: c.close }; }
 function toVolumeBar(c){
-  return { time: c.time, value: c.volume || 0, color: c.close >= c.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' };
+  return { time: chartTime(c), value: c.volume || 0, color: c.close >= c.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' };
+}
+function showOhlc(b){
+  document.getElementById('chartOhlc').innerHTML =
+    `O <b>${b.open.toFixed(2)}</b>  H <b>${b.high.toFixed(2)}</b>  L <b>${b.low.toFixed(2)}</b>  C <b>${b.close.toFixed(2)}</b>`;
+}
+function fmtIst(t, withTime){
+  const opts = withTime
+    ? { timeZone: 'Asia/Kolkata', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', hour12: false }
+    : { timeZone: 'Asia/Kolkata', weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+  return new Date(t * 1000).toLocaleString('en-IN', opts);
+}
+function say(msg){ document.getElementById('simMsg').textContent = msg || ''; }
+function usedMargin(){ return positions.reduce((s, p) => s + p.entryPrice * p.qty, 0); }
+function unrealizedPnl(){
+  const price = currentPrice();
+  if (price === null) return 0;
+  return positions.reduce((sum, p) => sum + (p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice)) * p.qty, 0);
+}
+function availableFunds(){ return STARTING_BALANCE + realized + Math.min(0, unrealizedPnl()) - usedMargin(); }
+
+function updateClock(){
+  const el = document.getElementById('mktClock');
+  if (!fullCandles.length){ el.innerHTML = ''; return; }
+  const c = fullCandles[revealedCount - 1];
+  const live = isPlaying && !sessionOver;
+  const label = sessionOver ? 'Session closed' : live ? 'Replaying' : 'Paused';
+  el.innerHTML = `<span class="dot ${live ? '' : 'off'}"></span>${fmtIst(c.time, sessionIntraday)} IST · ${label}`;
 }
 
+// ── Drawing ────────────────────────────────────────────────────────────
 function redrawChart(){
-  const visible = fullCandles.slice(0, revealedCount);
-  candleSeries.setData(visible.map(toChartBar));
-  volumeSeries.setData(visible.map(toVolumeBar));
+  const visible = fullCandles.slice(0, revealedCount).map(toChartBar);
+  const vols = fullCandles.slice(0, revealedCount).map(toVolumeBar);
+  if (forming && forming.idx === revealedCount - 1){
+    visible[visible.length - 1] = { ...visible[visible.length - 1], ...forming.bar, time: chartTime(fullCandles[forming.idx]) };
+    vols[vols.length - 1] = { ...vols[vols.length - 1], value: forming.vol };
+  }
+  candleSeries.setData(visible);
+  volumeSeries.setData(vols);
   const last = visible[visible.length - 1];
-  if (last) document.getElementById('chartOhlc').innerHTML =
-    `O <b>${last.open.toFixed(2)}</b>  H <b>${last.high.toFixed(2)}</b>  L <b>${last.low.toFixed(2)}</b>  C <b>${last.close.toFixed(2)}</b>`;
+  if (last) showOhlc(last);
+}
+
+function refreshPriceLines(){
+  priceLines.forEach(l => candleSeries.removePriceLine(l));
+  priceLines = [];
+  positions.forEach(p => {
+    priceLines.push(candleSeries.createPriceLine({ price: p.entryPrice, color: p.direction === 'Long' ? '#5da583' : '#c17a5f', lineWidth: 1, lineStyle: 0, axisLabelVisible: true, title: `${p.direction === 'Long' ? 'BUY' : 'SELL'} ${p.qty}` }));
+    if (p.stop) priceLines.push(candleSeries.createPriceLine({ price: p.stop, color: '#c17a5f', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'SL' }));
+    if (p.target) priceLines.push(candleSeries.createPriceLine({ price: p.target, color: '#5da583', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'TGT' }));
+  });
 }
 
 function updateStats(){
   document.getElementById('statBalance').textContent = fmtMoney(STARTING_BALANCE + realized);
+  document.getElementById('statFunds').textContent = fmtMoney(Math.max(0, availableFunds()));
   const realizedEl = document.getElementById('statRealized');
-  realizedEl.textContent = (realized >= 0 ? '+' : '') + fmtMoney(realized).replace('−', '-');
+  realizedEl.textContent = history.length ? signed(realized) : '–';
   realizedEl.className = 'val ' + (realized > 0 ? 'pos' : realized < 0 ? 'neg' : '');
-
-  const price = currentPrice();
-  const unrealized = price === null ? 0 : positions.reduce((sum, p) => {
-    const diff = p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice);
-    return sum + diff * p.qty;
-  }, 0);
+  const unrealized = unrealizedPnl();
   const unrealizedEl = document.getElementById('statUnrealized');
-  unrealizedEl.textContent = positions.length ? (unrealized >= 0 ? '+' : '') + fmtMoney(unrealized).replace('−', '-') : '–';
+  unrealizedEl.textContent = positions.length ? signed(unrealized) : '–';
   unrealizedEl.className = 'val ' + (unrealized > 0 ? 'pos' : unrealized < 0 ? 'neg' : '');
-
   document.getElementById('statOpenCount').textContent = positions.length;
   const wins = history.filter(t => t.pnl > 0).length;
   document.getElementById('statWinRate').textContent = history.length ? Math.round((wins / history.length) * 100) + '%' : '–';
@@ -379,10 +428,7 @@ function updateStats(){
 
 function renderPositions(){
   const body = document.getElementById('positionsBody');
-  if (!positions.length){
-    body.innerHTML = '<div class="ledger-empty">No open positions.</div>';
-    return;
-  }
+  if (!positions.length){ body.innerHTML = '<div class="ledger-empty">No open positions.</div>'; return; }
   const price = currentPrice() ?? 0;
   body.innerHTML = positions.map(p => {
     const pnl = (p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice)) * p.qty;
@@ -391,194 +437,314 @@ function renderPositions(){
       <div>₹${p.entryPrice.toFixed(2)}</div>
       <div>${p.qty}</div>
       <div style="font-size:11px;color:var(--sub-dim);">${p.stop ? 'SL ' + p.stop : '–'} / ${p.target ? 'TGT ' + p.target : '–'}</div>
-      <div class="cell-pnl ${pnl >= 0 ? 'pos' : 'neg'}">${pnl >= 0 ? '+' : ''}${fmtMoney(pnl).replace('−','-')}</div>
-      <div><button class="btn-close-position" data-id="${p.id}">Close</button></div>
+      <div class="cell-pnl ${pnl >= 0 ? 'pos' : 'neg'}">${signed(pnl)}</div>
+      <div><button class="btn-close-position" data-id="${p.id}">Exit</button></div>
     </div>`;
   }).join('');
 }
 
 function renderHistory(){
   const body = document.getElementById('historyBody');
-  if (!history.length){
-    body.innerHTML = '<div class="ledger-empty">No trades closed yet this session.</div>';
-    return;
-  }
+  if (!history.length){ body.innerHTML = '<div class="ledger-empty">No trades closed yet this session.</div>'; return; }
   body.innerHTML = history.slice().reverse().map(t => `
     <div class="ledger-row">
       <div class="dir ${t.direction === 'Short' ? 'short' : 'long'}">${t.direction}</div>
       <div>₹${t.entryPrice.toFixed(2)}</div>
       <div>₹${t.exitPrice.toFixed(2)}</div>
       <div>${t.qty}</div>
-      <div class="cell-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${t.pnl >= 0 ? '+' : ''}${fmtMoney(t.pnl).replace('−','-')}</div>
-      <div style="font-size:11px;color:var(--sub-dim);">${new Date(t.closedAt * 1000).toLocaleString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}</div>
-    </div>
-  `).join('');
+      <div class="cell-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${signed(t.pnl)}</div>
+      <div style="font-size:11px;color:var(--sub-dim);">${fmtIst(t.closedAt, sessionIntraday)}${t.reason ? ' · ' + t.reason : ''}</div>
+    </div>`).join('');
 }
+
+function refreshAll(){ updateStats(); renderPositions(); updateClock(); }
 
 document.getElementById('positionsBody').addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-close-position');
-  if (btn) closePosition(Number(btn.dataset.id));
+  if (btn) closePosition(Number(btn.dataset.id), undefined, 'Manual exit');
 });
 
 // ── Session loading ────────────────────────────────────────────────────
+function prevWeekday(dateStr){
+  const d = new Date(dateStr + 'T00:00:00Z');
+  do { d.setUTCDate(d.getUTCDate() - 1); } while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  return d.toISOString().slice(0, 10);
+}
+
 document.getElementById('btnLoadSession').addEventListener('click', async () => {
   const symbol = stockSelect.value;
-  const dateStr = document.getElementById('fDate').value;
+  let dateStr = dateInput.value;
   const timeframe = document.getElementById('fTimeframe').value;
   const errorEl = document.getElementById('setupError');
   errorEl.textContent = '';
-
   if (!symbol || !dateStr) { errorEl.textContent = 'Pick a stock and a date.'; return; }
+  if (dateStr > latest) { dateStr = latest; dateInput.value = latest; }
 
   const btn = document.getElementById('btnLoadSession');
   btn.disabled = true;
   btn.textContent = 'Loading real data...';
+  stopPlaying();
 
-  const result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  const asked = dateStr;
+  let result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  // Market holiday on the chosen day? Step back to the nearest real session.
+  for (let tries = 0; result.noSession && tries < 5; tries++){
+    dateStr = prevWeekday(dateStr);
+    result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  }
 
   btn.disabled = false;
   btn.textContent = 'Load Session';
 
   if (result.error || !result.candles.length) {
-    errorEl.textContent = result.error || 'No data found for that selection.';
+    errorEl.textContent = result.noSession || dateStr !== asked
+      ? 'No trading session found around that date in the intraday window. Try a more recent date, or use 1D / 1W.'
+      : (result.error || 'No data found for that selection.');
     return;
   }
+  if (dateStr !== asked) dateInput.value = dateStr;
 
   fullCandles = result.candles;
-  revealedCount = Math.min(15, fullCandles.length);
-  positions = [];
-  history = [];
-  realized = 0;
+  replayFrom = Math.max(1, result.replayFrom);
+  revealedCount = replayFrom;
+  forming = null;
+  livePrice = fullCandles[revealedCount - 1].close;
+  positions = []; history = []; realized = 0; sessionOver = false;
+  sessionTf = timeframe;
+  sessionIntraday = MarketData.TIMEFRAME_CONFIG[timeframe].kind === 'intraday';
+  refreshPriceLines();
 
   const stockLabel = stockSelect.options[stockSelect.selectedIndex].textContent;
-  document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe} · ${dateStr}`;
+  document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe}`;
+  say(dateStr !== asked
+    ? `${asked} was a market holiday — loaded the previous session (${dateStr}). Press Play.`
+    : sessionIntraday ? 'Market is about to open. Earlier sessions are shown for context — press Play.' : 'Chart loaded up to the start of the replay window — press Play.');
 
   resizeChart();
   redrawChart();
-  updateStats();
-  renderPositions();
+  chart.timeScale().scrollToRealTime();
+  refreshAll();
   renderHistory();
-
-  ['btnPrev','btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = false);
-  stopPlaying();
+  ['btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = false);
+  document.getElementById('btnPrev').disabled = true;
 });
 
-// ── Replay controls ────────────────────────────────────────────────────
-function stepForward(){
-  if (revealedCount >= fullCandles.length){
-    stopPlaying();
-    return false;
-  }
-  revealedCount++;
-  checkStopsAndTargets();
-  redrawChart();
-  updateStats();
-  renderPositions();
-  return true;
-}
-function stepBackward(){
-  const minCount = Math.min(15, fullCandles.length);
-  if (revealedCount <= minCount) return;
-  revealedCount--;
-  redrawChart();
-  updateStats();
-  renderPositions();
+// ── Tick engine: each real candle builds up gradually ───────────────────
+// The path is open → (low/high) → (high/low) → close with small wiggles,
+// always inside the candle's real high/low, and it always ends on the real
+// close. The finished candle is exactly the real one.
+function buildPath(c){
+  const firstExtreme = c.close >= c.open ? c.low : c.high;
+  const secondExtreme = c.close >= c.open ? c.high : c.low;
+  const legs = [[c.open, firstExtreme], [firstExtreme, secondExtreme], [secondExtreme, c.close]];
+  const lens = legs.map(([a, b]) => Math.abs(b - a) + 1e-9);
+  const total = lens.reduce((a, b) => a + b, 0);
+  const range = Math.max(c.high - c.low, 1e-9);
+  const path = [c.open];
+  legs.forEach(([a, b], i) => {
+    const n = Math.max(2, Math.round((TICKS_PER_CANDLE - 1) * lens[i] / total));
+    for (let k = 1; k <= n; k++){
+      let v = a + (b - a) * (k / n);
+      if (k < n) v += (Math.random() - 0.5) * range * 0.08;
+      path.push(Math.min(c.high, Math.max(c.low, v)));
+    }
+  });
+  path[path.length - 1] = c.close;
+  return path;
 }
 
-function checkStopsAndTargets(){
-  const c = fullCandles[revealedCount - 1];
-  if (!c) return;
-  // Iterate a copy since closePosition mutates the positions array.
+function startCandle(){
+  if (revealedCount >= fullCandles.length) return false;
+  const idx = revealedCount;
+  const c = fullCandles[idx];
+  forming = { idx, path: buildPath(c), step: 0, bar: { open: c.open, high: c.open, low: c.open, close: c.open }, vol: 0 };
+  revealedCount++;
+  candleSeries.update({ time: chartTime(c), ...forming.bar });
+  volumeSeries.update({ time: chartTime(c), value: 0, color: 'rgba(93,165,131,0.5)' });
+  onPrice(c.open, true);
+  return true;
+}
+
+function tick(){
+  if (!forming){
+    if (!startCandle()){ endSession(); return; }
+    return;
+  }
+  const c = fullCandles[forming.idx];
+  forming.step++;
+  const p = forming.path[Math.min(forming.step, forming.path.length - 1)];
+  const b = forming.bar;
+  b.close = p; b.high = Math.max(b.high, p); b.low = Math.min(b.low, p);
+  forming.vol = Math.round((c.volume || 0) * Math.min(1, forming.step / (forming.path.length - 1)));
+  candleSeries.update({ time: chartTime(c), ...b });
+  volumeSeries.update({ time: chartTime(c), value: forming.vol, color: b.close >= b.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' });
+  showOhlc(b);
+  onPrice(p, false);
+  if (forming.step >= forming.path.length - 1){
+    forming = null;
+    if (revealedCount >= fullCandles.length) endSession();
+  }
+}
+
+function finishCandleInstantly(){
+  if (!forming) return;
+  const c = fullCandles[forming.idx];
+  // Walk the remaining path so stop-loss / target checks still see every price.
+  while (forming && forming.step < forming.path.length - 1) tick();
+}
+
+function onPrice(price, isOpen){
+  livePrice = price;
+  checkStopsAndTargets(price, isOpen);
+  refreshAll();
+}
+
+function checkStopsAndTargets(price, isOpen){
   [...positions].forEach(p => {
-    if (p.direction === 'Long'){
-      if (p.stop && c.low <= p.stop) closePosition(p.id, p.stop);
-      else if (p.target && c.high >= p.target) closePosition(p.id, p.target);
-    } else {
-      if (p.stop && c.high >= p.stop) closePosition(p.id, p.stop);
-      else if (p.target && c.low <= p.target) closePosition(p.id, p.target);
-    }
+    const longSide = p.direction === 'Long';
+    const stopHit = p.stop && (longSide ? price <= p.stop : price >= p.stop);
+    const tgtHit = p.target && (longSide ? price >= p.target : price <= p.target);
+    // A gap through the level at the open fills at the open price, like a real market.
+    if (stopHit) closePosition(p.id, isOpen ? price : p.stop, 'Stop-loss hit');
+    else if (tgtHit) closePosition(p.id, isOpen ? price : p.target, 'Target hit');
   });
 }
 
-document.getElementById('btnNext').addEventListener('click', stepForward);
-document.getElementById('btnPrev').addEventListener('click', stepBackward);
+function endSession(){
+  stopPlaying();
+  sessionOver = true;
+  if (sessionIntraday && positions.length){
+    [...positions].forEach(p => closePosition(p.id, livePrice, 'Auto square-off'));
+    say('Market closed — open intraday positions were squared off at the last price.');
+  } else {
+    say('Replay finished — this is where the real chart ended.');
+  }
+  ['btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = true);
+  refreshAll();
+}
 
+// ── Replay controls ────────────────────────────────────────────────────
+function scheduleTicks(){
+  if (playTimer) clearInterval(playTimer);
+  playTimer = setInterval(tick, candleMs / TICKS_PER_CANDLE);
+}
 function startPlaying(){
+  if (sessionOver) return;
   isPlaying = true;
   document.getElementById('btnPlayPause').textContent = '⏸ Pause';
-  const delay = 700 / currentSpeed;
-  playTimer = setInterval(() => { if (!stepForward()) stopPlaying(); }, delay);
+  if (revealedCount === replayFrom && !forming) say('');
+  scheduleTicks();
+  updateClock();
 }
 function stopPlaying(){
   isPlaying = false;
   document.getElementById('btnPlayPause').textContent = '▶ Play';
   if (playTimer) clearInterval(playTimer);
   playTimer = null;
+  updateClock();
 }
-document.getElementById('btnPlayPause').addEventListener('click', () => {
-  if (isPlaying) stopPlaying(); else startPlaying();
+document.getElementById('btnPlayPause').addEventListener('click', () => { if (isPlaying) stopPlaying(); else startPlaying(); });
+
+// Next: finish the current candle, or play one whole candle at once.
+document.getElementById('btnNext').addEventListener('click', () => {
+  if (sessionOver) return;
+  if (!forming && !startCandle()){ endSession(); return; }
+  finishCandleInstantly();
+  if (revealedCount >= fullCandles.length && !sessionOver) endSession();
 });
+
+// Prev is only for studying the chart before you trade — once a trade is
+// placed, time only moves forward (like the real market).
+document.getElementById('btnPrev').addEventListener('click', () => {
+  if (positions.length || history.length || forming) return;
+  if (revealedCount <= replayFrom) return;
+  revealedCount--;
+  livePrice = fullCandles[revealedCount - 1].close;
+  redrawChart();
+  refreshAll();
+  document.getElementById('btnPrev').disabled = revealedCount <= replayFrom;
+});
+function syncPrev(){
+  document.getElementById('btnPrev').disabled = !!(positions.length || history.length || sessionOver || revealedCount <= replayFrom);
+}
+setInterval(syncPrev, 500);
 
 document.querySelectorAll('.speed-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentSpeed = Number(btn.dataset.speed);
-    if (isPlaying){ stopPlaying(); startPlaying(); }
+    candleMs = Number(btn.dataset.speed);
+    if (isPlaying) scheduleTicks();
   });
 });
 
-// ── Order ticket / paper trading ───────────────────────────────────────
+// ── Order ticket (market orders at the live price) ─────────────────────
+function ticketPreview(){
+  const qty = Math.max(1, parseInt(document.getElementById('ticketQty').value) || 1);
+  const price = currentPrice();
+  const need = qty * price;
+  const free = availableFunds();
+  document.getElementById('ticketInfo').innerHTML =
+    `Market price <b>₹${price.toFixed(2)}</b> · Order value <b>${fmtMoney(need)}</b> · Available <b>${fmtMoney(Math.max(0, free))}</b>` +
+    `<br>Max quantity at this price: <b>${Math.max(0, Math.floor(free / price))}</b>. Brokerage and taxes are not included.`;
+}
 function openTicket(direction){
+  if (sessionOver) return;
   pendingDirection = direction;
-  document.getElementById('ticketDirection').value = direction;
+  document.getElementById('ticketDirection').value = direction === 'Long' ? 'Buy (Long)' : 'Sell (Short)';
   document.getElementById('ticketQty').value = 10;
   document.getElementById('ticketStop').value = '';
   document.getElementById('ticketTarget').value = '';
+  document.getElementById('ticketError').textContent = '';
   document.getElementById('ticket').style.display = 'block';
+  ticketPreview();
 }
 function closeTicket(){
   document.getElementById('ticket').style.display = 'none';
   pendingDirection = null;
 }
+setInterval(() => { if (pendingDirection) ticketPreview(); }, 400);
+document.getElementById('ticketQty').addEventListener('input', ticketPreview);
 document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long'));
 document.getElementById('btnSell').addEventListener('click', () => openTicket('Short'));
 document.getElementById('btnCancelTicket').addEventListener('click', closeTicket);
 
 document.getElementById('btnConfirmTicket').addEventListener('click', () => {
-  const qty = Math.max(1, parseInt(document.getElementById('ticketQty').value) || 1);
-  const stopRaw = document.getElementById('ticketStop').value;
-  const targetRaw = document.getElementById('ticketTarget').value;
-  positions.push({
-    id: positionIdCounter++,
-    direction: pendingDirection,
-    qty,
-    entryPrice: currentPrice(),
-    entryTime: fullCandles[revealedCount - 1].time,
-    stop: stopRaw ? Number(stopRaw) : null,
-    target: targetRaw ? Number(targetRaw) : null,
-  });
+  const err = document.getElementById('ticketError');
+  const qty = parseInt(document.getElementById('ticketQty').value);
+  const price = currentPrice();
+  const stop = document.getElementById('ticketStop').value ? Number(document.getElementById('ticketStop').value) : null;
+  const target = document.getElementById('ticketTarget').value ? Number(document.getElementById('ticketTarget').value) : null;
+  const longSide = pendingDirection === 'Long';
+  if (!qty || qty < 1) { err.textContent = 'Enter a quantity of at least 1.'; return; }
+  if (qty * price > availableFunds()) { err.textContent = `Insufficient funds — you can trade at most ${Math.max(0, Math.floor(availableFunds() / price))} shares at this price.`; return; }
+  if (stop !== null && (longSide ? stop >= price : stop <= price)) { err.textContent = longSide ? 'For a Buy, stop-loss must be below the current price.' : 'For a Sell, stop-loss must be above the current price.'; return; }
+  if (target !== null && (longSide ? target <= price : target >= price)) { err.textContent = longSide ? 'For a Buy, target must be above the current price.' : 'For a Sell, target must be below the current price.'; return; }
+  const c = fullCandles[revealedCount - 1];
+  positions.push({ id: positionIdCounter++, direction: pendingDirection, qty, entryPrice: price, entryTime: c.time, stop, target });
+  say(`${longSide ? 'Bought' : 'Sold'} ${qty} @ ₹${price.toFixed(2)} (${fmtIst(c.time, sessionIntraday)} IST).`);
   closeTicket();
-  updateStats();
-  renderPositions();
+  refreshPriceLines();
+  refreshAll();
 });
 
-function closePosition(id, forcedExitPrice){
+function closePosition(id, forcedExitPrice, reason){
   const idx = positions.findIndex(p => p.id === id);
   if (idx === -1) return;
   const p = positions[idx];
   const exitPrice = forcedExitPrice ?? currentPrice();
   const pnl = (p.direction === 'Short' ? (p.entryPrice - exitPrice) : (exitPrice - p.entryPrice)) * p.qty;
   realized += pnl;
-  history.push({
-    direction: p.direction, entryPrice: p.entryPrice, exitPrice, qty: p.qty, pnl,
-    closedAt: fullCandles[revealedCount - 1].time,
-  });
+  history.push({ direction: p.direction, entryPrice: p.entryPrice, exitPrice, qty: p.qty, pnl, reason, closedAt: fullCandles[revealedCount - 1].time });
   positions.splice(idx, 1);
-  updateStats();
-  renderPositions();
+  if (reason && reason !== 'Auto square-off') say(`${reason}: ${p.direction === 'Long' ? 'sold' : 'bought back'} ${p.qty} @ ₹${exitPrice.toFixed(2)} · ${signed(pnl)}`);
+  refreshPriceLines();
+  refreshAll();
   renderHistory();
 }
+
+// Pause when the tab is hidden so the market doesn't run unseen.
+document.addEventListener('visibilitychange', () => { if (document.hidden && isPlaying) stopPlaying(); });
 
 resizeChart();
 </script>

@@ -130,6 +130,13 @@
   .speed-group{display:flex;gap:4px;border:1px solid var(--line);border-radius:20px;padding:3px;}
   .speed-btn{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:6px 12px;border-radius:16px;border:none;background:transparent;color:var(--sub-dim);cursor:pointer;transition:all .2s ease;}
   .speed-btn.active{background:var(--brass);color:#0b0a08;}
+  .mkt-clock{font-family:var(--mono);font-size:11px;color:var(--sub-dim);display:inline-flex;align-items:center;gap:6px;}
+  .mkt-clock .dot{width:7px;height:7px;border-radius:50%;background:#5da583;box-shadow:0 0 8px #5da583;animation:mkpulse 1.4s ease-in-out infinite;}
+  .mkt-clock .dot.off{background:var(--sub-dim);box-shadow:none;animation:none;}
+  @keyframes mkpulse{50%{opacity:.35}}
+  .sim-msg{font-family:var(--mono);font-size:11.5px;color:var(--brass-bright);min-height:16px;margin-top:10px;}
+  .ticket-info{font-family:var(--mono);font-size:11.5px;color:var(--sub-dim);margin-top:12px;line-height:1.7;}
+  .ticket-info b{color:var(--brass-bright);font-weight:600;}
 
   /* ledger — copied verbatim from journal.html .ledger/.ledger-row */
   .ledger{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg, var(--panel-hi), var(--panel));overflow:hidden;margin-bottom:16px;}
@@ -149,115 +156,223 @@
   }
 </style>
 <style>/* iPhone zooms the page when a field under 16px is focused */@media (max-width:900px){input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),select,textarea{font-size:16px!important}}</style>
+<style>
+  /* ── Trading-terminal layout ───────────────────────────────────────── */
+  .wrap{max-width:1360px;padding:0 20px 40px;}
+  .topbar{padding:18px 0 14px;}
+  .mode-chip{margin-left:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-bright);border:1px solid var(--line-hi);border-radius:4px;padding:3px 7px;align-self:center;}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;border:1px solid var(--line);border-radius:10px;background:var(--panel-hi);padding:10px 12px;}
+  .tb-field{display:flex;flex-direction:column;gap:4px;}
+  .tb-field label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sub-dim);}
+  .tb-field select,.tb-field input{background:#0f0e0b;border:1px solid var(--line);border-radius:6px;color:var(--ink);font-family:var(--sans);font-size:13px;padding:8px 10px;height:36px;}
+  .tb-field select:focus,.tb-field input:focus{outline:none;border-color:var(--brass);}
+  .tb-stock{flex:1;min-width:220px;}
+  .tb-load{height:36px;border-radius:6px;padding:0 18px;}
+  #setupError{margin-top:6px;}
+
+  .quote{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding:12px 4px 14px;border-bottom:1px solid var(--line);}
+  .q-sym{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--sub);}
+  .q-px{display:flex;align-items:baseline;gap:10px;margin-top:2px;}
+  .q-ltp{font-family:var(--mono);font-weight:600;font-size:26px;color:var(--ink);transition:color .25s ease;}
+  .q-ltp.up{color:var(--emerald);} .q-ltp.down{color:var(--terracotta);}
+  .q-chg{font-family:var(--mono);font-size:13px;}
+  .q-chg.pos{color:var(--emerald);} .q-chg.neg{color:var(--terracotta);}
+  .q-stats{display:flex;flex-wrap:wrap;gap:6px 22px;}
+  .q-stats div{display:flex;flex-direction:column;gap:2px;}
+  .q-stats span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--sub-dim);}
+  .q-stats b{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--ink);}
+  .quote .mkt-clock{margin-left:auto;}
+
+  .term{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:14px;background:rgba(0,0,0,.18);}
+  .chart-pane{padding:10px 12px 12px;min-width:0;border-right:1px solid var(--line);}
+  .chart-head{margin-bottom:6px;min-height:18px;}
+  #chartContainer{height:460px;border-radius:6px;}
+  .replay-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);}
+  .ctl{height:34px;min-width:40px;border-radius:6px;border:1px solid var(--line);background:#0f0e0b;color:var(--ink);font-size:13px;cursor:pointer;}
+  .ctl-play{min-width:96px;font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:.05em;background:var(--brass);border-color:var(--brass);color:#0b0a08;}
+  .ctl:disabled{opacity:.35;cursor:not-allowed;}
+  .speed-group{border-radius:6px;margin-left:auto;}
+  .speed-btn{border-radius:4px;}
+  .sim-msg{margin-top:8px;}
+
+  .order-pane{display:flex;flex-direction:column;background:var(--panel);}
+  .ticket{padding:0 0 14px;border-bottom:1px solid var(--line);}
+  .side-tabs{display:grid;grid-template-columns:1fr 1fr;}
+  .side-tab{height:44px;border:none;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer;background:#0f0e0b;color:var(--sub-dim);border-bottom:2px solid var(--line);}
+  .side-tab.buy.active{color:var(--emerald);border-bottom-color:var(--emerald);background:rgba(93,165,131,.08);}
+  .side-tab.sell.active{color:var(--terracotta);border-bottom-color:var(--terracotta);background:rgba(193,122,95,.08);}
+  .side-tab:disabled{cursor:not-allowed;}
+  .product{font-family:var(--mono);font-size:10.5px;color:var(--sub-dim);padding:12px 16px 0;letter-spacing:.04em;}
+  .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 16px 0;}
+  .t-grid .field label{font-size:10px;margin-bottom:5px;}
+  .t-grid .field input{background:#0f0e0b;border-radius:6px;height:38px;font-family:var(--mono);font-size:13px;}
+  .qty-box{display:flex;}
+  .qty-box input{border-radius:0 !important;text-align:center;min-width:0;-moz-appearance:textfield;}
+  .qty-box input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .qty-step{width:30px;flex:none;height:38px;border:1px solid var(--line);background:#16140f;color:var(--ink);cursor:pointer;font-size:15px;}
+  .qty-step:first-child{border-radius:6px 0 0 6px;border-right:none;} .qty-step:last-child{border-radius:0 6px 6px 0;border-left:none;}
+  .ticket-info{padding:0 16px;}
+  .ticket .form-error{padding:0 16px;margin-top:6px;}
+  .btn-place{display:block;width:calc(100% - 32px);margin:8px 16px 0;height:44px;border:none;border-radius:6px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer;color:#0b0a08;}
+  .btn-place.buy{background:var(--emerald);} .btn-place.sell{background:var(--terracotta);}
+  .btn-place:disabled{opacity:.35;cursor:not-allowed;}
+  .btn-cancel-sheet{display:none;}
+  .funds{padding:14px 16px;}
+  .funds-title{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub-dim);margin-bottom:8px;}
+  .f-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed rgba(224,197,138,.08);font-size:12.5px;color:var(--sub);}
+  .f-row:last-child{border-bottom:none;}
+  .f-row b{font-family:var(--mono);font-weight:500;color:var(--ink);}
+  .f-row b.pos{color:var(--emerald);} .f-row b.neg{color:var(--terracotta);}
+
+  .tabs{display:flex;gap:4px;margin:18px 0 0;border-bottom:1px solid var(--line);}
+  .tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--sub-dim);font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;cursor:pointer;margin-bottom:-1px;}
+  .tab.active{color:var(--brass-bright);border-bottom-color:var(--brass);}
+  .ledger{border-radius:0 0 10px 10px;border-top:none;margin-bottom:12px;}
+  .ledger-head{font-size:9.5px;}
+  .ledger-row{font-family:var(--mono);font-size:12px;}
+  .cell-pnl.pos,.cell-pnl.neg{font-family:var(--mono);}
+  #setupNote{margin-top:6px;}
+  .m-orderbar{display:none;}
+
+  @media (max-width:979px){
+    .wrap{padding:0 14px 90px;}
+    .term{grid-template-columns:1fr;border:none;background:none;margin-top:10px;}
+    .chart-pane{border:1px solid var(--line);border-radius:10px;padding:8px;}
+    #chartContainer{height:320px;}
+    .order-pane{background:none;}
+    .funds{border:1px solid var(--line);border-radius:10px;margin-top:12px;}
+    .ticket{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#12100c;border-top:1px solid var(--line-hi);border-radius:16px 16px 0 0;padding-bottom:calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1);max-height:88vh;overflow:auto;box-shadow:0 -20px 40px rgba(0,0,0,.5);}
+    .ticket.open{transform:none;}
+    .side-tab:first-child{border-top-left-radius:16px;} .side-tab:last-child{border-top-right-radius:16px;}
+    .sheet-backdrop{position:fixed;inset:0;z-index:59;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s ease;}
+    .sheet-backdrop.open{opacity:1;pointer-events:auto;}
+    .btn-cancel-sheet{display:block;width:calc(100% - 32px);margin:8px 16px 0;height:40px;border:1px solid var(--line);border-radius:6px;background:none;color:var(--sub);font-family:var(--mono);font-size:12px;}
+    .m-orderbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(11,10,8,.94);border-top:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+    .m-orderbar button{height:46px;border:none;border-radius:8px;font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.1em;color:#0b0a08;}
+    .m-buy{background:var(--emerald);} .m-sell{background:var(--terracotta);}
+    .m-orderbar button:disabled{opacity:.35;}
+    .quote{gap:10px 18px;}
+    .quote .mkt-clock{margin-left:0;width:100%;}
+    .q-ltp{font-size:24px;}
+    .speed-group{margin-left:0;}
+  }
+  @media (max-width:600px){ .mode-chip{display:none;} }
+  @media (max-width:420px){ .tb-field:not(.tb-stock){flex:1;} .tb-load{width:100%;} }
+</style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="topbar reveal">
-    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span></div>
+  <div class="topbar">
+    <div class="brand">Trader<span class="rule"></span><span class="thin">OS</span><span class="mode-chip">Paper Trading · Replay</span></div>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="dashboard.html" class="back-link">← Dashboard</a>
       <div class="mascot-orb" title="Ivaan — calm & steady"></div>
     </div>
   </div>
 
-  <div class="page-head reveal" style="animation-delay:.03s">
-    <div class="eyebrow">Interactive Simulator</div>
-    <h1>Historical Replay</h1>
-    <p>Pick a real stock, a past session, and a timeframe. The simulator replays exactly what happened, candle by candle — future price action stays hidden until you reveal it.</p>
+  <!-- Session toolbar -->
+  <div class="toolbar">
+    <div class="tb-field tb-stock"><label for="fStock">Stock</label><select id="fStock"></select></div>
+    <div class="tb-field"><label for="fDate">Session</label><input type="date" id="fDate"></div>
+    <div class="tb-field"><label for="fTimeframe">Interval</label>
+      <select id="fTimeframe">
+        <option value="1m">1m</option><option value="3m">3m</option><option value="5m" selected>5m</option>
+        <option value="15m">15m</option><option value="30m">30m</option><option value="1H">1H</option>
+        <option value="4H">4H</option><option value="1D">1D</option><option value="1W">1W</option>
+      </select></div>
+    <button class="btn btn-primary tb-load" id="btnLoadSession">Load Session</button>
+  </div>
+  <div class="form-error" id="setupError"></div>
+
+  <!-- Quote strip -->
+  <div class="quote">
+    <div class="q-main">
+      <div class="q-sym" id="chartSymbol">Select a stock and load a session</div>
+      <div class="q-px"><span class="q-ltp" id="qLtp">—</span><span class="q-chg" id="qChg"></span></div>
+    </div>
+    <div class="q-stats">
+      <div><span>Open</span><b id="qOpen">—</b></div>
+      <div><span>High</span><b id="qHigh">—</b></div>
+      <div><span>Low</span><b id="qLow">—</b></div>
+      <div><span>Prev close</span><b id="qPrev">—</b></div>
+      <div><span>Volume</span><b id="qVol">—</b></div>
+    </div>
+    <div class="mkt-clock" id="mktClock"></div>
   </div>
 
-  <div class="panel reveal" style="animation-delay:.06s">
-    <div class="section-title">Set Up a Session</div>
-    <div class="form-grid" style="margin-top:12px;">
-      <div class="field">
-        <label for="fStock">Stock</label>
-        <select id="fStock"></select>
+  <div class="term">
+    <!-- Chart -->
+    <div class="chart-pane">
+      <div class="chart-head"><span class="ohlc" id="chartOhlc"></span></div>
+      <div id="chartContainer"></div>
+      <div class="replay-row">
+        <button class="ctl" id="btnPrev" disabled aria-label="Previous candle">⏮</button>
+        <button class="ctl ctl-play" id="btnPlayPause" disabled>▶ Play</button>
+        <button class="ctl" id="btnNext" disabled aria-label="Next candle">⏭</button>
+        <div class="speed-group" role="group" aria-label="Replay speed">
+          <button class="speed-btn" data-speed="8000">Slow</button>
+          <button class="speed-btn active" data-speed="4000">Normal</button>
+          <button class="speed-btn" data-speed="2000">Fast</button>
+        </div>
       </div>
-      <div class="field">
-        <label for="fDate">Historical Date</label>
-        <input type="date" id="fDate">
-      </div>
-      <div class="field">
-        <label for="fTimeframe">Timeframe</label>
-        <select id="fTimeframe">
-          <option value="1m">1 Minute</option>
-          <option value="3m">3 Minutes</option>
-          <option value="5m">5 Minutes</option>
-          <option value="15m">15 Minutes</option>
-          <option value="30m">30 Minutes</option>
-          <option value="1H">1 Hour</option>
-          <option value="4H">4 Hours</option>
-          <option value="1D" selected>1 Day</option>
-          <option value="1W">1 Week</option>
-        </select>
-      </div>
-      <div class="field" style="display:flex;align-items:flex-end;">
-        <button class="btn btn-primary" id="btnLoadSession" style="width:100%;">Load Session</button>
-      </div>
+      <div class="sim-msg" id="simMsg" aria-live="polite"></div>
     </div>
-    <div class="form-note">Real historical data via Yahoo Finance. Fine-grained intraday timeframes (1m–1H) only go back a limited recent window — for anything older, use 1D or 1W.</div>
-    <div class="form-error" id="setupError"></div>
+
+    <!-- Order window -->
+    <aside class="order-pane">
+      <div class="sheet-backdrop" id="sheetBackdrop"></div>
+      <div class="ticket" id="ticket">
+        <div class="side-tabs">
+          <button class="side-tab buy active" id="btnBuy" disabled>BUY</button>
+          <button class="side-tab sell" id="btnSell" disabled>SELL</button>
+        </div>
+        <div class="product" id="ticketProduct">MIS · Intraday · Market order</div>
+        <div class="t-grid">
+          <div class="field"><label for="ticketQty">Qty</label>
+            <div class="qty-box"><button type="button" class="qty-step" data-step="-1" aria-label="Decrease quantity">−</button><input type="number" id="ticketQty" value="10" min="1" inputmode="numeric"><button type="button" class="qty-step" data-step="1" aria-label="Increase quantity">+</button></div></div>
+          <div class="field"><label for="ticketLtp">Price · Market</label><input type="text" id="ticketLtp" value="Market" readonly></div>
+          <div class="field"><label for="ticketStop">Stop-loss</label><input type="number" id="ticketStop" placeholder="optional" step="0.05" inputmode="decimal"></div>
+          <div class="field"><label for="ticketTarget">Target</label><input type="number" id="ticketTarget" placeholder="optional" step="0.05" inputmode="decimal"></div>
+        </div>
+        <div class="ticket-info" id="ticketInfo">Load a session to start trading.</div>
+        <div class="form-error" id="ticketError"></div>
+        <button class="btn-place buy" id="btnConfirmTicket" disabled>BUY</button>
+        <button class="btn-cancel-sheet" id="btnCancelTicket" type="button">Cancel</button>
+      </div>
+
+      <div class="funds">
+        <div class="funds-title">Funds</div>
+        <div class="f-row"><span>Account value</span><b id="statBalance">₹1,00,000</b></div>
+        <div class="f-row"><span>Available margin</span><b id="statFunds">₹1,00,000</b></div>
+        <div class="f-row"><span>Realised P&amp;L</span><b id="statRealized">–</b></div>
+        <div class="f-row"><span>Unrealised P&amp;L</span><b id="statUnrealized">–</b></div>
+        <div class="f-row"><span>Win rate</span><b id="statWinRate">–</b></div>
+      </div>
+    </aside>
   </div>
 
-  <div class="stats-row reveal" style="animation-delay:.09s">
-    <div class="stat-card"><div class="val" id="statBalance">₹1,00,000</div><div class="lbl">Virtual Balance</div></div>
-    <div class="stat-card"><div class="val" id="statRealized">–</div><div class="lbl">Realized P&L</div></div>
-    <div class="stat-card"><div class="val" id="statUnrealized">–</div><div class="lbl">Unrealized P&L</div></div>
-    <div class="stat-card"><div class="val" id="statOpenCount">0</div><div class="lbl">Open Positions</div></div>
-    <div class="stat-card"><div class="val" id="statWinRate">–</div><div class="lbl">Win Rate</div></div>
+  <!-- Positions / history -->
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="pos" role="tab">Positions (<span id="statOpenCount">0</span>)</button>
+    <button class="tab" data-tab="hist" role="tab">Trade history</button>
   </div>
-
-  <div class="panel reveal" style="animation-delay:.12s">
-    <div class="chart-head">
-      <span class="symbol" id="chartSymbol">Select a stock and load a session</span>
-      <span class="ohlc" id="chartOhlc"></span>
-    </div>
-    <div id="chartContainer"></div>
-
-    <div class="replay-row">
-      <button class="btn btn-outline" id="btnPrev" disabled>◀ Prev</button>
-      <button class="btn btn-primary" id="btnPlayPause" disabled>▶ Play</button>
-      <button class="btn btn-outline" id="btnNext" disabled>Next ▶</button>
-      <div class="speed-group">
-        <button class="speed-btn active" data-speed="1">1x</button>
-        <button class="speed-btn" data-speed="2">2x</button>
-        <button class="speed-btn" data-speed="5">5x</button>
-        <button class="speed-btn" data-speed="10">10x</button>
-      </div>
-    </div>
-
-    <div class="btn-row">
-      <button class="btn btn-long" id="btnBuy" disabled>Buy / Long</button>
-      <button class="btn btn-short" id="btnSell" disabled>Sell / Short</button>
-    </div>
-
-    <div class="panel" id="ticket" style="display:none;margin-top:14px;margin-bottom:0;background:rgba(0,0,0,0.15);">
-      <div class="form-grid">
-        <div class="field"><label for="ticketDirection">Direction</label><input type="text" id="ticketDirection" readonly></div>
-        <div class="field"><label for="ticketQty">Quantity</label><input type="number" id="ticketQty" value="10" min="1"></div>
-        <div class="field"><label for="ticketStop">Stop Loss</label><input type="number" id="ticketStop" placeholder="optional"></div>
-        <div class="field"><label for="ticketTarget">Target</label><input type="number" id="ticketTarget" placeholder="optional"></div>
-      </div>
-      <div class="btn-row">
-        <button class="btn btn-primary" id="btnConfirmTicket">Confirm Order</button>
-        <button class="btn btn-outline" id="btnCancelTicket">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title reveal">Open Positions</div>
-  <div class="ledger reveal" style="margin-top:6px;">
-    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Qty</div><div>SL / Target</div><div>Unrealized P&L</div><div></div></div>
+  <div class="ledger" id="tabPos">
+    <div class="ledger-head"><div>Side</div><div>Avg. price</div><div>Qty</div><div>SL / Target</div><div>P&amp;L</div><div></div></div>
     <div id="positionsBody"><div class="ledger-empty">No open positions.</div></div>
   </div>
-
-  <div class="section-title reveal">Trade History</div>
-  <div class="ledger reveal" style="margin-top:6px;">
-    <div class="ledger-head"><div>Direction</div><div>Entry</div><div>Exit</div><div>Qty</div><div>Realized P&L</div><div>Closed</div></div>
+  <div class="ledger" id="tabHist" hidden>
+    <div class="ledger-head"><div>Side</div><div>Entry</div><div>Exit</div><div>Qty</div><div>P&amp;L</div><div>Closed</div></div>
     <div id="historyBody"><div class="ledger-empty">No trades closed yet this session.</div></div>
   </div>
 
+  <p class="form-note" id="setupNote">Replays real NSE data (Yahoo Finance) up to yesterday — and today once the market closes at 3:30 PM IST. Intraday intervals only go back a limited recent window; for older dates use 1D or 1W. Virtual money only, brokerage and taxes not included. For learning, not investment advice.</p>
+
+  <!-- Mobile order bar -->
+  <div class="m-orderbar" id="mOrderBar">
+    <button class="m-buy" id="mBuy" disabled>BUY</button>
+    <button class="m-sell" id="mSell" disabled>SELL</button>
+  </div>
 </div>
 
 <script src="market-data.js"></script>
@@ -269,40 +384,48 @@ if (!authToken) {
 
 // ── State ──────────────────────────────────────────────────────────────
 const STARTING_BALANCE = 100000;
+const IST = MarketData.IST_OFFSET;
+const TICKS_PER_CANDLE = 24;
 let fullCandles = [];
-let revealedCount = 0;
+let replayFrom = 0;      // first candle that was hidden at load
+let revealedCount = 0;   // candles on screen (the last one may still be forming)
+let forming = null;      // { idx, path, step, bar } while a candle is building
+let livePrice = null;    // last traded price on screen
 let realized = 0;
-let positions = [];   // open positions, plural — a real portfolio
-let history = [];     // closed trades
+let positions = [];
+let history = [];
 let positionIdCounter = 1;
 let isPlaying = false;
 let playTimer = null;
-let currentSpeed = 1;
+let candleMs = 4000;     // Normal: one candle every 4 seconds
 let pendingDirection = null;
+let sessionTf = '5m';
+let sessionIntraday = true;
+let sessionOver = false;
+let priceLines = [];
 
-// ── Populate the stock picker from the separated data layer ──────────────
+// ── Stock picker (100 stocks) ──────────────────────────────────────────
 const stockSelect = document.getElementById('fStock');
 MarketData.listStocks().forEach(s => {
   const opt = document.createElement('option');
   opt.value = s.symbol;
-  opt.textContent = `${s.name} (${s.symbol})`;
+  opt.textContent = `${s.name} (${s.symbol.replace('.NS', '')})`;
   stockSelect.appendChild(opt);
 });
 
-// Default date: 10 calendar days ago, a reasonable starting point that's
-// likely to have intraday data available.
-const defaultDate = new Date();
-defaultDate.setDate(defaultDate.getDate() - 10);
-document.getElementById('fDate').value = defaultDate.toISOString().slice(0, 10);
+// Default date = latest complete session: yesterday, or today after 3:30 PM.
+const dateInput = document.getElementById('fDate');
+const latest = MarketData.latestSessionDate();
+dateInput.value = latest;
+dateInput.max = latest;
 
-// ── Chart setup (Lightweight Charts) — colors pulled directly from the
-// same palette as the rest of the site, not a new chart theme ───────────
+// ── Chart setup (Lightweight Charts) ───────────────────────────────────
 const chart = LightweightCharts.createChart(document.getElementById('chartContainer'), {
   layout: { background: { type: 'solid', color: 'transparent' }, textColor: '#a8a08c', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
   grid: { vertLines: { color: 'rgba(224,197,138,0.06)' }, horzLines: { color: 'rgba(224,197,138,0.06)' } },
   crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: 'rgba(236,199,102,0.4)' }, horzLine: { color: 'rgba(236,199,102,0.4)' } },
   rightPriceScale: { borderColor: 'rgba(224,197,138,0.14)' },
-  timeScale: { borderColor: 'rgba(224,197,138,0.14)', timeVisible: true },
+  timeScale: { borderColor: 'rgba(224,197,138,0.14)', timeVisible: true, secondsVisible: false, rightOffset: 6 },
   handleScroll: true,
   handleScale: true,
 });
@@ -311,26 +434,20 @@ const candleSeries = chart.addCandlestickSeries({
   borderUpColor: '#5da583', borderDownColor: '#c17a5f',
   wickUpColor: '#5da583', wickDownColor: '#c17a5f',
 });
-const volumeSeries = chart.addHistogramSeries({
-  priceFormat: { type: 'volume' },
-  priceScaleId: '',
-});
+const volumeSeries = chart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: '' });
 volumeSeries.priceScale().applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 candleSeries.priceScale().applyOptions({ scaleMargins: { top: 0.06, bottom: 0.22 } });
 
 function resizeChart(){
   const el = document.getElementById('chartContainer');
-  chart.applyOptions({ width: el.clientWidth, height: 340 });
+  chart.applyOptions({ width: el.clientWidth, height: window.innerWidth < 980 ? 320 : 460 });
 }
 window.addEventListener('resize', resizeChart);
 
-// Crosshair hover → live OHLC readout, native to the library
 chart.subscribeCrosshairMove(param => {
   if (!param || !param.time || !fullCandles.length) return;
   const bar = param.seriesData.get(candleSeries);
-  if (!bar) return;
-  document.getElementById('chartOhlc').innerHTML =
-    `O <b>${bar.open.toFixed(2)}</b>  H <b>${bar.high.toFixed(2)}</b>  L <b>${bar.low.toFixed(2)}</b>  C <b>${bar.close.toFixed(2)}</b>`;
+  if (bar) showOhlc(bar);
 });
 
 // ── Helpers ────────────────────────────────────────────────────────────
@@ -338,40 +455,76 @@ function fmtMoney(n){
   const sign = n < 0 ? '−' : '';
   return sign + '₹' + Math.abs(Math.round(n)).toLocaleString('en-IN');
 }
-function currentPrice(){
-  return fullCandles[revealedCount - 1]?.close ?? null;
-}
-function toChartBar(c){
-  return { time: c.time, open: c.open, high: c.high, low: c.low, close: c.close };
-}
+function signed(n){ return (n >= 0 ? '+' : '') + fmtMoney(n).replace('−', '-'); }
+function currentPrice(){ return livePrice; }
+// Charts show Indian time (IST), like a real trading terminal.
+function chartTime(c){ return c.time + IST; }
+function toChartBar(c){ return { time: chartTime(c), open: c.open, high: c.high, low: c.low, close: c.close }; }
 function toVolumeBar(c){
-  return { time: c.time, value: c.volume || 0, color: c.close >= c.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' };
+  return { time: chartTime(c), value: c.volume || 0, color: c.close >= c.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' };
+}
+function showOhlc(b){
+  document.getElementById('chartOhlc').innerHTML =
+    `O <b>${b.open.toFixed(2)}</b>  H <b>${b.high.toFixed(2)}</b>  L <b>${b.low.toFixed(2)}</b>  C <b>${b.close.toFixed(2)}</b>`;
+}
+function fmtIst(t, withTime){
+  const opts = withTime
+    ? { timeZone: 'Asia/Kolkata', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', hour12: false }
+    : { timeZone: 'Asia/Kolkata', weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+  return new Date(t * 1000).toLocaleString('en-IN', opts);
+}
+function say(msg){ document.getElementById('simMsg').textContent = msg || ''; }
+function usedMargin(){ return positions.reduce((s, p) => s + p.entryPrice * p.qty, 0); }
+function unrealizedPnl(){
+  const price = currentPrice();
+  if (price === null) return 0;
+  return positions.reduce((sum, p) => sum + (p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice)) * p.qty, 0);
+}
+function availableFunds(){ return STARTING_BALANCE + realized + Math.min(0, unrealizedPnl()) - usedMargin(); }
+
+function updateClock(){
+  const el = document.getElementById('mktClock');
+  if (!fullCandles.length){ el.innerHTML = ''; return; }
+  const c = fullCandles[revealedCount - 1];
+  const live = isPlaying && !sessionOver;
+  const label = sessionOver ? 'Session closed' : live ? 'Replaying' : 'Paused';
+  el.innerHTML = `<span class="dot ${live ? '' : 'off'}"></span>${fmtIst(c.time, sessionIntraday)} IST · ${label}`;
 }
 
+// ── Drawing ────────────────────────────────────────────────────────────
 function redrawChart(){
-  const visible = fullCandles.slice(0, revealedCount);
-  candleSeries.setData(visible.map(toChartBar));
-  volumeSeries.setData(visible.map(toVolumeBar));
+  const visible = fullCandles.slice(0, revealedCount).map(toChartBar);
+  const vols = fullCandles.slice(0, revealedCount).map(toVolumeBar);
+  if (forming && forming.idx === revealedCount - 1){
+    visible[visible.length - 1] = { ...visible[visible.length - 1], ...forming.bar, time: chartTime(fullCandles[forming.idx]) };
+    vols[vols.length - 1] = { ...vols[vols.length - 1], value: forming.vol };
+  }
+  candleSeries.setData(visible);
+  volumeSeries.setData(vols);
   const last = visible[visible.length - 1];
-  if (last) document.getElementById('chartOhlc').innerHTML =
-    `O <b>${last.open.toFixed(2)}</b>  H <b>${last.high.toFixed(2)}</b>  L <b>${last.low.toFixed(2)}</b>  C <b>${last.close.toFixed(2)}</b>`;
+  if (last) showOhlc(last);
+}
+
+function refreshPriceLines(){
+  priceLines.forEach(l => candleSeries.removePriceLine(l));
+  priceLines = [];
+  positions.forEach(p => {
+    priceLines.push(candleSeries.createPriceLine({ price: p.entryPrice, color: p.direction === 'Long' ? '#5da583' : '#c17a5f', lineWidth: 1, lineStyle: 0, axisLabelVisible: true, title: `${p.direction === 'Long' ? 'BUY' : 'SELL'} ${p.qty}` }));
+    if (p.stop) priceLines.push(candleSeries.createPriceLine({ price: p.stop, color: '#c17a5f', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'SL' }));
+    if (p.target) priceLines.push(candleSeries.createPriceLine({ price: p.target, color: '#5da583', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'TGT' }));
+  });
 }
 
 function updateStats(){
   document.getElementById('statBalance').textContent = fmtMoney(STARTING_BALANCE + realized);
+  document.getElementById('statFunds').textContent = fmtMoney(Math.max(0, availableFunds()));
   const realizedEl = document.getElementById('statRealized');
-  realizedEl.textContent = (realized >= 0 ? '+' : '') + fmtMoney(realized).replace('−', '-');
+  realizedEl.textContent = history.length ? signed(realized) : '–';
   realizedEl.className = 'val ' + (realized > 0 ? 'pos' : realized < 0 ? 'neg' : '');
-
-  const price = currentPrice();
-  const unrealized = price === null ? 0 : positions.reduce((sum, p) => {
-    const diff = p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice);
-    return sum + diff * p.qty;
-  }, 0);
+  const unrealized = unrealizedPnl();
   const unrealizedEl = document.getElementById('statUnrealized');
-  unrealizedEl.textContent = positions.length ? (unrealized >= 0 ? '+' : '') + fmtMoney(unrealized).replace('−', '-') : '–';
+  unrealizedEl.textContent = positions.length ? signed(unrealized) : '–';
   unrealizedEl.className = 'val ' + (unrealized > 0 ? 'pos' : unrealized < 0 ? 'neg' : '');
-
   document.getElementById('statOpenCount').textContent = positions.length;
   const wins = history.filter(t => t.pnl > 0).length;
   document.getElementById('statWinRate').textContent = history.length ? Math.round((wins / history.length) * 100) + '%' : '–';
@@ -379,10 +532,7 @@ function updateStats(){
 
 function renderPositions(){
   const body = document.getElementById('positionsBody');
-  if (!positions.length){
-    body.innerHTML = '<div class="ledger-empty">No open positions.</div>';
-    return;
-  }
+  if (!positions.length){ body.innerHTML = '<div class="ledger-empty">No open positions.</div>'; return; }
   const price = currentPrice() ?? 0;
   body.innerHTML = positions.map(p => {
     const pnl = (p.direction === 'Short' ? (p.entryPrice - price) : (price - p.entryPrice)) * p.qty;
@@ -391,194 +541,382 @@ function renderPositions(){
       <div>₹${p.entryPrice.toFixed(2)}</div>
       <div>${p.qty}</div>
       <div style="font-size:11px;color:var(--sub-dim);">${p.stop ? 'SL ' + p.stop : '–'} / ${p.target ? 'TGT ' + p.target : '–'}</div>
-      <div class="cell-pnl ${pnl >= 0 ? 'pos' : 'neg'}">${pnl >= 0 ? '+' : ''}${fmtMoney(pnl).replace('−','-')}</div>
-      <div><button class="btn-close-position" data-id="${p.id}">Close</button></div>
+      <div class="cell-pnl ${pnl >= 0 ? 'pos' : 'neg'}">${signed(pnl)}</div>
+      <div><button class="btn-close-position" data-id="${p.id}">Exit</button></div>
     </div>`;
   }).join('');
 }
 
 function renderHistory(){
   const body = document.getElementById('historyBody');
-  if (!history.length){
-    body.innerHTML = '<div class="ledger-empty">No trades closed yet this session.</div>';
-    return;
-  }
+  if (!history.length){ body.innerHTML = '<div class="ledger-empty">No trades closed yet this session.</div>'; return; }
   body.innerHTML = history.slice().reverse().map(t => `
     <div class="ledger-row">
       <div class="dir ${t.direction === 'Short' ? 'short' : 'long'}">${t.direction}</div>
       <div>₹${t.entryPrice.toFixed(2)}</div>
       <div>₹${t.exitPrice.toFixed(2)}</div>
       <div>${t.qty}</div>
-      <div class="cell-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${t.pnl >= 0 ? '+' : ''}${fmtMoney(t.pnl).replace('−','-')}</div>
-      <div style="font-size:11px;color:var(--sub-dim);">${new Date(t.closedAt * 1000).toLocaleString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}</div>
-    </div>
-  `).join('');
+      <div class="cell-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${signed(t.pnl)}</div>
+      <div style="font-size:11px;color:var(--sub-dim);">${fmtIst(t.closedAt, sessionIntraday)}${t.reason ? ' · ' + t.reason : ''}</div>
+    </div>`).join('');
 }
+
+let lastLtp = null;
+function fmtVol(v){
+  if (v >= 1e7) return (v / 1e7).toFixed(2) + ' Cr';
+  if (v >= 1e5) return (v / 1e5).toFixed(2) + ' L';
+  return Math.round(v).toLocaleString('en-IN');
+}
+// Quote strip: LTP, change vs previous close, day open/high/low/volume.
+function updateQuote(){
+  if (!fullCandles.length || livePrice === null) return;
+  const lastIdx = revealedCount - 1;
+  const barAt = i => (forming && forming.idx === i) ? { ...fullCandles[i], ...forming.bar, volume: forming.vol } : fullCandles[i];
+  let prevClose, day;
+  if (sessionIntraday){
+    prevClose = replayFrom > 0 && MarketData.istDate(fullCandles[replayFrom - 1].time) !== MarketData.istDate(fullCandles[Math.min(replayFrom, fullCandles.length - 1)].time)
+      ? fullCandles[replayFrom - 1].close : null;
+    const start = Math.min(replayFrom, lastIdx);
+    const bars = [];
+    for (let i = start; i <= lastIdx; i++) bars.push(barAt(i));
+    const todays = bars.filter(b => MarketData.istDate(b.time) === MarketData.istDate(fullCandles[lastIdx].time));
+    day = { open: todays[0].open, high: Math.max(...todays.map(b => b.high)), low: Math.min(...todays.map(b => b.low)), volume: todays.reduce((a, b) => a + (b.volume || 0), 0) };
+  } else {
+    prevClose = lastIdx > 0 ? fullCandles[lastIdx - 1].close : null;
+    day = barAt(lastIdx);
+  }
+  const ltpEl = document.getElementById('qLtp');
+  ltpEl.textContent = livePrice.toFixed(2);
+  if (lastLtp !== null && livePrice !== lastLtp) ltpEl.className = 'q-ltp ' + (livePrice > lastLtp ? 'up' : 'down');
+  lastLtp = livePrice;
+  const chgEl = document.getElementById('qChg');
+  if (prevClose){
+    const d = livePrice - prevClose, pct = d / prevClose * 100;
+    chgEl.textContent = `${d >= 0 ? '+' : ''}${d.toFixed(2)} (${d >= 0 ? '+' : ''}${pct.toFixed(2)}%)`;
+    chgEl.className = 'q-chg ' + (d >= 0 ? 'pos' : 'neg');
+  } else { chgEl.textContent = ''; }
+  document.getElementById('qOpen').textContent = day.open.toFixed(2);
+  document.getElementById('qHigh').textContent = day.high.toFixed(2);
+  document.getElementById('qLow').textContent = day.low.toFixed(2);
+  document.getElementById('qPrev').textContent = prevClose ? prevClose.toFixed(2) : '—';
+  document.getElementById('qVol').textContent = fmtVol(day.volume || 0);
+  const t = document.getElementById('ticketLtp');
+  if (t) t.value = livePrice.toFixed(2);
+}
+
+function refreshAll(){ updateStats(); renderPositions(); updateClock(); updateQuote(); }
 
 document.getElementById('positionsBody').addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-close-position');
-  if (btn) closePosition(Number(btn.dataset.id));
+  if (btn) closePosition(Number(btn.dataset.id), undefined, 'Manual exit');
 });
 
 // ── Session loading ────────────────────────────────────────────────────
+function prevWeekday(dateStr){
+  const d = new Date(dateStr + 'T00:00:00Z');
+  do { d.setUTCDate(d.getUTCDate() - 1); } while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  return d.toISOString().slice(0, 10);
+}
+
 document.getElementById('btnLoadSession').addEventListener('click', async () => {
   const symbol = stockSelect.value;
-  const dateStr = document.getElementById('fDate').value;
+  let dateStr = dateInput.value;
   const timeframe = document.getElementById('fTimeframe').value;
   const errorEl = document.getElementById('setupError');
   errorEl.textContent = '';
-
   if (!symbol || !dateStr) { errorEl.textContent = 'Pick a stock and a date.'; return; }
+  if (dateStr > latest) { dateStr = latest; dateInput.value = latest; }
 
   const btn = document.getElementById('btnLoadSession');
   btn.disabled = true;
   btn.textContent = 'Loading real data...';
+  stopPlaying();
 
-  const result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  const asked = dateStr;
+  let result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  // Market holiday on the chosen day? Step back to the nearest real session.
+  for (let tries = 0; result.noSession && tries < 5; tries++){
+    dateStr = prevWeekday(dateStr);
+    result = await MarketData.getHistory(symbol, timeframe, dateStr);
+  }
 
   btn.disabled = false;
   btn.textContent = 'Load Session';
 
   if (result.error || !result.candles.length) {
-    errorEl.textContent = result.error || 'No data found for that selection.';
+    errorEl.textContent = result.noSession || dateStr !== asked
+      ? 'No trading session found around that date in the intraday window. Try a more recent date, or use 1D / 1W.'
+      : (result.error || 'No data found for that selection.');
     return;
   }
+  if (dateStr !== asked) dateInput.value = dateStr;
 
   fullCandles = result.candles;
-  revealedCount = Math.min(15, fullCandles.length);
-  positions = [];
-  history = [];
-  realized = 0;
+  replayFrom = Math.max(1, result.replayFrom);
+  revealedCount = replayFrom;
+  forming = null;
+  livePrice = fullCandles[revealedCount - 1].close;
+  positions = []; history = []; realized = 0; sessionOver = false;
+  sessionTf = timeframe;
+  sessionIntraday = MarketData.TIMEFRAME_CONFIG[timeframe].kind === 'intraday';
+  refreshPriceLines();
 
   const stockLabel = stockSelect.options[stockSelect.selectedIndex].textContent;
-  document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe} · ${dateStr}`;
+  document.getElementById('chartSymbol').textContent = `${stockLabel} · ${timeframe}`;
+  say(dateStr !== asked
+    ? `${asked} was not a trading day (weekend or holiday) — loaded the previous session (${dateStr}). Press Play.`
+    : sessionIntraday ? 'Market is about to open. Earlier sessions are shown for context — press Play.' : 'Chart loaded up to the start of the replay window — press Play.');
 
   resizeChart();
   redrawChart();
-  updateStats();
-  renderPositions();
+  chart.timeScale().scrollToRealTime();
+  refreshAll();
   renderHistory();
-
-  ['btnPrev','btnPlayPause','btnNext','btnBuy','btnSell'].forEach(id => document.getElementById(id).disabled = false);
-  stopPlaying();
+  ORDER_CONTROLS.forEach(id => document.getElementById(id).disabled = false);
+  document.getElementById('btnPrev').disabled = true;
+  document.getElementById('ticketProduct').textContent = sessionIntraday ? 'MIS · Intraday · Market order' : 'NRML · Positional · Market order';
+  lastLtp = null;
+  openTicket(pendingDirection || 'Long', true);
 });
 
-// ── Replay controls ────────────────────────────────────────────────────
-function stepForward(){
-  if (revealedCount >= fullCandles.length){
-    stopPlaying();
-    return false;
-  }
-  revealedCount++;
-  checkStopsAndTargets();
-  redrawChart();
-  updateStats();
-  renderPositions();
-  return true;
-}
-function stepBackward(){
-  const minCount = Math.min(15, fullCandles.length);
-  if (revealedCount <= minCount) return;
-  revealedCount--;
-  redrawChart();
-  updateStats();
-  renderPositions();
+const ORDER_CONTROLS = ['btnPlayPause','btnNext','btnBuy','btnSell','btnConfirmTicket','mBuy','mSell'];
+
+// ── Tick engine: each real candle builds up gradually ───────────────────
+// The path is open → (low/high) → (high/low) → close with small wiggles,
+// always inside the candle's real high/low, and it always ends on the real
+// close. The finished candle is exactly the real one.
+function buildPath(c){
+  const firstExtreme = c.close >= c.open ? c.low : c.high;
+  const secondExtreme = c.close >= c.open ? c.high : c.low;
+  const legs = [[c.open, firstExtreme], [firstExtreme, secondExtreme], [secondExtreme, c.close]];
+  const lens = legs.map(([a, b]) => Math.abs(b - a) + 1e-9);
+  const total = lens.reduce((a, b) => a + b, 0);
+  const range = Math.max(c.high - c.low, 1e-9);
+  const path = [c.open];
+  legs.forEach(([a, b], i) => {
+    const n = Math.max(2, Math.round((TICKS_PER_CANDLE - 1) * lens[i] / total));
+    for (let k = 1; k <= n; k++){
+      let v = a + (b - a) * (k / n);
+      if (k < n) v += (Math.random() - 0.5) * range * 0.08;
+      path.push(Math.min(c.high, Math.max(c.low, v)));
+    }
+  });
+  path[path.length - 1] = c.close;
+  return path;
 }
 
-function checkStopsAndTargets(){
-  const c = fullCandles[revealedCount - 1];
-  if (!c) return;
-  // Iterate a copy since closePosition mutates the positions array.
+function startCandle(){
+  if (revealedCount >= fullCandles.length) return false;
+  const idx = revealedCount;
+  const c = fullCandles[idx];
+  forming = { idx, path: buildPath(c), step: 0, bar: { open: c.open, high: c.open, low: c.open, close: c.open }, vol: 0 };
+  revealedCount++;
+  candleSeries.update({ time: chartTime(c), ...forming.bar });
+  volumeSeries.update({ time: chartTime(c), value: 0, color: 'rgba(93,165,131,0.5)' });
+  onPrice(c.open, true);
+  return true;
+}
+
+function tick(){
+  if (!forming){
+    if (!startCandle()){ endSession(); return; }
+    return;
+  }
+  const c = fullCandles[forming.idx];
+  forming.step++;
+  const p = forming.path[Math.min(forming.step, forming.path.length - 1)];
+  const b = forming.bar;
+  b.close = p; b.high = Math.max(b.high, p); b.low = Math.min(b.low, p);
+  forming.vol = Math.round((c.volume || 0) * Math.min(1, forming.step / (forming.path.length - 1)));
+  candleSeries.update({ time: chartTime(c), ...b });
+  volumeSeries.update({ time: chartTime(c), value: forming.vol, color: b.close >= b.open ? 'rgba(93,165,131,0.5)' : 'rgba(193,122,95,0.5)' });
+  showOhlc(b);
+  onPrice(p, false);
+  if (forming.step >= forming.path.length - 1){
+    forming = null;
+    if (revealedCount >= fullCandles.length) endSession();
+  }
+}
+
+function finishCandleInstantly(){
+  if (!forming) return;
+  const c = fullCandles[forming.idx];
+  // Walk the remaining path so stop-loss / target checks still see every price.
+  while (forming && forming.step < forming.path.length - 1) tick();
+}
+
+function onPrice(price, isOpen){
+  livePrice = price;
+  checkStopsAndTargets(price, isOpen);
+  refreshAll();
+}
+
+function checkStopsAndTargets(price, isOpen){
   [...positions].forEach(p => {
-    if (p.direction === 'Long'){
-      if (p.stop && c.low <= p.stop) closePosition(p.id, p.stop);
-      else if (p.target && c.high >= p.target) closePosition(p.id, p.target);
-    } else {
-      if (p.stop && c.high >= p.stop) closePosition(p.id, p.stop);
-      else if (p.target && c.low <= p.target) closePosition(p.id, p.target);
-    }
+    const longSide = p.direction === 'Long';
+    const stopHit = p.stop && (longSide ? price <= p.stop : price >= p.stop);
+    const tgtHit = p.target && (longSide ? price >= p.target : price <= p.target);
+    // A gap through the level at the open fills at the open price, like a real market.
+    if (stopHit) closePosition(p.id, isOpen ? price : p.stop, 'Stop-loss hit');
+    else if (tgtHit) closePosition(p.id, isOpen ? price : p.target, 'Target hit');
   });
 }
 
-document.getElementById('btnNext').addEventListener('click', stepForward);
-document.getElementById('btnPrev').addEventListener('click', stepBackward);
+function endSession(){
+  stopPlaying();
+  sessionOver = true;
+  if (sessionIntraday && positions.length){
+    [...positions].forEach(p => closePosition(p.id, livePrice, 'Auto square-off'));
+    say('Market closed — open intraday positions were squared off at the last price.');
+  } else {
+    say('Replay finished — this is where the real chart ended.');
+  }
+  ORDER_CONTROLS.forEach(id => document.getElementById(id).disabled = true);
+  closeTicket();
+  refreshAll();
+}
 
+// ── Replay controls ────────────────────────────────────────────────────
+function scheduleTicks(){
+  if (playTimer) clearInterval(playTimer);
+  playTimer = setInterval(tick, candleMs / TICKS_PER_CANDLE);
+}
 function startPlaying(){
+  if (sessionOver) return;
   isPlaying = true;
   document.getElementById('btnPlayPause').textContent = '⏸ Pause';
-  const delay = 700 / currentSpeed;
-  playTimer = setInterval(() => { if (!stepForward()) stopPlaying(); }, delay);
+  if (revealedCount === replayFrom && !forming) say('');
+  scheduleTicks();
+  updateClock();
 }
 function stopPlaying(){
   isPlaying = false;
   document.getElementById('btnPlayPause').textContent = '▶ Play';
   if (playTimer) clearInterval(playTimer);
   playTimer = null;
+  updateClock();
 }
-document.getElementById('btnPlayPause').addEventListener('click', () => {
-  if (isPlaying) stopPlaying(); else startPlaying();
+document.getElementById('btnPlayPause').addEventListener('click', () => { if (isPlaying) stopPlaying(); else startPlaying(); });
+
+// Next: finish the current candle, or play one whole candle at once.
+document.getElementById('btnNext').addEventListener('click', () => {
+  if (sessionOver) return;
+  if (!forming && !startCandle()){ endSession(); return; }
+  finishCandleInstantly();
+  if (revealedCount >= fullCandles.length && !sessionOver) endSession();
 });
+
+// Prev is only for studying the chart before you trade — once a trade is
+// placed, time only moves forward (like the real market).
+document.getElementById('btnPrev').addEventListener('click', () => {
+  if (positions.length || history.length || forming) return;
+  if (revealedCount <= replayFrom) return;
+  revealedCount--;
+  livePrice = fullCandles[revealedCount - 1].close;
+  redrawChart();
+  refreshAll();
+  document.getElementById('btnPrev').disabled = revealedCount <= replayFrom;
+});
+function syncPrev(){
+  document.getElementById('btnPrev').disabled = !!(positions.length || history.length || sessionOver || revealedCount <= replayFrom);
+}
+setInterval(syncPrev, 500);
 
 document.querySelectorAll('.speed-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentSpeed = Number(btn.dataset.speed);
-    if (isPlaying){ stopPlaying(); startPlaying(); }
+    candleMs = Number(btn.dataset.speed);
+    if (isPlaying) scheduleTicks();
   });
 });
 
-// ── Order ticket / paper trading ───────────────────────────────────────
-function openTicket(direction){
+// ── Order ticket (market orders at the live price) ─────────────────────
+function ticketPreview(){
+  const qty = Math.max(1, parseInt(document.getElementById('ticketQty').value) || 1);
+  const price = currentPrice();
+  const need = qty * price;
+  const free = availableFunds();
+  document.getElementById('ticketInfo').innerHTML =
+    `Margin required <b>${fmtMoney(need)}</b><br>Available <b>${fmtMoney(Math.max(0, free))}</b> · Max qty <b>${Math.max(0, Math.floor(free / price))}</b>`;
+}
+const isSheet = () => window.matchMedia('(max-width:979px)').matches;
+const ticketEl = document.getElementById('ticket');
+const backdrop = document.getElementById('sheetBackdrop');
+function openTicket(direction, quiet){
+  if (sessionOver || !fullCandles.length) return;
   pendingDirection = direction;
-  document.getElementById('ticketDirection').value = direction;
-  document.getElementById('ticketQty').value = 10;
-  document.getElementById('ticketStop').value = '';
-  document.getElementById('ticketTarget').value = '';
-  document.getElementById('ticket').style.display = 'block';
+  const buy = direction === 'Long';
+  document.getElementById('btnBuy').classList.toggle('active', buy);
+  document.getElementById('btnSell').classList.toggle('active', !buy);
+  const place = document.getElementById('btnConfirmTicket');
+  place.className = 'btn-place ' + (buy ? 'buy' : 'sell');
+  place.textContent = (buy ? 'BUY ' : 'SELL ') + stockSelect.value.replace('.NS', '');
+  document.getElementById('ticketError').textContent = '';
+  if (!quiet && isSheet()){ ticketEl.classList.add('open'); backdrop.classList.add('open'); }
+  ticketPreview();
 }
 function closeTicket(){
-  document.getElementById('ticket').style.display = 'none';
-  pendingDirection = null;
+  ticketEl.classList.remove('open');
+  backdrop.classList.remove('open');
 }
-document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long'));
-document.getElementById('btnSell').addEventListener('click', () => openTicket('Short'));
+backdrop.addEventListener('click', closeTicket);
+document.getElementById('mBuy').addEventListener('click', () => openTicket('Long'));
+document.getElementById('mSell').addEventListener('click', () => openTicket('Short'));
+document.querySelectorAll('.qty-step').forEach(b => b.addEventListener('click', () => {
+  const q = document.getElementById('ticketQty');
+  q.value = Math.max(1, (parseInt(q.value) || 0) + Number(b.dataset.step));
+  ticketPreview();
+}));
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x === t));
+  document.getElementById('tabPos').hidden = t.dataset.tab !== 'pos';
+  document.getElementById('tabHist').hidden = t.dataset.tab !== 'hist';
+}));
+setInterval(() => { if (pendingDirection && fullCandles.length && !sessionOver) ticketPreview(); }, 400);
+document.getElementById('ticketQty').addEventListener('input', ticketPreview);
+document.getElementById('btnBuy').addEventListener('click', () => openTicket('Long', !ticketEl.classList.contains('open')));
+document.getElementById('btnSell').addEventListener('click', () => openTicket('Short', !ticketEl.classList.contains('open')));
 document.getElementById('btnCancelTicket').addEventListener('click', closeTicket);
 
 document.getElementById('btnConfirmTicket').addEventListener('click', () => {
-  const qty = Math.max(1, parseInt(document.getElementById('ticketQty').value) || 1);
-  const stopRaw = document.getElementById('ticketStop').value;
-  const targetRaw = document.getElementById('ticketTarget').value;
-  positions.push({
-    id: positionIdCounter++,
-    direction: pendingDirection,
-    qty,
-    entryPrice: currentPrice(),
-    entryTime: fullCandles[revealedCount - 1].time,
-    stop: stopRaw ? Number(stopRaw) : null,
-    target: targetRaw ? Number(targetRaw) : null,
-  });
+  const err = document.getElementById('ticketError');
+  const qty = parseInt(document.getElementById('ticketQty').value);
+  const price = currentPrice();
+  const stop = document.getElementById('ticketStop').value ? Number(document.getElementById('ticketStop').value) : null;
+  const target = document.getElementById('ticketTarget').value ? Number(document.getElementById('ticketTarget').value) : null;
+  const longSide = pendingDirection === 'Long';
+  if (!qty || qty < 1) { err.textContent = 'Enter a quantity of at least 1.'; return; }
+  if (qty * price > availableFunds()) { err.textContent = `Insufficient funds — you can trade at most ${Math.max(0, Math.floor(availableFunds() / price))} shares at this price.`; return; }
+  if (stop !== null && (longSide ? stop >= price : stop <= price)) { err.textContent = longSide ? 'For a Buy, stop-loss must be below the current price.' : 'For a Sell, stop-loss must be above the current price.'; return; }
+  if (target !== null && (longSide ? target <= price : target >= price)) { err.textContent = longSide ? 'For a Buy, target must be above the current price.' : 'For a Sell, target must be below the current price.'; return; }
+  const c = fullCandles[revealedCount - 1];
+  positions.push({ id: positionIdCounter++, direction: pendingDirection, qty, entryPrice: price, entryTime: c.time, stop, target });
+  say(`${longSide ? 'Bought' : 'Sold'} ${qty} @ ₹${price.toFixed(2)} (${fmtIst(c.time, sessionIntraday)} IST).`);
+  document.getElementById('ticketStop').value = '';
+  document.getElementById('ticketTarget').value = '';
   closeTicket();
-  updateStats();
-  renderPositions();
+  refreshPriceLines();
+  refreshAll();
 });
 
-function closePosition(id, forcedExitPrice){
+function closePosition(id, forcedExitPrice, reason){
   const idx = positions.findIndex(p => p.id === id);
   if (idx === -1) return;
   const p = positions[idx];
   const exitPrice = forcedExitPrice ?? currentPrice();
   const pnl = (p.direction === 'Short' ? (p.entryPrice - exitPrice) : (exitPrice - p.entryPrice)) * p.qty;
   realized += pnl;
-  history.push({
-    direction: p.direction, entryPrice: p.entryPrice, exitPrice, qty: p.qty, pnl,
-    closedAt: fullCandles[revealedCount - 1].time,
-  });
+  history.push({ direction: p.direction, entryPrice: p.entryPrice, exitPrice, qty: p.qty, pnl, reason, closedAt: fullCandles[revealedCount - 1].time });
   positions.splice(idx, 1);
-  updateStats();
-  renderPositions();
+  if (reason && reason !== 'Auto square-off') say(`${reason}: ${p.direction === 'Long' ? 'sold' : 'bought back'} ${p.qty} @ ₹${exitPrice.toFixed(2)} · ${signed(pnl)}`);
+  refreshPriceLines();
+  refreshAll();
   renderHistory();
 }
+
+// Pause when the tab is hidden so the market doesn't run unseen.
+document.addEventListener('visibilitychange', () => { if (document.hidden && isPlaying) stopPlaying(); });
 
 resizeChart();
 </script>

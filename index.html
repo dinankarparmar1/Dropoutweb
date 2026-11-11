@@ -237,7 +237,10 @@ html,body{overflow-x:clip}
 .df-done{position:absolute;inset:0;border-radius:inherit;background:rgba(10,10,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;z-index:2}
 .df-done[hidden]{display:none}
 /* phones: floating buttons hide while the form is on screen so they don't cover it */
-@media(max-width:760px){body.df-in-view .fab-col,body.df-in-view .ai-fab{opacity:0;pointer-events:none;transition:opacity .25s}}
+/* Ivaan orb hides on every screen while the form is open/visible or being typed in */
+.ai-fab{transition:opacity .25s,transform .3s ease}
+body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-events:none!important}
+@media(max-width:760px){body.df-in-view .fab-col,body.df-typing .fab-col{opacity:0;pointer-events:none;transition:opacity .25s}}
 .df-tick{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:700;color:#1a1305;background:linear-gradient(135deg,#f3d576,#d4af37);box-shadow:0 0 40px rgba(212,175,55,.4);margin-bottom:16px}
 .df-done h3{margin:0 0 8px;font-family:'Playfair Display',serif;font-size:26px;color:var(--white)}
 .df-done p{margin:0 0 8px;color:var(--muted);max-width:340px}.df-done b{color:var(--gold-bright)}
@@ -864,7 +867,9 @@ function dfDigits(x){var d=String(x).replace(/\D/g,'');if(d.length>10&&d.slice(0
 document.getElementById('f-phone').addEventListener('input',function(){var d=dfDigits(this.value);this.value=d.length>5?d.slice(0,5)+' '+d.slice(5):d;dfErr('phone','');});
 document.getElementById('f-name').addEventListener('input',function(){dfErr('name','');});
 form.addEventListener('change',function(e){if(e.target.name==='course')dfErr('course','');});
-if('IntersectionObserver' in window){new IntersectionObserver(function(es){document.body.classList.toggle('df-in-view',es[0].isIntersecting);},{threshold:0.15}).observe(form);}
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){document.body.classList.toggle('df-in-view',es[0].isIntersecting);},{threshold:0.05}).observe(form);}
+form.addEventListener('focusin',function(){document.body.classList.add('df-typing');});
+form.addEventListener('focusout',function(){setTimeout(function(){if(!form.contains(document.activeElement))document.body.classList.remove('df-typing');},200);});
 form.addEventListener('submit', function(e){
   e.preventDefault();
   var v=dfRead(); if(!dfValid(v)) return;

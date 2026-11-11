@@ -120,6 +120,8 @@
 .tradingview-widget-copyright{font-size:6px!important;line-height:1!important;text-align:right!important;margin-top:2px!important;opacity:.35;letter-spacing:.03em;font-family:'Space Mono',monospace!important}
 .tradingview-widget-copyright a,.tradingview-widget-copyright .blue-text{color:#a8a49b!important;text-decoration:none!important}
 .tradingview-widget-copyright a:hover .blue-text{color:#d4af37!important}
+html body .tradingview-widget-container .tradingview-widget-copyright,html body #ticker-wrap .tradingview-widget-copyright{font-size:6px!important;line-height:1!important;text-align:right!important;margin:2px 0 0!important;padding:0!important;opacity:.35!important;height:auto!important}
+html body .tradingview-widget-container .tradingview-widget-copyright a,html body .tradingview-widget-container .tradingview-widget-copyright .blue-text{color:#a8a49b!important;font-size:6px!important}
 /* Charts are view-only: tapping them does not open TradingView */
 .tradingview-widget-container iframe,.tradingview-widget-copyright a{pointer-events:none!important;cursor:default!important}
 </style>
@@ -526,14 +528,14 @@ html,body{overflow-x:clip}
     <div class="contact-grid">
       <form class="glass reveal" id="enquiry-form" style="padding:40px;">
         <div class="form-row">
-          <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Your full name"></div>
-          <div class="field"><label>Phone</label><input type="tel" name="phone" required placeholder="+91 00000 00000"></div>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" required placeholder="Your full name" autocomplete="name"></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" required placeholder="+91 00000 00000" autocomplete="tel" inputmode="tel"></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@email.com"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required placeholder="you@email.com" autocomplete="email"></div>
           <div class="field">
-            <label>Course</label>
-            <select name="course" required>
+            <label for="f-course">Course</label>
+            <select id="f-course" name="course" required>
               <option value="">Select a course</option>
               <option>Stock Market</option>
               <option>Forex Trading</option>
@@ -545,9 +547,9 @@ html,body{overflow-x:clip}
             </select>
           </div>
         </div>
-        <div class="field"><label>Message</label><textarea name="message" placeholder="Tell us what you'd like to learn..."></textarea></div>
-        <button type="submit" class="btn btn-gold" style="width:100%;">Send Enquiry</button>
-        <p id="form-note" style="margin-top:14px; font-size:12px; color:var(--muted-dim);">Submitting opens your email app with the details pre-filled to <b style="color:var(--gold-bright)">dinankar@dropouttraders.in</b></p>
+        <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" placeholder="Tell us what you'd like to learn..."></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Send on WhatsApp</button>
+        <p id="form-note" style="margin-top:14px; font-size:13px; color:var(--muted-dim);">Opens WhatsApp with your details filled in. Prefer email? <a href="#" id="form-email" style="color:var(--gold-bright); text-decoration:underline;">Send by email instead</a></p>
       </form>
 
       <div>
@@ -802,6 +804,16 @@ form.addEventListener('submit', function(e){
   var body = encodeURIComponent(
     'Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nCourse: '+course+'\n\nMessage:\n'+(message||'-')
   );
+  var wa = 'Hi Dinankar, I want to book a free demo.\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nCourse: '+course+(message ? '\n\n'+message : '');
+  window.open('https://wa.me/917747901709?text='+encodeURIComponent(wa), '_blank', 'noopener');
+});
+// Email fallback for people who don't use WhatsApp
+document.getElementById('form-email').addEventListener('click', function(e){
+  e.preventDefault();
+  if(!form.reportValidity()) return;
+  var d = new FormData(form);
+  var subject = encodeURIComponent('Course Enquiry — ' + d.get('course'));
+  var body = encodeURIComponent('Name: '+d.get('name')+'\nPhone: '+d.get('phone')+'\nEmail: '+d.get('email')+'\nCourse: '+d.get('course')+'\n\nMessage:\n'+(d.get('message')||'-'));
   window.location.href = 'mailto:dinankar@dropouttraders.in?subject='+subject+'&body='+body;
 });
 

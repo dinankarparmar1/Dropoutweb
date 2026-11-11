@@ -609,8 +609,8 @@
         <div class="ai-foot">
           <button class="ai-attach" type="button" title="Attach up to 5 PDFs/screenshots, add a message if you like, then hit Ask">${PAPERCLIP_SVG}</button>
           <button class="ai-mic" type="button" id="ai-mic" title="Ask by voice">${MIC_SVG}</button>
-          <input type="file" id="ai-file" accept="application/pdf,image/png,image/jpeg,image/webp" multiple style="display:none">
-          <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off">
+          <input type="file" id="ai-file" accept="application/pdf,image/png,image/jpeg,image/webp" multiple style="display:none" aria-label="Upload a PDF or image for Ivaan">
+          <input id="ai-input" type="text" placeholder="e.g. What is P/E ratio?" autocomplete="off" aria-label="Ask Ivaan a question">
           <button id="ai-send" class="ai-send-btn">Ask</button>
         </div>
         <div class="ai-disclaimer">Educational information only — not investment advice.</div>

@@ -126,7 +126,7 @@
   .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;}
   .form-grid.wide{grid-template-columns:repeat(2,1fr);}
   @media(max-width:640px){.form-grid,.form-grid.wide{grid-template-columns:1fr 1fr;}}
-  .field label{display:block;font-family:var(--mono);font-size:9.5px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+  .field label{display:block;font-family:var(--mono);font-size:12px;color:var(--sub-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
   .field input, .field select, .field textarea{
     width:100%;background:rgba(0,0,0,0.2);border:1px solid var(--line);border-radius:8px;
     color:var(--ink);font-family:var(--sans);font-size:13.5px;padding:9px 11px;
@@ -228,22 +228,22 @@
 
   <div class="entry-form reveal" id="entryForm">
     <div class="form-grid">
-      <div class="field required"><label>Instrument</label><input type="text" id="f-instrument" placeholder="e.g. NIFTY 24800 CE"></div>
-      <div class="field required"><label>Direction</label>
+      <div class="field required"><label for="f-instrument">Instrument</label><input type="text" id="f-instrument" placeholder="e.g. NIFTY 24800 CE"></div>
+      <div class="field required"><label for="f-direction">Direction</label>
         <select id="f-direction"><option value="Long">Long</option><option value="Short">Short</option></select>
       </div>
-      <div class="field required"><label>Size / Qty</label><input type="text" id="f-size" placeholder="e.g. 2 lots"></div>
-      <div class="field required"><label>Risk %</label><input type="text" id="f-risk" placeholder="e.g. 0.5"></div>
+      <div class="field required"><label for="f-size">Size / Qty</label><input type="text" id="f-size" placeholder="e.g. 2 lots"></div>
+      <div class="field required"><label for="f-risk">Risk %</label><input type="text" id="f-risk" placeholder="e.g. 0.5"></div>
     </div>
     <div class="form-grid">
-      <div class="field required"><label>Entry Price</label><input type="text" id="f-entry" placeholder="0.00"></div>
-      <div class="field required"><label>Exit Price</label><input type="text" id="f-exit" placeholder="0.00"></div>
-      <div class="field"><label>P&L (auto-calculated)</label><input type="text" id="f-pnl" placeholder="Fill in Entry, Exit &amp; Size" readonly style="opacity:0.85;cursor:not-allowed;"></div>
-      <div class="field"><label>Date</label><input type="date" id="f-date"></div>
+      <div class="field required"><label for="f-entry">Entry Price</label><input type="text" id="f-entry" placeholder="0.00"></div>
+      <div class="field required"><label for="f-exit">Exit Price</label><input type="text" id="f-exit" placeholder="0.00"></div>
+      <div class="field"><label for="f-pnl">P&L (auto-calculated)</label><input type="text" id="f-pnl" placeholder="Fill in Entry, Exit &amp; Size" readonly style="opacity:0.85;cursor:not-allowed;"></div>
+      <div class="field"><label for="f-date">Date</label><input type="date" id="f-date"></div>
     </div>
     <div class="form-grid wide">
-      <div class="field required"><label>Why this trade? (feeds your AI Coach)</label><textarea id="f-note" placeholder="What was your setup, thesis, or signal?"></textarea></div>
-      <div class="field"><label>Reflection (required on losses)</label><textarea id="f-reflection" placeholder="What actually happened? What would you do differently?"></textarea></div>
+      <div class="field required"><label for="f-note">Why this trade? (feeds your AI Coach)</label><textarea id="f-note" placeholder="What was your setup, thesis, or signal?"></textarea></div>
+      <div class="field"><label for="f-reflection">Reflection (required on losses)</label><textarea id="f-reflection" placeholder="What actually happened? What would you do differently?"></textarea></div>
     </div>
     <div class="form-actions">
       <div id="formError" style="color:var(--terracotta);font-family:var(--mono);font-size:11.5px;margin-right:auto;align-self:center;"></div>

@@ -241,6 +241,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 </style>
 
 <style>/* logo emblem inside the round logo mark */.logo-mark{overflow:hidden;background:#0e0d0c;padding:0}.logo-mark img{width:100%;height:100%;object-fit:cover;display:block}</style>
+<style>.breadcrumb{font-size:12px!important}.breadcrumb a{display:inline-block;padding:14px 6px;margin:-14px -6px}</style>
 </head>
 <body>
 <nav id="navbar">
@@ -283,13 +284,13 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
     <div class="calc-tool glass">
       <div id="legs">
         <div class="leg-row">
-          <div class="field"><label>Quantity (Buy 1)</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
-          <div class="field"><label>Price per Share (Buy 1)</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 240.50"></div>
+          <div class="field"><label for="f-quantity-buy-1">Quantity (Buy 1)</label><input id="f-quantity-buy-1" type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
+          <div class="field"><label for="f-price-per-share-buy-1">Price per Share (Buy 1)</label><input id="f-price-per-share-buy-1" type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 240.50"></div>
           <button type="button" class="leg-remove" aria-label="Remove this buy" style="visibility:hidden;">&times;</button>
         </div>
         <div class="leg-row">
-          <div class="field"><label>Quantity (Buy 2)</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
-          <div class="field"><label>Price per Share (Buy 2)</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 198.75"></div>
+          <div class="field"><label for="f-quantity-buy-2">Quantity (Buy 2)</label><input id="f-quantity-buy-2" type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>
+          <div class="field"><label for="f-price-per-share-buy-2">Price per Share (Buy 2)</label><input id="f-price-per-share-buy-2" type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 198.75"></div>
           <button type="button" class="leg-remove" aria-label="Remove this buy">&times;</button>
         </div>
       </div>
@@ -297,7 +298,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
         <button type="button" class="btn btn-outline-gold" id="add-leg">+ Add Another Buy</button>
       </div>
       <div class="field" style="margin-top:24px;">
-        <label>Current Market Price (optional)</label>
+        <label for="cmp">Current Market Price (optional)</label>
         <input type="number" id="cmp" min="0" step="0.01" placeholder="e.g. 210.00">
         <div class="hint">Add this to see your unrealised profit or loss at the current price.</div>
       </div>
@@ -433,8 +434,8 @@ Array.prototype.forEach.call(legsWrap.querySelectorAll('.leg-remove'), bindRemov
 function makeRow(n){
   var row = document.createElement('div');
   row.className = 'leg-row';
-  row.innerHTML = '<div class="field"><label>Quantity (Buy '+n+')</label><input type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>'+
-    '<div class="field"><label>Price per Share (Buy '+n+')</label><input type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 200"></div>'+
+  row.innerHTML = '<div class="field"><label for="f-quantity-buy-n">Quantity (Buy '+n+')</label><input id="f-quantity-buy-n" type="number" class="leg-qty" min="0" step="1" placeholder="e.g. 50"></div>'+
+    '<div class="field"><label for="f-price-per-share-buy-n">Price per Share (Buy '+n+')</label><input id="f-price-per-share-buy-n" type="number" class="leg-price" min="0" step="0.01" placeholder="e.g. 200"></div>'+
     '<button type="button" class="leg-remove" aria-label="Remove this buy">&times;</button>';
   bindRemove(row.querySelector('.leg-remove'));
   return row;

@@ -1,151 +1,179 @@
 {
-  "updated": "2026-11-10T17:32:21.920537Z",
+  "updated": "2026-11-11T11:28:20.557607Z",
   "rows": [
     {
-      "date": "10-Nov-2026 21:04:34",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "11-Nov-2026 16:51:02",
+      "company": "eClerx Services Ltd",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261111_165102768",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 21:03:59",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "11-Nov-2026 16:19:09",
+      "company": "GRAVITA INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20261111_161909",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 21:03:43",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 21:03:03",
-      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 19:42:52",
-      "company": "BHAGIRADHA CHEMICALS & INDUSTRIES LIMITED",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "BHAGCHEM|BHAGIRADHA CHEMICALS & INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_19102_WebX",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:11:29",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:58:09",
-      "company": "Hindcon Chemicals Limited",
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 15:47:58",
-      "company": "HCL Technologies Limited",
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HCLTECH|HCL Technologies Limited|Original|Regulation 7 (2)|IT_1828_WebXMLFile_20261110_154",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
       "quantity": "\u2014"
     },
     {
-      "date": "10-Nov-2026 14:56:41",
-      "company": "SINCLAIRS HOTELS LIMITED",
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "SINCLAIR|SINCLAIRS HOTELS LIMITED|Original|Regulation 7 (2)|IT_22933_WebXMLFile_20261110_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "11-Nov-2026 16:08:04",
+      "company": "Geekay Wires Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_160",
       "quantity": "\u2014"
     }
   ],

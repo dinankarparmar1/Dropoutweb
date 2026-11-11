@@ -366,6 +366,11 @@
   .ai-foot button:disabled{opacity:.5;cursor:default;}
   .ai-disclaimer{position:relative;padding:6px 16px 10px;font-size:9.5px;line-height:1.5;color:#6f6c66;text-align:center;}
   @media (max-width:480px){.ai-panel{left:14px;right:14px;width:auto;bottom:90px;}.ai-fab{left:16px;bottom:16px;}}
+  /* iPhone zooms the whole page when a text box under 16px gets focus */
+  @media (max-width:900px){.ai-foot input[type=text]{font-size:16px;}}
+  /* keyboard open on a phone: panel fills the visible area above the keyboard */
+  .ai-panel.kb{transition:none;transform:none;border-radius:16px;}
+  .ai-panel.kb .ai-orb-stage,.ai-panel.kb .ai-disclaimer{display:none;}
   `;
 
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
@@ -814,15 +819,40 @@
       panel.classList.toggle("open");
       const isOpen = panel.classList.contains("open");
       if (isOpen) {
-        input.focus();
+        if (window.matchMedia("(hover: hover)").matches) input.focus();  // desktop only; on phones let the user tap
+        fitPanel();
         ensureStageOrb().then((orb) => { orb.start(); orb.resize(); });
       } else {
         if (stageOrb) stageOrb.stop();
         if (isRecording) stopRecording();
       }
     });
+    // Keep the panel inside the part of the screen the phone keyboard leaves visible
+    function fitPanel() {
+      const vv = window.visualViewport;
+      const small = window.innerWidth <= 480;
+      const kb = !!(vv && small && panel.classList.contains("open") && (window.innerHeight - vv.height) > 120);
+      panel.classList.toggle("kb", kb);
+      if (kb) {
+        panel.style.top = (vv.offsetTop + 8) + "px";
+        panel.style.bottom = "auto";
+        panel.style.height = (vv.height - 16) + "px";
+        panel.style.maxHeight = "none";
+        body.scrollTop = body.scrollHeight;
+      } else {
+        panel.style.top = panel.style.bottom = panel.style.height = panel.style.maxHeight = "";
+      }
+    }
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", fitPanel);
+      window.visualViewport.addEventListener("scroll", fitPanel);
+    }
+    input.addEventListener("focus", () => setTimeout(fitPanel, 300));
+    input.addEventListener("blur", () => setTimeout(fitPanel, 300));
+
     closeBtn.addEventListener("click", () => {
       panel.classList.remove("open");
+      fitPanel();
       if (isRecording) stopRecording();
     });
 

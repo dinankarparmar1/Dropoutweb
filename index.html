@@ -203,6 +203,47 @@ html,body{overflow-x:clip}
 
 <style>/* logo emblem inside the round logo mark */.logo-mark{overflow:hidden;background:#0e0d0c;padding:0}.logo-mark img{width:100%;height:100%;object-fit:cover;display:block}</style>
 <style>/* iPhone zooms the page when a field under 16px is focused */@media (max-width:900px){input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),select,textarea{font-size:16px!important}}</style>
+<style>/* ===== Demo form ===== */
+.df{padding:34px 34px 30px;position:relative}
+.df-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}
+.df-head h3{margin:0;font-family:'Playfair Display',serif;font-size:22px;color:var(--white)}
+.df-badge{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--panel-border);border-radius:99px;padding:5px 11px}
+.df .field label,.df legend{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;display:block;padding:0}
+.df .field label i,.df legend i{color:var(--gold);font-style:normal}
+.df legend em,.df summary em{text-transform:none;letter-spacing:0;font-style:normal;color:var(--muted-dim)}
+.df-set{border:0;margin:0 0 20px;padding:0;min-width:0}
+.df-phone{display:flex;align-items:stretch;border:1px solid var(--panel-border);border-radius:9px;background:rgba(255,255,255,0.03);overflow:hidden;transition:border-color .3s}
+.df-phone:focus-within{border-color:var(--gold);background:rgba(212,175,55,0.05)}
+.df-phone span{display:flex;align-items:center;padding:0 12px;color:var(--gold-bright);font-weight:600;border-right:1px solid var(--panel-border);font-size:15px}
+.df-phone input{border:0!important;background:transparent!important;border-radius:0!important;letter-spacing:.04em}
+.df-chips{display:flex;flex-wrap:wrap;gap:8px}
+.df-chip{position:relative;cursor:pointer;margin:0!important;text-transform:none!important;letter-spacing:0!important}
+.df-chip input{position:absolute;opacity:0;width:1px;height:1px}
+.df-chip span{display:inline-flex;align-items:center;min-height:42px;padding:9px 15px;border-radius:99px;border:1px solid var(--panel-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;transition:all .2s}
+.df-chip.df-sm span{min-height:38px;padding:7px 14px;font-size:13.5px}
+.df-chip:hover span{border-color:var(--gold)}
+.df-chip input:checked+span{background:linear-gradient(135deg,#f3d576,#d4af37);color:#1a1305;border-color:transparent;font-weight:600}
+.df-chip input:focus-visible+span{outline:2px solid var(--gold-bright);outline-offset:2px}
+.df-err{display:block;min-height:0;color:#ff7a66;font-size:12.5px;margin-top:6px}
+.df-err:empty{display:none}
+.df .bad input,.df .bad .df-phone{border-color:#ff7a66!important}
+.df-more{margin:0 0 20px;border-top:1px solid var(--panel-border);padding-top:14px}
+.df-more summary{cursor:pointer;color:var(--gold-bright);font-size:14px;list-style:none}
+.df-more summary::-webkit-details-marker{display:none}
+.df-more summary:before{content:"+ ";font-weight:700}
+.df-more[open] summary:before{content:"− "}
+.df-submit{width:100%;justify-content:center;min-height:54px;font-size:15.5px}
+.df-note{margin:12px 0 0;font-size:12.5px;color:var(--muted-dim);text-align:center}
+.df-done{position:absolute;inset:0;border-radius:inherit;background:rgba(10,10,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;z-index:2}
+.df-done[hidden]{display:none}
+/* phones: floating buttons hide while the form is on screen so they don't cover it */
+@media(max-width:760px){body.df-in-view .fab-col,body.df-in-view .ai-fab{opacity:0;pointer-events:none;transition:opacity .25s}}
+.df-tick{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:700;color:#1a1305;background:linear-gradient(135deg,#f3d576,#d4af37);box-shadow:0 0 40px rgba(212,175,55,.4);margin-bottom:16px}
+.df-done h3{margin:0 0 8px;font-family:'Playfair Display',serif;font-size:26px;color:var(--white)}
+.df-done p{margin:0 0 8px;color:var(--muted);max-width:340px}.df-done b{color:var(--gold-bright)}
+.df-alt{font-size:13.5px}.df-alt a{color:var(--gold-bright);text-decoration:underline}
+@media(max-width:600px){.df{padding:24px 18px 22px}.df-head h3{font-size:20px}}
+</style>
 </head>
 <body>
 
@@ -522,35 +563,39 @@ html,body{overflow-x:clip}
 <section id="contact">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Get In Touch</div>
-      <h2>Start your <span class="accent">trading</span> journey</h2>
-      <p>Send an enquiry and the team will get back to you — or reach out directly on WhatsApp or email.</p>
+      <div class="eyebrow">Free Demo Class</div>
+      <h2>Book your <span class="accent">free demo</span></h2>
+      <p>Fill 3 quick details and send them on WhatsApp. No payment needed.</p>
     </div>
     <div class="contact-grid">
-      <form class="glass reveal" id="enquiry-form" style="padding:40px;">
+      <form class="glass reveal df" id="enquiry-form" novalidate>
+        <div class="df-head"><h3>Your details</h3><span class="df-badge">Takes 30 sec</span></div>
+
         <div class="form-row">
-          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" required placeholder="Your full name" autocomplete="name"></div>
-          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" required placeholder="+91 00000 00000" autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="f-name">Your name <i>*</i></label><input id="f-name" type="text" name="name" required placeholder="e.g. Rahul Sharma" autocomplete="name" autocapitalize="words" enterkeyhint="next"><small class="df-err" id="e-name"></small></div>
+          <div class="field"><label for="f-phone">WhatsApp number <i>*</i></label>
+            <div class="df-phone"><span>+91</span><input id="f-phone" type="tel" name="phone" required placeholder="98765 43210" autocomplete="tel-national" inputmode="numeric" maxlength="16" enterkeyhint="next"></div>
+            <small class="df-err" id="e-phone"></small></div>
         </div>
-        <div class="form-row">
-          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required placeholder="you@email.com" autocomplete="email"></div>
-          <div class="field">
-            <label for="f-course">Course</label>
-            <select id="f-course" name="course" required>
-              <option value="">Select a course</option>
-              <option>Stock Market</option>
-              <option>Forex Trading</option>
-              <option>Gold Trading</option>
-              <option>Crypto Trading</option>
-              <option>Price Action</option>
-              <option>Liquidity &amp; Smart Money Concepts</option>
-              <option>Risk Management</option>
-            </select>
-          </div>
+
+        <fieldset class="field df-set"><legend>What do you want to learn? <i>*</i></legend><div class="df-chips"><label class="df-chip"><input type="radio" name="course" value="Stock Market" required><span>Stock Market</span></label><label class="df-chip"><input type="radio" name="course" value="Forex Trading" required><span>Forex Trading</span></label><label class="df-chip"><input type="radio" name="course" value="Gold Trading" required><span>Gold Trading</span></label><label class="df-chip"><input type="radio" name="course" value="Crypto Trading" required><span>Crypto Trading</span></label><label class="df-chip"><input type="radio" name="course" value="Price Action" required><span>Price Action</span></label><label class="df-chip"><input type="radio" name="course" value="Liquidity &amp; Smart Money Concepts" required><span>Liquidity &amp; Smart Money Concepts</span></label><label class="df-chip"><input type="radio" name="course" value="Risk Management" required><span>Risk Management</span></label><label class="df-chip"><input type="radio" name="course" value="Not sure yet" required><span>Not sure yet</span></label></div><small class="df-err" id="e-course"></small></fieldset>
+
+        <fieldset class="field df-set"><legend>Best time for your demo <em>(optional)</em></legend><div class="df-chips"><label class="df-chip df-sm"><input type="radio" name="time" value="Morning"><span>Morning</span></label><label class="df-chip df-sm"><input type="radio" name="time" value="Afternoon"><span>Afternoon</span></label><label class="df-chip df-sm"><input type="radio" name="time" value="Evening"><span>Evening</span></label><label class="df-chip df-sm"><input type="radio" name="time" value="Any time"><span>Any time</span></label></div></fieldset>
+
+        <details class="df-more"><summary>Add email or a message <em>(optional)</em></summary>
+          <div class="field" style="margin-top:14px"><label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email"><small class="df-err" id="e-email"></small></div>
+          <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" rows="3" placeholder="e.g. I'm a complete beginner, is weekend batch available?"></textarea></div>
+        </details>
+
+        <button type="submit" class="btn btn-gold df-submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Book Free Demo on WhatsApp</button>
+        <p class="df-note">No payment needed. Your details are only used to contact you about the demo.</p>
+
+        <div class="df-done" id="df-done" hidden>
+          <div class="df-tick">✓</div>
+          <h3>Almost done!</h3>
+          <p>WhatsApp has opened with your details. <b>Tap Send</b> there to confirm your free demo.</p>
+          <p class="df-alt">WhatsApp didn't open? <a href="#" id="df-retry">Try again</a> · <a href="#" id="form-email">Send by email</a></p>
         </div>
-        <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" placeholder="Tell us what you'd like to learn..."></textarea></div>
-        <button type="submit" class="btn btn-gold" style="width:100%;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Send on WhatsApp</button>
-        <p id="form-note" style="margin-top:14px; font-size:13px; color:var(--muted-dim);">Opens WhatsApp with your details filled in. Prefer email? <a href="#" id="form-email" style="color:var(--gold-bright); text-decoration:underline;">Send by email instead</a></p>
       </form>
 
       <div>
@@ -570,8 +615,6 @@ html,body{overflow-x:clip}
           <div class="social-row">
             <a href="https://www.instagram.com/dinankar09?igsh=MTY4YXN4dzhxMm03NQ%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
             <a href="https://youtube.com/@dropouttraderdev?feature=shared" target="_blank" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3z"/></svg></a>
-            <a href="#" aria-label="Twitter/X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
-            <a href="#" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 4L2 11l6 2m13-9L11 20l-3-7m13-9L8 13"/></svg></a>
           </div>
         </div>
         <div class="glass reveal" style="margin-top:22px; padding:26px 30px; text-align:center;">
@@ -796,25 +839,47 @@ function animateCounter(el){
    CONTACT FORM -> mailto
 --------------------------------------------------------------- */
 var form = document.getElementById('enquiry-form');
+var WA_NUMBER = '917747901709';
+function dfErr(id,msg){var e=document.getElementById('e-'+id);if(e)e.textContent=msg||'';var f=e&&e.closest('.field');if(f)f.classList.toggle('bad',!!msg);}
+function dfRead(){
+  var d=new FormData(form),out={name:(d.get('name')||'').trim(),phone:dfDigits(d.get('phone')||''),course:d.get('course')||'',time:d.get('time')||'',email:(d.get('email')||'').trim(),message:(d.get('message')||'').trim()};
+  return out;
+}
+function dfValid(v){
+  var ok=true,first=null;
+  function bad(id,msg,el){dfErr(id,msg);if(msg){ok=false;first=first||el;}}
+  bad('name',v.name.length<2?'Please enter your name.':'',document.getElementById('f-name'));
+  bad('phone',!/^[6-9]\d{9}$/.test(v.phone)?'Enter a 10-digit mobile number (WhatsApp).':'',document.getElementById('f-phone'));
+  bad('course',!v.course?'Pick one option.':'',form.querySelector('input[name=course]'));
+  bad('email',v.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)?'This email looks incomplete.':'',document.getElementById('f-email'));
+  if(first){first.focus({preventScroll:true});first.scrollIntoView({block:'center',behavior:'smooth'});}
+  return ok;
+}
+function dfWaLink(v){
+  var t='Hi Dinankar, I want to book a free demo class.\n\nName: '+v.name+'\nWhatsApp: +91 '+v.phone+'\nCourse: '+v.course+(v.time?'\nBest time: '+v.time:'')+(v.email?'\nEmail: '+v.email:'')+(v.message?'\n\n'+v.message:'');
+  return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(t);
+}
+// live-format the phone as 98765 43210 and clear errors while typing
+function dfDigits(x){var d=String(x).replace(/\D/g,'');if(d.length>10&&d.slice(0,2)==='91')d=d.slice(2);else if(d.length>10&&d[0]==='0')d=d.slice(1);return d.slice(0,10);}
+document.getElementById('f-phone').addEventListener('input',function(){var d=dfDigits(this.value);this.value=d.length>5?d.slice(0,5)+' '+d.slice(5):d;dfErr('phone','');});
+document.getElementById('f-name').addEventListener('input',function(){dfErr('name','');});
+form.addEventListener('change',function(e){if(e.target.name==='course')dfErr('course','');});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){document.body.classList.toggle('df-in-view',es[0].isIntersecting);},{threshold:0.15}).observe(form);}
 form.addEventListener('submit', function(e){
   e.preventDefault();
-  var data = new FormData(form);
-  var name = data.get('name'), phone = data.get('phone'), email = data.get('email'),
-      course = data.get('course'), message = data.get('message');
-  var subject = encodeURIComponent('Course Enquiry — ' + course);
-  var body = encodeURIComponent(
-    'Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nCourse: '+course+'\n\nMessage:\n'+(message||'-')
-  );
-  var wa = 'Hi Dinankar, I want to book a free demo.\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nCourse: '+course+(message ? '\n\n'+message : '');
-  window.open('https://wa.me/917747901709?text='+encodeURIComponent(wa), '_blank', 'noopener');
+  var v=dfRead(); if(!dfValid(v)) return;
+  var link=dfWaLink(v);
+  window.open(link,'_blank','noopener');
+  var done=document.getElementById('df-done');done.hidden=false;form.scrollIntoView({block:'center',behavior:'smooth'});
+  document.getElementById('df-retry').onclick=function(ev){ev.preventDefault();window.location.href=link;};
+  try{ if(window.gtag) gtag('event','generate_lead',{method:'whatsapp',course:v.course}); }catch(_){}
 });
 // Email fallback for people who don't use WhatsApp
 document.getElementById('form-email').addEventListener('click', function(e){
   e.preventDefault();
-  if(!form.reportValidity()) return;
-  var d = new FormData(form);
-  var subject = encodeURIComponent('Course Enquiry — ' + d.get('course'));
-  var body = encodeURIComponent('Name: '+d.get('name')+'\nPhone: '+d.get('phone')+'\nEmail: '+d.get('email')+'\nCourse: '+d.get('course')+'\n\nMessage:\n'+(d.get('message')||'-'));
+  var v=dfRead();
+  var subject = encodeURIComponent('Free demo request — ' + (v.course||'Course'));
+  var body = encodeURIComponent('Name: '+v.name+'\nWhatsApp: +91 '+v.phone+'\nCourse: '+v.course+(v.time?'\nBest time: '+v.time:'')+'\nEmail: '+(v.email||'-')+'\n\nMessage:\n'+(v.message||'-'));
   window.location.href = 'mailto:dinankar@dropouttraders.in?subject='+subject+'&body='+body;
 });
 

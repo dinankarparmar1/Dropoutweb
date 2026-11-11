@@ -60,10 +60,9 @@
 <meta name="theme-color" content="#07070a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
 <!-- Three.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -122,6 +121,78 @@
 .tradingview-widget-copyright a:hover .blue-text{color:#d4af37!important}
 /* Charts are view-only: tapping them does not open TradingView */
 .tradingview-widget-container iframe,.tradingview-widget-copyright a{pointer-events:none!important;cursor:default!important}
+</style>
+<style>/* ===== Vault Stack scroll hero + cube finale ===== */
+.vs-pin{position:relative;height:280vh;padding:0;border-bottom:1px solid rgba(212,175,55,.12)}
+.vs-sticky{position:sticky;top:0;height:100vh;min-height:620px;overflow:hidden}
+.vs-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:20px;height:100%;align-items:center;padding-top:calc(var(--ticker-h,46px) + 70px)}
+.vs-copy,.vs-story{grid-column:1;grid-row:1;will-change:opacity,transform}
+.vs-meta{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#9b978d)}
+.vs-meta b{color:var(--gold)}
+.vs-h1{margin:18px 0 0;font-family:Inter,sans-serif;font-weight:800;font-size:clamp(44px,6.2vw,92px);line-height:.95;letter-spacing:-.045em;color:#f4f1e8}
+.vs-h1 em{font-style:normal;color:var(--gold);position:relative;white-space:nowrap}
+.vs-h1 em svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.3em;overflow:visible}
+.vs-lead{margin:26px 0 28px;max-width:480px;font-size:17px;line-height:1.6;color:#c8c4b8}
+.vs-lead b{color:#f4f1e8}
+.vs-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.vs-hand{font-family:Caveat,'Bradley Hand','Segoe Print',Georgia,cursive;font-style:italic;font-weight:700;color:var(--gold-bright);font-size:23px;transform:rotate(-4deg);margin-left:6px}
+.vs-copy .hero-links{justify-content:flex-start;margin-top:20px}
+.vs-nums{display:flex;gap:34px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(244,241,232,.11);font-size:13px;color:var(--muted,#9b978d)}
+.vs-nums b{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;color:#f4f1e8}
+.vs-story{opacity:0;pointer-events:none}
+.vs-story .vs-k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.vs-story p{margin:0;padding:16px 0;border-top:1px solid rgba(244,241,232,.11);font-family:Inter,sans-serif;font-size:clamp(20px,2.2vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.2;color:#f4f1e8;opacity:.12;transform:translateY(14px);transition:opacity .45s,transform .45s}
+.vs-story p.on{opacity:1;transform:none}.vs-story p b{color:var(--gold)}
+.vs-stage{grid-column:2;grid-row:1;position:relative;height:640px;margin-right:-60px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.vs-glow{position:absolute;left:50%;top:50%;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;background:radial-gradient(circle,rgba(220,130,40,.20),rgba(212,120,30,.06) 45%,transparent 70%);filter:blur(10px)}
+.vs-scene{position:absolute;inset:0;perspective:1150px;perspective-origin:50% 46%}
+.vs-tower,.vs-blk{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
+.vs-f{position:absolute;left:0;top:0;backface-visibility:hidden;filter:brightness(var(--l,1));overflow:hidden;display:grid;place-items:center;
+  background:repeating-linear-gradient(90deg,#2e2e33 0 9px,#121214 9px 12px,#45454b 12px 13px,#1f1f23 13px 24px),#1c1c1f;box-shadow:inset 0 0 0 2px #0a0a0b,inset 0 0 40px rgba(0,0,0,.55)}
+.vs-f:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.20) 50%,transparent 62%);background-size:320% 100%;background-position:var(--s,50%) 0;mix-blend-mode:screen;pointer-events:none}
+.vs-f.cap{background:repeating-linear-gradient(0deg,#242427 0 10px,#18181a 10px 12px),#1e1e21}
+.vs-f.door{background:repeating-linear-gradient(90deg,#d9772a 0 12px,#9c4a12 12px 15px,#f0a050 15px 16px,#c0601c 16px 30px),#c96a22;box-shadow:inset 0 0 0 3px #4a2208,inset 0 0 36px rgba(60,20,0,.55)}
+.vs-f.lab span{position:relative;font:900 84px/1 'Arial Black',Inter,Helvetica,Arial,sans-serif;letter-spacing:-.02em;color:#d9d6ce;transform:scaleY(1.08);text-shadow:0 2px 0 #000,0 -1px 0 rgba(255,255,255,.35),0 0 26px rgba(0,0,0,.6);white-space:nowrap}
+.vs-blk:nth-child(6) .vs-f.lab span{font-size:70px}
+.vs-orb{position:absolute;left:-34px;top:-34px;width:68px;height:68px;border-radius:50%;
+  background:radial-gradient(circle at 34% 28%,#fff 0,#fff1d0 7%,#f6c56a 20%,#c9771f 46%,#3a1c05 80%,#100702 100%);
+  box-shadow:0 0 30px 8px rgba(255,190,90,.55),0 0 110px 40px rgba(230,130,40,.25),inset -7px -9px 14px rgba(0,0,0,.55)}
+.vs-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted,#9b978d);display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .4s}
+.vs-hint span{width:22px;height:34px;border:1.5px solid currentColor;border-radius:12px;position:relative}
+.vs-hint span:after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:vsh 1.6s infinite}
+@keyframes vsh{60%{transform:translateY(9px);opacity:0}}
+/* cube finale */
+.vs-pin2{height:240vh;background:radial-gradient(700px 400px at 50% 60%,rgba(212,140,40,.07),transparent 70%)}
+.vs-cscene{position:absolute;left:50%;top:44%;width:0;height:0;perspective:1000px}
+.vs-cube{position:absolute;left:-110px;top:-110px;width:220px;height:220px;transform-style:preserve-3d}
+.vs-cf{position:absolute;inset:0;border:1.5px solid rgba(243,213,118,var(--e,.25));background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.01));box-shadow:inset 0 0 calc(var(--g,0)*60px) rgba(243,190,90,calc(var(--g,0)*.55)),0 0 calc(var(--g,0)*40px) rgba(243,190,90,calc(var(--g,0)*.35))}
+.vs-c1{transform:translateZ(110px)}.vs-c2{transform:rotateY(180deg) translateZ(110px)}.vs-c3{transform:rotateY(90deg) translateZ(110px)}.vs-c4{transform:rotateY(-90deg) translateZ(110px)}.vs-c5{transform:rotateX(90deg) translateZ(110px)}.vs-c6{transform:rotateX(-90deg) translateZ(110px)}
+.vs-ball{position:absolute;left:-46px;top:-46px;width:92px;height:92px;border-radius:50%;
+  background:radial-gradient(circle at 34% 28%,#fff 0,#fff1d0 7%,#f6c56a 20%,#c9771f 46%,#3a1c05 80%,#100702 100%);
+  box-shadow:0 0 30px 8px rgba(255,190,90,.5),0 0 120px 50px rgba(230,130,40,.22),inset -8px -10px 16px rgba(0,0,0,.55)}
+.vs-cglow{position:absolute;left:-260px;top:-260px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(243,190,90,.35),transparent 65%);opacity:0;pointer-events:none}
+.vs-ccopy{position:absolute;left:0;right:0;bottom:9%;text-align:center;opacity:0;transform:translateY(20px);padding:0 20px}
+.vs-ccopy .vs-k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.vs-ccopy h2{margin:10px 0 0;font-family:Inter,sans-serif;font-weight:800;font-size:clamp(36px,5.4vw,74px);line-height:.98;letter-spacing:-.04em;color:#f4f1e8}
+.vs-ccopy h2 em{font-style:normal;color:var(--gold)}.vs-ccopy .btn{margin-top:24px}
+.vs-ccopy .vs-hand{display:block;margin:14px 0 0;transform:rotate(-2deg)}
+@media(max-width:900px){
+  .vs-grid{grid-template-columns:1fr;align-items:start;padding-top:calc(var(--ticker-h,46px) + 84px)}
+  .vs-stage{grid-column:1;position:absolute;left:-20px;right:-20px;top:auto;bottom:-30px;height:56%;margin:0;z-index:0}
+  .vs-copy,.vs-story{position:relative;z-index:1}
+  .vs-lead{margin:16px 0 18px;font-size:16px}.vs-nums,.vs-copy .hero-links,.vs-cta .vs-hand{display:none}
+  .vs-cta .btn{padding:13px 20px}
+  .vs-story p{font-size:21px;padding:12px 0}
+  .vs-glow{width:380px;height:380px;margin:-190px 0 0 -190px}
+  .vs-cube{left:-80px;top:-80px;width:160px;height:160px}
+  .vs-c1{transform:translateZ(80px)}.vs-c2{transform:rotateY(180deg) translateZ(80px)}.vs-c3{transform:rotateY(90deg) translateZ(80px)}.vs-c4{transform:rotateY(-90deg) translateZ(80px)}.vs-c5{transform:rotateX(90deg) translateZ(80px)}.vs-c6{transform:rotateX(-90deg) translateZ(80px)}
+  .vs-ball{left:-34px;top:-34px;width:68px;height:68px}
+}
+/* overflow-x:hidden on both html and body turns body into a scroll box and breaks position:sticky; clip hides sideways overflow the same way without that */
+html,body{overflow-x:clip}
+/* About photo collapsed to ~0px on phones/tablets; give it a real width */
+@media(max-width:1080px){.about-photo{width:100%}}
+@media(prefers-reduced-motion:reduce){.vs-pin,.vs-pin2{height:auto}.vs-sticky{position:relative;height:auto;min-height:0}.vs-grid{height:auto;padding-bottom:40px}.vs-stage{height:420px}.vs-story,.vs-hint{display:none}.vs-pin2 .vs-sticky{height:560px}.vs-ccopy{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -199,27 +270,35 @@
   <a href="#contact">Contact Us</a>
 </div>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-content container">
-    <div class="hero-eyebrow">Learn · Analyze · Grow</div>
-    <h1>Dinankar Dev Parmar</h1>
-    <div class="hero-role">Founder &amp; CEO, <b style="color:var(--gold-bright)">Dropout Traders</b></div>
-    <div class="hero-tagline">Master Stocks · Forex · Gold · Crypto</div>
-    <div class="hero-sub">Structured Learning — Practical Analysis — Disciplined Risk</div>
-    <div class="hero-btns">
-      <a href="courses.html" class="btn btn-gold">Explore Courses</a>
-      <a href="#contact" class="btn btn-outline-gold">Book Free Demo</a>
+<!-- ============ HERO: Vault Stack (scroll-driven) ============ -->
+<section class="vs-pin" id="home">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="vs-rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></svg>
+  <div class="vs-sticky"><div class="container vs-grid">
+    <div class="vs-copy" id="vs-copy">
+      <div class="vs-meta"><b>01</b> — Stocks · Forex · Gold · Crypto</div>
+      <h1 class="vs-h1">Trade with <em>discipline.<svg viewBox="0 0 400 30" preserveAspectRatio="none" fill="none" stroke="#f3d576" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path filter="url(#vs-rough)" d="M4 16C80 6 170 24 250 12s110 0 146 6"/></svg></em><br>Not luck.</h1>
+      <p class="vs-lead">Structured courses, live classes and risk-first analysis from <b>Dinankar Dev Parmar</b>, NISM-certified founder of Dropout Traders.</p>
+      <div class="vs-cta"><a href="#contact" class="btn btn-gold">Book Free Demo →</a><a href="courses.html" class="btn btn-outline-gold">Explore Courses</a><span class="vs-hand">← start here, it's free</span></div>
+      <div class="hero-links">
+        <a href="market-intelligence.html">Market Intelligence</a><span aria-hidden="true">·</span>
+        <a href="#market-analysis">Market Analysis</a><span aria-hidden="true">·</span>
+        <a href="#" data-modal="calculators">Calculators</a><span aria-hidden="true">·</span>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="vs-nums"><div><b>200+</b>Students trained</div><div><b>480+</b>Live sessions</div><div><b>3000+</b>Community</div></div>
     </div>
-    <div class="hero-links">
-      <a href="market-intelligence.html">Market Intelligence</a><span aria-hidden="true">·</span>
-      <a href="#market-analysis">Market Analysis</a><span aria-hidden="true">·</span>
-      <a href="#" data-modal="calculators">Calculators</a><span aria-hidden="true">·</span>
-      <a href="dashboard.html">Dashboard</a>
+    <div class="vs-story" id="vs-story" aria-hidden="true">
+      <div class="vs-k">For new traders</div>
+      <p>Learn price action from <b>scratch</b>.</p>
+      <p>Risk first: never more than <b>1%</b> a trade.</p>
+      <p><b>Live classes</b> every day, with a real mentor.</p>
+      <p>Practise in the <b>simulator</b> before real money.</p>
     </div>
-  </div>
-  <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
+    <div class="vs-stage" id="vs-stage" role="img" aria-label="Rotating 3D stack of metal containers labelled GOLD, NIFTY, BTC, USD, FOREX and SENSEX, with a glowing gold ball climbing around them">
+      <div class="vs-glow"></div>
+      <div class="vs-scene"><div class="vs-tower" id="vs-tower"><div class="vs-orb" id="vs-orb"></div></div></div>
+    </div>
+  </div><div class="vs-hint" id="vs-hint"><span></span>scroll</div></div>
 </section>
 
 <!-- ============ ABOUT ============ -->
@@ -227,7 +306,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-photo reveal">
-        <img src="/assets/img/founder.webp" alt="Dinankar Dev Parmar, Founder of Dropout Traders" width="727" height="1086" loading="lazy" decoding="async" style="display:block; position:absolute; inset:0; width:100%25; height:100%25; object-fit:cover;">
+        <img src="/assets/img/founder.webp" alt="Dinankar Dev Parmar, Founder of Dropout Traders" width="727" height="1086" loading="lazy" decoding="async" style="display:block; position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         <div class="frame-inner"></div>
         <div class="cap">Dinankar Dev Parmar — Founder, Dropout Traders</div>
       </div>
@@ -419,6 +498,18 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
+<!-- ============ CUBE FINALE (scroll-driven) ============ -->
+<section class="vs-pin vs-pin2" id="vs-finale" aria-label="Your journey starts here">
+  <div class="vs-sticky">
+    <div class="vs-cscene" aria-hidden="true">
+      <div class="vs-cube" id="vs-cube"><i class="vs-cf vs-c1"></i><i class="vs-cf vs-c2"></i><i class="vs-cf vs-c3"></i><i class="vs-cf vs-c4"></i><i class="vs-cf vs-c5"></i><i class="vs-cf vs-c6"></i></div>
+      <div class="vs-ball" id="vs-ball"></div>
+      <div class="vs-cglow" id="vs-cglow"></div>
+    </div>
+    <div class="vs-ccopy" id="vs-ccopy"><div class="vs-k">Your move</div><h2>Your journey<br><em>starts here.</em></h2><a class="btn btn-gold" href="#contact">Book Your Free Demo →</a><span class="vs-hand">see you in class</span></div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="container">
     <div class="section-head reveal">
@@ -634,142 +725,16 @@ function setTickerOffset(){
 setTimeout(setTickerOffset, 800);
 window.addEventListener('resize', setTickerOffset);
 
-/* ---------------------------------------------------------------
-   THREE.JS HERO SCENE — golden globe + candlesticks + particles
---------------------------------------------------------------- */
-(function heroScene(){
-  var canvas = document.getElementById('hero-canvas');
-  if(!canvas || typeof THREE === 'undefined') return;
-  var heroEl = document.querySelector('.hero');
-  var w = heroEl.clientWidth, h = heroEl.clientHeight;
-
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(50, w/h, 0.1, 100);
-  camera.position.set(0, 0.4, 9);
-
-  var renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(w, h);
-  renderer.setClearColor(0x000000, 0);
-
-  var goldColor = 0xd4af37;
-  var goldBright = 0xf3d576;
-
-  /* Globe: wireframe icosahedron */
-  var globeGroup = new THREE.Group();
-  var geo = new THREE.IcosahedronGeometry(2.35, 2);
-  var wireGeo = new THREE.WireframeGeometry(geo);
-  var wireMat = new THREE.LineBasicMaterial({color:goldColor, transparent:true, opacity:0.55});
-  var wireframe = new THREE.LineSegments(wireGeo, wireMat);
-  globeGroup.add(wireframe);
-
-  var innerGeo = new THREE.IcosahedronGeometry(2.28, 1);
-  var innerMat = new THREE.MeshBasicMaterial({color:0x1a1508, transparent:true, opacity:0.35});
-  globeGroup.add(new THREE.Mesh(innerGeo, innerMat));
-
-  scene.add(globeGroup);
-
-  /* Candlesticks orbiting the globe */
-  var candleGroup = new THREE.Group();
-  var candles = [];
-  var CANDLE_COUNT = 26;
-  for(var i=0;i<CANDLE_COUNT;i++){
-    var bullish = Math.random() > 0.45;
-    var bodyH = 0.35 + Math.random()*0.55;
-    var color = bullish ? 0x4a9a76 : 0xb1594a;
-    var bodyGeo = new THREE.BoxGeometry(0.09, bodyH, 0.09);
-    var bodyMat = new THREE.MeshBasicMaterial({color:color, transparent:true, opacity:0.85});
-    var body = new THREE.Mesh(bodyGeo, bodyMat);
-
-    var wickGeo = new THREE.BoxGeometry(0.022, bodyH*1.7, 0.022);
-    var wickMat = new THREE.MeshBasicMaterial({color:color, transparent:true, opacity:0.55});
-    var wick = new THREE.Mesh(wickGeo, wickMat);
-
-    var pivot = new THREE.Group();
-    pivot.add(body); pivot.add(wick);
-
-    var radius = 3.1 + Math.random()*1.6;
-    var theta = Math.random()*Math.PI*2;
-    var phi = Math.acos((Math.random()*2)-1);
-    pivot.userData = {
-      radius: radius, theta: theta, phi: phi,
-      speed: 0.05 + Math.random()*0.12,
-      bob: Math.random()*Math.PI*2
-    };
-    candleGroup.add(pivot);
-    candles.push(pivot);
-  }
-  scene.add(candleGroup);
-
-  /* Particle starfield */
-  var starCount = 900;
-  var starGeo = new THREE.BufferGeometry();
-  var positions = new Float32Array(starCount*3);
-  for(var s=0; s<starCount; s++){
-    var r = 6 + Math.random()*22;
-    var th = Math.random()*Math.PI*2;
-    var ph = Math.acos((Math.random()*2)-1);
-    positions[s*3] = r*Math.sin(ph)*Math.cos(th);
-    positions[s*3+1] = r*Math.sin(ph)*Math.sin(th)*0.6;
-    positions[s*3+2] = r*Math.cos(ph);
-  }
-  starGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
-  var starMat = new THREE.PointsMaterial({color:0xf3d576, size:0.028, transparent:true, opacity:0.55});
-  var stars = new THREE.Points(starGeo, starMat);
-  scene.add(stars);
-
-  function placeCandle(pivot, t){
-    var u = pivot.userData;
-    var theta = u.theta + t*u.speed;
-    var x = u.radius * Math.sin(u.phi) * Math.cos(theta);
-    var y = u.radius * Math.cos(u.phi) * 0.85 + Math.sin(t*0.6+u.bob)*0.15;
-    var z = u.radius * Math.sin(u.phi) * Math.sin(theta);
-    pivot.position.set(x,y,z);
-    pivot.lookAt(camera.position);
-  }
-
-  var mouseX = 0, mouseY = 0;
-  window.addEventListener('mousemove', function(e){
-    mouseX = (e.clientX / window.innerWidth) - 0.5;
-    mouseY = (e.clientY / window.innerHeight) - 0.5;
-  });
-
-  var clock = new THREE.Clock();
-  var introDone = false;
-  window.playHeroIntroThree = function(){ introDone = true; };
-
-  function animate(){
-    requestAnimationFrame(animate);
-    var t = clock.getElapsedTime();
-    if(!reduceMotion){
-      globeGroup.rotation.y = t*0.08;
-      globeGroup.rotation.x = Math.sin(t*0.15)*0.06;
-      candles.forEach(function(pv){ placeCandle(pv, t); });
-      stars.rotation.y = t*0.01;
-
-      camera.position.x += ( (mouseX*1.4) - camera.position.x ) * 0.03;
-      camera.position.y += ( (0.4 - mouseY*1.0) - camera.position.y ) * 0.03;
-      camera.lookAt(0,0,0);
-    }
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', function(){
-    var w2 = heroEl.clientWidth, h2 = heroEl.clientHeight;
-    camera.aspect = w2/h2; camera.updateProjectionMatrix();
-    renderer.setSize(w2,h2);
-  });
-})();
+/* Hero 3D now lives in the Vault Stack script at the end of the page. */
 
 function playHeroIntro(){
   if(typeof gsap === 'undefined') return;
   gsap.timeline()
-    .from('.hero-eyebrow', {opacity:0, y:16, duration:.8, ease:'power3.out'})
-    .from('.hero h1', {opacity:0, y:34, duration:1, ease:'power3.out'}, '-=.55')
-    .from('.hero-role, .hero-tagline, .hero-sub', {opacity:0, y:16, duration:.8, stagger:.08, ease:'power3.out'}, '-=.5')
-    .from('.hero-btns .btn', {opacity:0, y:16, duration:.7, stagger:.1, ease:'power3.out'}, '-=.4')
-    .from('.scroll-cue', {opacity:0, duration:.6}, '-=.3');
+    .from('.vs-meta', {opacity:0, y:16, duration:.8, ease:'power3.out'})
+    .from('.vs-h1', {opacity:0, y:34, duration:1, ease:'power3.out'}, '-=.55')
+    .from('.vs-lead', {opacity:0, y:16, duration:.8, ease:'power3.out'}, '-=.5')
+    .from('.vs-cta > *', {opacity:0, y:16, duration:.7, stagger:.1, ease:'power3.out'}, '-=.4')
+    .from('.vs-stage', {opacity:0, duration:1.2}, '-=1');
 }
 
 /* ---------------------------------------------------------------
@@ -940,5 +905,72 @@ getDocs(collection(db, 'watchlist')).then(function(snap){
 </script>
 <script src="assets/js/ai-chat.js"></script>
 
+<script>
+/* Vault Stack hero + cube finale: CSS 3D driven by time and scroll. No libraries. */
+(function(){
+  var stage=document.getElementById('vs-stage'),tower=document.getElementById('vs-tower'),orb=document.getElementById('vs-orb');
+  if(!stage||!tower) return;
+  var LABELS=['GOLD','NIFTY','BTC','USD','FOREX','SENSEX','GOLD','BTC'];
+  var W=340,H=132,D=172,GAP=4,N=LABELS.length,STEP=H+GAP,TOTAL=N*STEP;
+  var yaw=[-22,30,-48,14,-30,52,-8,36],off=[[0,0],[28,-12],[-22,16],[16,8],[-26,-10],[12,14],[-14,4],[20,-6]],blocks=[];
+  function face(cls,w,h,tr,txt){var f=document.createElement('div');f.className='vs-f '+cls;f.style.cssText='width:'+w+'px;height:'+h+'px;margin:'+(-h/2)+'px 0 0 '+(-w/2)+'px;transform:'+tr;if(txt){var s=document.createElement('span');s.textContent=txt;f.appendChild(s);}return f;}
+  LABELS.forEach(function(t,i){
+    var b=document.createElement('div');b.className='vs-blk';
+    var fs=[
+      [face('lab',W,H,'translateZ('+D/2+'px)',t),0,0,1],[face('lab',W,H,'rotateY(180deg) translateZ('+D/2+'px)',t),0,0,-1],
+      [face('end door',D,H,'rotateY(90deg) translateZ('+W/2+'px)'),1,0,0],[face('end'+(i%2?' door':''),D,H,'rotateY(-90deg) translateZ('+W/2+'px)'),-1,0,0],
+      [face('cap',W,D,'rotateX(90deg) translateZ('+H/2+'px)'),0,-1,0],[face('cap',W,D,'rotateX(-90deg) translateZ('+H/2+'px)'),0,1,0]];
+    fs.forEach(function(x){b.appendChild(x[0]);});tower.appendChild(b);blocks.push({el:b,faces:fs,i:i});
+  });
+  var L=[-0.52,-0.55,0.65],ll=Math.hypot(L[0],L[1],L[2]);L=[L[0]/ll,L[1]/ll,L[2]/ll];
+  var ox=1,oz=0,oy=0,P=0,visible=true;
+  function frame(t){
+    var E=Math.max(0,Math.min(1,(P-0.12)/0.5)),E2=E*E*(3-2*E),spin=t*12+P*220,scroll=(t*30+P*900)%TOTAL,sc=(stage.clientWidth<560?0.58:0.92)*(1-E2*0.12);
+    tower.style.transform='scale('+sc+') rotateX(-9deg) rotateY('+spin+'deg)';
+    var CY=7.5,ph=P>0.01?Math.min(P/0.85,1):(t%CY)/CY,oa=t*1.15+P*9;
+    ox=Math.cos(oa);oz=Math.sin(oa);oy=300-ph*600;
+    var R=215+Math.sin(oa*2)*18;
+    orb.style.opacity=Math.min(1,ph*6,(1-ph)*(P>0.01?5:6)).toFixed(2);
+    orb.style.transform='translate3d('+(ox*R)+'px,'+oy+'px,'+(oz*R)+'px) rotateY('+(-spin)+'deg) rotateX(9deg)';
+    blocks.forEach(function(b){
+      var y=(((b.i*STEP+scroll)%TOTAL)-TOTAL/2+STEP/2)*(1+E2*0.55),a=yaw[b.i]+Math.sin(t*0.5+b.i)*6+E2*(b.i%2?38:-38),sx=E2*(b.i%2?70:-70);
+      b.el.style.transform='translate3d('+(off[b.i][0]+sx)+'px,'+y+'px,'+off[b.i][1]+'px) rotateY('+a+'deg)';
+      var ang=(a+spin)*Math.PI/180,c=Math.cos(ang),s=Math.sin(ang);
+      b.faces.forEach(function(f){
+        var nx=f[1]*c+f[3]*s,nz=-f[1]*s+f[3]*c,ny=f[2];
+        var lit=0.16+Math.max(nx*L[0]+ny*L[1]+nz*L[2],0)*1.15+0.75*Math.max(nx*ox+nz*oz,0)*Math.max(0,1-Math.abs(y-oy)/230);
+        f[0].style.setProperty('--l',lit.toFixed(3));f[0].style.setProperty('--s',(50+nx*140).toFixed(1)+'%');
+      });
+    });
+  }
+  var PIN=document.getElementById('home'),copy=document.getElementById('vs-copy'),story=document.getElementById('vs-story'),lines=story.querySelectorAll('p'),hint=document.getElementById('vs-hint');
+  var PIN2=document.getElementById('vs-finale'),cube=document.getElementById('vs-cube'),ball=document.getElementById('vs-ball'),cg=document.getElementById('vs-cglow'),cc=document.getElementById('vs-ccopy'),cfs=cube?cube.querySelectorAll('.vs-cf'):[];
+  function prog(el){var r=el.getBoundingClientRect(),run=el.offsetHeight-innerHeight;return Math.max(0,Math.min(1,-r.top/Math.max(run,1)));}
+  function cubeFrame(){
+    if(!PIN2) return;
+    var q=prog(PIN2),small=innerWidth<900,drop=Math.max(0,Math.min(1,q/0.55)),d=1-Math.pow(1-drop,3),g=Math.max(0,Math.min(1,(q-0.5)/0.2));
+    cube.style.transform='rotateX('+(-24+q*30)+'deg) rotateY('+(30+q*200)+'deg) scale('+(0.8+q*0.25)+')';
+    ball.style.transform='translate3d('+(Math.sin(q*9)*(1-d)*(small?60:140))+'px,'+((d-1)*(small?320:420))+'px,0) scale('+(0.7+d*0.3)+')';
+    ball.style.opacity=Math.min(1,q*8).toFixed(2);
+    for(var i=0;i<cfs.length;i++){cfs[i].style.setProperty('--g',g.toFixed(3));cfs[i].style.setProperty('--e',(0.25+g*0.65).toFixed(3));}
+    cg.style.opacity=(g*0.9).toFixed(3);
+    var c=Math.max(0,Math.min(1,(q-0.62)/0.18));cc.style.opacity=c.toFixed(3);cc.style.transform='translateY('+(20-c*20)+'px)';
+  }
+  function onScroll(){
+    P=prog(PIN);
+    var fo=Math.max(0,Math.min(1,(P-0.04)/0.14)),fi=Math.max(0,Math.min(1,(P-0.16)/0.12));
+    copy.style.opacity=(1-fo).toFixed(3);copy.style.transform='translateY('+(-fo*40)+'px)';copy.style.pointerEvents=fo>0.5?'none':'';
+    story.style.opacity=fi.toFixed(3);
+    for(var i=0;i<lines.length;i++) lines[i].classList.toggle('on',P>0.24+i*0.14);
+    hint.style.opacity=P>0.03?0:1;
+    cubeFrame();
+  }
+  window.__vsFrame=function(t){window.__vsManual=true;frame(t);};
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){frame(2.2);cubeFrame();return;}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+  new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(stage);
+  (function loop(ms){if(visible&&!window.__vsManual)frame(ms/1000);requestAnimationFrame(loop);})(0);
+})();
+</script>
 </body>
 </html>

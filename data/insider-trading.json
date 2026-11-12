@@ -1,179 +1,137 @@
 {
-  "updated": "2026-11-11T17:45:29.943744Z",
+  "updated": "2026-11-12T11:52:38.005984Z",
   "rows": [
     {
-      "date": "11-Nov-2026 22:21:07",
-      "company": "EMBASSY DEVELOPMENTS LIMITED",
+      "date": "12-Nov-2026 17:16:12",
+      "company": "SAJ HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "EMBDL|EMBASSY DEVELOPMENTS LIMITED|Original|Regulation 7 (2)|IT_2560_WebXMLFile_20261111_2",
+      "transactionType": "SAJHOTELS|SAJ HOTELS LIMITED|Original|Regulation 7 (2)|IT_23800_WebXMLFile_20261112_171612",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 21:03:04",
-      "company": "Parag Milk Foods Limited",
+      "date": "12-Nov-2026 17:14:41",
+      "company": "SAJ HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PARAGMILK|Parag Milk Foods Limited|Original|Regulation 7 (3)|IT_13816_WebXMLFile_20261111_",
+      "transactionType": "SAJHOTELS|SAJ HOTELS LIMITED|Original|Regulation 7 (2)|IT_23800_WebXMLFile_20261112_171441",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 20:54:10",
-      "company": "ASTRAL LIMITED",
+      "date": "12-Nov-2026 17:05:33",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "ASTRAL|ASTRAL LIMITED|Original|Regulation 7 (2)|IT_2559_WebXMLFile_20261111_205410804.xml|",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20261112_17",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 20:10:41",
-      "company": "Nintec Systems Limited",
+      "date": "12-Nov-2026 17:03:57",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "NINSYS|Nintec Systems Limited|Original|Regulation 7 (2)|IT_21310_WebXMLFile_20261111_20104",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20261112_17",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 18:53:49",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "12-Nov-2026 17:03:05",
+      "company": "V",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20261111",
+      "transactionType": "VGUARD|V-Guard Industries Limited|Original|Regulation 7 (2)|IT_2734_WebXMLFile_20261112_17",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 18:50:40",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "12-Nov-2026 17:03:01",
+      "company": "CHEMBOND MATERIAL TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20261111",
+      "transactionType": "CHEMBOND|CHEMBOND MATERIAL TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17634_WebXMLF",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 17:36:32",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "12-Nov-2026 16:52:50",
+      "company": "INDOCO REMEDIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261111_173",
+      "transactionType": "INDOCO|INDOCO REMEDIES LIMITED|Original|Regulation 7 (2)|IT_2257_WebXMLFile_20261112_16525",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 17:34:24",
-      "company": "INDOWIND ENERGY LIMITED",
+      "date": "12-Nov-2026 16:33:40",
+      "company": "THOMAS COOK  (INDIA)  LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOWIND|INDOWIND ENERGY LIMITED|Original|Regulation 7 (2)|IT_2653_WebXMLFile_20261111_173",
+      "transactionType": "THOMASCOOK|THOMAS COOK  (INDIA)  LIMITED|Original|Regulation 7 (2)|IT_602_WebXMLFile_20261",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 17:12:42",
-      "company": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED",
+      "date": "12-Nov-2026 16:10:47",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "PKTEA|THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED|Original|Regulation 7 (2)|IT_12988",
+      "transactionType": "GANDHAR|GANDHAR OIL REFINERY (INDIA) LIMITED|Original|Regulation 7 (2)|IT_21453_WebXMLFile",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:51:02",
-      "company": "eClerx Services Ltd",
+      "date": "12-Nov-2026 15:06:59",
+      "company": "Info Edge (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "ECLERX|eClerx Services Ltd|Original|Regulation 7 (2)|IT_2698_WebXMLFile_20261111_165102768",
+      "transactionType": "NAUKRI|Info Edge (India) Limited|Original|Regulation 7 (2)|IT_2460_WebXMLFile_20261112_150",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:19:09",
-      "company": "GRAVITA INDIA LIMITED",
+      "date": "12-Nov-2026 15:04:37",
+      "company": "Jayant Agro",
       "personCategory": "\u2014",
-      "transactionType": "GRAVITA|GRAVITA INDIA LIMITED|Original|Regulation 7 (2)|IT_3733_WebXMLFile_20261111_161909",
+      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 13:32:22",
+      "company": "FASCINATE TEXTILES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "FASCINATE|FASCINATE TEXTILES LIMITED|Original|Regulation 7 (2)|IT_27011_WebXMLFile_2026111",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 12:44:33",
+      "company": "SAJ HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "SAJHOTELS|SAJ HOTELS LIMITED|Original|Regulation 7 (2)|IT_23800_WebXMLFile_20261112_124433",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 12:42:48",
+      "company": "SAJ HOTELS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "SAJHOTELS|SAJ HOTELS LIMITED|Original|Regulation 7 (2)|IT_23800_WebXMLFile_20261112_124248",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 12:10:23",
+      "company": "KPIT TECHNOLOGIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "KPITTECH|KPIT TECHNOLOGIES LIMITED|Original|Regulation 7 (2)|IT_17417_WebXMLFile_20261112_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 12:01:04",
+      "company": "CLAY CRAFT INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "CLAYCRAFT|CLAY CRAFT INDIA LIMITED|Original|Regulation 7 (2)|IT_26836_WebXMLFile_20261112_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 11:53:58",
+      "company": "T.V. TODAY NETWORK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "TVTODAY|T.V. TODAY NETWORK LIMITED|Original|Regulation 7 (2)|IT_2166_WebXMLFile_20261112_1",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 10:57:23",
+      "company": "NCC Limited",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "NCC|NCC Limited|Original|Regulation 7 (2)|IT_917_WebXMLFile_20261112_105723336.xml|IT_917_",
       "quantity": "\u2014"
     },
     {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
+      "date": "12-Nov-2026 09:53:14",
+      "company": "Sangam (India) Limited",
       "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "11-Nov-2026 16:11:29",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261111_161",
+      "transactionType": "SANGAMIND|Sangam (India) Limited|Original|Regulation 7 (2)|IT_1381_WebXMLFile_20261112_095",
       "quantity": "\u2014"
     }
   ],

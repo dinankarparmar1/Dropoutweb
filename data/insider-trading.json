@@ -1,179 +1,179 @@
 {
-  "updated": "2026-11-13T11:43:05.815517Z",
+  "updated": "2026-11-13T17:33:33.994486Z",
   "rows": [
     {
-      "date": "13-Nov-2026 16:49:37",
-      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "date": "13-Nov-2026 20:33:12",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "INDOSTAR|INDOSTAR CAPITAL FINANCE LIMITED|Original|Regulation 7 (2)|IT_16166_WebXMLFile_20",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_20331192",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 16:49:01",
-      "company": "SMS PHARMACEUTICALS LIMITED",
+      "date": "13-Nov-2026 19:53:09",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "SMSPHARMA|SMS PHARMACEUTICALS LIMITED|Original|Regulation 7 (2)|IT_2539_WebXMLFile_2026111",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Revision|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_19530934",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 16:33:18",
-      "company": "Camlin Fine Sciences Limited",
+      "date": "13-Nov-2026 19:07:32",
+      "company": "STAR CEMENT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CAMLINFINE|Camlin Fine Sciences Limited|Original|Regulation 7 (2)|IT_11353_WebXMLFile_2026",
+      "transactionType": "STARCEMENT|STAR CEMENT LIMITED|Original|Regulation 7 (2)|IT_15239_WebXMLFile_20261113_1907",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 16:20:02",
-      "company": "JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED",
+      "date": "13-Nov-2026 18:25:00",
+      "company": "ASHIANA HOUSING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JARO|JARO INSTITUTE OF TECHNOLOGY MANAGEMENT AND RESEARCH LIMITED|Original|Regulation 7 (2",
+      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261113_1825",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 15:20:54",
-      "company": "Jayant Agro",
+      "date": "13-Nov-2026 18:18:41",
+      "company": "ASHIANA HOUSING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202611",
+      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261113_1818",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 15:17:46",
-      "company": "WEST COAST PAPER MILLS LIMITED",
+      "date": "13-Nov-2026 18:17:56",
+      "company": "JSW Energy Limited",
       "personCategory": "\u2014",
-      "transactionType": "WSTCSTPAPR|WEST COAST PAPER MILLS LIMITED|Original|Regulation 7 (2)|IT_991_WebXMLFile_2026",
+      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20261113_1817562",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 15:16:22",
-      "company": "KARUR VYSYA BANK LIMITED",
+      "date": "13-Nov-2026 18:11:13",
+      "company": "CHEMBOND CHEMICALS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261113_1",
+      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 15:13:48",
-      "company": "WEST COAST PAPER MILLS LIMITED",
+      "date": "13-Nov-2026 18:07:31",
+      "company": "NRB BEARING LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "WSTCSTPAPR|WEST COAST PAPER MILLS LIMITED|Original|Regulation 7 (2)|IT_991_WebXMLFile_2026",
+      "transactionType": "Pledge",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:51:40",
+      "company": "JUBILANT FOODWORKS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20261113_",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:39:38",
+      "company": "AVENUE SUPERMARTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:39:02",
+      "company": "360 ONE WAM LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_17390201",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 14:06:45",
-      "company": "Hindcon Chemicals Limited",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261113_1",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 12:54:54",
-      "company": "WESTLIFE FOODWORLD LIMITED",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "WESTLIFE|WESTLIFE FOODWORLD LIMITED|Original|Regulation 7 (2)|IT_17571_WebXMLFile_20261113",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 12:53:26",
-      "company": "LUX INDUSTRIES LIMITED",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "LUXIND|LUX INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13245_WebXMLFile_20261113_12532",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 12:49:30",
-      "company": "RAMKRISHNA FORGINGS LIMITED",
+      "date": "13-Nov-2026 17:35:52",
+      "company": "Geekay Wires Limited",
       "personCategory": "\u2014",
-      "transactionType": "RKFORGE|RAMKRISHNA FORGINGS LIMITED|Original|Regulation 7 (2)|IT_2188_WebXMLFile_20261113_",
+      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
       "quantity": "\u2014"
     }
   ],

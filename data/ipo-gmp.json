@@ -1,0 +1,6 @@
+{
+  "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA' (BSE-only SME IPOs), you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. 'extraIpos' is only for an IPO that neither NSE nor BSE lists -- same fields as data/ipo-details.json plus 'gmp'.",
+  "updated": null,
+  "gmp": {},
+  "extraIpos": []
+}

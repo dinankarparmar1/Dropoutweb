@@ -8,6 +8,7 @@ files that market-intelligence.html reads client-side:
   data/insider-trading.json
   data/market-breadth.json
   data/heatmap.json
+  data/ipo-details.json   (NSE + BSE IPO list for ipo-gmp.html -- see scripts/ipo_data.py)
 
 Run manually:
     python3 scripts/fetch_market_data.py --debug
@@ -61,6 +62,8 @@ from datetime import datetime, date, timedelta
 from pathlib import Path
 
 import requests
+
+from ipo_data import build_ipo_details
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -495,6 +498,15 @@ def main():
     except Exception as e:
         failures += 1
         print(f"Market breadth fetch failed, leaving last good file in place: {e}", file=sys.stderr)
+
+    # IPO details refresh on their own ~2-hourly clock (build_ipo_details
+    # returns None when it's not due), so they don't count towards `total`.
+    try:
+        ipo_payload = build_ipo_details(session, args.debug)
+        if ipo_payload is not None:
+            write_json("ipo-details.json", ipo_payload)
+    except Exception as e:
+        print(f"IPO details fetch failed, leaving last good file in place: {e}", file=sys.stderr)
 
     # Don't fail the whole Action unless every feed broke -- the site should
     # still show whichever ones succeeded.

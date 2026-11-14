@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>IPO GMP Today — Latest Grey Market Premium of Upcoming IPOs | Dropout Traders</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:image" content="https://dropouttraders.in/assets/img/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://dropouttraders.in/assets/img/og-share.jpg">
+<meta name="description" content="Check today's IPO GMP (Grey Market Premium) for upcoming and open Mainboard and SME IPOs — price band, estimated listing price, lot size and key dates, plus a free GMP calculator.">
+<meta name="keywords" content="IPO GMP, IPO GMP today, grey market premium, upcoming IPO GMP, SME IPO GMP, IPO listing price, GMP calculator">
+<link rel="canonical" href="https://dropouttraders.in/ipo-gmp.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IPO GMP Today — Grey Market Premium Tracker">
+<meta property="og:description" content="Latest GMP, price band, estimated listing price and dates for upcoming IPOs.">
+<meta property="og:url" content="https://dropouttraders.in/ipo-gmp.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dropouttraders.in/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "IPO GMP", "item": "https://dropouttraders.in/ipo-gmp.html" }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#07070a; --bg-alt:#0c0c11; --bg-raise:#111116;
+  --panel:rgba(255,255,255,0.035); --panel-strong:rgba(255,255,255,0.06);
+  --panel-border:rgba(212,175,55,0.22); --panel-border-strong:rgba(212,175,55,0.45);
+  --gold:#d4af37; --gold-bright:#f3d576; --gold-deep:#8a6d1f;
+  --white:#f6f4ee; --muted:#a8a49b; --muted-dim:#6f6c66;
+  --green:#4a9a76; --red:#b1594a;
+  --radius:14px; --radius-lg:22px; --ease:cubic-bezier(.16,.84,.44,1); --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;margin:0;font-weight:600;letter-spacing:-0.01em;}
+p{margin:0;}
+::selection{background:var(--gold);color:#07070a;}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
+.eyebrow::before{content:'';width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.section-head{max-width:700px;margin:0 0 34px;}
+.section-head h1{font-size:clamp(30px,4.4vw,50px);line-height:1.1;color:var(--white);margin-top:14px;}
+.section-head .accent{color:var(--gold);font-style:italic;}
+.section-head p{margin-top:16px;color:var(--muted);font-size:15.5px;line-height:1.75;max-width:600px;}
+.glass{background:var(--panel);border:1px solid var(--panel-border);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:var(--radius);}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;border-radius:100px;border:1px solid transparent;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s ease,color .3s ease;white-space:nowrap;cursor:pointer;}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#1a1305;box-shadow:0 8px 30px -6px rgba(212,175,55,0.55);}
+.btn-gold:hover{transform:translateY(-3px);}
+.btn-outline-gold{background:transparent;border-color:var(--panel-border-strong);color:var(--gold-bright);}
+.btn-outline-gold:hover{background:rgba(212,175,55,0.08);transform:translateY(-3px);}
+.btn-ghost{background:rgba(255,255,255,0.02);border-color:rgba(246,244,238,0.25);color:var(--white);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);}
+
+/* NAV */
+#navbar{position:sticky;top:0;left:0;right:0;z-index:500;padding:16px 0;background:rgba(7,7,10,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--panel-border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;position:relative;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-mark{width:34px;height:34px;border-radius:50%;border:1px solid var(--panel-border-strong);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold-bright);background:radial-gradient(circle at 30% 30%,rgba(212,175,55,0.18),transparent 70%);}
+.logo-text{font-family:'Playfair Display',serif;font-size:15.5px;letter-spacing:0.06em;}
+.logo-text b{color:var(--gold);font-weight:700;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{font-size:13px;letter-spacing:0.03em;color:var(--muted);transition:color .3s ease;}
+.nav-links a:hover,.nav-links a.current{color:var(--gold-bright);}
+.mnav{display:none;}
+.mnav summary{list-style:none;cursor:pointer;color:var(--white);font-size:13px;border:1px solid var(--panel-border-strong);border-radius:100px;padding:9px 18px;}
+.mnav summary::-webkit-details-marker{display:none;}
+.mnav-panel{display:flex;flex-direction:column;gap:2px;position:absolute;right:20px;top:60px;background:var(--bg-raise);border:1px solid var(--panel-border-strong);border-radius:var(--radius);padding:12px;z-index:600;min-width:160px;}
+.mnav-panel a{padding:10px 14px;font-size:14px;color:var(--muted);border-radius:8px;}
+.mnav-panel a:hover{background:var(--panel);color:var(--white);}
+@media (max-width:760px){ .nav-links{display:none;} .mnav{display:block;} }
+
+section{padding:64px 0;}
+.hero-cal{padding:56px 0 10px;}
+.breadcrumb{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted-dim);margin-bottom:22px;text-transform:uppercase;}
+.breadcrumb a:hover{color:var(--gold-bright);}
+
+/* CALCULATOR TOOL */
+.calc-tool{padding:36px;margin-top:6px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:11.5px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted-dim);margin-bottom:8px;}
+.field input,.field select{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--panel-border);border-radius:9px;padding:13px 15px;color:var(--white);font-family:'Inter',sans-serif;font-size:14.5px;}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);background:rgba(212,175,55,0.05);}
+.field .hint{font-size:11.5px;color:var(--muted-dim);margin-top:6px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+.calc-actions{display:flex;gap:14px;margin-top:6px;flex-wrap:wrap;}
+.result-box{margin-top:28px;padding:26px;border-radius:var(--radius);background:rgba(212,175,55,0.05);border:1px solid var(--panel-border);display:none;}
+.result-box.show{display:block;}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;}
+.result-item .lbl{font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted-dim);}
+.result-item .val{font-family:'Space Mono',monospace;font-size:21px;color:var(--gold-bright);margin-top:6px;word-break:break-word;}
+.result-item .val.neg{color:var(--red);}
+.result-item .val.pos{color:var(--green);}
+.result-note{margin-top:18px;font-size:12px;color:var(--muted-dim);line-height:1.65;}
+.leg-row{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end;margin-bottom:14px;}
+.leg-remove{background:transparent;border:1px solid var(--panel-border-strong);color:var(--muted);width:46px;height:46px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.leg-remove:hover{border-color:var(--red);color:var(--red);}
+.result-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px;}
+.result-table th,.result-table td{padding:9px 6px;border-bottom:1px solid var(--panel-border);text-align:left;color:var(--muted);}
+.result-table th{color:var(--gold);font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;}
+.result-table td.num{font-family:'Space Mono',monospace;color:var(--white);}
+.err-msg{margin-top:14px;font-size:13px;color:var(--red);display:none;}
+.err-msg.show{display:block;}
+
+/* ARTICLE */
+.article{max-width:740px;margin:0 auto;}
+.article h2{font-size:clamp(23px,3vw,30px);margin-top:46px;margin-bottom:14px;color:var(--white);}
+.article h2:first-child{margin-top:0;}
+.article h3{font-size:18px;margin-top:26px;margin-bottom:10px;color:var(--gold-bright);}
+.article p{font-size:15.5px;line-height:1.85;color:var(--muted);margin-bottom:16px;}
+.article ul,.article ol{margin:0 0 16px;padding-left:22px;color:var(--muted);font-size:15.5px;line-height:1.85;}
+.article li{margin-bottom:8px;}
+.article strong{color:var(--white);}
+.article table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px;}
+.article th,.article td{padding:10px 12px;border-bottom:1px solid var(--panel-border);text-align:left;color:var(--muted);}
+.article th{color:var(--gold);font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--panel-border);padding:18px 0;}
+.faq-item summary{cursor:pointer;font-size:15.5px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:500;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--gold);flex-shrink:0;}
+.faq-item[open] summary::after{content:'\2013';}
+.faq-item p{margin-top:14px;font-size:14.5px;color:var(--muted);line-height:1.8;}
+
+/* CTA BANNER */
+.cta-banner{padding:44px;text-align:center;margin:54px 0;}
+.cta-banner h3{font-size:23px;margin-bottom:10px;}
+.cta-banner p{color:var(--muted);margin-bottom:22px;font-size:14.5px;}
+.cta-banner .calc-actions{justify-content:center;}
+
+/* OTHER CALCULATORS */
+.other-calcs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;}
+.other-calcs a{padding:20px;font-size:13.5px;color:var(--muted);transition:all .3s ease;}
+.other-calcs a:hover{color:var(--gold-bright);border-color:var(--panel-border-strong);transform:translateY(-3px);}
+.other-calcs a b{display:block;color:var(--white);font-size:14.5px;margin-bottom:4px;font-family:'Playfair Display',serif;}
+.other-calcs a:hover b{color:var(--gold-bright);}
+
+/* FOOTER */
+footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+.footer-col h5{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.footer-col a,.footer-col p{display:block;font-size:13.5px;color:var(--muted-dim);margin-bottom:10px;}
+.footer-col a:hover{color:var(--gold-bright);}
+.footer-brand p{margin-top:14px;font-size:13px;color:var(--muted-dim);line-height:1.7;max-width:320px;}
+.disclaimer-box{margin-top:26px;padding:20px;border-radius:var(--radius);background:rgba(255,255,255,0.02);border:1px solid var(--panel-border);}
+.disclaimer-box p{font-size:11.5px;color:var(--muted-dim);line-height:1.7;}
+.footer-bottom{margin-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:20px;border-top:1px solid var(--panel-border);}
+.footer-bottom p{font-size:12px;color:var(--muted-dim);}
+
+/* FAB */
+.fab-wa{position:fixed;bottom:26px;right:26px;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#07270f;z-index:400;box-shadow:0 8px 24px rgba(0,0,0,0.45);}
+
+@media (max-width:900px){
+  .form-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;row-gap:30px;}
+  .other-calcs{grid-template-columns:1fr;}
+  .leg-row{grid-template-columns:1fr 1fr;}
+  .leg-row .leg-remove{grid-column:span 2;width:100%;}
+}
+@media (max-width:600px){
+  .container{padding:0 20px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .calc-tool{padding:24px 18px;}
+  section{padding:48px 0;}
+}
+
+</style>
+
+<style>/* logo emblem inside the round logo mark */.logo-mark{overflow:hidden;background:#0e0d0c;padding:0}.logo-mark img{width:100%;height:100%;object-fit:cover;display:block}</style>
+<style>.breadcrumb{font-size:12px!important}.breadcrumb a{display:inline-block;padding:14px 6px;margin:-14px -6px}</style>
+<style>/* iPhone zooms the page when a field under 16px is focused */@media (max-width:900px){input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),select,textarea{font-size:16px!important}}</style>
+<style>
+/* IPO GMP page */
+.sample-banner{margin-bottom:16px;padding:12px 16px;border-radius:10px;background:rgba(177,89,74,0.12);border:1px dashed var(--red);color:#e8b3a8;font-size:13px;}
+.gmp-warn{padding:14px 18px;border-radius:var(--radius);background:rgba(212,175,55,0.06);border:1px solid var(--panel-border);color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:22px;}
+.gmp-warn b{color:var(--gold-bright);}
+.gmp-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.gmp-tabs{display:flex;gap:8px;}
+.gmp-tab{background:transparent;border:1px solid var(--panel-border-strong);color:var(--muted);padding:9px 18px;border-radius:100px;font-size:13px;transition:all .25s ease;}
+.gmp-tab.active,.gmp-tab:hover{background:rgba(212,175,55,0.12);color:var(--gold-bright);border-color:var(--gold);}
+.gmp-search{flex:1;min-width:200px;max-width:320px;background:rgba(255,255,255,0.03);border:1px solid var(--panel-border);border-radius:100px;padding:10px 18px;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;}
+.gmp-search:focus{outline:none;border-color:var(--gold);}
+.gmp-updated{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted-dim);letter-spacing:0.04em;margin:6px 0 18px;}
+.gmp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;}
+.ipo-card{padding:22px;}
+.ipo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;}
+.ipo-name{font-family:'Playfair Display',serif;font-size:19px;color:var(--white);line-height:1.25;}
+.badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
+.badge{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 9px;border-radius:100px;border:1px solid var(--panel-border-strong);color:var(--muted);}
+.badge.open{border-color:var(--green);color:#7fd0aa;background:rgba(74,154,118,0.12);}
+.badge.upcoming{border-color:var(--gold);color:var(--gold-bright);}
+.badge.closed,.badge.listed{color:var(--muted-dim);}
+.badge.sub{border-color:rgba(74,154,118,0.5);color:#a9dcc4;text-transform:none;letter-spacing:0.02em;}
+.ipo-grid .k .est{text-transform:none;letter-spacing:0;color:var(--muted-dim);font-size:10px;}
+.gmp-big .pct{white-space:nowrap;}
+.gmp-big{text-align:right;flex-shrink:0;}
+.gmp-big .lbl{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted-dim);}
+.gmp-big .num{font-family:'Space Mono',monospace;font-size:24px;font-weight:700;margin-top:2px;}
+.gmp-big .pct{font-family:'Space Mono',monospace;font-size:12px;}
+.pos{color:#6cc79b;} .neg{color:#d9806f;} .flat{color:var(--muted);}
+.ipo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;padding-top:14px;border-top:1px solid var(--panel-border);}
+.ipo-grid .k{font-size:10.5px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted-dim);}
+.ipo-grid .v{font-family:'Space Mono',monospace;font-size:13.5px;color:var(--white);margin-top:3px;}
+.ipo-grid .v.gold{color:var(--gold-bright);}
+.use-calc{margin-top:16px;width:100%;padding:11px;font-size:12.5px;}
+.gmp-empty{padding:30px;text-align:center;color:var(--muted);}
+@media (max-width:600px){ .result-grid{grid-template-columns:1fr 1fr;} .gmp-list{grid-template-columns:1fr;} .gmp-search{max-width:none;width:100%;} }
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html#home" class="logo">
+      <span class="logo-mark"><img src="/assets/img/logo-mark.webp" alt="" width="128" height="128" decoding="async"></span>
+      <span class="logo-text">DROPOUT <b>TRADERS</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#courses">Courses</a>
+      <a href="index.html#calculators">Calculators</a>
+      <a href="ipo-gmp.html" class="current">IPO GMP</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <details class="mnav">
+      <summary>Menu</summary>
+      <div class="mnav-panel">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#calculators">Calculators</a>
+        <a href="ipo-gmp.html">IPO GMP</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<section class="hero-cal">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html#home">Home</a> / IPO GMP</div>
+    <div class="section-head">
+      <div class="eyebrow">IPO Tracker</div>
+      <h1>IPO <span class="accent">GMP</span> Today</h1>
+      <p>Check the latest Grey Market Premium (GMP) of upcoming and open IPOs — with price band, lot size, live subscription, estimated listing price and key dates in one place.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="sample-banner" id="sample-banner" hidden>Preview only — the IPOs and GMP numbers below are <b>sample data</b>, not real.</div>
+
+    <div class="gmp-warn">
+      <b>Note:</b> GMP is an unofficial grey-market number. It is not published by SEBI, NSE or BSE, changes daily and is often wrong. It is shown here for information only — it is not a recommendation to apply or not apply for any IPO.
+    </div>
+
+    <div class="gmp-toolbar">
+      <div class="gmp-tabs" role="tablist">
+        <button type="button" class="gmp-tab active" data-filter="all">All</button>
+        <button type="button" class="gmp-tab" data-filter="Mainboard">Mainboard</button>
+        <button type="button" class="gmp-tab" data-filter="SME">SME</button>
+      </div>
+      <input type="search" id="gmp-search" class="gmp-search" placeholder="Search IPO name…" aria-label="Search IPO">
+    </div>
+    <p class="gmp-updated" id="gmp-updated"></p>
+
+    <div class="gmp-list" id="gmp-list"></div>
+    <div class="gmp-empty glass" id="gmp-empty" hidden>No IPOs to show right now. Check back soon.</div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="calc-tool glass">
+      <div class="eyebrow" style="margin-bottom:14px;">GMP Calculator</div>
+      <h2 style="font-size:26px;margin-bottom:8px;">Estimate listing price from GMP</h2>
+      <p style="color:var(--muted);font-size:14.5px;margin-bottom:22px;">Enter the issue price and GMP to see the estimated listing price and the estimated gain or loss on your lots.</p>
+      <div class="form-grid">
+        <div class="field"><label for="c-price">Issue Price (₹)</label><input type="number" id="c-price" min="0" step="0.01" placeholder="e.g. 250"></div>
+        <div class="field"><label for="c-gmp">GMP (₹)</label><input type="number" id="c-gmp" step="0.01" placeholder="e.g. 40 (negative if discount)"></div>
+        <div class="field"><label for="c-lot">Lot Size (shares)</label><input type="number" id="c-lot" min="1" step="1" placeholder="e.g. 60"></div>
+        <div class="field"><label for="c-lots">Number of Lots</label><input type="number" id="c-lots" min="1" step="1" value="1"></div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="btn btn-gold" id="calc-btn">Calculate</button>
+        <button type="button" class="btn btn-ghost" id="reset-btn">Reset</button>
+      </div>
+      <div class="err-msg" id="err-msg">Please enter a valid issue price, GMP and lot size.</div>
+      <div class="result-box" id="result-box">
+        <div class="result-grid">
+          <div class="result-item"><div class="lbl">Est. Listing Price</div><div class="val" id="r-listing">—</div></div>
+          <div class="result-item"><div class="lbl">GMP %</div><div class="val" id="r-pct">—</div></div>
+          <div class="result-item"><div class="lbl">Investment</div><div class="val" id="r-invest">—</div></div>
+          <div class="result-item"><div class="lbl">Est. Gain / Loss</div><div class="val" id="r-gain">—</div></div>
+        </div>
+        <p class="result-note">This is only an estimate based on today's GMP. The actual listing price can be very different — or the IPO can list at a loss.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="article">
+      <h2>What Is IPO GMP?</h2>
+      <p><strong>Grey Market Premium (GMP)</strong> is the premium at which IPO shares are informally traded before they list on the stock exchange. If an IPO has an issue price of ₹100 and a GMP of ₹20, the grey market expects it to list around ₹120.</p>
+      <p>The grey market is <strong>unofficial and unregulated</strong>. SEBI, NSE and BSE do not publish or endorse GMP, and there is no guarantee that a stock will list at the price GMP suggests.</p>
+      <h2>How to Read GMP</h2>
+      <ul>
+        <li><strong>Estimated listing price</strong> = Issue price + GMP</li>
+        <li><strong>GMP %</strong> = GMP ÷ Issue price × 100</li>
+        <li>A <strong>negative GMP</strong> means the grey market expects a listing below the issue price.</li>
+        <li>GMP can swing sharply in the last few days before listing, so always look at the latest update time.</li>
+      </ul>
+    </div>
+    <div class="article" style="margin-top:50px;">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item"><summary>Is GMP legal and official?</summary><p>GMP comes from informal grey-market trading that is not regulated by SEBI or the exchanges. It is widely reported, but it is not an official price and has no legal backing.</p></details>
+      <details class="faq-item"><summary>Does a high GMP guarantee listing gains?</summary><p>No. Many IPOs with a high GMP have listed far lower than expected, and some have listed at a loss. Treat GMP as one rough signal, not a prediction.</p></details>
+      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's public IPO pages a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites.</p></details>
+      <details class="faq-item"><summary>Should I apply for an IPO based on GMP?</summary><p>We do not give advice on whether to apply for any IPO. Read the company's RHP, understand the business and its valuation, and consult a SEBI-registered adviser if you need advice.</p></details>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+"use strict";
+var DETAILS_URL = 'data/ipo-details.json';   // written by scripts/ipo_data.py (from NSE)
+var GMP_URL = 'data/ipo-gmp.json';           // GMP filled in by hand
+var allIpos = [], filter = 'all', query = '';
+var listEl = document.getElementById('gmp-list');
+var emptyEl = document.getElementById('gmp-empty');
+
+function inr(n, dec){ return '₹' + Number(n).toLocaleString('en-IN', {minimumFractionDigits:0, maximumFractionDigits:(dec==null?2:dec)}); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function parseDate(s){ if(!s) return null; var d = new Date(String(s).slice(0,10) + 'T00:00:00+05:30'); return isNaN(d) ? null : d; }
+function fmtDate(s){ var d = parseDate(s); return d ? d.toLocaleDateString('en-IN',{day:'numeric',month:'short',timeZone:'Asia/Kolkata'}) : 'TBA'; }
+function fmtStamp(s){ var d = new Date(s); return isNaN(d) ? null : d.toLocaleString('en-IN',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit',timeZone:'Asia/Kolkata'}) + ' IST'; }
+function num(v){ if(v===null||v===undefined||v==='') return null; var n = Number(String(v).replace(/,/g,'')); return isNaN(n) ? null : n; }
+function todayIST(){ var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'})); d.setHours(0,0,0,0); return d; }
+
+function statusOf(ipo){
+  var t = todayIST(), open = parseDate(ipo.open), close = parseDate(ipo.close), listing = parseDate(ipo.listing);
+  if(listing && t >= listing) return 'Listed';
+  if(close && t > close) return 'Closed';
+  if(open && t >= open) return 'Open';
+  return 'Upcoming';
+}
+var ORDER = {Open:0, Upcoming:1, Closed:2, Listed:3};
+
+function gmpFor(ipo, gmpMap){
+  if(!gmpMap) return null;
+  var keys = [ipo.symbol, String(ipo.symbol||'').toUpperCase(), ipo.name, String(ipo.name||'').toLowerCase()];
+  for(var i=0;i<keys.length;i++){ if(keys[i] && Object.prototype.hasOwnProperty.call(gmpMap, keys[i])) return num(gmpMap[keys[i]]); }
+  return null;
+}
+
+function card(ipo){
+  var price = num(ipo.priceHigh) || num(ipo.priceLow) || 0;
+  var gmp = ipo.gmp;
+  var st = statusOf(ipo);
+  var cls = gmp == null ? 'flat' : (gmp > 0 ? 'pos' : (gmp < 0 ? 'neg' : 'flat'));
+  var pct = (gmp != null && price) ? (gmp / price * 100) : null;
+  var lo = num(ipo.priceLow), hi = num(ipo.priceHigh);
+  var band = lo && hi && lo !== hi ? inr(lo,2) + '–' + inr(hi,2).slice(1) : (price ? inr(price,2) : 'TBA');
+  var size = num(ipo.issueSizeCr) ? inr(ipo.issueSizeCr, 2) + ' Cr' : (ipo.issueSize ? esc(ipo.issueSize) : '—');
+  var sub = num(ipo.subscriptionTimes);
+  return '<div class="ipo-card glass">'
+    + '<div class="ipo-head"><div><div class="ipo-name">' + esc(ipo.name) + '</div>'
+    + '<div class="badges"><span class="badge">' + esc(ipo.type || 'Mainboard') + '</span><span class="badge ' + st.toLowerCase() + '">' + st + '</span>'
+    + (st === 'Open' && sub != null ? '<span class="badge sub">' + sub.toFixed(2) + 'x subscribed</span>' : '') + '</div></div>'
+    + '<div class="gmp-big"><div class="lbl">GMP</div><div class="num ' + cls + '">' + (gmp == null ? '—' : (gmp > 0 ? '+' : '') + inr(gmp)) + '</div>'
+    + '<div class="pct ' + cls + '">' + (pct == null ? (gmp == null ? 'awaited' : '') : (pct > 0 ? '+' : '') + pct.toFixed(1) + '%') + '</div></div></div>'
+    + '<div class="ipo-grid">'
+    + '<div><div class="k">Price Band</div><div class="v">' + band + '</div></div>'
+    + '<div><div class="k">Est. Listing</div><div class="v gold">' + (gmp != null && price ? inr(price + gmp) : '—') + '</div></div>'
+    + '<div><div class="k">Lot Size</div><div class="v">' + (num(ipo.lotSize) ? num(ipo.lotSize).toLocaleString('en-IN') + ' shares' : 'TBA') + '</div></div>'
+    + '<div><div class="k">Open – Close</div><div class="v">' + fmtDate(ipo.open) + ' – ' + fmtDate(ipo.close) + '</div></div>'
+    + '<div><div class="k">Listing Date' + (ipo.listingEstimated ? ' <span class="est">(exp.)</span>' : '') + '</div><div class="v">' + fmtDate(ipo.listing) + '</div></div>'
+    + '<div><div class="k">Issue Size</div><div class="v">' + size + '</div></div>'
+    + '</div>'
+    + (price && gmp != null ? '<button type="button" class="btn btn-outline-gold use-calc" data-price="' + price + '" data-gmp="' + gmp + '" data-lot="' + (num(ipo.lotSize) || '') + '">Calculate my gain</button>' : '')
+    + '</div>';
+}
+
+function render(){
+  var q = query.trim().toLowerCase();
+  var rows = allIpos.filter(function(i){
+    if(statusOf(i) === 'Listed'){ var l = parseDate(i.listing); if(l && (todayIST() - l) > 86400000) return false; }
+    return (filter === 'all' || (i.type || 'Mainboard') === filter)
+      && (!q || String(i.name).toLowerCase().indexOf(q) !== -1 || String(i.symbol||'').toLowerCase().indexOf(q) !== -1);
+  }).sort(function(a,b){ return ORDER[statusOf(a)] - ORDER[statusOf(b)] || String(a.open||'9').localeCompare(String(b.open||'9')); });
+  listEl.innerHTML = rows.map(card).join('');
+  emptyEl.hidden = rows.length > 0;
+}
+
+function load(details, gmpData){
+  details = details || {}; gmpData = gmpData || {};
+  var map = gmpData.gmp || {};
+  var seen = {};
+  allIpos = [];
+  (details.ipos || []).concat(gmpData.extraIpos || []).forEach(function(ipo){
+    if(!ipo || !ipo.name) return;
+    var key = String(ipo.symbol || ipo.name).toLowerCase();
+    if(seen[key]) return; seen[key] = 1;
+    var rec = {}; for(var k in ipo) rec[k] = ipo[k];
+    rec.gmp = gmpFor(ipo, map);
+    if(rec.gmp == null && ipo.gmp != null) rec.gmp = num(ipo.gmp);
+    allIpos.push(rec);
+  });
+  if(details.sample || gmpData.sample) document.getElementById('sample-banner').hidden = false;
+  var parts = [];
+  var a = details.updated && fmtStamp(details.updated), b = gmpData.updated && fmtStamp(gmpData.updated);
+  if(a) parts.push('IPO details (NSE): ' + a);
+  if(b) parts.push('GMP: ' + b);
+  document.getElementById('gmp-updated').textContent = parts.join('  ·  ');
+  render();
+}
+
+function getJSON(url){
+  return fetch(url, {cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); }).catch(function(){ return null; });
+}
+if(window.__GMP_PREVIEW__){ load(window.__GMP_PREVIEW__.details, window.__GMP_PREVIEW__.gmp); }
+else { Promise.all([getJSON(DETAILS_URL), getJSON(GMP_URL)]).then(function(r){ load(r[0], r[1]); }); }
+
+document.querySelectorAll('.gmp-tab').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.gmp-tab').forEach(function(x){ x.classList.remove('active'); });
+    b.classList.add('active'); filter = b.getAttribute('data-filter'); render();
+  });
+});
+document.getElementById('gmp-search').addEventListener('input', function(e){ query = e.target.value; render(); });
+
+/* GMP calculator */
+var resultBox = document.getElementById('result-box'), errMsg = document.getElementById('err-msg');
+function calc(){
+  var p = parseFloat(document.getElementById('c-price').value);
+  var g = parseFloat(document.getElementById('c-gmp').value);
+  var lot = parseInt(document.getElementById('c-lot').value, 10);
+  var lots = parseInt(document.getElementById('c-lots').value, 10) || 1;
+  if(isNaN(p) || p <= 0 || isNaN(g) || isNaN(lot) || lot <= 0 || lots <= 0){ errMsg.classList.add('show'); resultBox.classList.remove('show'); return; }
+  errMsg.classList.remove('show');
+  var shares = lot * lots, gain = g * shares, pct = g / p * 100;
+  document.getElementById('r-listing').textContent = inr(p + g);
+  var pe = document.getElementById('r-pct'); pe.textContent = (pct > 0 ? '+' : '') + pct.toFixed(2) + '%'; pe.className = 'val ' + (g >= 0 ? 'pos' : 'neg');
+  document.getElementById('r-invest').textContent = inr(p * shares, 0);
+  var ge = document.getElementById('r-gain'); ge.textContent = (gain > 0 ? '+' : '') + inr(gain, 0); ge.className = 'val ' + (gain >= 0 ? 'pos' : 'neg');
+  resultBox.classList.add('show');
+}
+document.getElementById('calc-btn').addEventListener('click', calc);
+document.getElementById('reset-btn').addEventListener('click', function(){
+  ['c-price','c-gmp','c-lot'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('c-lots').value = 1; resultBox.classList.remove('show'); errMsg.classList.remove('show');
+});
+listEl.addEventListener('click', function(e){
+  var b = e.target.closest('.use-calc'); if(!b) return;
+  document.getElementById('c-price').value = b.getAttribute('data-price');
+  document.getElementById('c-gmp').value = b.getAttribute('data-gmp');
+  document.getElementById('c-lot').value = b.getAttribute('data-lot');
+  document.getElementById('c-lots').value = 1;
+  calc();
+  document.querySelector('.calc-tool').scrollIntoView({behavior:'smooth', block:'start'});
+});
+})();
+</script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark"><img src="/assets/img/logo-mark.webp" alt="" width="128" height="128" decoding="async"></span><span class="logo-text">DROPOUT <b>TRADERS</b></span></div>
+        <p>Structured financial education in Stocks, Forex, Gold and Crypto by Dinankar Dev Parmar &mdash; practical analysis, disciplined risk management.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Calculators</h5>
+        <a href="stock-averaging-calculator.html">Stock Averaging Calculator</a>
+        <a href="risk-reward-calculator.html">Risk Reward Calculator</a>
+        <a href="sip-calculator.html">SIP Calculator</a>
+        <a href="brokerage-calculator.html">Brokerage Calculator</a>
+        <a href="ipo-gmp.html">IPO GMP</a>
+      </div>
+      <div class="footer-col">
+        <h5>Dropout Traders</h5>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <p>dinankar@dropouttraders.in</p>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Trading and investing in Stocks, Forex, Gold and Cryptocurrency carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. IPO details are sourced from NSE India's public data and may be delayed. GMP figures are unofficial grey-market estimates collected from market sources, may be inaccurate or delayed, and are shown for information only. Dropout Traders is not a SEBI-registered investment adviser or research analyst and does not recommend applying or not applying for any IPO. This page is for educational purposes only and do not constitute investment or financial advice. Please consult a licensed financial advisor before making trading or investment decisions.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Dropout Traders. All rights reserved.</p>
+      <p>Rates and charges shown are indicative and may change &mdash; verify with official sources before relying on them.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/917747901709" target="_blank" class="fab-wa" aria-label="Chat on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.15-.19.29-.75.93-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.55-.02s-.51.07-.78.36c-.26.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.19 2.06 3.14 4.99 4.4.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/></svg>
+</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

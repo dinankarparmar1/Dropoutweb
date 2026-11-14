@@ -8,7 +8,7 @@ files that market-intelligence.html reads client-side:
   data/insider-trading.json
   data/market-breadth.json
   data/heatmap.json
-  data/ipo-details.json   (IPO list for ipo-gmp.html -- see scripts/ipo_data.py)
+  data/ipo-details.json   (NSE + BSE IPO list for ipo-gmp.html -- see scripts/ipo_data.py)
 
 Run manually:
     python3 scripts/fetch_market_data.py --debug

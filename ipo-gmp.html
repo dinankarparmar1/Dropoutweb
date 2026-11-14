@@ -201,6 +201,8 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 .gmp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;}
 .ipo-card{padding:22px;}
 .ipo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;}
+.ipo-meta{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--muted-dim);margin-top:5px;letter-spacing:0.04em;display:flex;gap:10px;flex-wrap:wrap;}
+.ipo-id{color:var(--muted);}
 .ipo-name{font-family:'Playfair Display',serif;font-size:19px;color:var(--white);line-height:1.25;}
 .badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
 .badge{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 9px;border-radius:100px;border:1px solid var(--panel-border-strong);color:var(--muted);}
@@ -333,7 +335,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <h2>Frequently Asked Questions</h2>
       <details class="faq-item"><summary>Is GMP legal and official?</summary><p>GMP comes from informal grey-market trading that is not regulated by SEBI or the exchanges. It is widely reported, but it is not an official price and has no legal backing.</p></details>
       <details class="faq-item"><summary>Does a high GMP guarantee listing gains?</summary><p>No. Many IPOs with a high GMP have listed far lower than expected, and some have listed at a loss. Treat GMP as one rough signal, not a prediction.</p></details>
-      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's public IPO pages a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites.</p></details>
+      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's and BSE India's public IPO pages a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites.</p></details>
       <details class="faq-item"><summary>Should I apply for an IPO based on GMP?</summary><p>We do not give advice on whether to apply for any IPO. Read the company's RHP, understand the business and its valuation, and consult a SEBI-registered adviser if you need advice.</p></details>
     </div>
   </div>
@@ -347,6 +349,7 @@ var allIpos = [], filter = 'all', query = '';
 var listEl = document.getElementById('gmp-list');
 var emptyEl = document.getElementById('gmp-empty');
 
+function signed(n, dec){ n = Number(n); return (n > 0 ? '+' : n < 0 ? '\u2212' : '') + inr(Math.abs(n), dec); }
 function inr(n, dec){ return '₹' + Number(n).toLocaleString('en-IN', {minimumFractionDigits:0, maximumFractionDigits:(dec==null?2:dec)}); }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
 function parseDate(s){ if(!s) return null; var d = new Date(String(s).slice(0,10) + 'T00:00:00+05:30'); return isNaN(d) ? null : d; }
@@ -364,10 +367,16 @@ function statusOf(ipo){
 }
 var ORDER = {Open:0, Upcoming:1, Closed:2, Listed:3};
 
-function gmpFor(ipo, gmpMap){
+function normName(n){ return String(n||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(function(w){ return w && ['limited','ltd','pvt','private','the','co','company','corp','corporation','inc'].indexOf(w) === -1; }).join(' '); }
+function gmpEntry(ipo, gmpMap){
+  // data/ipo-gmp.json "gmp": { "KEY": 38 }  or  { "KEY": { "gmp": 38, "lotSize": 2000 } }
   if(!gmpMap) return null;
-  var keys = [ipo.symbol, String(ipo.symbol||'').toUpperCase(), ipo.name, String(ipo.name||'').toLowerCase()];
-  for(var i=0;i<keys.length;i++){ if(keys[i] && Object.prototype.hasOwnProperty.call(gmpMap, keys[i])) return num(gmpMap[keys[i]]); }
+  var want = [ipo.key, ipo.symbol, ipo.bseCode].filter(Boolean).map(function(k){ return String(k).toUpperCase(); });
+  var wantName = normName(ipo.name);
+  for(var k in gmpMap){
+    if(!Object.prototype.hasOwnProperty.call(gmpMap, k) || k.charAt(0) === '_') continue;
+    if(want.indexOf(String(k).toUpperCase()) !== -1 || (wantName && normName(k) === wantName)) return gmpMap[k];
+  }
   return null;
 }
 
@@ -383,10 +392,11 @@ function card(ipo){
   var sub = num(ipo.subscriptionTimes);
   return '<div class="ipo-card glass">'
     + '<div class="ipo-head"><div><div class="ipo-name">' + esc(ipo.name) + '</div>'
+    + '<div class="ipo-meta">' + ((ipo.exchanges && ipo.exchanges.length) ? esc(ipo.exchanges.join(' · ')) : '') + (ipo.key ? '<span class="ipo-id">ID: ' + esc(ipo.key) + '</span>' : '') + '</div>'
     + '<div class="badges"><span class="badge">' + esc(ipo.type || 'Mainboard') + '</span><span class="badge ' + st.toLowerCase() + '">' + st + '</span>'
     + (st === 'Open' && sub != null ? '<span class="badge sub">' + sub.toFixed(2) + 'x subscribed</span>' : '') + '</div></div>'
-    + '<div class="gmp-big"><div class="lbl">GMP</div><div class="num ' + cls + '">' + (gmp == null ? '—' : (gmp > 0 ? '+' : '') + inr(gmp)) + '</div>'
-    + '<div class="pct ' + cls + '">' + (pct == null ? (gmp == null ? 'awaited' : '') : (pct > 0 ? '+' : '') + pct.toFixed(1) + '%') + '</div></div></div>'
+    + '<div class="gmp-big"><div class="lbl">GMP</div><div class="num ' + cls + '">' + (gmp == null ? '—' : signed(gmp)) + '</div>'
+    + '<div class="pct ' + cls + '">' + (pct == null ? (gmp == null ? 'awaited' : '') : (pct > 0 ? '+' : pct < 0 ? '\u2212' : '') + Math.abs(pct).toFixed(1) + '%') + '</div></div></div>'
     + '<div class="ipo-grid">'
     + '<div><div class="k">Price Band</div><div class="v">' + band + '</div></div>'
     + '<div><div class="k">Est. Listing</div><div class="v gold">' + (gmp != null && price ? inr(price + gmp) : '—') + '</div></div>'
@@ -404,7 +414,7 @@ function render(){
   var rows = allIpos.filter(function(i){
     if(statusOf(i) === 'Listed'){ var l = parseDate(i.listing); if(l && (todayIST() - l) > 86400000) return false; }
     return (filter === 'all' || (i.type || 'Mainboard') === filter)
-      && (!q || String(i.name).toLowerCase().indexOf(q) !== -1 || String(i.symbol||'').toLowerCase().indexOf(q) !== -1);
+      && (!q || String(i.name).toLowerCase().indexOf(q) !== -1 || String(i.key||'').toLowerCase().indexOf(q) !== -1 || String(i.symbol||'').toLowerCase().indexOf(q) !== -1);
   }).sort(function(a,b){ return ORDER[statusOf(a)] - ORDER[statusOf(b)] || String(a.open||'9').localeCompare(String(b.open||'9')); });
   listEl.innerHTML = rows.map(card).join('');
   emptyEl.hidden = rows.length > 0;
@@ -417,10 +427,12 @@ function load(details, gmpData){
   allIpos = [];
   (details.ipos || []).concat(gmpData.extraIpos || []).forEach(function(ipo){
     if(!ipo || !ipo.name) return;
-    var key = String(ipo.symbol || ipo.name).toLowerCase();
+    var key = String(ipo.key || ipo.symbol || normName(ipo.name)).toLowerCase();
     if(seen[key]) return; seen[key] = 1;
     var rec = {}; for(var k in ipo) rec[k] = ipo[k];
-    rec.gmp = gmpFor(ipo, map);
+    var e = gmpEntry(ipo, map);
+    if(e && typeof e === 'object'){ rec.gmp = num(e.gmp); if(!num(rec.lotSize) && num(e.lotSize)) rec.lotSize = num(e.lotSize); }
+    else rec.gmp = num(e);
     if(rec.gmp == null && ipo.gmp != null) rec.gmp = num(ipo.gmp);
     allIpos.push(rec);
   });
@@ -458,9 +470,9 @@ function calc(){
   errMsg.classList.remove('show');
   var shares = lot * lots, gain = g * shares, pct = g / p * 100;
   document.getElementById('r-listing').textContent = inr(p + g);
-  var pe = document.getElementById('r-pct'); pe.textContent = (pct > 0 ? '+' : '') + pct.toFixed(2) + '%'; pe.className = 'val ' + (g >= 0 ? 'pos' : 'neg');
+  var pe = document.getElementById('r-pct'); pe.textContent = (pct > 0 ? '+' : pct < 0 ? '\u2212' : '') + Math.abs(pct).toFixed(2) + '%'; pe.className = 'val ' + (g >= 0 ? 'pos' : 'neg');
   document.getElementById('r-invest').textContent = inr(p * shares, 0);
-  var ge = document.getElementById('r-gain'); ge.textContent = (gain > 0 ? '+' : '') + inr(gain, 0); ge.className = 'val ' + (gain >= 0 ? 'pos' : 'neg');
+  var ge = document.getElementById('r-gain'); ge.textContent = signed(gain, 0); ge.className = 'val ' + (gain >= 0 ? 'pos' : 'neg');
   resultBox.classList.add('show');
 }
 document.getElementById('calc-btn').addEventListener('click', calc);
@@ -503,7 +515,7 @@ listEl.addEventListener('click', function(e){
       </div>
     </div>
     <div class="disclaimer-box">
-      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Trading and investing in Stocks, Forex, Gold and Cryptocurrency carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. IPO details are sourced from NSE India's public data and may be delayed. GMP figures are unofficial grey-market estimates collected from market sources, may be inaccurate or delayed, and are shown for information only. Dropout Traders is not a SEBI-registered investment adviser or research analyst and does not recommend applying or not applying for any IPO. This page is for educational purposes only and do not constitute investment or financial advice. Please consult a licensed financial advisor before making trading or investment decisions.</p>
+      <p><b style="color:var(--muted);">Risk Disclaimer:</b> Trading and investing in Stocks, Forex, Gold and Cryptocurrency carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. IPO details are sourced from NSE India's and BSE India's public data and may be delayed. GMP figures are unofficial grey-market estimates collected from market sources, may be inaccurate or delayed, and are shown for information only. Dropout Traders is not a SEBI-registered investment adviser or research analyst and does not recommend applying or not applying for any IPO. This page is for educational purposes only and do not constitute investment or financial advice. Please consult a licensed financial advisor before making trading or investment decisions.</p>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Dropout Traders. All rights reserved.</p>

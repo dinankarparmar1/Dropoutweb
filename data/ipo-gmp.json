@@ -1,5 +1,5 @@
 {
-  "_howto": "GMP is filled in by hand. In 'gmp', write the IPO's NSE symbol (as shown on ipo-gmp.html / data/ipo-details.json) and its GMP in rupees, e.g. \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12. Use null if there is no GMP yet. Update 'updated' every time you change GMP. 'extraIpos' is only for IPOs that are NOT on NSE (e.g. BSE SME) -- add them in the same shape as data/ipo-details.json, with a 'gmp' field.",
+  "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA' (BSE-only SME IPOs), you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. 'extraIpos' is only for an IPO that neither NSE nor BSE lists -- same fields as data/ipo-details.json plus 'gmp'.",
   "updated": null,
   "gmp": {},
   "extraIpos": []

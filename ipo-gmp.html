@@ -209,6 +209,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 .badge.open{border-color:var(--green);color:#7fd0aa;background:rgba(74,154,118,0.12);}
 .badge.upcoming{border-color:var(--gold);color:var(--gold-bright);}
 .badge.closed,.badge.listed{color:var(--muted-dim);}
+.badge.tentative{border-color:rgba(212,175,55,0.45);color:var(--gold);border-style:dashed;}
 .badge.sub{border-color:rgba(74,154,118,0.5);color:#a9dcc4;text-transform:none;letter-spacing:0.02em;}
 .ipo-grid .k .est{text-transform:none;letter-spacing:0;color:var(--muted-dim);font-size:10px;}
 .gmp-big .pct{white-space:nowrap;}
@@ -335,7 +336,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <h2>Frequently Asked Questions</h2>
       <details class="faq-item"><summary>Is GMP legal and official?</summary><p>GMP comes from informal grey-market trading that is not regulated by SEBI or the exchanges. It is widely reported, but it is not an official price and has no legal backing.</p></details>
       <details class="faq-item"><summary>Does a high GMP guarantee listing gains?</summary><p>No. Many IPOs with a high GMP have listed far lower than expected, and some have listed at a loss. Treat GMP as one rough signal, not a prediction.</p></details>
-      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's and BSE India's public IPO pages a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites.</p></details>
+      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's and BSE India's public IPO pages a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites. IPOs marked <b>Tentative</b> have not been announced by the exchanges yet — their dates are only expected and can change.</p></details>
       <details class="faq-item"><summary>Should I apply for an IPO based on GMP?</summary><p>We do not give advice on whether to apply for any IPO. Read the company's RHP, understand the business and its valuation, and consult a SEBI-registered adviser if you need advice.</p></details>
     </div>
   </div>
@@ -359,6 +360,7 @@ function num(v){ if(v===null||v===undefined||v==='') return null; var n = Number
 function todayIST(){ var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'})); d.setHours(0,0,0,0); return d; }
 
 function statusOf(ipo){
+  if(ipo.tentative) return 'Upcoming';
   var t = todayIST(), open = parseDate(ipo.open), close = parseDate(ipo.close), listing = parseDate(ipo.listing);
   if(listing && t >= listing) return 'Listed';
   if(close && t > close) return 'Closed';
@@ -393,7 +395,7 @@ function card(ipo){
   return '<div class="ipo-card glass">'
     + '<div class="ipo-head"><div><div class="ipo-name">' + esc(ipo.name) + '</div>'
     + '<div class="ipo-meta">' + ((ipo.exchanges && ipo.exchanges.length) ? esc(ipo.exchanges.join(' · ')) : '') + (ipo.key ? '<span class="ipo-id">ID: ' + esc(ipo.key) + '</span>' : '') + '</div>'
-    + '<div class="badges"><span class="badge">' + esc(ipo.type || 'Mainboard') + '</span><span class="badge ' + st.toLowerCase() + '">' + st + '</span>'
+    + '<div class="badges"><span class="badge">' + esc(ipo.type || 'Mainboard') + '</span>' + (ipo.tentative ? '<span class="badge tentative">Tentative</span>' : '<span class="badge ' + st.toLowerCase() + '">' + st + '</span>')
     + (st === 'Open' && sub != null ? '<span class="badge sub">' + sub.toFixed(2) + 'x subscribed</span>' : '') + '</div></div>'
     + '<div class="gmp-big"><div class="lbl">GMP</div><div class="num ' + cls + '">' + (gmp == null ? '—' : signed(gmp)) + '</div>'
     + '<div class="pct ' + cls + '">' + (pct == null ? (gmp == null ? 'awaited' : '') : (pct > 0 ? '+' : pct < 0 ? '\u2212' : '') + Math.abs(pct).toFixed(1) + '%') + '</div></div></div>'
@@ -401,7 +403,7 @@ function card(ipo){
     + '<div><div class="k">Price Band</div><div class="v">' + band + '</div></div>'
     + '<div><div class="k">Est. Listing</div><div class="v gold">' + (gmp != null && price ? inr(price + gmp) : '—') + '</div></div>'
     + '<div><div class="k">Lot Size</div><div class="v">' + (num(ipo.lotSize) ? num(ipo.lotSize).toLocaleString('en-IN') + ' shares' : 'TBA') + '</div></div>'
-    + '<div><div class="k">Open – Close</div><div class="v">' + fmtDate(ipo.open) + ' – ' + fmtDate(ipo.close) + '</div></div>'
+    + '<div><div class="k">Open – Close' + (ipo.tentative ? ' <span class="est">(exp.)</span>' : '') + '</div><div class="v">' + ((ipo.open || ipo.close) ? fmtDate(ipo.open) + ' – ' + fmtDate(ipo.close) : (ipo.expected ? esc(ipo.expected) : 'TBA')) + '</div></div>'
     + '<div><div class="k">Listing Date' + (ipo.listingEstimated ? ' <span class="est">(exp.)</span>' : '') + '</div><div class="v">' + fmtDate(ipo.listing) + '</div></div>'
     + '<div><div class="k">Issue Size</div><div class="v">' + size + '</div></div>'
     + '</div>'
@@ -415,7 +417,7 @@ function render(){
     if(statusOf(i) === 'Listed'){ var l = parseDate(i.listing); if(l && (todayIST() - l) > 86400000) return false; }
     return (filter === 'all' || (i.type || 'Mainboard') === filter)
       && (!q || String(i.name).toLowerCase().indexOf(q) !== -1 || String(i.key||'').toLowerCase().indexOf(q) !== -1 || String(i.symbol||'').toLowerCase().indexOf(q) !== -1);
-  }).sort(function(a,b){ return ORDER[statusOf(a)] - ORDER[statusOf(b)] || String(a.open||'9').localeCompare(String(b.open||'9')); });
+  }).sort(function(a,b){ return ORDER[statusOf(a)] - ORDER[statusOf(b)] || (a.tentative ? 1 : 0) - (b.tentative ? 1 : 0) || String(a.open||'9').localeCompare(String(b.open||'9')); });
   listEl.innerHTML = rows.map(card).join('');
   emptyEl.hidden = rows.length > 0;
 }
@@ -425,12 +427,22 @@ function load(details, gmpData){
   var map = gmpData.gmp || {};
   var seen = {};
   allIpos = [];
-  (details.ipos || []).concat(gmpData.extraIpos || []).forEach(function(ipo){
+  var official = details.ipos || [];
+  var officialNames = official.map(function(i){ return normName(i.name); });
+  // Hand-added IPOs (data/ipo-gmp.json "extraIpos") give way automatically
+  // once NSE/BSE list the same company.
+  var extras = (gmpData.extraIpos || []).filter(function(i){ return i && officialNames.indexOf(normName(i.name)) === -1; });
+  official.concat(extras).forEach(function(ipo){
     if(!ipo || !ipo.name) return;
     var key = String(ipo.key || ipo.symbol || normName(ipo.name)).toLowerCase();
     if(seen[key]) return; seen[key] = 1;
     var rec = {}; for(var k in ipo) rec[k] = ipo[k];
     var e = gmpEntry(ipo, map);
+    if(e == null){
+      // GMP may have been entered against the tentative ID before NSE/BSE listed it
+      var pre = (gmpData.extraIpos || []).filter(function(x){ return x && x.key && normName(x.name) === normName(ipo.name); })[0];
+      if(pre) e = gmpEntry({key: pre.key}, map);
+    }
     if(e && typeof e === 'object'){ rec.gmp = num(e.gmp); if(!num(rec.lotSize) && num(e.lotSize)) rec.lotSize = num(e.lotSize); }
     else rec.gmp = num(e);
     if(rec.gmp == null && ipo.gmp != null) rec.gmp = num(ipo.gmp);

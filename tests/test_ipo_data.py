@@ -219,6 +219,7 @@ SEBI_ROWS = [
     (_ago(5), "Old Co Limited - Addendum to RHP", "old-co-addendum"),
     (_ago(6), "Roadways Infra Trust - RHP", "roadways-invit"),
     (_ago(45), "Long Gone Limited - RHP", "long-gone"),
+    (_ago(24), "Bombay Coated and Special Steels Limited - RHP", "bombay-coated"),
 ]
 
 
@@ -330,14 +331,14 @@ class ParserTests(unittest.TestCase):
 
     def test_sebi_listing(self):
         rows = m.parse_sebi_listing(sebi_listing(SEBI_ROWS))
-        self.assertEqual(len(rows), 5)
+        self.assertEqual(len(rows), 6)
         self.assertEqual(rows[0]["title"], "Crystal Crop Protection Limited - RHP")
         self.assertTrue(rows[0]["url"].startswith("https://www.sebi.gov.in/filings/public-issues/"))
         self.assertEqual(m.sebi_issuer("SAMPLE INFRA PROJECTS LIMITED - Red Herring Prospectus"), "Sample Infra Projects Limited")
         self.assertEqual(m.sebi_issuer("Hero FinCorp Limited – RHP"), "Hero FinCorp Limited")
         today = datetime.now(m.IST).date()
         ipos = m.sebi_rows_to_ipos(rows, today)
-        # addendum, InvIT and the 45-day-old RHP are dropped
+        # addendum, InvIT and RHPs older than the window (past issues) are dropped
         self.assertEqual([i["name"] for i in ipos], ["Crystal Crop Protection Limited", "Sample Infra Projects Limited"])
         self.assertTrue(all(i["rhpOnly"] and i["type"] == "Mainboard" for i in ipos))
         self.assertEqual(m.parse_sebi_listing("<html>error</html>"), [])

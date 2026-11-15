@@ -73,7 +73,7 @@ BSE_PAGE = "https://beta.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx?id
 SEBI = "https://www.sebi.gov.in"
 SEBI_AJAX = SEBI + "/sebiweb/ajax/home/getnewslistinfo.jsp"
 SEBI_LISTING = SEBI + "/sebiweb/home/HomeAction.do"
-RHP_WINDOW_DAYS = 30          # an RHP older than this with no exchange listing is stale
+RHP_WINDOW_DAYS = 10          # RHP -> issue opens in ~5-10 days; older RHP rows are past issues
 RETIRE_KEEP_DAYS = 90         # remember listed IPOs so their old RHP row doesn't come back
 BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")

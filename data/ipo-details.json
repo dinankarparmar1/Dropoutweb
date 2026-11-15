@@ -1,6 +1,20 @@
 {
-  "updated": null,
-  "sources": {},
-  "holidays": [],
+  "updated": "2026-11-15T03:01:12.193532Z",
+  "sources": {
+    "NSE": {
+      "ok": true,
+      "ipos": 0
+    },
+    "BSE": {
+      "ok": true,
+      "ipos": 0
+    }
+  },
+  "holidays": [
+    "2026-11-08",
+    "2026-11-10",
+    "2026-11-24",
+    "2026-12-25"
+  ],
   "ipos": []
 }

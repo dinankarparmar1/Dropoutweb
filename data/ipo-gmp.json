@@ -19,6 +19,19 @@
       "priceHigh": 272,
       "lotSize": 55,
       "issueSizeCr": 455.72
+    },
+    {
+      "key": "MAHANADI-COALFIELDS",
+      "name": "Mahanadi Coalfields Limited",
+      "type": "Mainboard",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "rhpOnly": true,
+      "rhpDate": "2026-11-13",
+      "expected": "19–23 Nov (expected)",
+      "issueSize": "OFS · 66.18 Cr shares"
     }
   ]
 }

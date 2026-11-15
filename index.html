@@ -255,6 +255,12 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
 .df-alt{font-size:13.5px}.df-alt a{color:var(--gold-bright);text-decoration:underline}
 @media(max-width:600px){.df{padding:24px 18px 22px}.df-head h3{font-size:20px}}
 </style>
+<style>/* Hero: IPO Analysis button */
+.vs-cta .vs-ipo{gap:8px;display:inline-flex;align-items:center}
+.vs-cta .vs-live{display:inline-block;width:8px;height:8px;min-width:8px;border-radius:50%;background:#4a9a76;animation:vsLive 1.8s ease-out infinite;flex:none}
+@keyframes vsLive{0%{box-shadow:0 0 0 0 rgba(74,154,118,.6)}70%{box-shadow:0 0 0 8px rgba(74,154,118,0)}100%{box-shadow:0 0 0 0 rgba(74,154,118,0)}}
+@media (prefers-reduced-motion:reduce){.vs-cta .vs-live{animation:none}}
+</style>
 </head>
 <body>
 
@@ -338,7 +344,7 @@ body.df-in-view .ai-fab,body.df-typing .ai-fab{opacity:0!important;pointer-event
       <div class="vs-meta"><b>01</b> — Stocks · Forex · Gold · Crypto</div>
       <h1 class="vs-h1">Trade with <em>discipline.<svg viewBox="0 0 400 30" preserveAspectRatio="none" fill="none" stroke="#f3d576" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path filter="url(#vs-rough)" d="M4 16C80 6 170 24 250 12s110 0 146 6"/></svg></em><br>Not luck.</h1>
       <p class="vs-lead">Structured courses, live classes and risk-first analysis from <b>Dinankar Dev Parmar</b>, NISM-certified founder of Dropout Traders.</p>
-      <div class="vs-cta"><a href="#contact" class="btn btn-gold">Book Free Demo →</a><a href="courses.html" class="btn btn-outline-gold">Explore Courses</a><span class="vs-hand">← start here, it's free</span></div>
+      <div class="vs-cta"><a href="#contact" class="btn btn-gold">Book Free Demo →</a><a href="courses.html" class="btn btn-outline-gold">Explore Courses</a><a href="ipo-gmp.html" class="btn btn-outline-gold vs-ipo" aria-label="IPO Analysis: live GMP, subscription and upcoming IPOs"><i class="vs-live" aria-hidden="true"></i>IPO Analysis</a><span class="vs-hand">← start here, it's free</span></div>
       <div class="hero-links">
         <a href="market-intelligence.html">Market Intelligence</a><span aria-hidden="true">·</span>
         <a href="ipo-gmp.html">IPO GMP</a><span aria-hidden="true">·</span>

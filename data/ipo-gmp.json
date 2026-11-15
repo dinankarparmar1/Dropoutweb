@@ -1,8 +1,8 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-15T09:45:00+05:30",
+  "updated": "2026-11-15T18:48:00+05:30",
   "gmp": {
-    "CRYSTAL-CROP-PROTECTION": 27
+    "CRYSTAL-CROP-PROTECTION": 21
   },
   "extraIpos": [
     {
@@ -38,24 +38,19 @@
   ],
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
-      "gmp": 27,
+      "gmp": 21,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-15T09:45:00+05:30",
+      "checked": "2026-11-15T18:48:00+05:30",
       "sources": [
         {
-          "site": "investorgain.com",
-          "gmp": 27,
-          "asOf": "2026-11-15"
-        },
-        {
-          "site": "ipomarket.in",
-          "gmp": 27,
-          "asOf": "2026-11-14T13:45+05:30"
-        },
-        {
           "site": "ipowatch.in",
-          "gmp": 45,
-          "asOf": "2026-11-13T12:12+05:30"
+          "gmp": 27,
+          "asOf": "2026-11-15T09:50+05:30"
+        },
+        {
+          "site": "investorgain.com",
+          "gmp": 15,
+          "asOf": "2026-11-15T18:02+05:30"
         }
       ]
     },

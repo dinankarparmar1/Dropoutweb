@@ -105,6 +105,30 @@ BSE_FORTHCOMING_ROWS = [
 ]
 
 
+def active_category(qib=1.2, nii=3.4, bnii=2.1, snii=6.0, retail=5.5, emp=1.1, total=3.75, when="22-Nov-2026 17:00:00"):
+    """NSE ipo-active-category, same shape as the live feed (header row, sub-rows, Total)."""
+    rows = [
+        {"srNo": "Sr.No.", "category": "Category", "noOfShareOffered": "No.of shares offered/reserved",
+         "noOfSharesBid": "No. of shares bid for", "noOfTotalMeant": "No. of times of total meant for the category"},
+        {"srNo": "1", "category": "Qualified Institutional Buyers(QIBs)", "noOfShareOffered": "9365510",
+         "noOfSharesBid": str(int(9365510 * qib)), "noOfTotalMeant": str(qib)},
+        {"srNo": "1(a)", "category": "Foreign Institutional Investors(FIIs)", "noOfShareOffered": "", "noOfSharesBid": "0", "noOfTotalMeant": ""},
+        {"srNo": "2", "category": "Non Institutional Investors", "noOfShareOffered": "7361217",
+         "noOfSharesBid": "100", "noOfTotalMeant": str(nii)},
+        {"srNo": "2.1", "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+         "noOfShareOffered": "4907478", "noOfSharesBid": "100", "noOfTotalMeant": str(bnii)},
+        {"srNo": "2.1(a)", "category": "Corporates", "noOfShareOffered": "", "noOfSharesBid": "0", "noOfTotalMeant": ""},
+        {"srNo": "2.2", "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees but up to Ten Lakh Rupees)",
+         "noOfShareOffered": "2453739", "noOfSharesBid": "100", "noOfTotalMeant": str(snii)},
+        {"srNo": "3", "category": "Retail Individual Investors(RIIs)", "noOfShareOffered": "17176172",
+         "noOfSharesBid": "1841129", "noOfTotalMeant": str(retail)},
+        {"srNo": "3(a)", "category": "Cut Off", "noOfShareOffered": "", "noOfSharesBid": "1738614", "noOfTotalMeant": ""},
+        {"srNo": "4", "category": "Employee Reservation", "noOfShareOffered": "50000", "noOfSharesBid": "55000", "noOfTotalMeant": str(emp)},
+        {"srNo": None, "category": "Total", "noOfShareOffered": "3.3902899E7", "noOfSharesBid": "1985054.0", "noOfTotalMeant": str(total)},
+    ]
+    return {"dataList": rows, "updateTime": f"Updated as on {when}"}
+
+
 class Resp:
     def __init__(self, data=None, status=200, text=None):
         self._d, self.status_code = data, status
@@ -328,6 +352,30 @@ class ParserTests(unittest.TestCase):
         self.assertNotIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in m.attach_rhp(nse, rhp, retired={"crystal crop protection"})})
 
 
+    def test_subscription_parser(self):
+        sub = m.parse_nse_subscription(active_category())
+        keys = [c["key"] for c in sub["categories"]]
+        self.assertEqual(keys, ["qib", "nii", "bnii", "snii", "retail", "employee"])   # sub-rows dropped
+        self.assertEqual(sub["total"]["times"], 3.75)
+        self.assertEqual(sub["total"]["offered"], 33902899)
+        self.assertEqual(next(c for c in sub["categories"] if c["key"] == "retail")["times"], 5.5)
+        self.assertTrue(sub["asOf"].startswith("2026-11-22T17:00"))
+        self.assertIsNone(m.parse_nse_subscription({"msg": "no data"}))
+        # ipo-detail wraps the same table in activeCat
+        self.assertEqual(m.parse_nse_subscription({"activeCat": active_category()})["total"]["times"], 3.75)
+
+    def test_subscription_history_one_point_per_day(self):
+        d1 = m.parse_nse_subscription(active_category(total=0.8, retail=1.0, when="18-Nov-2026 17:00:00"))
+        d1b = m.parse_nse_subscription(active_category(total=1.1, retail=1.4, when="18-Nov-2026 19:00:00"))
+        d2 = m.parse_nse_subscription(active_category(total=3.2, retail=4.0, when="19-Nov-2026 17:00:00"))
+        sub = m.merge_subscription(None, d1, date(2026, 11, 18))
+        sub = m.merge_subscription(sub, d1b, date(2026, 11, 18))
+        sub = m.merge_subscription(sub, d2, date(2026, 11, 19))
+        self.assertEqual([(h["date"], h["total"], h["retail"]) for h in sub["history"]],
+                         [("2026-11-18", 1.1, 1.4), ("2026-11-19", 3.2, 4.0)])
+        self.assertEqual(sub["total"]["times"], 3.2)
+
+
     def test_status(self):
         ipo = {"open": date(2026, 11, 12), "close": date(2026, 11, 17), "listing": date(2026, 11, 20)}
         self.assertEqual(m.status_of(ipo, date(2026, 11, 11)), "Upcoming")
@@ -461,6 +509,45 @@ class BuildTests(unittest.TestCase):
         p5 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
                         bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
         self.assertEqual(p5["ipos"], [])
+
+
+    def test_open_ipo_gets_category_subscription_and_keeps_history(self):
+        today = datetime.now(m.IST).date()
+        iso = lambda d: d.strftime("%d-%b-%Y")
+        live = [{"symbol": "OPENCO", "companyName": "Open Co Limited", "series": "EQ",
+                 "issueStartDate": iso(today - timedelta(days=1)), "issueEndDate": iso(today + timedelta(days=1)),
+                 "issuePrice": "Rs.100 to Rs.110", "noOfTime": "0.50"},
+                {"symbol": "LATERCO", "companyName": "Later Co Limited", "series": "EQ",
+                 "issueStartDate": iso(today + timedelta(days=5)), "issueEndDate": iso(today + timedelta(days=7)),
+                 "issuePrice": "Rs.50 to Rs.55"}]
+        nse = FakeNSE(**{"/api/ipo-current-issue": live[:1], "/api/all-upcoming-issues": live[1:],
+                         "/api/ipo-active-category": active_category(total=2.5, when=today.strftime("%d-%b-%Y") + " 15:00:00")})
+        p1 = self.build(nse=nse, bse=FakeBSE(api={"Table": []}))
+        asked = [u for u in nse.calls if "ipo-active-category" in u]
+        self.assertEqual(len(asked), 1)                        # only the open IPO
+        self.assertIn("symbol=OPENCO", asked[0])
+        o = next(i for i in p1["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual(o["subscriptionTimes"], 2.5)          # consolidated total replaces NSE's own
+        self.assertEqual(len(o["subscription"]["categories"]), 6)
+        self.assertEqual(len(o["subscription"]["history"]), 1)
+        # pretend yesterday's snapshot exists in the last file -> today's is added beside it
+        o["subscription"]["history"] = [dict(o["subscription"]["history"][0], date=(today - timedelta(days=1)).isoformat(), total=0.9)]
+        self.save(p1)
+        p2 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": live[:1], "/api/all-upcoming-issues": live[1:],
+                                       "/api/ipo-active-category": RuntimeError("403")}), bse=FakeBSE(api={"Table": []}))
+        o2 = next(i for i in p2["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual(len(o2["subscription"]["history"]), 1)   # failure: last book kept as-is
+        self.save(p2)
+        p3 = self.build(nse=nse, bse=FakeBSE(api={"Table": []}))
+        o3 = next(i for i in p3["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual([h["total"] for h in o3["subscription"]["history"]], [0.9, 2.5])
+
+    def test_faster_refresh_while_an_ipo_is_open(self):
+        today = datetime.now(m.IST).date()
+        open_ipo = {"name": "Open Co", "open": (today - timedelta(days=1)).isoformat(), "close": (today + timedelta(days=1)).isoformat()}
+        forty_min_ago = (datetime.now(timezone.utc) - timedelta(minutes=40)).isoformat()
+        self.assertTrue(m.due_for_refresh({"updated": forty_min_ago, "ipos": [open_ipo]}))
+        self.assertFalse(m.due_for_refresh({"updated": forty_min_ago, "ipos": []}))
 
 
     def test_both_down_raises_so_old_file_is_kept(self):

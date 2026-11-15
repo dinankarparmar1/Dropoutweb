@@ -203,6 +203,25 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
 .ipo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;}
 .ipo-meta{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--muted-dim);margin-top:5px;letter-spacing:0.04em;display:flex;gap:10px;flex-wrap:wrap;}
 .ipo-id{color:var(--muted);}
+.sub-box{margin-top:16px;border-top:1px solid var(--panel-border);padding-top:12px;}
+.sub-box summary{cursor:pointer;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);list-style:none;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;}
+.sub-box summary::-webkit-details-marker{display:none;}
+.sub-box summary::before{content:'\25B8';color:var(--gold);}
+.sub-box[open] summary::before{content:'\25BE';}
+.sub-box summary b{color:var(--gold-bright);font-family:'Space Mono',monospace;letter-spacing:0;text-transform:none;font-size:13px;}
+.sub-when{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted-dim);text-transform:none;letter-spacing:0;margin-left:auto;}
+.sub-tbl{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px;}
+.sub-tbl th{font-size:9.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted-dim);font-weight:500;text-align:right;padding:4px 4px 6px;border-bottom:1px solid var(--panel-border);}
+.sub-tbl th:first-child,.sub-tbl td:first-child{text-align:left;}
+.sub-tbl td{padding:6px 4px;text-align:right;font-family:'Space Mono',monospace;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.04);white-space:nowrap;}
+.sub-tbl td:first-child{font-family:'Inter',sans-serif;color:var(--muted);white-space:normal;}
+.sub-tbl td.t{color:var(--white);font-weight:700;}
+.sub-tbl td.t.pos{color:#6cc79b;}
+.sub-tbl tr.sub-row td:first-child{padding-left:14px;font-size:11px;}
+.sub-tbl tr.sub-total td{border-top:1px solid var(--panel-border);color:var(--gold-bright);}
+.sub-d{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted-dim);}
+.sub-h{margin-top:14px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted-dim);}
+.sub-note{margin-top:8px;font-size:10.5px;color:var(--muted-dim);}
 .ipo-rhp{color:var(--gold);text-decoration:none;border-bottom:1px dotted rgba(212,175,55,0.5);}
 .ipo-name{font-family:'Playfair Display',serif;font-size:19px;color:var(--white);line-height:1.25;}
 .badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
@@ -337,7 +356,7 @@ footer{padding:50px 0 26px;border-top:1px solid var(--panel-border);margin-top:2
       <h2>Frequently Asked Questions</h2>
       <details class="faq-item"><summary>Is GMP legal and official?</summary><p>GMP comes from informal grey-market trading that is not regulated by SEBI or the exchanges. It is widely reported, but it is not an official price and has no legal backing.</p></details>
       <details class="faq-item"><summary>Does a high GMP guarantee listing gains?</summary><p>No. Many IPOs with a high GMP have listed far lower than expected, and some have listed at a loss. Treat GMP as one rough signal, not a prediction.</p></details>
-      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription — are taken automatically from NSE India's and BSE India's public IPO pages and SEBI's register of filed Red Herring Prospectuses, a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites. IPOs marked <b>RHP filed</b> have filed their Red Herring Prospectus with SEBI (we pick these up automatically from SEBI's public register and link the document) but are not yet on NSE/BSE's IPO pages — their dates and price band appear once announced. SME IPOs file their documents with the exchanges, not SEBI, so they appear once NSE or BSE list them. IPOs marked <b>Tentative</b> are expected but not yet announced — their dates can change.</p></details>
+      <details class="faq-item"><summary>Where does this data come from?</summary><p>IPO details — company name, price band, lot size, issue size, dates and live subscription (category-wise: QIB, NII, Retail, Employee, Shareholder, with a day-wise record) — are taken automatically from NSE India's and BSE India's public IPO pages and SEBI's register of filed Red Herring Prospectuses, a few times every trading day. The listing date is an estimate (T+3 working days after the issue closes) unless NSE has announced it. GMP is not published by any exchange; our team collects it from market sources and updates it by hand, so it may be delayed or differ from other websites. IPOs marked <b>RHP filed</b> have filed their Red Herring Prospectus with SEBI (we pick these up automatically from SEBI's public register and link the document) but are not yet on NSE/BSE's IPO pages — their dates and price band appear once announced. SME IPOs file their documents with the exchanges, not SEBI, so they appear once NSE or BSE list them. IPOs marked <b>Tentative</b> are expected but not yet announced — their dates can change.</p></details>
       <details class="faq-item"><summary>Should I apply for an IPO based on GMP?</summary><p>We do not give advice on whether to apply for any IPO. Read the company's RHP, understand the business and its valuation, and consult a SEBI-registered adviser if you need advice.</p></details>
     </div>
   </div>
@@ -383,6 +402,39 @@ function gmpEntry(ipo, gmpMap){
   return null;
 }
 
+function subBox(ipo, st){
+  var s = ipo.subscription;
+  if(!s || (!s.categories && !s.total)) return '';
+  var fx = function(v){ var n = num(v); return n == null ? '—' : n.toFixed(2) + 'x'; };
+  var cls = function(v){ var n = num(v); return n == null ? '' : (n >= 1 ? ' pos' : ''); };
+  var total = s.total && num(s.total.times);
+  var when = s.asOf ? fmtStamp(s.asOf) : null;
+  var html = '<details class="sub-box"' + (st === 'Open' ? ' open' : '') + '><summary>Subscription'
+    + (total != null ? ' · <b>' + total.toFixed(2) + 'x</b>' : '') + (when ? '<span class="sub-when">' + esc(when) + '</span>' : '') + '</summary>';
+  html += '<table class="sub-tbl"><thead><tr><th>Category</th><th>Offered</th><th>Bid</th><th>Subscribed</th></tr></thead><tbody>';
+  var big = function(n){ n = num(n); if(n == null) return '—'; return n >= 1e7 ? (n / 1e7).toFixed(2) + ' Cr' : n >= 1e5 ? (n / 1e5).toFixed(2) + ' L' : n.toLocaleString('en-IN'); };
+  (s.categories || []).forEach(function(c){
+    var sub = c.key === 'bnii' || c.key === 'snii';
+    html += '<tr' + (sub ? ' class="sub-row"' : '') + '><td>' + esc(c.label) + '</td><td>' + big(c.offered) + '</td><td>' + big(c.bid) + '</td><td class="t' + cls(c.times) + '">' + fx(c.times) + '</td></tr>';
+  });
+  if(s.total) html += '<tr class="sub-total"><td>Total</td><td>' + big(s.total.offered) + '</td><td>' + big(s.total.bid) + '</td><td class="t' + cls(s.total.times) + '">' + fx(s.total.times) + '</td></tr>';
+  html += '</tbody></table>';
+  var h = s.history || [];
+  if(h.length){
+    var cols = [['qib','QIB'],['nii','NII'],['retail','Retail']].filter(function(c){ return h.some(function(r){ return r[c[0]] != null; }); });
+    html += '<div class="sub-h">Day-wise</div><table class="sub-tbl"><thead><tr><th>Day</th>';
+    cols.forEach(function(c){ html += '<th>' + c[1] + '</th>'; });
+    html += '<th>Total</th></tr></thead><tbody>';
+    h.forEach(function(r, i){
+      html += '<tr><td>Day ' + (i + 1) + ' <span class="sub-d">' + fmtDate(r.date) + '</span></td>';
+      cols.forEach(function(c){ html += '<td>' + fx(r[c[0]]) + '</td>'; });
+      html += '<td class="t' + cls(r.total) + '">' + fx(r.total) + '</td></tr>';
+    });
+    html += '</tbody></table>';
+  }
+  return html + '<p class="sub-note">Source: NSE (consolidated bids). Updated about every 30 minutes while the IPO is open.</p></details>';
+}
+
 function card(ipo){
   var price = num(ipo.priceHigh) || num(ipo.priceLow) || 0;
   var gmp = ipo.gmp;
@@ -408,6 +460,7 @@ function card(ipo){
     + '<div><div class="k">Listing Date' + (ipo.listingEstimated ? ' <span class="est">(exp.)</span>' : '') + '</div><div class="v">' + fmtDate(ipo.listing) + '</div></div>'
     + '<div><div class="k">Issue Size</div><div class="v">' + size + '</div></div>'
     + '</div>'
+    + subBox(ipo, st)
     + (price && gmp != null ? '<button type="button" class="btn btn-outline-gold use-calc" data-price="' + price + '" data-gmp="' + gmp + '" data-lot="' + (num(ipo.lotSize) || '') + '">Calculate my gain</button>' : '')
     + '</div>';
 }

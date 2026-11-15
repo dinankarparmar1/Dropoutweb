@@ -9,6 +9,9 @@ NSE (primary -- has symbols, lot size, issue size and live subscription):
   /api/all-upcoming-issues?category=ipo   -> IPOs announced but not yet open
   /api/ipo-detail?symbol=X&series=EQ|SME  -> price band, lot size, issue size
   /api/holiday-master?type=trading        -> trading holidays, for the listing estimate
+  /api/ipo-active-category?symbol=X       -> category-wise subscription (QIB / NII / Retail /
+                                             Employee / Shareholder / Total), for open IPOs;
+                                             one snapshot per day is kept as day-wise history
 
 BSE (second source -- adds BSE SME IPOs that never appear on NSE, and is the
 backup for mainboard IPOs when NSE blocks the GitHub runner):
@@ -58,6 +61,8 @@ OUT_FILE = REPO_ROOT / "data" / "ipo-details.json"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 REFRESH_MINUTES = 110          # ~ every 2 hours during the market-data runs
+OPEN_REFRESH_MINUTES = 25      # while an IPO is open, follow its subscription ~every 30 min
+MAX_SUBSCRIPTION_CALLS = 10
 MAX_DETAIL_CALLS = 25          # never hammer NSE with per-IPO requests
 KEEP_DAYS_AFTER_LISTING = 1    # drop an IPO the day after it lists
 
@@ -304,6 +309,92 @@ def merge_nse_feeds(current, upcoming):
             else:
                 by_key[key] = ipo
     return list(by_key.values())
+
+
+_SUB_KEYS = (
+    ("qib", ("qualified institutional", "qib")),
+    ("bnii", ("more than ten lakh", "more than 10 lakh", "above 10 lakh", "bnii")),
+    ("snii", ("more than two lakh", "more than 2 lakh", "upto 10 lakh", "up to 10 lakh", "snii")),
+    ("nii", ("non institutional", "nii")),
+    ("retail", ("retail", "rii", "individual investors")),
+    ("employee", ("employee",)),
+    ("shareholder", ("shareholder",)),
+    ("policyholder", ("policyholder",)),
+)
+SUB_LABELS = {"qib": "QIB", "nii": "NII", "bnii": "bNII (> ₹10L)", "snii": "sNII (₹2–10L)",
+              "retail": "Retail", "employee": "Employee", "shareholder": "Shareholder",
+              "policyholder": "Policyholder", "total": "Total"}
+
+
+def _float(v):
+    try:
+        f = float(str(v).replace(",", "").strip())
+    except (TypeError, ValueError):
+        return None
+    return f
+
+
+def parse_nse_subscription(raw):
+    """NSE ipo-active-category (or ipo-detail's activeCat) -> {"asOf", "total", "categories": [...]}.
+    Only top-level rows ("1", "2", "2.1", "2.2", "3", ...) and Total are kept; sub-rows like
+    "1(a) FIIs" or "3(a) Cut Off" carry no times figure."""
+    block = raw or {}
+    if isinstance(block, dict) and "dataList" not in block and isinstance(block.get("activeCat"), dict):
+        block = block["activeCat"]
+    rows = block.get("dataList") if isinstance(block, dict) else None
+    if not isinstance(rows, list):
+        return None
+    cats, total = [], None
+    for r in rows:
+        if not isinstance(r, dict):
+            continue
+        label = str(r.get("category") or "").strip()
+        sr = str(r.get("srNo") or "").strip()
+        if not label or label.lower() in ("category", "sr.no."):
+            continue
+        times = _float(r.get("noOfTotalMeant") if "noOfTotalMeant" in r else r.get("noOfTime"))
+        offered = _float(r.get("noOfShareOffered") or r.get("noOfSharesOffered"))
+        bid = _float(r.get("noOfSharesBid") or r.get("noOfsharesBid"))
+        if label.lower().startswith("total"):
+            total = {"times": round(times, 2) if times is not None else None,
+                     "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None}
+            continue
+        if not re.fullmatch(r"\d+(\.\d+)?", sr):
+            continue
+        low = label.lower()
+        key = next((k for k, words in _SUB_KEYS if any(w in low for w in words)), None)
+        if key is None or times is None:
+            continue
+        if key == "nii" and sr.count(".") == 1:      # an unlabelled 2.x row: don't confuse with total NII
+            continue
+        cats.append({"key": key, "label": SUB_LABELS[key], "times": round(times, 2),
+                     "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None})
+    if total is None and not cats:
+        return None
+    m = re.search(r"(\d{1,2}-[A-Za-z]{3}-\d{4})\s+(\d{1,2}:\d{2})", str(block.get("updateTime") or ""))
+    as_of = None
+    if m:
+        try:
+            as_of = datetime.strptime(m.group(1) + " " + m.group(2), "%d-%b-%Y %H:%M").replace(tzinfo=IST).isoformat()
+        except ValueError:
+            as_of = None
+    return {"asOf": as_of, "total": total, "categories": cats}
+
+
+def merge_subscription(old, snap, today):
+    """Latest snapshot + one point per day (the day's latest) for the day-wise table."""
+    if not snap:
+        return old
+    hist = [h for h in ((old or {}).get("history") or []) if isinstance(h, dict) and h.get("date")]
+    day = (parse_date(snap.get("asOf")) or today).isoformat()
+    point = {"date": day, "total": (snap.get("total") or {}).get("times")}
+    for c in snap.get("categories") or []:
+        point[c["key"]] = c["times"]
+    hist = [h for h in hist if h["date"] != day] + [point]
+    hist.sort(key=lambda h: h["date"])
+    out = dict(snap)
+    out["history"] = hist[-10:]
+    return out
 
 
 # --- BSE ------------------------------------------------------------------
@@ -613,6 +704,17 @@ def finalise(fresh, previous, holidays, today, failed_sources=(), retired=None):
         if old.get("key"):
             ipo["key"] = old["key"]
 
+    for ipo in fresh:
+        snap = ipo.pop("subscriptionSnapshot", None)
+        old = next((p for p in previous if _same_issue(p, ipo)), None)
+        prev_sub = (old or {}).get("subscription")
+        if snap:
+            ipo["subscription"] = merge_subscription(prev_sub, snap, today)
+        elif prev_sub and not ipo.get("subscription"):
+            ipo["subscription"] = prev_sub
+        if ipo.get("subscriptionTimes") is None and (old or {}).get("subscriptionTimes") is not None:
+            ipo["subscriptionTimes"] = old["subscriptionTimes"]
+
     carried = []
     for old in previous:
         if any(_same_issue(old, f) for f in fresh):
@@ -688,6 +790,28 @@ def fetch_nse(session, debug=False):
                     if v and not (k in ("open", "close") and ipo.get(k)):
                         ipo[k] = v
                 break
+        time.sleep(0.5)
+
+    # Category-wise subscription for IPOs open today (and the day after close,
+    # when NSE publishes the final book).
+    today = datetime.now(IST).date()
+    calls = 0
+    for ipo in ipos:
+        o, c = ipo.get("open"), ipo.get("close")
+        if not (ipo.get("symbol") and o and c and o <= today <= c + timedelta(days=1)):
+            continue
+        if calls >= MAX_SUBSCRIPTION_CALLS:
+            break
+        calls += 1
+        try:
+            snap = parse_nse_subscription(_nse_get(session, f"/api/ipo-active-category?symbol={ipo['symbol']}", debug))
+        except Exception as e:
+            print(f"NSE subscription {ipo['symbol']} failed: {e}", file=sys.stderr)
+            snap = None
+        if snap:
+            ipo["subscriptionSnapshot"] = snap
+            if (snap.get("total") or {}).get("times") is not None:
+                ipo["subscriptionTimes"] = snap["total"]["times"]
         time.sleep(0.5)
     return ipos
 
@@ -792,7 +916,11 @@ def due_for_refresh(previous, now=None, force=False):
     except ValueError:
         return True
     now = now or datetime.now(timezone.utc)
-    return (now - last) >= timedelta(minutes=REFRESH_MINUTES)
+    today = now.astimezone(IST).date()
+    any_open = any(status_of(_deserialise(i), today) == "Open" for i in previous.get("ipos") or []
+                   if isinstance(i, dict) and not i.get("rhpOnly"))
+    minutes = OPEN_REFRESH_MINUTES if any_open else REFRESH_MINUTES
+    return (now - last) >= timedelta(minutes=minutes)
 
 
 def build_ipo_details(session, debug=False, force=False, bse_session=None, sebi_session=None):

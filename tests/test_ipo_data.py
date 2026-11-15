@@ -173,6 +173,50 @@ class FakeBSE:
         return Resp(text=self.forthcoming)
 
 
+def sebi_listing(rows):
+    """SEBI's RHP register as its AJAX call returns it (title attribute may embed a second link)."""
+    trs = "".join(
+        f"<tr><td>{d}</td><td><a href='https://www.sebi.gov.in/filings/public-issues/nov-2026/{slug}_{i}.html'  "
+        f'target="_blank" title="{t} <br><a href=\'https://www.sebi.gov.in/sebi_data/commondocs/nov-2026/x_p.pdf\' '
+        f'style=color:#000000>{t.split(" - ")[0]} - Abridged Prospectus</a>" class=\'points\'>{t} <br>'
+        f"<a href='https://www.sebi.gov.in/sebi_data/commondocs/nov-2026/x_p.pdf'>{t.split(' - ')[0]} - Abridged Prospectus</a></a></td></tr>"
+        for i, (d, t, slug) in enumerate(rows, start=105600))
+    return ("<input type='hidden' name='totalpage' value=40 /><table id='sample_1' class='table'>"
+            "<tr><th>Date</th><th>Title</th></tr>" + trs + "</table>")
+
+
+def _ago(days):
+    return (datetime.now(m.IST).date() - timedelta(days=days)).strftime("%b %d, %Y")
+
+
+SEBI_ROWS = [
+    (_ago(3), "Crystal Crop Protection Limited - RHP", "crystal-crop-protection-limited-rhp"),
+    (_ago(4), "SAMPLE INFRA PROJECTS LIMITED - Red Herring Prospectus", "sample-infra"),
+    (_ago(5), "Old Co Limited - Addendum to RHP", "old-co-addendum"),
+    (_ago(6), "Roadways Infra Trust - RHP", "roadways-invit"),
+    (_ago(45), "Long Gone Limited - RHP", "long-gone"),
+]
+
+
+class FakeSEBI:
+    def __init__(self, rows=None, ajax_fails=False, listing_fails=False):
+        self.html = sebi_listing(SEBI_ROWS if rows is None else rows)
+        self.ajax_fails, self.listing_fails = ajax_fails, listing_fails
+        self.used = []
+
+    def post(self, url, data=None, timeout=None, headers=None):
+        self.used.append("ajax")
+        if self.ajax_fails:
+            raise RuntimeError("timeout")
+        return Resp(text=self.html)
+
+    def get(self, url, timeout=None, headers=None, params=None):
+        self.used.append("listing")
+        if self.listing_fails:
+            return Resp(status=503, text="")
+        return Resp(text=self.html)
+
+
 # ---------------------------------------------------------------------------
 
 class ParserTests(unittest.TestCase):
@@ -260,6 +304,30 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(out["SAMPINFRA"]["name"], "Sample Infra Projects Limited")   # NSE wins
         self.assertEqual(out["MOCK-TEXTILES"]["sources"], ["BSE"])          # BSE-only SME
 
+    def test_sebi_listing(self):
+        rows = m.parse_sebi_listing(sebi_listing(SEBI_ROWS))
+        self.assertEqual(len(rows), 5)
+        self.assertEqual(rows[0]["title"], "Crystal Crop Protection Limited - RHP")
+        self.assertTrue(rows[0]["url"].startswith("https://www.sebi.gov.in/filings/public-issues/"))
+        self.assertEqual(m.sebi_issuer("SAMPLE INFRA PROJECTS LIMITED - Red Herring Prospectus"), "Sample Infra Projects Limited")
+        self.assertEqual(m.sebi_issuer("Hero FinCorp Limited – RHP"), "Hero FinCorp Limited")
+        today = datetime.now(m.IST).date()
+        ipos = m.sebi_rows_to_ipos(rows, today)
+        # addendum, InvIT and the 45-day-old RHP are dropped
+        self.assertEqual([i["name"] for i in ipos], ["Crystal Crop Protection Limited", "Sample Infra Projects Limited"])
+        self.assertTrue(all(i["rhpOnly"] and i["type"] == "Mainboard" for i in ipos))
+        self.assertEqual(m.parse_sebi_listing("<html>error</html>"), [])
+
+    def test_attach_rhp(self):
+        nse = m.merge_sources(m.merge_nse_feeds(NSE_CURRENT, NSE_UPCOMING), [])
+        rhp = m.sebi_rows_to_ipos(m.parse_sebi_listing(sebi_listing(SEBI_ROWS)), datetime.now(m.IST).date())
+        out = {i["key"]: i for i in m.attach_rhp(nse, rhp)}
+        self.assertIn("rhpUrl", out["SAMPINFRA"])                  # attached, not duplicated
+        self.assertNotIn("SAMPLE-INFRA-PROJECTS", out)
+        self.assertTrue(out["CRYSTAL-CROP-PROTECTION"]["rhpOnly"])  # RHP filed, no exchange listing yet
+        self.assertNotIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in m.attach_rhp(nse, rhp, retired={"crystal crop protection"})})
+
+
     def test_status(self):
         ipo = {"open": date(2026, 11, 12), "close": date(2026, 11, 17), "listing": date(2026, 11, 20)}
         self.assertEqual(m.status_of(ipo, date(2026, 11, 11)), "Upcoming")
@@ -276,8 +344,9 @@ class BuildTests(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def build(self, nse=None, bse=None, force=True):
-        return m.build_ipo_details(nse or FakeNSE(), force=force, bse_session=bse or FakeBSE())
+    def build(self, nse=None, bse=None, force=True, sebi=None):
+        return m.build_ipo_details(nse or FakeNSE(), force=force, bse_session=bse or FakeBSE(),
+                                   sebi_session=sebi or FakeSEBI(rows=[]))
 
     def save(self, payload):
         m.OUT_FILE.write_text(json.dumps(payload))
@@ -332,6 +401,67 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(by["SAMPINFRA"]["lotSize"], 59)
         # holidays come from the last file when NSE is down
         self.assertEqual(by["DEMOFOOD"]["listing"], "2026-11-27")
+
+    def test_sebi_rhp_ipo_appears_and_survives_sebi_outage(self):
+        payload = self.build(sebi=FakeSEBI())
+        by = {i["key"]: i for i in payload["ipos"]}
+        self.assertTrue(payload["sources"]["SEBI"]["ok"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", by)
+        self.assertEqual(by["CRYSTAL-CROP-PROTECTION"]["status"], "Upcoming")
+        self.assertIn("rhpDate", by["SAMPINFRA"])
+        self.save(payload)
+        nxt = self.build(sebi=FakeSEBI(ajax_fails=True, listing_fails=True))
+        self.assertFalse(nxt["sources"]["SEBI"]["ok"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in nxt["ipos"]})   # carried, not lost
+
+    def test_sebi_ajax_falls_back_to_listing(self):
+        sebi = FakeSEBI(ajax_fails=True)
+        payload = self.build(sebi=sebi)
+        self.assertEqual(sebi.used, ["ajax", "listing"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in payload["ipos"]})
+
+    def test_rhp_lifecycle_to_listing_and_retirement(self):
+        """RHP filed -> NSE lists it -> it closes and NSE drops it -> it lists -> gone for good."""
+        crystal_rhp = [(_ago(2), "Crystal Crop Protection Limited - RHP", "crystal")]
+        today = datetime.now(m.IST).date()
+        iso = lambda d: d.strftime("%d-%b-%Y")
+        # 1. only SEBI knows it
+        p1 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual([i["key"] for i in p1["ipos"]], ["CRYSTAL-CROP-PROTECTION"])
+        self.save(p1)
+        # 2. NSE lists it, open today -> official data, same key kept for the GMP file
+        listed = [{"symbol": "CRYSTAL", "companyName": "Crystal Crop Protection Limited", "series": "EQ",
+                   "issueStartDate": iso(today), "issueEndDate": iso(today + timedelta(days=2)),
+                   "issuePrice": "Rs.259 to Rs.272", "noOfTime": "1.20"}]
+        p2 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": listed, "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        c = p2["ipos"][0]
+        self.assertEqual((c["key"], c["symbol"], c["priceHigh"], c["status"]), ("CRYSTAL-CROP-PROTECTION", "CRYSTAL", 272, "Open"))
+        self.assertIn("rhpUrl", c)
+        self.assertFalse(c.get("rhpOnly"))
+        self.save(p2)
+        # 3. it has closed: pretend the last file says so, NSE no longer lists it, SEBI still does
+        closed = dict(c, open=(today - timedelta(days=4)).isoformat(), close=(today - timedelta(days=2)).isoformat(),
+                      listing=(today + timedelta(days=1)).isoformat())
+        self.save(dict(p2, ipos=[closed]))
+        p3 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        c3 = p3["ipos"][0]
+        self.assertEqual((c3["status"], c3["priceHigh"]), ("Closed", 272))
+        self.assertFalse(c3.get("rhpOnly"))
+        # 4. listed two days ago: dropped and remembered; the RHP row must not bring it back
+        gone = dict(closed, listing=(today - timedelta(days=2)).isoformat())
+        self.save(dict(p3, ipos=[gone]))
+        p4 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual(p4["ipos"], [])
+        self.assertIn("crystal crop protection", [r["name"] for r in p4["retired"]])
+        self.save(p4)
+        p5 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual(p5["ipos"], [])
+
 
     def test_both_down_raises_so_old_file_is_kept(self):
         with self.assertRaises(RuntimeError):

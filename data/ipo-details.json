@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T03:01:12.193532Z",
+  "updated": "2026-11-15T04:56:27.565606Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -8,6 +8,10 @@
     "BSE": {
       "ok": true,
       "ipos": 0
+    },
+    "SEBI": {
+      "ok": true,
+      "ipos": 4
     }
   },
   "holidays": [
@@ -16,5 +20,103 @@
     "2026-11-24",
     "2026-12-25"
   ],
-  "ipos": []
+  "ipos": [
+    {
+      "key": "BLS-POLYMERS",
+      "symbol": null,
+      "bseCode": null,
+      "name": "BLS Polymers Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-10-19",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/bls-polymers-limited-rhp_105327.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "BOMBAY-COATED-AND-SPECIAL-STEELS",
+      "symbol": null,
+      "bseCode": null,
+      "name": "Bombay Coated and Special Steels Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-10-21",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/bombay-coated-and-special-steels-limited-rhp_105447.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "CRYSTAL-CROP-PROTECTION",
+      "symbol": null,
+      "bseCode": null,
+      "name": "Crystal Crop Protection Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-11-12",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "SFC-ENVIRONMENTAL-TECHNOLOGIES",
+      "symbol": null,
+      "bseCode": null,
+      "name": "SFC Environmental Technologies Ltd",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-10-22",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/sfc-environmental-technologies-ltd-rhp_105380.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    }
+  ],
+  "retired": []
 }

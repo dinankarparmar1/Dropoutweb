@@ -105,6 +105,30 @@ BSE_FORTHCOMING_ROWS = [
 ]
 
 
+def active_category(qib=1.2, nii=3.4, bnii=2.1, snii=6.0, retail=5.5, emp=1.1, total=3.75, when="22-Nov-2026 17:00:00"):
+    """NSE ipo-active-category, same shape as the live feed (header row, sub-rows, Total)."""
+    rows = [
+        {"srNo": "Sr.No.", "category": "Category", "noOfShareOffered": "No.of shares offered/reserved",
+         "noOfSharesBid": "No. of shares bid for", "noOfTotalMeant": "No. of times of total meant for the category"},
+        {"srNo": "1", "category": "Qualified Institutional Buyers(QIBs)", "noOfShareOffered": "9365510",
+         "noOfSharesBid": str(int(9365510 * qib)), "noOfTotalMeant": str(qib)},
+        {"srNo": "1(a)", "category": "Foreign Institutional Investors(FIIs)", "noOfShareOffered": "", "noOfSharesBid": "0", "noOfTotalMeant": ""},
+        {"srNo": "2", "category": "Non Institutional Investors", "noOfShareOffered": "7361217",
+         "noOfSharesBid": "100", "noOfTotalMeant": str(nii)},
+        {"srNo": "2.1", "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+         "noOfShareOffered": "4907478", "noOfSharesBid": "100", "noOfTotalMeant": str(bnii)},
+        {"srNo": "2.1(a)", "category": "Corporates", "noOfShareOffered": "", "noOfSharesBid": "0", "noOfTotalMeant": ""},
+        {"srNo": "2.2", "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees but up to Ten Lakh Rupees)",
+         "noOfShareOffered": "2453739", "noOfSharesBid": "100", "noOfTotalMeant": str(snii)},
+        {"srNo": "3", "category": "Retail Individual Investors(RIIs)", "noOfShareOffered": "17176172",
+         "noOfSharesBid": "1841129", "noOfTotalMeant": str(retail)},
+        {"srNo": "3(a)", "category": "Cut Off", "noOfShareOffered": "", "noOfSharesBid": "1738614", "noOfTotalMeant": ""},
+        {"srNo": "4", "category": "Employee Reservation", "noOfShareOffered": "50000", "noOfSharesBid": "55000", "noOfTotalMeant": str(emp)},
+        {"srNo": None, "category": "Total", "noOfShareOffered": "3.3902899E7", "noOfSharesBid": "1985054.0", "noOfTotalMeant": str(total)},
+    ]
+    return {"dataList": rows, "updateTime": f"Updated as on {when}"}
+
+
 class Resp:
     def __init__(self, data=None, status=200, text=None):
         self._d, self.status_code = data, status
@@ -171,6 +195,50 @@ class FakeBSE:
         if self.post_fails:
             raise RuntimeError("timeout")
         return Resp(text=self.forthcoming)
+
+
+def sebi_listing(rows):
+    """SEBI's RHP register as its AJAX call returns it (title attribute may embed a second link)."""
+    trs = "".join(
+        f"<tr><td>{d}</td><td><a href='https://www.sebi.gov.in/filings/public-issues/nov-2026/{slug}_{i}.html'  "
+        f'target="_blank" title="{t} <br><a href=\'https://www.sebi.gov.in/sebi_data/commondocs/nov-2026/x_p.pdf\' '
+        f'style=color:#000000>{t.split(" - ")[0]} - Abridged Prospectus</a>" class=\'points\'>{t} <br>'
+        f"<a href='https://www.sebi.gov.in/sebi_data/commondocs/nov-2026/x_p.pdf'>{t.split(' - ')[0]} - Abridged Prospectus</a></a></td></tr>"
+        for i, (d, t, slug) in enumerate(rows, start=105600))
+    return ("<input type='hidden' name='totalpage' value=40 /><table id='sample_1' class='table'>"
+            "<tr><th>Date</th><th>Title</th></tr>" + trs + "</table>")
+
+
+def _ago(days):
+    return (datetime.now(m.IST).date() - timedelta(days=days)).strftime("%b %d, %Y")
+
+
+SEBI_ROWS = [
+    (_ago(3), "Crystal Crop Protection Limited - RHP", "crystal-crop-protection-limited-rhp"),
+    (_ago(4), "SAMPLE INFRA PROJECTS LIMITED - Red Herring Prospectus", "sample-infra"),
+    (_ago(5), "Old Co Limited - Addendum to RHP", "old-co-addendum"),
+    (_ago(6), "Roadways Infra Trust - RHP", "roadways-invit"),
+    (_ago(45), "Long Gone Limited - RHP", "long-gone"),
+]
+
+
+class FakeSEBI:
+    def __init__(self, rows=None, ajax_fails=False, listing_fails=False):
+        self.html = sebi_listing(SEBI_ROWS if rows is None else rows)
+        self.ajax_fails, self.listing_fails = ajax_fails, listing_fails
+        self.used = []
+
+    def post(self, url, data=None, timeout=None, headers=None):
+        self.used.append("ajax")
+        if self.ajax_fails:
+            raise RuntimeError("timeout")
+        return Resp(text=self.html)
+
+    def get(self, url, timeout=None, headers=None, params=None):
+        self.used.append("listing")
+        if self.listing_fails:
+            return Resp(status=503, text="")
+        return Resp(text=self.html)
 
 
 # ---------------------------------------------------------------------------
@@ -260,6 +328,54 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(out["SAMPINFRA"]["name"], "Sample Infra Projects Limited")   # NSE wins
         self.assertEqual(out["MOCK-TEXTILES"]["sources"], ["BSE"])          # BSE-only SME
 
+    def test_sebi_listing(self):
+        rows = m.parse_sebi_listing(sebi_listing(SEBI_ROWS))
+        self.assertEqual(len(rows), 5)
+        self.assertEqual(rows[0]["title"], "Crystal Crop Protection Limited - RHP")
+        self.assertTrue(rows[0]["url"].startswith("https://www.sebi.gov.in/filings/public-issues/"))
+        self.assertEqual(m.sebi_issuer("SAMPLE INFRA PROJECTS LIMITED - Red Herring Prospectus"), "Sample Infra Projects Limited")
+        self.assertEqual(m.sebi_issuer("Hero FinCorp Limited – RHP"), "Hero FinCorp Limited")
+        today = datetime.now(m.IST).date()
+        ipos = m.sebi_rows_to_ipos(rows, today)
+        # addendum, InvIT and the 45-day-old RHP are dropped
+        self.assertEqual([i["name"] for i in ipos], ["Crystal Crop Protection Limited", "Sample Infra Projects Limited"])
+        self.assertTrue(all(i["rhpOnly"] and i["type"] == "Mainboard" for i in ipos))
+        self.assertEqual(m.parse_sebi_listing("<html>error</html>"), [])
+
+    def test_attach_rhp(self):
+        nse = m.merge_sources(m.merge_nse_feeds(NSE_CURRENT, NSE_UPCOMING), [])
+        rhp = m.sebi_rows_to_ipos(m.parse_sebi_listing(sebi_listing(SEBI_ROWS)), datetime.now(m.IST).date())
+        out = {i["key"]: i for i in m.attach_rhp(nse, rhp)}
+        self.assertIn("rhpUrl", out["SAMPINFRA"])                  # attached, not duplicated
+        self.assertNotIn("SAMPLE-INFRA-PROJECTS", out)
+        self.assertTrue(out["CRYSTAL-CROP-PROTECTION"]["rhpOnly"])  # RHP filed, no exchange listing yet
+        self.assertNotIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in m.attach_rhp(nse, rhp, retired={"crystal crop protection"})})
+
+
+    def test_subscription_parser(self):
+        sub = m.parse_nse_subscription(active_category())
+        keys = [c["key"] for c in sub["categories"]]
+        self.assertEqual(keys, ["qib", "nii", "bnii", "snii", "retail", "employee"])   # sub-rows dropped
+        self.assertEqual(sub["total"]["times"], 3.75)
+        self.assertEqual(sub["total"]["offered"], 33902899)
+        self.assertEqual(next(c for c in sub["categories"] if c["key"] == "retail")["times"], 5.5)
+        self.assertTrue(sub["asOf"].startswith("2026-11-22T17:00"))
+        self.assertIsNone(m.parse_nse_subscription({"msg": "no data"}))
+        # ipo-detail wraps the same table in activeCat
+        self.assertEqual(m.parse_nse_subscription({"activeCat": active_category()})["total"]["times"], 3.75)
+
+    def test_subscription_history_one_point_per_day(self):
+        d1 = m.parse_nse_subscription(active_category(total=0.8, retail=1.0, when="18-Nov-2026 17:00:00"))
+        d1b = m.parse_nse_subscription(active_category(total=1.1, retail=1.4, when="18-Nov-2026 19:00:00"))
+        d2 = m.parse_nse_subscription(active_category(total=3.2, retail=4.0, when="19-Nov-2026 17:00:00"))
+        sub = m.merge_subscription(None, d1, date(2026, 11, 18))
+        sub = m.merge_subscription(sub, d1b, date(2026, 11, 18))
+        sub = m.merge_subscription(sub, d2, date(2026, 11, 19))
+        self.assertEqual([(h["date"], h["total"], h["retail"]) for h in sub["history"]],
+                         [("2026-11-18", 1.1, 1.4), ("2026-11-19", 3.2, 4.0)])
+        self.assertEqual(sub["total"]["times"], 3.2)
+
+
     def test_status(self):
         ipo = {"open": date(2026, 11, 12), "close": date(2026, 11, 17), "listing": date(2026, 11, 20)}
         self.assertEqual(m.status_of(ipo, date(2026, 11, 11)), "Upcoming")
@@ -276,8 +392,9 @@ class BuildTests(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def build(self, nse=None, bse=None, force=True):
-        return m.build_ipo_details(nse or FakeNSE(), force=force, bse_session=bse or FakeBSE())
+    def build(self, nse=None, bse=None, force=True, sebi=None):
+        return m.build_ipo_details(nse or FakeNSE(), force=force, bse_session=bse or FakeBSE(),
+                                   sebi_session=sebi or FakeSEBI(rows=[]))
 
     def save(self, payload):
         m.OUT_FILE.write_text(json.dumps(payload))
@@ -332,6 +449,106 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(by["SAMPINFRA"]["lotSize"], 59)
         # holidays come from the last file when NSE is down
         self.assertEqual(by["DEMOFOOD"]["listing"], "2026-11-27")
+
+    def test_sebi_rhp_ipo_appears_and_survives_sebi_outage(self):
+        payload = self.build(sebi=FakeSEBI())
+        by = {i["key"]: i for i in payload["ipos"]}
+        self.assertTrue(payload["sources"]["SEBI"]["ok"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", by)
+        self.assertEqual(by["CRYSTAL-CROP-PROTECTION"]["status"], "Upcoming")
+        self.assertIn("rhpDate", by["SAMPINFRA"])
+        self.save(payload)
+        nxt = self.build(sebi=FakeSEBI(ajax_fails=True, listing_fails=True))
+        self.assertFalse(nxt["sources"]["SEBI"]["ok"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in nxt["ipos"]})   # carried, not lost
+
+    def test_sebi_ajax_falls_back_to_listing(self):
+        sebi = FakeSEBI(ajax_fails=True)
+        payload = self.build(sebi=sebi)
+        self.assertEqual(sebi.used, ["ajax", "listing"])
+        self.assertIn("CRYSTAL-CROP-PROTECTION", {i["key"] for i in payload["ipos"]})
+
+    def test_rhp_lifecycle_to_listing_and_retirement(self):
+        """RHP filed -> NSE lists it -> it closes and NSE drops it -> it lists -> gone for good."""
+        crystal_rhp = [(_ago(2), "Crystal Crop Protection Limited - RHP", "crystal")]
+        today = datetime.now(m.IST).date()
+        iso = lambda d: d.strftime("%d-%b-%Y")
+        # 1. only SEBI knows it
+        p1 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual([i["key"] for i in p1["ipos"]], ["CRYSTAL-CROP-PROTECTION"])
+        self.save(p1)
+        # 2. NSE lists it, open today -> official data, same key kept for the GMP file
+        listed = [{"symbol": "CRYSTAL", "companyName": "Crystal Crop Protection Limited", "series": "EQ",
+                   "issueStartDate": iso(today), "issueEndDate": iso(today + timedelta(days=2)),
+                   "issuePrice": "Rs.259 to Rs.272", "noOfTime": "1.20"}]
+        p2 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": listed, "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        c = p2["ipos"][0]
+        self.assertEqual((c["key"], c["symbol"], c["priceHigh"], c["status"]), ("CRYSTAL-CROP-PROTECTION", "CRYSTAL", 272, "Open"))
+        self.assertIn("rhpUrl", c)
+        self.assertFalse(c.get("rhpOnly"))
+        self.save(p2)
+        # 3. it has closed: pretend the last file says so, NSE no longer lists it, SEBI still does
+        closed = dict(c, open=(today - timedelta(days=4)).isoformat(), close=(today - timedelta(days=2)).isoformat(),
+                      listing=(today + timedelta(days=1)).isoformat())
+        self.save(dict(p2, ipos=[closed]))
+        p3 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        c3 = p3["ipos"][0]
+        self.assertEqual((c3["status"], c3["priceHigh"]), ("Closed", 272))
+        self.assertFalse(c3.get("rhpOnly"))
+        # 4. listed two days ago: dropped and remembered; the RHP row must not bring it back
+        gone = dict(closed, listing=(today - timedelta(days=2)).isoformat())
+        self.save(dict(p3, ipos=[gone]))
+        p4 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual(p4["ipos"], [])
+        self.assertIn("crystal crop protection", [r["name"] for r in p4["retired"]])
+        self.save(p4)
+        p5 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": [], "/api/all-upcoming-issues": []}),
+                        bse=FakeBSE(api={"Table": []}), sebi=FakeSEBI(rows=crystal_rhp))
+        self.assertEqual(p5["ipos"], [])
+
+
+    def test_open_ipo_gets_category_subscription_and_keeps_history(self):
+        today = datetime.now(m.IST).date()
+        iso = lambda d: d.strftime("%d-%b-%Y")
+        live = [{"symbol": "OPENCO", "companyName": "Open Co Limited", "series": "EQ",
+                 "issueStartDate": iso(today - timedelta(days=1)), "issueEndDate": iso(today + timedelta(days=1)),
+                 "issuePrice": "Rs.100 to Rs.110", "noOfTime": "0.50"},
+                {"symbol": "LATERCO", "companyName": "Later Co Limited", "series": "EQ",
+                 "issueStartDate": iso(today + timedelta(days=5)), "issueEndDate": iso(today + timedelta(days=7)),
+                 "issuePrice": "Rs.50 to Rs.55"}]
+        nse = FakeNSE(**{"/api/ipo-current-issue": live[:1], "/api/all-upcoming-issues": live[1:],
+                         "/api/ipo-active-category": active_category(total=2.5, when=today.strftime("%d-%b-%Y") + " 15:00:00")})
+        p1 = self.build(nse=nse, bse=FakeBSE(api={"Table": []}))
+        asked = [u for u in nse.calls if "ipo-active-category" in u]
+        self.assertEqual(len(asked), 1)                        # only the open IPO
+        self.assertIn("symbol=OPENCO", asked[0])
+        o = next(i for i in p1["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual(o["subscriptionTimes"], 2.5)          # consolidated total replaces NSE's own
+        self.assertEqual(len(o["subscription"]["categories"]), 6)
+        self.assertEqual(len(o["subscription"]["history"]), 1)
+        # pretend yesterday's snapshot exists in the last file -> today's is added beside it
+        o["subscription"]["history"] = [dict(o["subscription"]["history"][0], date=(today - timedelta(days=1)).isoformat(), total=0.9)]
+        self.save(p1)
+        p2 = self.build(nse=FakeNSE(**{"/api/ipo-current-issue": live[:1], "/api/all-upcoming-issues": live[1:],
+                                       "/api/ipo-active-category": RuntimeError("403")}), bse=FakeBSE(api={"Table": []}))
+        o2 = next(i for i in p2["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual(len(o2["subscription"]["history"]), 1)   # failure: last book kept as-is
+        self.save(p2)
+        p3 = self.build(nse=nse, bse=FakeBSE(api={"Table": []}))
+        o3 = next(i for i in p3["ipos"] if i["key"] == "OPENCO")
+        self.assertEqual([h["total"] for h in o3["subscription"]["history"]], [0.9, 2.5])
+
+    def test_faster_refresh_while_an_ipo_is_open(self):
+        today = datetime.now(m.IST).date()
+        open_ipo = {"name": "Open Co", "open": (today - timedelta(days=1)).isoformat(), "close": (today + timedelta(days=1)).isoformat()}
+        forty_min_ago = (datetime.now(timezone.utc) - timedelta(minutes=40)).isoformat()
+        self.assertTrue(m.due_for_refresh({"updated": forty_min_ago, "ipos": [open_ipo]}))
+        self.assertFalse(m.due_for_refresh({"updated": forty_min_ago, "ipos": []}))
+
 
     def test_both_down_raises_so_old_file_is_kept(self):
         with self.assertRaises(RuntimeError):

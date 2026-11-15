@@ -9,6 +9,9 @@ NSE (primary -- has symbols, lot size, issue size and live subscription):
   /api/all-upcoming-issues?category=ipo   -> IPOs announced but not yet open
   /api/ipo-detail?symbol=X&series=EQ|SME  -> price band, lot size, issue size
   /api/holiday-master?type=trading        -> trading holidays, for the listing estimate
+  /api/ipo-active-category?symbol=X       -> category-wise subscription (QIB / NII / Retail /
+                                             Employee / Shareholder / Total), for open IPOs;
+                                             one snapshot per day is kept as day-wise history
 
 BSE (second source -- adds BSE SME IPOs that never appear on NSE, and is the
 backup for mainboard IPOs when NSE blocks the GitHub runner):
@@ -17,6 +20,16 @@ backup for mainboard IPOs when NSE blocks the GitHub runner):
      -- BSE's own public-issues page. A plain GET lists live issues; posting
         its form with "Forthcoming" lists upcoming ones. Parsed with the
         standard library only, so the workflow needs no new packages.
+
+SEBI (third source -- the IPO pipeline): the "Red Herring Documents filed
+with ROC" register. A mainboard IPO shows up here when its RHP is filed,
+usually a week or so before NSE/BSE list it. Until the exchanges have it,
+the page shows it as "RHP filed" with a link to the document; once they
+list it, their data takes over and the RHP date/link stay attached.
+SME IPOs are not filed with SEBI (their offer documents go to the
+exchanges), so they appear when NSE/BSE list them.
+  POST /sebiweb/ajax/home/getnewslistinfo.jsp   (the listing's own AJAX call)
+  GET  /sebiweb/home/HomeAction.do?doListing=yes&sid=3&ssid=15&smid=11  (fallback)
 
 GMP is NOT here. No exchange publishes it -- it is filled in by hand in
 data/ipo-gmp.json and the page joins the two by each IPO's "key".
@@ -48,6 +61,8 @@ OUT_FILE = REPO_ROOT / "data" / "ipo-details.json"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 REFRESH_MINUTES = 110          # ~ every 2 hours during the market-data runs
+OPEN_REFRESH_MINUTES = 25      # while an IPO is open, follow its subscription ~every 30 min
+MAX_SUBSCRIPTION_CALLS = 10
 MAX_DETAIL_CALLS = 25          # never hammer NSE with per-IPO requests
 KEEP_DAYS_AFTER_LISTING = 1    # drop an IPO the day after it lists
 
@@ -55,6 +70,11 @@ NSE = "https://www.nseindia.com"
 NSE_IPO_PAGE = NSE + "/market-data/all-upcoming-issues-ipo"
 BSE_API = "https://api.bseindia.com/BseIndiaAPI/api/GetPublicIssue_par_updated/w"
 BSE_PAGE = "https://beta.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx?id=1&Type=p"
+SEBI = "https://www.sebi.gov.in"
+SEBI_AJAX = SEBI + "/sebiweb/ajax/home/getnewslistinfo.jsp"
+SEBI_LISTING = SEBI + "/sebiweb/home/HomeAction.do"
+RHP_WINDOW_DAYS = 30          # an RHP older than this with no exchange listing is stale
+RETIRE_KEEP_DAYS = 90         # remember listed IPOs so their old RHP row doesn't come back
 BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
@@ -62,7 +82,8 @@ BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 # small parsers (pure functions -- covered by tests/test_ipo_data.py)
 # ---------------------------------------------------------------------------
 
-_DATE_FORMATS = ("%d-%b-%Y", "%d-%B-%Y", "%d %b %Y", "%d %B %Y", "%d-%m-%Y", "%d/%m/%Y", "%Y-%m-%d")
+_DATE_FORMATS = ("%d-%b-%Y", "%d-%B-%Y", "%d %b %Y", "%d %B %Y", "%d-%m-%Y", "%d/%m/%Y", "%Y-%m-%d",
+                 "%b %d %Y", "%B %d %Y")
 
 
 def parse_date(value):
@@ -70,9 +91,10 @@ def parse_date(value):
     if not value:
         return None
     s = str(value).strip()
-    m = re.search(r"\d{4}-\d{2}-\d{2}|\d{1,2}[-/ ][A-Za-z]{3,9}[-/ ]\d{4}|\d{1,2}[-/]\d{1,2}[-/]\d{4}", s)
+    m = re.search(r"\d{4}-\d{2}-\d{2}|\d{1,2}[-/ ][A-Za-z]{3,9}[-/ ]\d{4}|\d{1,2}[-/]\d{1,2}[-/]\d{4}"
+                  r"|[A-Za-z]{3,9}\.? \d{1,2},? \d{4}", s)
     if m:
-        s = m.group(0)
+        s = m.group(0).replace(",", "").replace(".", "")
     for fmt in _DATE_FORMATS:
         try:
             return datetime.strptime(s, fmt).date()
@@ -151,7 +173,19 @@ def norm_name(name):
 def pretty_name(name):
     """BSE writes names in capitals: 'MOCK TEXTILES LIMITED' -> 'Mock Textiles Limited'."""
     name = re.sub(r"\s+", " ", str(name or "")).strip()
-    return name.title() if name.isupper() else name
+    if not name.isupper():
+        return name
+    small = {"OF": "of", "AND": "and", "THE": "the", "FOR": "for"}
+    words = []
+    for i, w in enumerate(name.split(" ")):
+        core = re.sub(r"[^A-Z]", "", w)
+        if i and core in small:
+            words.append(w.replace(core, small[core]))
+        elif 0 < len(core) <= 2 and w.isalpha():     # initials: "PM", "KK", "BS"
+            words.append(w)
+        else:
+            words.append(w.title())
+    return " ".join(words)
 
 
 def slug(name):
@@ -275,6 +309,92 @@ def merge_nse_feeds(current, upcoming):
             else:
                 by_key[key] = ipo
     return list(by_key.values())
+
+
+_SUB_KEYS = (
+    ("qib", ("qualified institutional", "qib")),
+    ("bnii", ("more than ten lakh", "more than 10 lakh", "above 10 lakh", "bnii")),
+    ("snii", ("more than two lakh", "more than 2 lakh", "upto 10 lakh", "up to 10 lakh", "snii")),
+    ("nii", ("non institutional", "nii")),
+    ("retail", ("retail", "rii", "individual investors")),
+    ("employee", ("employee",)),
+    ("shareholder", ("shareholder",)),
+    ("policyholder", ("policyholder",)),
+)
+SUB_LABELS = {"qib": "QIB", "nii": "NII", "bnii": "bNII (> ₹10L)", "snii": "sNII (₹2–10L)",
+              "retail": "Retail", "employee": "Employee", "shareholder": "Shareholder",
+              "policyholder": "Policyholder", "total": "Total"}
+
+
+def _float(v):
+    try:
+        f = float(str(v).replace(",", "").strip())
+    except (TypeError, ValueError):
+        return None
+    return f
+
+
+def parse_nse_subscription(raw):
+    """NSE ipo-active-category (or ipo-detail's activeCat) -> {"asOf", "total", "categories": [...]}.
+    Only top-level rows ("1", "2", "2.1", "2.2", "3", ...) and Total are kept; sub-rows like
+    "1(a) FIIs" or "3(a) Cut Off" carry no times figure."""
+    block = raw or {}
+    if isinstance(block, dict) and "dataList" not in block and isinstance(block.get("activeCat"), dict):
+        block = block["activeCat"]
+    rows = block.get("dataList") if isinstance(block, dict) else None
+    if not isinstance(rows, list):
+        return None
+    cats, total = [], None
+    for r in rows:
+        if not isinstance(r, dict):
+            continue
+        label = str(r.get("category") or "").strip()
+        sr = str(r.get("srNo") or "").strip()
+        if not label or label.lower() in ("category", "sr.no."):
+            continue
+        times = _float(r.get("noOfTotalMeant") if "noOfTotalMeant" in r else r.get("noOfTime"))
+        offered = _float(r.get("noOfShareOffered") or r.get("noOfSharesOffered"))
+        bid = _float(r.get("noOfSharesBid") or r.get("noOfsharesBid"))
+        if label.lower().startswith("total"):
+            total = {"times": round(times, 2) if times is not None else None,
+                     "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None}
+            continue
+        if not re.fullmatch(r"\d+(\.\d+)?", sr):
+            continue
+        low = label.lower()
+        key = next((k for k, words in _SUB_KEYS if any(w in low for w in words)), None)
+        if key is None or times is None:
+            continue
+        if key == "nii" and sr.count(".") == 1:      # an unlabelled 2.x row: don't confuse with total NII
+            continue
+        cats.append({"key": key, "label": SUB_LABELS[key], "times": round(times, 2),
+                     "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None})
+    if total is None and not cats:
+        return None
+    m = re.search(r"(\d{1,2}-[A-Za-z]{3}-\d{4})\s+(\d{1,2}:\d{2})", str(block.get("updateTime") or ""))
+    as_of = None
+    if m:
+        try:
+            as_of = datetime.strptime(m.group(1) + " " + m.group(2), "%d-%b-%Y %H:%M").replace(tzinfo=IST).isoformat()
+        except ValueError:
+            as_of = None
+    return {"asOf": as_of, "total": total, "categories": cats}
+
+
+def merge_subscription(old, snap, today):
+    """Latest snapshot + one point per day (the day's latest) for the day-wise table."""
+    if not snap:
+        return old
+    hist = [h for h in ((old or {}).get("history") or []) if isinstance(h, dict) and h.get("date")]
+    day = (parse_date(snap.get("asOf")) or today).isoformat()
+    point = {"date": day, "total": (snap.get("total") or {}).get("times")}
+    for c in snap.get("categories") or []:
+        point[c["key"]] = c["times"]
+    hist = [h for h in hist if h["date"] != day] + [point]
+    hist.sort(key=lambda h: h["date"])
+    out = dict(snap)
+    out["history"] = hist[-10:]
+    return out
 
 
 # --- BSE ------------------------------------------------------------------
@@ -410,6 +530,87 @@ def bse_form_post(state, status):
     return data
 
 
+# --- SEBI RHP register ----------------------------------------------------
+
+_SEBI_SKIP = re.compile(r"addendum|corrigendum|erratum|notice|public\s+announcement|withdraw", re.IGNORECASE)
+_SEBI_NOT_IPO = re.compile(r"\b(trust|invit|reit|infrastructure\s+investment|real\s+estate\s+investment)\b", re.IGNORECASE)
+_SEBI_SUFFIX = re.compile(r"\s*[-–—:]+\s*(?:the\s+)?(?:u?drhp|rhp|red\s+herring|abridged|prospectus|"
+                          r"offer\s+document)[\s\S]*$", re.IGNORECASE)
+
+
+def _strip_tags(s):
+    import html as _html
+    return re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
+
+
+def parse_sebi_listing(html):
+    """SEBI filings table -> [{"title", "date", "url"}]. Rows look like
+    <tr><td>Nov 12, 2026</td><td><a href='.../filings/public-issues/nov-2026/x-limited-rhp_123.html'
+    title="X Limited - RHP <br><a href=...>X Limited - Abridged Prospectus</a>">X Limited - RHP <br>...</a></td></tr>"""
+    out, seen = [], set()
+    for tr in re.findall(r"<tr\b[^>]*>(.*?)</tr>", html or "", re.DOTALL | re.IGNORECASE):
+        cells = re.findall(r"<td\b[^>]*>(.*?)</td>", tr, re.DOTALL | re.IGNORECASE)
+        if len(cells) < 2:
+            continue
+        d = parse_date(_strip_tags(cells[0]).replace(",", ""))
+        m = re.search(r"""<a\b[^>]*?href=['"]([^'"]*/filings/public-issues/[^'"]+)['"]""", cells[1], re.IGNORECASE)
+        if not d or not m:
+            continue
+        url = m.group(1) if m.group(1).startswith("http") else SEBI + "/" + m.group(1).lstrip("/")
+        # The title attribute (double-quoted) can itself hold "<br><a ...>Abridged Prospectus</a>",
+        # which breaks naive tag stripping -- read the attribute and keep the part before <br>.
+        t = re.search(r'title="([^"]*)"', cells[1][m.start():], re.IGNORECASE)
+        raw = t.group(1) if t else cells[1]
+        title = _strip_tags(re.split(r"<br\s*/?>", raw, maxsplit=1, flags=re.IGNORECASE)[0])
+        if not title or url in seen:
+            continue
+        seen.add(url)
+        out.append({"title": title, "date": d, "url": url})
+    return out
+
+
+def sebi_issuer(title):
+    """'Crystal Crop Protection Limited - RHP' -> 'Crystal Crop Protection Limited'."""
+    return pretty_name(_SEBI_SUFFIX.sub("", title or "").strip(" -–—.:"))
+
+
+def sebi_rows_to_ipos(rows, today):
+    """Recent RHP filings -> IPO records with no dates yet (mainboard only)."""
+    out = []
+    for r in rows:
+        if _SEBI_SKIP.search(r["title"]) or _SEBI_NOT_IPO.search(r["title"]):
+            continue
+        if (today - r["date"]).days > RHP_WINDOW_DAYS or r["date"] > today + timedelta(days=1):
+            continue
+        name = sebi_issuer(r["title"])
+        if not name or any(norm_name(name) == norm_name(o["name"]) for o in out):
+            continue
+        ipo = _blank(name, "Mainboard")
+        ipo.update({"rhpDate": r["date"].isoformat(), "rhpUrl": r["url"], "rhpOnly": True,
+                    "exchanges": [], "sources": ["SEBI"]})
+        out.append(ipo)
+    return out
+
+
+def attach_rhp(ipos, rhp_ipos, retired=()):
+    """RHP rows matching an exchange-listed IPO just add the RHP date/link to it;
+    the rest are added as 'RHP filed' IPOs (unless that company already listed)."""
+    retired = set(retired)
+    out = list(ipos)
+    for r in rhp_ipos:
+        match = next((i for i in out if not i.get("rhpOnly") and _same_issue(i, r)), None)
+        if match is not None:
+            match.setdefault("rhpDate", r["rhpDate"])
+            match.setdefault("rhpUrl", r["rhpUrl"])
+            continue
+        if norm_name(r["name"]) in retired:
+            continue
+        rec = dict(r)
+        rec["key"] = slug(r["name"]).upper()
+        out.append(rec)
+    return out
+
+
 # --- merging --------------------------------------------------------------
 
 def _same_issue(a, b):
@@ -467,7 +668,7 @@ def _deserialise(ipo):
     return out
 
 
-def finalise(fresh, previous, holidays, today, failed_sources=()):
+def finalise(fresh, previous, holidays, today, failed_sources=(), retired=None):
     """Fill listing estimates, carry over IPOs we must not lose, drop stale ones, sort.
 
     An IPO from the last file that is missing now is carried over when
@@ -482,11 +683,20 @@ def finalise(fresh, previous, holidays, today, failed_sources=()):
     # Same IPO seen last time: keep its key (GMP in data/ipo-gmp.json is
     # entered against it) and refill what this run's source can't give --
     # e.g. NSE blocked, BSE answered: BSE has no symbol or lot size.
-    for ipo in fresh:
+    for idx, ipo in enumerate(fresh):
         old = next((p for p in previous if _same_issue(p, ipo)), None)
         if old is None:
             continue
-        for k in ("symbol", "bseCode", "bseIpoNo", "lotSize", "issueSizeCr", "priceLow", "priceHigh"):
+        if ipo.get("rhpOnly") and (old.get("open") or old.get("close")):
+            # The exchanges dropped it from their lists (closed) but SEBI still
+            # shows the RHP: keep last run's full record, not a date-less stub.
+            kept = dict(old)
+            kept.setdefault("rhpDate", ipo.get("rhpDate"))
+            kept.setdefault("rhpUrl", ipo.get("rhpUrl"))
+            kept.pop("status", None)
+            fresh[idx] = kept
+            continue
+        for k in ("symbol", "bseCode", "bseIpoNo", "lotSize", "issueSizeCr", "priceLow", "priceHigh", "rhpDate", "rhpUrl"):
             if ipo.get(k) in (None, "") and old.get(k) not in (None, ""):
                 ipo[k] = old[k]
         ipo["exchanges"] = sorted(set(ipo.get("exchanges") or []) | set(old.get("exchanges") or []),
@@ -494,12 +704,25 @@ def finalise(fresh, previous, holidays, today, failed_sources=()):
         if old.get("key"):
             ipo["key"] = old["key"]
 
+    for ipo in fresh:
+        snap = ipo.pop("subscriptionSnapshot", None)
+        old = next((p for p in previous if _same_issue(p, ipo)), None)
+        prev_sub = (old or {}).get("subscription")
+        if snap:
+            ipo["subscription"] = merge_subscription(prev_sub, snap, today)
+        elif prev_sub and not ipo.get("subscription"):
+            ipo["subscription"] = prev_sub
+        if ipo.get("subscriptionTimes") is None and (old or {}).get("subscriptionTimes") is not None:
+            ipo["subscriptionTimes"] = old["subscriptionTimes"]
+
     carried = []
     for old in previous:
         if any(_same_issue(old, f) for f in fresh):
             continue
         closed = bool(old.get("close") and old["close"] <= today)
         srcs = set(old.get("sources") or ["NSE"])
+        if old.get("rhpOnly") and not (srcs <= failed):
+            continue   # SEBI answered and no longer lists it in the window
         if closed or (srcs and srcs <= failed):
             old.setdefault("key", old.get("symbol") or old.get("bseCode") or slug(old["name"]).upper())
             carried.append(old)
@@ -512,6 +735,8 @@ def finalise(fresh, previous, holidays, today, failed_sources=()):
         elif ipo.get("listing") and "listingEstimated" not in ipo:
             ipo["listingEstimated"] = False
         if ipo.get("listing") and today > ipo["listing"] + timedelta(days=KEEP_DAYS_AFTER_LISTING):
+            if retired is not None:
+                retired[norm_name(ipo["name"])] = today.isoformat()
             continue
         if not ipo.get("listing") and ipo.get("close") and today > ipo["close"] + timedelta(days=10):
             continue
@@ -566,6 +791,28 @@ def fetch_nse(session, debug=False):
                         ipo[k] = v
                 break
         time.sleep(0.5)
+
+    # Category-wise subscription for IPOs open today (and the day after close,
+    # when NSE publishes the final book).
+    today = datetime.now(IST).date()
+    calls = 0
+    for ipo in ipos:
+        o, c = ipo.get("open"), ipo.get("close")
+        if not (ipo.get("symbol") and o and c and o <= today <= c + timedelta(days=1)):
+            continue
+        if calls >= MAX_SUBSCRIPTION_CALLS:
+            break
+        calls += 1
+        try:
+            snap = parse_nse_subscription(_nse_get(session, f"/api/ipo-active-category?symbol={ipo['symbol']}", debug))
+        except Exception as e:
+            print(f"NSE subscription {ipo['symbol']} failed: {e}", file=sys.stderr)
+            snap = None
+        if snap:
+            ipo["subscriptionSnapshot"] = snap
+            if (snap.get("total") or {}).get("times") is not None:
+                ipo["subscriptionTimes"] = snap["total"]["times"]
+        time.sleep(0.5)
     return ipos
 
 
@@ -619,6 +866,41 @@ def fetch_bse(session, debug=False):
     raise RuntimeError("BSE failed (" + "; ".join(errors) + ")")
 
 
+def new_sebi_session():
+    import requests
+    s = requests.Session()
+    s.headers.update({"User-Agent": BROWSER_UA, "Accept-Language": "en-US,en;q=0.9", "Referer": SEBI_LISTING})
+    return s
+
+
+def fetch_sebi_rhp(session, debug=False):
+    """Page 1 (newest 25) of SEBI's RHP register. AJAX first, plain listing page as fallback."""
+    errors = []
+    body = {"nextValue": "0", "next": "n", "search": "", "fromDate": "", "toDate": "", "fromYear": "",
+            "toYear": "", "deptId": "", "sid": "3", "ssid": "15", "smid": "11", "ssidhidden": "15",
+            "intmid": "-1", "sText": "Filings"}
+    attempts = (
+        lambda: session.post(SEBI_AJAX, data=body, timeout=25,
+                             headers={"X-Requested-With": "XMLHttpRequest",
+                                      "Content-Type": "application/x-www-form-urlencoded"}),
+        lambda: session.get(SEBI_LISTING, timeout=25,
+                            params={"doListing": "yes", "sid": "3", "ssid": "15", "smid": "11"}),
+    )
+    for name, call in zip(("ajax", "listing"), attempts):
+        try:
+            r = call()
+            r.raise_for_status()
+            rows = parse_sebi_listing(r.text)
+            if debug:
+                print(f"SEBI RHP {name}: {len(rows)} rows; newest: {rows[:3]}")
+            if rows:
+                return rows
+            errors.append(f"{name}: no rows")
+        except Exception as e:
+            errors.append(f"{name}: {e}")
+    raise RuntimeError("SEBI RHP register failed (" + "; ".join(errors) + ")")
+
+
 def _load_previous():
     try:
         return json.loads(OUT_FILE.read_text())
@@ -634,10 +916,14 @@ def due_for_refresh(previous, now=None, force=False):
     except ValueError:
         return True
     now = now or datetime.now(timezone.utc)
-    return (now - last) >= timedelta(minutes=REFRESH_MINUTES)
+    today = now.astimezone(IST).date()
+    any_open = any(status_of(_deserialise(i), today) == "Open" for i in previous.get("ipos") or []
+                   if isinstance(i, dict) and not i.get("rhpOnly"))
+    minutes = OPEN_REFRESH_MINUTES if any_open else REFRESH_MINUTES
+    return (now - last) >= timedelta(minutes=minutes)
 
 
-def build_ipo_details(session, debug=False, force=False, bse_session=None):
+def build_ipo_details(session, debug=False, force=False, bse_session=None, sebi_session=None):
     """Returns the payload to write, or None when no refresh is due. Raises when
     nothing usable came back, so the caller keeps the last good file."""
     previous = _load_previous()
@@ -665,14 +951,31 @@ def build_ipo_details(session, debug=False, force=False, bse_session=None):
     if len(failed) == 2:
         raise RuntimeError("both NSE and BSE failed; keeping the last good file")
 
-    fresh = merge_sources(nse_ipos, bse_ipos)
     today = datetime.now(IST).date()
+    retired = {}
+    for r in (previous or {}).get("retired") or []:
+        d = parse_date(r.get("date")) if isinstance(r, dict) else None
+        if d and (today - d).days <= RETIRE_KEEP_DAYS and r.get("name"):
+            retired[r["name"]] = d.isoformat()
 
-    if not fresh and previous and previous.get("ipos"):
+    rhp_ipos = []
+    try:
+        rhp_ipos = sebi_rows_to_ipos(fetch_sebi_rhp(sebi_session or new_sebi_session(), debug), today)
+        health["SEBI"] = {"ok": True, "ipos": len(rhp_ipos)}
+    except Exception as e:
+        failed.append("SEBI")
+        health["SEBI"] = {"ok": False, "error": str(e)[:200]}
+        print(f"IPO details: SEBI RHP register failed: {e}", file=sys.stderr)
+
+    fresh = attach_rhp(merge_sources(nse_ipos, bse_ipos), rhp_ipos, retired)
+
+    if not [i for i in fresh if not i.get("rhpOnly")] and previous and previous.get("ipos") \
+            and not (nse_ipos or bse_ipos):
         # Everything that answered came back empty while the last file still
         # has open/upcoming IPOs -- more likely a blocked/empty response than a
         # genuinely empty market. Keep the last good file.
-        still_live = [i for i in previous["ipos"] if status_of(_deserialise(i), today) in ("Open", "Upcoming")]
+        still_live = [i for i in previous["ipos"] if not i.get("rhpOnly")
+                      and status_of(_deserialise(i), today) in ("Open", "Upcoming")]
         if still_live:
             raise ValueError("exchanges returned no IPOs but the last file still has open/upcoming ones; keeping it")
 
@@ -685,13 +988,14 @@ def build_ipo_details(session, debug=False, force=False, bse_session=None):
     if not holidays and previous and previous.get("holidays"):
         holidays = {d for d in (parse_date(x) for x in previous["holidays"]) if d}
 
-    ipos = finalise(fresh, (previous or {}).get("ipos"), holidays, today, failed)
+    ipos = finalise(fresh, (previous or {}).get("ipos"), holidays, today, failed, retired)
 
     return {
         "updated": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "sources": health,
         "holidays": sorted(d.isoformat() for d in holidays if d >= today - timedelta(days=7)),
         "ipos": ipos,
+        "retired": [{"name": n, "date": d} for n, d in sorted(retired.items())],
     }
 
 

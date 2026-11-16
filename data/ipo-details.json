@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T06:51:59.447063Z",
+  "updated": "2026-11-16T10:33:39.187995Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -11,11 +11,10 @@
     },
     "SEBI": {
       "ok": true,
-      "ipos": 1
+      "ipos": 2
     }
   },
   "holidays": [
-    "2026-11-08",
     "2026-11-10",
     "2026-11-24",
     "2026-12-25"
@@ -42,6 +41,30 @@
       ],
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "MAHANADI-COALFIELDS",
+      "symbol": null,
+      "bseCode": null,
+      "name": "Mahanadi Coalfields Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-11-13",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
       "rhpOnly": true,
       "status": "Upcoming"
     }

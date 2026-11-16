@@ -1,179 +1,81 @@
 {
-  "updated": "2026-11-13T17:33:33.994486Z",
+  "updated": "2026-11-16T10:33:34.992242Z",
   "rows": [
     {
-      "date": "13-Nov-2026 20:33:12",
-      "company": "360 ONE WAM LIMITED",
+      "date": "16-Nov-2026 15:28:04",
+      "company": "JINDAL PHOTO LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_20331192",
+      "transactionType": "JINDALPHOT|JINDAL PHOTO LIMITED|Original|Regulation 7 (2)|IT_2270_WebXMLFile_20261116_1528",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 19:53:09",
-      "company": "360 ONE WAM LIMITED",
+      "date": "16-Nov-2026 14:43:52",
+      "company": "BAJAJ FINANCE LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Revision|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_19530934",
+      "transactionType": "BAJFINANCE|BAJAJ FINANCE LIMITED|Original|Regulation 7 (2)|IT_1257_WebXMLFile_20261116_144",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 19:07:32",
-      "company": "STAR CEMENT LIMITED",
+      "date": "16-Nov-2026 13:28:33",
+      "company": "KARUR VYSYA BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "STARCEMENT|STAR CEMENT LIMITED|Original|Regulation 7 (2)|IT_15239_WebXMLFile_20261113_1907",
+      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261116_1",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 18:25:00",
-      "company": "ASHIANA HOUSING LIMITED",
+      "date": "16-Nov-2026 12:34:10",
+      "company": "STEL HOLDINGS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261113_1825",
+      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20261116_123410578",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 18:18:41",
-      "company": "ASHIANA HOUSING LIMITED",
+      "date": "16-Nov-2026 12:13:02",
+      "company": "ARVIND PORT AND INFRA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "ASHIANA|ASHIANA HOUSING LIMITED|Original|Regulation 7 (2)|IT_4964_WebXMLFile_20261113_1818",
+      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 18:17:56",
-      "company": "JSW Energy Limited",
+      "date": "16-Nov-2026 12:01:26",
+      "company": "DHANLAXMI BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JSWENERGY|JSW Energy Limited|Original|Regulation 7 (2)|IT_3013_WebXMLFile_20261113_1817562",
+      "transactionType": "DHANBANK|DHANLAXMI BANK LIMITED|Original|Regulation 7 (2)|IT_1734_WebXMLFile_20261116_1201",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 18:11:13",
-      "company": "CHEMBOND CHEMICALS LIMITED",
+      "date": "16-Nov-2026 11:55:24",
+      "company": "DHANLAXMI BANK LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "CHEMBONDCH|CHEMBOND CHEMICALS LIMITED|Original|Regulation 7 (2)|IT_26029_WebXMLFile_202611",
+      "transactionType": "DHANBANK|DHANLAXMI BANK LIMITED|Original|Regulation 7 (2)|IT_1734_WebXMLFile_20261116_1155",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 18:07:31",
-      "company": "NRB BEARING LIMITED",
+      "date": "16-Nov-2026 11:38:12",
+      "company": "LOKESH MACHINES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "Pledge",
+      "transactionType": "LOKESHMACH|LOKESH MACHINES LIMITED|Original|Regulation 7 (2)|IT_2401_WebXMLFile_20261116_1",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 17:51:40",
-      "company": "JUBILANT FOODWORKS LIMITED",
+      "date": "16-Nov-2026 10:10:04",
+      "company": "INDO TECH TRANSFORMERS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "JUBLFOOD|JUBILANT FOODWORKS LIMITED|Original|Regulation 7 (2)|IT_3061_WebXMLFile_20261113_",
+      "transactionType": "INDOTECH|INDO TECH TRANSFORMERS LIMITED|Original|Regulation 7 (2)|IT_2373_WebXMLFile_20261",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 17:39:38",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "16-Nov-2026 09:53:55",
+      "company": "NCC Limited",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261113_173",
+      "transactionType": "NCC|NCC Limited|Original|Regulation 7 (2)|IT_917_WebXMLFile_20261116_095355728.xml|IT_917_",
       "quantity": "\u2014"
     },
     {
-      "date": "13-Nov-2026 17:39:02",
-      "company": "360 ONE WAM LIMITED",
+      "date": "16-Nov-2026 09:53:22",
+      "company": "NCC Limited",
       "personCategory": "\u2014",
-      "transactionType": "360ONE|360 ONE WAM LIMITED|Original|Regulation 7 (2)|IT_17593_WebXMLFile_20261113_17390201",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "13-Nov-2026 17:35:52",
-      "company": "Geekay Wires Limited",
-      "personCategory": "\u2014",
-      "transactionType": "GEEKAYWIRE|Geekay Wires Limited|Original|Regulation 7 (2)|IT_15428_WebXMLFile_20261113_173",
+      "transactionType": "NCC|NCC Limited|Original|Regulation 7 (2)|IT_917_WebXMLFile_20261116_095322429.xml|IT_917_",
       "quantity": "\u2014"
     }
   ],

@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-16T10:33:39.187995Z",
+  "updated": "2026-11-16T12:39:23.881981Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 0
+      "ipos": 2
     },
     "BSE": {
       "ok": true,
-      "ipos": 0
+      "ipos": 1
     },
     "SEBI": {
       "ok": true,
@@ -22,26 +22,54 @@
   "ipos": [
     {
       "key": "CRYSTAL-CROP-PROTECTION",
-      "symbol": null,
-      "bseCode": null,
+      "symbol": "CRYSTALCP",
+      "bseCode": "CRYSTAL CROP PROTECTION LIMITED",
       "name": "Crystal Crop Protection Limited",
       "type": "Mainboard",
       "series": "EQ",
-      "priceLow": null,
-      "priceHigh": null,
-      "lotSize": null,
-      "issueSizeCr": null,
-      "open": null,
-      "close": null,
-      "listing": null,
+      "priceLow": 259,
+      "priceHigh": 272,
+      "lotSize": 55,
+      "issueSizeCr": 355.0,
+      "open": "2026-11-18",
+      "close": "2026-11-20",
+      "listing": "2026-11-26",
       "subscriptionTimes": null,
-      "exchanges": [],
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
       "sources": [
-        "SEBI"
+        "NSE",
+        "BSE"
       ],
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
-      "rhpOnly": true,
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "WATRANA",
+      "symbol": "WATRANA",
+      "bseCode": null,
+      "name": "Watrana Rentals Limited",
+      "type": "SME",
+      "series": "SME",
+      "priceLow": 232,
+      "priceHigh": 245,
+      "lotSize": 600,
+      "issueSizeCr": null,
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-27",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE"
+      ],
+      "sources": [
+        "NSE"
+      ],
+      "listingEstimated": true,
       "status": "Upcoming"
     },
     {

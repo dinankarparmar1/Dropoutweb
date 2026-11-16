@@ -1,6 +1,125 @@
 {
-  "updated": "2026-11-16T12:07:11.576720Z",
+  "updated": "2026-11-16T12:39:08.302605Z",
   "rows": [
+    {
+      "date": "16-Nov-2026 17:54:53",
+      "company": "VIDYA WIRES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "VIDYAWIRES|VIDYA WIRES LIMITED|Original|Regulation 7 (2)|IT_25234_WebXMLFile_20261116_1754",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:54:05",
+      "company": "Shree OSFM E",
+      "personCategory": "\u2014",
+      "transactionType": "SHREEOSFM|Shree OSFM E-Mobility Limited|Original|Regulation 7 (2)|IT_22543_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:49:57",
+      "company": "AVENUE SUPERMARTS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261116_174",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "16-Nov-2026 17:39:15",
+      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "quantity": "\u2014"
+    },
     {
       "date": "16-Nov-2026 17:31:43",
       "company": "SUVIDHAA INFOSERVE LIMITED",
@@ -55,125 +174,6 @@
       "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
       "personCategory": "\u2014",
       "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:28:31",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20261116",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:25:51",
-      "company": "JSW STEEL LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JSWSTEEL|JSW STEEL LIMITED|Original|Regulation 7 (2)|IT_2266_WebXMLFile_20261116_172551500",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:24:36",
-      "company": "Kirloskar Industries Limited",
-      "personCategory": "\u2014",
-      "transactionType": "KIRLOSIND|Kirloskar Industries Limited|Original|Regulation 7 (2)|IT_3308_WebXMLFile_202611",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:22:21",
-      "company": "Infosys Limited",
-      "personCategory": "\u2014",
-      "transactionType": "INFY|Infosys Limited|Original|Regulation 7 (2)|IT_180_WebXMLFile_20261116_172221128.xml|IT",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 17:10:48",
-      "company": "MARKSANS PHARMA LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "MARKSANS|MARKSANS PHARMA LIMITED|Original|Regulation 7 (2)|IT_1969_WebXMLFile_20261116_171",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 16:36:14",
-      "company": "CEAT LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "CEATLTD|CEAT LIMITED|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20261116_163614869.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 15:28:04",
-      "company": "JINDAL PHOTO LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "JINDALPHOT|JINDAL PHOTO LIMITED|Original|Regulation 7 (2)|IT_2270_WebXMLFile_20261116_1528",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 14:43:52",
-      "company": "BAJAJ FINANCE LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "BAJFINANCE|BAJAJ FINANCE LIMITED|Original|Regulation 7 (2)|IT_1257_WebXMLFile_20261116_144",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 13:28:33",
-      "company": "KARUR VYSYA BANK LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "KARURVYSYA|KARUR VYSYA BANK LIMITED|Original|Regulation 7 (2)|IT_539_WebXMLFile_20261116_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "16-Nov-2026 12:34:10",
-      "company": "STEL HOLDINGS LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "STEL|STEL HOLDINGS LIMITED|Original|Regulation 7 (2)|IT_4020_WebXMLFile_20261116_123410578",
       "quantity": "\u2014"
     }
   ],

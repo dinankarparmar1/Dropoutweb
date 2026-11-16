@@ -1,10 +1,10 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-16T16:15:00+05:30",
+  "updated": "2026-11-16T16:20:00+05:30",
   "gmp": {
     "CRYSTAL-CROP-PROTECTION": 15,
-    "MAHANADI-COALFIELDS": null,
-    "WATRANA-RENTALS": null
+    "MAHANADI-COALFIELDS": 7,
+    "WATRANA-RENTALS": 22
   },
   "extraIpos": [
     {
@@ -88,14 +88,39 @@
       ]
     },
     "MAHANADI-COALFIELDS": {
-      "gmp": null,
-      "checked": "2026-11-16T16:15:00+05:30",
-      "note": "no timestamped GMP quote yet (price band announced 16 Nov)"
+      "gmp": 7,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-16T16:20:00+05:30",
+      "note": "both quotes trace back to InvestorGain data",
+      "sources": [
+        {
+          "site": "investorgain.com",
+          "gmp": 7,
+          "asOf": "2026-11-16"
+        },
+        {
+          "site": "dnaindia.com (citing investorgain)",
+          "gmp": 7.75,
+          "asOf": "2026-11-16"
+        }
+      ]
     },
     "WATRANA-RENTALS": {
-      "gmp": null,
-      "checked": "2026-11-16T16:15:00+05:30",
-      "note": "no timestamped GMP quote yet"
+      "gmp": 22,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-16T16:20:00+05:30",
+      "sources": [
+        {
+          "site": "ipomarket.in",
+          "gmp": 22,
+          "asOf": "2026-11-16T03:32+05:30"
+        },
+        {
+          "site": "ipogyani.com",
+          "gmp": 22,
+          "asOf": "2026-11-16T13:35+05:30"
+        }
+      ]
     }
   }
 }

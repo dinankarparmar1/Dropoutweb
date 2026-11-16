@@ -1,8 +1,10 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-15T18:48:00+05:30",
+  "updated": "2026-11-16T16:15:00+05:30",
   "gmp": {
-    "CRYSTAL-CROP-PROTECTION": 21
+    "CRYSTAL-CROP-PROTECTION": 15,
+    "MAHANADI-COALFIELDS": null,
+    "WATRANA-RENTALS": null
   },
   "extraIpos": [
     {
@@ -30,33 +32,69 @@
         "NSE",
         "BSE"
       ],
-      "rhpOnly": true,
       "rhpDate": "2026-11-13",
-      "expected": "19–23 Nov (expected)",
-      "issueSize": "OFS · 66.18 Cr shares"
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-27",
+      "listingEstimated": true,
+      "priceLow": 129,
+      "priceHigh": 136,
+      "lotSize": 110,
+      "issueSizeCr": 8981.12
+    },
+    {
+      "key": "WATRANA-RENTALS",
+      "name": "Watrana Rentals Limited",
+      "type": "SME",
+      "exchanges": [
+        "NSE"
+      ],
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-26",
+      "listingEstimated": true,
+      "priceLow": 232,
+      "priceHigh": 245,
+      "lotSize": 600,
+      "issueSizeCr": 120.1
     }
   ],
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
-      "gmp": 21,
+      "gmp": 15,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-15T18:48:00+05:30",
+      "checked": "2026-11-16T16:15:00+05:30",
       "sources": [
         {
-          "site": "ipowatch.in",
-          "gmp": 27,
-          "asOf": "2026-11-15T09:50+05:30"
+          "site": "ipoji.com",
+          "gmp": 15,
+          "asOf": "2026-11-16T05:45+05:30"
+        },
+        {
+          "site": "ipomarket.in",
+          "gmp": 15,
+          "asOf": "2026-11-16"
         },
         {
           "site": "investorgain.com",
           "gmp": 15,
           "asOf": "2026-11-15T18:02+05:30"
+        },
+        {
+          "site": "multibagg.ai",
+          "gmp": 27,
+          "asOf": "2026-11-15T08:00+05:30"
         }
       ]
     },
     "MAHANADI-COALFIELDS": {
       "gmp": null,
-      "checked": "2026-11-15T09:45:00+05:30",
+      "checked": "2026-11-16T16:15:00+05:30",
+      "note": "no timestamped GMP quote yet (price band announced 16 Nov)"
+    },
+    "WATRANA-RENTALS": {
+      "gmp": null,
+      "checked": "2026-11-16T16:15:00+05:30",
       "note": "no timestamped GMP quote yet"
     }
   }

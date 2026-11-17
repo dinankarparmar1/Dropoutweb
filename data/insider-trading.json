@@ -1,179 +1,179 @@
 {
-  "updated": "2026-11-16T12:39:08.302605Z",
+  "updated": "2026-11-17T12:33:58.174116Z",
   "rows": [
     {
-      "date": "16-Nov-2026 17:54:53",
-      "company": "VIDYA WIRES LIMITED",
+      "date": "17-Nov-2026 17:48:18",
+      "company": "NCL INDUSTRIES LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "VIDYAWIRES|VIDYA WIRES LIMITED|Original|Regulation 7 (2)|IT_25234_WebXMLFile_20261116_1754",
+      "transactionType": "NCLIND|NCL INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_2568_WebXMLFile_20261117_174818",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:54:05",
-      "company": "Shree OSFM E",
+      "date": "17-Nov-2026 17:33:07",
+      "company": "Jayant Agro",
       "personCategory": "\u2014",
-      "transactionType": "SHREEOSFM|Shree OSFM E-Mobility Limited|Original|Regulation 7 (2)|IT_22543_WebXMLFile_2026",
+      "transactionType": "JAYAGROGN|Jayant Agro-Organics Limited|Original|Regulation 7 (2)|IT_1351_WebXMLFile_202611",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:49:57",
-      "company": "AVENUE SUPERMARTS LIMITED",
+      "date": "17-Nov-2026 17:17:56",
+      "company": "TITAN COMPANY LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "DMART|AVENUE SUPERMARTS LIMITED|Original|Regulation 7 (2)|IT_14711_WebXMLFile_20261116_174",
+      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20261117_171756171",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 16:47:54",
+      "company": "WIPRO LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "WIPRO|WIPRO LIMITED|Original|Regulation 7 (2)|IT_624_WebXMLFile_20261117_164754273.xml|IT_",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 16:26:23",
+      "company": "Nippon Life India Asset Management Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "NAM-INDIA|Nippon Life India Asset Management Limited|Original|Regulation 7 (2)|IT_15552_We",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 16:19:11",
+      "company": "EVEREADY INDUSTRIES INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "EVEREADY|EVEREADY INDUSTRIES INDIA LIMITED|Original|Regulation 7 (2)|IT_2275_WebXMLFile_20",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 16:17:12",
+      "company": "HAVELLS INDIA LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HAVELLS|HAVELLS INDIA LIMITED|Original|Regulation 7 (2)|IT_1931_WebXMLFile_20261117_161712",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 15:39:37",
+      "company": "VINATI ORGANICS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "VINATIORGA|VINATI ORGANICS LIMITED|Original|Regulation 7 (2)|IT_2897_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 15:33:11",
+      "company": "SPECIALITY RESTAURANTS LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "SPECIALITY|SPECIALITY RESTAURANTS LIMITED|Original|Regulation 7 (2)|IT_5941_WebXMLFile_202",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 15:23:38",
+      "company": "VIVID ELECTROMECH LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "VIVIDEL|VIVID ELECTROMECH LIMITED|Original|Regulation 7 (2)|IT_27015_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 15:03:59",
+      "company": "CEAT LIMITED",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "CEATLTD|CEAT LIMITED|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20261117_150359179.xml|I",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:39:15",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:31:43",
-      "company": "SUVIDHAA INFOSERVE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "SUVIDHAA|SUVIDHAA INFOSERVE LIMITED|Original|Regulation 7 (2)|IT_19313_WebXMLFile_20261116",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {
-      "date": "16-Nov-2026 17:29:00",
-      "company": "MANGALAM GLOBAL ENTERPRISE LIMITED",
+      "date": "17-Nov-2026 13:26:05",
+      "company": "Hindcon Chemicals Limited",
       "personCategory": "\u2014",
-      "transactionType": "MGEL|MANGALAM GLOBAL ENTERPRISE LIMITED|Original|Regulation 7 (2)|IT_17639_WebXMLFile_2026",
+      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     }
   ],

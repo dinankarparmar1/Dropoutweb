@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T22:52:17.611462Z",
+  "updated": "2026-11-17T12:34:09.737187Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -7,7 +7,7 @@
     },
     "BSE": {
       "ok": true,
-      "ipos": 1
+      "ipos": 2
     },
     "SEBI": {
       "ok": true,
@@ -49,6 +49,32 @@
       "status": "Upcoming"
     },
     {
+      "key": "MAHANADI-COALFIELDS",
+      "symbol": null,
+      "bseCode": "MAHANADI COALFIELDS LIMITED",
+      "name": "Mahanadi Coalfields Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 129,
+      "priceHigh": 136,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-27",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "BSE"
+      ],
+      "sources": [
+        "BSE"
+      ],
+      "rhpDate": "2026-11-13",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
       "key": "WATRANA",
       "symbol": "WATRANA",
       "bseCode": null,
@@ -70,30 +96,6 @@
         "NSE"
       ],
       "listingEstimated": true,
-      "status": "Upcoming"
-    },
-    {
-      "key": "MAHANADI-COALFIELDS",
-      "symbol": null,
-      "bseCode": null,
-      "name": "Mahanadi Coalfields Limited",
-      "type": "Mainboard",
-      "series": "EQ",
-      "priceLow": null,
-      "priceHigh": null,
-      "lotSize": null,
-      "issueSizeCr": null,
-      "open": null,
-      "close": null,
-      "listing": null,
-      "subscriptionTimes": null,
-      "exchanges": [],
-      "sources": [
-        "SEBI"
-      ],
-      "rhpDate": "2026-11-13",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
-      "rhpOnly": true,
       "status": "Upcoming"
     }
   ],

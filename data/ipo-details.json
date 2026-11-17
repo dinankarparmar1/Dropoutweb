@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T12:34:09.737187Z",
+  "updated": "2026-11-17T19:09:21.490563Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -15,7 +15,6 @@
     }
   },
   "holidays": [
-    "2026-11-10",
     "2026-11-24",
     "2026-12-25"
   ],
@@ -34,7 +33,7 @@
       "open": "2026-11-18",
       "close": "2026-11-20",
       "listing": "2026-11-26",
-      "subscriptionTimes": null,
+      "subscriptionTimes": 0.0,
       "exchanges": [
         "NSE",
         "BSE"
@@ -45,8 +44,23 @@
       ],
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
+      "subscription": {
+        "asOf": null,
+        "total": {
+          "times": 0.0,
+          "offered": null,
+          "bid": 0
+        },
+        "categories": [],
+        "history": [
+          {
+            "date": "2026-11-18",
+            "total": 0.0
+          }
+        ]
+      },
       "listingEstimated": true,
-      "status": "Upcoming"
+      "status": "Open"
     },
     {
       "key": "MAHANADI-COALFIELDS",

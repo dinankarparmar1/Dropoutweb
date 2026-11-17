@@ -1,6 +1,41 @@
 {
-  "updated": "2026-11-17T12:33:58.174116Z",
+  "updated": "2026-11-17T13:07:56.820908Z",
   "rows": [
+    {
+      "date": "17-Nov-2026 18:33:51",
+      "company": "CONTROL PRINT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CONTROLPR|CONTROL PRINT LIMITED|Original|Regulation 7 (2)|IT_13947_WebXMLFile_20261117_183",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Nov-2026 18:13:10",
+      "company": "TAMILNAD MERCANTILE BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TMB|TAMILNAD MERCANTILE BANK LIMITED|Original|Regulation 7 (2)|IT_19961_WebXMLFile_2026111",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Nov-2026 18:12:13",
+      "company": "CENTUM ELECTRONICS LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "CENTUM|CENTUM ELECTRONICS LIMITED|Original|Regulation 7 (2)|IT_2659_WebXMLFile_20261117_18",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Nov-2026 18:11:34",
+      "company": "TAMILNAD MERCANTILE BANK LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "TMB|TAMILNAD MERCANTILE BANK LIMITED|Original|Regulation 7 (2)|IT_19961_WebXMLFile_2026111",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "17-Nov-2026 18:10:08",
+      "company": "STAR CEMENT LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "STARCEMENT|STAR CEMENT LIMITED|Original|Regulation 7 (2)|IT_15239_WebXMLFile_20261117_1810",
+      "quantity": "\u2014"
+    },
     {
       "date": "17-Nov-2026 17:48:18",
       "company": "NCL INDUSTRIES LIMITED",
@@ -76,41 +111,6 @@
       "company": "CEAT LIMITED",
       "personCategory": "\u2014",
       "transactionType": "CEATLTD|CEAT LIMITED|Original|Regulation 7 (2)|IT_2711_WebXMLFile_20261117_150359179.xml|I",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Nov-2026 13:26:05",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Nov-2026 13:26:05",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Nov-2026 13:26:05",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Nov-2026 13:26:05",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "17-Nov-2026 13:26:05",
-      "company": "Hindcon Chemicals Limited",
-      "personCategory": "\u2014",
-      "transactionType": "HINDCON|Hindcon Chemicals Limited|Original|Regulation 7 (2)|IT_15847_WebXMLFile_20261117_1",
       "quantity": "\u2014"
     },
     {

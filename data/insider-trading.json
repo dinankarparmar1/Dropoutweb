@@ -1,6 +1,27 @@
 {
-  "updated": "2026-11-18T12:21:23.389028Z",
+  "updated": "2026-11-18T12:57:25.154831Z",
   "rows": [
+    {
+      "date": "18-Nov-2026 18:26:37",
+      "company": "Greenpanel Industries Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Nov-2026 18:21:39",
+      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
+      "personCategory": "\u2014",
+      "transactionType": "DHRUV|DHRUV CONSULTANCY SERVICES LIMITED|Original|Regulation 7 (2)|IT_20205_WebXMLFile_202",
+      "quantity": "\u2014"
+    },
+    {
+      "date": "18-Nov-2026 18:08:02",
+      "company": "Gallantt Ispat Limited",
+      "personCategory": "\u2014",
+      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261118_1808",
+      "quantity": "\u2014"
+    },
     {
       "date": "18-Nov-2026 17:38:27",
       "company": "HAPPY FORGINGS LIMITED",
@@ -125,27 +146,6 @@
       "company": "TITAN COMPANY LIMITED",
       "personCategory": "\u2014",
       "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20261118_143150918",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
       "quantity": "\u2014"
     },
     {

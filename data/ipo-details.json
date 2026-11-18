@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T21:44:31.926041Z",
+  "updated": "2026-11-18T12:21:41.625090Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -33,7 +33,7 @@
       "open": "2026-11-18",
       "close": "2026-11-20",
       "listing": "2026-11-26",
-      "subscriptionTimes": 0.0,
+      "subscriptionTimes": 1.4,
       "exchanges": [
         "NSE",
         "BSE"
@@ -45,17 +45,66 @@
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
       "subscription": {
-        "asOf": null,
+        "asOf": "2026-11-18T17:00:00+05:30",
         "total": {
-          "times": 0.0,
-          "offered": null,
-          "bid": 0
+          "times": 1.4,
+          "offered": 12170076,
+          "bid": 17082065
         },
-        "categories": [],
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": 2.07,
+            "offered": 3406814,
+            "bid": 7042035
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": 0.75,
+            "offered": 2596928,
+            "bid": 1956130
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": 0.62,
+            "offered": 1731286,
+            "bid": 1064910
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": 1.03,
+            "offered": 865642,
+            "bid": 891220
+          },
+          {
+            "key": "retail",
+            "label": "Retail",
+            "times": 1.28,
+            "offered": 6059497,
+            "bid": 7773040
+          },
+          {
+            "key": "employee",
+            "label": "Employee",
+            "times": 2.91,
+            "offered": 106837,
+            "bid": 310860
+          }
+        ],
         "history": [
           {
             "date": "2026-11-18",
-            "total": 0.0
+            "total": 1.4,
+            "qib": 2.07,
+            "nii": 0.75,
+            "bnii": 0.62,
+            "snii": 1.03,
+            "retail": 1.28,
+            "employee": 2.91
           }
         ]
       },

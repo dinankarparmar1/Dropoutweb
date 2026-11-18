@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-18T12:57:38.724750Z",
+  "updated": "2026-11-18T18:50:17.094480Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 2
+      "ipos": 3
     },
     "BSE": {
       "ok": true,
@@ -113,29 +113,46 @@
     },
     {
       "key": "MAHANADI-COALFIELDS",
-      "symbol": null,
+      "symbol": "MAHACOAL",
       "bseCode": "MAHANADI COALFIELDS LIMITED",
       "name": "Mahanadi Coalfields Limited",
       "type": "Mainboard",
       "series": "EQ",
       "priceLow": 129,
       "priceHigh": 136,
-      "lotSize": null,
+      "lotSize": 110,
       "issueSizeCr": null,
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": null,
+      "subscriptionTimes": 0.0,
       "exchanges": [
+        "NSE",
         "BSE"
       ],
       "sources": [
+        "NSE",
         "BSE"
       ],
       "rhpDate": "2026-11-13",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
+      "subscription": {
+        "asOf": null,
+        "total": {
+          "times": 0.0,
+          "offered": null,
+          "bid": 0
+        },
+        "categories": [],
+        "history": [
+          {
+            "date": "2026-11-19",
+            "total": 0.0
+          }
+        ]
+      },
       "listingEstimated": true,
-      "status": "Upcoming"
+      "status": "Open"
     },
     {
       "key": "WATRANA",
@@ -151,15 +168,30 @@
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": null,
+      "subscriptionTimes": 0.0,
       "exchanges": [
         "NSE"
       ],
       "sources": [
         "NSE"
       ],
+      "subscription": {
+        "asOf": null,
+        "total": {
+          "times": 0.0,
+          "offered": null,
+          "bid": 0
+        },
+        "categories": [],
+        "history": [
+          {
+            "date": "2026-11-19",
+            "total": 0.0
+          }
+        ]
+      },
       "listingEstimated": true,
-      "status": "Upcoming"
+      "status": "Open"
     }
   ],
   "retired": []

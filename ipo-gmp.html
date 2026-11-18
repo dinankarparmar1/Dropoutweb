@@ -395,11 +395,15 @@ function gmpEntry(ipo, gmpMap){
   if(!gmpMap) return null;
   var want = [ipo.key, ipo.symbol, ipo.bseCode].filter(Boolean).map(function(k){ return String(k).toUpperCase(); });
   var wantName = normName(ipo.name);
+  var byName = null;
+  // An exact ID match wins over a name match, so a stale entry saved under
+  // an older ID for the same company can't hide the current one.
   for(var k in gmpMap){
     if(!Object.prototype.hasOwnProperty.call(gmpMap, k) || k.charAt(0) === '_') continue;
-    if(want.indexOf(String(k).toUpperCase()) !== -1 || (wantName && normName(k) === wantName)) return gmpMap[k];
+    if(want.indexOf(String(k).toUpperCase()) !== -1) return gmpMap[k];
+    if(byName === null && wantName && normName(k) === wantName) byName = gmpMap[k];
   }
-  return null;
+  return byName;
 }
 
 function subBox(ipo, st){

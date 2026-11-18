@@ -720,13 +720,39 @@ fetch('data/insider-trading.json').then(function(r){ if(!r.ok) throw new Error('
     }
     return;
   }
+  var esc = function(v){ return String(v == null ? '' : v).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
+  var blank = function(v){ return !v || v === '—' || v === '-'; };
+  // NSE's RSS feed gives "SYMBOL|COMPANY|Original|Regulation 7 (2)|file" --
+  // turn that into a short label (older data files still hold the raw string).
+  var filingLabel = function(t){
+    if(!t || t.indexOf('|') === -1) return t;
+    var p = t.split('|'), m = /regulation\s*(\d+)\s*\(?\s*(\d+)?/i.exec(p[3] || '');
+    if(!m) return t;
+    var s = 'Reg ' + m[1] + (m[2] ? '(' + m[2] + ')' : '') + ' disclosure';
+    if(p[2] && p[2].trim().toLowerCase() !== 'original') s += ' (' + p[2].trim().toLowerCase() + ')';
+    return s;
+  };
+  rows = rows.slice(0,15);
+  var detailed = rows.some(function(r){ return !blank(r.personCategory) || !blank(r.quantity); });
+  if(!detailed){
+    var head = document.querySelector('#insider-trading thead tr');
+    if(head) head.innerHTML = '<th>Date</th><th>Company</th><th>Filing</th>';
+  }
   var tbody = document.getElementById('insider-tbody');
-  tbody.innerHTML = rows.slice(0,15).map(function(row){
-    return '<tr><td>'+(row.date||'—')+'</td><td>'+(row.company||'—')+'</td><td>'+(row.personCategory||'—')+'</td><td>'+(row.transactionType||'—')+'</td><td>'+(row.quantity||'—')+'</td></tr>';
+  tbody.innerHTML = rows.map(function(row){
+    var co = esc(row.company||'—');
+    if(row.link && /^https?:\/\//.test(row.link)) co = '<a href="'+esc(row.link)+'" target="_blank" rel="noopener">'+co+'</a>';
+    var cells = '<td>'+esc(row.date||'—')+'</td><td>'+co+'</td>';
+    if(detailed) cells += '<td>'+esc(row.personCategory||'—')+'</td>';
+    cells += '<td>'+esc(filingLabel(row.transactionType)||'—')+'</td>';
+    if(detailed) cells += '<td>'+esc(row.quantity||'—')+'</td>';
+    return '<tr>'+cells+'</tr>';
   }).join('');
   badge.textContent = 'Live · updated ' + formatDate(payload.updated);
   badge.className = 'badge badge-live';
-  if(note) note.textContent = 'Sourced automatically from NSE\u2019s public PIT disclosure filings, refreshed daily.';
+  if(note) note.textContent = detailed
+    ? 'Sourced automatically from NSE’s public PIT disclosure filings, refreshed daily.'
+    : 'Latest PIT disclosure filings from NSE’s public feed. It shows which company filed and under which SEBI PIT regulation — open the filing on NSE to see who traded and how many shares.';
 })
 .catch(function(){ /* data/insider-trading.json not published yet — placeholder stays as-is */ });
 

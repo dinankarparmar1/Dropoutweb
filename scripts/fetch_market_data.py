@@ -151,6 +151,29 @@ def _first_keyword(text: str, keywords):
     return ""
 
 
+_REG_RE = re.compile(r"regulation\s*(\d+)\s*\(?\s*(\d+)?\s*\)?", re.I)
+
+
+def _parse_pit_pipe(text: str):
+    """Split NSE's 'SYMBOL|COMPANY|Original|Regulation 7 (2)|file' record.
+
+    Returns {"symbol", "company", "filing"} or None if `text` isn't in
+    that shape. "filing" is a short human label, e.g. "Reg 7(2) disclosure"
+    or "Reg 7(2) disclosure (revised)".
+    """
+    parts = [p.strip() for p in (text or "").split("|")]
+    if len(parts) < 4 or not parts[1]:
+        return None
+    m = _REG_RE.search(parts[3])
+    if not m:
+        return None
+    reg = m.group(1) + (f"({m.group(2)})" if m.group(2) else "")
+    filing = f"Reg {reg} disclosure"
+    if parts[2] and parts[2].lower() != "original":
+        filing += f" ({parts[2].lower()})"
+    return {"symbol": parts[0], "company": parts[1], "filing": filing}
+
+
 def parse_insider_rss(xml_text: str, debug: bool = False):
     """Best-effort parse of NSE's InsiderTrading.xml RSS feed into rows.
 
@@ -174,8 +197,29 @@ def parse_insider_rss(xml_text: str, debug: bool = False):
         title = (item.findtext("title") or "").strip()
         desc = (item.findtext("description") or "").strip()
         pub = (item.findtext("pubDate") or "").strip()
+        link = (item.findtext("link") or "").strip()
         combined = f"{title} {desc}".strip()
         if not combined:
+            continue
+
+        # NSE's feed puts a pipe-separated record in <description>:
+        #   SYMBOL|COMPANY NAME|Original|Regulation 7 (2)|IT_..._WebXMLFile_...
+        # It carries no person category or quantity -- only which PIT
+        # regulation the filing is under -- so show that cleanly instead of
+        # dumping the raw string into the table.
+        pipe = _parse_pit_pipe(desc)
+        if pipe:
+            row = {
+                "date": pub or "—",
+                "company": pipe["company"] or title or "—",
+                "symbol": pipe["symbol"],
+                "personCategory": "—",
+                "transactionType": pipe["filing"],
+                "quantity": "—",
+            }
+            if link.startswith(("http://", "https://")):
+                row["link"] = link
+            rows.append(row)
             continue
 
         # Company name is usually the leading segment before a " - " or "-".

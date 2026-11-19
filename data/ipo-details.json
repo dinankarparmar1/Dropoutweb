@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T09:31:55.145782Z",
+  "updated": "2026-11-19T12:15:37.847722Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -33,7 +33,7 @@
       "open": "2026-11-18",
       "close": "2026-11-20",
       "listing": "2026-11-26",
-      "subscriptionTimes": 2.55,
+      "subscriptionTimes": 2.94,
       "exchanges": [
         "NSE",
         "BSE"
@@ -45,11 +45,11 @@
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
       "subscription": {
-        "asOf": "2026-11-19T14:57:00+05:30",
+        "asOf": "2026-11-19T17:00:00+05:30",
         "total": {
-          "times": 2.55,
+          "times": 2.94,
           "offered": 12170076,
-          "bid": 31062735
+          "bid": 35781735
         },
         "categories": [
           {
@@ -57,42 +57,42 @@
             "label": "QIB",
             "times": 2.18,
             "offered": 3406814,
-            "bid": 7418015
+            "bid": 7439795
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 2.49,
+            "times": 3.43,
             "offered": 2596928,
-            "bid": 6462940
+            "bid": 8911980
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 2.2,
+            "times": 3.11,
             "offered": 1731286,
-            "bid": 3804625
+            "bid": 5375920
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 3.07,
+            "times": 4.08,
             "offered": 865642,
-            "bid": 2658315
+            "bid": 3536060
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 2.75,
+            "times": 3.12,
             "offered": 6059497,
-            "bid": 16692830
+            "bid": 18914280
           },
           {
             "key": "employee",
             "label": "Employee",
-            "times": 4.58,
+            "times": 4.83,
             "offered": 106837,
-            "bid": 488950
+            "bid": 515680
           }
         ],
         "history": [
@@ -108,13 +108,13 @@
           },
           {
             "date": "2026-11-19",
-            "total": 2.55,
+            "total": 2.94,
             "qib": 2.18,
-            "nii": 2.49,
-            "bnii": 2.2,
-            "snii": 3.07,
-            "retail": 2.75,
-            "employee": 4.58
+            "nii": 3.43,
+            "bnii": 3.11,
+            "snii": 4.08,
+            "retail": 3.12,
+            "employee": 4.83
           }
         ]
       },
@@ -135,7 +135,7 @@
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": 0.36,
+      "subscriptionTimes": 0.38,
       "exchanges": [
         "NSE",
         "BSE"
@@ -147,11 +147,11 @@
       "rhpDate": "2026-11-13",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
       "subscription": {
-        "asOf": "2026-11-19T14:57:00+05:30",
+        "asOf": "2026-11-19T17:00:00+05:30",
         "total": {
-          "times": 0.36,
+          "times": 0.38,
           "offered": 493068045,
-          "bid": 179215960
+          "bid": 186943350
         },
         "categories": [
           {
@@ -159,62 +159,62 @@
             "label": "QIB",
             "times": 1.26,
             "offered": 112512171,
-            "bid": 142061700
+            "bid": 142113620
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 0.06,
+            "times": 0.08,
             "offered": 84384129,
-            "bid": 5110930
+            "bid": 6671170
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 0.04,
+            "times": 0.05,
             "offered": 56256086,
-            "bid": 2251370
+            "bid": 3072960
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 0.1,
+            "times": 0.13,
             "offered": 28128043,
-            "bid": 2859560
+            "bid": 3598210
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 0.12,
+            "times": 0.13,
             "offered": 196896300,
-            "bid": 22697620
+            "bid": 26551140
           },
           {
             "key": "employee",
             "label": "Employee",
             "times": 0.05,
             "offered": 33091815,
-            "bid": 1502820
+            "bid": 1740860
           },
           {
             "key": "shareholder",
             "label": "Shareholder",
-            "times": 0.12,
+            "times": 0.15,
             "offered": 66183630,
-            "bid": 7842890
+            "bid": 9866560
           }
         ],
         "history": [
           {
             "date": "2026-11-19",
-            "total": 0.36,
+            "total": 0.38,
             "qib": 1.26,
-            "nii": 0.06,
-            "bnii": 0.04,
-            "snii": 0.1,
-            "retail": 0.12,
+            "nii": 0.08,
+            "bnii": 0.05,
+            "snii": 0.13,
+            "retail": 0.13,
             "employee": 0.05,
-            "shareholder": 0.12
+            "shareholder": 0.15
           }
         ]
       },
@@ -243,11 +243,11 @@
         "NSE"
       ],
       "subscription": {
-        "asOf": "2026-11-19T14:57:00+05:30",
+        "asOf": "2026-11-19T17:00:00+05:30",
         "total": {
           "times": 0.0,
           "offered": null,
-          "bid": 2562000
+          "bid": 3950400
         },
         "categories": [
           {
@@ -262,21 +262,21 @@
             "label": "NII",
             "times": 0.0,
             "offered": null,
-            "bid": 2562000
+            "bid": 3950400
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
             "times": 0.0,
             "offered": null,
-            "bid": 1990200
+            "bid": 3111600
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
             "times": 0.0,
             "offered": null,
-            "bid": 571800
+            "bid": 838800
           }
         ],
         "history": [

@@ -1,6 +1,105 @@
 {
-  "updated": "2026-11-19T09:31:45.085238Z",
+  "updated": "2026-11-19T12:15:23.447699Z",
   "rows": [
+    {
+      "date": "19-Nov-2026 17:33:13",
+      "company": "INDOSTAR CAPITAL FINANCE LIMITED",
+      "symbol": "INDOSTAR",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_16166_WebXMLFile_20261119_173313633.xml"
+    },
+    {
+      "date": "19-Nov-2026 17:24:44",
+      "company": "DYNEMIC PRODUCTS LTD",
+      "symbol": "DYNPRO",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15338_WebXMLFile_20261119_172444829.xml"
+    },
+    {
+      "date": "19-Nov-2026 17:18:18",
+      "company": "Kirloskar Industries Limited",
+      "symbol": "KIRLOSIND",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_3308_WebXMLFile_20261119_171818134.xml"
+    },
+    {
+      "date": "19-Nov-2026 17:16:57",
+      "company": "VIVID ELECTROMECH LIMITED",
+      "symbol": "VIVIDEL",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27015_WebXMLFile_20261119_171657140.xml"
+    },
+    {
+      "date": "19-Nov-2026 17:13:21",
+      "company": "Tiger Logistics (India) Limited",
+      "symbol": "TIGERLOGS",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_26474_WebXMLFile_20261119_171321248.xml"
+    },
+    {
+      "date": "19-Nov-2026 16:55:13",
+      "company": "RAJPUTANA STAINLESS LIMITED",
+      "symbol": "RSL",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25166_WebXMLFile_20261119_165513699.xml"
+    },
+    {
+      "date": "19-Nov-2026 16:50:33",
+      "company": "Tata Consumer Products Limited",
+      "symbol": "TATACONSUM",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1098_WebXMLFile_20261119_165033190.xml"
+    },
+    {
+      "date": "19-Nov-2026 16:28:09",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "symbol": "GANDHAR",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_21453_WebXMLFile_20261119_162809576.xml"
+    },
+    {
+      "date": "19-Nov-2026 15:46:24",
+      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
+      "symbol": "DHRUV",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20205_WebXMLFile_20261119_154624203.xml"
+    },
+    {
+      "date": "19-Nov-2026 15:34:53",
+      "company": "CEAT Limited",
+      "symbol": "CEATLTD",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2711_WebXMLFile_20261119_153453464.xml"
+    },
+    {
+      "date": "19-Nov-2026 15:30:09",
+      "company": "MAZDA LIMITED",
+      "symbol": "MAZDA",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_14337_WebXMLFile_20261119_153008943.xml"
+    },
     {
       "date": "19-Nov-2026 14:59:23",
       "company": "Veegaland Developers Limited",
@@ -126,96 +225,6 @@
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
       "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:53:48",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
-    },
-    {
-      "date": "19-Nov-2026 12:12:23",
-      "company": "BRACE PORT LOGISTICS LIMITED",
-      "symbol": "BRACEPORT",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22587_WebXMLFile_20261119_121223674.xml"
-    },
-    {
-      "date": "19-Nov-2026 11:13:48",
-      "company": "CSL Finance Limited",
-      "symbol": "CSLFINANCE",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20784_WebXMLFile_20261119_111348745.xml"
-    },
-    {
-      "date": "19-Nov-2026 10:40:23",
-      "company": "RBZ JEWELLERS LIMITED",
-      "symbol": "RBZJEWEL",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22186_WebXMLFile_20261119_104023168.xml"
-    },
-    {
-      "date": "19-Nov-2026 10:03:32",
-      "company": "NCC Limited",
-      "symbol": "NCC",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_917_WebXMLFile_20261119_100332172.xml"
     }
   ],
   "source": "rss"

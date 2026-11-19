@@ -1,180 +1,221 @@
 {
-  "updated": "2026-11-18T12:57:25.154831Z",
+  "updated": "2026-11-19T09:31:45.085238Z",
   "rows": [
     {
-      "date": "18-Nov-2026 18:26:37",
-      "company": "Greenpanel Industries Limited",
+      "date": "19-Nov-2026 14:59:23",
+      "company": "Veegaland Developers Limited",
+      "symbol": "VEEGALAND",
       "personCategory": "\u2014",
-      "transactionType": "GREENPANEL|Greenpanel Industries Limited|Original|Regulation 7 (2)|IT_17613_WebXMLFile_202",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27602_WebXMLFile_20261119_145923454.xml"
     },
     {
-      "date": "18-Nov-2026 18:21:39",
-      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
+      "date": "19-Nov-2026 14:35:09",
+      "company": "LOKESH MACHINES LIMITED",
+      "symbol": "LOKESHMACH",
       "personCategory": "\u2014",
-      "transactionType": "DHRUV|DHRUV CONSULTANCY SERVICES LIMITED|Original|Regulation 7 (2)|IT_20205_WebXMLFile_202",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2401_WebXMLFile_20261119_143509128.xml"
     },
     {
-      "date": "18-Nov-2026 18:08:02",
-      "company": "Gallantt Ispat Limited",
+      "date": "19-Nov-2026 14:25:29",
+      "company": "ASHIANA HOUSING LIMITED",
+      "symbol": "ASHIANA",
       "personCategory": "\u2014",
-      "transactionType": "GALLANTT|Gallantt Ispat Limited|Original|Regulation 7 (2)|IT_2385_WebXMLFile_20261118_1808",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_4964_WebXMLFile_20261119_142529166.xml"
     },
     {
-      "date": "18-Nov-2026 17:38:27",
-      "company": "HAPPY FORGINGS LIMITED",
+      "date": "19-Nov-2026 14:11:53",
+      "company": "ASHIANA HOUSING LIMITED",
+      "symbol": "ASHIANA",
       "personCategory": "\u2014",
-      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Revision|Regulation 7 (2)|IT_22370_WebXMLFile_20261118_1",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_4964_WebXMLFile_20261119_141153435.xml"
     },
     {
-      "date": "18-Nov-2026 17:32:52",
-      "company": "LA OPALA RG LIMITED",
+      "date": "19-Nov-2026 13:20:05",
+      "company": "eClerx Services Ltd",
+      "symbol": "ECLERX",
       "personCategory": "\u2014",
-      "transactionType": "LAOPALA|LA OPALA RG LIMITED|Original|Regulation 7 (2)|IT_2553_WebXMLFile_20261118_17325257",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2698_WebXMLFile_20261119_132005684.xml"
     },
     {
-      "date": "18-Nov-2026 17:07:53",
-      "company": "ARVIND PORT AND INFRA LIMITED",
+      "date": "19-Nov-2026 12:56:06",
+      "company": "Rachana Infrastructure Limited",
+      "symbol": "RILINFRA",
       "personCategory": "\u2014",
-      "transactionType": "ARVINDPORT|ARVIND PORT AND INFRA LIMITED|Original|Regulation 7 (2)|IT_22118_WebXMLFile_202",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20549_WebXMLFile_20261119_125605934.xml"
     },
     {
-      "date": "18-Nov-2026 16:54:23",
-      "company": "HERO MOTORS LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "HEROMOTORS|HERO MOTORS LIMITED|Original|Regulation 7 (2)|IT_24331_WebXMLFile_20261118_1654",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:52:15",
-      "company": "Dilip Buildcon Limited",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "DBL|Dilip Buildcon Limited|Original|Regulation 7 (3)|IT_14078_WebXMLFile_20261118_16521535",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:52:02",
-      "company": "Dilip Buildcon Limited",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "DBL|Dilip Buildcon Limited|Original|Regulation 7 (3)|IT_14078_WebXMLFile_20261118_16520284",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:45:25",
-      "company": "DAMODAR INDUSTRIES LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "DAMODARIND|DAMODAR INDUSTRIES LIMITED|Original|Regulation 7 (2)|IT_13962_WebXMLFile_202611",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:44:31",
-      "company": "ACEVECTOR LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "ACEVECTOR|ACEVECTOR LIMITED|Original|Regulation 7 (2)|IT_20276_WebXMLFile_20261118_1644311",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:33:09",
-      "company": "HAPPY FORGINGS LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "HAPPYFORGE|HAPPY FORGINGS LIMITED|Original|Regulation 7 (2)|IT_22370_WebXMLFile_20261118_1",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:32:56",
-      "company": "Gujarat Ambuja Exports Limited",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "GAEL|Gujarat Ambuja Exports Limited|Original|Regulation 7 (2)|IT_1937_WebXMLFile_20261118_",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:18:17",
-      "company": "BONDADA ENGINEERING LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "BONDADA|BONDADA ENGINEERING LIMITED|Original|Regulation 7 (2)|IT_29267_WebXMLFile_20261118",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:11:33",
-      "company": "HATSUN AGRO PRODUCT LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "HATSUN|HATSUN AGRO PRODUCT LIMITED|Original|Regulation 7 (2)|IT_10091_WebXMLFile_20261118_",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:11:16",
-      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "DHRUV|DHRUV CONSULTANCY SERVICES LIMITED|Original|Regulation 7 (2)|IT_20205_WebXMLFile_202",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 16:08:01",
-      "company": "VINTAGE COFFEE AND BEVERAGES LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "VINCOFE|VINTAGE COFFEE AND BEVERAGES LIMITED|Original|Regulation 7 (2)|IT_24345_WebXMLFile",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 15:55:07",
-      "company": "ARISINFRA SOLUTIONS LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "ARIS|ARISINFRA SOLUTIONS LIMITED|Original|Regulation 7 (2)|IT_24258_WebXMLFile_20261118_15",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 15:44:55",
-      "company": "VINATI ORGANICS LIMITED",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "VINATIORGA|VINATI ORGANICS LIMITED|Original|Regulation 7 (2)|IT_2897_WebXMLFile_20261118_1",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 15:27:49",
-      "company": "Studds Accessories Limited",
+      "date": "19-Nov-2026 12:53:48",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
       "personCategory": "\u2014",
-      "transactionType": "STUDDS|Studds Accessories Limited|Original|Regulation 7 (2)|IT_25886_WebXMLFile_20261118_1",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261119_125348258.xml"
     },
     {
-      "date": "18-Nov-2026 14:31:51",
-      "company": "TITAN COMPANY LIMITED",
+      "date": "19-Nov-2026 12:12:23",
+      "company": "BRACE PORT LOGISTICS LIMITED",
+      "symbol": "BRACEPORT",
       "personCategory": "\u2014",
-      "transactionType": "TITAN|TITAN COMPANY LIMITED|Original|Regulation 7 (3)|IT_233_WebXMLFile_20261118_143150918",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22587_WebXMLFile_20261119_121223674.xml"
     },
     {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
+      "date": "19-Nov-2026 11:13:48",
+      "company": "CSL Finance Limited",
+      "symbol": "CSLFINANCE",
       "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20784_WebXMLFile_20261119_111348745.xml"
     },
     {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
+      "date": "19-Nov-2026 10:40:23",
+      "company": "RBZ JEWELLERS LIMITED",
+      "symbol": "RBZJEWEL",
       "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22186_WebXMLFile_20261119_104023168.xml"
     },
     {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
+      "date": "19-Nov-2026 10:03:32",
+      "company": "NCC Limited",
+      "symbol": "NCC",
       "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
-    },
-    {
-      "date": "18-Nov-2026 13:13:40",
-      "company": "VIVIANA POWER TECH LIMITED",
-      "personCategory": "\u2014",
-      "transactionType": "VIVIANA|VIVIANA POWER TECH LIMITED|Original|Regulation 7 (2)|IT_20783_WebXMLFile_20261118_",
-      "quantity": "\u2014"
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_917_WebXMLFile_20261119_100332172.xml"
     }
   ],
   "source": "rss"

@@ -187,8 +187,12 @@ html body .tradingview-widget-container .tradingview-widget-copyright a,html bod
 .vs-ccopy .vs-hand{display:block;margin:14px 0 0;transform:rotate(-2deg)}
 @media(max-width:900px){
   .vs-grid{grid-template-columns:1fr;align-items:start;padding-top:calc(var(--ticker-h,46px) + 84px)}
-  .vs-stage{grid-column:1;position:absolute;left:-20px;right:-20px;top:auto;bottom:-30px;height:56%;margin:0;z-index:0}
-  .vs-copy,.vs-story{position:relative;z-index:1}
+  .vs-stage{grid-column:1;position:absolute;left:-20px;right:-20px;top:auto;bottom:-30px;height:44%;margin:0;z-index:0;isolation:isolate;transform:translateZ(0)}
+  .vs-copy,.vs-story{position:relative;z-index:3}
+  .vs-lead{text-shadow:0 1px 12px #07070a,0 0 2px #07070a}
+  .vs-cta{position:relative;z-index:4;transform:translateZ(1px)}
+  .vs-cta .btn-outline-gold{background:rgba(7,7,10,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .vs-cta .vs-ipo{border-color:var(--gold);color:var(--gold-bright);box-shadow:0 0 0 1px rgba(212,175,55,.25),0 8px 24px -8px rgba(212,175,55,.45)}
   .vs-lead{margin:16px 0 18px;font-size:16px}.vs-nums,.vs-copy .hero-links,.vs-cta .vs-hand{display:none}
   .vs-cta .btn{padding:13px 20px}
   .vs-story p{font-size:21px;padding:12px 0}

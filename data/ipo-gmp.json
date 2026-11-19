@@ -43,6 +43,13 @@
       "issueSizeCr": 8981.12
     }
   ],
+  "overrides": {
+    "_howto": "Hand corrections that win over the auto-fetched NSE/BSE values on ipo-gmp.html. Key = the card's ID. Fields: issueSizeCr, lotSize, priceLow, priceHigh, listing. Keep this block when updating GMP.",
+    "CRYSTAL-CROP-PROTECTION": {
+      "issueSizeCr": 455.49,
+      "note": "NSE feed shows Rs 355 Cr (fresh issue only). RHP: fresh Rs 354.77 Cr + OFS Rs 100.71 Cr = Rs 455.49 Cr."
+    }
+  },
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
       "gmp": 19,

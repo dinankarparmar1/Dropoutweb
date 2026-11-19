@@ -1,10 +1,10 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-19T15:05:00+05:30",
+  "updated": "2026-11-19T18:52:00+05:30",
   "gmp": {
     "CRYSTAL-CROP-PROTECTION": 18,
-    "MAHANADI-COALFIELDS": 1.7,
-    "WATRANA": 67
+    "MAHANADI-COALFIELDS": 3,
+    "WATRANA": 62
   },
   "extraIpos": [
     {
@@ -53,57 +53,62 @@
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
       "gmp": 18,
-      "rule": "median of latest per-source values (3 sites)",
-      "checked": "2026-11-19T15:05:00+05:30",
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-19T18:52:00+05:30",
       "sources": [
         {
-          "site": "investorgain.com",
-          "gmp": 17,
-          "asOf": "2026-11-19T13:37+05:30"
-        },
-        {
-          "site": "ipomarket.in",
-          "gmp": 18,
-          "asOf": "2026-11-19T11:02+05:30"
-        },
-        {
           "site": "ipoji.com",
-          "gmp": 19,
-          "asOf": "2026-11-18T14:00+05:30"
+          "gmp": 17,
+          "asOf": "2026-11-19T16:00+05:30"
+        },
+        {
+          "site": "gmpipowatch.in",
+          "gmp": 18,
+          "asOf": "2026-11-19T14:33+05:30"
+        },
+        {
+          "site": "ipoguru.in",
+          "gmp": 18,
+          "asOf": "2026-11-19T09:36+05:30"
         }
       ]
     },
     "MAHANADI-COALFIELDS": {
-      "gmp": 1.7,
-      "rule": "latest same-day value (investorgain); ipoji value is a day older",
-      "checked": "2026-11-19T15:05:00+05:30",
+      "gmp": 3,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-19T18:52:00+05:30",
       "sources": [
-        {
-          "site": "investorgain.com",
-          "gmp": 1.7,
-          "asOf": "2026-11-19T14:02+05:30"
-        },
         {
           "site": "ipoji.com",
           "gmp": 3,
-          "asOf": "2026-11-18T14:00+05:30"
+          "asOf": "2026-11-19T16:00+05:30"
+        },
+        {
+          "site": "ipoguru.in",
+          "gmp": 2.7,
+          "asOf": "2026-11-19T16:12+05:30"
         }
       ]
     },
     "WATRANA": {
-      "gmp": 67,
-      "rule": "latest same-day value (investorgain); ipoji value is a day older",
-      "checked": "2026-11-19T15:05:00+05:30",
+      "gmp": 62,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-19T18:52:00+05:30",
       "sources": [
         {
           "site": "investorgain.com",
           "gmp": 67,
-          "asOf": "2026-11-19T14:02+05:30"
+          "asOf": "2026-11-19T18:50+05:30"
+        },
+        {
+          "site": "ipomarket.in",
+          "gmp": 62,
+          "asOf": "2026-11-19T08:32+05:30"
         },
         {
           "site": "ipoji.com",
-          "gmp": 32,
-          "asOf": "2026-11-18T22:30+05:30"
+          "gmp": 40,
+          "asOf": "2026-11-19T16:00+05:30"
         }
       ]
     }

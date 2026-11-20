@@ -365,6 +365,30 @@ class ParserTests(unittest.TestCase):
         # ipo-detail wraps the same table in activeCat
         self.assertEqual(m.parse_nse_subscription({"activeCat": active_category()})["total"]["times"], 3.75)
 
+    def test_sme_subscription_without_offered_is_not_zero(self):
+        # NSE's SME feed (seen live for WATRANA, 19 Nov 2026): offered "0", times "0.00", real bids.
+        rows = [
+            {"srNo": "Sr.No.", "category": "Category", "noOfShareOffered": "No.of shares offered/reserved",
+             "noOfSharesBid": "No. of shares bid for", "noOfTotalMeant": "No. of times of total meant for the category"},
+            {"srNo": "1", "category": "Qualified Institutional Buyers(QIBs)", "noOfShareOffered": "0", "noOfSharesBid": "0", "noOfTotalMeant": "0.00"},
+            {"srNo": "1(a)", "category": "Foreign Institutional Investors(FIIs)", "noOfShareOffered": "", "noOfSharesBid": "0", "noOfTotalMeant": ""},
+            {"srNo": "2", "category": "Non Institutional Investors", "noOfShareOffered": "0", "noOfSharesBid": "3950400", "noOfTotalMeant": "0.00"},
+            {"srNo": "2.1", "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+             "noOfShareOffered": "0", "noOfSharesBid": "3111600", "noOfTotalMeant": "0.00"},
+            {"srNo": None, "category": "Total", "noOfShareOffered": "0", "noOfSharesBid": "3950400", "noOfTotalMeant": "0.00"},
+        ]
+        sub = m.parse_nse_subscription({"dataList": rows, "updateTime": "Updated as on 19-Nov-2026 17:00:00"})
+        self.assertTrue(sub["offeredMissing"])
+        self.assertIsNone(sub["total"]["times"])                      # not a fake 0.00x
+        self.assertEqual(sub["total"]["bid"], 3950400)
+        nii = next(c for c in sub["categories"] if c["key"] == "nii")
+        self.assertEqual((nii["times"], nii["offered"], nii["bid"]), (None, None, 3950400))
+        qib = next(c for c in sub["categories"] if c["key"] == "qib")
+        self.assertEqual(qib["times"], 0.0)                            # no bids yet: 0.00x is fine
+        hist = m.merge_subscription(None, sub, date(2026, 11, 19))["history"]
+        self.assertEqual(hist[0]["bids"]["nii"], 3950400)
+        self.assertNotIn("offeredMissing", m.parse_nse_subscription(active_category()))
+
     def test_subscription_history_one_point_per_day(self):
         d1 = m.parse_nse_subscription(active_category(total=0.8, retail=1.0, when="18-Nov-2026 17:00:00"))
         d1b = m.parse_nse_subscription(active_category(total=1.1, retail=1.4, when="18-Nov-2026 19:00:00"))

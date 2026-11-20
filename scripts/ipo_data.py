@@ -344,7 +344,7 @@ def parse_nse_subscription(raw):
     rows = block.get("dataList") if isinstance(block, dict) else None
     if not isinstance(rows, list):
         return None
-    cats, total = [], None
+    cats, total, missing = [], None, False
     for r in rows:
         if not isinstance(r, dict):
             continue
@@ -355,7 +355,15 @@ def parse_nse_subscription(raw):
         times = _float(r.get("noOfTotalMeant") if "noOfTotalMeant" in r else r.get("noOfTime"))
         offered = _float(r.get("noOfShareOffered") or r.get("noOfSharesOffered"))
         bid = _float(r.get("noOfSharesBid") or r.get("noOfsharesBid"))
-        if label.lower().startswith("total"):
+        is_total = label.lower().startswith("total")
+        if not offered:
+            offered = None
+            if bid and (is_total or re.fullmatch(r"\d+(\.\d+)?", sr)):
+                # NSE's SME feed sends "0" offered and "0.00" times even with live bids:
+                # that 0.00x is not real, so leave times unknown instead.
+                times = None
+                missing = True
+        if is_total:
             total = {"times": round(times, 2) if times is not None else None,
                      "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None}
             continue
@@ -363,11 +371,11 @@ def parse_nse_subscription(raw):
             continue
         low = label.lower()
         key = next((k for k, words in _SUB_KEYS if any(w in low for w in words)), None)
-        if key is None or times is None:
+        if key is None or (times is None and not bid):
             continue
         if key == "nii" and sr.count(".") == 1:      # an unlabelled 2.x row: don't confuse with total NII
             continue
-        cats.append({"key": key, "label": SUB_LABELS[key], "times": round(times, 2),
+        cats.append({"key": key, "label": SUB_LABELS[key], "times": round(times, 2) if times is not None else None,
                      "offered": int(offered) if offered else None, "bid": int(bid) if bid is not None else None})
     if total is None and not cats:
         return None
@@ -378,7 +386,10 @@ def parse_nse_subscription(raw):
             as_of = datetime.strptime(m.group(1) + " " + m.group(2), "%d-%b-%Y %H:%M").replace(tzinfo=IST).isoformat()
         except ValueError:
             as_of = None
-    return {"asOf": as_of, "total": total, "categories": cats}
+    out = {"asOf": as_of, "total": total, "categories": cats}
+    if missing:
+        out["offeredMissing"] = True
+    return out
 
 
 def merge_subscription(old, snap, today):
@@ -390,6 +401,11 @@ def merge_subscription(old, snap, today):
     point = {"date": day, "total": (snap.get("total") or {}).get("times")}
     for c in snap.get("categories") or []:
         point[c["key"]] = c["times"]
+    if snap.get("offeredMissing"):
+        # Keep the day's bids so the page can work out times from hand-entered offered shares.
+        bids = {c["key"]: c.get("bid") for c in snap.get("categories") or []}
+        bids["total"] = (snap.get("total") or {}).get("bid")
+        point["bids"] = bids
     hist = [h for h in hist if h["date"] != day] + [point]
     hist.sort(key=lambda h: h["date"])
     out = dict(snap)
@@ -712,7 +728,8 @@ def finalise(fresh, previous, holidays, today, failed_sources=(), retired=None):
             ipo["subscription"] = merge_subscription(prev_sub, snap, today)
         elif prev_sub and not ipo.get("subscription"):
             ipo["subscription"] = prev_sub
-        if ipo.get("subscriptionTimes") is None and (old or {}).get("subscriptionTimes") is not None:
+        if ipo.get("subscriptionTimes") is None and not ipo.get("subscriptionOfferedMissing") \
+                and (old or {}).get("subscriptionTimes") is not None:
             ipo["subscriptionTimes"] = old["subscriptionTimes"]
 
     carried = []
@@ -757,7 +774,7 @@ def _nse_get(session, path, debug=False):
     r.raise_for_status()
     data = r.json()
     if debug:
-        print(f"RAW NSE {path}:", json.dumps(data, indent=2)[:1500])
+        print(f"RAW NSE {path}:", json.dumps(data, indent=2)[:6000])
     return data
 
 
@@ -812,6 +829,9 @@ def fetch_nse(session, debug=False):
             ipo["subscriptionSnapshot"] = snap
             if (snap.get("total") or {}).get("times") is not None:
                 ipo["subscriptionTimes"] = snap["total"]["times"]
+            elif snap.get("offeredMissing"):
+                ipo["subscriptionTimes"] = None      # the feed's 0.00x is not real
+                ipo["subscriptionOfferedMissing"] = True
         time.sleep(0.5)
     return ipos
 

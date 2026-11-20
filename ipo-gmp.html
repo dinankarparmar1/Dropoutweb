@@ -439,7 +439,9 @@ function subBox(ipo, st){
     });
     html += '</tbody></table>';
   }
-  return html + '<p class="sub-note">Source: NSE (consolidated bids). Updated about every 30 minutes while the IPO is open.</p></details>';
+  var extra = s.offeredNote === 'computed' ? ' NSE does not publish shares offered for this SME issue, so “subscribed” is NSE’s live bids ÷ shares reserved in the RHP.'
+    : s.offeredNote === 'missing' ? ' NSE has not published shares offered for this SME issue yet, so only bids are shown.' : '';
+  return html + '<p class="sub-note">Source: NSE (consolidated bids). Updated about every 30 minutes while the IPO is open.' + extra + '</p></details>';
 }
 
 function card(ipo){
@@ -481,6 +483,44 @@ function render(){
   }).sort(function(a,b){ return ORDER[statusOf(a)] - ORDER[statusOf(b)] || (a.tentative ? 1 : 0) - (b.tentative ? 1 : 0) || String(a.open||'9').localeCompare(String(b.open||'9')); });
   listEl.innerHTML = rows.map(card).join('');
   emptyEl.hidden = rows.length > 0;
+}
+
+// NSE's SME subscription feed gives live bids but "0" shares offered, so its
+// 0.00x is not real. Blank those out, and if data/ipo-gmp.json "overrides"
+// has "subscriptionOffered" (net shares reserved per category, from the RHP),
+// work the times out from NSE's bids instead.
+function fixSubscription(rec, ov){
+  var s = rec.subscription;
+  if(!s || !(s.categories || s.total)) return;
+  var noOffered = function(c){ return c && !num(c.offered) && num(c.bid) > 0; };
+  var cats = s.categories || [];
+  var broken = s.offeredMissing || cats.some(noOffered) || noOffered(s.total);
+  if(!broken) return;
+  var off = (ov && ov.subscriptionOffered && typeof ov.subscriptionOffered === 'object') ? ov.subscriptionOffered : null;
+  var times = function(bid, o){ bid = num(bid); o = num(o); return (bid != null && o) ? Math.round(bid / o * 100) / 100 : null; };
+  var topKeys = ['qib','nii','retail','employee','shareholder','policyholder'];
+  var totalOffered = 0;
+  if(off) topKeys.forEach(function(k){ if(num(off[k])) totalOffered += num(off[k]); });
+  cats.forEach(function(c){
+    if(!noOffered(c) && !(num(c.times) === 0 && !num(c.offered) && off && num(off[c.key]))) return;
+    c.offered = off && num(off[c.key]) ? num(off[c.key]) : null;
+    c.times = c.offered ? times(c.bid, c.offered) : (num(c.bid) > 0 ? null : c.times);
+  });
+  if(s.total){
+    s.total.offered = totalOffered || null;
+    s.total.times = totalOffered ? times(s.total.bid, totalOffered) : null;
+  }
+  (s.history || []).forEach(function(h){
+    var b = h.bids;
+    ['qib','nii','bnii','snii','retail','employee'].forEach(function(k){
+      if(h[k] === 0 || h[k] === 0.0){ var bk = b ? num(b[k]) : null; if(bk) h[k] = off && num(off[k]) ? times(bk, off[k]) : null; }
+    });
+    if(!h.total){ var bt = b ? num(b.total) : null; if(bt) h.total = totalOffered ? times(bt, totalOffered) : null; }
+  });
+  // Rows saved before the fix carry no bids: a day-wise 0.00x there is unknown, not zero.
+  (s.history || []).forEach(function(h){ if(!h.bids){ ['nii','bnii','snii','retail','total'].forEach(function(k){ if(h[k] === 0) h[k] = null; }); } });
+  s.offeredNote = off ? 'computed' : 'missing';
+  rec.subscriptionTimes = s.total ? s.total.times : null;
 }
 
 function overrideFor(ipo, ovMap){
@@ -531,6 +571,7 @@ function load(details, gmpData){
     // size counting only the fresh issue and leaving out the OFS).
     var ov = overrideFor(rec, gmpData.overrides);
     if(ov){ ['issueSizeCr','lotSize','priceLow','priceHigh','listing'].forEach(function(f){ if(ov[f] !== undefined && ov[f] !== null && ov[f] !== '') rec[f] = ov[f]; }); }
+    fixSubscription(rec, ov);
     allIpos.push(rec);
   });
   if(details.sample || gmpData.sample) document.getElementById('sample-banner').hidden = false;

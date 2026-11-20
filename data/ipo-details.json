@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-19T21:27:10.308015Z",
+  "updated": "2026-11-20T09:57:32.177036Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 3
+      "ipos": 4
     },
     "BSE": {
       "ok": true,
@@ -11,7 +11,7 @@
     },
     "SEBI": {
       "ok": true,
-      "ipos": 2
+      "ipos": 3
     }
   },
   "holidays": [
@@ -33,7 +33,7 @@
       "open": "2026-11-18",
       "close": "2026-11-20",
       "listing": "2026-11-26",
-      "subscriptionTimes": 2.94,
+      "subscriptionTimes": 14.5,
       "exchanges": [
         "NSE",
         "BSE"
@@ -45,54 +45,54 @@
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
       "subscription": {
-        "asOf": "2026-11-19T17:00:00+05:30",
+        "asOf": "2026-11-20T15:24:00+05:30",
         "total": {
-          "times": 2.94,
+          "times": 14.5,
           "offered": 12170076,
-          "bid": 35781735
+          "bid": 176510675
         },
         "categories": [
           {
             "key": "qib",
             "label": "QIB",
-            "times": 2.18,
+            "times": 12.22,
             "offered": 3406814,
-            "bid": 7439795
+            "bid": 41640885
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 3.43,
+            "times": 33.92,
             "offered": 2596928,
-            "bid": 8911980
+            "bid": 88079200
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 3.11,
+            "times": 39.56,
             "offered": 1731286,
-            "bid": 5375920
+            "bid": 68491555
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 4.08,
+            "times": 22.63,
             "offered": 865642,
-            "bid": 3536060
+            "bid": 19587645
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 3.12,
+            "times": 7.59,
             "offered": 6059497,
-            "bid": 18914280
+            "bid": 45963445
           },
           {
             "key": "employee",
             "label": "Employee",
-            "times": 4.83,
+            "times": 7.74,
             "offered": 106837,
-            "bid": 515680
+            "bid": 827145
           }
         ],
         "history": [
@@ -115,6 +115,16 @@
             "snii": 4.08,
             "retail": 3.12,
             "employee": 4.83
+          },
+          {
+            "date": "2026-11-20",
+            "total": 14.5,
+            "qib": 12.22,
+            "nii": 33.92,
+            "bnii": 39.56,
+            "snii": 22.63,
+            "retail": 7.59,
+            "employee": 7.74
           }
         ]
       },
@@ -135,7 +145,7 @@
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": 0.38,
+      "subscriptionTimes": 0.47,
       "exchanges": [
         "NSE",
         "BSE"
@@ -147,61 +157,61 @@
       "rhpDate": "2026-11-13",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
       "subscription": {
-        "asOf": "2026-11-19T17:00:00+05:30",
+        "asOf": "2026-11-20T15:24:00+05:30",
         "total": {
-          "times": 0.38,
+          "times": 0.47,
           "offered": 493068045,
-          "bid": 186943350
+          "bid": 232404260
         },
         "categories": [
           {
             "key": "qib",
             "label": "QIB",
-            "times": 1.26,
+            "times": 1.37,
             "offered": 112512171,
-            "bid": 142113620
+            "bid": 154352660
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 0.08,
+            "times": 0.15,
             "offered": 84384129,
-            "bid": 6671170
+            "bid": 12974940
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 0.05,
+            "times": 0.11,
             "offered": 56256086,
-            "bid": 3072960
+            "bid": 6245580
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 0.13,
+            "times": 0.24,
             "offered": 28128043,
-            "bid": 3598210
+            "bid": 6729360
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 0.13,
+            "times": 0.23,
             "offered": 196896300,
-            "bid": 26551140
+            "bid": 45363890
           },
           {
             "key": "employee",
             "label": "Employee",
-            "times": 0.05,
+            "times": 0.09,
             "offered": 33091815,
-            "bid": 1740860
+            "bid": 2816110
           },
           {
             "key": "shareholder",
             "label": "Shareholder",
-            "times": 0.15,
+            "times": 0.26,
             "offered": 66183630,
-            "bid": 9866560
+            "bid": 16896660
           }
         ],
         "history": [
@@ -215,6 +225,17 @@
             "retail": 0.13,
             "employee": 0.05,
             "shareholder": 0.15
+          },
+          {
+            "date": "2026-11-20",
+            "total": 0.47,
+            "qib": 1.37,
+            "nii": 0.15,
+            "bnii": 0.11,
+            "snii": 0.24,
+            "retail": 0.23,
+            "employee": 0.09,
+            "shareholder": 0.26
           }
         ]
       },
@@ -243,11 +264,11 @@
         "NSE"
       ],
       "subscription": {
-        "asOf": "2026-11-19T17:00:00+05:30",
+        "asOf": "2026-11-20T15:24:00+05:30",
         "total": {
           "times": 0.0,
           "offered": null,
-          "bid": 3950400
+          "bid": 11702400
         },
         "categories": [
           {
@@ -262,21 +283,21 @@
             "label": "NII",
             "times": 0.0,
             "offered": null,
-            "bid": 3950400
+            "bid": 11702400
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
             "times": 0.0,
             "offered": null,
-            "bid": 3111600
+            "bid": 9216600
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
             "times": 0.0,
             "offered": null,
-            "bid": 838800
+            "bid": 2485800
           }
         ],
         "history": [
@@ -287,11 +308,67 @@
             "nii": 0.0,
             "bnii": 0.0,
             "snii": 0.0
+          },
+          {
+            "date": "2026-11-20",
+            "total": 0.0,
+            "qib": 0.0,
+            "nii": 0.0,
+            "bnii": 0.0,
+            "snii": 0.0
           }
         ]
       },
       "listingEstimated": true,
       "status": "Open"
+    },
+    {
+      "key": "SHREESIDHI",
+      "symbol": "SHREESIDHI",
+      "bseCode": null,
+      "name": "Shree Siddhivinayak Greentech Industries Limited",
+      "type": "SME",
+      "series": "SME",
+      "priceLow": 130,
+      "priceHigh": 142,
+      "lotSize": 1000,
+      "issueSizeCr": null,
+      "open": "2026-11-25",
+      "close": "2026-11-27",
+      "listing": "2026-12-02",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE"
+      ],
+      "sources": [
+        "NSE"
+      ],
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "FOODLINK-F-AND-B-HOLDINGS-INDIA",
+      "symbol": null,
+      "bseCode": null,
+      "name": "Foodlink F&B Holdings India Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-11-19",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
     }
   ],
   "retired": []

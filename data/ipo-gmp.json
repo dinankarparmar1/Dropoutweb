@@ -1,11 +1,12 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-20T11:40:00+05:30",
+  "updated": "2026-11-20T18:52:00+05:30",
   "gmp": {
-    "CRYSTAL-CROP-PROTECTION": 17,
+    "CRYSTAL-CROP-PROTECTION": 14,
     "MAHANADI-COALFIELDS": 2,
     "WATRANA": 67,
-    "SHREE-SIDDHIVINAYAK-GREENTECH": null
+    "SHREESIDHI": 0,
+    "FOODLINK-F-AND-B-HOLDINGS-INDIA": null
   },
   "extraIpos": [
     {
@@ -91,70 +92,107 @@
   },
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
-      "gmp": 17,
+      "gmp": 14,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-20T11:40:00+05:30",
+      "checked": "2026-11-20T18:52:00+05:30",
       "sources": [
-        {
-          "site": "ipomarket.in",
-          "gmp": 17,
-          "asOf": "2026-11-20T08:02+05:30"
-        },
         {
           "site": "ipoji.com",
           "gmp": 17,
           "asOf": "2026-11-19T16:00+05:30"
         },
         {
+          "site": "ipogyani.com",
+          "gmp": 14,
+          "asOf": "2026-11-20T18:50+05:30"
+        },
+        {
           "site": "gmpipowatch.in",
-          "gmp": 18,
-          "asOf": "2026-11-19T14:33+05:30"
+          "gmp": 14,
+          "asOf": "2026-11-20T18:30+05:30"
         }
       ]
     },
     "MAHANADI-COALFIELDS": {
       "gmp": 2,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-20T11:40:00+05:30",
+      "checked": "2026-11-20T18:52:00+05:30",
       "sources": [
         {
-          "site": "ipowatch.in",
+          "site": "ipoji.com",
           "gmp": 2,
-          "asOf": "2026-11-20T07:49+05:30"
+          "asOf": "2026-11-20T15:30+05:30"
         },
         {
-          "site": "ipomarket.in",
-          "gmp": 2,
-          "asOf": "2026-11-20T08:02+05:30"
+          "site": "ipogyani.com",
+          "gmp": 1.3,
+          "asOf": "2026-11-20T18:50+05:30"
         },
         {
-          "site": "indiainfoline.com",
-          "gmp": 1.8,
-          "asOf": "2026-11-20T09:02+05:30"
+          "site": "niftytrader.in",
+          "gmp": 1.5,
+          "asOf": "2026-11-20T11:02+05:30"
         }
-      ]
+      ],
+      "note": "median 1.5 rounded to 2"
     },
     "WATRANA": {
       "gmp": 67,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-20T11:40:00+05:30",
+      "checked": "2026-11-20T18:52:00+05:30",
       "sources": [
         {
-          "site": "investorgain.com",
+          "site": "ipoguru.in",
           "gmp": 67,
-          "asOf": "2026-11-20T11:02+05:30"
+          "asOf": "2026-11-20T09:00+05:30"
         },
         {
           "site": "ipomarket.in",
           "gmp": 67,
-          "asOf": "2026-11-20T08:02+05:30"
+          "asOf": "2026-11-20T15:02+05:30"
+        },
+        {
+          "site": "investorgain.com",
+          "gmp": 67,
+          "asOf": "2026-11-20T18:37+05:30"
         },
         {
           "site": "ipoji.com",
-          "gmp": 40,
-          "asOf": "2026-11-19T16:00+05:30"
+          "gmp": 43,
+          "asOf": "2026-11-20T10:00+05:30"
         }
       ]
+    },
+    "SHREESIDHI": {
+      "gmp": 0,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-20T18:52:00+05:30",
+      "sources": [
+        {
+          "site": "ipomarket.in",
+          "gmp": 0,
+          "asOf": "2026-11-20T15:02+05:30"
+        },
+        {
+          "site": "investorgain.com",
+          "gmp": 0,
+          "asOf": "2026-11-20T18:32+05:30"
+        }
+      ],
+      "note": "both sites show Rs 0; investorgain says GMP not started yet"
+    },
+    "FOODLINK-F-AND-B-HOLDINGS-INDIA": {
+      "gmp": null,
+      "rule": "median of latest per-source values",
+      "checked": "2026-11-20T18:52:00+05:30",
+      "sources": [
+        {
+          "site": "chanakyanipothi.com",
+          "gmp": 12,
+          "asOf": "2026-11-20T06:00"
+        }
+      ],
+      "note": "skipped: only 1 fresh site with a value (ipoji shows none); gmp left null"
     }
   }
 }

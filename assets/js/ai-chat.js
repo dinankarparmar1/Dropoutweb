@@ -371,6 +371,13 @@
   /* keyboard open on a phone: panel fills the visible area above the keyboard */
   .ai-panel.kb{transition:none;transform:none;border-radius:16px;}
   .ai-panel.kb .ai-orb-stage,.ai-panel.kb .ai-disclaimer{display:none;}
+  .ai-panel.kb{left:8px;right:8px;width:auto;max-width:none;}
+  .ai-panel.kb .ai-head{padding:8px 14px;}
+  .ai-panel.kb .ai-foot{padding:8px 10px;}
+  /* phone: stop the page behind from scrolling and hide the floating orb while chatting */
+  html.ai-chat-open,html.ai-chat-open body{overflow:hidden;overscroll-behavior:none;}
+  html.ai-kb-open .ai-fab{opacity:0;pointer-events:none;}
+  @media (max-width:480px){.ai-panel{max-height:calc(100dvh - 120px);}}
   `;
 
   const PAPERCLIP_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>`;
@@ -827,27 +834,37 @@
         if (isRecording) stopRecording();
       }
     });
-    // Keep the panel inside the part of the screen the phone keyboard leaves visible
+    // Keep the panel inside the part of the screen the phone keyboard leaves visible.
+    // Newer iOS Safari shrinks window.innerHeight together with the keyboard, so
+    // "innerHeight - visualViewport.height" can stay ~0. Instead we remember the
+    // tallest viewport seen and also treat "text box focused on a phone" as keyboard-open.
+    let fullVH = window.visualViewport ? window.visualViewport.height : window.innerHeight;
     function fitPanel() {
       const vv = window.visualViewport;
       const small = window.innerWidth <= 480;
-      const kb = !!(vv && small && panel.classList.contains("open") && (window.innerHeight - vv.height) > 120);
+      const open = panel.classList.contains("open");
+      if (vv && document.activeElement !== input) fullVH = Math.max(fullVH, vv.height);
+      const focused = document.activeElement === input;
+      const kb = !!(vv && small && open && (focused || (fullVH - vv.height) > 120));
       panel.classList.toggle("kb", kb);
+      document.documentElement.classList.toggle("ai-kb-open", kb);
+      document.documentElement.classList.toggle("ai-chat-open", open && small);
       if (kb) {
-        panel.style.top = (vv.offsetTop + 8) + "px";
+        panel.style.top = (vv.offsetTop + 6) + "px";
         panel.style.bottom = "auto";
-        panel.style.height = (vv.height - 16) + "px";
+        panel.style.height = (vv.height - 12) + "px";
         panel.style.maxHeight = "none";
         body.scrollTop = body.scrollHeight;
       } else {
         panel.style.top = panel.style.bottom = panel.style.height = panel.style.maxHeight = "";
       }
     }
+    window.addEventListener("resize", () => { if (document.activeElement !== input && window.visualViewport) fullVH = window.visualViewport.height; fitPanel(); });
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", fitPanel);
       window.visualViewport.addEventListener("scroll", fitPanel);
     }
-    input.addEventListener("focus", () => setTimeout(fitPanel, 300));
+    input.addEventListener("focus", () => { fitPanel(); setTimeout(fitPanel, 300); setTimeout(fitPanel, 700); });
     input.addEventListener("blur", () => setTimeout(fitPanel, 300));
 
     closeBtn.addEventListener("click", () => {

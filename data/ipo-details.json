@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T12:16:09.281823Z",
+  "updated": "2026-11-20T12:45:08.726314Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -45,7 +45,7 @@
       "rhpDate": "2026-11-12",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
       "subscription": {
-        "asOf": "2026-11-20T17:42:00+05:30",
+        "asOf": "2026-11-20T18:12:00+05:30",
         "total": {
           "times": 17.06,
           "offered": 12170076,

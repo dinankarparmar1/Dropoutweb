@@ -1,6 +1,114 @@
 {
-  "updated": "2026-11-20T09:57:05.832665Z",
+  "updated": "2026-11-20T12:15:36.633349Z",
   "rows": [
+    {
+      "date": "20-Nov-2026 17:34:54",
+      "company": "RAMKRISHNA FORGINGS LIMITED",
+      "symbol": "RKFORGE",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2188_WebXMLFile_20261120_173454627.xml"
+    },
+    {
+      "date": "20-Nov-2026 17:29:25",
+      "company": "360 ONE WAM LIMITED",
+      "symbol": "360ONE",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_17593_WebXMLFile_20261120_172924953.xml"
+    },
+    {
+      "date": "20-Nov-2026 17:25:29",
+      "company": "GANDHAR OIL REFINERY (INDIA) LIMITED",
+      "symbol": "GANDHAR",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_21453_WebXMLFile_20261120_172529281.xml"
+    },
+    {
+      "date": "20-Nov-2026 17:18:11",
+      "company": "LA OPALA RG LIMITED",
+      "symbol": "LAOPALA",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2553_WebXMLFile_20261120_171811640.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:56:39",
+      "company": "GLOBESECURE TECHNOLOGIES LIMITED",
+      "symbol": "GSTL",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20369_WebXMLFile_20261120_165639475.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:55:15",
+      "company": "GLOBESECURE TECHNOLOGIES LIMITED",
+      "symbol": "GSTL",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20369_WebXMLFile_20261120_165515206.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:29:37",
+      "company": "AvenuesAI Limited\n(Formerly known as Infibeam Avenues Limited)",
+      "symbol": "CCAVENUE",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_13663_WebXMLFile_20261120_162937122.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:27:19",
+      "company": "ESTER INDUSTRIES LIMITED",
+      "symbol": "ESTER",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_4930_WebXMLFile_20261120_162719138.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:25:40",
+      "company": "HERO MOTORS LIMITED",
+      "symbol": "HEROMOTORS",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_24331_WebXMLFile_20261120_162540180.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:21:50",
+      "company": "HERO MOTORS LIMITED",
+      "symbol": "HEROMOTORS",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_24331_WebXMLFile_20261120_162150097.xml"
+    },
+    {
+      "date": "20-Nov-2026 16:19:13",
+      "company": "63 moons technolgoies limited",
+      "symbol": "63MOONS",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2295_WebXMLFile_20261120_161913253.xml"
+    },
+    {
+      "date": "20-Nov-2026 15:28:42",
+      "company": "VIDYA WIRES LIMITED",
+      "symbol": "VIDYAWIRES",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25234_WebXMLFile_20261120_152842324.xml"
+    },
     {
       "date": "20-Nov-2026 15:19:44",
       "company": "Info Edge (India) Limited",
@@ -117,69 +225,6 @@
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
       "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_19072_WebXMLFile_20261120_111137358.xml"
-    },
-    {
-      "date": "20-Nov-2026 11:07:45",
-      "company": "Shaily Engineering Plastics Limited",
-      "symbol": "SHAILY",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_19072_WebXMLFile_20261120_110744980.xml"
-    },
-    {
-      "date": "20-Nov-2026 10:59:28",
-      "company": "Veegaland Developers Limited",
-      "symbol": "VEEGALAND",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27602_WebXMLFile_20261120_105928859.xml"
-    },
-    {
-      "date": "20-Nov-2026 10:48:23",
-      "company": "SANGAM (INDIA) LIMITED",
-      "symbol": "SANGAMIND",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1381_WebXMLFile_20261120_104823234.xml"
-    },
-    {
-      "date": "20-Nov-2026 10:43:43",
-      "company": "Sangam (India) Limited",
-      "symbol": "SANGAMIND",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1381_WebXMLFile_20261120_104343460.xml"
-    },
-    {
-      "date": "20-Nov-2026 10:38:50",
-      "company": "NCC LIMITED",
-      "symbol": "NCC",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_917_WebXMLFile_20261120_103850252.xml"
-    },
-    {
-      "date": "20-Nov-2026 09:48:20",
-      "company": "Privi Speciality Chemicals Limited",
-      "symbol": "PRIVISCL",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_12212_WebXMLFile_20261120_094820585.xml"
-    },
-    {
-      "date": "20-Nov-2026 09:42:13",
-      "company": "NCL INDUSTRIES LIMITED",
-      "symbol": "NCLIND",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2568_WebXMLFile_20261120_094213768.xml"
     }
   ],
   "source": "rss"

@@ -1,10 +1,11 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-19T18:52:00+05:30",
+  "updated": "2026-11-20T11:40:00+05:30",
   "gmp": {
-    "CRYSTAL-CROP-PROTECTION": 18,
-    "MAHANADI-COALFIELDS": 3,
-    "WATRANA": 62
+    "CRYSTAL-CROP-PROTECTION": 17,
+    "MAHANADI-COALFIELDS": 2,
+    "WATRANA": 67,
+    "SHREE-SIDDHIVINAYAK-GREENTECH": null
   },
   "extraIpos": [
     {
@@ -41,21 +42,64 @@
       "priceHigh": 136,
       "lotSize": 110,
       "issueSizeCr": 8981.12
+    },
+    {
+      "key": "SHREE-SIDDHIVINAYAK-GREENTECH",
+      "name": "Shree Siddhivinayak Greentech Industries Limited",
+      "type": "SME",
+      "exchanges": [
+        "NSE"
+      ],
+      "open": "2026-11-25",
+      "close": "2026-11-27",
+      "priceLow": 130,
+      "priceHigh": 142
+    },
+    {
+      "key": "FOODLINK-FNB",
+      "name": "Foodlink F&B Holdings (India) Limited",
+      "type": "Mainboard",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "open": "2026-11-25",
+      "close": "2026-11-27"
     }
   ],
   "overrides": {
-    "_howto": "Hand corrections that win over the auto-fetched NSE/BSE values on ipo-gmp.html. Key = the card's ID. Fields: issueSizeCr, lotSize, priceLow, priceHigh, listing. Keep this block when updating GMP.",
+    "_howto": "Hand corrections that win over the auto-fetched NSE/BSE values on ipo-gmp.html. Key = the card's ID. Fields: issueSizeCr, lotSize, priceLow, priceHigh, listing. For SME IPOs where NSE gives bids but not shares offered, add subscriptionOffered: {qib, nii, bnii, snii, retail} (net shares reserved, from the RHP) and the page works out the 'x subscribed' from NSE's live bids. Keep this block when updating GMP.",
     "CRYSTAL-CROP-PROTECTION": {
       "issueSizeCr": 455.49,
       "note": "NSE feed shows Rs 355 Cr (fresh issue only). RHP: fresh Rs 354.77 Cr + OFS Rs 100.71 Cr = Rs 455.49 Cr."
+    },
+    "MAHANADI-COALFIELDS": {
+      "issueSizeCr": 8981.12,
+      "note": "NSE feed has no issue size; RHP total Rs 8,981.12 Cr."
+    },
+    "WATRANA": {
+      "issueSizeCr": 120.1,
+      "note": "NSE feed has no issue size and no shares-offered for this SME issue. Fresh issue Rs 120.10 Cr; NII 6,97,500 and Retail 16,27,500 shares; QIB = 49,02,000 - anchor 13,86,000 - market maker 2,52,000 - NII - Retail = 9,39,000; bNII/sNII split 2:1.",
+      "subscriptionOffered": {
+        "qib": 939000,
+        "nii": 697500,
+        "bnii": 465000,
+        "snii": 232500,
+        "retail": 1627500
+      }
     }
   },
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
-      "gmp": 18,
+      "gmp": 17,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-19T18:52:00+05:30",
+      "checked": "2026-11-20T11:40:00+05:30",
       "sources": [
+        {
+          "site": "ipomarket.in",
+          "gmp": 17,
+          "asOf": "2026-11-20T08:02+05:30"
+        },
         {
           "site": "ipoji.com",
           "gmp": 17,
@@ -65,45 +109,45 @@
           "site": "gmpipowatch.in",
           "gmp": 18,
           "asOf": "2026-11-19T14:33+05:30"
-        },
-        {
-          "site": "ipoguru.in",
-          "gmp": 18,
-          "asOf": "2026-11-19T09:36+05:30"
         }
       ]
     },
     "MAHANADI-COALFIELDS": {
-      "gmp": 3,
+      "gmp": 2,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-19T18:52:00+05:30",
+      "checked": "2026-11-20T11:40:00+05:30",
       "sources": [
         {
-          "site": "ipoji.com",
-          "gmp": 3,
-          "asOf": "2026-11-19T16:00+05:30"
+          "site": "ipowatch.in",
+          "gmp": 2,
+          "asOf": "2026-11-20T07:49+05:30"
         },
         {
-          "site": "ipoguru.in",
-          "gmp": 2.7,
-          "asOf": "2026-11-19T16:12+05:30"
+          "site": "ipomarket.in",
+          "gmp": 2,
+          "asOf": "2026-11-20T08:02+05:30"
+        },
+        {
+          "site": "indiainfoline.com",
+          "gmp": 1.8,
+          "asOf": "2026-11-20T09:02+05:30"
         }
       ]
     },
     "WATRANA": {
-      "gmp": 62,
+      "gmp": 67,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-19T18:52:00+05:30",
+      "checked": "2026-11-20T11:40:00+05:30",
       "sources": [
         {
           "site": "investorgain.com",
           "gmp": 67,
-          "asOf": "2026-11-19T18:50+05:30"
+          "asOf": "2026-11-20T11:02+05:30"
         },
         {
           "site": "ipomarket.in",
-          "gmp": 62,
-          "asOf": "2026-11-19T08:32+05:30"
+          "gmp": 67,
+          "asOf": "2026-11-20T08:02+05:30"
         },
         {
           "site": "ipoji.com",

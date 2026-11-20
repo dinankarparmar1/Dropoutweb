@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-20T12:45:08.726314Z",
+  "updated": "2026-11-20T18:34:20.038040Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 4
+      "ipos": 3
     },
     "BSE": {
       "ok": true,
-      "ipos": 2
+      "ipos": 1
     },
     "SEBI": {
       "ok": true,
@@ -19,118 +19,6 @@
     "2026-12-25"
   ],
   "ipos": [
-    {
-      "key": "CRYSTAL-CROP-PROTECTION",
-      "symbol": "CRYSTALCP",
-      "bseCode": "CRYSTAL CROP PROTECTION LIMITED",
-      "name": "Crystal Crop Protection Limited",
-      "type": "Mainboard",
-      "series": "EQ",
-      "priceLow": 259,
-      "priceHigh": 272,
-      "lotSize": 55,
-      "issueSizeCr": 355.0,
-      "open": "2026-11-18",
-      "close": "2026-11-20",
-      "listing": "2026-11-26",
-      "subscriptionTimes": 17.06,
-      "exchanges": [
-        "NSE",
-        "BSE"
-      ],
-      "sources": [
-        "NSE",
-        "BSE"
-      ],
-      "rhpDate": "2026-11-12",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
-      "subscription": {
-        "asOf": "2026-11-20T18:12:00+05:30",
-        "total": {
-          "times": 17.06,
-          "offered": 12170076,
-          "bid": 207567580
-        },
-        "categories": [
-          {
-            "key": "qib",
-            "label": "QIB",
-            "times": 15.47,
-            "offered": 3406814,
-            "bid": 52689065
-          },
-          {
-            "key": "nii",
-            "label": "NII",
-            "times": 37.69,
-            "offered": 2596928,
-            "bid": 97880860
-          },
-          {
-            "key": "bnii",
-            "label": "bNII (> \u20b910L)",
-            "times": 43.49,
-            "offered": 1731286,
-            "bid": 75293735
-          },
-          {
-            "key": "snii",
-            "label": "sNII (\u20b92\u201310L)",
-            "times": 26.09,
-            "offered": 865642,
-            "bid": 22587125
-          },
-          {
-            "key": "retail",
-            "label": "Retail",
-            "times": 9.26,
-            "offered": 6059497,
-            "bid": 56120460
-          },
-          {
-            "key": "employee",
-            "label": "Employee",
-            "times": 8.21,
-            "offered": 106837,
-            "bid": 877195
-          }
-        ],
-        "history": [
-          {
-            "date": "2026-11-18",
-            "total": 1.4,
-            "qib": 2.07,
-            "nii": 0.75,
-            "bnii": 0.62,
-            "snii": 1.03,
-            "retail": 1.28,
-            "employee": 2.91
-          },
-          {
-            "date": "2026-11-19",
-            "total": 2.94,
-            "qib": 2.18,
-            "nii": 3.43,
-            "bnii": 3.11,
-            "snii": 4.08,
-            "retail": 3.12,
-            "employee": 4.83
-          },
-          {
-            "date": "2026-11-20",
-            "total": 17.06,
-            "qib": 15.47,
-            "nii": 37.69,
-            "bnii": 43.49,
-            "snii": 26.09,
-            "retail": 9.26,
-            "employee": 8.21
-          }
-        ]
-      },
-      "listingEstimated": true,
-      "status": "Open"
-    },
     {
       "key": "MAHANADI-COALFIELDS",
       "symbol": "MAHACOAL",
@@ -256,17 +144,18 @@
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": 0.0,
+      "subscriptionTimes": null,
       "exchanges": [
         "NSE"
       ],
       "sources": [
         "NSE"
       ],
+      "subscriptionOfferedMissing": true,
       "subscription": {
         "asOf": "2026-11-20T17:03:00+05:30",
         "total": {
-          "times": 0.0,
+          "times": null,
           "offered": null,
           "bid": 14200200
         },
@@ -281,25 +170,26 @@
           {
             "key": "nii",
             "label": "NII",
-            "times": 0.0,
+            "times": null,
             "offered": null,
             "bid": 14200200
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 0.0,
+            "times": null,
             "offered": null,
             "bid": 11142600
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 0.0,
+            "times": null,
             "offered": null,
             "bid": 3057600
           }
         ],
+        "offeredMissing": true,
         "history": [
           {
             "date": "2026-11-19",
@@ -311,11 +201,18 @@
           },
           {
             "date": "2026-11-20",
-            "total": 0.0,
+            "total": null,
             "qib": 0.0,
-            "nii": 0.0,
-            "bnii": 0.0,
-            "snii": 0.0
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 0,
+              "nii": 14200200,
+              "bnii": 11142600,
+              "snii": 3057600,
+              "total": 14200200
+            }
           }
         ]
       },
@@ -369,6 +266,118 @@
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
       "rhpOnly": true,
       "status": "Upcoming"
+    },
+    {
+      "key": "CRYSTAL-CROP-PROTECTION",
+      "symbol": "CRYSTALCP",
+      "bseCode": "CRYSTAL CROP PROTECTION LIMITED",
+      "name": "Crystal Crop Protection Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 259,
+      "priceHigh": 272,
+      "lotSize": 55,
+      "issueSizeCr": 355.0,
+      "open": "2026-11-18",
+      "close": "2026-11-20",
+      "listing": "2026-11-26",
+      "subscriptionTimes": 17.06,
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "sources": [
+        "NSE",
+        "BSE"
+      ],
+      "rhpDate": "2026-11-12",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
+      "subscription": {
+        "asOf": "2026-11-20T18:12:00+05:30",
+        "total": {
+          "times": 17.06,
+          "offered": 12170076,
+          "bid": 207567580
+        },
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": 15.47,
+            "offered": 3406814,
+            "bid": 52689065
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": 37.69,
+            "offered": 2596928,
+            "bid": 97880860
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": 43.49,
+            "offered": 1731286,
+            "bid": 75293735
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": 26.09,
+            "offered": 865642,
+            "bid": 22587125
+          },
+          {
+            "key": "retail",
+            "label": "Retail",
+            "times": 9.26,
+            "offered": 6059497,
+            "bid": 56120460
+          },
+          {
+            "key": "employee",
+            "label": "Employee",
+            "times": 8.21,
+            "offered": 106837,
+            "bid": 877195
+          }
+        ],
+        "history": [
+          {
+            "date": "2026-11-18",
+            "total": 1.4,
+            "qib": 2.07,
+            "nii": 0.75,
+            "bnii": 0.62,
+            "snii": 1.03,
+            "retail": 1.28,
+            "employee": 2.91
+          },
+          {
+            "date": "2026-11-19",
+            "total": 2.94,
+            "qib": 2.18,
+            "nii": 3.43,
+            "bnii": 3.11,
+            "snii": 4.08,
+            "retail": 3.12,
+            "employee": 4.83
+          },
+          {
+            "date": "2026-11-20",
+            "total": 17.06,
+            "qib": 15.47,
+            "nii": 37.69,
+            "bnii": 43.49,
+            "snii": 26.09,
+            "retail": 9.26,
+            "employee": 8.21
+          }
+        ]
+      },
+      "listingEstimated": true,
+      "status": "Closed"
     }
   ],
   "retired": []

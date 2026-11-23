@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-20T21:03:06.156830Z",
+  "updated": "2026-11-23T13:45:14.046813Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 3
+      "ipos": 4
     },
     "BSE": {
       "ok": true,
@@ -11,7 +11,7 @@
     },
     "SEBI": {
       "ok": true,
-      "ipos": 3
+      "ipos": 4
     }
   },
   "holidays": [
@@ -33,7 +33,7 @@
       "open": "2026-11-19",
       "close": "2026-11-23",
       "listing": "2026-11-27",
-      "subscriptionTimes": 0.48,
+      "subscriptionTimes": 1.52,
       "exchanges": [
         "NSE",
         "BSE"
@@ -45,61 +45,61 @@
       "rhpDate": "2026-11-13",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
       "subscription": {
-        "asOf": "2026-11-20T17:03:00+05:30",
+        "asOf": "2026-11-23T19:00:00+05:30",
         "total": {
-          "times": 0.48,
+          "times": 1.52,
           "offered": 493068045,
-          "bid": 238838600
+          "bid": 748687390
         },
         "categories": [
           {
             "key": "qib",
             "label": "QIB",
-            "times": 1.37,
+            "times": 4.95,
             "offered": 112512171,
-            "bid": 154362670
+            "bid": 556811640
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 0.18,
+            "times": 0.66,
             "offered": 84384129,
-            "bid": 15207060
+            "bid": 55766810
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 0.13,
+            "times": 0.62,
             "offered": 56256086,
-            "bid": 7583510
+            "bid": 34773090
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 0.27,
+            "times": 0.75,
             "offered": 28128043,
-            "bid": 7623550
+            "bid": 20993720
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 0.24,
+            "times": 0.46,
             "offered": 196896300,
-            "bid": 47970670
+            "bid": 91449380
           },
           {
             "key": "employee",
             "label": "Employee",
-            "times": 0.09,
+            "times": 0.22,
             "offered": 33091815,
-            "bid": 2990570
+            "bid": 7271330
           },
           {
             "key": "shareholder",
             "label": "Shareholder",
-            "times": 0.28,
+            "times": 0.56,
             "offered": 66183630,
-            "bid": 18307630
+            "bid": 37388230
           }
         ],
         "history": [
@@ -124,6 +124,17 @@
             "retail": 0.24,
             "employee": 0.09,
             "shareholder": 0.28
+          },
+          {
+            "date": "2026-11-23",
+            "total": 1.52,
+            "qib": 4.95,
+            "nii": 0.66,
+            "bnii": 0.62,
+            "snii": 0.75,
+            "retail": 0.46,
+            "employee": 0.22,
+            "shareholder": 0.56
           }
         ]
       },
@@ -153,40 +164,40 @@
       ],
       "subscriptionOfferedMissing": true,
       "subscription": {
-        "asOf": "2026-11-20T17:03:00+05:30",
+        "asOf": "2026-11-23T19:00:00+05:30",
         "total": {
           "times": null,
           "offered": null,
-          "bid": 14200200
+          "bid": 314245200
         },
         "categories": [
           {
             "key": "qib",
             "label": "QIB",
-            "times": 0.0,
+            "times": null,
             "offered": null,
-            "bid": 0
+            "bid": 150796800
           },
           {
             "key": "nii",
             "label": "NII",
             "times": null,
             "offered": null,
-            "bid": 14200200
+            "bid": 163448400
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
             "times": null,
             "offered": null,
-            "bid": 11142600
+            "bid": 133491000
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
             "times": null,
             "offered": null,
-            "bid": 3057600
+            "bid": 29957400
           }
         ],
         "offeredMissing": true,
@@ -212,6 +223,21 @@
               "bnii": 11142600,
               "snii": 3057600,
               "total": 14200200
+            }
+          },
+          {
+            "date": "2026-11-23",
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 150796800,
+              "nii": 163448400,
+              "bnii": 133491000,
+              "snii": 29957400,
+              "total": 314245200
             }
           }
         ]
@@ -245,9 +271,35 @@
     },
     {
       "key": "FOODLINK-F-AND-B-HOLDINGS-INDIA",
+      "symbol": "FOODLINK",
+      "bseCode": null,
+      "name": "Foodlink F&B Holdings (India) Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 181,
+      "priceHigh": 191,
+      "lotSize": 78,
+      "issueSizeCr": 192.0,
+      "open": "2026-11-26",
+      "close": "2026-11-30",
+      "listing": "2026-12-03",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE"
+      ],
+      "sources": [
+        "NSE"
+      ],
+      "rhpDate": "2026-11-19",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "MATANGI-RUBBER",
       "symbol": null,
       "bseCode": null,
-      "name": "Foodlink F&B Holdings India Limited",
+      "name": "Matangi Rubber Limited",
       "type": "Mainboard",
       "series": "EQ",
       "priceLow": null,
@@ -262,8 +314,32 @@
       "sources": [
         "SEBI"
       ],
-      "rhpDate": "2026-11-19",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
+      "rhpDate": "2026-11-20",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/matangi-rubber-limited-rhp_105931.html",
+      "rhpOnly": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "MONOMARK-ENGINEERING-INDIA",
+      "symbol": null,
+      "bseCode": null,
+      "name": "Monomark Engineering (India) Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": null,
+      "priceHigh": null,
+      "lotSize": null,
+      "issueSizeCr": null,
+      "open": null,
+      "close": null,
+      "listing": null,
+      "subscriptionTimes": null,
+      "exchanges": [],
+      "sources": [
+        "SEBI"
+      ],
+      "rhpDate": "2026-11-23",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/monomark-engineering-india-limited-rhp_105932.html",
       "rhpOnly": true,
       "status": "Upcoming"
     },

@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-23T13:44:44.127633Z",
+  "updated": "2026-11-23T14:25:25.204370Z",
   "rows": [
+    {
+      "date": "23-Nov-2026 19:48:09",
+      "company": "Om Power Transmission Limited",
+      "symbol": "OMPOWER",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27090_WebXMLFile_20261123_194809077.xml"
+    },
     {
       "date": "23-Nov-2026 18:17:59",
       "company": "LIBERTY SHOES LIMITED",
@@ -135,15 +144,6 @@
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
       "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2989_WebXMLFile_20261123_160805679.xml"
-    },
-    {
-      "date": "23-Nov-2026 14:59:34",
-      "company": "Hindcon Chemicals Limited",
-      "symbol": "HINDCON",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261123_145934138.xml"
     },
     {
       "date": "23-Nov-2026 14:59:34",

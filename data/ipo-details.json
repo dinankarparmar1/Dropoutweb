@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-23T14:25:49.939357Z",
+  "updated": "2026-11-23T22:01:17.544343Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 4
+      "ipos": 2
     },
     "BSE": {
       "ok": true,
@@ -11,7 +11,7 @@
     },
     "SEBI": {
       "ok": true,
-      "ipos": 4
+      "ipos": 3
     }
   },
   "holidays": [
@@ -19,232 +19,6 @@
     "2026-12-25"
   ],
   "ipos": [
-    {
-      "key": "MAHANADI-COALFIELDS",
-      "symbol": "MAHACOAL",
-      "bseCode": "MAHANADI COALFIELDS LIMITED",
-      "name": "Mahanadi Coalfields Limited",
-      "type": "Mainboard",
-      "series": "EQ",
-      "priceLow": 129,
-      "priceHigh": 136,
-      "lotSize": 110,
-      "issueSizeCr": null,
-      "open": "2026-11-19",
-      "close": "2026-11-23",
-      "listing": "2026-11-27",
-      "subscriptionTimes": 1.52,
-      "exchanges": [
-        "NSE",
-        "BSE"
-      ],
-      "sources": [
-        "NSE",
-        "BSE"
-      ],
-      "rhpDate": "2026-11-13",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
-      "subscription": {
-        "asOf": "2026-11-23T19:00:00+05:30",
-        "total": {
-          "times": 1.52,
-          "offered": 493068045,
-          "bid": 748687390
-        },
-        "categories": [
-          {
-            "key": "qib",
-            "label": "QIB",
-            "times": 4.95,
-            "offered": 112512171,
-            "bid": 556811640
-          },
-          {
-            "key": "nii",
-            "label": "NII",
-            "times": 0.66,
-            "offered": 84384129,
-            "bid": 55766810
-          },
-          {
-            "key": "bnii",
-            "label": "bNII (> \u20b910L)",
-            "times": 0.62,
-            "offered": 56256086,
-            "bid": 34773090
-          },
-          {
-            "key": "snii",
-            "label": "sNII (\u20b92\u201310L)",
-            "times": 0.75,
-            "offered": 28128043,
-            "bid": 20993720
-          },
-          {
-            "key": "retail",
-            "label": "Retail",
-            "times": 0.46,
-            "offered": 196896300,
-            "bid": 91449380
-          },
-          {
-            "key": "employee",
-            "label": "Employee",
-            "times": 0.22,
-            "offered": 33091815,
-            "bid": 7271330
-          },
-          {
-            "key": "shareholder",
-            "label": "Shareholder",
-            "times": 0.56,
-            "offered": 66183630,
-            "bid": 37388230
-          }
-        ],
-        "history": [
-          {
-            "date": "2026-11-19",
-            "total": 0.38,
-            "qib": 1.26,
-            "nii": 0.08,
-            "bnii": 0.05,
-            "snii": 0.13,
-            "retail": 0.13,
-            "employee": 0.05,
-            "shareholder": 0.15
-          },
-          {
-            "date": "2026-11-20",
-            "total": 0.48,
-            "qib": 1.37,
-            "nii": 0.18,
-            "bnii": 0.13,
-            "snii": 0.27,
-            "retail": 0.24,
-            "employee": 0.09,
-            "shareholder": 0.28
-          },
-          {
-            "date": "2026-11-23",
-            "total": 1.52,
-            "qib": 4.95,
-            "nii": 0.66,
-            "bnii": 0.62,
-            "snii": 0.75,
-            "retail": 0.46,
-            "employee": 0.22,
-            "shareholder": 0.56
-          }
-        ]
-      },
-      "listingEstimated": true,
-      "status": "Open"
-    },
-    {
-      "key": "WATRANA",
-      "symbol": "WATRANA",
-      "bseCode": null,
-      "name": "Watrana Rentals Limited",
-      "type": "SME",
-      "series": "SME",
-      "priceLow": 232,
-      "priceHigh": 245,
-      "lotSize": 600,
-      "issueSizeCr": null,
-      "open": "2026-11-19",
-      "close": "2026-11-23",
-      "listing": "2026-11-27",
-      "subscriptionTimes": null,
-      "exchanges": [
-        "NSE"
-      ],
-      "sources": [
-        "NSE"
-      ],
-      "subscriptionOfferedMissing": true,
-      "subscription": {
-        "asOf": "2026-11-23T19:00:00+05:30",
-        "total": {
-          "times": null,
-          "offered": null,
-          "bid": 314245200
-        },
-        "categories": [
-          {
-            "key": "qib",
-            "label": "QIB",
-            "times": null,
-            "offered": null,
-            "bid": 150796800
-          },
-          {
-            "key": "nii",
-            "label": "NII",
-            "times": null,
-            "offered": null,
-            "bid": 163448400
-          },
-          {
-            "key": "bnii",
-            "label": "bNII (> \u20b910L)",
-            "times": null,
-            "offered": null,
-            "bid": 133491000
-          },
-          {
-            "key": "snii",
-            "label": "sNII (\u20b92\u201310L)",
-            "times": null,
-            "offered": null,
-            "bid": 29957400
-          }
-        ],
-        "offeredMissing": true,
-        "history": [
-          {
-            "date": "2026-11-19",
-            "total": 0.0,
-            "qib": 0.0,
-            "nii": 0.0,
-            "bnii": 0.0,
-            "snii": 0.0
-          },
-          {
-            "date": "2026-11-20",
-            "total": null,
-            "qib": 0.0,
-            "nii": null,
-            "bnii": null,
-            "snii": null,
-            "bids": {
-              "qib": 0,
-              "nii": 14200200,
-              "bnii": 11142600,
-              "snii": 3057600,
-              "total": 14200200
-            }
-          },
-          {
-            "date": "2026-11-23",
-            "total": null,
-            "qib": null,
-            "nii": null,
-            "bnii": null,
-            "snii": null,
-            "bids": {
-              "qib": 150796800,
-              "nii": 163448400,
-              "bnii": 133491000,
-              "snii": 29957400,
-              "total": 314245200
-            }
-          }
-        ]
-      },
-      "listingEstimated": true,
-      "status": "Open"
-    },
     {
       "key": "SHREESIDHI",
       "symbol": "SHREESIDHI",
@@ -272,7 +46,7 @@
     {
       "key": "FOODLINK-F-AND-B-HOLDINGS-INDIA",
       "symbol": "FOODLINK",
-      "bseCode": null,
+      "bseCode": "FOODLINK F&B HOLDINGS (INDIA) LIMITED",
       "name": "Foodlink F&B Holdings (India) Limited",
       "type": "Mainboard",
       "series": "EQ",
@@ -285,10 +59,12 @@
       "listing": "2026-12-03",
       "subscriptionTimes": null,
       "exchanges": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "sources": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "rhpDate": "2026-11-19",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
@@ -449,6 +225,232 @@
             "snii": 26.09,
             "retail": 9.26,
             "employee": 8.21
+          }
+        ]
+      },
+      "listingEstimated": true,
+      "status": "Closed"
+    },
+    {
+      "key": "MAHANADI-COALFIELDS",
+      "symbol": "MAHACOAL",
+      "bseCode": "MAHANADI COALFIELDS LIMITED",
+      "name": "Mahanadi Coalfields Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 129,
+      "priceHigh": 136,
+      "lotSize": 110,
+      "issueSizeCr": null,
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-27",
+      "subscriptionTimes": 1.52,
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "sources": [
+        "NSE",
+        "BSE"
+      ],
+      "rhpDate": "2026-11-13",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/mahanadi-coalfields-limited-rhp_105777.html",
+      "subscription": {
+        "asOf": "2026-11-23T19:00:00+05:30",
+        "total": {
+          "times": 1.52,
+          "offered": 493068045,
+          "bid": 748687390
+        },
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": 4.95,
+            "offered": 112512171,
+            "bid": 556811640
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": 0.66,
+            "offered": 84384129,
+            "bid": 55766810
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": 0.62,
+            "offered": 56256086,
+            "bid": 34773090
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": 0.75,
+            "offered": 28128043,
+            "bid": 20993720
+          },
+          {
+            "key": "retail",
+            "label": "Retail",
+            "times": 0.46,
+            "offered": 196896300,
+            "bid": 91449380
+          },
+          {
+            "key": "employee",
+            "label": "Employee",
+            "times": 0.22,
+            "offered": 33091815,
+            "bid": 7271330
+          },
+          {
+            "key": "shareholder",
+            "label": "Shareholder",
+            "times": 0.56,
+            "offered": 66183630,
+            "bid": 37388230
+          }
+        ],
+        "history": [
+          {
+            "date": "2026-11-19",
+            "total": 0.38,
+            "qib": 1.26,
+            "nii": 0.08,
+            "bnii": 0.05,
+            "snii": 0.13,
+            "retail": 0.13,
+            "employee": 0.05,
+            "shareholder": 0.15
+          },
+          {
+            "date": "2026-11-20",
+            "total": 0.48,
+            "qib": 1.37,
+            "nii": 0.18,
+            "bnii": 0.13,
+            "snii": 0.27,
+            "retail": 0.24,
+            "employee": 0.09,
+            "shareholder": 0.28
+          },
+          {
+            "date": "2026-11-23",
+            "total": 1.52,
+            "qib": 4.95,
+            "nii": 0.66,
+            "bnii": 0.62,
+            "snii": 0.75,
+            "retail": 0.46,
+            "employee": 0.22,
+            "shareholder": 0.56
+          }
+        ]
+      },
+      "listingEstimated": true,
+      "status": "Closed"
+    },
+    {
+      "key": "WATRANA",
+      "symbol": "WATRANA",
+      "bseCode": null,
+      "name": "Watrana Rentals Limited",
+      "type": "SME",
+      "series": "SME",
+      "priceLow": 232,
+      "priceHigh": 245,
+      "lotSize": 600,
+      "issueSizeCr": null,
+      "open": "2026-11-19",
+      "close": "2026-11-23",
+      "listing": "2026-11-27",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE"
+      ],
+      "sources": [
+        "NSE"
+      ],
+      "subscriptionOfferedMissing": true,
+      "subscription": {
+        "asOf": "2026-11-23T19:00:00+05:30",
+        "total": {
+          "times": null,
+          "offered": null,
+          "bid": 314245200
+        },
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": null,
+            "offered": null,
+            "bid": 150796800
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": null,
+            "offered": null,
+            "bid": 163448400
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": null,
+            "offered": null,
+            "bid": 133491000
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": null,
+            "offered": null,
+            "bid": 29957400
+          }
+        ],
+        "offeredMissing": true,
+        "history": [
+          {
+            "date": "2026-11-19",
+            "total": 0.0,
+            "qib": 0.0,
+            "nii": 0.0,
+            "bnii": 0.0,
+            "snii": 0.0
+          },
+          {
+            "date": "2026-11-20",
+            "total": null,
+            "qib": 0.0,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 0,
+              "nii": 14200200,
+              "bnii": 11142600,
+              "snii": 3057600,
+              "total": 14200200
+            }
+          },
+          {
+            "date": "2026-11-23",
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 150796800,
+              "nii": 163448400,
+              "bnii": 133491000,
+              "snii": 29957400,
+              "total": 314245200
+            }
           }
         ]
       },

@@ -1,14 +1,230 @@
 {
-  "updated": "2026-11-24T00:47:09.721865Z",
+  "updated": "2026-11-24T14:20:50.914301Z",
   "rows": [
     {
-      "date": "24-Nov-2026 00:30:39",
-      "company": "SHRI KANHA STAINLESS LIMITED",
-      "symbol": "SHRIKANHA",
+      "date": "24-Nov-2026 19:18:02",
+      "company": "NCL INDUSTRIES LIMITED",
+      "symbol": "NCLIND",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_26512_WebXMLFile_20261124_003039329.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2568_WebXMLFile_20261124_191802529.xml"
+    },
+    {
+      "date": "24-Nov-2026 19:07:23",
+      "company": "JSW Energy Limited",
+      "symbol": "JSWENERGY",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_3013_WebXMLFile_20261124_190723030.xml"
+    },
+    {
+      "date": "24-Nov-2026 18:03:56",
+      "company": "Flair Writing Industries Limited",
+      "symbol": "FLAIR",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22250_WebXMLFile_20261124_180356678.xml"
+    },
+    {
+      "date": "24-Nov-2026 17:40:00",
+      "company": "HEXAGON NUTRITION LIMITED",
+      "symbol": "HEXAGON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20301_WebXMLFile_20261124_174000025.xml"
+    },
+    {
+      "date": "24-Nov-2026 17:09:52",
+      "company": "ARVIND PORT AND INFRA LIMITED",
+      "symbol": "ARVINDPORT",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22118_WebXMLFile_20261124_170952499.xml"
+    },
+    {
+      "date": "24-Nov-2026 16:45:27",
+      "company": "GLOBESECURE TECHNOLOGIES LIMITED",
+      "symbol": "GSTL",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20369_WebXMLFile_20261124_164527765.xml"
+    },
+    {
+      "date": "24-Nov-2026 16:11:25",
+      "company": "KPIT TECHNOLOGIES LIMITED",
+      "symbol": "KPITTECH",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_17417_WebXMLFile_20261124_161124985.xml"
+    },
+    {
+      "date": "24-Nov-2026 16:02:55",
+      "company": "SENCO GOLD LIMITED",
+      "symbol": "SENCO",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20714_WebXMLFile_20261124_160255599.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:09",
+      "company": "Hindcon Chemicals Limited",
+      "symbol": "HINDCON",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15847_WebXMLFile_20261124_155009466.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:50:07",
+      "company": "THOMAS COOK  (INDIA)  LIMITED",
+      "symbol": "THOMASCOOK",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_602_WebXMLFile_20261124_155007616.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:22:06",
+      "company": "INDO-MIM Limited",
+      "symbol": "INDOMIM",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27036_WebXMLFile_20261124_152206471.xml"
+    },
+    {
+      "date": "24-Nov-2026 15:19:00",
+      "company": "CROWN LIFTERS LIMITED",
+      "symbol": "CROWN",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_14243_WebXMLFile_20261124_151900643.xml"
     }
   ],
   "source": "rss"

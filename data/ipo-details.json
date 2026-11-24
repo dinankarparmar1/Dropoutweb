@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T20:38:29.460093Z",
+  "updated": "2026-11-24T23:00:07.727775Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -7,7 +7,7 @@
     },
     "BSE": {
       "ok": true,
-      "ipos": 2
+      "ipos": 1
     },
     "SEBI": {
       "ok": true,
@@ -81,9 +81,9 @@
         "NSE",
         "BSE"
       ],
-      "bseIpoNo": "8097",
       "rhpDate": "2026-11-19",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
+      "bseIpoNo": "8097",
       "listingEstimated": true,
       "status": "Upcoming"
     },

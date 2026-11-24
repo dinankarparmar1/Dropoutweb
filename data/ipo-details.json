@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T14:20:57.507329Z",
+  "updated": "2026-11-24T20:38:29.460093Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -7,7 +7,7 @@
     },
     "BSE": {
       "ok": true,
-      "ipos": 1
+      "ipos": 2
     },
     "SEBI": {
       "ok": true,
@@ -33,15 +33,30 @@
       "open": "2026-11-25",
       "close": "2026-11-27",
       "listing": "2026-12-02",
-      "subscriptionTimes": null,
+      "subscriptionTimes": 0.0,
       "exchanges": [
         "NSE"
       ],
       "sources": [
         "NSE"
       ],
+      "subscription": {
+        "asOf": null,
+        "total": {
+          "times": 0.0,
+          "offered": null,
+          "bid": 0
+        },
+        "categories": [],
+        "history": [
+          {
+            "date": "2026-11-25",
+            "total": 0.0
+          }
+        ]
+      },
       "listingEstimated": true,
-      "status": "Upcoming"
+      "status": "Open"
     },
     {
       "key": "FOODLINK-F-AND-B-HOLDINGS-INDIA",
@@ -66,6 +81,7 @@
         "NSE",
         "BSE"
       ],
+      "bseIpoNo": "8097",
       "rhpDate": "2026-11-19",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
       "listingEstimated": true,

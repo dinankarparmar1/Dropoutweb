@@ -1,12 +1,12 @@
 {
   "_howto": "GMP is filled in by hand. Every IPO card on ipo-gmp.html shows an ID (e.g. ID: SAMPINFRA). Under 'gmp' write that ID and the GMP in rupees: \"SAMPINFRA\": 38 or \"DEMOFOOD\": -12 (use null if there is no GMP yet). If the page shows 'Lot Size: TBA', you can also give the lot: \"MOCK-TEXTILES\": {\"gmp\": 9, \"lotSize\": 2000}. Change 'updated' (IST time) every time you edit GMP. IPOs whose RHP is filed with SEBI appear on their own (tag: RHP filed). If the company has announced dates/price band before NSE/BSE list it, add the same company name under 'extraIpos' with open, close, priceLow, priceHigh, lotSize -- they fill in that card and are ignored once NSE/BSE list it. For an IPO not yet filed anywhere, an 'extraIpos' entry with \"tentative\": true and an \"expected\" text shows a Tentative card.",
-  "updated": "2026-11-24T18:55:00+05:30",
+  "updated": "2026-11-25T18:50:00+05:30",
   "gmp": {
-    "CRYSTAL-CROP-PROTECTION": 14,
+    "CRYSTAL-CROP-PROTECTION": 18,
     "MAHANADI-COALFIELDS": 0,
     "WATRANA": 40,
-    "SHREESIDHI": 10,
-    "FOODLINK-F-AND-B-HOLDINGS-INDIA": 15
+    "SHREESIDHI": 20,
+    "FOODLINK-F-AND-B-HOLDINGS-INDIA": 24
   },
   "extraIpos": [
     {
@@ -92,129 +92,114 @@
   },
   "gmpMeta": {
     "CRYSTAL-CROP-PROTECTION": {
-      "gmp": 14,
+      "gmp": 18,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-24T18:55:00+05:30",
+      "checked": "2026-11-25T18:50:00+05:30",
       "sources": [
         {
-          "site": "gmpipowatch.in",
-          "gmp": 14,
-          "asOf": "2026-11-24T11:00+05:30"
+          "site": "ipoguru.in",
+          "gmp": 19,
+          "asOf": "2026-11-25T07:48+05:30"
         },
         {
-          "site": "ipoji.com",
-          "gmp": 14,
-          "asOf": "2026-11-23T14:15+05:30"
+          "site": "ipogyani.com",
+          "gmp": 18,
+          "asOf": "2026-11-25T18:41+05:30"
+        },
+        {
+          "site": "gmpipowatch.in",
+          "gmp": 15,
+          "asOf": "2026-11-24"
         }
       ],
-      "note": "only 2 fresh sites; ipogyani.com failed to load; ipoji detail page and niftytrader.in (no time) skipped"
+      "note": "ipoji.com had no GMP value; gmpipowatch has date only, no clock time"
     },
     "MAHANADI-COALFIELDS": {
       "gmp": 0,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-24T18:55:00+05:30",
+      "checked": "2026-11-25T18:50:00+05:30",
       "sources": [
         {
-          "site": "gmpipowatch.in",
+          "site": "ipoguru.in",
           "gmp": 0,
-          "asOf": "2026-11-24T11:00+05:30"
+          "asOf": "2026-11-24T19:12+05:30"
         },
         {
           "site": "ipogyani.com",
           "gmp": 0,
-          "asOf": "2026-11-24T18:25+05:30"
+          "asOf": "2026-11-25T18:30+05:30"
         },
         {
-          "site": "ipoji.com",
+          "site": "gmpipowatch.in",
           "gmp": 0,
-          "asOf": "2026-11-23T17:00+05:30"
+          "asOf": "2026-11-25"
         }
       ],
-      "note": "niftytrader.in (no time shown) skipped"
+      "note": "ipoji.com had no GMP value; indiainfoline figure (19 Nov, pre-close) ignored as stale"
     },
     "WATRANA": {
       "gmp": 40,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-24T18:55:00+05:30",
+      "checked": "2026-11-25T18:50:00+05:30",
       "sources": [
         {
-          "site": "ipomarket.in",
+          "site": "investorgain.com",
+          "gmp": 41,
+          "asOf": "2026-11-25T18:02+05:30"
+        },
+        {
+          "site": "ipoguru.in",
           "gmp": 40,
-          "asOf": "2026-11-23T20:02+05:30"
+          "asOf": "2026-11-25T07:12+05:30"
         },
         {
           "site": "gmpipowatch.in",
           "gmp": 40,
-          "asOf": "2026-11-24T18:30+05:30"
-        },
-        {
-          "site": "ipoji.com",
-          "gmp": 35,
-          "asOf": "2026-11-23T17:00+05:30"
-        },
-        {
-          "site": "ipogyani.com",
-          "gmp": 40,
-          "asOf": "2026-11-24T18:35+05:30"
-        },
-        {
-          "site": "investorgain.com",
-          "gmp": 40,
-          "asOf": "2026-11-24T18:37+05:30"
+          "asOf": "2026-11-24"
         }
       ],
-      "note": "niftytrader.in (no time shown) skipped"
+      "note": "ipogyani.com failed to load; ipoji.com had no value; gmpipowatch has date only, no clock time"
     },
     "SHREESIDHI": {
-      "gmp": 10,
+      "gmp": 20,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-24T18:55:00+05:30",
+      "checked": "2026-11-25T18:50:00+05:30",
       "sources": [
         {
-          "site": "ipomarket.in",
-          "gmp": 5,
-          "asOf": "2026-11-23T20:02+05:30"
-        },
-        {
-          "site": "gmpipowatch.in",
-          "gmp": 10,
-          "asOf": "2026-11-24T18:30+05:30"
+          "site": "ipoguru.in",
+          "gmp": 20,
+          "asOf": "2026-11-25T08:00+05:30"
         },
         {
           "site": "investorgain.com",
-          "gmp": 10,
-          "asOf": "2026-11-24T18:02+05:30"
+          "gmp": 20,
+          "asOf": "2026-11-25T18:02+05:30"
         },
         {
-          "site": "ipoguru.in",
-          "gmp": 10,
-          "asOf": "2026-11-24T08:00+05:30"
+          "site": "ipomarket.in",
+          "gmp": 20,
+          "asOf": "2026-11-25T08:32+05:30"
         }
       ],
-      "note": "niftytrader.in (no time shown) and ipoji.com (no value) skipped"
+      "note": "ipoji.com had no GMP value; ipogyani.com failed to load"
     },
     "FOODLINK-F-AND-B-HOLDINGS-INDIA": {
-      "gmp": 15,
+      "gmp": 24,
       "rule": "median of latest per-source values",
-      "checked": "2026-11-24T18:55:00+05:30",
+      "checked": "2026-11-25T18:50:00+05:30",
       "sources": [
         {
-          "site": "gmpipowatch.in",
-          "gmp": 15,
-          "asOf": "2026-11-24T11:00+05:30"
-        },
-        {
           "site": "ipoguru.in",
-          "gmp": 16,
-          "asOf": "2026-11-24T14:24+05:30"
+          "gmp": 27,
+          "asOf": "2026-11-25T15:00+05:30"
         },
         {
-          "site": "ipoji.com",
-          "gmp": 12,
-          "asOf": "2026-11-23T14:15+05:30"
+          "site": "ipomarket.in",
+          "gmp": 21,
+          "asOf": "2026-11-25T02:02+05:30"
         }
       ],
-      "note": "niftytrader.in skipped (no time shown)"
+      "note": "only 2 fresh sites; ipoji.com had no value; ipogyani.com failed to load"
     }
   }
 }

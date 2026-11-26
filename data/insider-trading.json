@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-26T13:15:21.809164Z",
+  "updated": "2026-11-26T13:47:24.902186Z",
   "rows": [
+    {
+      "date": "26-Nov-2026 19:14:49",
+      "company": "Italian Edibles Limited",
+      "symbol": "ITALIANE",
+      "personCategory": "\u2014",
+      "transactionType": "Reg 7(2) disclosure",
+      "quantity": "\u2014",
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22662_WebXMLFile_20261126_191449463.xml"
+    },
     {
       "date": "26-Nov-2026 18:44:47",
       "company": "Neogen Chemicals Limited",
@@ -216,15 +225,6 @@
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
       "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_447_WebXMLFile_20261126_143834809.xml"
-    },
-    {
-      "date": "26-Nov-2026 13:48:09",
-      "company": "LIBERTY SHOES LIMITED",
-      "symbol": "LIBERTSHOE",
-      "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
-      "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_681_WebXMLFile_20261126_134809332.xml"
     }
   ],
   "source": "rss"

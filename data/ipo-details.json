@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T13:15:47.881528Z",
+  "updated": "2026-11-26T13:48:00.345832Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -7,7 +7,7 @@
     },
     "BSE": {
       "ok": true,
-      "ipos": 2
+      "ipos": 3
     },
     "SEBI": {
       "ok": true,
@@ -268,7 +268,7 @@
     {
       "key": "MONOMARK-ENGINEERING-INDIA",
       "symbol": "MONOMARK",
-      "bseCode": null,
+      "bseCode": "MONOMARK ENGINEERING INDIA LIMITED",
       "name": "Monomark Engineering (India) Limited",
       "type": "Mainboard",
       "series": "EQ",
@@ -281,10 +281,12 @@
       "listing": "2026-12-09",
       "subscriptionTimes": null,
       "exchanges": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "sources": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "rhpDate": "2026-11-23",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/monomark-engineering-india-limited-rhp_105932.html",

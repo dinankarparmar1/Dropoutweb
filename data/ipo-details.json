@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-25T22:28:31.666538Z",
+  "updated": "2026-11-26T13:15:47.881528Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 5
+      "ipos": 6
     },
     "BSE": {
       "ok": true,
-      "ipos": 1
+      "ipos": 2
     },
     "SEBI": {
       "ok": true,
@@ -33,21 +33,52 @@
       "open": "2026-11-25",
       "close": "2026-11-27",
       "listing": "2026-12-02",
-      "subscriptionTimes": 0.0,
+      "subscriptionTimes": null,
       "exchanges": [
         "NSE"
       ],
       "sources": [
         "NSE"
       ],
+      "subscriptionOfferedMissing": true,
       "subscription": {
-        "asOf": null,
+        "asOf": "2026-11-26T17:00:00+05:30",
         "total": {
-          "times": 0.0,
+          "times": null,
           "offered": null,
-          "bid": 0
+          "bid": 3182000
         },
-        "categories": [],
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": null,
+            "offered": null,
+            "bid": 282000
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": null,
+            "offered": null,
+            "bid": 2900000
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": null,
+            "offered": null,
+            "bid": 2426000
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": null,
+            "offered": null,
+            "bid": 474000
+          }
+        ],
+        "offeredMissing": true,
         "history": [
           {
             "date": "2026-11-25",
@@ -55,7 +86,18 @@
           },
           {
             "date": "2026-11-26",
-            "total": 0.0
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 282000,
+              "nii": 2900000,
+              "bnii": 2426000,
+              "snii": 474000,
+              "total": 3182000
+            }
           }
         ]
       },
@@ -76,7 +118,7 @@
       "open": "2026-11-26",
       "close": "2026-11-30",
       "listing": "2026-12-03",
-      "subscriptionTimes": 0.0,
+      "subscriptionTimes": 1.08,
       "exchanges": [
         "NSE",
         "BSE"
@@ -89,17 +131,58 @@
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
       "bseIpoNo": "8097",
       "subscription": {
-        "asOf": null,
+        "asOf": "2026-11-26T17:00:00+05:30",
         "total": {
-          "times": 0.0,
-          "offered": null,
-          "bid": 0
+          "times": 1.08,
+          "offered": 10474048,
+          "bid": 11347830
         },
-        "categories": [],
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": 1.01,
+            "offered": 5613270,
+            "bid": 5666310
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": 0.4,
+            "offered": 2916467,
+            "bid": 1157052
+          },
+          {
+            "key": "bnii",
+            "label": "bNII (> \u20b910L)",
+            "times": 0.33,
+            "offered": 1944312,
+            "bid": 645918
+          },
+          {
+            "key": "snii",
+            "label": "sNII (\u20b92\u201310L)",
+            "times": 0.53,
+            "offered": 972155,
+            "bid": 511134
+          },
+          {
+            "key": "retail",
+            "label": "Retail",
+            "times": 2.33,
+            "offered": 1944311,
+            "bid": 4524468
+          }
+        ],
         "history": [
           {
             "date": "2026-11-26",
-            "total": 0.0
+            "total": 1.08,
+            "qib": 1.01,
+            "nii": 0.4,
+            "bnii": 0.33,
+            "snii": 0.53,
+            "retail": 2.33
           }
         ]
       },
@@ -155,6 +238,34 @@
       "status": "Upcoming"
     },
     {
+      "key": "MATANGI-RUBBER",
+      "symbol": "MATANGI",
+      "bseCode": "MATANGI RUBBER LIMITED",
+      "name": "Matangi Rubber Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 163,
+      "priceHigh": 172,
+      "lotSize": 87,
+      "issueSizeCr": null,
+      "open": "2026-12-01",
+      "close": "2026-12-03",
+      "listing": "2026-12-08",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "sources": [
+        "NSE",
+        "BSE"
+      ],
+      "rhpDate": "2026-11-20",
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/matangi-rubber-limited-rhp_105931.html",
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
       "key": "MONOMARK-ENGINEERING-INDIA",
       "symbol": "MONOMARK",
       "bseCode": null,
@@ -178,30 +289,6 @@
       "rhpDate": "2026-11-23",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/monomark-engineering-india-limited-rhp_105932.html",
       "listingEstimated": true,
-      "status": "Upcoming"
-    },
-    {
-      "key": "MATANGI-RUBBER",
-      "symbol": null,
-      "bseCode": null,
-      "name": "Matangi Rubber Limited",
-      "type": "Mainboard",
-      "series": "EQ",
-      "priceLow": null,
-      "priceHigh": null,
-      "lotSize": null,
-      "issueSizeCr": null,
-      "open": null,
-      "close": null,
-      "listing": null,
-      "subscriptionTimes": null,
-      "exchanges": [],
-      "sources": [
-        "SEBI"
-      ],
-      "rhpDate": "2026-11-20",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/matangi-rubber-limited-rhp_105931.html",
-      "rhpOnly": true,
       "status": "Upcoming"
     },
     {

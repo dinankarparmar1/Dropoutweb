@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-27T13:44:12.379539Z",
+  "updated": "2026-11-27T19:27:51.095968Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 7
+      "ipos": 6
     },
     "BSE": {
       "ok": true,
-      "ipos": 3
+      "ipos": 4
     },
     "SEBI": {
-      "ok": true,
-      "ipos": 3
+      "ok": false,
+      "error": "SEBI RHP register failed (ajax: HTTPSConnectionPool(host='www.sebi.gov.in', port=443): Max retries exceeded with url: /sebiweb/ajax/home/getnewslistinfo.jsp (Caused by NameResolutionError(\"HTTPSConnec"
     }
   },
   "holidays": [
@@ -19,106 +19,6 @@
     "2026-12-25"
   ],
   "ipos": [
-    {
-      "key": "SHREESIDHI",
-      "symbol": "SHREESIDHI",
-      "bseCode": null,
-      "name": "Shree Siddhivinayak Greentech Industries Limited",
-      "type": "SME",
-      "series": "SME",
-      "priceLow": 130,
-      "priceHigh": 142,
-      "lotSize": 1000,
-      "issueSizeCr": null,
-      "open": "2026-11-25",
-      "close": "2026-11-27",
-      "listing": "2026-12-02",
-      "subscriptionTimes": null,
-      "exchanges": [
-        "NSE"
-      ],
-      "sources": [
-        "NSE"
-      ],
-      "subscriptionOfferedMissing": true,
-      "subscription": {
-        "asOf": "2026-11-27T17:51:00+05:30",
-        "total": {
-          "times": null,
-          "offered": null,
-          "bid": 3607000
-        },
-        "categories": [
-          {
-            "key": "qib",
-            "label": "QIB",
-            "times": null,
-            "offered": null,
-            "bid": 282000
-          },
-          {
-            "key": "nii",
-            "label": "NII",
-            "times": null,
-            "offered": null,
-            "bid": 3325000
-          },
-          {
-            "key": "bnii",
-            "label": "bNII (> \u20b910L)",
-            "times": null,
-            "offered": null,
-            "bid": 2616000
-          },
-          {
-            "key": "snii",
-            "label": "sNII (\u20b92\u201310L)",
-            "times": null,
-            "offered": null,
-            "bid": 709000
-          }
-        ],
-        "offeredMissing": true,
-        "history": [
-          {
-            "date": "2026-11-25",
-            "total": 0.0
-          },
-          {
-            "date": "2026-11-26",
-            "total": null,
-            "qib": null,
-            "nii": null,
-            "bnii": null,
-            "snii": null,
-            "bids": {
-              "qib": 282000,
-              "nii": 2900000,
-              "bnii": 2426000,
-              "snii": 474000,
-              "total": 3182000
-            }
-          },
-          {
-            "date": "2026-11-27",
-            "total": null,
-            "qib": null,
-            "nii": null,
-            "bnii": null,
-            "snii": null,
-            "bids": {
-              "qib": 282000,
-              "nii": 3325000,
-              "bnii": 2616000,
-              "snii": 709000,
-              "total": 3607000
-            }
-          }
-        ]
-      },
-      "listingEstimated": true,
-      "status": "Open"
-    },
     {
       "key": "FOODLINK-F-AND-B-HOLDINGS-INDIA",
       "symbol": "FOODLINK",
@@ -142,9 +42,9 @@
         "NSE",
         "BSE"
       ],
+      "bseIpoNo": "8097",
       "rhpDate": "2026-11-19",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
-      "bseIpoNo": "8097",
       "subscription": {
         "asOf": "2026-11-27T17:03:00+05:30",
         "total": {
@@ -359,7 +259,7 @@
     {
       "key": "SWARA",
       "symbol": "SWARA",
-      "bseCode": null,
+      "bseCode": "SWARA BABY PRODUCTS LIMITED",
       "name": "Swara Baby Products Limited",
       "type": "Mainboard",
       "series": "EQ",
@@ -372,125 +272,115 @@
       "listing": "2026-12-09",
       "subscriptionTimes": null,
       "exchanges": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "sources": [
-        "NSE"
+        "NSE",
+        "BSE"
       ],
       "listingEstimated": true,
       "status": "Upcoming"
     },
     {
-      "key": "CRYSTAL-CROP-PROTECTION",
-      "symbol": "CRYSTALCP",
-      "bseCode": "CRYSTAL CROP PROTECTION LIMITED",
-      "name": "Crystal Crop Protection Limited",
-      "type": "Mainboard",
-      "series": "EQ",
-      "priceLow": 259,
-      "priceHigh": 272,
-      "lotSize": 55,
-      "issueSizeCr": 355.0,
-      "open": "2026-11-18",
-      "close": "2026-11-20",
-      "listing": "2026-11-26",
-      "subscriptionTimes": 17.06,
+      "key": "SHREESIDHI",
+      "symbol": "SHREESIDHI",
+      "bseCode": null,
+      "name": "Shree Siddhivinayak Greentech Industries Limited",
+      "type": "SME",
+      "series": "SME",
+      "priceLow": 130,
+      "priceHigh": 142,
+      "lotSize": 1000,
+      "issueSizeCr": null,
+      "open": "2026-11-25",
+      "close": "2026-11-27",
+      "listing": "2026-12-02",
+      "subscriptionTimes": null,
       "exchanges": [
-        "NSE",
-        "BSE"
+        "NSE"
       ],
       "sources": [
-        "NSE",
-        "BSE"
+        "NSE"
       ],
-      "rhpDate": "2026-11-12",
-      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/crystal-crop-protection-limited-rhp_105734.html",
+      "subscriptionOfferedMissing": true,
       "subscription": {
-        "asOf": "2026-11-20T18:12:00+05:30",
+        "asOf": "2026-11-27T17:51:00+05:30",
         "total": {
-          "times": 17.06,
-          "offered": 12170076,
-          "bid": 207567580
+          "times": null,
+          "offered": null,
+          "bid": 3607000
         },
         "categories": [
           {
             "key": "qib",
             "label": "QIB",
-            "times": 15.47,
-            "offered": 3406814,
-            "bid": 52689065
+            "times": null,
+            "offered": null,
+            "bid": 282000
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 37.69,
-            "offered": 2596928,
-            "bid": 97880860
+            "times": null,
+            "offered": null,
+            "bid": 3325000
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 43.49,
-            "offered": 1731286,
-            "bid": 75293735
+            "times": null,
+            "offered": null,
+            "bid": 2616000
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 26.09,
-            "offered": 865642,
-            "bid": 22587125
-          },
-          {
-            "key": "retail",
-            "label": "Retail",
-            "times": 9.26,
-            "offered": 6059497,
-            "bid": 56120460
-          },
-          {
-            "key": "employee",
-            "label": "Employee",
-            "times": 8.21,
-            "offered": 106837,
-            "bid": 877195
+            "times": null,
+            "offered": null,
+            "bid": 709000
           }
         ],
+        "offeredMissing": true,
         "history": [
           {
-            "date": "2026-11-18",
-            "total": 1.4,
-            "qib": 2.07,
-            "nii": 0.75,
-            "bnii": 0.62,
-            "snii": 1.03,
-            "retail": 1.28,
-            "employee": 2.91
+            "date": "2026-11-25",
+            "total": 0.0
           },
           {
-            "date": "2026-11-19",
-            "total": 2.94,
-            "qib": 2.18,
-            "nii": 3.43,
-            "bnii": 3.11,
-            "snii": 4.08,
-            "retail": 3.12,
-            "employee": 4.83
+            "date": "2026-11-26",
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 282000,
+              "nii": 2900000,
+              "bnii": 2426000,
+              "snii": 474000,
+              "total": 3182000
+            }
           },
           {
-            "date": "2026-11-20",
-            "total": 17.06,
-            "qib": 15.47,
-            "nii": 37.69,
-            "bnii": 43.49,
-            "snii": 26.09,
-            "retail": 9.26,
-            "employee": 8.21
+            "date": "2026-11-27",
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 282000,
+              "nii": 3325000,
+              "bnii": 2616000,
+              "snii": 709000,
+              "total": 3607000
+            }
           }
         ]
       },
       "listingEstimated": true,
-      "status": "Listed"
+      "status": "Closed"
     },
     {
       "key": "MAHANADI-COALFIELDS",
@@ -719,5 +609,10 @@
       "status": "Listed"
     }
   ],
-  "retired": []
+  "retired": [
+    {
+      "name": "crystal crop protection",
+      "date": "2026-11-28"
+    }
+  ]
 }

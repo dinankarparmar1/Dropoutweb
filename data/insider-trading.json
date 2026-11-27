@@ -1,230 +1,230 @@
 {
-  "updated": "2026-11-26T13:47:24.902186Z",
+  "updated": "2026-11-27T13:12:43.402226Z",
   "rows": [
     {
-      "date": "26-Nov-2026 19:14:49",
-      "company": "Italian Edibles Limited",
-      "symbol": "ITALIANE",
+      "date": "27-Nov-2026 18:26:32",
+      "company": "Studds Accessories Limited",
+      "symbol": "STUDDS",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22662_WebXMLFile_20261126_191449463.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25886_WebXMLFile_20261127_182632288.xml"
     },
     {
-      "date": "26-Nov-2026 18:44:47",
-      "company": "Neogen Chemicals Limited",
-      "symbol": "NEOGEN",
+      "date": "27-Nov-2026 18:03:09",
+      "company": "JSW STEEL LIMITED",
+      "symbol": "JSWSTEEL",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_17441_WebXMLFile_20261126_184447211.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2266_WebXMLFile_20261127_180308964.xml"
     },
     {
-      "date": "26-Nov-2026 18:44:00",
-      "company": "Neogen Chemicals Limited",
-      "symbol": "NEOGEN",
+      "date": "27-Nov-2026 17:53:53",
+      "company": "Sundrex Oil Company Limited",
+      "symbol": "SOCL",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_17441_WebXMLFile_20261126_184400626.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25078_WebXMLFile_20261127_175353633.xml"
     },
     {
-      "date": "26-Nov-2026 18:39:11",
+      "date": "27-Nov-2026 17:43:50",
       "company": "FLAIR WRITING INDUSTRIES LIMITED",
       "symbol": "FLAIR",
       "personCategory": "\u2014",
-      "transactionType": "Reg 7(2) disclosure",
+      "transactionType": "Reg 7(2) disclosure (revision)",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22250_WebXMLFile_20261126_183911600.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_22250_WebXMLFile_20261127_174350109.xml"
     },
     {
-      "date": "26-Nov-2026 18:38:00",
-      "company": "SUNDREX OIL COMPANY LIMITED",
-      "symbol": "SOCL",
+      "date": "27-Nov-2026 17:22:04",
+      "company": "SKYWAYS AIR SERVICES LIMITED",
+      "symbol": "SKYWAYS",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25078_WebXMLFile_20261126_183759931.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_26444_WebXMLFile_20261127_172204844.xml"
     },
     {
-      "date": "26-Nov-2026 18:31:45",
-      "company": "SUNDREX OIL COMPANY LIMITED",
-      "symbol": "SOCL",
+      "date": "27-Nov-2026 17:18:11",
+      "company": "RUCHI INFRASTRUCTURE LIMITED",
+      "symbol": "RUCHINFRA",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_25078_WebXMLFile_20261126_183145274.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1551_WebXMLFile_20261127_171811261.xml"
     },
     {
-      "date": "26-Nov-2026 18:03:23",
-      "company": "Indiabulls Limited",
-      "symbol": "IBULLSLTD",
+      "date": "27-Nov-2026 17:02:58",
+      "company": "APOLLO HOSPITALS ENTERPRISE LIMITED",
+      "symbol": "APOLLOHOSP",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_5135_WebXMLFile_20261126_180323892.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_417_WebXMLFile_20261127_170258022.xml"
     },
     {
-      "date": "26-Nov-2026 18:03:19",
-      "company": "ASAHI INDIA GLASS LIMITED",
-      "symbol": "ASAHIINDIA",
+      "date": "27-Nov-2026 16:59:44",
+      "company": "Jayant Agro-Organics Limited",
+      "symbol": "JAYAGROGN",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1672_WebXMLFile_20261126_180319129.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1351_WebXMLFile_20261127_165944118.xml"
     },
     {
-      "date": "26-Nov-2026 17:56:20",
-      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
-      "symbol": "DHRUV",
+      "date": "27-Nov-2026 16:53:03",
+      "company": "USHA MARTIN LIMITED",
+      "symbol": "USHAMART",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20205_WebXMLFile_20261126_175620257.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1938_WebXMLFile_20261127_165303331.xml"
     },
     {
-      "date": "26-Nov-2026 17:46:13",
-      "company": "DHRUV CONSULTANCY SERVICES LIMITED",
-      "symbol": "DHRUV",
+      "date": "27-Nov-2026 16:48:00",
+      "company": "SKIPPER LIMITED",
+      "symbol": "SKIPPER",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20205_WebXMLFile_20261126_174613143.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_12452_WebXMLFile_20261127_164800464.xml"
     },
     {
-      "date": "26-Nov-2026 17:41:49",
-      "company": "TIME TECHNOPLAST LIMITED",
-      "symbol": "TIMETECHNO",
+      "date": "27-Nov-2026 16:41:56",
+      "company": "PDS Limited",
+      "symbol": "PDSL",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2609_WebXMLFile_20261126_174149146.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_10866_WebXMLFile_20261127_164155970.xml"
     },
     {
-      "date": "26-Nov-2026 17:19:08",
-      "company": "Shri Kanha Stainless Limited",
-      "symbol": "SHRIKANHA",
+      "date": "27-Nov-2026 16:38:35",
+      "company": "Nippon Life India Asset Management Limited",
+      "symbol": "NAM-INDIA",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_26512_WebXMLFile_20261126_171908697.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15552_WebXMLFile_20261127_163835604.xml"
     },
     {
-      "date": "26-Nov-2026 17:17:57",
-      "company": "AVENUE SUPERMARTS LIMITED",
-      "symbol": "DMART",
+      "date": "27-Nov-2026 16:35:11",
+      "company": "ADOR WELDING LIMITED",
+      "symbol": "ADOR",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_14711_WebXMLFile_20261126_171757313.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_301_WebXMLFile_20261127_163511882.xml"
     },
     {
-      "date": "26-Nov-2026 17:04:41",
-      "company": "FINOLEX CABLES LIMITED",
-      "symbol": "FINCABLES",
+      "date": "27-Nov-2026 16:20:31",
+      "company": "THOMAS COOK  (INDIA)  LIMITED",
+      "symbol": "THOMASCOOK",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1237_WebXMLFile_20261126_170441006.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_602_WebXMLFile_20261127_162031250.xml"
     },
     {
-      "date": "26-Nov-2026 16:55:50",
-      "company": "NORTH EASTERN CARRYING CORPORATION LIMITED",
-      "symbol": "NECCLTD",
+      "date": "27-Nov-2026 15:58:51",
+      "company": "GP ECO SOLUTIONS INDIA LIMITED",
+      "symbol": "GPECO",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_13506_WebXMLFile_20261126_165550035.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_23375_WebXMLFile_20261127_155851721.xml"
     },
     {
-      "date": "26-Nov-2026 16:55:21",
-      "company": "NCL INDUSTRIES LIMITED",
-      "symbol": "NCLIND",
+      "date": "27-Nov-2026 15:58:32",
+      "company": "GP ECO SOLUTIONS INDIA LIMITED",
+      "symbol": "GPECO",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2568_WebXMLFile_20261126_165521519.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_23375_WebXMLFile_20261127_155831973.xml"
     },
     {
-      "date": "26-Nov-2026 16:53:01",
-      "company": "SURYA ROSHNI LIMITED",
-      "symbol": "SURYAROSNI",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1209_WebXMLFile_20261126_165301011.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 16:52:15",
-      "company": "MTAR TECHNOLOGIES LIMITED",
-      "symbol": "MTARTECH",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_19009_WebXMLFile_20261126_165215244.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 16:19:26",
-      "company": "MERCURY EV-TECH LIMITED",
-      "symbol": "MERCURYEV",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_27329_WebXMLFile_20261126_161926874.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 16:05:22",
-      "company": "Schaeffler India Limited",
-      "symbol": "SCHAEFFLER",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1175_WebXMLFile_20261126_160522393.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 16:03:57",
-      "company": "TARMAT LIMITED",
-      "symbol": "TARMAT",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_2624_WebXMLFile_20261126_160357046.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 15:21:30",
-      "company": "HALEOS LABS LIMITED",
-      "symbol": "HALEOSLABS",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15407_WebXMLFile_20261126_152130770.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 15:20:00",
-      "company": "FINOLEX CABLES LIMITED",
-      "symbol": "FINCABLES",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_1237_WebXMLFile_20261126_152000309.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 15:00:09",
-      "company": "Rachana Infrastructure Limited",
-      "symbol": "RILINFRA",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_20549_WebXMLFile_20261126_150008887.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     },
     {
-      "date": "26-Nov-2026 14:38:34",
-      "company": "Ginni filaments limited",
-      "symbol": "GINNIFILA",
+      "date": "27-Nov-2026 15:43:25",
+      "company": "Geekay Wires Limited",
+      "symbol": "GEEKAYWIRE",
       "personCategory": "\u2014",
       "transactionType": "Reg 7(2) disclosure",
       "quantity": "\u2014",
-      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_447_WebXMLFile_20261126_143834809.xml"
+      "link": "https://nsearchives.nseindia.com/corporate/xbrl/IT_15428_WebXMLFile_20261127_154325844.xml"
     }
   ],
   "source": "rss"

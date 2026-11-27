@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-26T22:17:40.764681Z",
+  "updated": "2026-11-27T13:13:18.962846Z",
   "sources": {
     "NSE": {
       "ok": true,
-      "ipos": 6
+      "ipos": 7
     },
     "BSE": {
       "ok": true,
@@ -42,11 +42,11 @@
       ],
       "subscriptionOfferedMissing": true,
       "subscription": {
-        "asOf": "2026-11-26T17:00:00+05:30",
+        "asOf": "2026-11-27T17:51:00+05:30",
         "total": {
           "times": null,
           "offered": null,
-          "bid": 3182000
+          "bid": 3607000
         },
         "categories": [
           {
@@ -61,21 +61,21 @@
             "label": "NII",
             "times": null,
             "offered": null,
-            "bid": 2900000
+            "bid": 3325000
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
             "times": null,
             "offered": null,
-            "bid": 2426000
+            "bid": 2616000
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
             "times": null,
             "offered": null,
-            "bid": 474000
+            "bid": 709000
           }
         ],
         "offeredMissing": true,
@@ -98,6 +98,21 @@
               "snii": 474000,
               "total": 3182000
             }
+          },
+          {
+            "date": "2026-11-27",
+            "total": null,
+            "qib": null,
+            "nii": null,
+            "bnii": null,
+            "snii": null,
+            "bids": {
+              "qib": 282000,
+              "nii": 3325000,
+              "bnii": 2616000,
+              "snii": 709000,
+              "total": 3607000
+            }
           }
         ]
       },
@@ -118,7 +133,7 @@
       "open": "2026-11-26",
       "close": "2026-11-30",
       "listing": "2026-12-03",
-      "subscriptionTimes": 1.08,
+      "subscriptionTimes": 1.47,
       "exchanges": [
         "NSE",
         "BSE"
@@ -131,11 +146,11 @@
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/foodlink-fandb-holdings-india-limited-rhp_105865.html",
       "bseIpoNo": "8097",
       "subscription": {
-        "asOf": "2026-11-26T17:00:00+05:30",
+        "asOf": "2026-11-27T17:03:00+05:30",
         "total": {
-          "times": 1.08,
+          "times": 1.47,
           "offered": 10474048,
-          "bid": 11347830
+          "bid": 15443532
         },
         "categories": [
           {
@@ -143,35 +158,35 @@
             "label": "QIB",
             "times": 1.01,
             "offered": 5613270,
-            "bid": 5666310
+            "bid": 5667402
           },
           {
             "key": "nii",
             "label": "NII",
-            "times": 0.4,
+            "times": 0.72,
             "offered": 2916467,
-            "bid": 1157052
+            "bid": 2092584
           },
           {
             "key": "bnii",
             "label": "bNII (> \u20b910L)",
-            "times": 0.33,
+            "times": 0.59,
             "offered": 1944312,
-            "bid": 645918
+            "bid": 1151358
           },
           {
             "key": "snii",
             "label": "sNII (\u20b92\u201310L)",
-            "times": 0.53,
+            "times": 0.97,
             "offered": 972155,
-            "bid": 511134
+            "bid": 941226
           },
           {
             "key": "retail",
             "label": "Retail",
-            "times": 2.33,
+            "times": 3.95,
             "offered": 1944311,
-            "bid": 4524468
+            "bid": 7683546
           }
         ],
         "history": [
@@ -183,6 +198,15 @@
             "bnii": 0.33,
             "snii": 0.53,
             "retail": 2.33
+          },
+          {
+            "date": "2026-11-27",
+            "total": 1.47,
+            "qib": 1.01,
+            "nii": 0.72,
+            "bnii": 0.59,
+            "snii": 0.97,
+            "retail": 3.95
           }
         ]
       },
@@ -203,25 +227,49 @@
       "open": "2026-11-27",
       "close": "2026-12-01",
       "listing": "2026-12-04",
-      "subscriptionTimes": 0.0,
+      "subscriptionTimes": null,
       "exchanges": [
         "NSE"
       ],
       "sources": [
         "NSE"
       ],
+      "subscriptionOfferedMissing": true,
       "subscription": {
-        "asOf": null,
+        "asOf": "2026-11-27T17:03:00+05:30",
         "total": {
-          "times": 0.0,
+          "times": null,
           "offered": null,
-          "bid": 0
+          "bid": 1015200
         },
-        "categories": [],
+        "categories": [
+          {
+            "key": "qib",
+            "label": "QIB",
+            "times": 0.0,
+            "offered": null,
+            "bid": 0
+          },
+          {
+            "key": "nii",
+            "label": "NII",
+            "times": null,
+            "offered": null,
+            "bid": 1015200
+          }
+        ],
+        "offeredMissing": true,
         "history": [
           {
             "date": "2026-11-27",
-            "total": 0.0
+            "total": null,
+            "qib": 0.0,
+            "nii": null,
+            "bids": {
+              "qib": 0,
+              "nii": 1015200,
+              "total": 1015200
+            }
           }
         ]
       },
@@ -305,6 +353,30 @@
       ],
       "rhpDate": "2026-11-23",
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/monomark-engineering-india-limited-rhp_105932.html",
+      "listingEstimated": true,
+      "status": "Upcoming"
+    },
+    {
+      "key": "SWARA",
+      "symbol": "SWARA",
+      "bseCode": null,
+      "name": "Swara Baby Products Limited",
+      "type": "Mainboard",
+      "series": "EQ",
+      "priceLow": 105,
+      "priceHigh": 111,
+      "lotSize": 135,
+      "issueSizeCr": 500.0,
+      "open": "2026-12-02",
+      "close": "2026-12-04",
+      "listing": "2026-12-09",
+      "subscriptionTimes": null,
+      "exchanges": [
+        "NSE"
+      ],
+      "sources": [
+        "NSE"
+      ],
       "listingEstimated": true,
       "status": "Upcoming"
     },
